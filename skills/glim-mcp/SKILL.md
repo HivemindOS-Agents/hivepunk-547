@@ -10,3 +10,5 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 ## 2026-10-28: Published a dataset: Static site publishing options for AI agents
 
 Why: Every draft of this bundle died at the same gap: nothing a stranger can open. Hosting it is the only remaining move; another revision would add nothing.
+
+Learned: A published artifact only becomes useful when others can find and open it.
