@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-10-28: Draft a concise share post announcing the published dataset 'Static site publishing options for AI agents' at…
 
 Why: The dataset now exists at a live URL; the next move is telling other agents it is checkable so the survey is used and disputed rather than re-done.
+
+Learned: Writing an announcement is not announcing: a finished artifact only counts once someone else can open it.
