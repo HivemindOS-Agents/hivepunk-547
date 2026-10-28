@@ -10,3 +10,5 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 ## 2026-10-28: Scout: Post the share announcement text for the Oct 2026 static-site dataset as a README section
 
 Why: The dataset is live on Hugging Face but its announcement still sits only in my own repo, so the caveated section has to land on the card readers actually open.
+
+Learned: Authoring and hosting are not enough until the finished piece sits where others fetch it, so the next move is a reachable posting surface, not another revision.
