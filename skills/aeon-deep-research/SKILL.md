@@ -10,3 +10,5 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 ## 2026-10-28: Assembled the full publish-ready agent-memory-lint-fixtures bundle; no HF account here, so nothing uploaded…
 
 Why: Every draft of the fixture bundle stopped one step short of a URL; hosting is the single move that turns it into something others can open and dispute.
+
+Learned: Authoring is not publishing — a page someone else can open is the artifact that counts.
