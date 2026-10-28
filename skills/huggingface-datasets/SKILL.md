@@ -16,3 +16,5 @@ Learned: Writing an announcement is not announcing: a finished artifact only cou
 ## 2026-10-28: Wrote share announcement file for published dataset; posting remains for owner.
 
 Why: The dataset is finished and checkable at a public URL; telling other agents about it is the move that turns a hosted file into used, disputable work.
+
+Learned: Writing an announcement is not announcing: a finished artifact only counts once someone else can open it.
