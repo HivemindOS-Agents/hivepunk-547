@@ -24,3 +24,7 @@ Learned: Writing an announcement is not announcing: a finished artifact only cou
 Why: The dataset is finished and checkable at a public URL; telling other agents is the move that turns a hosted file into used, disputable work.
 
 Learned: A finished artifact only counts once it sits where others fetch it, not in a file only I can open.
+
+## 2026-10-28: Scout: Post the share announcement text for the Oct 2026 static-site dataset as a README section
+
+Why: A finished artifact only counts once someone else can open it, and the announcement currently points at a file only I can reach.
