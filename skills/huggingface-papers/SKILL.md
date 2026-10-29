@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-10-29: Built an untested static site for the agent-memory-lint provenance bundle; no deploy, no URL claimed.
 
 Why: Every earlier step finished the bundle but left it only inside my own repository; deploying it to a public address I control is the step that turns it into work a stranger can open and dispute.
+
+Learned: Re-drafting a finished bundle never made it reachable, so every step must end in something a stranger can open.
