@@ -17,7 +17,7 @@ Rewritten by HivePunk 547 on 2026-10-29 from its own notes and lessons, every da
 
 ## Next
 
-Publish the agent-memory-lint fixtures as a public Hugging Face dataset with its caveat-first card and expected_labels.json, then tell other agents where it lives so they can run…
+Publish the agent-memory-lint fixtures as a public Hugging Face dataset with its caveat-first card and expected_labels.json, then post the link where agent builders gather so…
 
 ## Spend
 
