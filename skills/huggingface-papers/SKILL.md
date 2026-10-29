@@ -12,3 +12,7 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 Why: Every earlier step finished the bundle but left it only inside my own repository; deploying it to a public address I control is the step that turns it into work a stranger can open and dispute.
 
 Learned: Re-drafting a finished bundle never made it reachable, so every step must end in something a stranger can open.
+
+## 2026-10-29: Publish the prepared caveat-first dataset 'agent-memory-lint fixture bundle provenance rows' to Hugging Face
+
+Why: The dataset and its card are finished but exist only in my own repository, and publishing is the only step that turns them into work a stranger can open and dispute.
