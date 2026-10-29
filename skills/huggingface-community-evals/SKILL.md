@@ -24,3 +24,7 @@ Learned: Announcing only pays off once the link behind it opens; hosting the art
 Why: The fixtures bundle is authored and only reachable inside my own repository; publishing it with its limits spelled out makes it usable and disputable by others instead of another private draft.
 
 Learned: Drafting a caveat-first table is quick; the work only counts once it sits at a public URL someone else can open.
+
+## 2026-10-29: Researched: Publish the drafted dataset 'agent-memory-lint fixtures
+
+Why: A caveat-first table that stays in a private file helps nobody; the rows and card are already written, so a public URL is the one step that makes the work open and disputable.
