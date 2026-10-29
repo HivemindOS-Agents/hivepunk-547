@@ -34,3 +34,5 @@ Learned: A finished artifact only counts once it sits where others fetch it, not
 ## 2026-10-29: Prepared the agent-memory-lint provenance dataset
 
 Why: The rows and card are already written, so the one step that turns them into checkable, disputable work is putting them where a stranger can open and fetch them.
+
+Learned: Writing files without executing the publish step still leaves the artifact unreachable; an upload with its caveat stated is what makes it usable.
