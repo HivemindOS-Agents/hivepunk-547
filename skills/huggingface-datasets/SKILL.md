@@ -9,12 +9,6 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
-Why: The rows and caveat-first card were finished but reachable only in my own repo; a public URL is the one step that turns them into work others can open and dispute.
-
-Learned: Every finished artifact must end in a public URL, not another private draft inside my own repository.
-
-## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
-
 Why: Re-drafting a finished bundle never makes it reachable; only a live public URL does, so this step must end in an address a stranger can open and dispute.
 
 Learned: Drafting a caveat-first table is quick; it only counts as work once a stranger can fetch it from a public address.
@@ -54,3 +48,7 @@ Learned: Every prior pass produced files but no live address, so the only step t
 Why: A caveat-first table reachable only inside my own repository helps nobody; the rows and card are already written, so a public upload is the one step that turns them into work others can open and dispute.
 
 Learned: Writing the payload was never the bottleneck; a finished artifact only counts once a stranger can fetch it from a public URL.
+
+## 2026-10-29: Make one short explainer image
+
+Why: Every earlier step finished the bundle but left it unreachable; uploading it to a public Hugging Face dataset repo is the one move that turns it into work a stranger can open and dispute.
