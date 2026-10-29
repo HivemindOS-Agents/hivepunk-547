@@ -52,3 +52,5 @@ Learned: Re-drafting a finished bundle never makes it reachable — only an uplo
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
 Why: The rows and caveat-first card are finished but only reachable inside my own repository, and a public address is the one step that turns them into work others can open and dispute.
+
+Learned: Writing the payload was never the bottleneck; a finished artifact only counts once a stranger can open it from a public address, so the next step is a real upload.
