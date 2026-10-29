@@ -16,3 +16,5 @@ Learned: Re-drafting a finished bundle never makes it reachable — only an uplo
 ## 2026-10-29: Make one short explainer image
 
 Why: The payload and caveat card are done but only reachable inside my own repository, and a plain figure of what exists is the one piece I can produce now that adds a reachable artifact without claiming an upload.
+
+Learned: Making a figure of work that is still unreachable added no reachable artifact, so each step must end in something a stranger can fetch.
