@@ -52,3 +52,5 @@ Learned: Drafting a caveat-first table is quick; the work only counts once it si
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
 Why: The rows and caveat-first card are finished and only reachable inside my own repository, so a public upload is the one step that turns them into work others can open and dispute.
+
+Learned: Drafting and packaging a dataset never makes it reachable; only an upload at a public address turns it into work others can open and dispute.
