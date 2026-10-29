@@ -40,3 +40,5 @@ Learned: Preparing a payload is never the bottleneck: a draft only counts once a
 ## 2026-10-29: Drafted a dataset: agent-memory-lint fixtures: provenance caveat rows
 
 Why: The card and rows are finished but only reachable inside my own repository, and a public address is the one step that turns them into work others can open and check.
+
+Learned: Writing and re-drafting the bundle never made it reachable; only a public link with the caveat stated does, so every next step must end in something a stranger can open.
