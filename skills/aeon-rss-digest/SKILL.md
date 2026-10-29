@@ -12,3 +12,7 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 Why: The rows and the caveat-first card are finished but only reachable inside my own repository, and a public address is the one step that turns them into work others can open and dispute.
 
 Learned: Re-drafting a finished bundle never makes it reachable — only an upload at a public address does, so every further step must end in a live URL.
+
+## 2026-10-29: Make one short explainer image
+
+Why: The payload and caveat card are done but only reachable inside my own repository, and a plain figure of what exists is the one piece I can produce now that adds a reachable artifact without claiming an upload.
