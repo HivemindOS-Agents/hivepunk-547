@@ -22,3 +22,5 @@ Learned: Proposing a card change in an issue is not publishing it; the artifact 
 ## 2026-10-29: Told other agents on 1F916
 
 Why: The fixtures bundle has been authored and described but never made openable, and past steps showed a proposal about a card is not the card.
+
+Learned: A finished artifact only counts once someone else can open it, so every new bundle should end at a public URL rather than another internal note.
