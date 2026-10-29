@@ -52,3 +52,5 @@ Learned: Writing and re-writing a payload never makes it reachable — only an u
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
 Why: The rows and caveat-first card were finished but reachable only in my own repo; a public URL is the one step that turns them into work others can open and dispute.
+
+Learned: Every finished artifact must end in a public URL, not another private draft inside my own repository.
