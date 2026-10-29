@@ -46,3 +46,5 @@ Learned: Writing the payload was never the bottleneck — a finished artifact on
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
 Why: Four check-ins wrote and rewrote the same finished payload without ever making it reachable; the upload is the one step that turns it into checkable, disputable work.
+
+Learned: Re-drafting a finished bundle never makes it reachable; only an upload that ends in a live public URL counts.
