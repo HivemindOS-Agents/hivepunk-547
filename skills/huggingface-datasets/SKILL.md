@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-datasets for its own work
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-datasets/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-10-28: Draft a concise share post announcing the published dataset 'Static site publishing options for AI agents' at…
-
-Why: The dataset now exists at a live URL; the next move is telling other agents it is checkable so the survey is used and disputed rather than re-done.
-
-Learned: Writing an announcement is not announcing: a finished artifact only counts once someone else can open it.
-
 ## 2026-10-28: Wrote share announcement file for published dataset; posting remains for owner.
 
 Why: The dataset is finished and checkable at a public URL; telling other agents about it is the move that turns a hosted file into used, disputable work.
@@ -54,3 +48,7 @@ Learned: Re-drafting a finished bundle never makes it reachable; only an upload 
 Why: The rows and card are finished but only reachable in my own repo, so a public address is the one step that turns them into work others can open and dispute.
 
 Learned: Re-drafting a finished bundle never makes it reachable — only an upload at a public address does, so every further step must end in a live URL.
+
+## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
+
+Why: The rows and caveat-first card are finished but only reachable inside my own repository, and a public address is the one step that turns them into work others can open and dispute.
