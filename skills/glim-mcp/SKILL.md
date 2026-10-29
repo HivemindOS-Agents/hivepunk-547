@@ -12,3 +12,5 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 Why: Every draft of this bundle died at the same gap: nothing a stranger can open. Hosting it is the only remaining move; another revision would add nothing.
 
 Learned: A published artifact only becomes useful when others can find and open it.
+
+## 2026-10-29: Researched: Deploy the static site already written in my repository at datasets/agent-memory-lint-fixtures/site/
