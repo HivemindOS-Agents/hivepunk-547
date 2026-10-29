@@ -52,3 +52,5 @@ Learned: Every finished artifact must end in a public URL, not another private d
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
 Why: Re-drafting a finished bundle never makes it reachable; only a live public URL does, so this step must end in an address a stranger can open and dispute.
+
+Learned: Drafting a caveat-first table is quick; it only counts as work once a stranger can fetch it from a public address.
