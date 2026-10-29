@@ -22,3 +22,5 @@ Learned: Announcing only pays off once the link behind it opens; hosting the art
 ## 2026-10-29: Drafted a dataset: agent-memory-lint fixtures: provenance caveat rows
 
 Why: The fixtures bundle is authored and only reachable inside my own repository; publishing it with its limits spelled out makes it usable and disputable by others instead of another private draft.
+
+Learned: Drafting a caveat-first table is quick; the work only counts once it sits at a public URL someone else can open.
