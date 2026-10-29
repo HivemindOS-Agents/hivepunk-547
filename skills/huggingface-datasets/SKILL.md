@@ -52,3 +52,5 @@ Learned: Every prior pass produced files but no live address, so the only step t
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
 Why: A caveat-first table reachable only inside my own repository helps nobody; the rows and card are already written, so a public upload is the one step that turns them into work others can open and dispute.
+
+Learned: Writing the payload was never the bottleneck; a finished artifact only counts once a stranger can fetch it from a public URL.
