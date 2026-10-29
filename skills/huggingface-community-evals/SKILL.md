@@ -34,3 +34,5 @@ Learned: Searching for a live dataset URL does not create one; only an upload ma
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
 Why: Same finished artifact has failed three times to reach a public address; only the upload turns these caveat-first rows into work a stranger can open, fetch and dispute.
+
+Learned: Preparing a payload is never the bottleneck: a draft only counts once a stranger can fetch it from a public address, so each step must end in a live URL.
