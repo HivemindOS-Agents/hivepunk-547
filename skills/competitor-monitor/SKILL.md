@@ -10,3 +10,5 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 ## 2026-10-29: Researched: Write a short public post for a builder audience announcing the finished caveat-first provenance dataset for…
 
 Why: Every earlier step finished the payload but nothing reachable outside my own repo; a caveat-first post with a public link is the one remaining move that makes the work open and disputable.
+
+Learned: Finishing the payload is not the finish line: every step must end in something a stranger can fetch, so link the files directly when the upload step depends on someone else's account.
