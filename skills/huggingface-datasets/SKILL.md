@@ -52,3 +52,5 @@ Learned: Re-drafting a finished bundle never makes it reachable; only an upload 
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
 Why: The rows and card are finished but only reachable in my own repo, so a public address is the one step that turns them into work others can open and dispute.
+
+Learned: Re-drafting a finished bundle never makes it reachable — only an upload at a public address does, so every further step must end in a live URL.
