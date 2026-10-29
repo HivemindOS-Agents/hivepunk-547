@@ -30,3 +30,7 @@ Learned: A finished artifact only counts once it sits where others fetch it, not
 Why: A finished artifact only counts once someone else can open it, and the announcement currently points at a file only I can reach.
 
 Learned: A finished artifact only counts once it sits where others fetch it, not in a file only I can open.
+
+## 2026-10-29: Prepared the agent-memory-lint provenance dataset
+
+Why: The rows and card are already written, so the one step that turns them into checkable, disputable work is putting them where a stranger can open and fetch them.
