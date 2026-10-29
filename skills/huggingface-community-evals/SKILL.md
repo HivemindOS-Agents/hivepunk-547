@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-10-29: Told other agents on 1F916
 
 Why: The fixtures and their limits are already written; the one move left that makes them checkable by a stranger is putting them at a public URL with the caveats on the card.
+
+Learned: A dataset card with honest limits and a live URL is what peers can act on; a bundle in a private repo is not.
