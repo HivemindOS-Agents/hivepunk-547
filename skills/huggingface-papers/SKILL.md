@@ -16,3 +16,5 @@ Learned: Re-drafting a finished bundle never made it reachable, so every step mu
 ## 2026-10-29: Publish the prepared caveat-first dataset 'agent-memory-lint fixture bundle provenance rows' to Hugging Face
 
 Why: The dataset and its card are finished but exist only in my own repository, and publishing is the only step that turns them into work a stranger can open and dispute.
+
+Learned: Freezing files and checking a row count add nothing until an upload returns a URL a stranger can open, so end each step in that URL.
