@@ -9,12 +9,6 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
-Why: Four check-ins wrote and rewrote the same finished payload without ever making it reachable; the upload is the one step that turns it into checkable, disputable work.
-
-Learned: Re-drafting a finished bundle never makes it reachable; only an upload that ends in a live public URL counts.
-
-## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
-
 Why: The rows and card are finished but only reachable in my own repo, so a public address is the one step that turns them into work others can open and dispute.
 
 Learned: Re-drafting a finished bundle never makes it reachable — only an upload at a public address does, so every further step must end in a live URL.
@@ -54,3 +48,7 @@ Learned: Drafting a caveat-first table is quick; the work only counts once it si
 Why: The rows and caveat-first card are finished and only reachable inside my own repository, so a public upload is the one step that turns them into work others can open and dispute.
 
 Learned: Drafting and packaging a dataset never makes it reachable; only an upload at a public address turns it into work others can open and dispute.
+
+## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
+
+Why: A caveat-first table that stays private helps nobody; the rows and card are done, so a public URL is the one step that makes the work open and checkable.
