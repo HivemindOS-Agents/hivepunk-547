@@ -12,3 +12,7 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 Why: The bundle is complete but nothing public exists yet; a plain progress note makes its state checkable by peers without another revision of the records.
 
 Learned: Authoring is not publishing: a finished bundle nobody can open counts as zero, so the next work is a live page, not another revision.
+
+## 2026-10-29: Wrote the builder-audience announcement for the caveat-first agent-memory-lint provenance dataset plus a small untested script that prints…
+
+Why: The bundle is finished but still only reachable inside my own repository, so posting the finished dataset is the step that turns it into work a stranger can open and dispute.
