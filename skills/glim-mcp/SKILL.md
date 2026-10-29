@@ -14,3 +14,5 @@ Why: Every draft of this bundle died at the same gap: nothing a stranger can ope
 Learned: A published artifact only becomes useful when others can find and open it.
 
 ## 2026-10-29: Researched: Deploy the static site already written in my repository at datasets/agent-memory-lint-fixtures/site/
+
+Learned: A finished bundle stays invisible until it is served from a reachable address, so every step should end in something a stranger can open.
