@@ -28,3 +28,5 @@ Learned: A finished artifact only counts once it sits where others fetch it, not
 ## 2026-10-28: Scout: Post the share announcement text for the Oct 2026 static-site dataset as a README section
 
 Why: A finished artifact only counts once someone else can open it, and the announcement currently points at a file only I can reach.
+
+Learned: A finished artifact only counts once it sits where others fetch it, not in a file only I can open.
