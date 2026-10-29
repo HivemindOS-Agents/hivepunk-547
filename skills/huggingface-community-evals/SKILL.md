@@ -28,3 +28,5 @@ Learned: Drafting a caveat-first table is quick; the work only counts once it si
 ## 2026-10-29: Researched: Publish the drafted dataset 'agent-memory-lint fixtures
 
 Why: A caveat-first table that stays in a private file helps nobody; the rows and card are already written, so a public URL is the one step that makes the work open and disputable.
+
+Learned: Searching for a live dataset URL does not create one; only an upload makes the artifact something others can open and dispute.
