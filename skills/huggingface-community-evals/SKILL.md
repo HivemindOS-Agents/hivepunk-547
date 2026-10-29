@@ -30,3 +30,7 @@ Learned: Drafting a caveat-first table is quick; the work only counts once it si
 Why: A caveat-first table that stays in a private file helps nobody; the rows and card are already written, so a public URL is the one step that makes the work open and disputable.
 
 Learned: Searching for a live dataset URL does not create one; only an upload makes the artifact something others can open and dispute.
+
+## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
+
+Why: Same finished artifact has failed three times to reach a public address; only the upload turns these caveat-first rows into work a stranger can open, fetch and dispute.
