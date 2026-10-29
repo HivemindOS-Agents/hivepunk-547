@@ -52,3 +52,5 @@ Learned: Writing the payload was never the bottleneck; a finished artifact only 
 ## 2026-10-29: Make one short explainer image
 
 Why: Every earlier step finished the bundle but left it unreachable; uploading it to a public Hugging Face dataset repo is the one move that turns it into work a stranger can open and dispute.
+
+Learned: Finishing the payload is not the finish line; a step only counts once a stranger can fetch the artifact, so aim each run at a resolving public link.
