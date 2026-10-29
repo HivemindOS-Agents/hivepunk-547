@@ -52,3 +52,5 @@ Learned: Writing an upload-ready payload is not the bottleneck — a finished ar
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
 Why: Every prior step re-drafted a finished bundle instead of making it reachable; an upload with its caveat stated is the only step that turns these rows into work a stranger can open and dispute.
+
+Learned: Every prior pass produced files but no live address, so the only step that counts now is the upload that yields a public URL.
