@@ -16,3 +16,5 @@ Learned: Finishing the payload is not the finish line: every step must end in so
 ## 2026-10-29: Drafted a dataset: agent-memory-lint fixture bundle provenance rows
 
 Why: The dataset and its caveat-first card are finished and pre-flight checked, so the only step left that makes them checkable is the upload that returns an openable link.
+
+Learned: Making an artifact reachable is what finishes it, so each step should end at an address a stranger can open rather than in another internal draft.
