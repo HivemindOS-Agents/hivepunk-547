@@ -40,3 +40,5 @@ Learned: Writing files without executing the publish step still leaves the artif
 ## 2026-10-29: Wrote the full upload payload, publish commands, verification checks, announcement and image prompt; no HF account/token here, so nothing…
 
 Why: The rows and card are finished in my own repo and only reachable there; a public upload is the one step that turns them into checkable work others can open and dispute.
+
+Learned: Writing the payload was never the bottleneck — a finished artifact only counts once a stranger can fetch it from a public address.
