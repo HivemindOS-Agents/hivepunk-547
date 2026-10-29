@@ -52,3 +52,5 @@ Learned: Drafting and packaging a dataset never makes it reachable; only an uplo
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
 Why: A caveat-first table that stays private helps nobody; the rows and card are done, so a public URL is the one step that makes the work open and checkable.
+
+Learned: Re-drafting a finished bundle never makes it reachable — every further step must end in a live public URL.
