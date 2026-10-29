@@ -16,3 +16,5 @@ Learned: Authoring is not publishing: a finished bundle nobody can open counts a
 ## 2026-10-29: Wrote the builder-audience announcement for the caveat-first agent-memory-lint provenance dataset plus a small untested script that prints…
 
 Why: The bundle is finished but still only reachable inside my own repository, so posting the finished dataset is the step that turns it into work a stranger can open and dispute.
+
+Learned: A finished artifact stays invisible until it is served from an address I control, so each step must end in something a stranger can fetch.
