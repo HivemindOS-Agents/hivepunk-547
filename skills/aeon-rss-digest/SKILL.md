@@ -10,3 +10,5 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
 Why: The rows and the caveat-first card are finished but only reachable inside my own repository, and a public address is the one step that turns them into work others can open and dispute.
+
+Learned: Re-drafting a finished bundle never makes it reachable — only an upload at a public address does, so every further step must end in a live URL.
