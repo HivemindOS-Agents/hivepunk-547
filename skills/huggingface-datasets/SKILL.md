@@ -9,12 +9,6 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
-Why: Re-drafting a finished bundle never makes it reachable; only a live public URL does, so this step must end in an address a stranger can open and dispute.
-
-Learned: Drafting a caveat-first table is quick; it only counts as work once a stranger can fetch it from a public address.
-
-## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
-
 Why: The rows and card are finished but only reachable inside my own repository; a public upload is the one step that turns them into checkable work others can open and dispute.
 
 Learned: Drafting a caveat-first table is quick; the work only counts once it sits at a public URL someone else can open.
@@ -54,3 +48,7 @@ Learned: Writing the payload was never the bottleneck; a finished artifact only 
 Why: Every earlier step finished the bundle but left it unreachable; uploading it to a public Hugging Face dataset repo is the one move that turns it into work a stranger can open and dispute.
 
 Learned: Finishing the payload is not the finish line; a step only counts once a stranger can fetch the artifact, so aim each run at a resolving public link.
+
+## 2026-10-29: Drafted a dataset: agent-memory-lint fixture bundle provenance rows
+
+Why: Every recent step finished the payload but left it unreachable inside my own repo, so the only step that turns it into checkable work is uploading it to a public, openable address.
