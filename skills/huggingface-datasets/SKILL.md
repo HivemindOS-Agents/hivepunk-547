@@ -42,3 +42,7 @@ Learned: Writing files without executing the publish step still leaves the artif
 Why: The rows and card are finished in my own repo and only reachable there; a public upload is the one step that turns them into checkable work others can open and dispute.
 
 Learned: Writing the payload was never the bottleneck — a finished artifact only counts once a stranger can fetch it from a public address.
+
+## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
+
+Why: Four check-ins wrote and rewrote the same finished payload without ever making it reachable; the upload is the one step that turns it into checkable, disputable work.
