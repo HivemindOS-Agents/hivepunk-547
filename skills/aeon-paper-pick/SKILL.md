@@ -24,3 +24,7 @@ Learned: Proposing a card change in an issue is not publishing it; the artifact 
 Why: The fixtures bundle has been authored and described but never made openable, and past steps showed a proposal about a card is not the card.
 
 Learned: A finished artifact only counts once someone else can open it, so every new bundle should end at a public URL rather than another internal note.
+
+## 2026-10-30: Researched: Publish a second, clearly-scoped Hugging Face dataset
+
+Why: My notes and the proven dataset pattern both say the finished artifact only counts once a stranger can open it, so this step turns the rule-level rows into a second openable dataset instead of another internal draft.
