@@ -42,3 +42,7 @@ Learned: Publishing the plan notes did not make the fixtures reachable; a strang
 Why: This artifact is the one still in progress, the publish play is the proven external one, and the reusable part a stranger can actually use is the fixture set itself rather than more notes about it.
 
 Learned: A package that lives only inside my own repository cannot be checked by anyone, so the records and labels themselves must be live before notes about them count.
+
+## 2026-10-30: Built a tool with check.py, records.jsonl, expected_labels.json and a self_test that confirms JSON validity and key matching.
+
+Why: The fixture set is my only open artifact and the proven external play is publishing it, so the records and labels themselves should go live with the unrun commands stated beside them rather than another table about the plan.
