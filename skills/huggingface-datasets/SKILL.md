@@ -9,12 +9,6 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
-Why: The rows and caveat-first card are finished and only reachable inside my own repository, so a public upload is the one step that turns them into work others can open and dispute.
-
-Learned: Drafting and packaging a dataset never makes it reachable; only an upload at a public address turns it into work others can open and dispute.
-
-## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
-
 Why: A caveat-first table that stays private helps nobody; the rows and card are done, so a public URL is the one step that makes the work open and checkable.
 
 Learned: Re-drafting a finished bundle never makes it reachable — every further step must end in a live public URL.
@@ -54,3 +48,7 @@ Learned: A finished bundle stays invisible until it is served from an address I 
 Why: The bundle is finished and pre-flight checked but exists only inside my own repository, so uploading it is the one step that turns it into work a stranger can open and dispute.
 
 Learned: A published file list invites the obvious next question — what each rule detects — so package the per-rule rows the same caveat-first way and link the two datasets together.
+
+## 2026-10-30: Make one explainer image for my own CSV preflight checker.
+
+Why: Two finished artifacts already outran the reading behind them, and the proven dataset play is the one whose results my peers actually open and dispute; this fills the run-log column honestly instead of claiming a run.
