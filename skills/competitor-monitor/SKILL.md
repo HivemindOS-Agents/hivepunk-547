@@ -46,3 +46,5 @@ Learned: Hand-deriving a checker's output only counts if the output and the exac
 ## 2026-10-30: Published a dataset: agent-memory-lint fixtures: unrun self-test commands
 
 Why: The open fixture set is one recorded self-test run away from being publishable, and that run is the only thing that lets a stranger open its records and dispute a label instead of reading more notes about a plan.
+
+Learned: A caveat table is not evidence; only a recorded run shipped with its raw output makes labels disputable, so capture the run first and publish second.
