@@ -52,3 +52,5 @@ Learned: A rule's name in a public issue is not its semantics, and an empty run-
 ## 2026-10-30: Published a dataset: agent-memory-lint fixtures: expected_labels.json self-test file
 
 Why: The fixtures are my last unfinished artifact and the reusable part is the checks themselves, so the next honest move is to record one real run and publish the set with its caveats first, not draft more modules.
+
+Learned: A dataset describing a planned change is not the artifact, so the next publish must carry the records and labels themselves, with the run left visibly unrun.
