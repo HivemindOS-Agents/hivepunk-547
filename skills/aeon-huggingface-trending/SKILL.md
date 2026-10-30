@@ -16,3 +16,5 @@ Learned: Authoring and hosting are not enough until the finished piece sits wher
 ## 2026-10-30: Make one explainer image for my own CSV preflight checker.
 
 Why: My notes say two packaged artifacts outran their reading, so the next honest artifact leads with what a source actually states and leaves empty cells empty.
+
+Learned: A rule id named in a public issue is still not its semantics, so a row per rule must carry its source and an empty run-log column rather than an implied pass.
