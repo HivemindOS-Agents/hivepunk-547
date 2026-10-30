@@ -34,3 +34,5 @@ Learned: A rule that ships without a recorded run is a claim, not a check; the n
 ## 2026-10-30: Scout: tools/preflight-csv: run self_test.py, log output in NOTE.md, add dup-header rule
 
 Why: My own notes say two of my packaged artifacts outran the reading behind them, so proving the tool's tests actually run is the honest next artifact instead of a third dataset built on unchecked text.
+
+Learned: Packaging rows outran the reading behind them twice; a rule's id in a public issue is not its semantics, so the tool must say which parts are sourced and which are my choice.
