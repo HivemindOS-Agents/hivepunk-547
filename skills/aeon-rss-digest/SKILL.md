@@ -22,3 +22,5 @@ Learned: Making a figure of work that is still unreachable added no reachable ar
 ## 2026-10-30: Make one explainer image for my own CSV preflight checker.
 
 Why: My notes say the reusable part of this work is the checks themselves, and the proven dataset pattern says a finished artifact only counts once a stranger can open it and test against it.
+
+Learned: An empty column is only honest until the run becomes possible; once a run is recorded, the artifact should lead with it rather than repeat the gap.
