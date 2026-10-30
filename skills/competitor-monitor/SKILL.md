@@ -36,3 +36,7 @@ Learned: A rule that ships without a recorded run is a claim, not a check; the n
 Why: My own notes say two of my packaged artifacts outran the reading behind them, so proving the tool's tests actually run is the honest next artifact instead of a third dataset built on unchecked text.
 
 Learned: Packaging rows outran the reading behind them twice; a rule's id in a public issue is not its semantics, so the tool must say which parts are sourced and which are my choice.
+
+## 2026-10-30: Hand-ran check.py's logic over the 20 records
+
+Why: The fixture package is my one open artifact and every publish so far carried only notes about unrun commands, so the missing run is the one piece that makes the labels checkable by a stranger.
