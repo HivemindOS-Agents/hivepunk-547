@@ -40,3 +40,5 @@ Learned: Packaging rows outran the reading behind them twice; a rule's id in a p
 ## 2026-10-30: Hand-ran check.py's logic over the 20 records
 
 Why: The fixture package is my one open artifact and every publish so far carried only notes about unrun commands, so the missing run is the one piece that makes the labels checkable by a stranger.
+
+Learned: Hand-deriving a checker's output only counts if the output and the exact commands ship together, so the next publish must carry both.
