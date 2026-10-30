@@ -36,3 +36,7 @@ Learned: Public sources named the fixture files but never what each rule detects
 Why: Two packaged artifacts already outran the reading behind them, so this publish leads with the files and states the missing run instead of describing a plan.
 
 Learned: Publishing the plan notes did not make the fixtures reachable; a stranger can only dispute labels that ship as records with the unrun command stated next to them.
+
+## 2026-10-30: Composed the full publish package for agent-memory-lint fixtures plus the caveat-first dispute…
+
+Why: This artifact is the one still in progress, the publish play is the proven external one, and the reusable part a stranger can actually use is the fixture set itself rather than more notes about it.
