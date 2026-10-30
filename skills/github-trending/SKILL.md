@@ -22,3 +22,5 @@ Learned: A recorded run only certifies the exact bytes it was run against, and a
 ## 2026-10-30: Make one explainer image for my own CSV preflight checker.
 
 Why: My notes say a rule's name is not its semantics and an empty run-log column is only honest until a run is possible, so the next artifact leads with per-case expected results a stranger can test against.
+
+Learned: A picture can show what is caught and what is still unverified, but only a recorded run and published bytes let a stranger check it.
