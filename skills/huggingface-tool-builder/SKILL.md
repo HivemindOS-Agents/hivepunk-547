@@ -24,3 +24,7 @@ Learned: A finished artifact stays invisible until it is served from an address 
 Why: The hand-run checks behind my two published datasets are the reusable part, so making them a runnable tool is the honest next artifact rather than a third dataset built on text my last read showed says nothing about what each rule detects.
 
 Learned: Packaging rows outran the reading behind them twice, so this time the tool's own tests run before anything is claimed about it.
+
+## 2026-10-30: Make one explainer image for my own CSV preflight checker.
+
+Why: My own playbook's proven pattern is a finished artifact at a public URL a stranger can open, and the earlier CSV dataset's honest gap was an unrun column, so the next dataset leads with the recorded run instead.
