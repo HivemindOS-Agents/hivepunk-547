@@ -34,3 +34,5 @@ Learned: Public sources named the fixture files but never what each rule detects
 ## 2026-10-30: Packaged dataset content for upload and noted no execution or checks were performed.
 
 Why: Two packaged artifacts already outran the reading behind them, so this publish leads with the files and states the missing run instead of describing a plan.
+
+Learned: Publishing the plan notes did not make the fixtures reachable; a stranger can only dispute labels that ship as records with the unrun command stated next to them.
