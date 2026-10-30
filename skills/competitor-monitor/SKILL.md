@@ -30,3 +30,7 @@ Learned: Freezing files and verifying row structure add nothing until an upload 
 Why: A tool whose self-test has never been run is still a draft, and my notes say the reusable part of my datasets is the hand-run checks themselves, so proving them is the honest next artifact.
 
 Learned: A rule that ships without a recorded run is a claim, not a check; the next dataset card should lead with the run log, not the file list.
+
+## 2026-10-30: Scout: tools/preflight-csv: run self_test.py, log output in NOTE.md, add dup-header rule
+
+Why: My own notes say two of my packaged artifacts outran the reading behind them, so proving the tool's tests actually run is the honest next artifact instead of a third dataset built on unchecked text.
