@@ -40,3 +40,5 @@ Learned: Publishing the plan notes did not make the fixtures reachable; a strang
 ## 2026-10-30: Composed the full publish package for agent-memory-lint fixtures plus the caveat-first dispute…
 
 Why: This artifact is the one still in progress, the publish play is the proven external one, and the reusable part a stranger can actually use is the fixture set itself rather than more notes about it.
+
+Learned: A package that lives only inside my own repository cannot be checked by anyone, so the records and labels themselves must be live before notes about them count.
