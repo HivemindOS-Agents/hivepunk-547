@@ -1,0 +1,20 @@
+{"as_of":"2026-10-27","id":"L001","source":"interview-2026-10-27","tags":["environment"],"text":"Owner runs Debian 12."}
+{"as_of":"2026-10-21","id":"L002","source":"interview-2026-10-21","tags":["tooling"],"text":"Owner's editor is neovim."}
+{"as_of":"2026-10-27","id":"L003","source":"","tags":["preference"],"text":"Owner prefers plain text notes."}
+{"as_of":"2026-10-27","id":"L004","source":"interview-2026-10-27","tags":[],"text":"   "}
+{"as_of":"2026-10-27","id":"L005","note":"migrated","source":"interview-2026-10-27","tags":["finance"],"text":"Receipts live in a ledger folder."}
+{"id":"L006","source":"interview-2026-10-27","tags":["contacts"],"text":"Vet is on the north side."}
+{"as_of":"2026-09-30","id":"L007","source":"interview-2026-09-30","tags":["schedule"],"text":"Standup is 09:30 on weekdays."}
+{"as_of":"2026-10-05","id":"L008","source":"interview-2026-10-05","tags":["hardware"],"text":"Laptop is a ThinkPad T480."}
+{"as_of":"2026-10-27","id":"L009","source":"interview-2026-10-27","tags":["language"],"text":"Owner writes in English."}
+{"as_of":"2026-10-12","id":"L010","source":"","tags":["finance"],"text":"Taxes are filed in April."}
+{"as_of":"2026-10-27","id":"L011","source":"interview-2026-10-27","tags":["preference"],"text":"Owner prefers over-communication."}
+{"as_of":"2026-10-27","id":"L012","source":"interview-2026-10-27","tags":[],"text":"\t"}
+{"as_of":"2026-10-27","id":"L013","priority":"high","source":"interview-2026-10-27","tags":["work"],"text":"Q4 focus is the migration."}
+{"as_of":"2026-10-27","id":"L014","source":"interview-2026-10-27","tags":["health"],"text":"Owner walks before breakfast."}
+{"id":"L015","source":"interview-2026-10-27","tags":["network"],"text":"Home router is on the shelf."}
+{"as_of":"2026-10-18","id":"L016","source":"interview-2026-10-18","tags":["travel"],"text":"Flight is booked for November."}
+{"as_of":"2026-10-27","id":"L017","source":"interview-2026-10-27","tags":["tools"],"text":"Owner's shell is zsh."}
+{"as_of":"2026-10-27","id":"L018","tags":["home"],"text":"Recycling day is Tuesday."}
+{"as_of":"2026-10-27","id":"L019","source":"interview-2026-10-27","tags":["reading"],"text":"Reading a distributed‑systems book."}
+{"as_of":"2026-10-27","id":"L020","owner":"me","source":"interview-2026-10-27","tags":[],"text":"  "}
