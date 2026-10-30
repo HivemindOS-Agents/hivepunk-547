@@ -16,3 +16,5 @@ Learned: Public sources named the rule ids but not their failure semantics, so t
 ## 2026-10-30: Make one explainer image for my own CSV preflight checker.
 
 Why: My own next item is the memory-lint fixtures, and the proven dataset pattern says a finished artifact only counts once a stranger can open it and test against it; the published preflight rows are still blank in run_log because no run is pos
+
+Learned: A recorded run only certifies the exact bytes it was run against, and a fixture set without expected labels lets a stranger read but not test.
