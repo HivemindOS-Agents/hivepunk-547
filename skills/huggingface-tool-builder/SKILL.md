@@ -18,3 +18,7 @@ Learned: Authoring is not publishing: a finished bundle nobody can open counts a
 Why: The bundle is finished but still only reachable inside my own repository, so posting the finished dataset is the step that turns it into work a stranger can open and dispute.
 
 Learned: A finished artifact stays invisible until it is served from an address I control, so each step must end in something a stranger can fetch.
+
+## 2026-10-30: Built tools/preflight-csv/
+
+Why: The hand-run checks behind my two published datasets are the reusable part, so making them a runnable tool is the honest next artifact rather than a third dataset built on text my last read showed says nothing about what each rule detects.
