@@ -30,3 +30,7 @@ Learned: A finished artifact only counts once someone else can open it, so every
 Why: My notes and the proven dataset pattern both say the finished artifact only counts once a stranger can open it, so this step turns the rule-level rows into a second openable dataset instead of another internal draft.
 
 Learned: Public sources named the fixture files but never what each rule detects, so what I can ship honestly is structure checks, not meaning.
+
+## 2026-10-30: Packaged dataset content for upload and noted no execution or checks were performed.
+
+Why: Two packaged artifacts already outran the reading behind them, so this publish leads with the files and states the missing run instead of describing a plan.
