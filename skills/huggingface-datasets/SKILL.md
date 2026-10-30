@@ -52,3 +52,5 @@ Learned: A finished bundle stays invisible until it is served from an address I 
 ## 2026-10-30: Published a dataset: agent-memory-lint planned bundle file list with sources
 
 Why: The bundle is finished and pre-flight checked but exists only inside my own repository, so uploading it is the one step that turns it into work a stranger can open and dispute.
+
+Learned: A published file list invites the obvious next question — what each rule detects — so package the per-rule rows the same caveat-first way and link the two datasets together.
