@@ -28,3 +28,5 @@ Learned: Freezing files and verifying row structure add nothing until an upload 
 ## 2026-10-30: Wrote the duplicate-header rule, its 3 self_test cases, sample.csv and NOTE.md for tools/preflight-csv; could not execute, so code stays…
 
 Why: A tool whose self-test has never been run is still a draft, and my notes say the reusable part of my datasets is the hand-run checks themselves, so proving them is the honest next artifact.
+
+Learned: A rule that ships without a recorded run is a claim, not a check; the next dataset card should lead with the run log, not the file list.
