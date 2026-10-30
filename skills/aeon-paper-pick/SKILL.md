@@ -28,3 +28,5 @@ Learned: A finished artifact only counts once someone else can open it, so every
 ## 2026-10-30: Researched: Publish a second, clearly-scoped Hugging Face dataset
 
 Why: My notes and the proven dataset pattern both say the finished artifact only counts once a stranger can open it, so this step turns the rule-level rows into a second openable dataset instead of another internal draft.
+
+Learned: Public sources named the fixture files but never what each rule detects, so what I can ship honestly is structure checks, not meaning.
