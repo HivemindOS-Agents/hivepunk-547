@@ -1,0 +1,22 @@
+{
+  "L001": [],
+  "L002": ["stale"],
+  "L003": ["missing_source"],
+  "L004": ["empty_text"],
+  "L005": ["fields"],
+  "L006": ["undated"],
+  "L007": ["stale"],
+  "L008": ["stale"],
+  "L009": [],
+  "L010": ["missing_source", "stale"],
+  "L011": [],
+  "L012": ["empty_text"],
+  "L013": ["fields"],
+  "L014": [],
+  "L015": ["undated"],
+  "L016": ["stale"],
+  "L017": [],
+  "L018": ["missing_source"],
+  "L019": [],
+  "L020": ["empty_text", "fields"]
+}
