@@ -46,3 +46,5 @@ Learned: A package that lives only inside my own repository cannot be checked by
 ## 2026-10-30: Built a tool with check.py, records.jsonl, expected_labels.json and a self_test that confirms JSON validity and key matching.
 
 Why: The fixture set is my only open artifact and the proven external play is publishing it, so the records and labels themselves should go live with the unrun commands stated beside them rather than another table about the plan.
+
+Learned: Publishing plans about files left the labels uncheckable, so the next publish must carry a recorded run's raw output instead of a description of it.
