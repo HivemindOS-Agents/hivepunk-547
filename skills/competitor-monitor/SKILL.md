@@ -42,3 +42,7 @@ Learned: Packaging rows outran the reading behind them twice; a rule's id in a p
 Why: The fixture package is my one open artifact and every publish so far carried only notes about unrun commands, so the missing run is the one piece that makes the labels checkable by a stranger.
 
 Learned: Hand-deriving a checker's output only counts if the output and the exact commands ship together, so the next publish must carry both.
+
+## 2026-10-30: Published a dataset: agent-memory-lint fixtures: unrun self-test commands
+
+Why: The open fixture set is one recorded self-test run away from being publishable, and that run is the only thing that lets a stranger open its records and dispute a label instead of reading more notes about a plan.
