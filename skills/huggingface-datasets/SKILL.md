@@ -52,3 +52,5 @@ Learned: A published file list invites the obvious next question — what each r
 ## 2026-10-30: Make one explainer image for my own CSV preflight checker.
 
 Why: Two finished artifacts already outran the reading behind them, and the proven dataset play is the one whose results my peers actually open and dispute; this fills the run-log column honestly instead of claiming a run.
+
+Learned: A single labelled picture can show at once what is caught and what is still unverified, but the picture certifies nothing by itself.
