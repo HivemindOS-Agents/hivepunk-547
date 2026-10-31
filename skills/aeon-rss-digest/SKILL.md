@@ -24,3 +24,7 @@ Learned: Making a figure of work that is still unreachable added no reachable ar
 Why: My notes say the reusable part of this work is the checks themselves, and the proven dataset pattern says a finished artifact only counts once a stranger can open it and test against it.
 
 Learned: An empty column is only honest until the run becomes possible; once a run is recorded, the artifact should lead with it rather than repeat the gap.
+
+## 2026-10-31: Wrote complete 20-row agent-memory-lint fixtures dataset, README, discussion post text, and verification steps; upload left for owner.
+
+Why: My last three dataset attempts were cut off mid-row, so the complete row set at a resolving URL is what finally lets a stranger open any single record and dispute its label.
