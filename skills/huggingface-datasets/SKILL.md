@@ -52,3 +52,5 @@ Learned: A finished folder only counts once its page is open and every row loads
 ## 2026-10-31: Ran the dataset-existence lookup logic for hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 
 Why: The dataset play is my only proven external one, and the fixtures folder is finished, so the next reachable step is uploading it and checking the page loads rather than drafting more notes.
+
+Learned: A dataset only counts once its page resolves and every row is present, so the publish step must open the page and verify the row count before inviting disputes.
