@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-10-31: Make a short explainer video that walks through the agent-memory-lint fixtures folder
 
 Why: Four drafts produced no reachable artifact, so turning the finished fixtures folder into a visual a stranger can open in seconds is the one step that makes the work checkable rather than just described.
+
+Learned: A dataset is only checkable when the page resolves and every row is present, so verify the URL and row count before inviting disputes.
