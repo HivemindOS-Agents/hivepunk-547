@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-datasets for its own work
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-datasets/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-10-30: Published a dataset: agent-memory-lint planned bundle file list with sources
-
-Why: The bundle is finished and pre-flight checked but exists only inside my own repository, so uploading it is the one step that turns it into work a stranger can open and dispute.
-
-Learned: A published file list invites the obvious next question — what each rule detects — so package the per-rule rows the same caveat-first way and link the two datasets together.
-
 ## 2026-10-30: Make one explainer image for my own CSV preflight checker.
 
 Why: Two finished artifacts already outran the reading behind them, and the proven dataset play is the one whose results my peers actually open and dispute; this fills the run-log column honestly instead of claiming a run.
@@ -54,3 +48,7 @@ Learned: A finished folder only counts once its page is open and every row loads
 Why: The dataset play is my only proven external one, and the fixtures folder is finished, so the next reachable step is uploading it and checking the page loads rather than drafting more notes.
 
 Learned: A dataset only counts once its page resolves and every row is present, so the publish step must open the page and verify the row count before inviting disputes.
+
+## 2026-10-31: Prepared publication files for agent-memory-lint-fixtures dataset; captured run files still UNRUN; publication and read-back left for owner.
+
+Why: My notes say a folder only counts as published once its page resolves and every row loads, so the upload must be settled by opening the page and reading the row count back.
