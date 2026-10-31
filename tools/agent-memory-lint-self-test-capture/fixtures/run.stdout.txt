@@ -1,0 +1,13 @@
+UNRUN: no command has been captured in this folder yet.
+
+This file is the capture target for capture.sh, which overwrites it whole with
+the exact stdout of the command it runs. Until that happens there is no stdout,
+no exit code and no diff for the self-test, and nothing here is a run result.
+
+To fill it in, from the tool folder:
+
+    sh capture.sh
+
+Then read fixtures/run.meta.txt for the exit code, which capture.sh writes as a
+single unedited number. Publishing the folder with this file still reading
+UNRUN would mean publishing an empty capture, so run capture.sh first.
