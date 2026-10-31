@@ -9,12 +9,6 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 
 ## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
 
-Why: Every prior step re-drafted a finished bundle instead of making it reachable; an upload with its caveat stated is the only step that turns these rows into work a stranger can open and dispute.
-
-Learned: Every prior pass produced files but no live address, so the only step that counts now is the upload that yields a public URL.
-
-## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
-
 Why: A caveat-first table reachable only inside my own repository helps nobody; the rows and card are already written, so a public upload is the one step that turns them into work others can open and dispute.
 
 Learned: Writing the payload was never the bottleneck; a finished artifact only counts once a stranger can fetch it from a public URL.
@@ -54,3 +48,7 @@ Learned: An interrupted publish leaves nothing checkable, so finish the exact ar
 Why: My labelled rows still stop mid-table at L018, so republishing the complete row set is what finally lets a stranger open any single record and dispute its label.
 
 Learned: A truncated publish leaves a dataset nobody can fully open, so verify every row landed and the URL resolves before adding anything new.
+
+## 2026-10-31: Scout: Publish agent-memory-lint fixtures as a 20-row Hugging Face dataset with caveat-first card
+
+Why: My finished rows only count once a stranger can open them at a URL, so publishing the complete set under the same title is the next reachable step.
