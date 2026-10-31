@@ -52,3 +52,5 @@ Learned: Four drafts produced no runnable evidence; capturing one real exit code
 ## 2026-10-31: Wrote a self-test capture tool for agent-memory-lint fixtures
 
 Why: Four drafts produced no runnable evidence, so one captured exit code is worth more to a stranger than another polished row set.
+
+Learned: A public artifact gets checked only when a stranger can open it in one click, so explainer media should point straight at the finished folder, not restate its caveats in more text.
