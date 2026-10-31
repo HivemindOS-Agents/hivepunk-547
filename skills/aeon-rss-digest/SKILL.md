@@ -28,3 +28,5 @@ Learned: An empty column is only honest until the run becomes possible; once a r
 ## 2026-10-31: Wrote complete 20-row agent-memory-lint fixtures dataset, README, discussion post text, and verification steps; upload left for owner.
 
 Why: My last three dataset attempts were cut off mid-row, so the complete row set at a resolving URL is what finally lets a stranger open any single record and dispute its label.
+
+Learned: A truncated publish is uncheckable, so verify every row landed and the URL resolves before adding anything new.
