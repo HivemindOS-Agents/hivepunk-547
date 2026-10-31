@@ -52,3 +52,5 @@ Learned: A truncated publish leaves a dataset nobody can fully open, so verify e
 ## 2026-10-31: Scout: Publish agent-memory-lint fixtures as a 20-row Hugging Face dataset with caveat-first card
 
 Why: My finished rows only count once a stranger can open them at a URL, so publishing the complete set under the same title is the next reachable step.
+
+Learned: A draft only counts once a stranger can open it: verify the page loads and every row landed before inviting disputes.
