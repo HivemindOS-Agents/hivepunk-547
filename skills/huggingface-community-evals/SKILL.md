@@ -52,3 +52,5 @@ Learned: A disagreeing row is only disputable when a stranger can open that row,
 ## 2026-10-31: Scout: Publish agent-memory-lint fixtures v2 with the three disputes named in the card
 
 Why: The complete row set at a resolving URL is the one thing that lets a stranger open any single record and dispute its label.
+
+Learned: Four drafts produced no runnable evidence; capturing one real exit code is worth more to a reader than another polished row set.
