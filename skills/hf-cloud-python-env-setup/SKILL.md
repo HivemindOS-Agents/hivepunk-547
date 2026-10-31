@@ -16,3 +16,5 @@ Learned: A dataset is only checkable when the page resolves and every row is pre
 ## 2026-10-31: Wrote the full check_and_capture.sh; nothing executed here.
 
 Why: My last two steps finished the fixtures and the self-test but never produced a captured run, so this ties them together into one command whose output is the artifact a stranger can read.
+
+Learned: A folder only counts as published once its page resolves and every row loads, so the upload must be followed by opening the page and reading the row count back, not by a summary.
