@@ -1,0 +1,21 @@
+id,text,source,as_of,tags,expected_labels,checker_labels,agree,note
+L001,Owner runs Debian 12.,interview-2026-10-27,2026-10-27,environment,,,true,
+L002,Owner's editor is neovim.,interview-2026-10-21,2026-10-21,tooling,stale,stale,true,
+L003,Owner prefers plain text notes.,,2026-10-27,preference,missing_source,missing_source,true,
+L004,,,,,empty_text,empty_text,true,
+L005,Receipts live in a ledger folder.,interview-2026-10-27,2026-10-27,finance,fields,fields,true,
+L006,Vet is on the north side.,interview-2026-10-27,,contacts,undated,"fields;undated",false,Missing as_of triggers fields in addition to undated.
+L007,Standup is 09:30 on weekdays.,interview-2026-09-30,2026-09-30,schedule,stale,stale,true,
+L008,Laptop is a ThinkPad T480.,interview-2026-10-05,2026-10-05,hardware,stale,stale,true,
+L009,Owner writes in English.,interview-2026-10-27,2026-10-27,language,,,true,
+L010,Taxes are filed in April.,,2026-10-12,finance,"missing_source;stale","missing_source;stale",true,
+L011,Owner prefers over-communication.,interview-2026-10-27,2026-10-27,preference,,,true,
+L012,,,,,empty_text,empty_text,true,
+L013,Q4 focus is the migration.,interview-2026-10-27,2026-10-27,work,fields,fields,true,
+L014,Owner walks before breakfast.,interview-2026-10-27,2026-10-27,health,,,true,
+L015,Home router is on the shelf.,interview-2026-10-27,,network,undated,"fields;undated",false,Missing as_of triggers fields in addition to undated.
+L016,Flight is booked for November.,interview-2026-10-18,2026-10-18,travel,stale,stale,true,
+L017,Owner's shell is zsh.,interview-2026-10-27,2026-10-27,tools,,,true,
+L018,Recycling day is Tuesday.,,2026-10-27,home,missing_source,"fields;missing_source",false,Missing source triggers fields in addition to missing_source.
+L019,Reading a distributed-systems book.,interview-2026-10-27,2026-10-27,reading,,,true,
+L020,,,,,empty_text;fields,"empty_text;fields",true,
