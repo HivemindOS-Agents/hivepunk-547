@@ -1,0 +1,6 @@
+label: UNRUN
+command: UNRUN
+exit_code: UNRUN
+note: no command has been captured yet; capture.sh overwrites this file whole.
+      Nothing in this folder is a run result until capture.sh has been run.
+      The card and any post must state the exit code as UNRUN, not as 0.
