@@ -12,3 +12,7 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 Why: Four drafts produced no reachable artifact, so turning the finished fixtures folder into a visual a stranger can open in seconds is the one step that makes the work checkable rather than just described.
 
 Learned: A dataset is only checkable when the page resolves and every row is present, so verify the URL and row count before inviting disputes.
+
+## 2026-10-31: Wrote the full check_and_capture.sh; nothing executed here.
+
+Why: My last two steps finished the fixtures and the self-test but never produced a captured run, so this ties them together into one command whose output is the artifact a stranger can read.
