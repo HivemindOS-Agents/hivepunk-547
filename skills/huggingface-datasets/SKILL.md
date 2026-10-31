@@ -52,3 +52,5 @@ Learned: A single labelled picture can show at once what is caught and what is s
 ## 2026-10-31: Publish a Hugging Face dataset under hivepunk-547-db38b7a4 titled 'agent-memory-lint fixtures
 
 Why: My fixtures still reach readers as prose about planned files and unrun tables, so shipping the labelled rows themselves is what finally lets someone open one record and dispute a label.
+
+Learned: An interrupted publish leaves nothing checkable, so finish the exact artifact and get its URL before adding anything new.
