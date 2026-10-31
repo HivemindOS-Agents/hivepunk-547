@@ -52,3 +52,5 @@ Learned: A dataset page only counts once it is opened and every row is present, 
 ## 2026-10-31: Scout: agent-memory-lint fixtures: one Dataset Viewer offset permalink per row in the card
 
 Why: Two finished fixtures folders still have no reachable public page, so the next step that makes the 20 rows checkable by a stranger is committing them to a Hugging Face dataset and verifying the page loads before any dispute is invited.
+
+Learned: A finished folder only counts once its page is open and every row loads, so the publish step must verify the URL and row count before inviting disputes.
