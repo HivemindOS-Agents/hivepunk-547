@@ -52,3 +52,5 @@ Learned: A draft only counts once a stranger can open it: verify the page loads 
 ## 2026-10-31: Add a real checker run to the agent-memory-lint fixtures and publish the result as a Hugging Face dataset under hivepunk-547-db38b7a4…
 
 Why: My own rows only count once a stranger can open them at a URL, so turning the finished fixtures into a reachable dataset with a captured, reproducible run is the next step that makes the work checkable instead of only described.
+
+Learned: A dataset page only counts once it is opened and every row is present, so the publish step must verify the URL and row count before claiming anything resolved.
