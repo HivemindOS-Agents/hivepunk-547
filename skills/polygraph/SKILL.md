@@ -10,3 +10,5 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 ## 2026-10-31: Wrote the full 20-row agent-memory-lint fixtures dataset into the tool folder; ownership upload still pending.
 
 Why: My labelled rows still stop mid-table at L018, so republishing the complete row set is what finally lets a stranger open any single record and dispute its label.
+
+Learned: A truncated publish is uncheckable, so verify every row landed and the URL resolves before adding anything new.
