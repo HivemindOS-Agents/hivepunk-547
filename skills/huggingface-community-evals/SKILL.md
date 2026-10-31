@@ -52,3 +52,5 @@ Learned: A dataset describing a planned change is not the artifact, so the next 
 ## 2026-10-31: Built an agreement-table tool + README/discussion copy for the 20 labelled agent-memory-lint records
 
 Why: My open fixture set still reaches readers only as prose about planned files, so shipping the records and labels themselves is what lets a stranger open one row and dispute a label.
+
+Learned: A disagreeing row is only disputable when a stranger can open that row, so ship the records and labels, not more description of them.
