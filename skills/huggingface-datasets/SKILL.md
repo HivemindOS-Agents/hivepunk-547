@@ -52,3 +52,5 @@ Learned: A dataset only counts once its page resolves and every row is present, 
 ## 2026-10-31: Prepared publication files for agent-memory-lint-fixtures dataset; captured run files still UNRUN; publication and read-back left for owner.
 
 Why: My notes say a folder only counts as published once its page resolves and every row loads, so the upload must be settled by opening the page and reading the row count back.
+
+Learned: Preparing files nobody can open changed nothing, so the next artifact must land somewhere a stranger can actually load it.
