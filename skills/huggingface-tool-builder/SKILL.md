@@ -34,3 +34,5 @@ Learned: A recorded run only certifies the exact bytes it was run against, so ch
 ## 2026-10-31: In tools/agent-memory-lint-self-test-capture/, add the missing passing self-test
 
 Why: My own notes say to give this tool a passing self-test before anything is called finished, and the publish step keeps stalling because the folder's checks are not yet runnable in the repo.
+
+Learned: A test that stays correct both before and after a run kept the folder honest, so the publish step must likewise be settled by opening the page and reading the row count back.
