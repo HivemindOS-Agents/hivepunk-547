@@ -1,73 +1,88 @@
 #!/usr/bin/env python3
-"""Self‑test for the agent‑memory‑lint‑fixtures package.
+# Self-test for the agent-memory-lint-fixtures tool folder.
+# Run with NO arguments, from this folder. No network, no writes.
+# Exits 0 only when every check passes.
 
-It validates that
-  * ``records.jsonl`` is a sequence of valid JSON objects;
-  * ``expected_labels.json`` is a JSON mapping with the same set of record IDs;
-  * the keys in ``expected_labels.json`` are in canonical sorted order.
+import io
+import json
+import os
+import sys
 
-The script exits with code 0 if all checks pass, otherwise it prints a
-human‑readable error message and exits with code 1.
-"""
+HERE = os.path.dirname(os.path.abspath(__file__))
 
-import json, sys, os
 
-RECORDS_FILE = "records.jsonl"
-LABELS_FILE = "expected_labels.json"
+def die(msg):
+    sys.stderr.write("FAIL: %s\n" % msg)
+    sys.exit(1)
 
 
 def load_records(path):
-    records = []
+    recs = []
     with open(path, encoding="utf-8") as fh:
         for line in fh:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                records.append(json.loads(line))
-            except json.JSONDecodeError as e:
-                print(f"Malformed JSON in {path}: {e}")
-                sys.exit(1)
-    return records
-
-
-def load_labels(path):
-    with open(path, encoding="utf-8") as fh:
-        try:
-            return json.load(fh)
-        except json.JSONDecodeError as e:
-            print(f"Malformed JSON in {path}: {e}")
-            sys.exit(1)
+            if line.strip():
+                try:
+                    recs.append(json.loads(line))
+                except json.JSONDecodeError as e:
+                    die("malformed JSON in %s: %s" % (path, e))
+    return recs
 
 
 def main():
-    if not os.path.isfile(RECORDS_FILE) or not os.path.isfile(LABELS_FILE):
-        print("Required input files not found.")
-        sys.exit(1)
+    rec_path = os.path.join(HERE, "records.jsonl")
+    lab_path = os.path.join(HERE, "expected_labels.json")
+    for p in (rec_path, lab_path):
+        if not os.path.isfile(p):
+            die("missing required file: %s" % p)
 
-    recs = load_records(RECORDS_FILE)
-    labels = load_labels(LABELS_FILE)
+    recs = load_records(rec_path)
+    if len(recs) != 20:
+        die("expected 20 records, found %d" % len(recs))
+    ids = [r["id"] for r in recs]
+    if len(set(ids)) != 20:
+        die("record ids are not unique")
 
-    rec_ids = {r.get("id") for r in recs}
-    label_ids = set(labels.keys())
+    with open(lab_path, encoding="utf-8") as fh:
+        expected = json.load(fh)
+    if set(expected.keys()) != set(ids):
+        die("expected_labels.json ids do not match records.jsonl ids")
+    if list(expected.keys()) != sorted(expected.keys()):
+        die("expected_labels.json keys are not in canonical sorted order")
+    for k, v in expected.items():
+        if not isinstance(v, list):
+            die("label for %s is not a list" % k)
 
-    missing = rec_ids - label_ids
-    extra = label_ids - rec_ids
+    # import the builder without running its main()
+    sys.path.insert(0, HERE)
+    try:
+        import build_labelled_rows as b
+    except Exception as e:
+        die("cannot import build_labelled_rows: %s" % e)
 
-    if missing or extra:
-        if missing:
-            print(f"IDs present in records.jsonl but missing from expected_labels.json: {sorted(missing)}")
-        if extra:
-            print(f"IDs present in expected_labels.json but missing from records.jsonl: {sorted(extra)}")
-        sys.exit(1)
+    agree = 0
+    mismatches = []
+    for rec in recs:
+        exp = list(expected[rec["id"]])
+        got = b.checker_labels(rec)
+        if exp == got:
+            agree += 1
+            if b.note_for(exp, got) != "":
+                die("row %s agrees but has a note" % rec["id"])
+        else:
+            mismatches.append(rec["id"])
+            if b.note_for(exp, got) == "":
+                die("row %s disagrees but has no note" % rec["id"])
 
-    # Check that keys are sorted alphabetically
-    if list(labels.keys()) != sorted(labels.keys()):
-        print("expected_labels.json keys are not sorted alphabetically.")
-        sys.exit(1)
+    if agree != 17:
+        die("hand-derived agreement is %d/20, expected 17/20" % agree)
+    if mismatches != ["L006", "L015", "L018"]:
+        die("mismatching ids are %r, expected ['L006','L015','L018']" % mismatches)
 
-    print("Self‑test passed.")
+    print("Self-test passed: 20 records, hand-derived agreement 17/20, "
+          "mismatches L006/L015/L018, every row noted. "
+          "No checker was run; no exit code, stdout or diff exists.")
     sys.exit(0)
+
 
 if __name__ == "__main__":
     main()
