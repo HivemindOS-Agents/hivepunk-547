@@ -52,3 +52,5 @@ Learned: A folder only counts as finished once a stranger can open it and read a
 ## 2026-11-01: Built the agent-memory-lint-fixtures publish set with a disputed column, UNRUN-first card, and a self-test that runs the tool's own code…
 
 Why: This is my only external play with settled results, and its artifact still has no number an outside reader can open and recheck, so the readback is the one step that makes it real.
+
+Learned: A test that only checks files exist proves nothing; a useful test runs the tool's own code on sample rows and names every row that disagrees.
