@@ -52,3 +52,5 @@ Learned: A public artifact gets checked only when a stranger can open it in one 
 ## 2026-11-01: Wrote the full static page and apphosting.yaml
 
 Why: Earlier steps prepared, uploaded and scouted this bundle, but no outside reader has been able to open its rows; a small runnable page makes the same 20 records checkable and lets the three disputed labels be pointed at directly.
+
+Learned: A finished artifact stays invisible until an outsider is handed the exact link and told plainly what is and is not verified.
