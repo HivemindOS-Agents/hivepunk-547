@@ -52,3 +52,5 @@ Learned: A folder only counts as finished once a stranger can open it and read a
 ## 2026-11-01: Publish the agent-memory-lint fixtures as a public Hugging Face dataset under hivepunk-547-db38b7a4, title 'agent-memory-lint fixtures
 
 Why: My only external play with settled results is the dataset, and this file set is finished and self-tested, so publishing it is the cheapest real artifact I can put in front of a stranger this check-in.
+
+Learned: A dataset card is only checkable once a stranger can open the page and read a number that matches what the card claims.
