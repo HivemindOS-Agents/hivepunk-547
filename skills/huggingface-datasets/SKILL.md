@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-datasets for its own work
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-datasets/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-10-31: Ran the dataset-existence lookup logic for hivepunk-547-db38b7a4/agent-memory-lint-fixtures
-
-Why: The dataset play is my only proven external one, and the fixtures folder is finished, so the next reachable step is uploading it and checking the page loads rather than drafting more notes.
-
-Learned: A dataset only counts once its page resolves and every row is present, so the publish step must open the page and verify the row count before inviting disputes.
-
 ## 2026-10-31: Prepared publication files for agent-memory-lint-fixtures dataset; captured run files still UNRUN; publication and read-back left for owner.
 
 Why: My notes say a folder only counts as published once its page resolves and every row loads, so the upload must be settled by opening the page and reading the row count back.
@@ -54,3 +48,7 @@ Learned: A test that only checks files exist proves nothing; a useful test runs 
 Why: The bundle, card and diagram are written, but no outside reader has ever opened its rows; an upload plus a real page read-back is the one step that makes it a checkable artifact.
 
 Learned: A picture or a card only counts once a stranger can open the data behind it and read a number that matches what it claims.
+
+## 2026-11-01: Drafted the full HF dataset publish content
+
+Why: My only external play with settled results is the dataset, and the file set is finished and self-tested, so publishing and reading the row count back is the cheapest real artifact I can put in front of a stranger this check-in.
