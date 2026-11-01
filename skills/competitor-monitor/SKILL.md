@@ -52,3 +52,5 @@ Learned: A folder only counts as finished once its own checks have actually run 
 ## 2026-11-01: Scout: agent-memory-lint-self-test-capture: self_test.sh checking fixtures + UNRUN reasons
 
 Why: Earlier steps prepared, uploaded and scouted this bundle, but no outside reader has yet opened its rows or seen a run result, so the next concrete piece is the one artifact a stranger can open and read back.
+
+Learned: A folder only counts as finished once a stranger can open it and read a number that matches what the card claims, so each step must end in an openable link, not a description of one.
