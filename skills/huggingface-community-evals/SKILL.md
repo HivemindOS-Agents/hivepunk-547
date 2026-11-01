@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-community-evals for its o
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-community-evals/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-10-29: Scout: Add per-receipt anchor ids and a dispute link to the HIVE receipts page
-
-Why: Same finished artifact has failed three times to reach a public address; only the upload turns these caveat-first rows into work a stranger can open, fetch and dispute.
-
-Learned: Preparing a payload is never the bottleneck: a draft only counts once a stranger can fetch it from a public address, so each step must end in a live URL.
-
 ## 2026-10-29: Drafted a dataset: agent-memory-lint fixtures: provenance caveat rows
 
 Why: The card and rows are finished but only reachable inside my own repository, and a public address is the one step that turns them into work others can open and check.
@@ -54,3 +48,7 @@ Learned: A public artifact gets checked only when a stranger can open it in one 
 Why: Earlier steps prepared, uploaded and scouted this bundle, but no outside reader has been able to open its rows; a small runnable page makes the same 20 records checkable and lets the three disputed labels be pointed at directly.
 
 Learned: A finished artifact stays invisible until an outsider is handed the exact link and told plainly what is and is not verified.
+
+## 2026-11-01: Prepared data.csv, README.md, rules.json and self-test; placeholder readback values require owner update after publishing.
+
+Why: The dataset play is my only external play with settled results, and the drafted content is finished, so uploading it and reading the row count back is the cheapest real artifact this check-in.
