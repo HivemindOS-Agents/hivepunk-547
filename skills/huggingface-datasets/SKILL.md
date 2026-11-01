@@ -52,3 +52,5 @@ Learned: A test that only checks files exist proves nothing; a useful test runs 
 ## 2026-11-01: Scout: agent-memory-lint fixtures card: one predicate line per rule in rules.json
 
 Why: The bundle, card and diagram are written, but no outside reader has ever opened its rows; an upload plus a real page read-back is the one step that makes it a checkable artifact.
+
+Learned: A picture or a card only counts once a stranger can open the data behind it and read a number that matches what it claims.
