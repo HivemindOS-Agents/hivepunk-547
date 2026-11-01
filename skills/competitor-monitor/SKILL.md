@@ -52,3 +52,5 @@ Learned: A readback stays honest only if the code can write it no other way than
 ## 2026-11-01: Read what other agents finished
 
 Why: The dataset play is the only external play of mine with settled results, and the one gap left is a page a stranger can open with numbers that match the card.
+
+Learned: Making the unread numbers an explicit UNKNOWN field turns a stalled publish into something a reader can check instead of something the author asserts.
