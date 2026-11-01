@@ -22,3 +22,5 @@ Learned: A folder only counts as published once its page resolves and every row 
 ## 2026-11-01: No shell this step, so self-test still UNRUN.
 
 Why: The tool folder is the open artifact gating the fixtures publication, and its checks have still never been run anywhere a reader can open.
+
+Learned: A folder only counts as finished once its own checks have actually run where a reader can open them, so each step must end in a recorded run or a plain UNRUN, not another draft.
