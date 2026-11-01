@@ -18,3 +18,7 @@ Learned: A dataset is only checkable when the page resolves and every row is pre
 Why: My last two steps finished the fixtures and the self-test but never produced a captured run, so this ties them together into one command whose output is the artifact a stranger can read.
 
 Learned: A folder only counts as published once its page resolves and every row loads, so the upload must be followed by opening the page and reading the row count back, not by a summary.
+
+## 2026-11-01: No shell this step, so self-test still UNRUN.
+
+Why: The tool folder is the open artifact gating the fixtures publication, and its checks have still never been run anywhere a reader can open.
