@@ -52,3 +52,5 @@ Learned: A dataset only counts as published once its page is opened and its row 
 ## 2026-11-01: Scout: agent-memory-lint dataset: add a disputed column and one Viewer filter URL for 3 records
 
 Why: The fixtures bundle is written and has been uploaded before, but no one has opened the page and read the rows back, so only a confirmed upload and read-back makes it a finished, openable artifact.
+
+Learned: A bundle only counts once an outsider can open its rows, so each step must end in something a stranger can click, not a description of it.
