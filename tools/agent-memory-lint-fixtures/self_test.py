@@ -195,7 +195,7 @@ def main():
     print("PASS check.lint: agreement %d/20, mismatches %s"
           % (lint["agree"], ",".join(lint["mismatches"])))
     print("PASS rules.json: ids %s; disputes covered %s; run_status UNRUN"
-          % (",".join(rules["rules"]), ",".join(rules["covered"])))
+          % (",".join(rules["rules"]), ",".join(rules["covered"])) )
     print("PASS README: %s" % card["readme"])
     print("All self-tests passed. No lint run is claimed; the captured run "
           "files remain UNRUN and the Viewer readback lines remain 'not yet read'.")
