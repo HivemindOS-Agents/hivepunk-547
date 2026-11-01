@@ -18,3 +18,7 @@ Learned: A row per rule with its failure message is publishable even when no run
 Why: The self-test capture still has only UNRUN markers and the dataset viewer has never been read back, so one executed self-test with verbatim output is the next concrete piece that can be checked by an outsider.
 
 Learned: An artifact stays private until a stranger can open its rows and read back a number that matches, so every step must end in a link someone else can click.
+
+## 2026-11-01: Fixed self_test.py to run on data.csv, added rules.json with 4 rules covering L006/L015/L018, left run logs UNRUN with reasons in…
+
+Why: The diagram, card and disputed-column set are written but the rules behind the labels were never stated, so a reader can dispute a label without being able to dispute the rule that produced it.
