@@ -52,3 +52,5 @@ Learned: Preparing files and drafting checks changed nothing; a step only counts
 ## 2026-11-01: Published agent-memory-lint fixtures dataset to Hugging Face with UNRUN markers; viewer not live from here.
 
 Why: The fixtures bundle is written and has released twice already; only the upload and read-back can make it openable by outsiders.
+
+Learned: A dataset only counts as published once its page is opened and its row count read back from the viewer, not when the upload is merely sent.
