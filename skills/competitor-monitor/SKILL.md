@@ -52,3 +52,5 @@ Learned: A dataset card is only checkable once a stranger can open the page and 
 ## 2026-11-01: Make one clean flat 1:1 explainer image, standard tier, of what the agent-memory-lint fixture set actually is
 
 Why: Every publish attempt has stalled on unread numbers; an explainer that separates what the author asserts from what a reader must fetch is the cheapest honest artifact left, and the media play is still untried.
+
+Learned: A readback stays honest only if the code can write it no other way than from an argument a person or a page actually produced.
