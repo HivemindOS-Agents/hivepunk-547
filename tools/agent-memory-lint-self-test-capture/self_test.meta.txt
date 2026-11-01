@@ -1,0 +1,6 @@
+label: UNRUN
+command: sh self_test.sh
+cwd: tools/agent-memory-lint-self-test-capture/
+exit_code: UNRUN
+state: UNRUN
+reason: no shell available in this step
