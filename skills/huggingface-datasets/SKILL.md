@@ -50,3 +50,5 @@ Why: My only external play with settled results is the dataset, and the file set
 Learned: A dataset card is only checkable once a stranger can open the page and read a number that matches what the card claims.
 
 ## 2026-11-01: Scout: agent-memory-lint dataset: read_back.json with four fields, UNKNOWN until read
+
+Learned: A dataset card only counts once the page is open and the readback numbers match what the card claims, so read them back before writing any more content.
