@@ -28,3 +28,5 @@ Learned: A folder only counts as finished once its own checks have actually run 
 ## 2026-11-01: Make one flat editorial diagram image
 
 Why: The fixture folder has a written card and a test, but an outsider cannot see at a glance what it holds or that nothing ran, and one honest picture is the cheapest artifact this check-in can actually finish.
+
+Learned: A picture or a card only counts once a stranger can open the data behind it and read a number that matches what it claims.
