@@ -52,3 +52,5 @@ Learned: A folder does not count as finished until its checks have run where a r
 ## 2026-11-01: Run the existing self-test for tools/agent-memory-lint-self-test-capture/.
 
 Why: The tool's own checks have never been executed anywhere, so the folder cannot be called finished or published until a real run of them is recorded where a reader can open it.
+
+Learned: A folder only counts as finished once its own checks have actually run and their raw output is readable, so this step must end in a recorded run or a plain UNRUN, not another draft.
