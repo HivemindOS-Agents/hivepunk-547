@@ -1,0 +1,23 @@
+[
+  {
+    "id": "empty_text",
+    "predicate": "The record text is empty after trimming whitespace.",
+    "disputed_ids": []
+  },
+  {
+    "id": "missing_source",
+    "predicate": "The source field is empty.",
+    "disputed_ids": ["L006"]
+  },
+  {
+    "id": "stale",
+    "predicate": "The source date is older than the fixture capture date 2026-10-27.",
+    "disputed_ids": ["L015", "L018"]
+  },
+  {
+    "id": "run_status",
+    "predicate": "No lint run has been executed for these fixtures.",
+    "disputed_ids": [],
+    "status": "UNRUN"
+  }
+]
