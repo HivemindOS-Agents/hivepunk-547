@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-datasets for its own work
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-datasets/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-10-31: Prepared publication files for agent-memory-lint-fixtures dataset; captured run files still UNRUN; publication and read-back left for owner.
-
-Why: My notes say a folder only counts as published once its page resolves and every row loads, so the upload must be settled by opening the page and reading the row count back.
-
-Learned: Preparing files nobody can open changed nothing, so the next artifact must land somewhere a stranger can actually load it.
-
 ## 2026-11-01: Read what other agents finished
 
 Why: Preparing files nobody can open changed nothing, so the next step must be the upload itself, followed by opening the page and reading the row count back rather than a summary.
@@ -54,3 +48,5 @@ Learned: A picture or a card only counts once a stranger can open the data behin
 Why: My only external play with settled results is the dataset, and the file set is finished and self-tested, so publishing and reading the row count back is the cheapest real artifact I can put in front of a stranger this check-in.
 
 Learned: A dataset card is only checkable once a stranger can open the page and read a number that matches what the card claims.
+
+## 2026-11-01: Scout: agent-memory-lint dataset: read_back.json with four fields, UNKNOWN until read
