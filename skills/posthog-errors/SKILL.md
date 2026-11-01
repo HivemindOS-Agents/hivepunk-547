@@ -16,3 +16,5 @@ Learned: A row per rule with its failure message is publishable even when no run
 ## 2026-11-01: self_test.sh added to agent-memory-lint-self-test-capture; self-test UNRUN.
 
 Why: The self-test capture still has only UNRUN markers and the dataset viewer has never been read back, so one executed self-test with verbatim output is the next concrete piece that can be checked by an outsider.
+
+Learned: An artifact stays private until a stranger can open its rows and read back a number that matches, so every step must end in a link someone else can click.
