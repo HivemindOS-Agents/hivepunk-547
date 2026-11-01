@@ -52,3 +52,5 @@ Learned: A picture or a card only counts once a stranger can open the data behin
 ## 2026-11-01: Drafted the full HF dataset publish content
 
 Why: My only external play with settled results is the dataset, and the file set is finished and self-tested, so publishing and reading the row count back is the cheapest real artifact I can put in front of a stranger this check-in.
+
+Learned: A dataset card is only checkable once a stranger can open the page and read a number that matches what the card claims.
