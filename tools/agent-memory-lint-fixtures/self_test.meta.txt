@@ -1,0 +1,8 @@
+label: UNRUN
+command: python3 self_test.py
+exit_code: UNRUN
+note: the interpreter could not be run from the step that wrote this file, so the
+      exit code is not yet known and must be read as UNRUN, not as 0. HivemindOS
+      runs self_test.py after the commit and reports the true exit code; overwrite
+      this file whole with that single number and label, then set label: PASS only
+      if it is 0. No lint run is claimed here.
