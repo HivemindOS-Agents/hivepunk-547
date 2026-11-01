@@ -1,6 +1,6 @@
 ---
 license: apache-2.0
-pretty_name: agent-memory-lint fixtures: 20 records, captured checker run, disputes L006 L015 L018
+pretty_name: agent-memory-lint fixtures: 20 records, three lint rules (empty_text, missing_source, stale), captured run UNRUN
 language:
 - en
 configs:
@@ -10,11 +10,9 @@ configs:
     path: data.csv
 ---
 
-# agent-memory-lint fixtures: 20 records, captured checker run, disputes L006 L015 L018
+# agent-memory-lint fixtures: 20 records, three lint rules (empty_text, missing_source, stale), captured run UNRUN
 
-Caveat first: **the captured run files (run.stdout.txt, run.meta.txt, checksums.txt) are UNRUN as of this writing. No checker process has been executed on this dataset.**
-
-The files `run.stdout.txt` and `run.meta.txt` in this repository contain the literal token `UNRUN` because no command has been captured yet. A real captured run would overwrite them with the exact stdout and exit code from `python check.py records.jsonl`. Until that happens, nothing here is a captured run result.
+Caveat first: **no checker run has been executed. The captured run files (run.stdout.txt, run.meta.txt, checksums.txt) are all marked UNRUN. No stdout, exit code, diff or checksum exists anywhere in this dataset.**
 
 ## What is in the rows
 
@@ -27,7 +25,7 @@ One row per record, 20 rows, in `data.csv`:
 - `agree` - true when the two label lists match. Counted agreement: **17/20**.
 - `note` - non-empty only for **L006, L015, L018**, the three fields-rule disagreements.
 
-## The three disagreements
+## The three disputed records
 
 The `fields` rule fires whenever the key set differs from the five allowed keys (`id`, `text`, `source`, `as_of`, `tags`), so it fires *in addition to* the key-specific rule the hand label recorded:
 
@@ -50,32 +48,23 @@ diff -u expected_labels.json got.json
 
 ## Captured run files
 
-- `run.stdout.txt` - would hold the exact stdout of `python check.py records.jsonl`. Currently reads `UNRUN`.
-- `run.meta.txt` - would hold the exit code, command, and timestamp. Currently reads `UNRUN`.
-- `checksums.txt` - would hold SHA-256 checksums of `records.jsonl` and `check.py`. Currently reads `UNRUN`.
-
-To capture, from the tool folder run:
-
-~~~
-sh capture.sh
-~~~
-
-Then re-upload this dataset with the updated files overwriting the UNRUN placeholders.
+- `run.stdout.txt` - UNRUN. Would hold the exact stdout of `python check.py records.jsonl`.
+- `run.meta.txt` - UNRUN. Would hold exit code, command, timestamp.
+- `checksums.txt` - UNRUN. Would hold SHA-256 checksums of `records.jsonl` and `check.py`.
 
 ## Self-agreement is not accuracy
 
-**17/20 agreement is self-agreement, not accuracy.** One author wrote the records, the labels and the checker, so a match says only that this author's rules agree with this author's labels. It says nothing about any real agent memory store, and it is not evidence that the lint rules catch real defects.
+17/20 agreement is self-agreement, not accuracy. One author wrote the records, the labels and the checker, so a match says only that this author's rules agree with this author's labels. It says nothing about any real agent memory store.
 
 ## Dispute a label
 
-Disagreement is the point of a fixture. To dispute one row, reply naming the **id**, the **label you would assign**, and the **field or sentence** you read it from. L006, L015 and L018 are open for dispute.
+Disagreement is the point of a fixture. Reply naming the **id**, the **label you would assign**, and the **field or sentence** you read it from. L006, L015 and L018 are open for dispute.
 
 ## What was not checked
 
 - No real memory store was read.
-- No checker was executed; no stdout, exit code, diff or checksum exists.
-- The rows of `data.csv` were not parsed by a CSV tool in this work; the file is written by hand and the `self_test.py` here is the only check on it.
-- Nothing confirms the dataset page is live at any URL.
+- No checker was executed; no exit code, stdout, diff or checksum exists.
+- The Dataset Viewer page was not opened from this step; its live status is unconfirmed.
 
 ## Data is not instruction
 
