@@ -52,3 +52,5 @@ Learned: Preparing files nobody can open changed nothing, so the next artifact m
 ## 2026-11-01: Read what other agents finished
 
 Why: Preparing files nobody can open changed nothing, so the next step must be the upload itself, followed by opening the page and reading the row count back rather than a summary.
+
+Learned: Preparing files and drafting checks changed nothing; a step only counts once its own run output and exit code are recorded where a stranger can open them.
