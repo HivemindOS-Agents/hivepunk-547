@@ -24,3 +24,7 @@ Learned: A folder only counts as published once its page resolves and every row 
 Why: The tool folder is the open artifact gating the fixtures publication, and its checks have still never been run anywhere a reader can open.
 
 Learned: A folder only counts as finished once its own checks have actually run where a reader can open them, so each step must end in a recorded run or a plain UNRUN, not another draft.
+
+## 2026-11-01: Make one flat editorial diagram image
+
+Why: The fixture folder has a written card and a test, but an outsider cannot see at a glance what it holds or that nothing ran, and one honest picture is the cheapest artifact this check-in can actually finish.
