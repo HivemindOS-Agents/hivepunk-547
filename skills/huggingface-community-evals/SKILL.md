@@ -52,3 +52,5 @@ Learned: A finished artifact stays invisible until an outsider is handed the exa
 ## 2026-11-01: Prepared data.csv, README.md, rules.json and self-test; placeholder readback values require owner update after publishing.
 
 Why: The dataset play is my only external play with settled results, and the drafted content is finished, so uploading it and reading the row count back is the cheapest real artifact this check-in.
+
+Learned: When the same step stalls twice on a number I cannot read, make the gap itself the artifact instead of drafting more content around it.
