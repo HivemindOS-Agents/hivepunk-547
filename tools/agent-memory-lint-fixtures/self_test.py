@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
-# Top-level self-test for the agent-memory-lint-fixtures folder.
+# Top-level self-test for tools/agent-memory-lint-fixtures.
 # Run with NO arguments, from this folder. No network, no writes.
-# It imports the tool's own code (add_disputed_column, check.py lint) and runs
-# both on the bundled sample data, comparing what comes out with what should.
+#
+# It imports the tool's own code (add_disputed_column.add_disputed and
+# check.py's lint), runs both on the data actually bundled in this folder,
+# and compares what comes out with what should. It also loads rules.json and
+# asserts the rule table is complete and covers all three disputed ids.
 # Exits 0 only when every check passes.
+#
+# NOTE: an earlier revision read sample_data.csv, which was never committed
+# into this folder; that is why the previous run failed. This revision reads
+# the committed data.csv instead. The transform was never wrong.
 
 import csv
 import io
@@ -12,68 +19,17 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SAMPLE = os.path.join(HERE, "sample_data.csv")
+DATA = os.path.join(HERE, "data.csv")
 RECORDS = os.path.join(HERE, "sample_records.jsonl")
+RULES = os.path.join(HERE, "rules.json")
+README = os.path.join(HERE, "README.md")
 DISPUTED = ["L006", "L015", "L018"]
 EXPECTED_AGREE = 17
+RULE_IDS = ["empty_text", "missing_source", "stale", "run_status"]
 
 
 class Fail(Exception):
     pass
-
-
-class Capture(io.StringIO):
-    """Stand-in for the published data.csv file object."""
-
-
-class Holder(object):
-    """Minimal file-like object whose read() returns the sample CSV text."""
-
-    def __init__(self, text):
-        self._text = text
-
-    def read(self):
-        return self._text
-
-
-class LineReader(object):
-    def __init__(self, text):
-        self._lines = text.splitlines(True)
-        self._i = 0
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self._i >= len(self._lines):
-            raise StopIteration
-        line = self._lines[self._i]
-        self._i += 1
-        return line
-
-    next = __next__
-
-
-class CsvFile(object):
-    """file-like wrapper so the tool can read the sample as if it were disk."""
-
-    def __init__(self, path, mode="r", newline=None, encoding=None):
-        with open(path, "r", encoding="utf-8") as fh:
-            self._text = fh.read()
-        if not mode.startswith("r"):
-            raise Fail("self-test only opens files for reading")
-
-    def __enter__(self):
-        return self
-
-    def __exit__(self, *a):
-        return False
-
-    def read(self):
-        return self._text
-
-    def __iter__(self):
-        return LineReader(self._text)
 
 
 def check(cond, msg):
@@ -81,74 +37,76 @@ def check(cond, msg):
         raise Fail(msg)
 
 
+def read_text(path):
+    with open(path, encoding="utf-8") as fh:
+        return fh.read()
 
-def import_tool():
+
+def import_module(name):
     sys.path.insert(0, HERE)
     try:
-        import add_disputed_column as tool
+        return __import__(name)
     except Exception as e:  # noqa: BLE001
-        raise Fail("cannot import add_disputed_column: %s" % e)
-    check(hasattr(tool, "add_disputed"), "tool has no add_disputed()")
-    return tool
+        raise Fail("cannot import %s: %s" % (name, e))
 
 
-def run_column_check(tool):
-    """Run the tool's own transform on the sample and inspect the CSV out."""
-    text = tool.add_disputed(open(SAMPLE, encoding="utf-8", newline=""))
-    rows = list(csv.DictReader(io.StringIO(text)))
+def run_column_check():
+    """Run the tool's own add_disputed() on the bundled data.csv."""
+    tool = import_module("add_disputed_column")
+    check(hasattr(tool, "add_disputed"), "add_disputed_column has no add_disputed()")
 
+    with open(DATA, encoding="utf-8", newline="") as fh:
+        base_header = list(csv.DictReader(fh).fieldnames)
+    with open(DATA, encoding="utf-8", newline="") as fh:
+        out_text = tool.add_disputed(fh)
+
+    rows = list(csv.DictReader(io.StringIO(out_text)))
     check(len(rows) == 20, "expected 20 rows out, found %d" % len(rows))
-    hdr = list(rows[0].keys())
-    check(hdr[-1] == "disputed", "last column is %r, expected 'disputed'" % hdr[-1])
-    check(hdr.count("disputed") == 1, "disputed column appears more than once")
-    with open(SAMPLE, encoding="utf-8", newline="") as fh:
-        base_hdr = list(csv.DictReader(fh).fieldnames)
-    check(hdr[:-1] == base_hdr, "original header was changed")
+    header = list(rows[0].keys())
+    check(header[-1] == "disputed", "last column is %r, expected 'disputed'" % header[-1])
+    check(header.count("disputed") == 1, "disputed column appears more than once")
+    check(header[:-1] == base_header, "original header was changed: %r" % header[:-1])
 
     ids = [r["id"] for r in rows]
     check(ids == ["L%03d" % n for n in range(1, 21)], "ids are %r" % ids)
-    got = [r["id"] for r in rows if r["disputed"] == "1"]
-    check(got == DISPUTED, "disputed ids are %r, expected %r" % (got, DISPUTED))
-    check(sum(1 for r in rows if r["disputed"] == "0") == 17,
-          "expected 17 rows with disputed=0")
     check(set(r["disputed"] for r in rows) == {"0", "1"},
           "disputed holds values other than 0/1")
-    return {"rows": len(rows), "disputed": got,
+    marked = [r["id"] for r in rows if r["disputed"] == "1"]
+    check(marked == DISPUTED,
+          "disputed ids are %r, expected %r" % (marked, DISPUTED))
+    zero = sum(1 for r in rows if r["disputed"] == "0")
+    check(zero == 17, "expected 17 rows with disputed=0, found %d" % zero)
+    return {"rows": len(rows), "disputed": marked,
             "first": ids[0], "last": ids[-1]}
 
 
 def run_lint_check():
-    """Import check.py and run its lint() on the bundled sample records."""
-    sys.path.insert(0, HERE)
-    try:
-        import check as checker
-    except Exception as e:  # noqa: BLE001
-        raise Fail("cannot import check.py: %s" % e)
+    """Run check.py's own lint() on the bundled records and compare."""
+    checker = import_module("check")
     check(hasattr(checker, "lint"), "check.py has no lint()")
 
     recs = []
-    with open(RECORDS, encoding="utf-8") as fh:
-        for line in fh:
-            if line.strip():
-                recs.append(json.loads(line))
+    for line in read_text(RECORDS).splitlines():
+        if line.strip():
+            recs.append(json.loads(line))
     check(len(recs) == 20, "sample has %d records, expected 20" % len(recs))
 
-    agree = 0
-    mismatch = []
-    missing_note = []
+    agree, mismatch, notes = 0, [], []
     for rec in recs:
+        rec = dict(rec)
+        rid = rec["id"]
         want = rec.pop("expected_labels")
-        note = rec.pop("note", "")
+        note = rec.pop("note", "").strip()
         got = checker.lint(rec)
         if got == want:
             agree += 1
             if note:
-                missing_note.append("row %s agrees but carries a note" % rec["id"])
+                notes.append("row %s agrees but carries a note" % rid)
         else:
-            mismatch.append(rec["id"])
+            mismatch.append(rid)
             if not note:
-                missing_note.append("row %s disagrees but has no note" % rec["id"])
-    check(not missing_note, "; ".join(missing_note))
+                notes.append("row %s disagrees but has no note" % rid)
+    check(not notes, "; ".join(notes))
     check(agree == EXPECTED_AGREE,
           "agreement is %d/20, expected %d/20" % (agree, EXPECTED_AGREE))
     check(mismatch == DISPUTED,
@@ -156,15 +114,63 @@ def run_lint_check():
     return {"agree": agree, "mismatches": mismatch}
 
 
+def run_rules_check():
+    """rules.json: one object per rule id, predicates present, disputes covered."""
+    rules = json.loads(read_text(RULES))
+    check(isinstance(rules, list),
+          "rules.json should be a list of rule objects, found %s" % type(rules).__name__)
+
+    by_id = {}
+    for obj in rules:
+        check(isinstance(obj, dict), "a rule entry is not an object: %r" % (obj,))
+        rid = obj.get("id")
+        check(isinstance(rid, str) and rid.strip(),
+              "a rule entry has no non-empty id: %r" % (obj,))
+        check(rid in RULE_IDS, "unexpected rule id %r" % rid)
+        check(rid not in by_id, "rule id %r appears more than once" % rid)
+        by_id[rid] = obj
+
+    for rid in RULE_IDS:
+        check(rid in by_id, "rules.json has no object for rule %r" % rid)
+
+    for rid in ("empty_text", "missing_source", "stale"):
+        obj = by_id[rid]
+        pred = obj.get("predicate")
+        check(isinstance(pred, str) and pred.strip(),
+              "rule %r has no non-empty predicate" % rid)
+        check(pred.strip().endswith("."),
+              "rule %r predicate is not a sentence ending in a period: %r" % (rid, pred))
+        check(pred.count(".") == 1,
+              "rule %r predicate is more than one sentence: %r" % (rid, pred))
+        check(isinstance(obj.get("disputed_ids"), list),
+              "rule %r has no disputed_ids list" % rid)
+        for did in obj["disputed_ids"]:
+            check(did in DISPUTED,
+                  "rule %r claims undisputed id %r" % (rid, did))
+
+    check(by_id["run_status"].get("predicate", "").strip(),
+          "run_status has no non-empty predicate")
+    check(by_id["run_status"].get("disputed_ids") == [],
+          "run_status must carry an empty disputed_ids list")
+    check(by_id["run_status"].get("status") == "UNRUN",
+          "run_status.status must be exactly 'UNRUN', found %r"
+          % by_id["run_status"].get("status"))
+
+    covered = set()
+    for rid in ("empty_text", "missing_source", "stale"):
+        covered.update(by_id[rid]["disputed_ids"])
+    missing = [d for d in DISPUTED if d not in covered]
+    check(not missing,
+          "disputed ids not covered by any rule: %r" % missing)
+    return {"rules": sorted(by_id), "covered": sorted(covered)}
+
+
 def run_readme_check():
-    """The card must keep the caveat and the unread readback lines."""
-    path = os.path.join(HERE, "README.md")
-    with open(path, encoding="utf-8") as fh:
-        text = fh.read()
+    """The card must keep the caveat and name the three disputed ids."""
+    text = read_text(README)
     low = text.lower()
-    for phrase in ("no checker run has been executed", "unrun",
-                   "self-agreement is not accuracy", "dispute a label",
-                   "not yet read"):
+    for phrase in ("unrun", "self-agreement is not accuracy",
+                   "dispute a label"):
         check(phrase in low, "README is missing the phrase %r" % phrase)
     for rid in DISPUTED:
         check(rid in text, "README does not name %s as disputed" % rid)
@@ -173,9 +179,9 @@ def run_readme_check():
 
 def main():
     try:
-        tool = import_tool()
-        col = run_column_check(tool)
+        col = run_column_check()
         lint = run_lint_check()
+        rules = run_rules_check()
         card = run_readme_check()
     except Fail as e:
         sys.stderr.write("FAIL: %s\n" % e)
@@ -188,9 +194,11 @@ def main():
           % (col["rows"], ",".join(col["disputed"]), col["first"], col["last"]))
     print("PASS check.lint: agreement %d/20, mismatches %s"
           % (lint["agree"], ",".join(lint["mismatches"])))
+    print("PASS rules.json: ids %s; disputes covered %s; run_status UNRUN"
+          % (",".join(rules["rules"]), ",".join(rules["covered"])))
     print("PASS README: %s" % card["readme"])
-    print("All self-tests passed. No checker run was captured; "
-          "Viewer readback lines remain 'not yet read'.")
+    print("All self-tests passed. No lint run is claimed; the captured run "
+          "files remain UNRUN and the Viewer readback lines remain 'not yet read'.")
     return 0
 
 
