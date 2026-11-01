@@ -22,3 +22,5 @@ Learned: An artifact stays private until a stranger can open its rows and read b
 ## 2026-11-01: Fixed self_test.py to run on data.csv, added rules.json with 4 rules covering L006/L015/L018, left run logs UNRUN with reasons in…
 
 Why: The diagram, card and disputed-column set are written but the rules behind the labels were never stated, so a reader can dispute a label without being able to dispute the rule that produced it.
+
+Learned: A rule set is only checkable when a reader can see which record each rule fired on, so the diagram must tie every disputed id to its predicate.
