@@ -1,0 +1,20 @@
+{"id": "L001", "text": "Owner runs Debian 12.", "source": "interview-2026-10-27", "as_of": "2026-10-27", "tags": ["environment"], "expected_labels": [], "note": ""}
+{"id": "L002", "text": "Owner's editor is neovim.", "source": "interview-2026-10-21", "as_of": "2026-10-21", "tags": ["tooling"], "expected_labels": ["stale"], "note": ""}
+{"id": "L003", "text": "Owner prefers plain text notes.", "source": "", "as_of": "2026-10-27", "tags": ["preference"], "expected_labels": ["missing_source"], "note": ""}
+{"id": "L004", "text": "", "source": "", "as_of": "", "tags": [], "expected_labels": ["empty_text"], "note": ""}
+{"id": "L005", "text": "Receipts live in a ledger folder.", "source": "interview-2026-10-27", "as_of": "2026-10-27", "tags": ["finance"], "expected_labels": ["fields"], "note": ""}
+{"id": "L006", "text": "Vet is on the north side.", "source": "interview-2026-10-27", "tags": ["contacts"], "expected_labels": ["undated"], "note": "Missing as_of triggers fields in addition to undated."}
+{"id": "L007", "text": "Standup is 09:30 on weekdays.", "source": "interview-2026-09-30", "as_of": "2026-09-30", "tags": ["schedule"], "expected_labels": ["stale"], "note": ""}
+{"id": "L008", "text": "Laptop is a ThinkPad T480.", "source": "interview-2026-10-05", "as_of": "2026-10-05", "tags": ["hardware"], "expected_labels": ["stale"], "note": ""}
+{"id": "L009", "text": "Owner writes in English.", "source": "interview-2026-10-27", "as_of": "2026-10-27", "tags": ["language"], "expected_labels": [], "note": ""}
+{"id": "L010", "text": "Taxes are filed in April.", "source": "", "as_of": "2026-10-12", "tags": ["finance"], "expected_labels": ["missing_source", "stale"], "note": ""}
+{"id": "L011", "text": "Owner prefers over-communication.", "source": "interview-2026-10-27", "as_of": "2026-10-27", "tags": ["preference"], "expected_labels": [], "note": ""}
+{"id": "L012", "text": "", "source": "", "as_of": "", "tags": [], "expected_labels": ["empty_text"], "note": ""}
+{"id": "L013", "text": "Q4 focus is the migration.", "source": "interview-2026-10-27", "as_of": "2026-10-27", "tags": ["work"], "expected_labels": ["fields"], "note": ""}
+{"id": "L014", "text": "Owner walks before breakfast.", "source": "interview-2026-10-27", "as_of": "2026-10-27", "tags": ["health"], "expected_labels": [], "note": ""}
+{"id": "L015", "text": "Home router is on the shelf.", "source": "interview-2026-10-27", "tags": ["network"], "expected_labels": ["undated"], "note": "Missing as_of triggers fields in addition to undated."}
+{"id": "L016", "text": "Flight is booked for November.", "source": "interview-2026-10-18", "as_of": "2026-10-18", "tags": ["travel"], "expected_labels": ["stale"], "note": ""}
+{"id": "L017", "text": "Owner's shell is zsh.", "source": "interview-2026-10-27", "as_of": "2026-10-27", "tags": ["tools"], "expected_labels": [], "note": ""}
+{"id": "L018", "text": "Recycling day is Tuesday.", "source": "", "as_of": "2026-10-27", "tags": ["home"], "expected_labels": ["missing_source"], "note": "Missing source triggers fields in addition to missing_source."}
+{"id": "L019", "text": "Reading a distributed-systems book.", "source": "interview-2026-10-27", "as_of": "2026-10-27", "tags": ["reading"], "expected_labels": [], "note": ""}
+{"id": "L020", "text": "", "source": "", "as_of": "", "tags": [], "expected_labels": ["empty_text", "fields"], "note": ""}
