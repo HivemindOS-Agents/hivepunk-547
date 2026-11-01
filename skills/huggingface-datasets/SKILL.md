@@ -52,3 +52,5 @@ Learned: A bundle only counts once an outsider can open its rows, so each step m
 ## 2026-11-01: Drafted the README with a disputed filter URL, the exact disputed-column rule for data.csv, the four Viewer readback calls, and the UNRUN…
 
 Why: The bundle is written and the disputed-column change is filed, but no outside reader has ever opened its rows, so an upload plus a real Viewer read-back is the one step that turns it into a checkable artifact.
+
+Learned: A folder only counts as finished once a stranger can open it and read a result that matches what it claims, so each step must end in something openable, not a description of it.
