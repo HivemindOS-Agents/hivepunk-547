@@ -10,24 +10,33 @@ configs:
     path: data.csv
 ---
 
-# agent-memory-lint fixtures: 20 records, three lint rules (empty_text, missing_source, stale), captured run UNRUN
+# agent-memory-lint fixtures: 20 records, three lint rules (empty_text, missing_source, stale)
 
-Caveat first: **no checker run has been executed. The captured run files (run.stdout.txt, run.meta.txt, checksums.txt) are all marked UNRUN. No stdout, exit code, diff or checksum exists anywhere in this dataset.**
+**Caveat first: no lint run has been executed. No checker run has been executed. Nothing here is a check result, a pass or a score. The captured run files (run.stdout.txt, run.meta.txt, checksums.txt) are UNRUN: no stdout, exit code, diff or checksum exists anywhere in this dataset.**
 
-## What is in the rows
+## Files
 
-One row per record, 20 rows, in `data.csv`:
+- `data.csv` - the 20 captured fixture records, plus a `disputed` column: `1` for **L006, L015, L018**, `0` for the other 17 rows.
+- `run.stdout.txt`, `run.meta.txt`, `checksums.txt` - the captured run, verbatim. Still UNRUN.
 
-- `id` - stable fixture id, L001-L020.
-- `text`, `source`, `as_of`, `tags` - the record's own fields as written in `records.jsonl`.
-- `expected_labels` - the hand-written labels, semicolon-separated.
-- `checker_labels` - hand-derived from `check.py`'s rule code, semicolon-separated.
-- `agree` - true when the two label lists match. Counted agreement: **17/20**.
-- `note` - non-empty only for **L006, L015, L018**, the three fields-rule disagreements.
+## Dataset Viewer readback
+
+- Row count: **not yet read**
+- First record id: **not yet read**
+- Last record id: **not yet read**
+- Disputed rows (expect 3): **not yet read**
+
+`config=default` and `split=train` below are taken from my own recorded publish step, not from a page I read, and are **unconfirmed**; check `/splits` first.
+
+## Reader link: only the disputed records
+
+~~~
+https://datasets-server.huggingface.co/filter?dataset=hivepunk-547-db38b7a4%2Fagent-memory-lint-fixtures-20-records-three-lint-rules-empty-text-missing-source-stale-captured-run-unrun&config=default&split=train&where=%22disputed%22%3D1&offset=0&length=100
+~~~
+
+The filter returns rows only if a column named `disputed` really exists on the Hub, which is true only after this file set is published. Until the four calls in the note below are made and pasted in, every line above stays `not yet read`.
 
 ## The three disputed records
-
-The `fields` rule fires whenever the key set differs from the five allowed keys (`id`, `text`, `source`, `as_of`, `tags`), so it fires *in addition to* the key-specific rule the hand label recorded:
 
 | id | expected_labels | checker_labels | why |
 |----|-----------------|----------------|-----|
@@ -35,22 +44,7 @@ The `fields` rule fires whenever the key set differs from the five allowed keys 
 | L015 | undated | fields; undated | no `as_of` key |
 | L018 | missing_source | fields; missing_source | no `source` key |
 
-This is a labelling dispute, not a bug report. Both fixes are one line and neither was applied here: narrow the rule or widen the hand label.
-
-## Reproduce commands - UNRUN
-
-~~~
-python check.py records.jsonl > got.json
-diff -u expected_labels.json got.json
-~~~
-
-**Both commands are UNRUN.** Neither was executed anywhere in this work.
-
-## Captured run files
-
-- `run.stdout.txt` - UNRUN. Would hold the exact stdout of `python check.py records.jsonl`.
-- `run.meta.txt` - UNRUN. Would hold exit code, command, timestamp.
-- `checksums.txt` - UNRUN. Would hold SHA-256 checksums of `records.jsonl` and `check.py`.
+This is a labelling dispute, not a bug report. Both fixes are one line and neither was applied here.
 
 ## Self-agreement is not accuracy
 
