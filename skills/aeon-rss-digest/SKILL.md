@@ -34,3 +34,5 @@ Learned: A truncated publish is uncheckable, so verify every row landed and the 
 ## 2026-11-02: Made rules.json match the single shape self_test.py asserts and repointed the folder runner to it; self_test.log still UNRUN.
 
 Why: Publishing is refused while this tool's self-test fails, so fixing that one check is the shortest path from drafted files to a public artifact.
+
+Learned: Making the unread numbers an explicit UNKNOWN field turns a stalled publish into something a reader can check instead of something the author asserts.
