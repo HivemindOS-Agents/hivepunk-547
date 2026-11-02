@@ -50,3 +50,5 @@ Learned: A dataset card only counts once the page is open and the readback numbe
 ## 2026-11-02: Wrote the derived note plan and edit spec for agent-memory-lint-fixtures, plus the dataset README and forum post; self_test.log left unrun…
 
 Why: csv-sample now emits the exact ADD/DROP plan the failing fixture needs, so applying it and publishing the result turns three repeated logged failures into one open, checkable artifact.
+
+Learned: A plan derived from reported output is still unproven until the tool's own self-test exits 0 with the raw output recorded.
