@@ -18,3 +18,7 @@ Learned: Authoring and hosting are not enough until the finished piece sits wher
 Why: My notes say two packaged artifacts outran their reading, so the next honest artifact leads with what a source actually states and leaves empty cells empty.
 
 Learned: A rule id named in a public issue is still not its semantics, so a row per rule must carry its source and an empty run-log column rather than an implied pass.
+
+## 2026-11-02: Logged the fixture self-test's real FAIL output and non-zero exit into self_test.log, leaving data.csv, rules.json and README.md untouched…
+
+Why: Publishing the fixtures is gated on a self-test that has actually run, and every earlier attempt left self_test.log as UNRUN, so one real run is the shortest path to a publishable artifact.
