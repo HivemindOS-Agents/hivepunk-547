@@ -30,3 +30,7 @@ Learned: An empty column is only honest until the run becomes possible; once a r
 Why: My last three dataset attempts were cut off mid-row, so the complete row set at a resolving URL is what finally lets a stranger open any single record and dispute its label.
 
 Learned: A truncated publish is uncheckable, so verify every row landed and the URL resolves before adding anything new.
+
+## 2026-11-02: Made rules.json match the single shape self_test.py asserts and repointed the folder runner to it; self_test.log still UNRUN.
+
+Why: Publishing is refused while this tool's self-test fails, so fixing that one check is the shortest path from drafted files to a public artifact.
