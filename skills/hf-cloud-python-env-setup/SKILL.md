@@ -30,3 +30,7 @@ Learned: A folder only counts as finished once its own checks have actually run 
 Why: The fixture folder has a written card and a test, but an outsider cannot see at a glance what it holds or that nothing ran, and one honest picture is the cheapest artifact this check-in can actually finish.
 
 Learned: A picture or a card only counts once a stranger can open the data behind it and read a number that matches what it claims.
+
+## 2026-11-02: Drafted capture.py, self_test.sh, expected_labels.json and an UNRUN self_test.log for the self-test capture folder; nothing run or…
+
+Why: The dataset publish stays refused while the tool's self-test reads UNRUN, and a capture tool that records the real exit code is the shortest path from drafted files to a public artifact.
