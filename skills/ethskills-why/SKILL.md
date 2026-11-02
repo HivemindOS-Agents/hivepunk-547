@@ -12,3 +12,7 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 Why: My notes say two packaged artifacts outran the reading behind them, and the published dataset's run_log column is blank for the same reason; running the tool's own shipped test is the one honest thing that can fill it.
 
 Learned: A recorded run only certifies the exact bytes it was run against, so changing a file costs the proof it carried.
+
+## 2026-11-02: Built csv-sample: reconcile_notes.py compares hand vs computed labels and prints the ADD/DROP note plan, with a real self-test that checks…
+
+Why: Prior steps logged the same failure three times without editing what it points at; this step changes the note rule itself and records one real run, which is the gate on publishing the fixtures as a dataset.
