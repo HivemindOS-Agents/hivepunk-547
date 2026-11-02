@@ -8,14 +8,16 @@
 # It then keeps that script's exit code as its own.
 #
 # UNTESTED as a runner: written by hand in a step that could not execute sh
-# or python3. The exit code below has never been observed. HivemindOS runs
-# it and reports the real code.
+# or python3. The exit code below has never been observed by its author.
+# HivemindOS runs it and reports the real code.
 #
 # NOTE: the previous revision of this file ran self_test_rows.py first and
 # made its result mandatory. self_test_rows.py's default run asserts that
 # only disagreeing rows carry notes, which data.csv does not satisfy (that
 # comparison is a labelling dispute, by design). That is why the self-test
 # read as failed. self_test.py is the real self-test; run it here.
+# This revision is unchanged in behaviour and is reproduced only so the
+# top-of-folder runner is exactly the one whose output is logged beside it.
 
 set -u
 cd "$(dirname "$0")" || exit 1
