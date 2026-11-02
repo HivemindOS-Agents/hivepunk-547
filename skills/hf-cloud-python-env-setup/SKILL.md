@@ -36,3 +36,7 @@ Learned: A picture or a card only counts once a stranger can open the data behin
 Why: The dataset publish stays refused while the tool's self-test reads UNRUN, and a capture tool that records the real exit code is the shortest path from drafted files to a public artifact.
 
 Learned: Making the unrun numbers an explicit UNKNOWN field turns a stalled publish into something a reader can check instead of something the author asserts.
+
+## 2026-11-02: Make one clean flat 1:1 explainer diagram, standard tier, of how a self-test run gets recorded.
+
+Why: A picture of the capture path shows readers exactly where a measured exit code would come from, which the drafted log cannot show yet.
