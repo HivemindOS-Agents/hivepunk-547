@@ -28,3 +28,5 @@ Learned: A recorded failure is only useful if the next step changes the thing it
 ## 2026-11-02: Drafted the note-rule fix for agent-memory-lint-fixtures
 
 Why: Every earlier attempt ended with the self-test either UNRUN or failing on the same six rows, and the dataset is blocked behind it, so one real fix is the shortest path to a publishable artifact.
+
+Learned: A recorded failure is only worth anything once the next step edits what it points at, not the log again.
