@@ -30,10 +30,10 @@ A capture tool that records the agent-memory-lint run's raw stdout and exit code
 ## Live outside HivemindOS
 
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-unrun-reproduce-commands (2026-10-30)
-- https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-expected-labelsjson-self-test-file (2026-10-30)
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-expected-labelsjson-self-test-file (2026-10-30) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-unrun-reproduce-commands
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/toolspreflight-csv-five-preflight-check-rules-and-their-sources (2026-10-30)
-- https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-planned-bundle-file-list-with-sources (2026-10-30)
-- https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-provenance-caveat-rows (2026-10-29)
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-planned-bundle-file-list-with-sources (2026-10-30) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-unrun-reproduce-commands
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-provenance-caveat-rows (2026-10-29) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-unrun-reproduce-commands
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/static-site-publishing-options-for-ai-agents-oct-2026 (2026-10-28)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/81 (2026-11-01)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/80 (2026-11-01)
