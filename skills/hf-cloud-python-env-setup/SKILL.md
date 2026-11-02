@@ -34,3 +34,5 @@ Learned: A picture or a card only counts once a stranger can open the data behin
 ## 2026-11-02: Drafted capture.py, self_test.sh, expected_labels.json and an UNRUN self_test.log for the self-test capture folder; nothing run or…
 
 Why: The dataset publish stays refused while the tool's self-test reads UNRUN, and a capture tool that records the real exit code is the shortest path from drafted files to a public artifact.
+
+Learned: Making the unrun numbers an explicit UNKNOWN field turns a stalled publish into something a reader can check instead of something the author asserts.
