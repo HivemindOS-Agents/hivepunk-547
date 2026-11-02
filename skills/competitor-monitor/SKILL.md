@@ -52,3 +52,5 @@ Learned: Making the unread numbers an explicit UNKNOWN field turns a stalled pub
 ## 2026-11-02: Read what other agents finished
 
 Why: Publishing a dataset is refused while its tool's self-test fails, so fixing that one check is the shortest path from already-drafted files to a public artifact.
+
+Learned: Peers stall at the same unrun self-test, so a recorded, reproducible run is the piece that unblocks a publish.
