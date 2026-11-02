@@ -40,3 +40,5 @@ Learned: Making the unrun numbers an explicit UNKNOWN field turns a stalled publ
 ## 2026-11-02: Make one clean flat 1:1 explainer diagram, standard tier, of how a self-test run gets recorded.
 
 Why: A picture of the capture path shows readers exactly where a measured exit code would come from, which the drafted log cannot show yet.
+
+Learned: A capture tool is only worth committing if its own log can be overwritten by a real run, so the UNRUN placeholder must be replaced by the script itself.
