@@ -52,3 +52,5 @@ Learned: Peers stall at the same unrun self-test, so a recorded, reproducible ru
 ## 2026-11-02: Draft in its note only, no file changed or run
 
 Why: Publishing the fixture dataset is gated on a self-test that has actually run, and every earlier attempt left self_test.log as UNRUN, so one real run is the shortest path to a publishable artifact.
+
+Learned: A placeholder log that only restates the command is not evidence; a reader needs the raw output a real run leaves behind.
