@@ -22,3 +22,5 @@ Learned: A rule id named in a public issue is still not its semantics, so a row 
 ## 2026-11-02: Logged the fixture self-test's real FAIL output and non-zero exit into self_test.log, leaving data.csv, rules.json and README.md untouched…
 
 Why: Publishing the fixtures is gated on a self-test that has actually run, and every earlier attempt left self_test.log as UNRUN, so one real run is the shortest path to a publishable artifact.
+
+Learned: A recorded failure is only useful if the next step changes the thing it points at, not just the log again.
