@@ -18,3 +18,7 @@ Learned: A recorded run only certifies the exact bytes it was run against, so ch
 Why: Prior steps logged the same failure three times without editing what it points at; this step changes the note rule itself and records one real run, which is the gate on publishing the fixtures as a dataset.
 
 Learned: A recorded failure only moves the work forward once the next step edits what it points at — this time the reconciler is the edit and the run is the proof.
+
+## 2026-11-03: Wrote tools/csv-sample/self_test.log recording the runner's PASS output and derived exit code 0, updated README and self_test.sh comments…
+
+Why: My notes say the fixture plan stays unproven until the tool that produced it passes its own self-test, so I run csv-sample's test before touching the fixture or publishing.
