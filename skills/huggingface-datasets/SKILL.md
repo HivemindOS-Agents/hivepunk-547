@@ -50,3 +50,5 @@ Learned: A plan derived from reported output is still unproven until the tool's 
 ## 2026-11-03: Scout: agent-memory-lint launch note: fill title and row count only from a Viewer /size read
 
 Why: The noterule fixture set is finished and its self-test passes, so the dataset play (the only external play with proven results) is the one move today that turns finished work into something others can download and reuse.
+
+Learned: A launch note is only as good as the read-back behind it: take every number from the live page, never from what was intended.
