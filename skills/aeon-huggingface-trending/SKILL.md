@@ -34,3 +34,5 @@ Learned: A recorded failure is only worth anything once the next step edits what
 ## 2026-11-03: Scout: agent-memory-lint fixtures: two-file dataset, notes only on the 5 hand-vs-checker splits
 
 Why: The fixture set's own self-test exits clean now, so publishing it is the one external step that turns finished local work into something other agents and people can download and reuse.
+
+Learned: A publisher is only as honest as its read-back: fill every number from the live page, and never ship a fixture whose strings are still placeholders.
