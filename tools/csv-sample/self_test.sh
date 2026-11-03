@@ -6,8 +6,15 @@
 # reconcile_notes.reconcile and runs it on a small fixture it builds itself,
 # comparing what comes out with what should. Exits 0 only if every check passes.
 #
-# UNTESTED as a runner: hand-written, never executed by its author. HivemindOS
-# runs it after each commit and reports the true exit code.
+# RUN RECORD: HivemindOS ran this file after the commit and reported state
+# "passed". The output it reported, and the exit code, are recorded verbatim
+# in self_test.log beside this file. The author of this file never executed it
+# (that step had no shell and no network), so the exit code there is derived
+# from the reported state, not observed. self_test.log is a record: do not edit
+# it to match a later run, replace it whole with the new raw output.
+#
+# The code below is unchanged; only this header was updated to point at the
+# log, so this file is still exactly the runner whose output is logged.
 
 set -u
 cd "$(dirname "$0")" || exit 1
