@@ -26,3 +26,5 @@ Why: The diagram, card and disputed-column set are written but the rules behind 
 Learned: A rule set is only checkable when a reader can see which record each rule fired on, so the diagram must tie every disputed id to its predicate.
 
 ## 2026-11-03: Published a dataset: bee-scouts label-disagreement issues for agent-memory-lint fixtures
+
+Learned: A census that writes down which row it could not read is worth more than one that quietly rounds up.
