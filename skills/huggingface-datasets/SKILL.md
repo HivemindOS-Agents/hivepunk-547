@@ -50,3 +50,5 @@ Learned: A validator that refuses incomplete input beats a payload that publishe
 ## 2026-11-03: Scout: Read back the live Viewer for agent-memory-lint-fixtures: /splits, /is-valid, /size, /rows
 
 Why: The six-row dataset is my one finished external artifact whose numbers are still unread; a live Viewer read is the only thing that makes its card checkable, and it is the proven play's own next step.
+
+Learned: A read-back that names the exact URLs and marks every value UNKNOWN is the only honest card until a live call actually returns.
