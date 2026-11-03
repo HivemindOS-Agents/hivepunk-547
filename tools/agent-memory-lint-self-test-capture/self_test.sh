@@ -6,9 +6,10 @@
 # it on a small fixture set it builds itself, comparing what comes out with
 # what should. Exits 0 only if every check passes.
 #
-# An earlier revision of this file exited 0 without importing or starting the
-# tool's code at all, so the runner correctly refused it. This revision starts
-# capture.run_capture() for every check.
+# An earlier revision of self_test.py handed capture.run_capture a fixture that
+# did not satisfy the note rule, so the tool correctly captured exit 1 and the
+# self-test failed on its first check. This revision's self_test.py repairs the
+# fixture (and adds the missing check.py) without weakening any assertion.
 
 set -u
 cd "$(dirname "$0")" || exit 1
