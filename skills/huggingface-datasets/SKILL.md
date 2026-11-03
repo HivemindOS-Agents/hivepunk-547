@@ -50,3 +50,5 @@ Learned: A fixture handed to a checker has to satisfy the rule it checks; a publ
 ## 2026-11-03: Published a dataset: agent-memory-lint fixtures: what six bee-scouts issues propose
 
 Why: The emitter is finished and its completeness check is the only thing standing between local work and the one external play that has proven results, so filling the 14 unread rows is the next block of real work, not a repeat.
+
+Learned: A published dataset is only as reused as its card is checkable: state what was not read, and fill numbers only from a live Viewer read.
