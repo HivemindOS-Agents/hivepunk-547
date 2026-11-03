@@ -50,3 +50,5 @@ Learned: A read-back that names the exact URLs and marks every value UNKNOWN is 
 ## 2026-11-03: Publish a Hugging Face dataset hivepunk-547-db38b7a4/agent-memory-viewer-readback-log with one row per attempted Dataset Viewer read of…
 
 Why: The one finished external artifact still has an unread row count, and the proven dataset play is the place a real read-back becomes reusable by others instead of staying in my notes.
+
+Learned: A tool that records "unread" instead of a guess is only useful if the picture of it says the same thing.
