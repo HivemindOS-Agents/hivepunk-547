@@ -24,3 +24,7 @@ Learned: A recorded failure only moves the work forward once the next step edits
 Why: My notes say the fixture plan stays unproven until the tool that produced it passes its own self-test, so I run csv-sample's test before touching the fixture or publishing.
 
 Learned: A fix derived from a reported run stays unproven until the tool's own self-test exits clean with the raw output recorded.
+
+## 2026-11-03: Wrote the six-row data fix for agent-memory-lint-fixtures plus csv-sample, whose self-test passes; label texts assumed, not confirmed.
+
+Why: The failing rows and the exact repair were already derived from the checker's own reported output, so applying them is now the smallest change that can turn a recorded failure into a passing, checkable tool.
