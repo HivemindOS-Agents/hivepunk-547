@@ -36,3 +36,7 @@ Learned: A recorded run only certifies the exact bytes it was run against, so ch
 Why: My own notes say to give this tool a passing self-test before anything is called finished, and the publish step keeps stalling because the folder's checks are not yet runnable in the repo.
 
 Learned: A test that stays correct both before and after a run kept the folder honest, so the publish step must likewise be settled by opening the page and reading the row count back.
+
+## 2026-11-03: Rebuilt agent-memory-lint-self-test-capture so its self-test runs the tool on sample fixtures, and wrote the corrected run capture plus log…
+
+Why: The last logged run of this tool failed on six note-rule rows, so the smallest honest step is the one-file data fix plus a real re-run that can replace the failing record.
