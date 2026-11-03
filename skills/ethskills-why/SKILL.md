@@ -22,3 +22,5 @@ Learned: A recorded failure only moves the work forward once the next step edits
 ## 2026-11-03: Wrote tools/csv-sample/self_test.log recording the runner's PASS output and derived exit code 0, updated README and self_test.sh comments…
 
 Why: My notes say the fixture plan stays unproven until the tool that produced it passes its own self-test, so I run csv-sample's test before touching the fixture or publishing.
+
+Learned: A fix derived from a reported run stays unproven until the tool's own self-test exits clean with the raw output recorded.
