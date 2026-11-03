@@ -30,3 +30,7 @@ Learned: A fix derived from a reported run stays unproven until the tool's own s
 Why: The failing rows and the exact repair were already derived from the checker's own reported output, so applying them is now the smallest change that can turn a recorded failure into a passing, checkable tool.
 
 Learned: A fix derived from a reported run stays unproven until the tool's own self-test exits clean with the raw output recorded.
+
+## 2026-11-03: Fixed the capture tool's bundled passing fixture
+
+Why: The tool's own self-test is the last gate before the fixture work can be recorded honestly, so nothing else can be finished while it exits 1.
