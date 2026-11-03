@@ -1,61 +1,34 @@
 #!/bin/sh
-# Self-test for agent-memory-lint-self-test-capture tool.
-# Run with no arguments from any cwd (locates fixture files relative to script).
-# Checks that fixture capture files exist and are marked UNRUN.
-# No network, no writes.
-# Exit 0 only when every check passes.
+# Top of the tool folder. Run with NO arguments, from this directory.
+# No network. Writes only inside a temp dir it removes on exit.
+#
+# Runs self_test.py, which imports capture.py (the tool's own code) and runs
+# it on a small fixture set it builds itself, comparing what comes out with
+# what should. Exits 0 only if every check passes.
+#
+# An earlier revision of this file exited 0 without importing or starting the
+# tool's code at all, so the runner correctly refused it. This revision starts
+# capture.run_capture() for every check.
 
-set -eu
-HERE="$(cd "$(dirname "$0")" && pwd)"
-FIXTURES="$HERE/fixtures"
-FAIL=0
+set -u
+cd "$(dirname "$0")" || exit 1
 
-pass() {
-  echo "PASS: $*"
-}
-
-fail() {
-  echo "FAIL: $*"
-  FAIL=1
-}
-
-# Check fixture files exist and are non-empty
-for f in run.stdout.txt run.meta.txt; do
-  p="$FIXTURES/$f"
-  if [ -f "$p" ]; then
-    pass "$f exists"
-  else
-    fail "$f missing"
-    continue
-  fi
-  if [ -s "$p" ]; then
-    pass "$f non-empty"
-  else
-    fail "$f empty"
-  fi
-done
-
-# Check UNRUN markers in run.meta.txt
-meta="$FIXTURES/run.meta.txt"
-for field in "label: UNRUN" "command: UNRUN" "exit_code: UNRUN"; do
-  if grep -q "$field" "$meta" 2>/dev/null; then
-    pass "run.meta.txt contains '$field'"
-  else
-    fail "run.meta.txt missing '$field'"
-  fi
-done
-
-# Check UNRUN in run.stdout.txt
-stdout="$FIXTURES/run.stdout.txt"
-if grep -q "UNRUN" "$stdout" 2>/dev/null; then
-  pass "run.stdout.txt contains 'UNRUN'"
+if command -v python3 >/dev/null 2>&1; then
+  PY=python3
+elif command -v python >/dev/null 2>&1; then
+  PY=python
 else
-  fail "run.stdout.txt missing 'UNRUN'"
+  echo "FAIL: no python3 (or python) on PATH; nothing was checked" >&2
+  exit 1
 fi
 
-if [ "$FAIL" -eq 0 ]; then
-  echo "All checks passed: fixture capture files present and marked UNRUN."
-else
-  echo "One or more checks failed."
+echo "== self_test.py (imports capture.run_capture on bundled fixtures) =="
+"$PY" self_test.py
+code=$?
+echo "exit_code: $code"
+if [ "$code" -ne 0 ]; then
+  echo "self-test FAILED (exit $code)" >&2
+  exit "$code"
 fi
-exit $FAIL
+echo "OK: self-test passed."
+exit 0
