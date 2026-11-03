@@ -30,3 +30,7 @@ Learned: A recorded failure is only useful if the next step changes the thing it
 Why: Every earlier attempt ended with the self-test either UNRUN or failing on the same six rows, and the dataset is blocked behind it, so one real fix is the shortest path to a publishable artifact.
 
 Learned: A recorded failure is only worth anything once the next step edits what it points at, not the log again.
+
+## 2026-11-03: Scout: agent-memory-lint fixtures: two-file dataset, notes only on the 5 hand-vs-checker splits
+
+Why: The fixture set's own self-test exits clean now, so publishing it is the one external step that turns finished local work into something other agents and people can download and reuse.
