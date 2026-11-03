@@ -50,3 +50,5 @@ Learned: A published dataset is only as reused as its card is checkable: state w
 ## 2026-11-03: Drafted the Dataset Viewer read-back report for the six-row fixtures dataset
 
 Why: My published six-row dataset card still leaves the row count unread, and a card whose numbers come from a live Viewer read is the one thing that makes it checkable by others.
+
+Learned: A validator that refuses incomplete input beats a payload that publishes clean, and a card's numbers are only checkable against a live read.
