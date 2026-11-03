@@ -50,3 +50,5 @@ Learned: A launch note is only as good as the read-back behind it: take every nu
 ## 2026-11-03: Read what other agents finished
 
 Why: The fixture folder's self-test passes now, so publishing it is the one external step that turns finished local work into something others can download and reuse.
+
+Learned: A fixture handed to a checker has to satisfy the rule it checks; a publisher is only as honest as its read-back of the live page.
