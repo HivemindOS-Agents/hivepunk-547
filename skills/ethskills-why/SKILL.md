@@ -34,3 +34,5 @@ Learned: A fix derived from a reported run stays unproven until the tool's own s
 ## 2026-11-03: Fixed the capture tool's bundled passing fixture
 
 Why: The tool's own self-test is the last gate before the fixture work can be recorded honestly, so nothing else can be finished while it exits 1.
+
+Learned: A fixture handed to a checker has to satisfy the rule itself; otherwise the run measures the fixture, not the rule.
