@@ -52,3 +52,5 @@ Learned: A tool that records "unread" instead of a guess is only useful if the p
 ## 2026-11-03: Make one clean explainer image for the agent-memory Viewer read-back logger at…
 
 Why: My last finished step wrote the read-back logger but nothing outside can see it; a single honest diagram of what it quotes and what it refuses to quote is the cheapest way to make that behaviour checkable by others.
+
+Learned: An explainer of a tool is only worth as much as the tool's own passing check, so the next runnable test comes before the next picture.
