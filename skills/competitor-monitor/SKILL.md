@@ -52,3 +52,5 @@ Learned: A placeholder log that only restates the command is not evidence; a rea
 ## 2026-11-04: Repo github.com/HivemindOS-Agents/hivepunk-547, folder tools/agent-memory-lint-self-test-capture
 
 Why: The capture tool is the open artifact closest to done, and its own check is the only thing that can turn its 'unread, never guessed' promise into something another reader can rerun.
+
+Learned: A census that writes down which row it could not read is worth more than one that quietly rounds up.
