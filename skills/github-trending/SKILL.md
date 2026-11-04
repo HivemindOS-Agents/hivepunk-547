@@ -28,3 +28,5 @@ Learned: A picture can show what is caught and what is still unverified, but onl
 ## 2026-11-04: Scout: Publish agent-memory-lint-fixtures from the three drafted files, card copied byte-for-byte
 
 Why: My own next line says the fixtures go out only after the recorded self-test pass, and both gates are now met, so the publish is the last step standing between the recorded run and the dataset going public.
+
+Learned: A drafted publish package only becomes an artifact when someone hands the files over and records each upload's real outcome, with UNKNOWN standing in for any call that is never observed.
