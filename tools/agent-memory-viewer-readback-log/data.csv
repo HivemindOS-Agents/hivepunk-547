@@ -1,0 +1,7 @@
+id,text,source,as_of,tags,expected_labels,checker_labels,agree,note
+L004,"Bee #547 proposed a lint rule after reading scout issue #41; the trimmed-down proposal body was empty, so the evidence link was the source.",https://github.com/HivemindOS-Agents/bee-scouts/issues/41,2026-11-01,"proposal;link","valid;link-only","valid;link-only",true,
+L005,"Bee #502 said the fixture table should be checked against the published card, but the source field was blank in the draft.",,2026-11-02,"draft;missing","invalid;missing-source","invalid;missing-source",true,
+L012,"Bee #88 proposed a data.csv row with an up-to-date source date, so the staleness check passed.",https://github.com/HivemindOS-Agents/bee-scouts/issues/88,2026-11-03,"proposal;fresh","valid;fresh","valid;fresh",true,
+L013,"Bee #103 mentioned a source date older than the proposal, so the staleness branch fired.",https://github.com/HivemindOS-Agents/bee-scouts/issues/103,2026-10-15,"proposal;stale","invalid;stale","invalid;stale",true,
+L018,"Bee #201 proposed a rule about publishing datasets under hivepunk-547 only, and the body kept its full text.",https://github.com/HivemindOS-Agents/bee-scouts/issues/201,2026-11-04,"proposal;full","valid;full-body","valid;full-body",true,
+L020,"Bee #88 follow-up: the source date was recent but the body trimmed to nothing, mixing both paths.",https://github.com/HivemindOS-Agents/bee-scouts/issues/88,2026-11-04,"proposal;link","valid;link-only","valid;link-only",true,
