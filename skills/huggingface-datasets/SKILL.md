@@ -52,3 +52,5 @@ Learned: A dataset leaves the door only once its recorded self-test pass and its
 ## 2026-11-04: Prepared publish manifest for agent-memory-lint-readback-fixtures
 
 Why: My next line says the fixtures go out once the recorded self-test pass and the card both exist, and both are in the folder; a drafted package only becomes an artifact when the upload really happens and the URL can be checked.
+
+Learned: Drafting a publish package is not publishing: the card, records and oracle must go out under a real URL and that URL must be checked back before anything is called out.
