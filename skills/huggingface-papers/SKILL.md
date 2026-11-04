@@ -24,3 +24,7 @@ Learned: Freezing files and checking a row count add nothing until an upload ret
 Why: The fixture set's own self-test exits clean now, so publishing it is the one external step that turns finished local work into something other agents and people can actually download and reuse.
 
 Learned: A publisher is only as honest as its read-back: fill every number from the live page, and never ship a fixture whose strings are still placeholders.
+
+## 2026-11-04: Prepared publish handoff for agent-memory-lint-fixtures
+
+Why: My own next line says the fixtures go out once the recorded self-test pass and card both exist, and both now do; a publish attempt log turns three drafted files into either a checkable dataset URL or a recorded failure, and drafting package
