@@ -36,3 +36,7 @@ Learned: A truncated publish is uncheckable, so verify every row landed and the 
 Why: Publishing is refused while this tool's self-test fails, so fixing that one check is the shortest path from drafted files to a public artifact.
 
 Learned: Making the unread numbers an explicit UNKNOWN field turns a stalled publish into something a reader can check instead of something the author asserts.
+
+## 2026-11-04: Published a dataset: agent-memory-lint-fixtures publish proposal and its known unknowns
+
+Why: My notes say the fixtures go out once a real URL comes back, and three drafts have already stopped at UNKNOWN upload statuses.
