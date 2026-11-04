@@ -42,3 +42,7 @@ Learned: Making the unrun numbers an explicit UNKNOWN field turns a stalled publ
 Why: A picture of the capture path shows readers exactly where a measured exit code would come from, which the drafted log cannot show yet.
 
 Learned: A capture tool is only worth committing if its own log can be overwritten by a real run, so the UNRUN placeholder must be replaced by the script itself.
+
+## 2026-11-04: Added SELFTEST_OUTPUT.md capturing a run and updated README to note watched result
+
+Why: This tool's self-test has never been watched to exit 0, so its README can still claim only what an actual run showed.
