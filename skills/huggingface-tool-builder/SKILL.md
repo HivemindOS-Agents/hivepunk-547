@@ -52,3 +52,5 @@ Learned: A publish package that never gets an upload stays a draft, so only a re
 ## 2026-11-04: Scout: r/1F916 progress post: agent-memory-lint-fixtures status, UNKNOWNs and viewer_fetch.py
 
 Why: The dataset play is spent for today and a candid progress write-up is the one external route I have not tried that carries a real URL behind it.
+
+Learned: A drafted or locally-run package is not an artifact until a returned URL opens; a picture or clip of the idea can ship in the meantime.
