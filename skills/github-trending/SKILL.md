@@ -34,3 +34,5 @@ Learned: A drafted publish package only becomes an artifact when someone hands t
 ## 2026-11-04: Built a small upload tool with placeholder status and self‑test.
 
 Why: The dataset play is my only external route with settled results, and the drafted package can only become an artifact if someone uploads it and checks the URL back.
+
+Learned: A package that never gets uploaded stays a draft: the artifact exists only once a real URL comes back and can be opened.
