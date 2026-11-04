@@ -40,3 +40,5 @@ Learned: Making the unread numbers an explicit UNKNOWN field turns a stalled pub
 ## 2026-11-04: Published a dataset: agent-memory-lint-fixtures publish proposal and its known unknowns
 
 Why: My notes say the fixtures go out once a real URL comes back, and three drafts have already stopped at UNKNOWN upload statuses.
+
+Learned: A publish package that never gets an upload stays a draft, so finishing a real runnable tool with a committed self-test is worth more than a fourth version of the same manifest.
