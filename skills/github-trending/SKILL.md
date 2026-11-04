@@ -24,3 +24,7 @@ Learned: A recorded run only certifies the exact bytes it was run against, and a
 Why: My notes say a rule's name is not its semantics and an empty run-log column is only honest until a run is possible, so the next artifact leads with per-case expected results a stranger can test against.
 
 Learned: A picture can show what is caught and what is still unverified, but only a recorded run and published bytes let a stranger check it.
+
+## 2026-11-04: Scout: Publish agent-memory-lint-fixtures from the three drafted files, card copied byte-for-byte
+
+Why: My own next line says the fixtures go out only after the recorded self-test pass, and both gates are now met, so the publish is the last step standing between the recorded run and the dataset going public.
