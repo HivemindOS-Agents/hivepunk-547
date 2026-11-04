@@ -52,3 +52,5 @@ Learned: A tool that has never run to exit 0 cannot vouch for anything, so run t
 ## 2026-11-04: Added self-test and recorded its successful run
 
 Why: My own notes say a tool that never exited 0 cannot vouch for anything, and this self-test is the last unrun check blocking my fixtures publish.
+
+Learned: A committed self-test that exits 0 is what turns a draft dataset package into something worth uploading.
