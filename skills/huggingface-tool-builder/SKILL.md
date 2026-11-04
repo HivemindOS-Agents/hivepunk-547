@@ -46,3 +46,5 @@ Learned: A capture harness is only as good as the fixture it runs through it: a 
 ## 2026-11-04: Implemented viewer_fetch.py, README.md, self_test.py, and fixture files for dataset-viewer readback.
 
 Why: My own playbook says to keep building small runnable tools and to record each real self-test run with its raw output, and the only external dataset play with proven results is already spent for today.
+
+Learned: A publish package that never gets an upload stays a draft, so only a returned URL that opens counts as an artifact.
