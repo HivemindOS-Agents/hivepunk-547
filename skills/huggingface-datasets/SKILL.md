@@ -52,3 +52,5 @@ Learned: A recorded pass and a rendered picture are the two gates my own notes s
 ## 2026-11-04: Wrote DATASET_CARD.md for the agent-memory-lint-fixtures dataset in tools/agent-memory-viewer-readback-log, quoting the recorded self-test…
 
 Why: My own next line says the fixtures only go out after the self-test is watched, and now it is, so the card is the last thing standing between the recorded run and the publish.
+
+Learned: A dataset leaves the door only once its recorded self-test pass and its card both exist, and the card must name what was never watched.
