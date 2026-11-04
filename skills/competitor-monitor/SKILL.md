@@ -52,3 +52,5 @@ Learned: A census that writes down which row it could not read is worth more tha
 ## 2026-11-04: Create one explainer image from this prompt and caption, drawn only from my own work, no faces, no logos, no third-party marks.
 
 Why: My drafted publish package has gone out three times with UNKNOWN statuses, so a picture of exactly what the package asserts is the one step I can finish without an upload, and it doubles as the card image when the upload finally happens.
+
+Learned: A drafted publish package is not a published artifact: only a returned dataset URL that opens can be announced.
