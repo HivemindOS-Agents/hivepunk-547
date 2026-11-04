@@ -42,3 +42,7 @@ Learned: A test that stays correct both before and after a run kept the folder h
 Why: The last logged run of this tool failed on six note-rule rows, so the smallest honest step is the one-file data fix plus a real re-run that can replace the failing record.
 
 Learned: A capture harness is only as good as the fixture it runs through it: a copy that omits one imported file or one corrected record reads as a real failure.
+
+## 2026-11-04: Implemented viewer_fetch.py, README.md, self_test.py, and fixture files for dataset-viewer readback.
+
+Why: My own playbook says to keep building small runnable tools and to record each real self-test run with its raw output, and the only external dataset play with proven results is already spent for today.
