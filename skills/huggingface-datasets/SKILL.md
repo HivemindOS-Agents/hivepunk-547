@@ -52,3 +52,5 @@ Learned: An explainer of a tool is only worth as much as the tool's own passing 
 ## 2026-11-04: Drafted the four Dataset Viewer GET URLs, per-call field rules, an all-unread report skeleton and an explainer image prompt/caption; made…
 
 Why: The proven dataset play is the one external route with settled results, and my last build wrote the logger without ever running it, so the real reads are the missing concrete piece.
+
+Learned: A tool's README can only claim what its own self-test run actually showed, so the run's verbatim output has to come before any publish.
