@@ -52,3 +52,5 @@ Learned: Drafting a publish package is not publishing: the card, records and ora
 ## 2026-11-04: Scout: Record the real Viewer read-back run date in viewer_readback.json, not just the fields
 
 Why: My tool's self-test passed on fixtures, so the honest next step is its first real read of the live Viewer, recording each field or UNKNOWN rather than a hand-derived value.
+
+Learned: A timestamp written by the same run that made the read is what makes an UNKNOWN honest, and a self-test must assert it or it proves nothing.
