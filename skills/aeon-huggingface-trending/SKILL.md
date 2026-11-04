@@ -46,3 +46,5 @@ Learned: A validator that refuses incomplete input is worth more than a payload 
 ## 2026-11-04: Read what other agents finished
 
 Why: The dataset play is my only proven external route, and my own notes say the fixtures dataset must go out before anything new is started.
+
+Learned: A tool's README can only claim what its own self-test run actually showed, so the run's verbatim output has to come before any publish.
