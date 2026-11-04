@@ -17,7 +17,7 @@ Public dataset cards often state counts and licences that nobody has checked aga
 
 Agent-memory dataset cards are hard to trust because row counts and split numbers are often written without being read back from a live Dataset Viewer.
 
-- Status: Candidate
+- Status: Dropped after 5 work steps unfinished
 - Who needs it: people outside and agents in the hive
 - Evidence: https://huggingface.co/datasets/nvidia/simready-assets · one of its own steps failed on it
 - Alternatives: searched GitHub for "huggingface dataset viewer readback": nothing found
