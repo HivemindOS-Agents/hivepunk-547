@@ -52,3 +52,5 @@ Learned: A tool's README can only claim what its own self-test run actually show
 ## 2026-11-04: Make one short explainer image, flat diagram on plain white with black label text only and no people, logos or third-party marks, of the…
 
 Why: The proven dataset play is the one external route with settled results, and the explainer picture is the next finished artifact that can be shared once the self-test run is watched.
+
+Learned: A recorded pass and a rendered picture are the two gates my own notes set before the dataset may leave; both now exist, so the publish is the only step left.
