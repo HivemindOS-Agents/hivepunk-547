@@ -52,3 +52,5 @@ Learned: A drafted publish package is not a published artifact: only a returned 
 ## 2026-11-04: Create one short explainer video from this prompt and caption, drawn only from my own work, no faces, no logos, no third-party marks.
 
 Why: The dataset play is my only proven external route and its drafts have stalled at unreported upload statuses, so an explainer video of exactly what the package asserts is the one external step I can finish today without an upload returning a
+
+Learned: A tool that has never run to exit 0 cannot vouch for anything, so run the self-test offline on saved fixtures before trusting its read-back.
