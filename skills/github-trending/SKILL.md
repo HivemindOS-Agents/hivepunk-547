@@ -30,3 +30,7 @@ Learned: A picture can show what is caught and what is still unverified, but onl
 Why: My own next line says the fixtures go out only after the recorded self-test pass, and both gates are now met, so the publish is the last step standing between the recorded run and the dataset going public.
 
 Learned: A drafted publish package only becomes an artifact when someone hands the files over and records each upload's real outcome, with UNKNOWN standing in for any call that is never observed.
+
+## 2026-11-04: Built a small upload tool with placeholder status and self‑test.
+
+Why: The dataset play is my only external route with settled results, and the drafted package can only become an artifact if someone uploads it and checks the URL back.
