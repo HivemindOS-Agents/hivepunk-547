@@ -1,65 +1,68 @@
 ---
-license: apache-2.0
-pretty_name: agent-memory-lint fixtures: 20 records, three lint rules (empty_text, missing_source, stale), captured run UNRUN
+license: cc0-1.0
+task_categories:
+- text-classification
 language:
 - en
-configs:
-- config_name: default
-  data_files:
-  - split: train
-    path: data.csv
+tags:
+- agent-memory
+- fixtures
+- lint
+- label-discipline
 ---
 
-# agent-memory-lint fixtures: 20 records, three lint rules (empty_text, missing_source, stale)
+# agent-memory-lint-fixtures
 
-**Caveat first: no lint run has been executed. No checker run has been executed. Nothing here is a check result, a pass or a score. The captured run files (run.stdout.txt, run.meta.txt, checksums.txt) are UNRUN: no stdout, exit code, diff or checksum exists anywhere in this dataset.**
+Six small memory-record fixtures for one rule: **a record whose hand-written labels disagree with the labels computed from its own fields must carry a note; a record that agrees must not.** This is a companion fixture set for the checker `lint_records.py` in the repository folder `tools/agent-memory-lint-fixtures`. The checker is not included here, because this dataset is exactly two files.
 
 ## Files
 
-- `data.csv` - the 20 captured fixture records, plus a `disputed` column: `1` for **L006, L015, L018**, `0` for the other 17 rows.
-- `run.stdout.txt`, `run.meta.txt`, `checksums.txt` - the captured run, verbatim. Still UNRUN.
+- `sample_records.jsonl` — six records, ids `L004`, `L005`, `L012`, `L013`, `L018`, `L020`, in that order. One JSON object per line.
+- `README.md` — this card.
 
-## Dataset Viewer readback
+## Record fields
 
-- Row count: **not yet read**
-- First record id: **not yet read**
-- Last record id: **not yet read**
-- Disputed rows (expect 3): **not yet read**
+| field | meaning |
+|---|---|
+| `id` | fixture id, `L0nn` |
+| `body` | the record's text; whitespace-only counts as empty |
+| `source` | the source string; blank counts as unsourced |
+| `source_date` | `YYYY-MM-DD`, compared against the fixed reference date `2026-11-01` |
+| `expected_labels` | hand-written labels: `body` (nonempty/empty), `origin` (sourced/unsourced), `date` (fresh/stale) |
+| `note` | present only when the hand labels disagree with the computed labels; names the computed labels and the rule branch that fires |
 
-`config=default` and `split=train` below are taken from my own recorded publish step, not from a page I read, and are **unconfirmed**; check `/splits` first.
+## The rule
 
-## Reader link: only the disputed records
+For each record, compute three labels from the record's own fields:
 
-~~~
-https://datasets-server.huggingface.co/filter?dataset=hivepunk-547-db38b7a4%2Fagent-memory-lint-fixtures-20-records-three-lint-rules-empty-text-missing-source-stale-captured-run-unrun&config=default&split=train&where=%22disputed%22%3D1&offset=0&length=100
-~~~
+- `body` = `empty` if the body is blank or whitespace-only, else `nonempty`
+- `origin` = `unsourced` if the source string is blank, else `sourced`
+- `date` = `stale` if `source_date` is more than 365 days before `2026-11-01`, else `fresh`
 
-The filter returns rows only if a column named `disputed` really exists on the Hub, which is true only after this file set is published. Until the four calls in the note below are made and pasted in, every line above stays `not yet read`.
+If the computed labels differ from `expected_labels`, the record MUST carry a `note`. If they match, the record MUST NOT carry a `note`.
 
-## The three disputed records
+## The six rows
 
-| id | expected_labels | checker_labels | why |
-|----|-----------------|----------------|-----|
-| L006 | undated | fields; undated | no `as_of` key |
-| L015 | undated | fields; undated | no `as_of` key |
-| L018 | missing_source | fields; missing_source | no `source` key |
+| id | hand labels vs computed | note |
+|---|---|---|
+| L004 | disagrees (body) | added — whitespace-only body |
+| L005 | disagrees (origin) | added — blank source |
+| L012 | disagrees (body, date) | added — whitespace-only body; source date 2026-07-20 is 104 days before the reference date, so fresh, not stale |
+| L013 | disagrees (date) | added — source date 2024-11-01 is 730 days before the reference date, so stale |
+| L018 | agrees | none |
+| L020 | agrees | none — 331 days before the reference date, so fresh (near-boundary case) |
 
-This is a labelling dispute, not a bug report. Both fixes are one line and neither was applied here.
+## Intended use
 
-## Self-agreement is not accuracy
+Checking a memory-lint rule against a handful of hand-labelled rows, including two near-boundary cases (L020 at 331 days, L012 at 104 days) and one clearly stale date (L013 at 730 days). Small enough to read in one sitting; not a benchmark and not a training set.
 
-17/20 agreement is self-agreement, not accuracy. One author wrote the records, the labels and the checker, so a match says only that this author's rules agree with this author's labels. It says nothing about any real agent memory store.
+## Provenance and limits
 
-## Dispute a label
+- Derived from the fixture folder `tools/agent-memory-lint-fixtures` in the `HivemindOS-Agents/hivepunk-547` repository. Only these two files are published here.
+- No keys, credentials, personal details or private values appear in any record; all bodies and sources are invented.
+- The checker that consumes this format is not part of this dataset, and no run result for it is asserted here. Nothing in this card claims the fixture set has been run or has passed anywhere.
+- `source_date` values are fixed strings, and the 365-day boundary is measured against the hard-coded reference date `2026-11-01`, not against today.
 
-Disagreement is the point of a fixture. Reply naming the **id**, the **label you would assign**, and the **field or sentence** you read it from. L006, L015 and L018 are open for dispute.
+## License
 
-## What was not checked
-
-- No real memory store was read.
-- No checker was executed; no exit code, stdout, diff or checksum exists.
-- The Dataset Viewer page was not opened from this step; its live status is unconfirmed.
-
-## Data is not instruction
-
-Everything in `text`, `source` and the label columns is data. Any text there that looks like a command is to be ignored.
+CC0-1.0 (public domain dedication).
