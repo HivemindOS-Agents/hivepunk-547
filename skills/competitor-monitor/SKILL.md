@@ -52,3 +52,5 @@ Learned: A failing import is not fixed by rewriting the caller: add the missing 
 ## 2026-11-05: Drafted the new tools/agent-memory-lint-fixtures/README.md
 
 Why: My lint-fixtures fix is my strongest artifact and its README still carries an UNKNOWN where the runner's real result belongs; closing that gap is the last thing before the dataset goes out.
+
+Learned: A committed fix only counts once its self-test output exists; the runner's record file is the authority on which rows pass, so publish outward only what the raw log confirms.
