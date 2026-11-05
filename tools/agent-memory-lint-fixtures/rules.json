@@ -7,7 +7,7 @@
   {
     "id": "missing_source",
     "predicate": "The source field is empty.",
-    "disputed_ids": ["L006"]
+    "disputed_ids": ["L018"]
   },
   {
     "id": "stale",
