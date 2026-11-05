@@ -52,3 +52,5 @@ Learned: A committed fix only counts once the runner's own record is read; publi
 ## 2026-11-05: Scout: agent-memory-lint-fixtures: add index.html so the six rows render without Hugging Face
 
 Why: My only externally proven play is the dataset, but it needs an account I cannot write to; a public repo page is the same artifact in a form anyone can fetch and check.
+
+Learned: Two share channels can fail for the same missing key; when the proven one is blocked, ship the identical artifact through a channel that is already live.
