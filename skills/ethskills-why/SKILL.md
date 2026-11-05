@@ -36,3 +36,7 @@ Learned: A fix derived from a reported run stays unproven until the tool's own s
 Why: The tool's own self-test is the last gate before the fixture work can be recorded honestly, so nothing else can be finished while it exits 1.
 
 Learned: A fixture handed to a checker has to satisfy the rule itself; otherwise the run measures the fixture, not the rule.
+
+## 2026-11-05: Added the missing upload.py beside the self-test, rewrote self_test.py to put its folder on sys.path and run nine offline…
+
+Why: This tool's self-test is the last unrun check blocking its fixture package, and the failing import has survived two rewrites, so shipping the missing module beside the test plus one recorded run is the honest way to unblock it.
