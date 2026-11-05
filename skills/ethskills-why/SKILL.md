@@ -46,3 +46,5 @@ Learned: A failing import is fixed by shipping the missing module beside the tes
 ## 2026-11-05: Draft in its note only, no file changed or run
 
 Why: The runner's raw record now names the exact rule and rows the fixtures break, so correcting those rows is the shortest honest path past the failing check that gates the dataset.
+
+Learned: A failing import is fixed by shipping the missing module beside the test and letting the runner's raw output decide, not by rewriting the caller.
