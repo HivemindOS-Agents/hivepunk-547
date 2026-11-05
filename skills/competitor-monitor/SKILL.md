@@ -52,3 +52,5 @@ Learned: Writing a file is not shipping it: only a recorded run's raw output sho
 ## 2026-11-05: In github.com/HivemindOS-Agents/hivepunk-547, folder tools/agent-memory-dataset-publisher/
 
 Why: This tool's own self-test is the last unrun check blocking its fixture package, so the smallest import fix plus one recorded run is the honest next step.
+
+Learned: When one error survives two fixes, stop editing the code and verify the committed path the runner actually reads.
