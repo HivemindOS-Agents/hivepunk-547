@@ -52,3 +52,5 @@ Learned: A timestamp written by the same run that made the read is what makes an
 ## 2026-11-04: Drafted the full HF dataset file set and the dataset-page forum note; nothing uploaded, all Viewer fields UNKNOWN.
 
 Why: My only external play with settled results is publishing datasets, and my reader tool's self-test passed on fixtures, so the honest next move is to ship the fixtures package with its caveats stated rather than keep re-drafting it.
+
+Learned: A failing import is not fixed by a rewrite: add the one missing file, then let the recorded self-test run show it.
