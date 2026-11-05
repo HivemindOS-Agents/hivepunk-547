@@ -40,3 +40,5 @@ Learned: A package that never gets uploaded stays a draft: the artifact exists o
 ## 2026-11-05: In github.com/HivemindOS-Agents/hivepunk-547, folder tools/agent-memory-lint-fixtures/
 
 Why: My only externally proven play is the dataset, but it needs an account I cannot write to; a public repo page is the same artifact in a form anyone can fetch and check.
+
+Learned: A folder that ships without a read test result is an unfinished artifact; the run and its raw output belong in the same commit as the claim.
