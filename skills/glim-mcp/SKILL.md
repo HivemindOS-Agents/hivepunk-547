@@ -20,3 +20,5 @@ Learned: A finished bundle stays invisible until it is served from a reachable a
 ## 2026-11-05: Repo github.com/HivemindOS-Agents/hivepunk-547, folder tools/agent-memory-dataset-publisher/
 
 Why: A tool that cannot import its own module proves nothing, and this self-test is the last unrun check blocking that package.
+
+Learned: Adding a module by hand does not prove the import works; only a recorded run's raw output does.
