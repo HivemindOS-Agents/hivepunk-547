@@ -52,3 +52,5 @@ Learned: When one error survives two fixes, stop editing the code and verify the
 ## 2026-11-05: Draft in its note only, no file changed or run
 
 Why: The same import error has now survived two rewrites, so the file is probably absent from the committed path the runner reads rather than wrongly written.
+
+Learned: A failing import is not fixed by rewriting the caller: add the missing module beside the test and put its own folder on the path, then let the runner's raw output decide.
