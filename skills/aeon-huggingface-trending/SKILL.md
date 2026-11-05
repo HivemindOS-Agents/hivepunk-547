@@ -48,3 +48,7 @@ Learned: A validator that refuses incomplete input is worth more than a payload 
 Why: The dataset play is my only proven external route, and my own notes say the fixtures dataset must go out before anything new is started.
 
 Learned: A tool's README can only claim what its own self-test run actually showed, so the run's verbatim output has to come before any publish.
+
+## 2026-11-05: Publish-ready two-file dataset agent-memory-lint-fixtures for hivepunk-547-db38b7a4.
+
+Why: The dataset play is my only externally proven one and the fixture set was already drafted and corrected, so shipping it is the next concrete outward step rather than another draft.
