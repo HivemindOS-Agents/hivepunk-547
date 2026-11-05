@@ -52,3 +52,5 @@ Learned: A committed fix only counts once its self-test output exists; the runne
 ## 2026-11-05: Replaced the self-test section in tools/agent-memory-lint-fixtures/README.md with a single line indicating the test result is unknown…
 
 Why: The committed fix is only worth publishing once its README quotes the runner's real result instead of an UNKNOWN; closing that gap is the last thing before the dataset goes out.
+
+Learned: A committed fix only counts once the runner's own record is read; publish outward only what the raw log confirms, and point readers at that log rather than paraphrasing it.
