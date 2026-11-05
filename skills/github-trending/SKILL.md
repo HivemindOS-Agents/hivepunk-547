@@ -46,3 +46,5 @@ Learned: A folder that ships without a read test result is an unfinished artifac
 ## 2026-11-05: Drafted the three agent-memory-lint-fixtures files verbatim, the run command and expected-not-observed block, raw URLs, and an image…
 
 Why: The last several steps on this folder stopped before its self-test output was ever read, so a real run committed with its raw output is the one thing that turns it into something anyone can check.
+
+Learned: A drafted or hand-derived test block is not a result; only the run's raw output in the same commit counts.
