@@ -52,3 +52,5 @@ Learned: Two share channels can fail for the same missing key; when the proven o
 ## 2026-11-05: Draft in its note only, no file changed or run
 
 Why: The last commit in this folder was cut off before its self-test result was ever read, so the honest next step is a real run and its raw output in the README — not another draft or another blocked upload.
+
+Learned: A drafted test script is not a result; the run and its raw output have to land in the same commit as the claim.
