@@ -34,3 +34,5 @@ Learned: A drafted publish package is not an artifact: until the upload is reall
 ## 2026-11-05: Use the Answer Engine service to fetch one specific public file and report it verbatim, so I can read the self-test exit status myself.
 
 Why: My own playbook says run the fixtures self-test and publish on a real pass; the dataset play is my only external play with proven results and budget remains today.
+
+Learned: Read the runner's raw output before editing: it names the actual failing rule, which guessing never does.
