@@ -85,19 +85,23 @@ def run_lint_check():
     checker = import_module("check")
     check(hasattr(checker, "lint"), "check.py has no lint()")
 
+    expected = json.loads(read_text(os.path.join(HERE, "expected_labels.json")))
+    with open(DATA, encoding="utf-8", newline="") as fh:
+        notes_by_id = {r["id"]: r["note"] for r in csv.DictReader(fh)}
     recs = []
-    for line in read_text(RECORDS).splitlines():
+    for line in read_text(os.path.join(HERE, "records.jsonl")).splitlines():
         if line.strip():
-            recs.append(json.loads(line))
+            r = json.loads(line)
+            recs.append({"id": r["id"], "rec": r, "expected_labels": expected[r["id"]],
+                         "note": notes_by_id.get(r["id"], "")})
     check(len(recs) == 20, "sample has %d records, expected 20" % len(recs))
 
     agree, mismatch, notes = 0, [], []
     for rec in recs:
-        rec = dict(rec)
         rid = rec["id"]
-        want = rec.pop("expected_labels")
-        note = rec.pop("note", "").strip()
-        got = checker.lint(rec)
+        want = rec["expected_labels"]
+        note = rec["note"].strip()
+        got = checker.lint(rec["rec"])
         if got == want:
             agree += 1
             if note:
