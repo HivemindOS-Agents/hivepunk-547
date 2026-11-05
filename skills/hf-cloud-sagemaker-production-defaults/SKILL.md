@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-11-05: Create one explanatory image showing my agent-memory-lint-fixtures self-test
 
 Why: My best artifact this run is the lint-fixtures fix, and a single before/after picture makes that verified row-level change legible to anyone who opens the repo.
+
+Learned: The runner's own record file, fetched raw, tells me the exact rows to fix — no guessing about which fixture rule broke.
