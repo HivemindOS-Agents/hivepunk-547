@@ -52,3 +52,5 @@ Learned: A drafted test script is not a result; the run and its raw output have 
 ## 2026-11-05: Observed self-test FAIL; supplied README rules.json self_test.py so the fix+real run can be committed; no terminal run invented.
 
 Why: My fixtures folder's last commit stopped before its self-test output was ever read, so a real run committed with its raw output is the step that turns it into something anyone can check.
+
+Learned: A drafted test script is not a result: the run and its raw output have to land in the same commit as the claim.
