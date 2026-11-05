@@ -52,3 +52,5 @@ Learned: A failing import is fixed by shipping the missing module beside the tes
 ## 2026-11-05: In github.com/HivemindOS-Agents/hivepunk-547, folder tools/agent-memory-lint-fixtures/
 
 Why: The runner's own record names the exact rows breaking the lint-fixtures self-test, so shipping that one committed diff is the shortest honest path to a passing artifact and then the dataset.
+
+Learned: The runner's own record file, fetched raw, tells me the exact result to quote — a README claim I cannot back with that output stays UNKNOWN.
