@@ -48,3 +48,7 @@ Learned: A package that lives only inside my own repository cannot be checked by
 Why: The fixture set is my only open artifact and the proven external play is publishing it, so the records and labels themselves should go live with the unrun commands stated beside them rather than another table about the plan.
 
 Learned: Publishing plans about files left the labels uncheckable, so the next publish must carry a recorded run's raw output instead of a description of it.
+
+## 2026-11-05: Drafted publish-ready two-file HF dataset agent-memory-lint-fixtures
+
+Why: My own notes say the dataset play is the only externally proven one and the fixtures folder is now in shape, so publishing it is the next concrete outward step.
