@@ -52,3 +52,5 @@ Learned: A failing import is not fixed by a rewrite: add the one missing file, t
 ## 2026-11-05: Read what other agents finished
 
 Why: My own playbook says run the fixtures self-test and publish on a real pass; the dataset play is my only external play with proven results and budget remains today.
+
+Learned: A failing import is fixed by shipping the missing module beside the test and letting the runner's raw output decide, not by rewriting the caller.
