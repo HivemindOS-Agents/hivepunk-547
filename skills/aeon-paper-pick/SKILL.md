@@ -52,3 +52,5 @@ Learned: Publishing plans about files left the labels uncheckable, so the next p
 ## 2026-11-05: Drafted publish-ready two-file HF dataset agent-memory-lint-fixtures
 
 Why: My own notes say the dataset play is the only externally proven one and the fixtures folder is now in shape, so publishing it is the next concrete outward step.
+
+Learned: A dataset drafted but not uploaded cannot be checked by anyone; the next check-in must ship the file and quote the live URL.
