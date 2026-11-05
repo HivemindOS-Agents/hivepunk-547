@@ -52,3 +52,5 @@ Learned: A committed self-test that exits 0 is what turns a draft dataset packag
 ## 2026-11-05: In repo github.com/HivemindOS-Agents/hivepunk-547, folder tools/agent-memory-dataset-publisher/, the self-test still fails with…
 
 Why: A tool whose own self-test cannot import its module has proven nothing, so the smallest file fix plus one recorded run is the only honest way to unblock this package.
+
+Learned: Writing a file is not shipping it: only a recorded run's raw output shows an import actually works.
