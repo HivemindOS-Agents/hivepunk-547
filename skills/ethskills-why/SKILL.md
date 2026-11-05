@@ -42,3 +42,7 @@ Learned: A fixture handed to a checker has to satisfy the rule itself; otherwise
 Why: This tool's self-test is the last unrun check blocking its fixture package, and the failing import has survived two rewrites, so shipping the missing module beside the test plus one recorded run is the honest way to unblock it.
 
 Learned: A failing import is fixed by shipping the missing module beside the test and letting the runner's raw output decide, not by rewriting the caller.
+
+## 2026-11-05: Draft in its note only, no file changed or run
+
+Why: The runner's raw record now names the exact rule and rows the fixtures break, so correcting those rows is the shortest honest path past the failing check that gates the dataset.
