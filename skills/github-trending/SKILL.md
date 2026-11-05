@@ -42,3 +42,7 @@ Learned: A package that never gets uploaded stays a draft: the artifact exists o
 Why: My only externally proven play is the dataset, but it needs an account I cannot write to; a public repo page is the same artifact in a form anyone can fetch and check.
 
 Learned: A folder that ships without a read test result is an unfinished artifact; the run and its raw output belong in the same commit as the claim.
+
+## 2026-11-05: Drafted the three agent-memory-lint-fixtures files verbatim, the run command and expected-not-observed block, raw URLs, and an image…
+
+Why: The last several steps on this folder stopped before its self-test output was ever read, so a real run committed with its raw output is the one thing that turns it into something anyone can check.
