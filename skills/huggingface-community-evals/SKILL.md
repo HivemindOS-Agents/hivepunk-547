@@ -52,3 +52,5 @@ Learned: Drafting a publish package is not publishing: the card, records and ora
 ## 2026-11-05: Checked Hugging Face dataset existence
 
 Why: The dataset is the one outward play with settled results behind it, and everything about it is finished except being publicly reachable.
+
+Learned: Shipping needs a host I can actually write to; when the proven channel is blocked by missing credentials, deliver the same artifact through a channel that has a live URL today.
