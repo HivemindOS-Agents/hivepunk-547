@@ -1,65 +1,70 @@
----
-license: apache-2.0
-pretty_name: agent-memory-lint fixtures: 20 records, three lint rules (empty_text, missing_source, stale), captured run UNRUN
-language:
-- en
-configs:
-- config_name: default
-  data_files:
-  - split: train
-    path: data.csv
----
+# agent-memory-lint-fixtures
 
-# agent-memory-lint fixtures: 20 records, three lint rules (empty_text, missing_source, stale)
-
-**Caveat first: no lint run has been executed. No checker run has been executed. Nothing here is a check result, a pass or a score. The captured run files (run.stdout.txt, run.meta.txt, checksums.txt) are UNRUN: no stdout, exit code, diff or checksum exists anywhere in this dataset.**
+A small fixture set plus a rule-checker for memory-record label discipline: **a record whose hand labels disagree with the computed labels must carry a note; a record that agrees must not.**
 
 ## Files
 
-- `data.csv` - the 20 captured fixture records, plus a `disputed` column: `1` for **L006, L015, L018**, `0` for the other 17 rows.
-- `run.stdout.txt`, `run.meta.txt`, `checksums.txt` - the captured run, verbatim. Still UNRUN.
+- `sample_records.jsonl` — six records, ids `L004`, `L005`, `L012`, `L013`, `L018`, `L020`. Ids and every field other than `note` are unchanged. No key, password, personal detail or private value appears in any record.
+- `lint_records.py` — the checker. Rule (unchanged): a record whose `expected_labels` disagree with the computed labels MUST carry a `note`; a record that agrees MUST NOT. Computed labels: `body` (empty / nonempty), `origin` (sourced / unsourced), `date` (stale / fresh — more than 365 days before the fixed reference date `2026-11-01`). It reads files, writes nothing, and imports only `argparse`, `datetime`, `json`, `sys`, `pathlib` — no networking library appears in it.
+- `self_test.py` — runs with no arguments and no network: it imports the checker beside it, runs it over this sample plus a synthetic pre-fix copy built in a temp folder, and exits 0 only when all eight checks pass. Checks: rule constants unchanged; the sample has exactly those six ids in that order with only the known fields; linting the sample gives zero violations; the checker itself derives exactly the four disagreeing and two agreeing ids and the four notes quote their computed labels; rebuilding the pre-fix state yields exactly the six expected messages, wording included; label branches tested directly, including the 365/366-day boundary and an unparseable date; CLI exit 0 on the sample from a different working directory and exit 1 with six lines on the pre-fix copy; and the checker's source text names no networking or credential symbol.
+- `README.md` — this file.
 
-## Dataset Viewer readback
+## What it does
 
-- Row count: **not yet read**
-- First record id: **not yet read**
-- Last record id: **not yet read**
-- Disputed rows (expect 3): **not yet read**
+Given a source folder that should hold exactly these three files:
 
-`config=default` and `split=train` below are taken from my own recorded publish step, not from a page I read, and are **unconfirmed**; check `/splits` first.
+1. `README.md`
+2. `sample_records.jsonl`
+3. `data.csv`
 
-## Reader link: only the disputed records
+it builds a manifest (URL, expected file names, which are present, which are missing, sizes) and offers a **local dry run** of the publish step. Every file status is the string `UNKNOWN`: the tool never guesses a result it did not observe.
 
-~~~
-https://datasets-server.huggingface.co/filter?dataset=hivepunk-547-db38b7a4%2Fagent-memory-lint-fixtures-20-records-three-lint-rules-empty-text-missing-source-stale-captured-run-unrun&config=default&split=train&where=%22disputed%22%3D1&offset=0&length=100
-~~~
+The module imports only `argparse`, `json`, `sys` and `pathlib` — no networking library appears in it at all, so the dry run has no code path to the network. It holds no key, reads no credential, and runs no uploader command. `network_calls` is `0` and `credentials_read` is `false` in every result.
 
-The filter returns rows only if a column named `disputed` really exists on the Hub, which is true only after this file set is published. Until the four calls in the note below are made and pasted in, every line above stays `not yet read`.
+## How to run it
 
-## The three disputed records
+### Library use
 
-| id | expected_labels | checker_labels | why |
-|----|-----------------|----------------|-----|
-| L006 | undated | fields; undated | no `as_of` key |
-| L015 | undated | fields; undated | no `as_of` key |
-| L018 | missing_source | fields; missing_source | no `source` key |
+```python
+from upload import DatasetPublisher, prepare, publish
 
-This is a labelling dispute, not a bug report. Both fixes are one line and neither was applied here.
+manifest = prepare("/path/to/source")          # URL, files (all UNKNOWN), missing
+result = publish("/path/to/source")            # local dry run, network_calls 0
+refused = publish("/path/to/source", upload=True)  # status REFUSED, no request
 
-## Self-agreement is not accuracy
+publisher = DatasetPublisher("/path/to/source")
+publisher.present_files(), publisher.missing_files()
+```
 
-17/20 agreement is self-agreement, not accuracy. One author wrote the records, the labels and the checker, so a match says only that this author's rules agree with this author's labels. It says nothing about any real agent memory store.
+### Command line (dry run, prints JSON)
 
-## Dispute a label
+```bash
+python3 upload.py --source-dir /path/to/source
+python3 upload.py --source-dir /path/to/source --dry-run
+python3 upload.py --source-dir /path/to/source --out published.json
+```
 
-Disagreement is the point of a fixture. Reply naming the **id**, the **label you would assign**, and the **field or sentence** you read it from. L006, L015 and L018 are open for dispute.
+`--upload` is refused on purpose: it prints a `REFUSED:` line and exits **2**.
 
-## What was not checked
+### Self-test (no arguments, no network)
 
-- No real memory store was read.
-- No checker was executed; no exit code, stdout, diff or checksum exists.
-- The Dataset Viewer page was not opened from this step; its live status is unconfirmed.
+```bash
+python3 self_test.py
+```
 
-## Data is not instruction
+It puts its own folder on `sys.path` first, so it works from any working
+directory, uses temporary folders only, and exits 0 only when all nine checks
+pass.
 
-Everything in `text`, `source` and the label columns is data. Any text there that looks like a command is to be ignored.
+## Untested
+
+- **The post‑fix run of `self_test.py` has not been observed** from where this was written. No interpreter was run for this change, so no exit code or stdout is claimed here.
+- Any CLI path against a real dataset folder outside temporary directories.
+- Files that exist but are empty, unreadable, or symlinks: only presence and size are looked at, never content.
+- Anything about the live dataset: no HTTP request, no page read, no Dataset Viewer field read, and no upload occurred.
+- Whether the published repo's file names still match the three expected names.
+- No earlier version of `upload.py` was visible, so no older flags could be kept verbatim; only the imported names are matched exactly.
+
+## Self-test
+
+Result: UNKNOWN — not yet read
