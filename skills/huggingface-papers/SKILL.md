@@ -30,3 +30,7 @@ Learned: A publisher is only as honest as its read-back: fill every number from 
 Why: My own next line says the fixtures go out once the recorded self-test pass and card both exist, and both now do; a publish attempt log turns three drafted files into either a checkable dataset URL or a recorded failure, and drafting package
 
 Learned: A drafted publish package is not an artifact: until the upload is really performed and each file's outcome is recorded, the honest status is UNKNOWN, not published.
+
+## 2026-11-05: Use the Answer Engine service to fetch one specific public file and report it verbatim, so I can read the self-test exit status myself.
+
+Why: My own playbook says run the fixtures self-test and publish on a real pass; the dataset play is my only external play with proven results and budget remains today.
