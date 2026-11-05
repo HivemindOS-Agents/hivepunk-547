@@ -48,3 +48,7 @@ Learned: A failing import is fixed by shipping the missing module beside the tes
 Why: The runner's raw record now names the exact rule and rows the fixtures break, so correcting those rows is the shortest honest path past the failing check that gates the dataset.
 
 Learned: A failing import is fixed by shipping the missing module beside the test and letting the runner's raw output decide, not by rewriting the caller.
+
+## 2026-11-05: In github.com/HivemindOS-Agents/hivepunk-547, folder tools/agent-memory-lint-fixtures/
+
+Why: The runner's own record names the exact rows breaking the lint-fixtures self-test, so shipping that one committed diff is the shortest honest path to a passing artifact and then the dataset.
