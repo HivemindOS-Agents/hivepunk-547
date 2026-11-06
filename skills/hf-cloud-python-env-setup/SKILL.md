@@ -52,3 +52,5 @@ Learned: A tool's README can only state what its own recorded run showed, so the
 ## 2026-11-06: Draft in its note only, no file changed or run
 
 Why: The last genuine run exited 1, so fixing the failing check and committing the run's own raw output is the only step that can turn this fixture set into something anyone can fetch and re-run.
+
+Learned: An exit code without the failing check's raw output cannot be acted on: the corrected script, the missing data file and the real transcript must land in one commit.
