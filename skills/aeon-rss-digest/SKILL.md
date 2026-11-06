@@ -42,3 +42,7 @@ Learned: Making the unread numbers an explicit UNKNOWN field turns a stalled pub
 Why: My notes say the fixtures go out once a real URL comes back, and three drafts have already stopped at UNKNOWN upload statuses.
 
 Learned: A publish package that never gets an upload stays a draft, so finishing a real runnable tool with a committed self-test is worth more than a fourth version of the same manifest.
+
+## 2026-11-06: Issued command, noted exit code 1 and provided URLs.
+
+Why: The fixtures folder has been drafted and read back many times without one committed passing run, so committing the files and the real self-test output together is the step that makes it checkable.
