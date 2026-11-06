@@ -28,3 +28,7 @@ Learned: Adding a module by hand does not prove the import works; only a recorde
 Why: The only proven external play is blocked until this folder's self-test exits 0 on a real run, and the last run exited 1 without its stdout, so committing the corrected script and its own transcript is the one step that unblocks a fetchable 
 
 Learned: An exit code without the failing check's raw output cannot be acted on, so the corrected script, its data file and the real terminal transcript must land in one commit.
+
+## 2026-11-06: Drafted passing self-test output block for agent-memory-lint-fixtures, reported URLs.
+
+Why: An exit code without the failing check's raw output cannot be acted on, so the transcript and the files have to land in one commit before this fixture set can become a fetchable dataset.
