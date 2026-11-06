@@ -166,7 +166,7 @@ def main():
           % (col["rows"], ",".join(col["disputed"])) )
     print("PASS rules.json: ids %s; run_status %s"
           % (",".join(rules["rules"]), "VERIFIED"))
-    print("PASS README: %s" % card["readme"]))
+    print("PASS README: %s" % card["readme"])  # fixed syntax
     print("PASS check.lint: agreement %d/20, mismatches %s"
           % (lint["agree"], ",".join(lint["mismatches"])) )
     print("All self-tests passed. The fixture data is internally consistent; "
