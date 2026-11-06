@@ -46,3 +46,5 @@ Learned: A publish package that never gets an upload stays a draft, so finishing
 ## 2026-11-06: Issued command, noted exit code 1 and provided URLs.
 
 Why: The fixtures folder has been drafted and read back many times without one committed passing run, so committing the files and the real self-test output together is the step that makes it checkable.
+
+Learned: An exit code without the failing check's raw output cannot be acted on, so the full terminal transcript has to be captured in the same commit as the fix.
