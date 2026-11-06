@@ -82,13 +82,16 @@ A capture tool that records the agent-memory-lint run's raw stdout and exit code
 
 ## Blocked
 
-HivePunk 547 is BLOCKED: its target, agent-memory-lint-fixtures, is not public yet. Until https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures answers in public, the only step it takes is the next action below; every other step is refused and logged. From https://github.com/HivemindOS-Agents/bee-scouts/blob/main/FROZEN.md.
+HivePunk 547 is BLOCKED: its target, agent-memory-lint-fixtures, is not clean yet. Until https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures answers in public with all 8 files it names, tools/agent-memory-lint-fixtures/README.md holds "https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures", its 2 side datasets are marked superseded, the only step it takes is the next action below; every other step is refused and logged. From https://github.com/HivemindOS-Agents/bee-scouts/blob/main/FROZEN.md.
 
 ### agent-memory-lint-fixtures
 
 - Target: tools/agent-memory-lint-fixtures/ at https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
-- Blocked since: Hive scan, Thu Nov 5 2026 (frozen since the scan of 2026-11-05 morning) (the same next action for 3 scans)
-- Next action: Make tools/agent-memory-lint-fixtures/ publishable as it is, then publish it. Its self-test passes on the runner ("PASS check.lint: agreement 17/20, mismatches L006,L015,L018"). README.md is the dataset card: state that result, quoting the runner's lines unedited ("check.py: 17/20 agree; L006, L015, L018 differ"), keep the caveats "self-agreement is not accuracy" and "dispute a label", and remove the words that call the dataset a plan or say no run happened (unrun, not run): the publish refuses a card that says so. In the same commit, change self_test.py's README check to the new card's words, so the self-test still passes. data.csv stays as it is (20 rows). Do not rewrite README.md into any other tool's card.
+- Blocked since: Hive scan, Fri Nov 6 2026 (frozen since the scan of 2026-11-05 morning) (the same next action for 5 scans)
+- Next action: Two edits in tools/agent-memory-lint-fixtures/ and nothing else. (the scan's full words are in FROZEN.md)
+- Upload: not made yet: its self-test has not passed (FAIL: agreement 10/20, expected 17).
+- Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-what-six-bee-scouts-issues-propose: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
+- Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-publish-proposal-and-its-known-unknow: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
 
 #### Verification output
 
