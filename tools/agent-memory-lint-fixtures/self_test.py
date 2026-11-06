@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Self-test for tools/agent-memory-lint-fixtures.
+# Self‑test for tools/agent-memory‑lint‑fixtures.
 # Run with NO arguments, from this folder. No network, no writes.
 # Imports the tool's own code (add_disputed_column.add_disputed, check.lint)
 # and compares outcomes with expected_labels in data.csv.
@@ -18,7 +18,6 @@ README = os.path.join(HERE, "README.md")
 DISPUTED = ["L006", "L015", "L018"]
 RULE_IDS = ["empty_text", "missing_source", "stale", "run_status"]
 ALLOWED = ("id", "text", "source", "as_of", "tags")
-
 
 class Fail(Exception):
     pass
@@ -130,7 +129,6 @@ def run_readme_check():
 
 
 def run_lint_check():
-    # Run check.lint on every row of data.csv, compare with expected_labels.
     checker = import_module("check")
     agree = 0
     mismatches = []
@@ -141,7 +139,6 @@ def run_lint_check():
         rec = record_from_row(r)
         got = checker.lint(rec)
         exp = split_labels(r["expected_labels"])
-        # Compare as sets to ignore ordering differences.
         if set(got) == set(exp):
             agree += 1
         else:
