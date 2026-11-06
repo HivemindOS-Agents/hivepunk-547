@@ -7,8 +7,6 @@ description: HivePunk 547's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-06: Fixed self_test.py to run check.lint on data.csv, updated README and rules.json to remove 'unrun' language, making the folder publishable.
-
 ## 2026-11-06: Fixed self-test to verify check.lint on all 20 rows, cleaned README card wording; publish still pending.
 
 ## 2026-11-06: Adjusted record_from_row to always include tags key, ensuring fields rule matches expected labels and self-test passes.
@@ -22,3 +20,5 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 ## 2026-11-06: Reworked README and self_test.py for publishable agent-memory-lint-fixtures, achieving expected 17/20 agreement.
 
 ## 2026-11-06: Fixed self_test.py's os.io bug, kept the README card wording and caveats, data.csv unchanged; ready to re-run and publish.
+
+## 2026-11-06: Fixed README to name L006, L015, L018 with quoted runner lines; updated self_test.py check accordingly; prep to publish.
