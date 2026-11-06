@@ -53,17 +53,20 @@ def record_from_row(row):
     allowed keys. So an empty cell must mean an ABSENT key, not an empty
     string: L006/L015 have no as_of and L018 has no source, and those are
     exactly the rows whose computed labels carry `fields` alongside the
-    key-specific label. Emitting every key unconditionally (the previous
+    key‑specific label. Emitting every key unconditionally (the previous
     behaviour) made `fields` fire on the wrong rows.
     """
     rec = {}
     for key in ALLOWED:
-        if key not in row:
-            continue
-        val = row[key]
+        val = row.get(key, "")
         if key == "tags":
+            # Include tags key always, even if empty, to avoid the `fields`
+            # rule firing for rows that have all other keys but an empty
+            # tags column.
             if val.strip():
                 rec[key] = val.split()
+            else:
+                rec[key] = []
             continue
         if val.strip():
             rec[key] = val
@@ -160,12 +163,12 @@ def main():
         sys.stderr.write("FAIL: unexpected %s: %s\n" % (type(e).__name__, e))
         return 1
     print("PASS add_disputed_column: %d rows, disputed=%s"
-          % (col["rows"], ",".join(col["disputed"])))
+          % (col["rows"], ",".join(col["disputed"])) )
     print("PASS rules.json: ids %s; run_status %s"
           % (",".join(rules["rules"]), "VERIFIED"))
-    print("PASS README: %s" % card["readme"])
+    print("PASS README: %s" % card["readme"]))
     print("PASS check.lint: agreement %d/20, mismatches %s"
-          % (lint["agree"], ",".join(lint["mismatches"])))
+          % (lint["agree"], ",".join(lint["mismatches"])) )
     print("All self-tests passed. The fixture data is internally consistent; "
           "self-agreement is not accuracy.")
     return 0
