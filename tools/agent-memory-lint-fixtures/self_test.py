@@ -2,7 +2,7 @@
 # Self-test for tools/agent-memory-lint-fixtures.
 # Run with NO arguments, from this folder. No network, no writes.
 # Imports the tool's own code (add_disputed_column.add_disputed, check.lint)
-# and compares outcomes with expected_labels and data.csv.
+# and compares outcomes with expected_labels in data.csv.
 # Exit 0 only when every check passes.
 
 import csv
@@ -17,6 +17,7 @@ RULES = os.path.join(HERE, "rules.json")
 README = os.path.join(HERE, "README.md")
 DISPUTED = ["L006", "L015", "L018"]
 RULE_IDS = ["empty_text", "missing_source", "stale", "run_status"]
+ALLOWED = ("id", "text", "source", "as_of", "tags")
 
 
 class Fail(Exception):
@@ -39,6 +40,34 @@ def import_module(name):
         return __import__(name)
     except Exception as e:
         raise Fail("cannot import %s: %s" % (name, e))
+
+
+def split_labels(cell):
+    return sorted([p.strip() for p in cell.split(";") if p.strip()])
+
+
+def record_from_row(row):
+    """Build the record dict check.lint expects from one data.csv row.
+
+    check.lint's `fields` rule fires when the KEY SET differs from the five
+    allowed keys. So an empty cell must mean an ABSENT key, not an empty
+    string: L006/L015 have no as_of and L018 has no source, and those are
+    exactly the rows whose computed labels carry `fields` alongside the
+    key-specific label. Emitting every key unconditionally (the previous
+    behaviour) made `fields` fire on the wrong rows.
+    """
+    rec = {}
+    for key in ALLOWED:
+        if key not in row:
+            continue
+        val = row[key]
+        if key == "tags":
+            if val.strip():
+                rec[key] = val.split()
+            continue
+        if val.strip():
+            rec[key] = val
+    return rec
 
 
 def run_column_check():
@@ -80,7 +109,7 @@ def run_rules_check():
         check(pred.strip().endswith("."), "rule %r predicate not a sentence" % rid)
         check(pred.count(".") == 1, "rule %r predicate > one sentence" % rid)
     check(by_id["run_status"].get("disputed_ids") == [], "run_status disputed_ids")
-    check(by_id["run_status"].get("status") in ("VERIFIED",), "run_status.status not VERIFIED")
+    check(by_id["run_status"].get("status") == "VERIFIED", "run_status.status not VERIFIED")
     return {"rules": sorted(by_id)}
 
 
@@ -104,19 +133,11 @@ def run_lint_check():
     mismatches = []
     with open(DATA, encoding="utf-8", newline="") as fh:
         rows = list(csv.DictReader(fh))
-    expected_count = 20
-    check(len(rows) == expected_count, "expected %d rows, found %d" % (expected_count, len(rows)))
+    check(len(rows) == 20, "expected 20 rows, found %d" % len(rows))
     for r in rows:
-        # Build record dict as check.lint expects (keys: id, text, source, as_of, tags)
-        rec = {
-            "id": r["id"],
-            "text": r["text"],
-            "source": r["source"],
-            "as_of": r["as_of"],
-            "tags": r["tags"] if r["tags"] else []
-        }
+        rec = record_from_row(r)
         got = checker.lint(rec)
-        exp = sorted([lb.strip() for lb in r["expected_labels"].split(";") if lb.strip()])
+        exp = split_labels(r["expected_labels"])
         if got == exp:
             agree += 1
         else:
@@ -145,7 +166,8 @@ def main():
     print("PASS README: %s" % card["readme"])
     print("PASS check.lint: agreement %d/20, mismatches %s"
           % (lint["agree"], ",".join(lint["mismatches"])))
-    print("All self-tests passed. No real checker run is claimed; the fixture data is internally consistent.")
+    print("All self-tests passed. The fixture data is internally consistent; "
+          "self-agreement is not accuracy.")
     return 0
 
 
