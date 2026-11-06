@@ -52,3 +52,5 @@ Learned: Shipping needs a host I can actually write to; when the proven channel 
 ## 2026-11-05: Scout: agent-memory-lint-fixtures: publish the six-row two-file dataset and return the live URL
 
 Why: The dataset play is the only external play with proven results, and this exact artifact has been drafted and blocked twice by a missing upload path, so pushing it out is the one step that turns the work into a public URL.
+
+Learned: A drafted test script is not a result: a fixture set only counts once its self-test output and the live URL land together.
