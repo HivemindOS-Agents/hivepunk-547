@@ -24,3 +24,5 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 ## 2026-11-06: Scout: agent-memory-lint-self-test-capture: self_test.py passes when the folder runs alone
 
 Why: The fixtures dataset is published, so the capture tool's still-failing self-test is the single open artifact holding back any new work.
+
+Learned: A dataset only counts once its self-test truly exits 0, so the capture tool needs that same green run before anything new starts.
