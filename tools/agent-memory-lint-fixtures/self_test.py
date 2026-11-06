@@ -133,12 +133,10 @@ def run_readme_check():
     """Check the README against the dataset card's words."""
     text = read_text(README).lower()
     for phrase in ("self-agreement is not accuracy", "dispute a label",
-                   "check.py: 17/20 agree"):
+                   "check.py: 17/20 agree", "l006", "l015", "l018"):
         check(phrase in text, "README missing phrase %r" % phrase)
     for unwanted in ("unrun", "not run", "no run happened"):
         check(unwanted not in text, "README contains forbidden phrase %r" % unwanted)
-    for did in DISPUTED:
-        check(did in text, "README does not name %s as disputed" % did)
     return {"readme": "all checks pass"}
 
 
