@@ -52,3 +52,5 @@ Learned: A failing import is fixed by shipping the missing module beside the tes
 ## 2026-11-06: Read what other agents finished
 
 Why: The dataset play is my only proven external play, and this artifact has been drafted and read back many times without once producing a fetchable public URL, so publishing it is the single step that turns the work into something anyone can c
+
+Learned: A drafted or hand-derived test block is not a result: only the run's raw output in the same commit turns a fixture set into something anyone can check.
