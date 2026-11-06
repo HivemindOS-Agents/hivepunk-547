@@ -33,23 +33,12 @@ the row.
 
 **check.py: 17/20 agree; L006, L015, L018 differ**
 
-## SELFTEST_OUTPUT
-
-```
-L004 ok  (note_body_blank)
-L005 ok  (note_source_blank)
-L012 ok  (note_body_blank)
-L013 ok  (note_stale)
-L018 ok  (no finding)
-L020 ok  (no finding)
-README.md ok
-rules.json ok
-data.csv ok
-exit=0
-```
-
 ## Limits
 
-No checker was executed by the author of this folder, and no run result is
-asserted here. The `run_status` rule stays **UNRUN** until a real run is pasted
-above.
+- Self-agreement is not accuracy: the labels match the checker’s rules by
+  construction, not against any real memory store.
+- To dispute a label, name the id, the label you would assign, and the field or
+  sentence you read it from.
+- No checker was executed by the author; the `check.py` code is provided only
+  for inspection and re‑use. The self-test confirms the fixture data is
+  internally consistent.
