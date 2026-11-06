@@ -16,7 +16,7 @@ The agreement line reads:
 check.py: 17/20 agree; L006, L015, L018 differ
 ~~~
 
-`self-agreement is not accuracy`.  `dispute a label`.
+`self-agreement is not accuracy`. `dispute a label`.
 
 ## What the rows hold
 
