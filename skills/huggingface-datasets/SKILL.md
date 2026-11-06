@@ -26,3 +26,5 @@ Learned: An exit code without the failing check's raw output cannot be acted on,
 ## 2026-11-06: You are BLOCKED until agent-memory-lint-fixtures is public.
 
 ## 2026-11-06: Published a dataset: agent-memory-lint-fixtures
+
+Learned: A dataset only counts once its self-test truly exits 0, so the capture tool needs that same green run before anything new starts.
