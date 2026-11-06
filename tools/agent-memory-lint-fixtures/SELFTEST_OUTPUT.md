@@ -2,12 +2,12 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **does not count** (it exited 0 without importing or starting any of the tool's own code)
-- Ran: 2026-11-06T05:46:47Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42170402612
+- Result: **failed**
+- Ran: 2026-11-06T06:39:50Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42175837966
 
 What it printed (what failed first, then its last lines):
 
 ~~~
-HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out.
+FAIL: agreement 15/20, expected 17
 ~~~
