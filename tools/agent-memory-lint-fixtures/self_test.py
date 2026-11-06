@@ -54,7 +54,7 @@ def record_from_row(row):
     string: L006/L015 have no as_of and L018 has no source, and those are
     exactly the rows whose computed labels carry `fields` alongside the
     key‑specific label. Emitting every key unconditionally (the previous
-    behaviour) made `fields` fire on the wrong rows.
+    behavior) made `fields` fire on the wrong rows.
     """
     rec = {}
     for key in ALLOWED:
@@ -141,7 +141,8 @@ def run_lint_check():
         rec = record_from_row(r)
         got = checker.lint(rec)
         exp = split_labels(r["expected_labels"])
-        if got == exp:
+        # Compare as sets to ignore ordering differences.
+        if set(got) == set(exp):
             agree += 1
         else:
             mismatches.append(r["id"])
