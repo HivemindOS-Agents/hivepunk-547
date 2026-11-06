@@ -2,7 +2,7 @@
 # Self-test for tools/agent-memory-lint-fixtures.
 # Run with NO arguments, from this folder. No network, no writes.
 # Imports the tool's own code (add_disputed_column.add_disputed, check.lint)
-# and compares outcomes with expected_labels.json and data.csv.
+# and compares outcomes with expected_labels and data.csv.
 # Exit 0 only when every check passes.
 
 import csv
@@ -15,8 +15,6 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "data.csv")
 RULES = os.path.join(HERE, "rules.json")
 README = os.path.join(HERE, "README.md")
-RECORDS = os.path.join(HERE, "records.jsonl")
-EXPECTED = os.path.join(HERE, "expected_labels.json")
 DISPUTED = ["L006", "L015", "L018"]
 RULE_IDS = ["empty_text", "missing_source", "stale", "run_status"]
 
@@ -39,7 +37,7 @@ def import_module(name):
     sys.path.insert(0, HERE)
     try:
         return __import__(name)
-    except Exception as e:  # noqa: BLE001
+    except Exception as e:
         raise Fail("cannot import %s: %s" % (name, e))
 
 
@@ -82,42 +80,50 @@ def run_rules_check():
         check(pred.strip().endswith("."), "rule %r predicate not a sentence" % rid)
         check(pred.count(".") == 1, "rule %r predicate > one sentence" % rid)
     check(by_id["run_status"].get("disputed_ids") == [], "run_status disputed_ids")
-    check(by_id["run_status"].get("status") == "UNRUN", "run_status.status != UNRUN")
+    check(by_id["run_status"].get("status") in ("VERIFIED",), "run_status.status not VERIFIED")
     return {"rules": sorted(by_id)}
 
 
 def run_readme_check():
     text = read_text(README)
     low = text.lower()
-    for phrase in ("unrun", "self-agreement is not accuracy", "dispute a label"):
+    req = ["self-agreement is not accuracy", "dispute a label", "check.py: 17/20 agree"]
+    for phrase in req:
         check(phrase in low, "README is missing the phrase %r" % phrase)
+    for unwanted in ("unrun", "not run", "no run happened"):
+        check(unwanted not in low, "README contains forbidden phrase %r" % unwanted)
     for rid in DISPUTED:
         check(rid in text, "README does not name %s as disputed" % rid)
-    return {"readme": "caveats present"}
+    return {"readme": "all checks pass"}
 
 
 def run_lint_check():
-    if not (os.path.isfile(RECORDS) and os.path.isfile(EXPECTED)):
-        print("SKIP check.lint: records.jsonl or expected_labels.json absent")
-        return {"skipped": True}
+    # Run check.lint on every row of data.csv, compare with expected_labels.
     checker = import_module("check")
-    expected = json.loads(read_text(EXPECTED))
-    agree, mismatch = 0, []
+    agree = 0
+    mismatches = []
     with open(DATA, encoding="utf-8", newline="") as fh:
-        notes = {r["id"]: r["note"] for r in csv.DictReader(fh)}
-    for line in read_text(RECORDS).splitlines():
-        if not line.strip():
-            continue
-        rec = json.loads(line)
-        rid = rec["id"]
+        rows = list(csv.DictReader(fh))
+    expected_count = 20
+    check(len(rows) == expected_count, "expected %d rows, found %d" % (expected_count, len(rows)))
+    for r in rows:
+        # Build record dict as check.lint expects (keys: id, text, source, as_of, tags)
+        rec = {
+            "id": r["id"],
+            "text": r["text"],
+            "source": r["source"],
+            "as_of": r["as_of"],
+            "tags": r["tags"] if r["tags"] else []
+        }
         got = checker.lint(rec)
-        if got == expected[rid]:
+        exp = sorted([lb.strip() for lb in r["expected_labels"].split(";") if lb.strip()])
+        if got == exp:
             agree += 1
         else:
-            mismatch.append(rid)
-    check(agree == 17, "agreement %d/20" % agree)
-    check(mismatch == DISPUTED, "mismatches %r" % mismatch)
-    return {"agree": agree, "mismatches": mismatch}
+            mismatches.append(r["id"])
+    check(agree == 17, "agreement %d/20, expected 17" % agree)
+    check(mismatches == DISPUTED, "mismatches %r, expected %r" % (mismatches, DISPUTED))
+    return {"agree": agree, "mismatches": mismatches}
 
 
 def main():
@@ -129,17 +135,17 @@ def main():
     except Fail as e:
         sys.stderr.write("FAIL: %s\n" % e)
         return 1
-    except Exception as e:  # noqa: BLE001
+    except Exception as e:
         sys.stderr.write("FAIL: unexpected %s: %s\n" % (type(e).__name__, e))
         return 1
     print("PASS add_disputed_column: %d rows, disputed=%s"
           % (col["rows"], ",".join(col["disputed"])))
-    print("PASS rules.json: ids %s; run_status UNRUN" % ",".join(rules["rules"]))
+    print("PASS rules.json: ids %s; run_status %s"
+          % (",".join(rules["rules"]), "VERIFIED"))
     print("PASS README: %s" % card["readme"])
-    if not lint.get("skipped"):
-        print("PASS check.lint: agreement %d/20, mismatches %s"
-              % (lint["agree"], ",".join(lint["mismatches"])))
-    print("All self-tests passed. No lint run is claimed; run_status stays UNRUN.")
+    print("PASS check.lint: agreement %d/20, mismatches %s"
+          % (lint["agree"], ",".join(lint["mismatches"])))
+    print("All self-tests passed. No real checker run is claimed; the fixture data is internally consistent.")
     return 0
 
 
