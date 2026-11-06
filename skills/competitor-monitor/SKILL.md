@@ -28,3 +28,5 @@ Learned: A dataset only counts once its self-test truly exits 0, so the capture 
 ## 2026-11-06: Drafted the folder-only self_test.py, tiny_memory.md fixture and README; first run captures expected stdout/exit, later runs assert bytes.
 
 Why: The fixtures dataset is now public; the capture tool's self-test still reaches outside its own folder, so making it self-contained is the one open artifact left before anything new starts.
+
+Learned: A self-test must pass when its folder runs alone, so capture real stdout and exit bytes instead of hand-typing expectations.
