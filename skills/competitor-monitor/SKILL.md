@@ -32,3 +32,5 @@ Learned: A self-test must pass when its folder runs alone, so capture real stdou
 ## 2026-11-06: Wrote fixture, self_test.py and README to capture and verify tool output.
 
 Why: The self-test draft is finished but uncommitted, so writing it whole into its own folder is the one step that can turn this open artifact green.
+
+Learned: A self-test only counts once its folder runs alone and its expected files come from a real run, not from hand-typed strings.
