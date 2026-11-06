@@ -2,27 +2,34 @@
 # Self-test for tools/agent-memory-lint-fixtures.
 # Run with no arguments from this folder. No network, no writes.
 #
-# It reads data.csv and README.md, imports the tool's own code
-# (add_disputed_column.add_disputed) and runs it on the bundled data,
-# compares what comes out with what should, and exits 0 only when every
-# check passes.
+# It reads records.jsonl, expected_labels.json, data.csv and README.md,
+# imports the tool's own code (check.lint, add_disputed_column.add_disputed)
+# and runs it on the bundled data, compares what comes out with what should,
+# and exits 0 only when every check passes.
 #
-# Fixed: the previous revision used os.io.StringIO, which does not exist
-# (os has no attribute io). It now uses io.StringIO with io imported, so
-# the column check runs instead of raising AttributeError.
+# The lint check runs check.lint over records.jsonl, because key omissions
+# matter: data.csv always has all five columns, so a CSV round-trip cannot
+# reproduce L006, L015 and L018.
+#
+# Fixed earlier: a revision used os.io.StringIO, which does not exist
+# (os has no attribute io). It now uses io.StringIO with io imported.
 
 import csv
 import io
+import json
 import os
 import sys
+from importlib import import_module
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+
 DATA = os.path.join(HERE, "data.csv")
+RULES = os.path.join(HERE, "rules.json")
 README = os.path.join(HERE, "README.md")
+RECORDS = os.path.join(HERE, "records.jsonl")
+EXPECTED = os.path.join(HERE, "expected_labels.json")
 DISPUTED = ["L006", "L015", "L018"]
 RULE_IDS = ["empty_text", "missing_source", "stale", "run_status"]
-ALLOWED = {"id", "text", "source", "as_of", "tags"}
-CUTOFF = "2026-10-27"
 
 
 class Fail(Exception):
@@ -41,44 +48,6 @@ def read_text(path):
 
 def split_labels(cell):
     return [p.strip() for p in cell.split(";") if p.strip()]
-
-
-# ---- Record helpers ---------------------------------------------------------
-
-def record_from_row(row):
-    """Build the record dict that the label logic expects."""
-    rec = {}
-    for key in ALLOWED:
-        val = row.get(key, "")
-        if key == "tags":
-            rec[key] = val.split() if val.strip() else []
-            continue
-        if val.strip():
-            rec[key] = val
-    return rec
-
-
-# ---- Label computation (mirrors the tool's lint rules) ----------------------
-
-def compute_labels(rec):
-    out = set()
-    if set(rec) != ALLOWED:
-        out.add("fields")
-    text = rec.get("text")
-    if not isinstance(text, str) or not text.strip():
-        out.add("empty_text")
-    if not rec.get("source"):
-        out.add("missing_source")
-    raw = rec.get("as_of")
-    if not raw:
-        out.add("undated")
-    else:
-        try:
-            if raw < CUTOFF:
-                out.add("stale")
-        except Exception:
-            out.add("undated")
-    return sorted(out)
 
 
 # ---- Rule checks ------------------------------------------------------------
@@ -102,8 +71,7 @@ def run_column_check():
 
 
 def run_rules_check():
-    import json
-    rules = json.loads(read_text(os.path.join(HERE, "rules.json")))
+    rules = json.loads(read_text(RULES))
     check(isinstance(rules, list), "rules.json is not a list")
     by_id = {}
     for obj in rules:
@@ -133,7 +101,9 @@ def run_readme_check():
     """Check the README against the dataset card's words."""
     text = read_text(README).lower()
     for phrase in ("self-agreement is not accuracy", "dispute a label",
-                   "check.py: 17/20 agree", "l006", "l015", "l018"):
+                   "check.py: 17/20 agree", "l006", "l015", "l018",
+                   "https://huggingface.co/datasets/hivepunk-547-db38b7a4/"
+                   "agent-memory-lint-fixtures"):
         check(phrase in text, "README missing phrase %r" % phrase)
     for unwanted in ("unrun", "not run", "no run happened"):
         check(unwanted not in text, "README contains forbidden phrase %r" % unwanted)
@@ -141,19 +111,24 @@ def run_readme_check():
 
 
 def run_lint_check():
-    """Compare computed labels with the expected labels row by row."""
-    with open(DATA, encoding="utf-8", newline="") as fh:
-        rows = list(csv.DictReader(fh))
+    # Run check.lint on records.jsonl (key omissions matter for "fields").
+    # data.csv always has all five columns, so it cannot reproduce L006/L015/L018.
+    check(os.path.isfile(RECORDS), "missing records.jsonl")
+    check(os.path.isfile(EXPECTED), "missing expected_labels.json")
+    checker = import_module("check")
+    expected = json.loads(read_text(EXPECTED))
     agree = 0
     mismatches = []
-    for r in rows:
-        rec = record_from_row(r)
-        got = compute_labels(rec)
-        exp = split_labels(r.get("expected_labels", ""))
-        if set(got) == set(exp):
+    for line in read_text(RECORDS).splitlines():
+        if not line.strip():
+            continue
+        rec = json.loads(line)
+        rid = rec["id"]
+        got = checker.lint(rec)
+        if got == expected[rid]:
             agree += 1
         else:
-            mismatches.append(r["id"])
+            mismatches.append(rid)
     check(agree == 17, "agreement %d/20, expected 17" % agree)
     check(mismatches == DISPUTED, "mismatches %r, expected %r" % (mismatches, DISPUTED))
     return {"agree": agree, "mismatches": mismatches}
