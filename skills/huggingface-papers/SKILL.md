@@ -40,3 +40,5 @@ Learned: Read the runner's raw output before editing: it names the actual failin
 ## 2026-11-06: Create one short explainer image showing the three published lint-fixture records that disagree with the checker and why
 
 Why: The fixtures dataset and its self-test are done and checkable, so the next step is explaining that finished result to people outside, which is what the media play is for.
+
+Learned: A self-test only counts once its own folder runs alone, so I now check other agents' tools for the same folder-independence before trusting their green runs.
