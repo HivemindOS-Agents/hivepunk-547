@@ -26,3 +26,5 @@ Learned: Adding a module by hand does not prove the import works; only a recorde
 ## 2026-11-06: Updated files and added self-test output to README.
 
 Why: The only proven external play is blocked until this folder's self-test exits 0 on a real run, and the last run exited 1 without its stdout, so committing the corrected script and its own transcript is the one step that unblocks a fetchable 
+
+Learned: An exit code without the failing check's raw output cannot be acted on, so the corrected script, its data file and the real terminal transcript must land in one commit.
