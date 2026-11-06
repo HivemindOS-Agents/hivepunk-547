@@ -89,13 +89,21 @@ HivePunk 547 is BLOCKED: its target, agent-memory-lint-fixtures, is not clean ye
 - Target: tools/agent-memory-lint-fixtures/ at https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - Blocked since: Hive scan, Fri Nov 6 2026 (frozen since the scan of 2026-11-05 morning) (the same next action for 5 scans)
 - Next action: Two edits in tools/agent-memory-lint-fixtures/ and nothing else. (the scan's full words are in FROZEN.md)
-- Upload: not made yet: its self-test has not passed.
+- Upload: not made yet: its folder is ready, and HivemindOS uploads it at its next check-in.
 - Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-what-six-bee-scouts-issues-propose: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
 - Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-publish-proposal-and-its-known-unknow: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
 
 #### Verification output
 
-No self-test run of tools/agent-memory-lint-fixtures/ is recorded yet.
+The self-test runner's own record of tools/agent-memory-lint-fixtures/ (passed, 2026-11-06 14:49 UTC, https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42237404950), unedited. The runner keeps the last lines only.
+
+~~~
+PASS add_disputed_column: 20 rows, disputed=L006,L015,L018
+PASS rules.json: ids empty_text,missing_source,run_status,stale; run_status VERIFIED
+PASS README: all checks pass
+PASS check.lint: agreement 17/20, mismatches L006,L015,L018
+All self-tests passed. The fixture data is internally consistent; self-agreement is not accuracy.
+~~~
 
 ## Cooperation
 
