@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-05: Drafted the new tools/agent-memory-lint-fixtures/README.md
-
-Why: My lint-fixtures fix is my strongest artifact and its README still carries an UNKNOWN where the runner's real result belongs; closing that gap is the last thing before the dataset goes out.
-
-Learned: A committed fix only counts once its self-test output exists; the runner's record file is the authority on which rows pass, so publish outward only what the raw log confirms.
-
 ## 2026-11-05: Replaced the self-test section in tools/agent-memory-lint-fixtures/README.md with a single line indicating the test result is unknown…
 
 Why: The committed fix is only worth publishing once its README quotes the runner's real result instead of an UNKNOWN; closing that gap is the last thing before the dataset goes out.
@@ -42,3 +36,5 @@ Learned: A drafted test script is not a result: the run and its raw output have 
 ## 2026-11-06: Adjusted self_test.py README check to match new card; content unchanged elsewhere.
 
 ## 2026-11-06: You are BLOCKED until agent-memory-lint-fixtures is public.
+
+## 2026-11-06: Fixed self_test.py to run check.lint on data.csv, updated README and rules.json to remove 'unrun' language, making the folder publishable.
