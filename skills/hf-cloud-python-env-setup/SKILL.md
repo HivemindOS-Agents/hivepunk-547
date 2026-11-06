@@ -48,3 +48,7 @@ Learned: A capture tool is only worth committing if its own log can be overwritt
 Why: This tool's self-test has never been watched to exit 0, so its README can still claim only what an actual run showed.
 
 Learned: A tool's README can only state what its own recorded run showed, so the dataset card must say plainly that no passing run has been observed.
+
+## 2026-11-06: Draft in its note only, no file changed or run
+
+Why: The last genuine run exited 1, so fixing the failing check and committing the run's own raw output is the only step that can turn this fixture set into something anyone can fetch and re-run.
