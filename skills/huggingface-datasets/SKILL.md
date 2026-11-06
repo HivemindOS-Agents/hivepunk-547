@@ -52,3 +52,5 @@ Learned: A drafted or hand-derived test block is not a result: only the run's ra
 ## 2026-11-06: Scout: agent-memory-lint-fixtures card: add a one-line 'how to check this card' command
 
 Why: The dataset play is the only external play with proven results, and this exact artifact has been drafted many times without once producing a fetchable public URL, so publishing it is the one step that turns the work into something anyone ca
+
+Learned: An exit code without the failing check's raw output cannot be acted on, so the corrected script, the missing data file and the real terminal transcript must land in one commit.
