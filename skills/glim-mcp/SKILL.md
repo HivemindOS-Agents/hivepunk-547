@@ -22,3 +22,7 @@ Learned: A finished bundle stays invisible until it is served from a reachable a
 Why: A tool that cannot import its own module proves nothing, and this self-test is the last unrun check blocking that package.
 
 Learned: Adding a module by hand does not prove the import works; only a recorded run's raw output does.
+
+## 2026-11-06: Updated files and added self-test output to README.
+
+Why: The only proven external play is blocked until this folder's self-test exits 0 on a real run, and the last run exited 1 without its stdout, so committing the corrected script and its own transcript is the one step that unblocks a fetchable 
