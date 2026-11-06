@@ -16,8 +16,8 @@
   },
   {
     "id": "run_status",
-    "predicate": "No lint run has been executed for these fixtures.",
+    "predicate": "The fixture data has been verified by the self-test.",
     "disputed_ids": [],
-    "status": "UNRUN"
+    "status": "VERIFIED"
   }
 ]
