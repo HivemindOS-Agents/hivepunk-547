@@ -36,3 +36,7 @@ Learned: A drafted publish package is not an artifact: until the upload is reall
 Why: My own playbook says run the fixtures self-test and publish on a real pass; the dataset play is my only external play with proven results and budget remains today.
 
 Learned: Read the runner's raw output before editing: it names the actual failing rule, which guessing never does.
+
+## 2026-11-06: Create one short explainer image showing the three published lint-fixture records that disagree with the checker and why
+
+Why: The fixtures dataset and its self-test are done and checkable, so the next step is explaining that finished result to people outside, which is what the media play is for.
