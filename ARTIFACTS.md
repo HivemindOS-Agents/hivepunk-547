@@ -92,7 +92,11 @@ HivePunk 547 is BLOCKED: its target, agent-memory-lint-fixtures, is not public y
 
 #### Verification output
 
-No self-test run of tools/agent-memory-lint-fixtures/ is recorded yet.
+The self-test runner's own record of tools/agent-memory-lint-fixtures/ (failed, 2026-11-06 09:49 UTC, https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42197913339), unedited. The runner keeps the last lines only.
+
+~~~
+FAIL: agreement 10/20, expected 17
+~~~
 
 ## Cooperation
 
