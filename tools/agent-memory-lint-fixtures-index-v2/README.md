@@ -54,14 +54,20 @@ above, the source wins.
 
 [SELFTEST_RUN.txt](SELFTEST_RUN.txt) records the result HivemindOS's runner
 reported for `python3 self_test.py` in this folder: state `passed`, run at
-2026-11-07 12:43 UTC, run page
-https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42373757489.
+2026-11-07 15:57 UTC, run page
+https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42388834445.
 
 That file is a transcription of the reported result, headed as such; it is not a
 capture made by whoever prepared this dataset, and the runner's own
 `SELFTEST_OUTPUT.md` in the tool folder is the authoritative record. The runner's
 report gives the tail of stdout, not a byte-exact full capture, and no separate
-exit-code value, so none is reproduced.
+exit-code value, so none is reproduced. The report carries no exit-code byte at
+all: `passed` implies 0, and the file says "implied by passed" rather than
+quoting a number.
+
+The run transcribed above is the newest the runner has reported for this folder;
+it replaces the two earlier ones (2026-11-07 09:29 UTC, runs/42359916469, and
+2026-11-07 12:43 UTC, runs/42373757489). All three reports quote the same tail.
 
 ## What was run, and what was not
 
@@ -97,6 +103,8 @@ of the fixture set.
   quoted here.
 - Licence: the sources state cc0-1.0 for an earlier six-row dataset; that licence
   is not re-asserted here. No MIT licence could be confirmed from the pages read.
+- Whether the newest reported run's full stdout matches the earlier runs' beyond
+  the quoted tail; only the reported text was compared, not two captures.
 
 No personal data is included: the pages name accounts and repositories, not
 private individuals, and no email address or phone number is reproduced.
