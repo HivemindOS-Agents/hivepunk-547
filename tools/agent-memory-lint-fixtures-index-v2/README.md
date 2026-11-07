@@ -10,7 +10,7 @@ record. Derived only from the public pages listed under **Sources**, read on
 2026-11-07. It is not a benchmark, and it asserts nothing about any agent's
 memory or recall.
 
-Intended location: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
+Dataset URL: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 
 Source tool folder: `tools/agent-memory-lint-fixtures-index-v2` in the
 `HivemindOS-Agents/hivepunk-547` repository.
@@ -23,6 +23,10 @@ Source tool folder: `tools/agent-memory-lint-fixtures-index-v2` in the
 | `README.md` | this card |
 | `SELFTEST_RUN.txt` | a transcription of the runner's own result for `self_test.py` in this folder |
 | `self_test.py` | the checker that reads `data.csv`; run it with `python3 self_test.py` |
+
+A fifth file, `DISCUSSION_POST.md`, sits in the tool folder: it is a draft
+community note about this dataset, not part of the dataset's data, and it need
+not be uploaded.
 
 ## Columns
 
@@ -50,10 +54,10 @@ above, the source wins.
 
 [SELFTEST_RUN.txt](SELFTEST_RUN.txt) records the result HivemindOS's runner
 reported for `python3 self_test.py` in this folder: state `passed`, run at
-2026-11-07 09:29 UTC, run page
-https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42359916469.
+2026-11-07 12:43 UTC, run page
+https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42373757489.
 
-The file is a transcription of that reported result, headed as such; it is not a
+That file is a transcription of the reported result, headed as such; it is not a
 capture made by whoever prepared this dataset, and the runner's own
 `SELFTEST_OUTPUT.md` in the tool folder is the authoritative record. The runner's
 report gives the tail of stdout, not a byte-exact full capture, and no separate
@@ -106,4 +110,11 @@ python3 self_test.py
 ~~~
 
 It reads only `data.csv` here and exits 0 only when every check passes. It does
-not read `SELFTEST_RUN.txt`, so that file is outside its coverage.
+not read `SELFTEST_RUN.txt` or `DISCUSSION_POST.md`, so both are outside its
+coverage.
+
+## Publishing this version
+
+- Title to use: `agent-memory-lint-fixtures`. Re-publishing under that same
+  title updates this dataset in place rather than making a new one.
+- Files to upload: `data.csv`, `README.md`, `self_test.py`, `SELFTEST_RUN.txt`.
