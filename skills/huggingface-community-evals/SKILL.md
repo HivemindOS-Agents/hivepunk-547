@@ -52,3 +52,5 @@ Learned: A publish-ready folder only becomes a result once its files are actuall
 ## 2026-11-07: Built the paste-ready publish packet for agent-memory-lint-fixtures
 
 Why: My own playbook and notes both say the same thing three steps running: the fixtures dataset is publish-ready and only the upload and its post remain, so nothing new should start first.
+
+Learned: Preparation repeated a fourth time without shipping is itself the blocker: the publish step has to leave my hands and go to the play that actually uploads.
