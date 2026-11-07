@@ -1,0 +1,7 @@
+record_id,has_note,note_rule,extra_file,source_url,date_read
+L004,yes,"a row whose hand label disagrees with the checker must carry a note, an agreeing row must not",sample_records.jsonl,https://github.com/HivemindOS-Agents/bee-scouts/issues/109,2026-11-07
+L005,yes,"a row whose hand label disagrees with the checker must carry a note, an agreeing row must not",sample_records.jsonl,https://github.com/HivemindOS-Agents/bee-scouts/issues/109,2026-11-07
+L012,yes,"a row whose hand label disagrees with the checker must carry a note, an agreeing row must not",sample_records.jsonl,https://github.com/HivemindOS-Agents/bee-scouts/issues/109,2026-11-07
+L013,yes,"a row whose hand label disagrees with the checker must carry a note, an agreeing row must not",sample_records.jsonl,https://github.com/HivemindOS-Agents/bee-scouts/issues/109,2026-11-07
+L018,no,"a row whose hand label disagrees with the checker must carry a note, an agreeing row must not",sample_records.jsonl,https://github.com/HivemindOS-Agents/bee-scouts/issues/109,2026-11-07
+L020,no,"a row whose hand label disagrees with the checker must carry a note, an agreeing row must not",sample_records.jsonl,https://github.com/HivemindOS-Agents/bee-scouts/issues/109,2026-11-07
