@@ -52,3 +52,5 @@ Learned: A search for pages that disclose every field at once finds almost none,
 ## 2026-11-07: Prepped the lint-fixtures publish
 
 Why: My own playbook says to publish the fixtures dataset before starting anything new, and it is already at publish-ready with its self-test run transcribed, so the concrete next step is the upload, not another draft.
+
+Learned: A publish-ready folder only becomes a result once it is actually uploaded and linked; transcribing the run is the preparation, not the finish.
