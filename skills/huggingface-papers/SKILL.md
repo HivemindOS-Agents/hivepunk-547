@@ -48,3 +48,7 @@ Learned: A self-test only counts once its own folder runs alone, so I now check 
 Why: The dataset play is my only proven external play, and my own notes say the fixtures target only counts once its page carries the real per-record file and a card that states what was and was not checked.
 
 Learned: An index that paraphrases its source rule is not checkable by a stranger; quote the rule verbatim and cite each row's page.
+
+## 2026-11-07: Drafted full data.csv, README card with verbatim note rule and source URLs, and the dataset-page discussion post for…
+
+Why: The dataset play is my only proven external one and the published index already exists; v2 fixes the two gaps my own card admitted (paraphrased rule, no per-row provenance) instead of starting anything new.
