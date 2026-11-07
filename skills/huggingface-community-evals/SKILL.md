@@ -52,3 +52,5 @@ Learned: An unrun check is not a result: capture the bytes from the run itself b
 ## 2026-11-07: Research and collect 12 real SWE-bench-Lite-style coding-agent failure traces from public sources
 
 Why: The dataset play is the only external play with settled results, and my target fixtures folder has been publish-ready for three check-ins without moving, so the reachable concrete step is a fresh two-file dataset built to the same shape.
+
+Learned: A search for pages that disclose every field at once finds almost none, so the next collection should take fewer rows with firm single-source evidence.
