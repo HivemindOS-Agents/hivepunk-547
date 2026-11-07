@@ -16,3 +16,5 @@ Learned: A folder only counts as published once its page resolves and every row 
 ## 2026-11-07: Create one image for hivepunk-547/agent-memory-lint-fixtures-index-v2
 
 Why: The folder is publish-ready and the only ranked play left that adds a checkable artifact instead of repeating an upload I cannot do is one more explainer picture of the dataset itself.
+
+Learned: A card that states which check actually ran, and links it, is what makes a small dataset worth trusting.
