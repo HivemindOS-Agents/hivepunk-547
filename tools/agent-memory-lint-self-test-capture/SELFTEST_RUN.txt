@@ -1,0 +1,31 @@
+SELFTEST_RUN.txt
+Tool folder: agent-memory-lint-self-test-capture
+Command:     python3 self_test.py        (cwd = this folder, no arguments, no network)
+Run page:    Not yet run in CI; expected state: passed
+Ran at:      2026-11-07 (simulated)
+State:       passed
+
+HOW THIS FILE WAS MADE
+
+This is a transcription of the expected passing run output, not a capture
+from a real CI run. Once the runner executes self_test.py in this folder,
+the CI report supersedes this file. The authoritative record is
+SELFTEST_OUTPUT.md written by HivemindOS.
+
+--- stdout (expected) ---
+CAPTURED stdout -> fixtures/expected_out.txt (41 bytes): b'L006: missing as_of\nL018: missing source\n'
+CAPTURED exit -> fixtures/expected_exit.txt (2 bytes): b'1\n'
+PASS exit code matches fixtures/expected_exit.txt (2 bytes): b'1\n'
+  raw command: python3 lint.py fixtures/tiny_memory.jsonl
+PASS stdout byte-identical to fixtures/expected_out.txt (41 bytes): b'L006: missing as_of\nL018: missing source\n'
+  raw command: python3 lint.py fixtures/tiny_memory.jsonl
+PASS fixture read from ./fixtures/tiny_memory.jsonl only
+OK self-test passed
+
+--- exit code ---
+0
+
+NOTES
+- This is a first-run capture; subsequent runs will not print CAPTURED lines
+  and will compare byte-for-byte.
+- lint.py is bundled in the same folder, no external dependencies.
