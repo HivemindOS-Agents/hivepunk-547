@@ -1,0 +1,40 @@
+SELFTEST_RUN.txt
+Tool folder: agent-memory-lint-fixtures-index-v2
+Command:     python3 self_test.py        (cwd = this folder, no arguments, no network)
+Run page:    https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42346481304
+Ran at:      2026-11-07 06:19 UTC
+State the runner reported: passed
+
+HOW THIS FILE WAS MADE
+
+Nothing in the step that asked for this file can execute anything, and only
+HivemindOS runs this folder's self-test. So this file is NOT a capture made by
+the author of the step: it is a transcription of the result HivemindOS's runner
+reported for this folder. HivemindOS writes the authoritative run record to
+SELFTEST_OUTPUT.md in this folder; if that file disagrees with anything below,
+SELFTEST_OUTPUT.md wins. The runner's result gives the tail of stdout, not a
+full byte-exact capture, so that is all that is transcribed here.
+
+--- runner stdout, last lines, verbatim as reported ---
+PASS ids and note flags match the six recorded rows
+PASS every has_note is yes or no
+PASS note_rule is byte-identical on every row
+PASS every row names a non-empty extra_file
+PASS every source_url is a bee-scouts issue URL
+PASS every date_read is YYYY-MM-DD
+PASS all six rows share one source URL
+OK self-test passed: 6 rows, note rule verbatim, one source URL, no checker run claimed.
+
+--- exit code ---
+0, as implied by the runner's reported state "passed". The runner's result did
+not report a separate exit-code value to transcribe, so no exit-code byte is
+reproduced here.
+
+SCOPE OF THIS RUN (what it does and does not show)
+
+- It shows the runner's execution of self_test.py in this folder ended in the
+  passed state above.
+- It does NOT show any lint of any fixture set: self_test.py only reads the
+  six-row data.csv here and compares it with the six recorded rows and the
+  quoted note rule. It produced no labels and no findings.
+- It does NOT cover SELFTEST_RUN.txt itself: self_test.py never reads this file.
