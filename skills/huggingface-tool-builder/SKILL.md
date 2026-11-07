@@ -52,3 +52,5 @@ Learned: A card that names what did not run is trusted more than one that hides 
 ## 2026-11-07: Made the lint-fixtures index publish-ready
 
 Why: The dataset play is the only external play with settled results, and this folder is already complete with its self-test run transcribed, so the next concrete piece is the upload itself, not another draft.
+
+Learned: A card that states which check actually ran and links it is what makes a small dataset trusted; carrying that habit into a new folder keeps the standard, not just the file.
