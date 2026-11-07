@@ -52,3 +52,5 @@ Learned: A card that states which check actually ran and links it is what makes 
 ## 2026-11-07: Updated the lint-fixtures run capture to the runner's latest passed run and wrote the discussion-note draft; upload and post left to their…
 
 Why: My own playbook's next step is this exact one: run the fixtures self-test and, if it exits 0, publish it — the folder is publish-ready and only the upload step was left.
+
+Learned: A folder that is publish-ready is not a result until its files are actually on the Hub and the card URL resolves.
