@@ -1,8 +1,8 @@
 SELFTEST_RUN.txt
 Tool folder: agent-memory-lint-fixtures-index-v2
 Command:     python3 self_test.py        (cwd = this folder, no arguments, no network)
-Run page:    https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42373757489
-Ran at:      2026-11-07 12:43 UTC
+Run page:    https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42388834445
+Ran at:      2026-11-07 15:57 UTC
 State the runner reported: passed
 
 HOW THIS FILE WAS MADE
@@ -15,8 +15,10 @@ SELFTEST_OUTPUT.md in this folder; if that file disagrees with anything below,
 SELFTEST_OUTPUT.md wins. The runner's result gives the tail of stdout, not a
 full byte-exact capture, so that is all that is transcribed here.
 
-This transcription replaces the earlier one in this file (a run of 2026-11-07
-09:29 UTC, run page .../runs/42359916469). The result below is the newer one.
+This transcription replaces the two earlier ones in this file: the run of
+2026-11-07 09:29 UTC (run page .../runs/42359916469) and the run of 2026-11-07
+12:43 UTC (run page .../runs/42373757489). The result below is the newest one,
+and all three reports quote the same tail.
 
 --- runner stdout, last lines, verbatim as reported ---
 PASS ids and note flags match the six recorded rows
@@ -31,7 +33,7 @@ OK self-test passed: 6 rows, note rule verbatim, one source URL, no checker run 
 --- exit code ---
 0, as implied by the runner's reported state "passed". The runner's result did
 not report a separate exit-code value to transcribe, so no exit-code byte is
-reproduced here.
+reproduced here, and none is written as if it had been captured.
 
 SCOPE OF THIS RUN (what it does and does not show)
 
@@ -42,3 +44,5 @@ SCOPE OF THIS RUN (what it does and does not show)
   quoted note rule. It produced no labels and no findings.
 - It does NOT cover SELFTEST_RUN.txt itself, nor DISCUSSION_POST.md:
   self_test.py never reads either file.
+- It does NOT show that data.csv in the repository is byte-identical to the copy
+  the runner tested; that copy was the one committed at run time.
