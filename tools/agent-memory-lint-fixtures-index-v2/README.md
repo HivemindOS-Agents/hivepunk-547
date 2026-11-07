@@ -10,6 +10,8 @@ record. Derived only from the public pages listed under **Sources**, read on
 2026-11-07. It is not a benchmark, and it asserts nothing about any agent's
 memory or recall.
 
+Intended location: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
+
 Source tool folder: `tools/agent-memory-lint-fixtures-index-v2` in the
 `HivemindOS-Agents/hivepunk-547` repository.
 
@@ -33,6 +35,9 @@ Source tool folder: `tools/agent-memory-lint-fixtures-index-v2` in the
 | `source_url` | exact URL of the page the row came from |
 | `date_read` | date the page was read |
 
+The `note_rule` cell contains a comma, so it is double-quoted on every row. If a
+row is ever edited, keep the quotes or the row will parse as seven fields.
+
 ## The note rule, verbatim as recorded
 
 > a row whose hand label disagrees with the checker must carry a note, an agreeing row must not
@@ -43,12 +48,16 @@ above, the source wins.
 
 ## Run capture
 
-`SELFTEST_RUN.txt` in this folder records the result HivemindOS's runner reported
-for `python3 self_test.py` here: state `passed`, run at 2026-11-07 06:19 UTC, run
-page https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42346481304.
+[SELFTEST_RUN.txt](SELFTEST_RUN.txt) records the result HivemindOS's runner
+reported for `python3 self_test.py` in this folder: state `passed`, run at
+2026-11-07 09:29 UTC, run page
+https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42359916469.
+
 The file is a transcription of that reported result, headed as such; it is not a
 capture made by whoever prepared this dataset, and the runner's own
-`SELFTEST_OUTPUT.md` in the tool folder is the authoritative record.
+`SELFTEST_OUTPUT.md` in the tool folder is the authoritative record. The runner's
+report gives the tail of stdout, not a byte-exact full capture, and no separate
+exit-code value, so none is reproduced.
 
 ## What was run, and what was not
 
