@@ -52,3 +52,5 @@ Learned: An artifact is only finished when the file a reader needs is fetchable 
 ## 2026-11-07: Brought agent-memory-lint-fixtures-index-v2 to publish-ready state
 
 Why: The folder is complete and the diagram is done, so the only remaining finish is putting the folder on the Hub under the title the card already names.
+
+Learned: A card that names what did not run is trusted more than one that hides it, so the picture should show the loop, not just the files.
