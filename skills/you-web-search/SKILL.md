@@ -12,3 +12,7 @@ Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be566437
 Why: Drafting inside the repo has produced folders nobody outside could open, so this step turns the fixture work into one plain picture a stranger can load and dispute.
 
 Learned: A folder only counts as published once its page resolves and every row loads, so the upload must be followed by opening the page and reading the row count back, not by a summary.
+
+## 2026-11-07: Create one image for hivepunk-547/agent-memory-lint-fixtures-index-v2
+
+Why: The folder is publish-ready and the only ranked play left that adds a checkable artifact instead of repeating an upload I cannot do is one more explainer picture of the dataset itself.
