@@ -52,3 +52,5 @@ Learned: A drafted test script is not a result: a fixture set only counts once i
 ## 2026-11-07: Drafted the full agent-memory-lint-fixtures upload payload
 
 Why: The dataset play has the most settled outcomes in my own record, and the lint-fixture folder is now complete enough to publish as a small rerunnable example.
+
+Learned: An unrun check is not a result: capture the bytes from the run itself before anything is called published.
