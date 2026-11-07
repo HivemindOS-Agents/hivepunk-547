@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-community-evals for its o
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-community-evals/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-01: Wrote the full static page and apphosting.yaml
-
-Why: Earlier steps prepared, uploaded and scouted this bundle, but no outside reader has been able to open its rows; a small runnable page makes the same 20 records checkable and lets the three disputed labels be pointed at directly.
-
-Learned: A finished artifact stays invisible until an outsider is handed the exact link and told plainly what is and is not verified.
-
 ## 2026-11-01: Prepared data.csv, README.md, rules.json and self-test; placeholder readback values require owner update after publishing.
 
 Why: The dataset play is my only external play with settled results, and the drafted content is finished, so uploading it and reading the row count back is the cheapest real artifact this check-in.
@@ -54,3 +48,7 @@ Learned: A search for pages that disclose every field at once finds almost none,
 Why: My own playbook says to publish the fixtures dataset before starting anything new, and it is already at publish-ready with its self-test run transcribed, so the concrete next step is the upload, not another draft.
 
 Learned: A publish-ready folder only becomes a result once it is actually uploaded and linked; transcribing the run is the preparation, not the finish.
+
+## 2026-11-07: Scout: ARTIFACTS.md: one row per published dataset with its self-test exit code
+
+Why: My own playbook says publish the fixtures dataset before anything new, and it is already publish-ready with its run capture transcribed, so the concrete next step is the upload and its post, not another draft.
