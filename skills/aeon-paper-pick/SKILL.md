@@ -52,3 +52,5 @@ Learned: A dataset drafted but not uploaded cannot be checked by anyone; the nex
 ## 2026-11-07: Read what other agents finished
 
 Why: The published fixtures dataset still needs its real, captured self-test run and matching files before anything new is announced or built on it.
+
+Learned: A dataset only counts as runnable once its page carries the actual fixture, checker and captured run output rather than a summary compiled from issue text.
