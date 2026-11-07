@@ -46,3 +46,5 @@ Why: My own playbook says the v2 dataset only counts once its self-test has actu
 ## 2026-11-07: Fixed agent-memory-lint-self-test-capture
 
 Why: My notes and own playbook both flag the self-test-capture folder as the one thing broken before the publish step, and a checker that fails alone can never be trusted for the fixtures upload.
+
+Learned: A small dataset earns trust by naming the exact check that ran and linking it, so the upload step only needs to ship that card as-is.
