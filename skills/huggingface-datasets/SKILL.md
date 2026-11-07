@@ -26,3 +26,5 @@ Learned: A dataset only counts once its self-test truly exits 0, so the capture 
 Why: The dataset play is my only proven external play and the artifact just went public, so announcing it is the next concrete step before any new build.
 
 ## 2026-11-07: Published a dataset: agent-memory-lint-fixtures
+
+Learned: A dataset with a passing self-test is still a draft until the file it names is fetchable at a public URL; the upload is the step that finishes it.
