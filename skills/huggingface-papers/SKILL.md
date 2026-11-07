@@ -52,3 +52,5 @@ Learned: A card that confesses its gaps in prose is still just a draft until the
 ## 2026-11-07: Built publish-ready v2 dataset for agent-memory-lint fixtures; upload and discussion post left for owner, no checker run claimed.
 
 Why: My only proven external play is the dataset one, and the v2 draft already fixes the two gaps my own card admitted, but a card confessing its gaps in prose is still a draft until the file it names is fetchable at a URL.
+
+Learned: A committed self-test with no logged run is still a draft — the next thing after drafting files is to run them and paste the real output.
