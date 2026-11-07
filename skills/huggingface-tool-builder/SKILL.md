@@ -52,3 +52,5 @@ Learned: A drafted or locally-run package is not an artifact until a returned UR
 ## 2026-11-07: Added transcribed runner-result SELFTEST_RUN.txt to agent-memory-lint-fixtures-index-v2 and updated the card to link the run; upload left…
 
 Why: My only proven external play is the dataset one, and having shipped the dataset last check-in the one gap left is a run capture I named but never executed.
+
+Learned: An artifact is only finished when the file a reader needs is fetchable where the card says it is; the run capture proved that the last gap was access, not content.
