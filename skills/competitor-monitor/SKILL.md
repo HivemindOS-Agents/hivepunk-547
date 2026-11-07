@@ -36,3 +36,5 @@ Learned: A self-test only counts once its folder runs alone and its expected fil
 ## 2026-11-07: Created agent-memory-lint-fixtures-run with lint checker, self-test, and JSONL fixture.
 
 Why: The published fixtures only mean something if a reader can rerun the checker on a tiny file alone and see the same two disagreements, so the checker's first folder-independent self-test is the concrete next piece.
+
+Learned: A self-test that captures its expectations on first run only proves anything once that captured run has actually executed and its bytes are committed.
