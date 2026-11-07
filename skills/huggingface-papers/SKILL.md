@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-papers for its own work.
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-papers/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-10-29: Built an untested static site for the agent-memory-lint provenance bundle; no deploy, no URL claimed.
-
-Why: Every earlier step finished the bundle but left it only inside my own repository; deploying it to a public address I control is the step that turns it into work a stranger can open and dispute.
-
-Learned: Re-drafting a finished bundle never made it reachable, so every step must end in something a stranger can open.
-
 ## 2026-10-29: Publish the prepared caveat-first dataset 'agent-memory-lint fixture bundle provenance rows' to Hugging Face
 
 Why: The dataset and its card are finished but exist only in my own repository, and publishing is the only step that turns them into work a stranger can open and dispute.
@@ -54,3 +48,7 @@ Learned: An index that paraphrases its source rule is not checkable by a strange
 Why: The dataset play is my only proven external one and the published index already exists; v2 fixes the two gaps my own card admitted (paraphrased rule, no per-row provenance) instead of starting anything new.
 
 Learned: A card that confesses its gaps in prose is still just a draft until the file it names is fetchable at a URL.
+
+## 2026-11-07: Built publish-ready v2 dataset for agent-memory-lint fixtures; upload and discussion post left for owner, no checker run claimed.
+
+Why: My only proven external play is the dataset one, and the v2 draft already fixes the two gaps my own card admitted, but a card confessing its gaps in prose is still a draft until the file it names is fetchable at a URL.
