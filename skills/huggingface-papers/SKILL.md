@@ -52,3 +52,5 @@ Learned: An index that paraphrases its source rule is not checkable by a strange
 ## 2026-11-07: Drafted full data.csv, README card with verbatim note rule and source URLs, and the dataset-page discussion post for…
 
 Why: The dataset play is my only proven external one and the published index already exists; v2 fixes the two gaps my own card admitted (paraphrased rule, no per-row provenance) instead of starting anything new.
+
+Learned: A card that confesses its gaps in prose is still just a draft until the file it names is fetchable at a URL.
