@@ -1,14 +1,26 @@
 ---
-title: agent-memory-lint-fixtures-index-v2
+title: agent-memory-lint-fixtures
 ---
 
-# agent-memory-lint-fixtures-index-v2
+# agent-memory-lint-fixtures
 
 A one-file CSV index of fixture records for the agent-memory-lint fixture set, as
 the public HivemindOS-Agents/bee-scouts issue pages state them. Six rows, one per
 record. Derived only from the public pages listed under **Sources**, read on
 2026-11-07. It is not a benchmark, and it asserts nothing about any agent's
 memory or recall.
+
+Source tool folder: `tools/agent-memory-lint-fixtures-index-v2` in the
+`HivemindOS-Agents/hivepunk-547` repository.
+
+## Files in this dataset version
+
+| file | what it is |
+|---|---|
+| `data.csv` | the six-row index (columns below) |
+| `README.md` | this card |
+| `SELFTEST_RUN.txt` | a transcription of the runner's own result for `self_test.py` in this folder |
+| `self_test.py` | the checker that reads `data.csv`; run it with `python3 self_test.py` |
 
 ## Columns
 
@@ -29,6 +41,27 @@ That sentence is reproduced as recorded from issue #109. The issue page at the
 URL in `source_url` is the authoritative wording; if it differs from the line
 above, the source wins.
 
+## Run capture
+
+`SELFTEST_RUN.txt` in this folder records the result HivemindOS's runner reported
+for `python3 self_test.py` here: state `passed`, run at 2026-11-07 06:19 UTC, run
+page https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42346481304.
+The file is a transcription of that reported result, headed as such; it is not a
+capture made by whoever prepared this dataset, and the runner's own
+`SELFTEST_OUTPUT.md` in the tool folder is the authoritative record.
+
+## What was run, and what was not
+
+What ran: the bundled `self_test.py`, by HivemindOS's runner. It reads only
+`data.csv` in this folder and checks the header, the six ids and their note
+flags, the byte-identical note rule, non-empty `extra_file`, a bee-scouts
+`source_url`, a `YYYY-MM-DD` `date_read`, and one shared source URL.
+
+What did not run, and is not claimed: `lint.py`, any other checker, and any run
+of anything against the fixture set itself. No labels and no findings were
+produced for any record. The self-test above is a check on this CSV, not a lint
+of the fixture set.
+
 ## Sources (all public)
 
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/109 -- the four-record
@@ -40,19 +73,12 @@ above, the source wins.
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/68 -- names L006 and L018
   as disputed. Read 2026-11-07.
 
-## No checker run is claimed
-
-No checker was run to produce this dataset. `lint.py`, `self_test.py`, any other
-checker, and any run capture file were not executed, not read and not reproduced
-here. No stdout, no exit code and no pass/fail result is stated. The rows are
-facts the pages state, not results of a test. The bundled `self_test.py` checks
-only that this CSV matches the six recorded rows and the quoted rule; it is not a
-record of any checker having run against the fixture set.
-
 ## What this dataset could not check
 
-- Whether `hivepunk-547-db38b7a4/agent-memory-lint-fixtures-csv` or this dataset
-  currently exists, or that any file named on the source pages actually landed.
+- Whether the `data.csv` uploaded here is byte-identical to the copy the runner
+  tested, or that any upload has happened at all.
+- Whether the earlier 20-row v1 file's full contents match these six rows; v1 was
+  not re-read, and no id was invented to pad this file.
 - The exact wording of issue #109's rule sentence beyond what was recorded.
 - Whether the L006 and L018 disputes in issue #68 are the same question as the rule
   quoted here.
@@ -70,4 +96,5 @@ From this folder, with Python 3 and no arguments:
 python3 self_test.py
 ~~~
 
-It reads only `data.csv` here and exits 0 only when every check passes.
+It reads only `data.csv` here and exits 0 only when every check passes. It does
+not read `SELFTEST_RUN.txt`, so that file is outside its coverage.
