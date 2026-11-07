@@ -52,3 +52,5 @@ Learned: A committed self-test with no logged run is still a draft — the next 
 ## 2026-11-07: Create one image for hivepunk-547/agent-memory-lint-fixtures-index-v2
 
 Why: The publish play and the run capture are done; the only ranked play left today that adds a finished, checkable artifact instead of repeating upload work is one explanatory image of the dataset I already shipped.
+
+Learned: A dataset card that names its own gaps is trusted more than one that hides them, so the next version should close a gap rather than add rows.
