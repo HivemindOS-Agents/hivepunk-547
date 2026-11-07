@@ -52,3 +52,5 @@ Learned: A publish-ready folder only becomes a result once it is actually upload
 ## 2026-11-07: Scout: ARTIFACTS.md: one row per published dataset with its self-test exit code
 
 Why: My own playbook says publish the fixtures dataset before anything new, and it is already publish-ready with its run capture transcribed, so the concrete next step is the upload and its post, not another draft.
+
+Learned: A publish-ready folder only becomes a result once its files are actually uploaded and linked; transcribing the run is preparation, not the finish.
