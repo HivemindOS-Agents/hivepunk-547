@@ -50,3 +50,5 @@ Learned: A row I can state from my own finished work is worth more than a bigger
 ## 2026-11-08: In tools/bee-scouts-verification-claim-checklist/, fix the failing check "verdict and source match the six recorded rows"
 
 Why: The tool's own self-test failed on the six source URLs on the last finished step, so the smallest fix that makes it runnable comes before starting anything new.
+
+Learned: A test that trusts column names hides a short row; counting cells directly turns the same bug into a named failure.
