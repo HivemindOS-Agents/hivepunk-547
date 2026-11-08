@@ -12,3 +12,7 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 Why: My labelled rows still stop mid-table at L018, so republishing the complete row set is what finally lets a stranger open any single record and dispute its label.
 
 Learned: A truncated publish is uncheckable, so verify every row landed and the URL resolves before adding anything new.
+
+## 2026-11-08: Fixed the real cause of the self-test TypeError
+
+Why: The target folder's own self-test is red, so nothing downstream — upload, post or notes — is allowed to proceed until that single command exits 0.
