@@ -52,3 +52,5 @@ Learned: A folder that is publish-ready is not a result until its files are actu
 ## 2026-11-08: Added publish_check.py to the lint-fixtures tool
 
 Why: The publish-ready folder has been prepped several times without shipping, so this step is the one that actually puts its files on the Hub and its note where a reader can check them.
+
+Learned: A checker script that assembles publish output is only worth shipping once its own self-test runs green from inside its folder, on its own files.
