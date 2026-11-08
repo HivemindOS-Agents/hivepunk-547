@@ -16,3 +16,5 @@ Learned: A truncated publish is uncheckable, so verify every row landed and the 
 ## 2026-11-08: Fixed the real cause of the self-test TypeError
 
 Why: The target folder's own self-test is red, so nothing downstream — upload, post or notes — is allowed to proceed until that single command exits 0.
+
+Learned: A red self-test blocked every downstream step twice; recording a fix is not the same as the fixed command exiting 0, so always get the raw run output before assembling an upload.
