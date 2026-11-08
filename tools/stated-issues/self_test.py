@@ -47,6 +47,11 @@ SOURCE_RE = re.compile(
     r'^https://github\.com/(HivemindOS-Agents|LiamVisionary)/bee-scouts/issues/\d+$')
 NOT_SHOWN = 'not shown'
 
+# Numbers that no page read for this task shows. They may appear in the card's
+# 'What it could not check' list, which records the gap, but they must never be
+# claimed as the numbers the rows carry.
+NUMBERS_NO_PAGE_SHOWS = ['#114', '#115', '#87', '#79']
+
 SLUG = 'bee-scouts-self-test-issues-stated-commands-and-artifacts'
 ACCOUNT = 'hivepunk-547-db38b7a4'
 DATASET_URL = 'https://huggingface.co/datasets/%s/%s' % (ACCOUNT, SLUG)
@@ -66,6 +71,31 @@ class Checker(object):
             self.failed += 1
             sys.stderr.write('FAIL %s%s\n'
                              % (label, (' -- ' + detail) if detail else ''))
+
+
+def check_readme(text, c):
+    for section in README_SECTIONS:
+        c.check(section in text, 'README.md carries the section: %s' % section)
+    c.check('No test was run' in text, 'README.md states that no test was run')
+    c.check('no folder was listed' in text,
+            'README.md states that no folder was listed')
+
+    bullet = None
+    for line in text.splitlines():
+        if line.startswith('- `issue`'):
+            bullet = line
+            break
+    c.check(bullet is not None,
+            'README.md has an `issue` bullet in its Columns list')
+    if bullet is not None:
+        missing = [n for n, _f, _cmd in EXPECTED if n not in bullet]
+        c.check(not missing,
+                'the `issue` bullet names every number the rows carry',
+                'missing %r' % (missing,))
+        stale = [n for n in NUMBERS_NO_PAGE_SHOWS if n in bullet]
+        c.check(not stale,
+                'the `issue` bullet claims no number the read pages do not show',
+                'claimed %r' % (stale,))
 
 
 def main():
@@ -112,12 +142,7 @@ def main():
         c.check(False, 'README.md is present')
     else:
         with open(readme, 'r', encoding='utf-8') as fh:
-            text = fh.read()
-        for section in README_SECTIONS:
-            c.check(section in text, 'README.md carries the section: %s' % section)
-        c.check('No test was run' in text, 'README.md states that no test was run')
-        c.check('no folder was listed' in text,
-                'README.md states that no folder was listed')
+            check_readme(fh.read(), c)
 
     notes = os.path.join(HERE, 'PUBLISH_NOTES.md')
     if not os.path.isfile(notes):
@@ -135,12 +160,16 @@ def main():
         c.check('no folder was opened' in low, 'notes say no folder was opened')
         c.check('data.csv' in n and 'README.md' in n,
                 'notes name the two dataset files')
+        c.check('exclude' in low, 'notes say what to exclude from the upload')
+        c.check('not publish' in low or 'could not publish' in low,
+                'notes state plainly that nothing was published from here')
 
     if c.failed:
         sys.stderr.write('self-test FAILED: %d check(s) failed\n' % c.failed)
         return 1
-    sys.stdout.write('OK self-test passed: 6 stated rows, card sections present, '
-                     'notes carry slug and discussion text; no command run.\n')
+    sys.stdout.write('OK self-test passed: 6 stated rows, card consistent with '
+                     'them, note file carries slug, URL and discussion text; '
+                     'no command run.\n')
     return 0
 
 
