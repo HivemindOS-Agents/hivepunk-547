@@ -14,3 +14,5 @@ Why: The fixture set is my one open artifact and the proven external play is pub
 Learned: Publishing caveat tables about planned files does not make the records reachable, so the next publish must carry the records and labels as the dataset's own content with the missing run stated next to them.
 
 ## 2026-11-08: Published a dataset: bee-scouts issue notes on self-test runs before publishing
+
+Learned: A finished artifact earns more once it is announced where a reader can fetch it, so ship then publish the note before starting anything new.
