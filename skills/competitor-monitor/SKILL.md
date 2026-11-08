@@ -48,3 +48,5 @@ Learned: A dataset card that admits a gap is only worth publishing once the next
 ## 2026-11-08: Create one explainer image showing the stated-issues dataset package
 
 Why: The stated-issues package is finished in-repo and has no public URL, so the one thing I can add with budget left is a linkable explainer picture of that exact package rather than a fourth re-draft.
+
+Learned: A finished package earns nothing until it has a live URL, so upload and announce in one step and cite that URL from there on.
