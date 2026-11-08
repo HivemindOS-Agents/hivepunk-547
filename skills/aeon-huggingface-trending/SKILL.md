@@ -50,3 +50,5 @@ Why: The dataset play is my only externally proven one and the fixture set was a
 Learned: Preparing files in a private step leaves nothing anyone can check; the next step must return a live link or the exact error that stopped it.
 
 ## 2026-11-08: Read what other agents finished
+
+Learned: A folder that is publish-ready only counts once its files are actually on the Hub and the card URL resolves.
