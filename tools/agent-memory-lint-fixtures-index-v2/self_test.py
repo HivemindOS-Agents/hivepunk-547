@@ -10,14 +10,18 @@
 # Second half: it exercises publish_check.py's checks on small in-memory
 # fixtures, so a publish set that would not pass cannot be printed as ready.
 #
-# Fix note (this revision): the two in-memory fixtures below used to be built
-# with three adjacent string literals, the last of which carried the
-# `% (rid, flag)`. Python concatenates adjacent literals BEFORE applying `%`,
-# so the combined string had three `%s` placeholders but only two arguments,
-# raising TypeError: not enough arguments for format string. The URL and date
-# literals carry no placeholder, so the format operation is now closed right
-# after the third `%s` and the remaining literals are concatenated afterwards.
-# Byte-for-byte output is unchanged; only the shape of the expression changed.
+# Fix note (this revision), two things in check_fixture_cases only:
+#  1. The `good` fixture literal below has THREE %s placeholders -- record_id,
+#     has_note and note_rule -- but was called with only (rid, flag). The
+#     earlier revision had also closed the % operation before the trailing
+#     URL/date literals (correct, and kept), which is why the traceback landed
+#     on `'%s,%s,"%s",sample_records.jsonl,'` itself: three placeholders, two
+#     arguments -> TypeError: not enough arguments for format string. The fix
+#     is to pass NOTE_RULE as the third argument.
+#  2. publish_check.check_run_capture() requires a bee-self-test run-page URL,
+#     and the "accepts a properly labelled transcription" fixture did not
+#     contain one, so that check would have failed next. The fixture string now
+#     carries the run URL; the check in publish_check.py is untouched.
 
 import csv
 import io
@@ -101,13 +105,13 @@ def check_fixture_cases(c):
         c.check(False, "publish_check.py imports in-process", str(exc))
         return
 
-    # NOTE the shape here: `% (rid, flag)` closes right after the third %s,
-    # because the two following literals contain no placeholder.  Adjacent
-    # string literals are concatenated before % is applied, so leaving the %
-    # at the end made one string with three %s and two arguments.
+    # THREE placeholders here: record_id, has_note, note_rule. Passing only
+    # (rid, flag) is what raised "not enough arguments for format string".
+    # NOTE_RULE is the third argument, and the argument-free URL and date
+    # literals still concatenate AFTER the % operation.
     good = ("record_id,has_note,note_rule,extra_file,source_url,date_read\n"
             + "".join(
-                '%s,%s,"%s",sample_records.jsonl,' % (rid, flag)
+                '%s,%s,"%s",sample_records.jsonl,' % (rid, flag, NOTE_RULE)
                 + 'https://github.com/HivemindOS-Agents/bee-scouts/issues/109,'
                 + '2026-11-07\n'
                 for rid, flag in EXPECTED))
@@ -115,8 +119,8 @@ def check_fixture_cases(c):
     c.check(pc.check_csv_text(good) == [],
             "publish_check accepts the six recorded rows")
 
-    # Same corrected shape for the padded fixture: the % operand takes only
-    # NOTE_RULE, and the argument-free literals are concatenated after it.
+    # Same shape for the padded fixture: one placeholder, one argument, then
+    # the argument-free literals.
     padded = good + ('L099,no,"%s",x.jsonl,' % NOTE_RULE
                      + 'https://github.com/HivemindOS-Agents/bee-scouts/issues/109,'
                      + '2026-11-07\n')
@@ -136,9 +140,12 @@ def check_fixture_cases(c):
     c.check(pc.check_run_capture("exit code: 0\n") != [],
             "publish_check rejects a pasted-in exit byte in the run capture")
 
+    # An accepted transcription must carry a run-page URL (check_run_capture
+    # requires one), so this fixture now includes it.
     c.check(pc.check_run_capture(
         "a transcription of the runner's result; SELFTEST_OUTPUT.md wins; "
-        "0, as implied by passed\n") == [],
+        "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/"
+        "42437477123; 0, as implied by passed\n") == [],
         "publish_check accepts a properly labelled transcription")
 
 
