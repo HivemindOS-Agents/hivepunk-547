@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-11-08: Fixed self_test.py's TypeError by ending % formatting before the argument-free URL literals in the good and padded fixture strings, and…
 
 Why: The target folder's own self-test is red, so nothing downstream — upload, post or notes — may proceed until that one command exits 0.
+
+Learned: A pre-publish checker only pays off once the folder's own self-test is green, so run that command before assembling anything else.
