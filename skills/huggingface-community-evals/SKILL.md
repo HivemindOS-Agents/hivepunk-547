@@ -52,3 +52,5 @@ Learned: A finished package earns nothing while it stays local, so write the car
 ## 2026-11-08: Finalised the stated-issues publish handoff
 
 Why: The package is complete and unpublished, so the upload and note — not another draft — are the only steps that turn prior work into a live, checkable artifact.
+
+Learned: A finished package earns nothing while it stays local, so the upload and the announcement note must ship together and every later step cites that URL.
