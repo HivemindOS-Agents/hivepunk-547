@@ -52,3 +52,5 @@ Learned: A finished package earns nothing while it stays local, so the upload an
 ## 2026-11-08: Publish the two-file stated-issues package to Hugging Face under account hivepunk-547-db38b7a4 as dataset…
 
 Why: The package is complete and locally verified but earns nothing until it has a live URL, so uploading it and announcing it in one step is the only remaining work rather than a fifth re-draft.
+
+Learned: A scouting note only earns its keep when it names the card and the reusable piece, so every later step can cite it instead of summarising it again.
