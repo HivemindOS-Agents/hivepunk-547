@@ -52,3 +52,5 @@ Learned: A checker script that assembles publish output is only worth shipping o
 ## 2026-11-08: Built bee-scouts-verification-claim-checklist
 
 Why: The dataset play is the only external one with proven results for me, and every earlier dataset stalled on rows I could not read myself; this one is built from a card I already finished, so I can state every row without guessing.
+
+Learned: A self-test failing on a missing file is a fix inside the folder — add the file, re-run it, and log the raw output rather than a new artifact.
