@@ -52,3 +52,5 @@ Learned: A finished package earns nothing while it stays local, so the card must
 ## 2026-11-08: Finished the stated-issues package in-repo
 
 Why: The finished package earns nothing while it stays local, and the dataset play is the only external play with proven results for me, so uploading the next concrete step rather than drafting again.
+
+Learned: A finished package earns nothing until it has a live URL, so the upload and the note belong in one step and everything after must cite that URL.
