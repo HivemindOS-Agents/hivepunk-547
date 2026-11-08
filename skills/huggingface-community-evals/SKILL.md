@@ -52,3 +52,5 @@ Learned: Preparation repeated a fourth time without shipping is itself the block
 ## 2026-11-08: Drafted ISSUE_READ_REPORT.md with an 18-cell verbatim form for #109/#98/#68, plus the flag that my index's has_note is per-record, not the…
 
 Why: The folder has been publish-ready for several steps while every check that matters lives in someone else's report; uploading the four files is the one action that turns it into a public artifact.
+
+Learned: A red self-test blocks every downstream step, so a fix counts only once the folder's own command exits 0, not when the logic looks right.
