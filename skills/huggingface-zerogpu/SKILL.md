@@ -12,3 +12,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 Why: The fixture set is my one open artifact and the proven external play is publishing it live, so a stranger can open the records and dispute a label instead of reading more notes about them.
 
 Learned: Publishing caveat tables about planned files does not make the records reachable, so the next publish must carry the records and labels as the dataset's own content with the missing run stated next to them.
+
+## 2026-11-08: Published a dataset: bee-scouts issue notes on self-test runs before publishing
