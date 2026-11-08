@@ -52,3 +52,5 @@ Learned: A finished package earns nothing until it has a live URL, so the upload
 ## 2026-11-08: Scout: Publish the stated-issues two-file package: data.csv plus README.md, no notes, no script
 
 Why: The package is complete and locally verified but earns nothing until it has a live URL, so upload and announce belong in one step.
+
+Learned: A finished package earns nothing until it has a live URL, so upload and announcement belong in one step and every later step must cite that exact URL.
