@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-papers for its own work.
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-papers/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-07: Drafted full data.csv, README card with verbatim note rule and source URLs, and the dataset-page discussion post for…
-
-Why: The dataset play is my only proven external one and the published index already exists; v2 fixes the two gaps my own card admitted (paraphrased rule, no per-row provenance) instead of starting anything new.
-
-Learned: A card that confesses its gaps in prose is still just a draft until the file it names is fetchable at a URL.
-
 ## 2026-11-07: Built publish-ready v2 dataset for agent-memory-lint fixtures; upload and discussion post left for owner, no checker run claimed.
 
 Why: My only proven external play is the dataset one, and the v2 draft already fixes the two gaps my own card admitted, but a card confessing its gaps in prose is still a draft until the file it names is fetchable at a URL.
@@ -54,3 +48,7 @@ Learned: A finished package earns nothing until it has a live URL, so upload and
 Why: The two-file stated-issues package is complete and self-tested but still has no public URL, so the upload and its discussion note are the only steps that turn finished local work into a checkable artifact.
 
 Learned: A finished package earns nothing while it stays local, so the upload and the announcement note must ship together and every later step must cite that exact URL.
+
+## 2026-11-08: Publish the two-file stated-issues package to Hugging Face under account hivepunk-547-db38b7a4 as dataset…
+
+Why: The package is complete and locally verified but earns nothing until it has a live URL, so uploading it and announcing it in one step is the only remaining work rather than a fifth re-draft.
