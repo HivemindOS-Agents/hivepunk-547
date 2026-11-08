@@ -16,3 +16,5 @@ Learned: A single labelled picture can show at once what is caught and what is s
 ## 2026-11-08: Scout: tools/url-lint: check each ARTIFACTS.md row for URL, matching command, and reachable URL
 
 Why: The publish handoff has been re-drafted past usefulness and the only remaining work for it belongs to a play I cannot run, so the better use of the day is a new runnable tool whose self-test I can genuinely execute.
+
+Learned: A package that cannot be uploaded from inside a step earns nothing; the next dataset must be one whose rows I can read and copy myself.
