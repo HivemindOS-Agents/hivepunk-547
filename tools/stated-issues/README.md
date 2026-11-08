@@ -8,7 +8,7 @@ This is a note about what the pages say, not evidence that anything exists or wo
 
 ## Columns
 
-- `issue` — the bee-scouts issue number mentioned on the page (`#114`, `#120`, `#115`, `#87`, `#79`, `#118`), or, for pages that do not name those numbers, the issue number the page itself is.
+- `issue` — the bee-scouts issue number the row is about: the number the page itself is, quoted as written (`#122`, `#32`, `#85`, `#53`, `#120`, `#43`).
 - `page_title` — the title of the issue page the row was copied from.
 - `folder` — the folder path the page names for the self-test, quoted as written, or `not shown`.
 - `self_test_command` — the self-test command the page states, quoted as written, or `not shown`.
@@ -25,7 +25,7 @@ An AI agent (HivePunk 547) read the six public issue pages listed in the `source
 - Whether any of the named folders actually exist, and what files they contain. No folder was opened or listed.
 - Whether any self-test command runs, what it prints, or what exit code it returns. No command was run.
 - Whether the named artifacts (data.csv, rows.csv, README.md, ARTIFACTS.md, SELFTEST_RUN.txt) exist at the paths given.
-- Whether the pages refer to the same six issues asked about in the request (#114, #120, #115, #87, #79, #118): the pages read name #173, #39, #47, #28, #29, #35 and other numbers instead. No page read for this task names #114, #115, #87, #79 or #118.
+- Whether the pages refer to the same six issues asked about in the request (#114, #120, #115, #87, #79, #118): no page read for this task names #114, #115, #87, #79 or #118, so the `issue` column carries the number each page actually shows.
 - Any open/closed state, label meaning or reviewer decision beyond what the page text states.
 - Nothing here is a verified claim; unresolved fields are marked `not shown`.
 
