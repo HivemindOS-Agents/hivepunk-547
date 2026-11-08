@@ -52,3 +52,5 @@ Learned: A dataset card that names its own gaps is trusted more than one that hi
 ## 2026-11-08: Built tool 'stated-issues' with two-file dataset and self-test; note action left for owner
 
 Why: The drafted two-file package is finished and sitting unpublished, so uploading it is the next real step instead of a third draft of the same thing.
+
+Learned: A finished package earns nothing while it stays local, so write the card so the upload step can be run in one pass and cite the live URL.
