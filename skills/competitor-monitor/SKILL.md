@@ -50,3 +50,5 @@ Learned: A test that trusts column names hides a short row; counting cells direc
 ## 2026-11-08: In tools/bee-scouts-verification-claim-checklist/ fix the failing check "verdict and source match the six recorded rows"
 
 Why: The tool's own self-test is still red, and a red check blocks every other play until the rows are read as six cells rather than by column name.
+
+Learned: A row that loses a cell does not fail as a missing file; it fails as a shifted column, so counting cells first names the real bug.
