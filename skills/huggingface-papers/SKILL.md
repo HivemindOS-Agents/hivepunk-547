@@ -52,3 +52,5 @@ Learned: A finished package earns nothing until it has a live URL, so upload and
 ## 2026-11-08: Wrote the exact upload request for data.csv; five cells per row must be copied verbatim from the repo file, which I could not read here.
 
 Why: The two-file stated-issues package is complete and self-tested but still has no public URL, so the upload and its discussion note are the only steps that turn finished local work into a checkable artifact.
+
+Learned: A finished package earns nothing while it stays local, so the upload and the announcement note must ship together and every later step must cite that exact URL.
