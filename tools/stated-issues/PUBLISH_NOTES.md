@@ -1,19 +1,22 @@
-# Repo-side publish notes — stated-issues
+# Repo-side publish handoff — stated-issues
 
-This file sits beside the dataset files in the tool folder. It is repo-side only:
-**do not upload this file**. The dataset has exactly two files at its root,
+**Do not upload this file.** The dataset has exactly two files at its root:
 `data.csv` and `README.md`.
+
+This step could not publish anything: uploading to Hugging Face is done by the
+publish play HivemindOS runs, and nothing was uploaded, posted or opened from
+here. No GitHub issue was opened, commented on or edited.
 
 ## Target
 
 - Account: `hivepunk-547-db38b7a4` (no organisation; there is no "hivemindos" org)
 - Title / slug: `bee-scouts-self-test-issues-stated-commands-and-artifacts`
 - Dataset URL to report: https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-self-test-issues-stated-commands-and-artifacts
-- Files: `data.csv` (header plus the 6 copied rows) and `README.md` (the card),
-  both at the repo root
+- Upload: `data.csv` and `README.md`, at the repo root, exactly as they sit in
+  this folder. Exclude `PUBLISH_NOTES.md` (this file) and `self_test.py`.
 - Unconfirmed from here: the exact slug the publish play generates, and whether
-  the uploader takes this whole folder or the two named files. If it takes the
-  whole folder, this file must be excluded.
+  it takes the two named files or the whole folder. If it takes the whole
+  folder, the two files above are still the only ones that belong in the repo.
 
 ## Discussion note to open on the dataset
 
@@ -30,25 +33,26 @@ was executed. This is a note about what the pages say, not evidence that
 anything exists or works. Dataset:
 https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-self-test-issues-stated-commands-and-artifacts
 
-## Known deviation, left in place
+## Change since the earlier draft
 
-The card's `Columns` bullet for `issue` lists the numbers `#114, #120, #115,
-#87, #79, #118` while the rows carry the numbers the read pages actually show
-(`#122, #32, #85, #53, #120, #43`). The card's `What it could not check`
-section already states that no page read for this task names #114, #115, #87,
-#79 or #118. The card goes up as drafted; this note is the flag.
+The card's `Columns` bullet for `issue` listed `#114, #120, #115, #87, #79,
+#118`, which are not the numbers the rows carry and not numbers any read page
+shows. It now lists `#122`, `#32`, `#85`, `#53`, `#120`, `#43` — what the rows
+actually hold. The card's `What it could not check` list still records plainly
+that no page read for this task names #114, #115, #87, #79 or #118. Nothing
+else in the card changed, and `data.csv` did not change.
 
 ## Untested
 
-- That the dataset exists, that the slug above is the one the uploader makes,
-  or that the discussion note can be opened: none of that happens from this
-  repo step, and no publish, upload or post was performed here.
-- Whether any folder named in the rows exists, and whether any command in the
-  rows runs or returns any exit code. None was run.
+- That the dataset exists, that the slug above is the one the play makes, or
+  that the discussion note can be opened. No publish, upload or post was
+  performed here.
+- Whether any folder named in the six rows exists; no folder was opened or
+  listed. Whether any command quoted in the rows runs or returns any exit code;
+  none was run.
 
 ## Left for the owner
 
 - Publish `data.csv` and `README.md` under the account and title above, then
-  open the one discussion note whose text is above; confirm the resulting slug.
-- No GitHub issue was opened, commented on or edited, and no bee-scouts folder
-  was opened or listed.
+  open the one discussion note whose text is above, and correct the reported
+  URL if the generated slug differs.
