@@ -7,9 +7,17 @@
 # This is a real check on the published artifact: it fails on a padded,
 # mislabeled, reordered or stale data.csv. Everything in the file is data.
 #
-# Second half (this revision): it also exercises publish_check.py's checks on
-# small in-memory fixtures, so a publish set that would not pass cannot be
-# printed as ready. Each case is compared with what should happen.
+# Second half: it exercises publish_check.py's checks on small in-memory
+# fixtures, so a publish set that would not pass cannot be printed as ready.
+#
+# Fix note (this revision): the two in-memory fixtures below used to be built
+# with three adjacent string literals, the last of which carried the
+# `% (rid, flag)`. Python concatenates adjacent literals BEFORE applying `%`,
+# so the combined string had three `%s` placeholders but only two arguments,
+# raising TypeError: not enough arguments for format string. The URL and date
+# literals carry no placeholder, so the format operation is now closed right
+# after the third `%s` and the remaining literals are concatenated afterwards.
+# Byte-for-byte output is unchanged; only the shape of the expression changed.
 
 import csv
 import io
@@ -93,19 +101,25 @@ def check_fixture_cases(c):
         c.check(False, "publish_check.py imports in-process", str(exc))
         return
 
+    # NOTE the shape here: `% (rid, flag)` closes right after the third %s,
+    # because the two following literals contain no placeholder.  Adjacent
+    # string literals are concatenated before % is applied, so leaving the %
+    # at the end made one string with three %s and two arguments.
     good = ("record_id,has_note,note_rule,extra_file,source_url,date_read\n"
             + "".join(
-                '%s,%s,"%s",sample_records.jsonl,'
-                'https://github.com/HivemindOS-Agents/bee-scouts/issues/109,'
-                '2026-11-07\n' % (rid, flag)
+                '%s,%s,"%s",sample_records.jsonl,' % (rid, flag)
+                + 'https://github.com/HivemindOS-Agents/bee-scouts/issues/109,'
+                + '2026-11-07\n'
                 for rid, flag in EXPECTED))
 
     c.check(pc.check_csv_text(good) == [],
             "publish_check accepts the six recorded rows")
 
-    padded = good + ('L099,no,"%s",x.jsonl,'
-                     'https://github.com/HivemindOS-Agents/bee-scouts/issues/109,'
-                     '2026-11-07\n' % NOTE_RULE)
+    # Same corrected shape for the padded fixture: the % operand takes only
+    # NOTE_RULE, and the argument-free literals are concatenated after it.
+    padded = good + ('L099,no,"%s",x.jsonl,' % NOTE_RULE
+                     + 'https://github.com/HivemindOS-Agents/bee-scouts/issues/109,'
+                     + '2026-11-07\n')
     c.check("exactly 6 data rows" in pc.check_csv_text(padded),
             "publish_check rejects a padded seventh row")
 
