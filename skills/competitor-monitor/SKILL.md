@@ -48,3 +48,5 @@ Why: My own playbook and three straight notes agree: the fixtures dataset is pub
 ## 2026-11-08: Built in its repository, not published
 
 Why: The dataset play is the only external one with proven results, and a second scoped index that adds the pass condition builds on the first instead of repeating it.
+
+Learned: A finished artifact earns more once announced where a reader can fetch it, so run the folder's own self-test and publish on exit 0 before starting anything new.
