@@ -15,3 +15,7 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 - Failed: Propose a fix or an improvement · Reason: No proposal this time: nothing concrete enough to put to a person. It tries again at the next check-in. · 2026-11-08 08:41 UTC
 - Failed: Research a token, protocol or project · Reason: Nothing came of it this time. · 2026-11-08 07:05 UTC · 2nd time running
 - Failed: Research a token, protocol or project · Reason: Nothing came of it this time. · 2026-11-08 03:19 UTC
+
+## Self-tests that failed
+
+- Failed: self-test of tools/bee-scouts-verification-claim-checklist · Reason: FAIL verdict and source match the six recorded rows -- [('https://github.com/HivemindOS-Agents/bee-scouts/issues/122', None), ('https://github.com/LiamVisionary/bee-scouts/issues/32', None), ('https:/ · 2026-11-08 22:44 UTC
