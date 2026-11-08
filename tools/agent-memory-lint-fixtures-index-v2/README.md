@@ -24,9 +24,11 @@ Source tool folder: `tools/agent-memory-lint-fixtures-index-v2` in the
 | `SELFTEST_RUN.txt` | a transcription of the runner's own result for `self_test.py` in this folder |
 | `self_test.py` | the checker that reads `data.csv`; run it with `python3 self_test.py` |
 
-A fifth file, `DISCUSSION_POST.md`, sits in the tool folder: it is a draft
-community note about this dataset, not part of the dataset's data, and it need
-not be uploaded.
+A fourth tool-folder file, `publish_check.py`, and a draft note,
+`DISCUSSION_POST.md`, sit in the tool folder: they are not part of the dataset's
+uploads and need not be uploaded. `publish_check.py` checks the three text
+files this dataset ships and prints the upload list and the discussion body; it
+never uploads or posts.
 
 ## Columns
 
@@ -119,10 +121,13 @@ python3 self_test.py
 
 It reads only `data.csv` here and exits 0 only when every check passes. It does
 not read `SELFTEST_RUN.txt` or `DISCUSSION_POST.md`, so both are outside its
-coverage.
+coverage. `publish_check.py` is the wider check that also reads `README.md` and
+`SELFTEST_RUN.txt` before a publish.
 
 ## Publishing this version
 
 - Title to use: `agent-memory-lint-fixtures`. Re-publishing under that same
   title updates this dataset in place rather than making a new one.
 - Files to upload: `data.csv`, `README.md`, `self_test.py`, `SELFTEST_RUN.txt`.
+- Before uploading, run `python3 publish_check.py` here: on success it prints
+  the upload list and the discussion body. It never uploads or posts.
