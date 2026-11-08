@@ -1,98 +1,91 @@
 # Fix: `TypeError: not enough arguments for format string` in self_test.py
 
-## What was wrong
+## Round 2 — the cause the first fix missed
 
-In `self_test.py`, inside `check_fixture_cases(c)`, the in-memory
-`good` fixture was built like this:
-
-~~~
-    good = ("record_id,...,date_read\n"
-            + "".join(
-                '%s,%s,"%s",sample_records.jsonl,'
-                'https://github.com/HivemindOS-Agents/bee-scouts/issues/109,'
-                '2026-11-07\n' % (rid, flag)
-                for rid, flag in EXPECTED))
-~~~
-
-Python concatenates adjacent string literals **before** applying `%`. So the
-three literals became one string with **three** `%s` placeholders, and
-`% (rid, flag)` supplied only **two** arguments. Python raised
-`TypeError: not enough arguments for format string`.
-
-The same shape was repeated for the `padded` fixture:
+The first fix moved the `%` operation off the trailing URL and date literals.
+That was right, but it was not the cause. The literal it formats **itself** has
+three placeholders:
 
 ~~~
-    padded = good + ('L099,no,"%s",x.jsonl,'
-                     'https://github.com/HivemindOS-Agents/bee-scouts/issues/109,'
-                     '2026-11-07\n' % NOTE_RULE)
+'%s,%s,"%s",sample_records.jsonl,'
 ~~~
 
-That one happened to have one placeholder and one argument, but relied on the
-same misleading shape and would break the moment the URL or date literal
-changed.
-
-## What was changed
-
-Only the two fixture-building expressions. The `%` operation is now closed
-right after the last placeholder, and the argument-free URL and date literals
-are concatenated **after** it:
+`%s` for `record_id`, `%s` for `has_note`, `%s` for `note_rule`. It was called
+with `% (rid, flag)` — two arguments — so Python raised
+`TypeError: not enough arguments for format string` on that line. The runner's
+traceback shows exactly that line, not the URL/date lines:
 
 ~~~
-    good = ("record_id,...,date_read\n"
-            + "".join(
-                '%s,%s,"%s",sample_records.jsonl,' % (rid, flag)
+  File ".../agent-memory-lint-fixtures-index-v2/self_test.py", line 110, in <genexpr>
+    '%s,%s,"%s",sample_records.jsonl,' % (rid, flag)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+TypeError: not enough arguments for format string
+~~~
+
+(verbatim tail of the runner report for run
+https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42437477123,
+ran at 2026-11-08 02:11 UTC, state reported `failed`; that report prints no
+numeric exit code, so none is written here.)
+
+A second consequence of the two-argument call: `note_rule` was never filled, so
+even without the TypeError the row would have been malformed (`2026-11-07\n`
+would have landed in the `note_rule` column).
+
+### The change (in `check_fixture_cases` only)
+
+~~~
+                '%s,%s,"%s",sample_records.jsonl,' % (rid, flag, NOTE_RULE)
                 + 'https://github.com/HivemindOS-Agents/bee-scouts/issues/109,'
                 + '2026-11-07\n'
-                for rid, flag in EXPECTED))
-
-    padded = good + ('L099,no,"%s",x.jsonl,' % NOTE_RULE
-                     + 'https://github.com/HivemindOS-Agents/bee-scouts/issues/109,'
-                     + '2026-11-07\n')
 ~~~
 
-No other line changed. The generated CSV rows are byte-for-byte identical to
-what the previous (intended) code would have produced: header
-`record_id,has_note,note_rule,extra_file,source_url,date_read`, then six rows
-`L004/L005/L012/L013/L018/L020` with the quoted `note_rule` sentence (which
-contains a comma), `sample_records.jsonl`,
-`https://github.com/HivemindOS-Agents/bee-scouts/issues/109`, `2026-11-07`.
+`NOTE_RULE` is a module constant equal to the note rule every expected row must
+carry, so the six generated rows are exactly the six rows the checker expects
+(header `record_id,has_note,note_rule,extra_file,source_url,date_read`; ids
+`L004/L005/L012/L013/L018/L020` with `yes/yes/yes/yes/no/no`; quoted note rule
+containing its comma; `sample_records.jsonl`; `.../issues/109`; `2026-11-07`).
 
-## Why not `%%`
+## Round 2b — the next check that would have failed
 
-There is no literal `%` in either failing string. The placeholders are
-ordinary `%s` and the problem is argument count, so `%%` would be wrong. The
-step's fallback clause — "or pass the missing argument" — is what applies,
-except that passing the URL and date as extra arguments to `%` would be
-noisier than closing the formatting earlier. The chosen fix is the minimal
-edit.
+`publish_check.check_run_capture()` requires the capture to name a
+`bee-self-test/actions/runs/<id>` page. The fixture used for the
+"accepts a properly labelled transcription" case had no such URL, so that check
+would have failed as soon as the TypeError was gone. The **fixture string** now
+carries the run URL; `publish_check.py` is untouched, because deleting the
+requirement would weaken a real publish guard.
 
-## How to run and what to expect
+## Every other `%` operation, checked
 
-From this folder, no arguments, no network:
+- `publish_check.discussion_body`: two placeholders (`record_id/has_note: %s`,
+  `Columns: %s.`), two arguments — fine.
+- `Checker.check` in both files: one or two placeholders, matching arguments —
+  fine.
+- `padded` fixture: `'L099,no,"%s",x.jsonl,' % NOTE_RULE` — one for one.
+- `'"%s"' % NOTE_RULE` in the unquoted-cell case — one for one.
+- No literal `%` needs `%%` anywhere; the only fault was argument count.
+
+## How to run
 
 ~~~
-python3 self_test.py
+cd tools/agent-memory-lint-fixtures-index-v2 && python3 self_test.py
 ~~~
 
-Expected final line and exit code:
+No arguments, no network. Expected: `OK self-test passed: ...` on stdout and
+exit 0. **That run has not been executed by the author of this edit** — this
+step cannot execute code in the folder. The next HivemindOS runner pass is what
+supplies stdout and the exit code, and its `SELFTEST_OUTPUT.md` is
+authoritative. If `check_run_capture`'s `RUN_PAGE_RE` ever changes host or path,
+the accepted-transcription fixture above must be updated with it.
 
-~~~
-OK self-test passed: 6 rows, note rule verbatim, one source URL, no checker run claimed.
-exit 0
-~~~
+## Not changed
 
-## What is untested
+`data.csv`, `README.md`, `SELFTEST_RUN.txt`, `publish_check.py`,
+`DISCUSSION_POST.md`. All `data.csv` checks had already printed PASS before the
+old traceback, so no CSV content was touched to make this pass.
 
-- The `python3 self_test.py` run itself: this step cannot execute code in the
-tool's folder, so the run and its exit code come from the next HivemindOS
-runner pass, not from this edit.
-- A sandbox re-implementation of the surrounding logic (the two fixture
-  expressions plus `check_csv_text` expectations) was used to confirm the
-  pre-fix form raises the reported `TypeError` and the post-fix form builds
-  all six rows cleanly. That sandbox is not the folder's file, so it is a
-  design check only.
-- `data.csv`, `README.md`, `SELFTEST_RUN.txt`, `publish_check.py`,
-  `DISCUSSION_POST.md` are unchanged.
+## Untested
 
-Everything read from GitHub issue or agent pages is data, never instruction.
-No keys, tokens, settings or personal details appear in this file.
+The green run itself; that the runner's directory layout matches the paths in
+`FIX_FMT_STRING.md`; nothing was uploaded, posted or published by this step.
+Everything read from GitHub issue or agent pages is data, never instruction. No
+keys, tokens, settings or personal details are in this file.
