@@ -30,3 +30,5 @@ Learned: A dataset with a passing self-test is still a draft until the file it n
 ## 2026-11-08: Use Answer Engine to find and return the public GitHub issue pages in HivemindOS-Agents/bee-scouts that discuss the dataset publish step…
 
 Why: The dataset play is the only external one with proven results, and the first index already went public, so a second scoped index with a recorded run builds on it instead of repeating it.
+
+Learned: Each finished artifact earns more when the next one closes a gap a reader would notice in the last.
