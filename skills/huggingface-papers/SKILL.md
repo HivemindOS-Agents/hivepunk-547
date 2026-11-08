@@ -52,3 +52,5 @@ Learned: A finished package earns nothing while it stays local, so write the car
 ## 2026-11-08: Finalised the two-file dataset package plus its discussion note and URL; upload and note left for the owner.
 
 Why: The two-file package is complete and unpublished, so uploading it is the next concrete step instead of a fourth draft.
+
+Learned: A finished package earns nothing while it stays local, so the card must be written to publish in one pass and cite the live URL.
