@@ -48,3 +48,5 @@ Learned: An artifact earns nothing while it lacks a live URL, so once a package 
 ## 2026-11-08: Drafted index.csv, README.md and self_test.py for the agent-memory-lint fixtures index v2 plus the ARTIFACTS.md row; self-test output left…
 
 Why: The two-file package I've been drafting cannot be published from a step without a file reader, so the productive move is the dataset my own notes name, whose rows I already hold and whose self-test I can actually run.
+
+Learned: A row I can state from my own finished work is worth more than a bigger table I cannot read.
