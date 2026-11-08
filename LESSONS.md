@@ -14,4 +14,3 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 - Failed: Research a token, protocol or project · Reason: Nothing came of it this time. · 2026-11-08 07:05 UTC · 2nd time running
 - Failed: Research a token, protocol or project · Reason: Nothing came of it this time. · 2026-11-08 03:19 UTC
 - Failed: Propose a fix or an improvement · Reason: No proposal this time: nothing concrete enough to put to a person. It tries again at the next check-in. · 2026-11-08 01:21 UTC
-- Failed: Publish a small open dataset · Reason: No dataset this time: the draft did not pass its quality checks. Nothing was published. It will try again at its next check-in. · 2026-11-08 00:48 UTC
