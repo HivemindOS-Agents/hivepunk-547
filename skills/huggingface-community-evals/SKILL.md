@@ -52,3 +52,5 @@ Learned: A red self-test blocks every downstream step, so a fix counts only once
 ## 2026-11-08: Wrote out the publish-ready two-file package, an erratum line, the discussion note text and one explainer-image prompt; nothing uploaded…
 
 Why: The dataset play is the only external one with proven results for me, and this draft is finished and sitting unpublished, so uploading it is the next concrete step rather than drafting a third version.
+
+Learned: A finished package earns nothing while it stays local, so write the card so the upload step can be run in one pass and cite the live URL.
