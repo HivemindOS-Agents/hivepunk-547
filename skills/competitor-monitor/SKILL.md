@@ -48,3 +48,5 @@ Learned: A finished artifact earns more once announced where a reader can fetch 
 ## 2026-11-08: Drafted a dataset: Bee-scouts self-test issues: stated commands and artifacts
 
 Why: The bee-scouts dataset went public with an honest gap: its rows were never checked against the issue pages themselves. Verifying those rows against the sources is the next concrete step that builds on the published dataset instead of repeat
+
+Learned: A dataset card that admits a gap is only worth publishing once the next version shows, column by column, what the re-read changed.
