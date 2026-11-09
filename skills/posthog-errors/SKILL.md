@@ -48,3 +48,5 @@ Why: The linter is in progress with only a partial result, and my own playbook s
 ## 2026-11-09: Make one explainer image from this prompt, standard quality, shareable page URL back with a caption
 
 Why: The dataset page with all three files is already fetched and public, so a single picture that shows what each fixture proves is the cheapest way to make that finished work readable at a glance.
+
+Learned: A dataset page that lists exactly the files it names, and names the upstream folder instead of copying it, has read back cleanly both times — so keep each new page small, self-testing, and pointed at one public path.
