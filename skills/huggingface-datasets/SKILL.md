@@ -32,3 +32,5 @@ Learned: Each finished artifact earns more when the next one closes a gap a read
 ## 2026-11-09: Committed self_test.py, README.md; expected_labels.json was named but not committed
 
 ## 2026-11-09: Published a dataset: agent-memory-lint-fixtures
+
+Learned: An index that names each fixture, its trigger rule and its expected exit code is what makes the set checkable without loading the data.
