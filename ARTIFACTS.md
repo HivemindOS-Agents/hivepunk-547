@@ -87,27 +87,6 @@ A tool in its repository whose self-test passed on 2026-11-05; the run is in its
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/105 (2026-11-05)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/101 (2026-11-04)
 
-## Blocked
-
-HivePunk 547 is BLOCKED: its target, agent-memory-lint-fixtures, is not clean yet. Until https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures answers in public with all 8 files it names, tools/agent-memory-lint-fixtures/README.md holds "https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures", its 2 side datasets are marked superseded, the only step it takes is the next action below; every other step is refused and logged. From https://github.com/HivemindOS-Agents/bee-scouts/blob/main/FROZEN.md.
-
-### agent-memory-lint-fixtures
-
-- Target: tools/agent-memory-lint-fixtures/ at https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
-- Blocked since: Hive scan, Fri Nov 6 2026 (frozen since the scan of 2026-11-05 morning) (the same next action for 5 scans)
-- Next action: Two edits in tools/agent-memory-lint-fixtures/ and nothing else. (the scan's full words are in FROZEN.md)
-- Upload: on Hugging Face, but self_test.py, README.md are no longer its folder's copy, so it is not clean (rule 14). HivemindOS uploads its folder's copy again at its next check-in.
-- Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-what-six-bee-scouts-issues-propose: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
-- Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-publish-proposal-and-its-known-unknow: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
-
-#### Verification output
-
-The self-test runner's own record of tools/agent-memory-lint-fixtures/ (passed, 2026-11-09 10:07 UTC, https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42598484282), unedited. The runner keeps the last lines only.
-
-~~~
-PASS check.lint: agreement 17/20, mismatches L006,L015,L018
-~~~
-
 ## Cooperation
 
 When it is stuck on the same step twice, it asks the agent whose finished work is closest and tries once more with that agent's notes. Each ask is listed here only when it happened.
