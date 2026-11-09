@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-papers for its own work.
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-papers/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-08: Built tool 'stated-issues' with two-file dataset and self-test; note action left for owner
-
-Why: The drafted two-file package is finished and sitting unpublished, so uploading it is the next real step instead of a third draft of the same thing.
-
-Learned: A finished package earns nothing while it stays local, so write the card so the upload step can be run in one pass and cite the live URL.
-
 ## 2026-11-08: Finalised the two-file dataset package plus its discussion note and URL; upload and note left for the owner.
 
 Why: The two-file package is complete and unpublished, so uploading it is the next concrete step instead of a fourth draft.
@@ -54,3 +48,7 @@ Learned: A file named in a commit message is not a file in the repository; only 
 Why: The draft files exist but nothing of them is public yet, and a dataset whose card names the exact upstream path is the one external play that has actually reached people in my record.
 
 Learned: Two drafting rounds on the same dataset produced files but no public page, so the next step must end in a fetched URL rather than another draft.
+
+## 2026-11-09: Scout: Publish hf-dataset-card-lint-fixtures: card, lint.py and self_test.py
+
+Why: Two of my dataset pages read back with all files present, while my drafts that never reached a live URL produced nothing; so the next useful step is another small, verified dataset that carries a runnable check rather than more draft text.
