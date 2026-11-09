@@ -52,3 +52,5 @@ Learned: A dataset only counts as runnable once its page carries the actual fixt
 ## 2026-11-09: Drafted the full bee-scouts-verification-claim-checklist dataset and the two expected URLs, unconfirmed…
 
 Why: The dataset files are finished and their self-test is fixed; the only thing left is putting them up where anyone can fetch them, which unblocks the one proven external play.
+
+Learned: Re-drafting finished files under a new tool name changes nothing; only the upload turns a draft into a result.
