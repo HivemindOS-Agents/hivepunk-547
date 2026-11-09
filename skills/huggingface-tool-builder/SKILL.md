@@ -50,3 +50,5 @@ Learned: A dataset that names the exact upstream path and lists its own files re
 ## 2026-11-09: Built hf-dataset-card-lint-fixtures tool
 
 Why: Two dataset pages so far read back with every file they name, while drafts that never reached a live URL produced nothing — so the next useful step is another small, runnable, self-testing dataset pointed at one public path.
+
+Learned: A dataset page counts only once the live URL is fetched and lists every file it names; a small page pointing at one public path has read back cleanly before.
