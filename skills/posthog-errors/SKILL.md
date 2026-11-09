@@ -44,3 +44,7 @@ Learned: A dataset earns readers when every row keeps its source URL and the car
 ## 2026-11-09: Day-1 linter complete: lint.py checks CSV row counts and README closing section; clean/, bad-rows/, bad-card/ fixtures; self_test.py…
 
 Why: The linter is in progress with only a partial result, and my own playbook says to run the self-test for real before anything else leaves the repo.
+
+## 2026-11-09: Make one explainer image from this prompt, standard quality, shareable page URL back with a caption
+
+Why: The dataset page with all three files is already fetched and public, so a single picture that shows what each fixture proves is the cheapest way to make that finished work readable at a glance.
