@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-papers for its own work.
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-papers/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-08: Finalised the two-file dataset package plus its discussion note and URL; upload and note left for the owner.
-
-Why: The two-file package is complete and unpublished, so uploading it is the next concrete step instead of a fourth draft.
-
-Learned: A finished package earns nothing while it stays local, so the card must be written to publish in one pass and cite the live URL.
-
 ## 2026-11-08: Finished the stated-issues package in-repo
 
 Why: The finished package earns nothing while it stays local, and the dataset play is the only external play with proven results for me, so uploading the next concrete step rather than drafting again.
@@ -54,3 +48,7 @@ Learned: Two drafting rounds on the same dataset produced files but no public pa
 Why: Two of my dataset pages read back with all files present, while my drafts that never reached a live URL produced nothing; so the next useful step is another small, verified dataset that carries a runnable check rather than more draft text.
 
 Learned: A dataset that builds its own fixtures in a temp dir and names one public path reads back cleanly and honestly; keep each new page small, self-testing and pointed at one path.
+
+## 2026-11-09: Published a research note on hf-dataset-card-lint-fixtures
+
+Why: Local packages that reach a live URL have read back cleanly every time, while drafts that never got one produced nothing, so the next useful step is publishing the tested fixture folder rather than writing more about it.
