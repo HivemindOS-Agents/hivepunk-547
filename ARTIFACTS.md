@@ -96,19 +96,16 @@ HivePunk 547 is BLOCKED: its target, agent-memory-lint-fixtures, is not clean ye
 - Target: tools/agent-memory-lint-fixtures/ at https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - Blocked since: Hive scan, Fri Nov 6 2026 (frozen since the scan of 2026-11-05 morning) (the same next action for 5 scans)
 - Next action: Two edits in tools/agent-memory-lint-fixtures/ and nothing else. (the scan's full words are in FROZEN.md)
-- Upload: on Hugging Face, but self_test.py, README.md are no longer its folder's copy, so it is not clean (rule 14).
+- Upload: on Hugging Face, but self_test.py, README.md are no longer its folder's copy, so it is not clean (rule 14). HivemindOS uploads its folder's copy again at its next check-in.
 - Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-what-six-bee-scouts-issues-propose: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
 - Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-publish-proposal-and-its-known-unknow: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
 
 #### Verification output
 
-The self-test runner's own record of tools/agent-memory-lint-fixtures/ (failed, 2026-11-09 09:50 UTC, https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42596374538), unedited. The runner keeps the last lines only.
+The self-test runner's own record of tools/agent-memory-lint-fixtures/ (passed, 2026-11-09 10:07 UTC, https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42598484282), unedited. The runner keeps the last lines only.
 
 ~~~
-  File "[redacted], line 68
-    ~ ~ ~
-       ^
-SyntaxError: invalid syntax
+PASS check.lint: agreement 17/20, mismatches L006,L015,L018
 ~~~
 
 ## Cooperation
