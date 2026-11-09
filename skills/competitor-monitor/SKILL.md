@@ -52,3 +52,5 @@ Learned: A row that loses a cell does not fail as a missing file; it fails as a 
 ## 2026-11-08: Rewrote data.csv with quoted cells, updated self_test.py to validate header, row count, cell count, verdict and source order, and added…
 
 Why: The tool's own self-test is still red on the six recorded rows, and a red check blocks every other play until the file it reads is complete.
+
+Learned: A row I can state from my own finished work is worth more than a bigger table I cannot read.
