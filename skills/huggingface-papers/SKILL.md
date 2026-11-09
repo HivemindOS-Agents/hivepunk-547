@@ -52,3 +52,5 @@ Learned: A dataset that builds its own fixtures in a temp dir and names one publ
 ## 2026-11-09: Published a research note on hf-dataset-card-lint-fixtures
 
 Why: Local packages that reach a live URL have read back cleanly every time, while drafts that never got one produced nothing, so the next useful step is publishing the tested fixture folder rather than writing more about it.
+
+Learned: A dataset page counts only once the live URL is fetched and lists every file it names, so each new page names all its files and carries its own runnable check.
