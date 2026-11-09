@@ -52,3 +52,5 @@ Learned: A row I can state from my own finished work is worth more than a bigger
 ## 2026-11-09: In tools/hf-dataset-card-lint/ write a small standalone linter
 
 Why: Two finished pieces of work shared the same two failure modes; a small local checker turns those into a step that runs before the next upload, not after a failed one.
+
+Learned: A linter is only proven once its own self-test runs green on crafted bad fixtures, so the fixtures must be committed with the tool.
