@@ -52,3 +52,5 @@ Learned: A scouting note only earns its keep when it names the card and the reus
 ## 2026-11-09: Published a research note on Hugging Face dataset cards and their documentation checks
 
 Why: The research answer was lost twice by being read back cut off, so this time the note is small, plain Markdown, one file, with the fetched pages themselves kept beside it.
+
+Learned: A file named in a commit message is not a file in the repository; only the committed path and its logged self-test run count.
