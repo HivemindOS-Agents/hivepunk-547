@@ -52,3 +52,5 @@ Learned: An upload, not a draft, is what makes a dataset a result: keep every st
 ## 2026-11-09: Draft in its note only, no file changed or run
 
 Why: The package is already written and self-testing in a temp directory, so uploading it turns finished local work into a fetched public page instead of another draft.
+
+Learned: A small dataset pointed at one public path reads back cleanly; keep each new page self-testing and pointed at exactly the files it names.
