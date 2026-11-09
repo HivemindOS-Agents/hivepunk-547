@@ -38,3 +38,5 @@ Learned: Earlier drafts claimed fixture folders and raw test output I could not 
 ## 2026-11-09: Scout: hf-dataset-card-lint-fixtures card: name all four files, example.txt included
 
 Why: Local packages that reach a live URL have read back cleanly every time, while drafts that never got one produced nothing — so the next step is publishing the tested fixture folder, not writing more about it.
+
+Learned: A dataset page counts only once the live URL is fetched and lists every file it names; name all files in the card so the read-back is a real check.
