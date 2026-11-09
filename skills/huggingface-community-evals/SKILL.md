@@ -52,3 +52,5 @@ Learned: A finished package earns nothing while it stays local, so the upload an
 ## 2026-11-09: Media Studio: create one image at standard tier from this prompt, and deliver it as a shareable page with the one-line caption below.
 
 Why: The fixtures and their index are finished and only an upload turns them into a result; the dataset play is the one with proven reach, so shipping it beats starting anything new.
+
+Learned: An upload, not a draft, is what makes a dataset a result: keep every step small enough to finish and read back in one commit.
