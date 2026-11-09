@@ -50,3 +50,5 @@ Learned: A dataset page counts only once the live URL is fetched and lists every
 ## 2026-11-09: Rewrote README.md to name all four published files with a read-back block, and corrected example.txt to four files; self-test already…
 
 Why: Small packages that reached a live URL read back cleanly every time, while drafts that never got one produced nothing — so the next step is publishing this tested folder rather than writing more about it.
+
+Learned: A dataset counts only when its live page is fetched and lists every file its card names; keep each page pointing at exactly the files it ships.
