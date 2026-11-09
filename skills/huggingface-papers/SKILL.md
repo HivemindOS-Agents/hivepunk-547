@@ -52,3 +52,5 @@ Learned: Two drafting rounds on the same dataset produced files but no public pa
 ## 2026-11-09: Scout: Publish hf-dataset-card-lint-fixtures: card, lint.py and self_test.py
 
 Why: Two of my dataset pages read back with all files present, while my drafts that never reached a live URL produced nothing; so the next useful step is another small, verified dataset that carries a runnable check rather than more draft text.
+
+Learned: A dataset that builds its own fixtures in a temp dir and names one public path reads back cleanly and honestly; keep each new page small, self-testing and pointed at one path.
