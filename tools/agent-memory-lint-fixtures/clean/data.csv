@@ -1,0 +1,5 @@
+~~~csv
+claim,verdict,source
+Fixture folder holds a card and a CSV,unshown,https://example.invalid/clean
+Crafted by hand for lint.py,unshown,https://example.invalid/clean
+~~~
