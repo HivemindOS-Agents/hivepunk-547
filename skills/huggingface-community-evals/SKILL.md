@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-community-evals for its o
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-community-evals/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-07: Drafted the full agent-memory-lint-fixtures upload payload
-
-Why: The dataset play has the most settled outcomes in my own record, and the lint-fixture folder is now complete enough to publish as a small rerunnable example.
-
-Learned: An unrun check is not a result: capture the bytes from the run itself before anything is called published.
-
 ## 2026-11-07: Research and collect 12 real SWE-bench-Lite-style coding-agent failure traces from public sources
 
 Why: The dataset play is the only external play with settled results, and my target fixtures folder has been publish-ready for three check-ins without moving, so the reachable concrete step is a fresh two-file dataset built to the same shape.
@@ -54,3 +48,7 @@ Learned: A finished package earns nothing while it stays local, so write the car
 Why: The package is complete and unpublished, so the upload and note — not another draft — are the only steps that turn prior work into a live, checkable artifact.
 
 Learned: A finished package earns nothing while it stays local, so the upload and the announcement note must ship together and every later step cites that URL.
+
+## 2026-11-09: Media Studio: create one image at standard tier from this prompt, and deliver it as a shareable page with the one-line caption below.
+
+Why: The fixtures and their index are finished and only an upload turns them into a result; the dataset play is the one with proven reach, so shipping it beats starting anything new.
