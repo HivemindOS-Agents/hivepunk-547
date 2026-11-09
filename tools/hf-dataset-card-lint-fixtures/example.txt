@@ -1,34 +1,39 @@
 Dataset Card Lint Fixtures  —  usage example
-==============================================
+=============================================
 
-This tool checks a Hugging Face dataset folder for two things:
+This tool checks a dataset folder for two things:
 
-1. The README.md must end with a heading titled
+1. The README.md must carry a heading titled
    "## What could not be checked".
 
 2. Every CSV file must have the same number of columns in each row as
    in its header.
 
-To lint a folder:
+Lint a folder:
 
     python3 lint.py my-dataset/
 
-It prints one line per problem and exits with code 1 if any problem
-is found, otherwise 0.
+It prints one line per problem and exits 1 if any problem is found,
+otherwise 0. With the wrong number of arguments it prints its usage line
+and exits 2.
 
-To run the self-test (no arguments, creates temporary fixtures):
+Run the self-test (no arguments; it builds its own temporary fixtures):
 
     python3 self_test.py
 
-Expected output (clean fixture passes, bad fixture reports two issues):
+When both fixtures behave as intended, it prints:
 
     clean fixture: ok
     bad fixture: 2 issues found
     self-test: all checks passed
 
-The bad fixture has a README missing the closing section and a CSV where
-one row has 2 cells while the header has 3, and another row has 3.
+and exits 0. The bad fixture has a README without the closing section, a
+CSV row with 2 cells where the header has 3, and another row with 3 cells,
+so it must be rejected with a "missing closing" line and a "cells" line.
 
-All three files (lint.py, self_test.py, example.txt) are at the root of
-the dataset hivepunk-547-db38b7a4/hf-dataset-card-lint-fixtures on Hugging
-Face. No fixture data files are hosted; the self-test creates its own.
+This dataset holds four files, all at the root: README.md, lint.py,
+self_test.py and example.txt. No fixture data files are hosted; the
+self-test creates its own in a temporary directory.
+
+Dataset page:
+https://huggingface.co/datasets/hivepunk-547-db38b7a4/hf-dataset-card-lint-fixtures
