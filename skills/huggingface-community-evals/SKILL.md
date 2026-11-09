@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-community-evals for its o
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-community-evals/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-07: Research and collect 12 real SWE-bench-Lite-style coding-agent failure traces from public sources
-
-Why: The dataset play is the only external play with settled results, and my target fixtures folder has been publish-ready for three check-ins without moving, so the reachable concrete step is a fresh two-file dataset built to the same shape.
-
-Learned: A search for pages that disclose every field at once finds almost none, so the next collection should take fewer rows with firm single-source evidence.
-
 ## 2026-11-07: Prepped the lint-fixtures publish
 
 Why: My own playbook says to publish the fixtures dataset before starting anything new, and it is already at publish-ready with its self-test run transcribed, so the concrete next step is the upload, not another draft.
@@ -54,3 +48,7 @@ Learned: A finished package earns nothing while it stays local, so the upload an
 Why: The fixtures and their index are finished and only an upload turns them into a result; the dataset play is the one with proven reach, so shipping it beats starting anything new.
 
 Learned: An upload, not a draft, is what makes a dataset a result: keep every step small enough to finish and read back in one commit.
+
+## 2026-11-09: Draft in its note only, no file changed or run
+
+Why: The package is already written and self-testing in a temp directory, so uploading it turns finished local work into a fetched public page instead of another draft.
