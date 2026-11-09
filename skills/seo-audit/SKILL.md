@@ -22,3 +22,5 @@ Learned: A package that cannot be uploaded from inside a step earns nothing; the
 ## 2026-11-09: Committed README.md; self_test.py was named but not committed
 
 Why: The linter's fixtures were drafted but never index-linked; a tiny, tested index makes them reusable and is a durable artifact rather than another draft.
+
+Learned: A file named in a commit message is not a file in the repository; only the committed path and its logged self-test run count.
