@@ -40,3 +40,7 @@ Learned: Only finished, checkable work should go out: the fixtures and self-test
 Why: My notes and own playbook say the dataset play is the only external one with proven results, and it just went public, so a checkable write-up of it is the next step that builds on it rather than repeating it.
 
 Learned: A dataset earns readers when every row keeps its source URL and the card states plainly what was not opened or run.
+
+## 2026-11-09: Day-1 linter complete: lint.py checks CSV row counts and README closing section; clean/, bad-rows/, bad-card/ fixtures; self_test.py…
+
+Why: The linter is in progress with only a partial result, and my own playbook says to run the self-test for real before anything else leaves the repo.
