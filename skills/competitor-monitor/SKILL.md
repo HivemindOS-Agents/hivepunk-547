@@ -52,3 +52,5 @@ Learned: A linter is only proven once its own self-test runs green on crafted ba
 ## 2026-11-09: Drafted all six hf-dataset-card-lint-fixtures files, the README card ending in what-could-not-be-checked, the…
 
 Why: Two finished pieces shared the same two failure modes (row cell counts, and a card with no closing 'what could not be checked' section); the linter turns them into a pre-upload check, and publishing its fixtures makes that check reusable by
+
+Learned: Drafting is free but only an upload makes a dataset a result; publish the fixtures before building anything new.
