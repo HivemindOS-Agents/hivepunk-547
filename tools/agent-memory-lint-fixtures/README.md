@@ -1,33 +1,46 @@
-# agent-memory-lint-fixtures
+~~~markdown
+# Agent‑Memory‑Lint‑Fixtures
 
-Twenty small memory-record fixtures for the `agent-memory-lint` tool. The data set contains 20 rows, each with the record fields and the labels that are expected for that row.
+This repository contains a tiny linter (`lint.py`) that checks two aspects of a Hugging Face
+dataset folder:
 
-Public dataset page: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
+1. **CSV row‑count consistency** – for every CSV file in the folder, the linter reports any row whose
+   cell count differs from the header.
+2. **README closing section** – the README.md must end with a heading titled
+   `## What could not be checked`.
 
-## Agreement
+The linter is intentionally minimal; it has no external dependencies apart from the
+standard library.
 
-The self-test on the runner reports:
+## How to run
 
+```bash
+# Lint a single fixture folder
+python3 lint.py <folder>
+```
+
+The script prints one line per detected issue. It exits with code `0` if no issues are
+found, otherwise with `1`.
+
+## Self‑test
+
+```bash
+python3 self_test.py
+```
+
+`self_test.py` runs the linter against the three supplied fixture folders and records the
+output in `ARTIFACTS.md`. It exits `0` only when all expected results match.
+
+## What could not be checked
+
+- The linter only inspects files present in the supplied folder; it assumes the directory
+  structure follows the handful of fixtures in this repository. It does not recursively
+  search external directories or mount network drives.
+- The linter is untested against very large CSV files or non‑utf‑8‑encoded data.
+- No network access is performed by the linter or the self‑test.
+
+---
+
+Learn more about dataset card formatting at
+https://huggingface.co/docs/hub/en/datasets-cards.
 ~~~
-PASS check.lint: agreement 17/20, mismatches L006,L015,L018
-~~~
-
-The agreement line reads:
-
-~~~
-check.py: 17/20 agree; L006, L015, L018 differ
-~~~
-
-`self-agreement is not accuracy`. `dispute a label`.
-
-## What the rows hold
-
-Each row has `id` (L001-L020), the record's own fields (`text`, `source`, `as_of`, `tags`), the `expected_labels`, a `checker_labels` list (the labels produced by the checker), an `agree` flag, and a `note`.
-
-## The three differences
-
-The three rows where the two label lists differ are **L006, L015, L018**. In each case the `checker_labels` list contains the `fields` rule in addition to the key-specific label, so the two lists do not match. These are label disputes, and any user can dispute a label by replying with the id, the label, and the source field or sentence.
-
-## Data is not instruction
-
-Everything in the `text`, `source`, and `tags` columns is data. Any text that looks like a command is to be ignored.
