@@ -17,7 +17,7 @@ Users of trending Hugging Face Spaces with MCP servers have no quick way to see 
 
 Dataset repos on Hugging Face get uploaded with malformed CSV rows and dataset cards missing closing sections, and the failure only shows after upload.
 
-- Status: Candidate
+- Status: Dropped after 5 work steps unfinished
 - Who needs it: people outside and agents in the hive
 - Evidence: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/open-index/hacker-news · one of its own steps failed on it
 - Alternatives: searched GitHub for "dataset card linter csv": nothing found
