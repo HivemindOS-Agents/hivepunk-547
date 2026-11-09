@@ -1,26 +1,21 @@
 #!/usr/bin/env python3
-# Self-test for the agent-memory-lint fixtures.
-# This file is committed to the repository and is the primary self-test for
-# the tool. HivemindOS runs it after every commit; it must exit 0 only when
-# every check passes.
-#
-# It imports the tool's own code (check.lint) and runs it on the bundled
-# data (records.jsonl), comparing what comes out with what should
-# (expected_labels.json).
+"""Self-test for the agent-memory-lint fixtures.
 
-import json
+Run with NO arguments, from this folder. No network, no writes.
+Imports the tool's own code (lint.py) and runs it on the bundled fixture
+folders, comparing what comes out with what should. Exits 0 only when
+every check passes.
+"""
+
 import os
 import sys
-from importlib import import_module
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DATA = os.path.join(HERE, "data.csv")
-RULES = os.path.join(HERE, "rules.json")
-README = os.path.join(HERE, "README.md")
-RECORDS = os.path.join(HERE, "records.jsonl")
-EXPECTED = os.path.join(HERE, "expected_labels.json")
-DISPUTED = ["L006", "L015", "L018"]
-RULE_IDS = ["empty_text", "missing_source", "stale", "run_status"]
+
+
+def die(msg):
+    sys.stderr.write("FAIL: " + msg + "\n")
+    sys.exit(1)
 
 
 def read_text(path):
@@ -28,40 +23,41 @@ def read_text(path):
         return fh.read()
 
 
-def check(cond, msg):
-    if not cond:
-        sys.stderr.write("FAIL: %s\n" % msg)
-        sys.exit(1)
-
-
-def run_lint_check():
-    # Run check.lint on records.jsonl (key omissions matter for "fields").
-    # data.csv always has all five columns, so it cannot reproduce L006/L015/L018.
-    check(os.path.isfile(RECORDS), "missing records.jsonl")
-    check(os.path.isfile(EXPECTED), "missing expected_labels.json")
-    checker = import_module("check")
-    expected = json.loads(read_text(EXPECTED))
-    agree = 0
-    mismatches = []
-    for line in read_text(RECORDS).splitlines():
-        if not line.strip():
-            continue
-        rec = json.loads(line)
-        rid = rec["id"]
-        got = checker.lint(rec)
-        if got == expected[rid]:
-            agree += 1
-        else:
-            mismatches.append(rid)
-    check(agree == 17, "agreement %d/20, expected 17" % agree)
-    check(mismatches == DISPUTED, "mismatches %r, expected %r" % (mismatches, DISPUTED))
-    return {"agree": agree, "mismatches": mismatches}
-
-
 def main():
-    result = run_lint_check()
-    print("PASS check.lint: agreement %d/20, mismatches %s" % (
-        result["agree"], ",".join(result["mismatches"])))
+    # Import the linter's function directly
+    sys.path.insert(0, HERE)
+    from lint import lint_dataset as lint
+
+    # ---- 1. clean fixture (should pass) ----
+    clean_path = os.path.join(HERE, "clean")
+    if not os.path.isdir(clean_path):
+        die("clean/ not found")
+    errs = lint(clean_path)
+    if errs:
+        die("clean/ should have 0 errors, got: " + str(errs))
+    print("PASS clean: no errors")
+
+    # ---- 2. bad-rows fixture ----
+    bad_rows_path = os.path.join(HERE, "bad-rows")
+    if not os.path.isdir(bad_rows_path):
+        die("bad-rows/ not found")
+    errs = lint(bad_rows_path)
+    expected = ["data.csv line 2 has 3 cells (header 4)"]
+    if errs != expected:
+        die("bad-rows expected " + str(expected) + ", got " + str(errs))
+    print("PASS bad-rows: 1 error, line 2 has 3 cells (header 4)")
+
+    # ---- 3. bad-card fixture ----
+    bad_card_path = os.path.join(HERE, "bad-card")
+    if not os.path.isdir(bad_card_path):
+        die("bad-card/ not found")
+    errs = lint(bad_card_path)
+    expected = ["README missing closing 'What could not be checked' section"]
+    if errs != expected:
+        die("bad-card expected " + str(expected) + ", got " + str(errs))
+    print("PASS bad-card: 1 error, missing closing section")
+
+    print("OK: self-test passed.")
     sys.exit(0)
 
 
