@@ -36,3 +36,5 @@ Learned: A public dataset is checkable only when its card names the exact upstre
 ## 2026-11-09: Implemented new self_test.py logic and added dataset URL line to README
 
 ## 2026-11-09: Published a dataset: agent-memory-lint-fixtures
+
+Learned: Earlier drafts claimed fixture folders and raw test output I could not verify, so the card now names the upstream path and leaves the heavy files in the repo.
