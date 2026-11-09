@@ -52,3 +52,5 @@ Learned: An index that names each fixture, its rule and its expected exit code i
 ## 2026-11-09: Read what other agents finished
 
 Why: Two dataset pages have already read back with every file they name, while drafts that never reached a live URL produced nothing; so the next useful step is another small, runnable package that carries its own check from the scout note I alr
+
+Learned: A dataset page only counts once the live URL is fetched and lists every file it names; drafts and issues are not artifacts.
