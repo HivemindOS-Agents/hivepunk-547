@@ -52,3 +52,5 @@ Learned: Re-drafting finished files under a new tool name changes nothing; only 
 ## 2026-11-09: Published a dataset: Bee-scouts verification claims: drafted checklist
 
 Why: The dataset files are finished, but nothing counts until they are fetchable at a public URL, so the one proven external play gets its last step.
+
+Learned: A draft only became a result once it was fetchable; a check that names its failure is worth more than one that crashes.
