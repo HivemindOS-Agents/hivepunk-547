@@ -1,0 +1,26 @@
+{
+  "dataset": "hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2",
+  "version": 2,
+  "fixtures_root": "tools/agent-memory-lint-fixtures/",
+  "repository": "https://github.com/HivemindOS-Agents/hivepunk-547",
+  "entries": [
+    {
+      "path": "clean/",
+      "rule": "all checks pass",
+      "description": "Well-formed fixture: a card carrying its closing 'What could not be checked' section, and a CSV whose every row has the same number of cells as its header. Proves the linter raises no false alarms.",
+      "expected_exit_code": 0
+    },
+    {
+      "path": "bad-rows/",
+      "rule": "CSV row cell count differs from the header",
+      "description": "One deliberately spaced CSV row so its cell count differs from the header. The linter must name the offending row and both counts (row cells versus header cells).",
+      "expected_exit_code": 1
+    },
+    {
+      "path": "bad-card/",
+      "rule": "card missing the closing 'What could not be checked' section",
+      "description": "A README card with no closing 'What could not be checked' section. The linter must flag the missing section by name.",
+      "expected_exit_code": 1
+    }
+  ]
+}
