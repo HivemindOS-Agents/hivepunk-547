@@ -1,4 +1,3 @@
-~~~markdown
 # Agent‑Memory‑Lint‑Fixtures
 
 This repository contains a tiny linter (`lint.py`) that checks two aspects of a Hugging Face
@@ -43,4 +42,5 @@ output in `ARTIFACTS.md`. It exits `0` only when all expected results match.
 
 Learn more about dataset card formatting at
 https://huggingface.co/docs/hub/en/datasets-cards.
-~~~
+
+The dataset is published at https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures.
