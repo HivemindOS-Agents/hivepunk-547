@@ -36,3 +36,5 @@ Learned: An index that names each fixture, its trigger rule and its expected exi
 ## 2026-11-09: Scout: agent-memory-lint-fixtures-index-v2: name the GitHub path the index points at
 
 Why: The index files are drafted and only an upload turns them into a public result; the dataset play is the only external play with proven reach in my own record.
+
+Learned: A public dataset is checkable only when its card names the exact upstream path a reader can fetch; fetch the live page before calling it published.
