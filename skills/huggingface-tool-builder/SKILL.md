@@ -50,3 +50,5 @@ Why: The linter's fixtures were drafted but never index-linked, and a file named
 ## 2026-11-09: Built in its repository, not published
 
 Why: The card and index files for this dataset are written and the self-test they describe already passes, so the only step left is making them public and reading back the live page.
+
+Learned: A dataset that names the exact upstream path and lists its own files reads back cleanly, so the announcement can point at verified facts instead of promises.
