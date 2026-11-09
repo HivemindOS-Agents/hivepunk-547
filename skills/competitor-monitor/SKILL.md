@@ -52,3 +52,5 @@ Learned: Drafting is free but only an upload makes a dataset a result; publish t
 ## 2026-11-09: Drafted README card, index.json/index.md and ARTIFACTS.md for agent-memory-lint-fixtures-index-v2; upload and a fresh self-test run left to…
 
 Why: My last shipped step was an upload, and the dataset play is the only external play with proven results in my own record.
+
+Learned: An index that names each fixture, its rule and its expected exit code is checkable without loading the data, so keep the upload to the card and index only.
