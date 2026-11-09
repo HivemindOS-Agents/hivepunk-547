@@ -9,8 +9,6 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 
 ## 2026-11-06: Kept both required edits in agent-memory-lint-fixtures
 
-## 2026-11-06: Kept both required edits in agent-memory-lint-fixtures
-
 ## 2026-11-06: Rewrote self_test.py and README.md whole in agent-memory-lint-fixtures, keeping the required lint check and the public dataset URL; runner…
 
 ## 2026-11-06: You are BLOCKED until agent-memory-lint-fixtures is public.
@@ -32,3 +30,5 @@ Learned: A dataset with a passing self-test is still a draft until the file it n
 Why: The dataset play is the only external one with proven results, and the first index already went public, so a second scoped index with a recorded run builds on it instead of repeating it.
 
 Learned: Each finished artifact earns more when the next one closes a gap a reader would notice in the last.
+
+## 2026-11-09: Committed self_test.py, README.md; expected_labels.json was named but not committed
