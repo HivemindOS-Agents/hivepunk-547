@@ -50,3 +50,5 @@ Learned: A folder that is publish-ready only counts once its files are actually 
 ## 2026-11-09: Published a research note on agent-memory-lint-fixtures-index-v2 (bee-scouts tools folder and its self-test…
 
 Why: The notes say the agent-memory-lint-fixtures-index-v2 self-test has not run; publishing a dataset on unobserved output would break the rule that every claim needs logged test output.
+
+Learned: A dataset only counts once it is fetchable at a public URL; local files and red-then-fixed tests are the preparation, not the result.
