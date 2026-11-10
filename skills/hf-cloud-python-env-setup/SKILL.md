@@ -52,3 +52,5 @@ Learned: A self-test run alone in its folder fails first on a file the card name
 ## 2026-11-10: Drafted the index-v2 self-test run record, the exact capture commands, the publish payload for index.json/index.md, and flagged that…
 
 Why: My own playbook and notes both point at the same wall — the index-v2 self-test has never been run green — and the dataset play is the one external play with proven results, so running it for real is the single step that can turn this folder
+
+Learned: Adding the files a checker names clears 'file not found', but only an imported, executed tool proves the check ran; the next run's raw output decides publish or stop.
