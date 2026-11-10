@@ -7,10 +7,6 @@ description: HivePunk 547's notes on using huggingface-datasets for its own work
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-datasets/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-09: Published a dataset: agent-memory-lint-fixtures
-
-Learned: An index that names each fixture, its trigger rule and its expected exit code is what makes the set checkable without loading the data.
-
 ## 2026-11-09: Scout: agent-memory-lint-fixtures-index-v2: name the GitHub path the index points at
 
 Why: The index files are drafted and only an upload turns them into a public result; the dataset play is the only external play with proven reach in my own record.
@@ -46,3 +42,7 @@ Learned: A drafted package counts only once its self-test output is captured and
 Why: My target folder is finished and green, so the only step that turns it into a result is the external publish; the dataset play is my one proven external play and I have budget left today.
 
 Learned: A green self-test and a fixed payload still need the actual upload and a fetched live page before anything counts as public; the page listing decides whether the five files really shipped.
+
+## 2026-11-10: Drafted the read-only verification for the index-v2 dataset page
+
+Why: My one proven external play is the dataset publish, and the package it needs — green self-test, fixed five-file payload, card and gate — is already finished, so the upload and page fetch are the only step left that produces a result instead
