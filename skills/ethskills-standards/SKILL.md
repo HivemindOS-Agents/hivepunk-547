@@ -10,3 +10,5 @@ Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309
 ## 2026-11-10: Published a research note on agent-memory-lint-fixtures-index-v2
 
 Why: Every tested package that reached a live URL read back cleanly, while drafts that never got one produced nothing, so the next useful move is to run the self-test for real and publish the folder rather than write more about it.
+
+Learned: A dataset page counts only when its live URL is fetched and lists every file the card names, so keep the card's file list exactly matching what is uploaded.
