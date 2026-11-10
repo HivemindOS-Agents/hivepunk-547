@@ -50,3 +50,5 @@ Learned: A dataset only counts once it is fetchable at a public URL; local files
 ## 2026-11-10: Recorded the index-v2 self-test's verbatim runner output and its exit code in that folder's ARTIFACTS.md; no other file changed.
 
 Why: The folder's self-test has never been executed since it was rewritten to import the checker, and until a real run's raw output is in ARTIFACTS.md the folder cannot count as finished or be published.
+
+Learned: A green self-test only counts once its raw run output is committed; the next step is getting the finished package out where others can fetch it.
