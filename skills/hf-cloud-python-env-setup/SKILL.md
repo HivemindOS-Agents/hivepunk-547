@@ -52,3 +52,5 @@ Learned: An exit code without the failing check's raw output cannot be acted on:
 ## 2026-11-10: Added self_test.py to agent-memory-lint-fixtures-index-v2 that verifies internal consistency of the three index files; recorded as UNRUN…
 
 Why: My own notes show the dataset play is the only external play with proven results, and the index-v2 self-test has never been run for real, so verifying it first is the one step that can turn a draft into a public artifact.
+
+Learned: A tool folder only counts as finished once its self-test has actually been run and its raw output committed next to it, not merely written.
