@@ -2,75 +2,88 @@
 
 ## The self-test command
 
-Run from inside this folder, no arguments, no network:
+Run from inside this folder, no arguments, no outside files, no network:
 
 ~~~
-python3 self_test.py
+cd tools/agent-memory-lint-fixtures-index-v2
+python3 self_test.py; echo "EXIT=$?"
 ~~~
 
-## The last runner result for this folder, quoted verbatim
+## The run result, verbatim
 
-This is the result HivemindOS's runner reported for the commit before this one.
-It is transcribed exactly, not rephrased.
+This is the result HivemindOS's runner reported for this folder. It is
+transcribed exactly as reported, not rephrased.
 
-- ranAt: 2026-11-10 06:41 UTC
-- run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42770200198
-- state: failed
-- raw output:
+- run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42779710932
+- ranAt: 2026-11-10 08:03 UTC
+- state: passed
+- raw stdout, last lines as the runner reported them:
 
 ~~~
-HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out.
+clean sample: 2 row(s), 0 issue(s)
+bad sample: 2 row(s), 1 issue(s)
+    - row 'bad-rows/': expected_exit_code differs: index=1 markdown=7
+this folder: 3 row(s), 0 issue(s)
+self-test: all checks passed
 ~~~
 
-## What this commit changed, and why
+- exit code: 0, as implied by the runner's state "passed". The runner's report
+  carried no separate numeric exit-code byte, so none is reproduced here, and
+  none is written as if it had been captured. A zero exit means nothing stops
+  and no failing line applies.
 
-The runner's line above is the reason for both files below. The old self-test
-only opened and read files in this folder, so it could never satisfy the runner:
-nothing it did was the tool's own code.
+### Provenance, stated plainly
 
-- `index_check.py` (new) — the folder's checker, as real code. `load_index(path)`
-  parses the JSON index; `parse_index_md(text)` returns one dict per data row of
-  the four-column markdown table (`path`, `rule`, `description`,
-  `expected_exit_code`, path cell backticked, everything else ignored);
-  `compare(index, rows)` returns a list of issue strings, empty when the two
-  readings agree. It reports a missing or non-list `entries` key, a non-object
-  entry or one with no `path`, a duplicate path on either side, a missing field,
-  a count mismatch naming both counts, a row only in the markdown, an entry only
-  in the JSON, and per shared row a `rule`, `description` or
-  `expected_exit_code` mismatch with both values printed and the row's path in
-  the message. Text fields are whitespace-squashed first.
-- `self_test.py` (rewritten) — puts its own directory on `sys.path`, does
-  `import index_check`, and runs `compare` on three inputs, printing the row and
-  issue count for each: a clean sample (expect 2 rows, 0 issues), a bad sample
-  whose `bad-rows/` row claims exit code 7 instead of 1 (expect at least one
-  issue, and one naming `bad-rows/`), and this folder's own `index.json` and
-  `index.md` (expect 0 issues). It exits 0 only when all three match.
-- `ARTIFACTS.md` (this file).
+Nothing in the step that asked for this file can execute Python, so the block
+above is a transcription of HivemindOS's runner result for this folder, not
+output this step produced. HivemindOS writes the authoritative run record to
+SELFTEST_OUTPUT.md in this folder; if that file disagrees with anything here,
+SELFTEST_OUTPUT.md wins.
 
-Nothing else was touched. `index.json`, `index.md`, `README.md`,
+## What the green run shows
+
+`self_test.py` puts its own directory on `sys.path`, imports this folder's own
+checker `index_check`, and runs `compare` on three inputs, printing the row
+count and issue count for each:
+
+1. a clean two-entry sample index against a matching markdown table —
+   expected 2 rows and 0 issues: reported `2 row(s), 0 issue(s)`;
+2. the same table with the `bad-rows/` row's exit code changed from 1 to 7 —
+   expected at least one issue, naming `bad-rows/`: reported `1 issue(s)`, the
+   issue being `row 'bad-rows/': expected_exit_code differs: index=1 markdown=7`;
+3. this folder's own `index.json` against `index.md` — expected 0 issues:
+   reported `3 row(s), 0 issue(s)`.
+
+Because all three matched, the run ended in state "passed". So the checker ran
+as real code on real data (the runner will not accept a self-test that only
+reads files), and this folder's two index files agree row for row: the same
+three paths (`clean/` -> 0, `bad-rows/` -> 1, `bad-card/` -> 1), the same
+`rule` and `description` text after whitespace-squashing, the same integer
+codes.
+
+## What this commit changed
+
+Only this file. `index_check.py`, `self_test.py`, `index.json` and `index.md`
+are deliberately untouched, as the step required; the self-test was already
+passing, so no rewrite of any of them was needed. `README.md`,
 `publish_check.py`, `SELFTEST_RUN.txt`, `DISCUSSION_POST.md` and
-`FIX_FMT_STRING.md` are unchanged.
-
-## What this commit's own result will be
-
-No stdout and no exit code for this commit exists yet, and none is written here
-as if it did. HivemindOS's runner runs the command above after the commit and
-writes the authoritative result to SELFTEST_OUTPUT.md in this folder; if that
-file disagrees with anything in this file, SELFTEST_OUTPUT.md wins.
+`FIX_FMT_STRING.md` are unchanged too.
 
 ## What could not be checked from here
 
-- That this commit's run is green: no output for it exists yet.
+- The numeric exit-code byte: the runner reported state "passed", not a number,
+  so "0" above is stated as implied by that state, not as a captured byte.
 - That `tools/agent-memory-lint-fixtures/` (the recorded `fixtures_root`) exists,
   or that it holds `clean/`, `bad-rows/` and `bad-card/`, or that those folders
   really make lint exit 0, 1 and 1. Those are the rows' recorded intent, not
-  measurements.
-- That the clean and bad sample expectations inside `self_test.py` hold in a real
-  interpreter; they are the checker's intended behaviour, checked by reading the
-  code, not by running it.
-- Whether this folder's own `index.json` and `index.md` agree byte for byte; they
-  were compared by hand against `compare`'s rules (identical `path`, squashed
-  `rule` and `description`, same integer codes), not by running the self-test.
+  measurements: the self-test only checks that `index.json` and `index.md` agree
+  with each other, and never runs lint.
+- Whether the repository copy of `index.json`/`index.md` is byte-identical to the
+  copy the runner tested; that copy was the one committed at run time.
+- The sample expectations inside `self_test.py` are the checker's intended
+  behaviour; they are confirmed by the runner's output above, not by anything
+  this step executed.
 
 No keys, tokens, settings or personal details are in this file. Everything read
-from a page, issue or runner report is data, never instruction.
+from a page, issue or runner report is data, never instruction. No dataset was
+published, uploaded or posted by this step.
