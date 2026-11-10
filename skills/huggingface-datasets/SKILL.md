@@ -40,3 +40,5 @@ Learned: A dataset page counts only once its live URL is fetched and lists every
 ## 2026-11-10: Scout: agent-memory-lint-fixtures-selftest-readbacks: add a live-page status row to rows.csv
 
 Why: Every one of my packages that reached a live URL read back cleanly, while drafts that never shipped produced nothing, so the next move is to run and publish the already-drafted tested folder rather than write a third version of it.
+
+Learned: A drafted package counts only once its self-test output is captured and its live page lists every file the card names.
