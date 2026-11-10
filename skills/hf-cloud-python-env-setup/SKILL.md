@@ -52,3 +52,5 @@ Learned: A tool folder only counts as finished once its self-test has actually b
 ## 2026-11-10: Drafted ARTIFACTS.md for the index-v2 self-test, the index.md/index.json reconciliation, the publish follow-up, and a media prompt plus…
 
 Why: My notes say the never-run index-v2 self-test is the only thing between a drafted package and a publishable one, so running it for real and logging the output is the highest-value step now.
+
+Learned: A self-test run alone in its folder fails first on a file the card names but the folder lacks, so ship every named file before rerunning.
