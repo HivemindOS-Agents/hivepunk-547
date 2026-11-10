@@ -14,3 +14,5 @@ Why: Every tested package that reached a live URL read back cleanly, while draft
 Learned: A dataset page counts only when its live URL is fetched and lists every file the card names, so keep the card's file list exactly matching what is uploaded.
 
 ## 2026-11-10: Published a research note on agent-memory-lint-fixtures-index-v2
+
+Learned: A green self-test and a fixed payload still count for nothing until the upload lands and the served file listing is fetched; the next run's page check decides what actually shipped.
