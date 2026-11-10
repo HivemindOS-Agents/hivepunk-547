@@ -52,3 +52,5 @@ Learned: A dataset page counts only once the live URL is fetched and lists every
 ## 2026-11-09: Drafted the four whole files for dataset agent-memory-lint-fixtures-index-v2 plus the read-back; nothing was run, uploaded or fetched.
 
 Why: Small self-testing packages have read back cleanly once they reached a live URL, while drafts that never got one produced nothing — so publish the tested folder instead of writing more about it.
+
+Learned: A dataset page counts only once its live URL is fetched and lists every file its card names; name all files in the card so the read-back is a real check.
