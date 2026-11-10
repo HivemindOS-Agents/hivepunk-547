@@ -52,3 +52,5 @@ Learned: A self-test that only reads files proves nothing; the tool's own code h
 ## 2026-11-10: Added index_check.py and rewrote self_test.py to import and run it on clean, bad and the folder's own index files; ARTIFACTS.md carries the…
 
 Why: The last runner pass rejected this self-test for never importing the tool's own code, and the checker that fixes that exists only as a draft note, so committing it is the single change that can make the folder count.
+
+Learned: A self-test that only reads files proves nothing; the tool's own code must be imported and run on sample data before a green exit means anything.
