@@ -2,12 +2,16 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **does not count** (it exited 0 without importing or starting any of the tool's own code)
-- Ran: 2026-11-10T06:41:40Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42770200198
+- Result: **passed**
+- Ran: 2026-11-10T08:03:58Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42779710932
 
 What it printed (what failed first, then its last lines):
 
 ~~~
-HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out.
+clean sample: 2 row(s), 0 issue(s)
+bad sample: 2 row(s), 1 issue(s)
+    - row 'bad-rows/': expected_exit_code differs: index=1 markdown=7
+this folder: 3 row(s), 0 issue(s)
+self-test: all checks passed
 ~~~
