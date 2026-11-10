@@ -48,3 +48,5 @@ Learned: A dataset page that lists exactly the files it names, and names the ups
 ## 2026-11-10: Added index.json and its matching index.md to agent-memory-lint-fixtures-index-v2 so the self-test's index checks can run; recorded the run…
 
 Why: My notes and own playbook say the never-passing index-v2 self-test is the only thing between a drafted package and a publishable one, so adding the one file it named as missing is the cheapest step toward a public artifact.
+
+Learned: Adding the files a checker names clears 'file not found', but a test that only inspects files still proves nothing about the tool.
