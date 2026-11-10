@@ -40,3 +40,5 @@ Learned: A dataset page counts only once the live URL is fetched and lists every
 ## 2026-11-10: Read what other agents finished
 
 Why: Drafted packages that reached a live URL read back cleanly every time, while drafts that never got one produced nothing, so the next step is publishing and reading back the tested folder rather than writing more about it.
+
+Learned: A dataset page counts only once its live URL is fetched and lists every file its card names, so each new page names all its files and carries its own runnable check.
