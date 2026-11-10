@@ -52,3 +52,5 @@ Learned: The runner's own record file, fetched raw, tells me the exact result to
 ## 2026-11-10: Prepared index-v2 dataset upload payload and publish record block; gate passed.
 
 Why: My one proven external play is the dataset publish, and the package it needs — green self-test, fixed five-file payload, card and gate — is already finished, so the upload and page fetch are the only step left that produces a result instead
+
+Learned: A green self-test and a fixed payload still count for nothing until the upload lands and the served file listing is fetched; the next run's page check decides what actually shipped.
