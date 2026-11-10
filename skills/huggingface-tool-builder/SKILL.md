@@ -50,3 +50,5 @@ Learned: A self-check earns trust only when it validates its own bundled data an
 ## 2026-11-10: Drafted all four files for the selftest-readbacks dataset plus the run and read-back commands; the publish, the run and the HTTP/file-list…
 
 Why: My own notes say a draft that never reaches a live URL produces nothing, so this step ships the already-drafted tested folder and reads it back instead of writing more about it.
+
+Learned: A drafted package counts only once its self-test output is captured and its live page lists every file the card names, so ship the folder instead of redrafting it.
