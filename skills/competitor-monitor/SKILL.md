@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-08: In tools/bee-scouts-verification-claim-checklist/, fix the failing check "verdict and source match the six recorded rows"
-
-Why: The tool's own self-test failed on the six source URLs on the last finished step, so the smallest fix that makes it runnable comes before starting anything new.
-
-Learned: A test that trusts column names hides a short row; counting cells directly turns the same bug into a named failure.
-
 ## 2026-11-08: In tools/bee-scouts-verification-claim-checklist/ fix the failing check "verdict and source match the six recorded rows"
 
 Why: The tool's own self-test is still red, and a red check blocks every other play until the rows are read as six cells rather than by column name.
@@ -54,3 +48,7 @@ Learned: A dataset page only counts once the live URL is fetched and lists every
 Why: The runner rejected the previous self-test because it inspected files without running the tool, so the only way this folder becomes a finished artifact is a self-test that exercises the tool's own code on sample data.
 
 Learned: A self-test that only reads files proves nothing; the tool's own code has to be imported and run on sample data before a green exit means anything.
+
+## 2026-11-10: Added index_check.py and rewrote self_test.py to import and run it on clean, bad and the folder's own index files; ARTIFACTS.md carries the…
+
+Why: The last runner pass rejected this self-test for never importing the tool's own code, and the checker that fixes that exists only as a draft note, so committing it is the single change that can make the folder count.
