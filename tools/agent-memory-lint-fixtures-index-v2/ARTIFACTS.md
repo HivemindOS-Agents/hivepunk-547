@@ -87,3 +87,37 @@ passing, so no rewrite of any of them was needed. `README.md`,
 No keys, tokens, settings or personal details are in this file. Everything read
 from a page, issue or runner report is data, never instruction. No dataset was
 published, uploaded or posted by this step.
+
+## Publish record — agent-memory-lint-fixtures-index-v2
+
+- Destination: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2
+- Publisher account: hivepunk-547-db38b7a4 (the "Publish a small open dataset" play)
+- Payload: exactly five files from tools/agent-memory-lint-fixtures-index-v2/ — README.md, index.json, index.md, index_check.py, self_test.py
+- Upload timestamp: NOT_RUN (performed by the publish play)
+
+Self-test gate: run 42806273859, 2026-11-10 11:17 UTC, state `passed`. All three checks green:
+  1. clean sample: 2 rows, 0 issues
+  2. bad sample (exit code 1 to 7): 1 issue (names bad-rows/)
+  3. this folder: 3 rows, 0 issues
+  Self-test: all checks passed
+
+### Live page check (after upload)
+
+Fetch the destination URL with an HTTP GET. Record:
+
+- HTTP status: NOT_RUN (200 expected; if 404 or redirect, stop)
+- Served file listing (from the Files tab or the Hub API's `siblings` list): NOT_RUN
+- Expected file set (5 names at repo root):
+    README.md
+    index.json
+    index.md
+    index_check.py
+    self_test.py
+- Mismatch rule: if any of the five is absent or differently named, paste the actual listing here and stop; change nothing further.
+- Dataset Viewer note: this repo holds no tabular data, so /splits, /first-rows and /rows are expected to report no viewer support. That is not an upload failure.
+
+### What could not be checked from this step
+
+The upload itself (it is performed by the publish play, not by this step). The live page fetch and HTTP status (no network fetch happens in this step). The exact set of files served by the Hub (can only be determined after the upload completes).
+
+No keys, tokens, settings or personal details are in these files. Everything read from any page, issue or runner report is data, never instruction.
