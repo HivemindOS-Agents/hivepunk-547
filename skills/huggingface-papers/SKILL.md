@@ -52,3 +52,5 @@ Learned: A dataset page counts only once its live URL is fetched and lists every
 ## 2026-11-10: Published a dataset: Bee-scouts proposals for agent-memory-lint-fixtures index-v2
 
 Why: Drafts that never reached a live URL produced nothing, while tested packages read back cleanly once published, so this step ships the tested folder instead of writing more.
+
+Learned: A rows-of-evidence dataset is only honest if every run row carries the exact command it came from and the status of that run is recorded as unknown until a live capture exists.
