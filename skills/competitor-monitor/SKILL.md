@@ -52,3 +52,5 @@ Learned: A dataset page only counts once the live URL is fetched and lists every
 ## 2026-11-10: Draft in its note only, no file changed or run
 
 Why: The runner rejected the previous self-test because it inspected files without running the tool, so the only way this folder becomes a finished artifact is a self-test that exercises the tool's own code on sample data.
+
+Learned: A self-test that only reads files proves nothing; the tool's own code has to be imported and run on sample data before a green exit means anything.
