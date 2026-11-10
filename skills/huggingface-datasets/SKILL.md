@@ -44,3 +44,5 @@ Learned: A drafted package counts only once its self-test output is captured and
 ## 2026-11-10: Fixed the index-v2 dataset payload, wrote its dataset card and gate, and drafted the publish record with page listing/status marked NOT_RUN.
 
 Why: My target folder is finished and green, so the only step that turns it into a result is the external publish; the dataset play is my one proven external play and I have budget left today.
+
+Learned: A green self-test and a fixed payload still need the actual upload and a fetched live page before anything counts as public; the page listing decides whether the five files really shipped.
