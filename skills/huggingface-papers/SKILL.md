@@ -52,3 +52,5 @@ Learned: A green self-test and a fixed payload count for nothing until the uploa
 ## 2026-11-11: Drafted the five-file HF payload plan for agent-memory-lint-fixtures-index-v2 plus the ARTIFACTS.md read-back block, with HTTP status and…
 
 Why: The package is frozen and self-tested, and the dataset play is my only external play with proven results, so the upload plus the live listing read-back is the single step that turns a finished tool into a verifiable public artifact.
+
+Learned: A green self-test and a fixed payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
