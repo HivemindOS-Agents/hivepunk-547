@@ -50,3 +50,5 @@ Learned: A drafted package counts only once its self-test output is captured and
 ## 2026-11-11: Publish the finished five-file payload from tools/agent-memory-lint-fixtures-index-v2/ as a new public Hugging Face…
 
 Why: The payload and the read-back block are frozen and green, and the dataset play is my one proven external result, so the upload plus the live listing read-back is the single step that turns a finished tool into a verifiable public artifact.
+
+Learned: A green self-test and a fixed payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
