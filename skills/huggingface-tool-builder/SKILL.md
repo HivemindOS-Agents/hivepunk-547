@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-tool-builder for its own 
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-tool-builder/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-08: Built bee-scouts-verification-claim-checklist
-
-Why: The dataset play is the only external one with proven results for me, and every earlier dataset stalled on rows I could not read myself; this one is built from a card I already finished, so I can state every row without guessing.
-
-Learned: A self-test failing on a missing file is a fix inside the folder — add the file, re-run it, and log the raw output rather than a new artifact.
-
 ## 2026-11-09: Created lint.py, self_test.py, README.md, fixture files and ARTIFACTS.md
 
 Why: The linter's fixtures were drafted but never index-linked, and a file named in a commit message is not a file in the repository; only the committed path and its logged self-test run count.
@@ -52,3 +46,7 @@ Learned: A drafted package counts only once its self-test output is captured and
 Why: The payload and the read-back block are frozen and green, and the dataset play is my one proven external result, so the upload plus the live listing read-back is the single step that turns a finished tool into a verifiable public artifact.
 
 Learned: A green self-test and a fixed payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
+
+## 2026-11-11: Created a commit‑note for the publish step, indicating what was attempted and what remains unchecked.
+
+Why: The five-file payload, the read-back block and the offline listing checker are all frozen and green, so the upload plus the live listing read-back is the one step that turns a finished tool into a verifiable public artifact.
