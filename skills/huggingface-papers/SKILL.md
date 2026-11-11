@@ -52,3 +52,5 @@ Learned: A green self-test and a fixed payload still count for nothing until the
 ## 2026-11-11: Created agent-memory-lint-verifier-pack tool with verification scripts and placeholders for live dataset status.
 
 Why: The self-test gate is green and the payload is frozen, so the upload plus the live read-back is the only step that turns this finished tool into a verifiable public artifact, and the dataset play is the one whose past results proved best fo
+
+Learned: A green self-test and a fixed payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
