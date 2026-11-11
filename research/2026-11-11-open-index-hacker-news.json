@@ -1,0 +1,143 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-11T21:43:19.171Z",
+  "subject": "open-index/hacker-news",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The dataset is presented as a complete, continuously updated Hacker News mirror in monthly Parquet files plus 5-minute blocks, but the pages read show it second-hand: the card content comes from a third-party reproduction, the Hub viewer was unreachable, and no license is stated. Treat it as a plausible but unverified source until its own card and stats files are checked directly.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The dataset page shows one table with fields id, deleted, type, by, time, text, dead, parent, poll, kids, url, score, title, parts, descendants and words.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/open-index/hacker-news"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The dataset page's first preview row is id 1, 'Y Combinator', by pg, time 2006-10-09T18:21:51, score 57, kids list of 7 IDs.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/open-index/hacker-news"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The dataset page's viewer was unavailable, showing 'Couldn't reach open-index/hacker-news on the Hub (ReadTimeout)'.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/open-index/hacker-news"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The file listing shows data/, .gitattributes (2.5 kB), README.md (26.3 kB), stats.csv (15.7 kB) and stats_today.csv (13.4 kB).",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/open-index/hacker-news/tree/main"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The file listing shows data/2026/2026-08.parquet holding 265,364 items and labels it '3 months ago'.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/open-index/hacker-news/tree/main"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "The file listing shows two 'Live' labels reading 2026-08-23 00:00-04:05 UTC (971 items) and 2026-08-23 06:40 UTC (16 items), each '3 months ago'.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/open-index/hacker-news/tree/main"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "A third-party page reproducing the card says new Hacker News items are fetched from the source every 5 minutes and committed as Parquet files under a today/ directory in YYYY/MM/DD/HH/MM.parquet paths.",
+      "check": "page",
+      "source": "https://b-lab.team/en/content/7945e043-e398-4283-bbe0-7861041bbb37"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "That page says at midnight UTC each day the current month is refetched and consolidated into YYYY/MM.parquet, and the preceding day's 5-minute files are removed from today/.",
+      "check": "page",
+      "source": "https://b-lab.team/en/content/7945e043-e398-4283-bbe0-7861041bbb37"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "That page says the archive currently contains over 47.4 million items, including stories, comments, Ask HN, Show HN, job postings and polls, since October 2006.",
+      "check": "page",
+      "source": "https://b-lab.team/en/content/7945e043-e398-4283-bbe0-7861041bbb37"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "That page says stats.csv and stats_today.csv track item counts, ID ranges, file sizes, fetch durations and commit timestamps for monthly and 5-minute blocks.",
+      "check": "page",
+      "source": "https://b-lab.team/en/content/7945e043-e398-4283-bbe0-7861041bbb37"
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "The license of the dataset.",
+      "check": "page",
+      "missing": "A license field on the dataset card or repo metadata"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "The maintainer's identity and any linked source repository.",
+      "check": "page",
+      "missing": "A named maintainer and a linked GitHub repo on the card"
+    }
+  ],
+  "counts": {
+    "fact": 10,
+    "derived": 0,
+    "unknown": 2
+  },
+  "risks": [
+    "The dataset card itself was not among the pages read; the method, counts and cadence come from a third-party page reproducing the card, so they are not first-hand [https://b-lab.team/en/content/7945e043-e398-4283-bbe0-7861041bbb37]",
+    "The dataset viewer on the dataset page failed with a ReadTimeout, so the published preview does not confirm the data is currently servable from the Hub [https://huggingface.co/datasets/open-index/hacker-news]",
+    "No license is stated on any page read, so reuse terms are unclear",
+    "The file listing labels updates '3 months ago' while also showing 2026-08-23 timestamps, so the freshness and cadence of the live updates are not verifiable from the page",
+    "Several unrelated HN datasets share the same column schema (e.g. ODD2026/hacker-news with 49.3M rows), so consumers can easily mistake one for another [https://huggingface.co/datasets/ODD2026/hacker-news]"
+  ],
+  "unknowns": [
+    "The license of the dataset.: A license field on the dataset card or repo metadata",
+    "The maintainer's identity and any linked source repository.: A named maintainer and a linked GitHub repo on the card"
+  ],
+  "wouldChangeMind": [
+    "Reading the dataset's own README/card directly and finding an explicit license and maintainer",
+    "stats_today.csv showing recent timestamps that confirm the 5-minute pipeline is live",
+    "A linked source repository showing the fetch and consolidation code"
+  ],
+  "sources": [
+    {
+      "title": "open-index/hacker-news · Datasets at Hugging Face",
+      "url": "https://huggingface.co/datasets/open-index/hacker-news"
+    },
+    {
+      "title": "open-index/hacker-news at main",
+      "url": "https://huggingface.co/datasets/open-index/hacker-news/tree/main"
+    },
+    {
+      "title": "ODD2026/hacker-news · Datasets at Hugging Face",
+      "url": "https://huggingface.co/datasets/ODD2026/hacker-news"
+    },
+    {
+      "title": "open-index/hacker-news · Datasets at Hugging Face | B Lab",
+      "url": "https://b-lab.team/en/content/7945e043-e398-4283-bbe0-7861041bbb37"
+    }
+  ],
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-11-open-index-hacker-news.md",
+  "decidedBy": "bee"
+}
