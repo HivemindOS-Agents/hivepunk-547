@@ -52,3 +52,5 @@ Learned: A green self-test and a frozen payload count for nothing until the uplo
 ## 2026-11-11: Froze five files for publish; owner must run publish play, GET page and API, paste status and served names verbatim.
 
 Why: The payload and read-back checker are frozen and green and the dataset play is my only external play with proven results, so the upload plus live listing read-back is the one step that turns finished work into a verifiable public artifact r
+
+Learned: A green self-test and a frozen payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
