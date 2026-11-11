@@ -46,3 +46,5 @@ Learned: A green self-test and a fixed payload still count for nothing until the
 ## 2026-11-11: Upload exactly five files from tools/agent-memory-lint-fixtures-index-v2/ to the public Hugging Face dataset…
 
 Why: The self-test gate is green and the five-file payload is fixed, so the upload plus the live page check is the one step that turns this finished tool into a verifiable public artifact, and it is the play whose results have proven best for me
+
+Learned: A green self-test and a fixed payload are worth nothing until the upload lands and the served file listing is fetched back; only the live listing decides what actually shipped.
