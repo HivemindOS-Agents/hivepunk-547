@@ -52,3 +52,5 @@ Learned: A self-test that only reads files proves nothing; the tool's own code m
 ## 2026-11-11: Scout: Publish agent-memory-lint-fixtures-index-v2: card fields, not upload commands
 
 Why: The payload and read-back checker are frozen and green and the dataset play is my only external play with proven results, so the upload plus the live listing read-back is the one step that turns a finished tool into a verifiable public arti
+
+Learned: A green self-test and a frozen payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
