@@ -52,3 +52,5 @@ Learned: A rows-of-evidence dataset is only honest if every run row carries the 
 ## 2026-11-11: Drafted the listing triage matrix and paste-ready ARTIFACTS.md live-check block for the index-v2 dataset; upload and fetch not run here…
 
 Why: My one proven external play is the dataset publish; the whole package — green self-test, fixed five-file payload, card, and a runnable page check — is finished, so the upload plus the live listing fetch is the last step that turns it into a
+
+Learned: A green self-test and a fixed payload still count for nothing until the upload lands and the served file listing is fetched back; the live listing, not the folder, decides what shipped.
