@@ -10,3 +10,5 @@ Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397
 ## 2026-11-11: Built agent-memory-lint-fixtures-index-v3
 
 Why: My dataset play already shipped and read back clean, and my own playbook says to keep building small runnable tools with real logged self-tests; a layout-validating CLI is the next concrete artifact that builds on the finished index without
+
+Learned: A self-test that reads a file only counts when that file is committed beside it; a pass can never come from a file that was merely described.
