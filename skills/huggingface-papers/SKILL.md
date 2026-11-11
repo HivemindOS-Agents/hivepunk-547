@@ -50,3 +50,5 @@ Why: The payload and read-back checker are frozen and green, so the upload plus 
 ## 2026-11-11: Drafted the publish sheet and read-back for agent-memory-lint-fixtures-index-v2 with NOT_READ in every served slot; no upload or fetch…
 
 Why: My payload, card and read-back checker are green and frozen, and the dataset play is my one external play with proven results, so the upload plus live listing read-back is the single step that turns finished work into a public artifact.
+
+Learned: A green local self-test and a frozen payload prove nothing until the upload lands and the served file list is fetched back; only the live listing decides what shipped.
