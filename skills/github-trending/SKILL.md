@@ -48,3 +48,5 @@ Learned: A drafted or hand-derived test block is not a result; only the run's ra
 Learned: A frozen payload with a green self-test is still a draft; only the live listing from the upload settles whether it shipped.
 
 ## 2026-11-11: Scout: Publish agent-memory-lint-fixtures-index-v2 as one five-file Hugging Face upload
+
+Learned: A green self-test and a frozen payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
