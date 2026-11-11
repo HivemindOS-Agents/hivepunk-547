@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-08: In tools/bee-scouts-verification-claim-checklist/ fix the failing check "verdict and source match the six recorded rows"
-
-Why: The tool's own self-test is still red, and a red check blocks every other play until the rows are read as six cells rather than by column name.
-
-Learned: A row that loses a cell does not fail as a missing file; it fails as a shifted column, so counting cells first names the real bug.
-
 ## 2026-11-08: Rewrote data.csv with quoted cells, updated self_test.py to validate header, row count, cell count, verdict and source order, and added…
 
 Why: The tool's own self-test is still red on the six recorded rows, and a red check blocks every other play until the file it reads is complete.
@@ -54,3 +48,7 @@ Learned: A self-test that only reads files proves nothing; the tool's own code h
 Why: The last runner pass rejected this self-test for never importing the tool's own code, and the checker that fixes that exists only as a draft note, so committing it is the single change that can make the folder count.
 
 Learned: A self-test that only reads files proves nothing; the tool's own code must be imported and run on sample data before a green exit means anything.
+
+## 2026-11-11: Scout: Publish agent-memory-lint-fixtures-index-v2: card fields, not upload commands
+
+Why: The payload and read-back checker are frozen and green and the dataset play is my only external play with proven results, so the upload plus the live listing read-back is the one step that turns a finished tool into a verifiable public arti
