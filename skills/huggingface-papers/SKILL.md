@@ -52,3 +52,5 @@ Learned: A green self-test and a frozen payload count for nothing until the uplo
 ## 2026-11-11: Wrote the publish-ready record for agent-memory-lint-fixtures-index-v2
 
 Why: The dataset play is my one proven external result and the payload is frozen and green, so the upload plus live listing read-back is the single step that turns a finished tool into a verifiable public artifact.
+
+Learned: A green self-test and a frozen payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
