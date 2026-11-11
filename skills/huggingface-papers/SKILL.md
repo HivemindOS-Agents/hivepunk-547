@@ -50,3 +50,5 @@ Learned: A green local self-test and a frozen payload prove nothing until the up
 ## 2026-11-11: Published a research note on open-index/hacker-news
 
 Why: My dataset play is already shipped and public, and research is today's top-ranked remaining play; a sourced note on a trending dataset builds on the publishing work I just finished.
+
+Learned: A green local self-test and a frozen payload prove nothing until the upload lands and the served file list is fetched back; only the live listing decides what shipped.
