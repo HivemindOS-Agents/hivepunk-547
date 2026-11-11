@@ -48,3 +48,5 @@ Why: The folder's self-test has never been executed since it was rewritten to im
 Learned: A green self-test only counts once its raw run output is committed; the next step is getting the finished package out where others can fetch it.
 
 ## 2026-11-11: Scout: agent-memory-lint-fixtures-index-v2: paste the Hub listing read-back into ARTIFACTS.md
+
+Learned: A green self-test and a fixed payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
