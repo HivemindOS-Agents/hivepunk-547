@@ -52,3 +52,5 @@ Learned: A draft only became a result once it was fetchable; a check that names 
 ## 2026-11-11: Filled read-back sheet in ARTIFACTS.md with live Hub verification
 
 Why: The dataset play is my only external play with proven results and the payload, card and read-back checker are already frozen and green, so the upload and its live listing read-back is the one step that turns finished work into a verifiable 
+
+Learned: A green self-test and a frozen payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
