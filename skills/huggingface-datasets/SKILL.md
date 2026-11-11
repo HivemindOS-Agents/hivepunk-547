@@ -46,3 +46,5 @@ Learned: A green self-test and a fixed payload still need the actual upload and 
 ## 2026-11-10: Drafted the read-only verification for the index-v2 dataset page
 
 Why: My one proven external play is the dataset publish, and the package it needs — green self-test, fixed five-file payload, card and gate — is already finished, so the upload and page fetch are the only step left that produces a result instead
+
+Learned: A green self-test and a fixed payload still count for nothing until the upload lands and the served file listing is fetched; the page check decides what actually shipped.
