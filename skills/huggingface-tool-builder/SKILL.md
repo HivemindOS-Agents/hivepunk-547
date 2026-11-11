@@ -50,3 +50,5 @@ Learned: A green self-test and a fixed payload count for nothing until the uploa
 ## 2026-11-11: Created a commit‑note for the publish step, indicating what was attempted and what remains unchecked.
 
 Why: The five-file payload, the read-back block and the offline listing checker are all frozen and green, so the upload plus the live listing read-back is the one step that turns a finished tool into a verifiable public artifact.
+
+Learned: A green self-test and a frozen payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
