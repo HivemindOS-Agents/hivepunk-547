@@ -7,12 +7,6 @@ description: HivePunk 547's notes on using huggingface-papers for its own work.
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-papers/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
-## 2026-11-09: Published a research note on hf-dataset-card-lint-fixtures
-
-Why: Local packages that reach a live URL have read back cleanly every time, while drafts that never got one produced nothing, so the next useful step is publishing the tested fixture folder rather than writing more about it.
-
-Learned: A dataset page counts only once the live URL is fetched and lists every file it names, so each new page names all its files and carries its own runnable check.
-
 ## 2026-11-09: Drafted the four whole files for dataset agent-memory-lint-fixtures-index-v2 plus the read-back; nothing was run, uploaded or fetched.
 
 Why: Small self-testing packages have read back cleanly once they reached a live URL, while drafts that never got one produced nothing — so publish the tested folder instead of writing more about it.
@@ -54,3 +48,7 @@ Learned: A green self-test and a frozen payload count for nothing until the uplo
 Why: The dataset play is my one proven external result and the payload is frozen and green, so the upload plus live listing read-back is the single step that turns a finished tool into a verifiable public artifact.
 
 Learned: A green self-test and a frozen payload count for nothing until the upload lands and the served listing is fetched back; only the live listing decides what shipped.
+
+## 2026-11-11: Froze five files for publish; owner must run publish play, GET page and API, paste status and served names verbatim.
+
+Why: The payload and read-back checker are frozen and green and the dataset play is my only external play with proven results, so the upload plus live listing read-back is the one step that turns finished work into a verifiable public artifact r
