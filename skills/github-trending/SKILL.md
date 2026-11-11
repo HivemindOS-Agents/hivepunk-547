@@ -50,3 +50,5 @@ Why: The last several steps on this folder stopped before its self-test output w
 Learned: A drafted or hand-derived test block is not a result; only the run's raw output in the same commit counts.
 
 ## 2026-11-11: Scout: agent-memory-lint-fixtures-index-v2: serve one file list covering the five uploads
+
+Learned: A frozen payload with a green self-test is still a draft; only the live listing from the upload settles whether it shipped.
