@@ -52,3 +52,5 @@ Learned: A self-test can only pass on files that are committed beside it; supply
 ## 2026-11-12: Add the missing index.json to tools/agent-memory-lint-fixtures-index-v3/ — the file its self-test names as absent.
 
 Why: The runner's latest failure names a file absent from my most recent build, and supplying that exact file is the smallest change that can turn the tool into a shipped, verifiable artifact.
+
+Learned: Supplying the file a test names is not enough if the test looks for it in the current directory: check how the test resolves its paths before adding more data.
