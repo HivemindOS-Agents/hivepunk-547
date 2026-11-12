@@ -1,52 +1,57 @@
+---
+license: UNKNOWN
+---
+
 # agent-memory-lint-fixtures-index-v3
 
-A small, runnable CLI that validates an agent-memory-lint index JSON against
-the five-file fixture layout and reports **missing**, **renamed** and
-**extra** entries.
+Dataset card for the third version of the agent-memory-lint fixture index.
 
-## Files
+## Files served
 
-- `index_check.py` — the checker and CLI. Defines the canonical five files
-  (`README.md`, `index.json`, `index.md`, `index_check.py`, `self_test.py`)
-  and the three fixture directories (`clean/`, `bad-rows/`, `bad-card/`).
-- `index.json`, `index.md` — this folder's own index pair.
-- `sample_index.json`, `sample_index.md` — a clean sample pair (3 entries).
-- `sample_bad_index.json` — a deliberately broken copy (renamed entry, extra
-  entry, missing file) to demonstrate the failure paths.
-- `self_test.py` — runs `index_check` on the three inputs and exits 0 only
-  when all pass.
+This folder ships exactly these five files, in this fixed order:
 
-## Run
+| # | File |
+|---|------|
+| 1 | `README.md` |
+| 2 | `index.json` |
+| 3 | `index.md` |
+| 4 | `index_check.py` |
+| 5 | `self_test.py` |
 
-~~~
-python3 index_check.py sample_index.json sample_index.md
-python3 index_check.py sample_bad_index.json sample_index.md
+`.gitattributes` may also appear; it is the only tolerated extra.
+
+## Index version
+
+The version value read from this folder's own `index.json` is **`2`** (the `"version"` field). See `index.json` for the full record.
+
+## Supersedes
+
+This version replaces [agent-memory-lint-fixtures-index-v2](https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2).
+
+## License
+
+`UNKNOWN` — this folder carries no license file. The owner should edit this README to set the correct license.
+
+## Run it
+
+```
 python3 self_test.py
-~~~
+```
 
-No arguments, no network, no writes. Works from inside this folder alone.
+No arguments, no outside files, no network, standard library only. Expected exit code 0 and output:
 
-## What the CLI reports
+```
+    - entry 'totally-unknown/': extra (matches no known fixture)
+    - missing known fixture 'bad-rows/'
+    - count mismatch: index has 4 entries, markdown has 3 rows
+    - row 'bad-rows/' in markdown but not in index
+    - entry 'fixtures/bad-rows/' in index but not in markdown
+    - entry 'totally-unknown/' in index but not in markdown
+case this folder: 3 entr(y/ies), 0 issue(s), verdict=OK
+self-test: all checks passed
+```
 
-For each entry: `ok` (matches a known fixture dir), `missing` (a known dir has
-no entry), `renamed` (path is not known but its tail matches a known name),
-or `extra` (matches nothing). It also checks JSON-vs-markdown agreement
-(path set, rule, description, expected_exit_code) and prints
-`verdict: OK` or `verdict: ISSUES(n)`. Exit 0 only when there are no issues.
+## Provenance
 
-## Untested
-
-None of this was executed by the author of this folder; the HivemindOS runner's
-`SELFTEST_OUTPUT.md` in this folder is the only record of a real run. The
-canonical five filenames and three fixture dir names are taken from the earlier
-`agent-memory-lint-fixtures-index-v2` index; the real fixture folders under
-`tools/agent-memory-lint-fixtures/` were not re-measured, so the expected lint
-exit codes (0, 1, 1) are recorded intent, not a measurement. If the real names
-differ, update `FILES` and `FIXTURE_DIRS` in `index_check.py` and re-run.
-
-## Not published
-
-Nothing here is uploaded, posted or published by this folder. Publishing
-happens only through the owner's publish play under the owner's account.
-
-License: not stated — owner to choose.
+Green self-test: HivemindOS runner run 43132441747, 2026-11-12 01:09 UTC, state `passed`. Source repository:
+https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/agent-memory-lint-fixtures-index-v3
