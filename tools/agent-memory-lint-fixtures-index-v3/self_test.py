@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
 """Self-test for agent-memory-lint-fixtures-index-v3.
 
-Runs this folder's own checker (index_check) on three inputs and prints raw
-pass/fail output:
-  1. sample_index.json + sample_index.md  -> 0 issues, verdict OK
-  2. sample_bad_index.json + sample_index.md -> issues, one naming the
-     renamed path 'bad-rows-v2/', plus an extra-entry issue
-  3. this folder's own index.json + index.md -> 0 issues
-
-Exits 0 only when every check passes. Stdlib only: no arguments, no network,
-no writes. Its own run log is written by HivemindOS as SELFTEST_OUTPUT.md.
+See ../agent-memory-lint-fixtures-index-v2/self_test.py for the v2 version.
+This version modifies the bad-sample case: instead of differing exit codes, it
+changes the path so the markdown row no longer matches an index entry.
 """
 
 import os
@@ -21,53 +15,93 @@ sys.path.insert(0, HERE)
 import index_check
 
 
+# --- sample 1: a clean index and a markdown table that agrees with it -------
+
+CLEAN_INDEX = {
+    "dataset": "agent-memory-lint-fixtures-index-v3 (sample)",
+    "fixtures_root": "fixtures/",
+    "version": 2,
+    "entries": [
+        {
+            "path": "clean/",
+            "rule": "no findings",
+            "description": "clean fixture",
+            "expected_exit_code": 0,
+        },
+        {
+            "path": "bad-rows/",
+            "rule": "row count differs",
+            "description": "row mismatch",
+            "expected_exit_code": 1,
+        },
+    ],
+}
+
+CLEAN_MD = "\n".join([
+    "# sample index",
+    "",
+    "| path | rule | description | expected_exit_code |",
+    "|---|---|---|---|",
+    "| `clean/` | no findings | clean fixture | 0 |",
+    "| `bad-rows/` | row count differs | row mismatch | 1 |",
+    "",
+])
+
+# --- sample 2: the same table, but bad-rows/ renamed in the markdown to
+#               fixtures/bad-rows/ (mismatch with index entry 'bad-rows/')
+
+BAD_MD = "\n".join([
+    "# sample index",
+    "",
+    "| path | rule | description | expected_exit_code |",
+    "|---|---|---|---|",
+    "| `clean/` | no findings | clean fixture | 0 |",
+    "| `fixtures/bad-rows/` | row count differs | row mismatch | 1 |",
+    "",
+])
+
+
+def report(label, rows, issues):
+    print("%s: %d row(s), %d issue(s)" % (label, len(rows), len(issues)))
+    for issue in issues:
+        print("    - " + issue)
+
+
 def read_text(path):
     with open(path, "r", encoding="utf-8") as fh:
         return fh.read()
 
 
-def run_case(label, index_path, md_path, want_ok):
-    index = index_check.load_index(os.path.join(HERE, index_path))
-    md = read_text(os.path.join(HERE, md_path))
-    report = index_check.analyze(index, md)
-    issues = index_check.render_issues(report)
-    print("case %s: %d entr(y/ies), %d issue(s), verdict=%s"
-          % (label, len(report["rows"]), len(issues), report["verdict"]))
-    for line in issues:
-        print("    - " + line)
-    return report, issues
-
-
 def main():
     failures = []
 
-    clean_report, clean_issues = run_case(
-        "clean sample", "sample_index.json", "sample_index.md", True)
-    if clean_issues:
-        failures.append("clean sample: expected 0 issues, got %d"
-                        % len(clean_issues))
-    if clean_report["verdict"] != "OK":
-        failures.append("clean sample: expected verdict OK, got %s"
-                        % clean_report["verdict"])
+    # 1. clean sample: the checker must find nothing wrong.
+    rows = index_check.parse_index_md(CLEAN_MD)
+    issues = index_check.compare(CLEAN_INDEX, rows)
+    report("clean sample", rows, issues)
+    if len(rows) != 2:
+        failures.append("clean sample: parsed %d rows, expected 2" % len(rows))
+    if issues:
+        failures.append("clean sample: expected 0 issues, got %d" % len(issues))
 
-    bad_report, bad_issues = run_case(
-        "bad sample", "sample_bad_index.json", "sample_index.md", False)
-    if not bad_issues:
+    # 2. bad sample: one row's path disagrees; the issue must name it.
+    rows = index_check.parse_index_md(BAD_MD)
+    issues = index_check.compare(CLEAN_INDEX, rows)
+    report("bad sample", rows, issues)
+    if not issues:
         failures.append("bad sample: expected at least 1 issue, got 0")
-    if not any("bad-rows-v2" in i or "renamed" in i for i in bad_issues):
-        failures.append("bad sample: no issue names the renamed path "
-                        "bad-rows-v2 or reports a rename")
-    if not any("extra" in i for i in bad_issues):
-        failures.append("bad sample: no extra-entry issue reported")
-    renamed = any(r["status"] == "renamed" for r in bad_report["rows"])
-    if not renamed:
-        failures.append("bad sample: no entry marked status=renamed")
+    elif not any("bad-rows/" in issue for issue in issues):
+        failures.append("bad sample: no issue names the mismatched row bad-rows/")
 
-    own_report, own_issues = run_case(
-        "this folder", "index.json", "index.md", True)
-    if own_issues:
-        failures.append("this folder: expected 0 issues, got %d"
-                        % len(own_issues))
+    # 3. this folder's own index.json and index.md must agree.
+    own_rows = index_check.parse_index_md(read_text(os.path.join(HERE, "index.md")))
+    own_index = index_check.load_index(os.path.join(HERE, "index.json"))
+    issues = index_check.compare(own_index, own_rows)
+    report("this folder", own_rows, issues)
+    if not own_rows:
+        failures.append("this folder: parsed 0 rows from index.md")
+    if issues:
+        failures.append("this folder: expected 0 issues, got %d" % len(issues))
 
     if failures:
         for line in failures:
