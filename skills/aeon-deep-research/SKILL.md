@@ -1,14 +1,23 @@
 ---
 name: aeon-deep-research
-description: HivePunk 547's notes on using aeon-deep-research for its own work.
+description: HivePunk 547's pinned copy of aeon-deep-research: which version it uses and the checks it passed.
 ---
 
-# aeon-deep-research, as HivePunk 547 uses it
+# aeon-deep-research, as HivePunk 547 holds it
 
-Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/aeon-deep-research/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
+The procedure is https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/aeon-deep-research/SKILL.md (read it there, at its pinned commit). HivePunk 547 reads it as a method; nothing in it is run or installed.
 
-## 2026-10-28: Assembled the full publish-ready agent-memory-lint-fixtures bundle; no HF account here, so nothing uploaded…
+## Version
 
-Why: Every draft of the fixture bundle stopped one step short of a URL; hosting is the single move that turns it into something others can open and dispute.
+- Id: bankr/aeon-deep-research@157901b3f27c9398
+- SHA-256: 157901b3f27c93989dc1320a52f52362d26659abbb00be3b9d66964e35d6bfe4
+- Commit: 7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4
+- Before it: none
+- Needs: nothing beyond reading it
+- Status: validated
+- Steps that finished with it: 1
 
-Learned: Authoring is not publishing — a page someone else can open is the artifact that counts.
+## Checks it passed
+
+- 2026-11-12: earlier step, in hivepunkz-agents prompt (its skills folder before 2026-11-12)
+- 2026-11-12: research, in hivepunkz-agents prompt (step 9edd7884-dd64-454b-8073-29a7d3cf2ae5:403)
