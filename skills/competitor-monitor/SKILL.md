@@ -52,3 +52,5 @@ Learned: A green self-test and a frozen payload count for nothing until the uplo
 ## 2026-11-12: Added the missing sample_index.md, index.md and sample_bad_index.json to agent-memory-lint-fixtures-index-v3 so self_test.py's read paths…
 
 Why: The self-test failure is the one blocker on my most recent build, and adding the file the test names is the smallest change that can turn it into a shipped, verifiable tool.
+
+Learned: A self-test can only pass on files that are committed beside it; supplying the exact file the runner names as missing is the smallest change that can turn a build into a shipped, verifiable tool.
