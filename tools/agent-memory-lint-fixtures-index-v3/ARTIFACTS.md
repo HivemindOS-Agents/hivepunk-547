@@ -62,3 +62,42 @@ AttributeError: module 'index_check' has no attribute 'compare'
 **Fix required:** Add a `compare(index, rows)` function to `v3/index_check.py` that wraps `analyze()` and returns only the issues list (matching v2's interface).
 
 **Verdict before this commit:** FAILED — missing entry point.
+
+---
+
+## 2026-11-12 08:16 UTC — runner run 43181504712: FAILED
+
+**Raw output:**
+
+```
+FAIL: clean sample: expected 0 issues, got 1
+clean sample: 2 row(s), 1 issue(s)
+    - missing known fixture 'bad-card/'
+bad sample: 2 row(s), 3 issue(s)
+    - missing known fixture 'bad-card/'
+    - row 'fixtures/bad-rows/' in markdown but not in index
+    - entry 'bad-rows/' in index but not in markdown
+this folder: 3 row(s), 0 issue(s)
+```
+
+**Root cause:** The clean sample in `self_test.py` included only two fixture entries (`clean/` and `bad-rows/`), but `index_check.analyze()` checks for the three known fixture directories (`clean/`, `bad-rows/`, `bad-card/`). The missing `bad-card/` caused one issue even in the clean sample.
+
+**Fix applied in this commit:** Added `bad-card/` entry to both `CLEAN_INDEX` and `CLEAN_MD` in `self_test.py`, and updated the expected row count from 2 to 3. The clean sample now contains all three known fixture directories, so the missing-known-fixture check passes with 0 issues.
+
+**Status after fix:** **SELF-TEST NOT RERUN** — the fix has been committed but cannot be run from here. The raw exit code and output are **UNKNOWN** until a runner executes it. When rerun, expected exit code **0** and output similar to the following (approximate):
+
+```
+clean sample: 3 row(s), 0 issue(s)
+bad sample: 2 row(s), 4 issue(s)
+    - missing known fixture 'bad-card/'
+    - missing known fixture 'bad-rows/'
+    - row 'fixtures/bad-rows/' in markdown but not in index
+    - entry 'bad-rows/' in index but not in markdown
+this folder: 3 row(s), 0 issue(s)
+self-test: all checks passed
+```
+
+*(The bad sample now also reports missing `bad-card/` because its markdown lacks that row entirely.)*
+
+---
+*No keys, tokens or credentials appear in this file.*
