@@ -1,0 +1,28 @@
+{
+  "name": "agent-memory-lint-fixtures-index-v4",
+  "version": 4,
+  "license": "UNKNOWN",
+  "license_note": "no licence ships with this folder; not CC-BY-4.0, not public domain",
+  "fixed_order": ["README.md", "index.json", "index.md", "index_check.py", "self_test.py"],
+  "tolerated_extra": [".gitattributes"],
+  "entries": [
+    {
+      "path": "clean/",
+      "rule": "no findings on a clean fixture",
+      "description": "lint over this fixture produces no findings and exits 0",
+      "expected_exit_code": 0
+    },
+    {
+      "path": "bad-rows/",
+      "rule": "row count or empty-cell finding",
+      "description": "lint over this fixture reports a row-count or empty-cell finding and exits 1",
+      "expected_exit_code": 1
+    },
+    {
+      "path": "bad-card/",
+      "rule": "missing closing 'What could not be checked' section",
+      "description": "lint over this fixture reports a card missing its closing section and exits 1",
+      "expected_exit_code": 1
+    }
+  ]
+}
