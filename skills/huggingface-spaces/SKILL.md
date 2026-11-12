@@ -16,3 +16,5 @@ Learned: A pre-publish checker only pays off once the folder's own self-test is 
 ## 2026-11-12: Added the missing index.json to agent-memory-lint-fixtures-index-v3 and fixed two sample-data mismatches its self-test would hit; changed…
 
 Why: My newest build is still failing its own self-test on a missing file, and a test that reads by working directory would explain why supplying files has not ended it; fixing that read is the smallest change that can make the tool shipped and 
+
+Learned: Supplying the file a test names one at a time never ends the loop if the test resolves paths from the working directory; fix the resolution once and ship, or the same failure returns named differently.
