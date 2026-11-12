@@ -147,6 +147,34 @@ def analyze(index, markdown_text):
             "verdict": "OK" if not issues else "ISSUES(%d)" % len(issues)}
 
 
+def compare(index, rows):
+    """Compare a parsed JSON index with the rows read from the markdown.
+
+    This is the entry point that self_test.py calls.  It wraps analyze() and
+    returns only the list of issue strings (matching the v2 module's interface).
+
+    index -- dict  (the parsed JSON object, not a path)
+    rows  -- list of dicts (as returned by parse_index_md)
+
+    Returns a list of human-readable issue strings. An empty list means the two
+    readings agree.
+    """
+    md_text = "\n".join(
+        _format_row(r) for r in rows
+    ) if rows else ""
+    report = analyze(index, md_text)
+    return report["issues"]
+
+
+def _format_row(row):
+    """Reconstruct a single markdown table row from a parsed dict."""
+    path = row.get("path", "")
+    rule = row.get("rule", "")
+    desc = row.get("description", "")
+    code = row.get("expected_exit_code", "")
+    return "| `%s` | %s | %s | %s |" % (path, rule, desc, code)
+
+
 def render_issues(report):
     return report["issues"]
 
