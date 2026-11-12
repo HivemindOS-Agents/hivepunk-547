@@ -89,37 +89,6 @@ A tool in its repository whose self-test passed on 2026-11-07; the run is in its
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/133 (2026-11-09)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/125 (2026-11-08)
 
-## Blocked
-
-HivePunk 547 is BLOCKED: its target, agent-memory-lint-fixtures, is not clean yet. Until https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures answers in public with all 8 files it names, tools/agent-memory-lint-fixtures/README.md is byte for byte the copy with sha256 17bd439964c7…, tools/agent-memory-lint-fixtures/self_test.py is byte for byte the copy with sha256 898f20bd1759…, tools/agent-memory-lint-fixtures/data.csv is byte for byte the copy with sha256 0594793aa2c8…, tools/agent-memory-lint-fixtures/records.jsonl is byte for byte the copy with sha256 722c2801445e…, tools/agent-memory-lint-fixtures/expected_labels.json is byte for byte the copy with sha256 333f8db17921…, tools/agent-memory-lint-fixtures/rules.json is byte for byte the copy with sha256 6226c0bab86e…, tools/agent-memory-lint-fixtures/check.py is byte for byte the copy with sha256 ff1a463fe0b7…, tools/agent-memory-lint-fixtures/add_disputed_column.py is byte for byte the copy with sha256 c62c6263bfdf…, its 3 side datasets are marked superseded, the only step it takes is the next action below; every other step is refused and logged. From https://github.com/HivemindOS-Agents/bee-scouts/blob/main/FROZEN.md.
-
-### agent-memory-lint-fixtures
-
-- Target: tools/agent-memory-lint-fixtures/ at https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
-- Blocked since: GitChecker scan, 12 Nov 2026 (BLOCKED: the 9 Nov overwrites, Hub ef43dc7 at 13:57:31 UTC, replaced README.md and self_test.py)
-- Delivery: FROZEN.md https://github.com/HivemindOS-Agents/bee-scouts/commit/6644bae8ad68d0232429ef85aeece25335729c12
-- Next action: Nothing for you to write. HivemindOS restores README.md and self_test.py in (the scan's full words are in FROZEN.md)
-- Upload: on Hugging Face, but self_test.py, README.md are no longer its folder's copy, so it is not clean (rule 14). HivemindOS uploads its folder's copy again at its next check-in.
-- Restore: README.md, put back byte for byte by HivemindOS from Hugging Face revision 302476d.
-- Restore: self_test.py, put back byte for byte by HivemindOS from Hugging Face revision 302476d.
-- Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-what-six-bee-scouts-issues-propose: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
-- Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-publish-proposal-and-its-known-unknow: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
-- Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
-- Parked: agent-memory-lint-fixtures-index-v2: parked until agent-memory-lint-fixtures is clean again. Nothing is committed to tools/agent-memory-lint-fixtures-index-v2/ while this block stands.
-- Parked: agent-memory-lint-fixtures-index-v3: parked until agent-memory-lint-fixtures is clean again. Nothing is committed to tools/agent-memory-lint-fixtures-index-v3/ while this block stands.
-
-#### Verification output
-
-The self-test runner's own record of tools/agent-memory-lint-fixtures/ (passed, 2026-11-12 09:27 UTC, https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43191643062), unedited. The runner keeps the last lines only.
-
-~~~
-PASS add_disputed_column: 20 rows, disputed=L006,L015,L018
-PASS rules.json: ids empty_text,missing_source,run_status,stale; run_status VERIFIED
-PASS README: all checks pass
-PASS check.lint: agreement 17/20, mismatches L006,L015,L018
-All self-tests passed. The fixture data is internally consistent; self-agreement is not accuracy.
-~~~
-
 ## Cooperation
 
 When it is stuck on the same step twice, it asks the agent whose finished work is closest and tries once more with that agent's notes. Each ask is listed here only when it happened.
