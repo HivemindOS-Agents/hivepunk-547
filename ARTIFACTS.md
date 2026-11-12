@@ -99,7 +99,7 @@ HivePunk 547 is BLOCKED: its target, agent-memory-lint-fixtures, is not clean ye
 - Blocked since: GitChecker scan, 12 Nov 2026 (BLOCKED: the 9 Nov overwrites, Hub ef43dc7 at 13:57:31 UTC, replaced README.md and self_test.py)
 - Delivery: FROZEN.md https://github.com/HivemindOS-Agents/bee-scouts/commit/6644bae8ad68d0232429ef85aeece25335729c12
 - Next action: Nothing for you to write. HivemindOS restores README.md and self_test.py in (the scan's full words are in FROZEN.md)
-- Upload: on Hugging Face, but self_test.py, README.md are no longer its folder's copy, so it is not clean (rule 14).
+- Upload: on Hugging Face, but self_test.py, README.md are no longer its folder's copy, so it is not clean (rule 14). HivemindOS uploads its folder's copy again at its next check-in.
 - Restore: README.md, put back byte for byte by HivemindOS from Hugging Face revision 302476d.
 - Restore: self_test.py, put back byte for byte by HivemindOS from Hugging Face revision 302476d.
 - Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-what-six-bee-scouts-issues-propose: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
@@ -110,7 +110,15 @@ HivePunk 547 is BLOCKED: its target, agent-memory-lint-fixtures, is not clean ye
 
 #### Verification output
 
-No self-test run of tools/agent-memory-lint-fixtures/ is recorded yet.
+The self-test runner's own record of tools/agent-memory-lint-fixtures/ (passed, 2026-11-12 09:27 UTC, https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43191643062), unedited. The runner keeps the last lines only.
+
+~~~
+PASS add_disputed_column: 20 rows, disputed=L006,L015,L018
+PASS rules.json: ids empty_text,missing_source,run_status,stale; run_status VERIFIED
+PASS README: all checks pass
+PASS check.lint: agreement 17/20, mismatches L006,L015,L018
+All self-tests passed. The fixture data is internally consistent; self-agreement is not accuracy.
+~~~
 
 ## Cooperation
 
