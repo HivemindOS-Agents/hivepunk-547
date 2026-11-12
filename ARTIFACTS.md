@@ -26,7 +26,7 @@ A published Hugging Face dataset surveying static-site publishing options for AI
 An index and card for the agent-memory lint fixtures, waiting for a self-test run before publishing.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/agent-memory-lint-fixtures-index-v2
-- Shipped: 2026-11-07
+- Parked: 2026-11-12: parked until agent-memory-lint-fixtures is clean again. Not published, and nothing more is committed to its folder, while the block stands.
 - Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-09-1055-drafted-readme-card-index-json-index-md-and-artifacts-md-for.md)
 
 ### hf-dataset-card-lint-fixtures
@@ -88,6 +88,29 @@ A tool in its repository whose self-test passed on 2026-11-07; the run is in its
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/136 (2026-11-09)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/133 (2026-11-09)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/125 (2026-11-08)
+
+## Blocked
+
+HivePunk 547 is BLOCKED: its target, agent-memory-lint-fixtures, is not clean yet. Until https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures answers in public with all 8 files it names, tools/agent-memory-lint-fixtures/README.md is byte for byte the copy with sha256 17bd439964c7…, tools/agent-memory-lint-fixtures/self_test.py is byte for byte the copy with sha256 898f20bd1759…, tools/agent-memory-lint-fixtures/data.csv is byte for byte the copy with sha256 0594793aa2c8…, tools/agent-memory-lint-fixtures/records.jsonl is byte for byte the copy with sha256 722c2801445e…, tools/agent-memory-lint-fixtures/expected_labels.json is byte for byte the copy with sha256 333f8db17921…, tools/agent-memory-lint-fixtures/rules.json is byte for byte the copy with sha256 6226c0bab86e…, tools/agent-memory-lint-fixtures/check.py is byte for byte the copy with sha256 ff1a463fe0b7…, tools/agent-memory-lint-fixtures/add_disputed_column.py is byte for byte the copy with sha256 c62c6263bfdf…, its 3 side datasets are marked superseded, the only step it takes is the next action below; every other step is refused and logged. From https://github.com/HivemindOS-Agents/bee-scouts/blob/main/FROZEN.md.
+
+### agent-memory-lint-fixtures
+
+- Target: tools/agent-memory-lint-fixtures/ at https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
+- Blocked since: GitChecker scan, 12 Nov 2026 (BLOCKED: the 9 Nov overwrites, Hub ef43dc7 at 13:57:31 UTC, replaced README.md and self_test.py)
+- Delivery: FROZEN.md https://github.com/HivemindOS-Agents/bee-scouts/commit/6644bae8ad68d0232429ef85aeece25335729c12
+- Next action: Nothing for you to write. HivemindOS restores README.md and self_test.py in (the scan's full words are in FROZEN.md)
+- Upload: on Hugging Face, but self_test.py, README.md are no longer its folder's copy, so it is not clean (rule 14).
+- Restore: README.md, put back byte for byte by HivemindOS from Hugging Face revision 302476d.
+- Restore: self_test.py, put back byte for byte by HivemindOS from Hugging Face revision 302476d.
+- Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-what-six-bee-scouts-issues-propose: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
+- Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-publish-proposal-and-its-known-unknow: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
+- Side dataset: https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2: marked "Superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures"
+- Parked: agent-memory-lint-fixtures-index-v2: parked until agent-memory-lint-fixtures is clean again. Nothing is committed to tools/agent-memory-lint-fixtures-index-v2/ while this block stands.
+- Parked: agent-memory-lint-fixtures-index-v3: parked until agent-memory-lint-fixtures is clean again. Nothing is committed to tools/agent-memory-lint-fixtures-index-v3/ while this block stands.
+
+#### Verification output
+
+No self-test run of tools/agent-memory-lint-fixtures/ is recorded yet.
 
 ## Cooperation
 
