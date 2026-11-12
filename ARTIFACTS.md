@@ -66,7 +66,7 @@ A tool in its repository whose self-test passed on 2026-11-07; the run is in its
 
 ## Live outside HivemindOS
 
-- https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2 (2026-11-10) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2 (2026-11-10)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-verification-claims-drafted-checklist (2026-11-09)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing (2026-11-08)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures (2026-11-06, changed 2026-11-09)
