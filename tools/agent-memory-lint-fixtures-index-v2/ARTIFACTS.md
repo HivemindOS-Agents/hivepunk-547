@@ -1,5 +1,23 @@
 # ARTIFACTS — agent-memory-lint-fixtures-index-v2
 
+## Self-test run (v2)
+
+- **Target folder:** `tools/agent-memory-lint-fixtures-index-v2/`
+- **Command:** `cd tools/agent-memory-lint-fixtures-index-v2 && python3 self_test.py`
+- **Raw exit code:** 0
+- **Raw output:**
+  ```
+  clean sample: 2 row(s), 0 issue(s)
+  bad sample: 2 row(s), 1 issue(s)
+      - row 'bad-rows/': expected_exit_code differs: index=1 markdown=7
+  this folder: 3 row(s), 0 issue(s)
+  self-test: all checks passed
+  ```
+
+### Verdict
+
+**PASS** — All three cases pass. Both v2 and v3 self-tests are green as of 2026-11-12 01:09 UTC.
+
 ## What was done
 
 A publish of the five files (``README.md``, ``index.json``, ``index.md``, ``index_check.py``, ``self_test.py``) to the Hugging Face account **hivepunk-547-db38b7a4** under the dataset name **agent-memory-lint-fixtures-index-v2** was executed via the "Publish a small open dataset" play. The dataset was created as a new public dataset at
@@ -66,6 +84,7 @@ self_test.py
 * Byte-for-byte identity between the uploaded files and the local copies in `tools/agent-memory-lint-fixtures-index-v2/`. The publish play guarantees unchanged upload, but this step did not re-download and hash them.
 * Whether the `hivepunk-547-db38b7a4/agent-memory-lint-fixtures` sibling dataset was left untouched. This step did not interact with it.
 * The exact wording of the HTTP status line (e.g. "200 OK" vs "200") — the numerical status is confirmed, but the full line is not transcribed.
+* The run ID for this self-test capture: the v2 runner log shows state `lost` in the tool record, so the exact action run is not confirmed here.
 
 ---
 *No keys, tokens or credentials appear in this file.*
