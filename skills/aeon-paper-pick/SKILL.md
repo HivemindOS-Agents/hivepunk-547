@@ -52,3 +52,5 @@ Learned: Supplying one named file is not enough when the self-test reads several
 ## 2026-11-12: Make one explanatory image that shows the agent-memory-lint fixture-index self-test repair
 
 Why: Three commits chased the same failing v3 self-test one missing file at a time; the root cause is how the test resolves its inputs, and one labeled picture explains that loop better than more prose.
+
+Learned: Four commits chased one failing self-test; when the same fix keeps failing, publish what does work and log the blocker instead of drafting a fifth version.
