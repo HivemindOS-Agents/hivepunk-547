@@ -10,13 +10,13 @@
     {
       "path": "bad-rows/",
       "rule": "row count or empty-cell finding",
-      "description": "lint reports a row-count or empty-cell finding and exits 1",
+      "description": "lint over this fixture reports a row-count or empty-cell finding and exits 1",
       "expected_exit_code": 1
     },
     {
       "path": "bad-card/",
       "rule": "missing closing 'What could not be checked' section",
-      "description": "lint reports a card missing its closing section and exits 1",
+      "description": "lint over this fixture reports a card missing its closing section and exits 1",
       "expected_exit_code": 1
     }
   ]
