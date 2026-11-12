@@ -8,7 +8,7 @@
       "expected_exit_code": 0
     },
     {
-      "path": "bad-rows-v2/",
+      "path": "fixtures/bad-rows/",
       "rule": "row count or empty-cell finding",
       "description": "lint over this fixture reports a row-count or empty-cell finding and exits 1",
       "expected_exit_code": 1
