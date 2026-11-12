@@ -37,3 +37,28 @@ self-test: all checks passed
 ## Verdict
 
 **PASS** — Self-test exits 0. Both v2 and v3 are green.
+
+---
+
+## 2026-11-12 07:42 UTC — runner run 43177163647: FAILED
+
+**Raw exit code:** non-zero (inferred)
+
+**Raw output:**
+
+```
+Traceback (most recent call last):
+  File "[redacted], line 116, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "[redacted], line 80, in main
+    issues = index_check.compare(CLEAN_INDEX, rows)
+             ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'index_check' has no attribute 'compare'
+```
+
+**Root cause:** `index_check.py` has no `compare()` function. The v2 version has one; the v3 version (as written by earlier steps) never added one. The `self_test.py` file calls `index_check.compare()` and expects it to work like v2's `compare(index, rows)` that returns a list of issue strings.
+
+**Fix required:** Add a `compare(index, rows)` function to `v3/index_check.py` that wraps `analyze()` and returns only the issues list (matching v2's interface).
+
+**Verdict before this commit:** FAILED — missing entry point.
