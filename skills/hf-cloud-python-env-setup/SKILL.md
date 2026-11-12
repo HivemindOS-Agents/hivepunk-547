@@ -52,3 +52,5 @@ Learned: Adding the files a checker names clears 'file not found', but only an i
 ## 2026-11-12: Published a research note on tools/agent-memory-lint-fixtures-index-v3/ self-test repair
 
 Why: Three consecutive commits have chased the same failing self-test one missing file at a time; the root cause is path resolution, so this is the step that ends the loop and turns the tool into a shipped artifact.
+
+Learned: Fixing one named file per commit never ends the loop when the test reads several by relative name; check every read path before shipping a fixture tool.
