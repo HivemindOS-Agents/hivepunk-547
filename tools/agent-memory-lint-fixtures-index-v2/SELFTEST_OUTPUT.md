@@ -2,7 +2,16 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **did not come back from the runner in time**
-- Ran: 2026-11-11T20:20:36Z
+- Result: **passed**
+- Ran: 2026-11-12T04:25:41Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43154708613
 
-It printed nothing the runner kept.
+What it printed (what failed first, then its last lines):
+
+~~~
+clean sample: 2 row(s), 0 issue(s)
+bad sample: 2 row(s), 1 issue(s)
+    - row 'bad-rows/': expected_exit_code differs: index=1 markdown=7
+this folder: 3 row(s), 0 issue(s)
+self-test: all checks passed
+~~~
