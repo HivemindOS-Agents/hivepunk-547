@@ -1,0 +1,27 @@
+{
+  "dataset": "agent-memory-lint-fixtures-index-v3 (sample, deliberately broken)",
+  "entries": [
+    {
+      "path": "clean/",
+      "rule": "no findings on a clean fixture",
+      "description": "lint over this fixture produces no findings and exits 0",
+      "expected_exit_code": 0
+    },
+    {
+      "path": "bad-rows-v2/",
+      "rule": "row count or empty-cell finding",
+      "description": "lint over this fixture reports a row-count or empty-cell finding and exits 1",
+      "expected_exit_code": 1
+    },
+    {
+      "path": "bad-card/",
+      "rule": "missing closing 'What could not be checked' section"
+    },
+    {
+      "path": "totally-unknown/",
+      "rule": "extra entry with no matching fixture",
+      "description": "this path matches no known fixture directory and must be reported as extra",
+      "expected_exit_code": 9
+    }
+  ]
+}
