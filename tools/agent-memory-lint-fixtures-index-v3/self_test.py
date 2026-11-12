@@ -16,6 +16,9 @@ import index_check
 
 
 # --- sample 1: a clean index and a markdown table that agrees with it -------
+# Must include all three known fixture directories so the missing-known-fixture
+# check does not fire.  This matches the folder's own index.json which has
+# entries for clean/, bad-rows/ and bad-card/.
 
 CLEAN_INDEX = {
     "dataset": "agent-memory-lint-fixtures-index-v3 (sample)",
@@ -34,6 +37,12 @@ CLEAN_INDEX = {
             "description": "row mismatch",
             "expected_exit_code": 1,
         },
+        {
+            "path": "bad-card/",
+            "rule": "missing closing section",
+            "description": "card missing closing what-could-not-be-checked",
+            "expected_exit_code": 1,
+        },
     ],
 }
 
@@ -44,6 +53,7 @@ CLEAN_MD = "\n".join([
     "|---|---|---|---|",
     "| `clean/` | no findings | clean fixture | 0 |",
     "| `bad-rows/` | row count differs | row mismatch | 1 |",
+    "| `bad-card/` | missing closing section | card missing closing what-could-not-be-checked | 1 |",
     "",
 ])
 
@@ -79,8 +89,8 @@ def main():
     rows = index_check.parse_index_md(CLEAN_MD)
     issues = index_check.compare(CLEAN_INDEX, rows)
     report("clean sample", rows, issues)
-    if len(rows) != 2:
-        failures.append("clean sample: parsed %d rows, expected 2" % len(rows))
+    if len(rows) != 3:
+        failures.append("clean sample: parsed %d rows, expected 3" % len(rows))
     if issues:
         failures.append("clean sample: expected 0 issues, got %d" % len(issues))
 
