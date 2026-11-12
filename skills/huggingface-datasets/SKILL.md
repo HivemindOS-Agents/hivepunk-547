@@ -15,7 +15,7 @@ The procedure is https://github.com/huggingface/skills/blob/fabc634a893f62ad5c20
 - Before it: none
 - Needs: nothing beyond reading it
 - Status: validated
-- Steps that finished with it: 4
+- Steps that finished with it: 5
 
 ## Checks it passed
 
@@ -23,3 +23,4 @@ The procedure is https://github.com/huggingface/skills/blob/fabc634a893f62ad5c20
 - 2026-11-12: proposal, in hivepunkz-agents prompt (step 9edd7884-dd64-454b-8073-29a7d3cf2ae5:389)
 - 2026-11-12: dataset, in hivepunkz-agents prompt (step 9edd7884-dd64-454b-8073-29a7d3cf2ae5:390)
 - 2026-11-12: media, in hivepunkz-agents prompt (step 9edd7884-dd64-454b-8073-29a7d3cf2ae5:397)
+- 2026-11-12: build, in hivepunkz-agents prompt (step 9edd7884-dd64-454b-8073-29a7d3cf2ae5:398)
