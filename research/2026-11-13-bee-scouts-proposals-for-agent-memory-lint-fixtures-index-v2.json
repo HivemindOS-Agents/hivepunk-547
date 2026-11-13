@@ -1,0 +1,176 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-13T08:23:14.171Z",
+  "subject": "bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The pages show a fixed-target, read-back-first publishing proposal for a five-file index dataset, but also show that neither the public index nor search could confirm the dataset page or its files, and that a long chain of similar proposals never produced a confirmed live page; on the evidence read, the upload is a plan, not a live artifact.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 42 raw commits in the last 30 days, 6 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-14T08:23:22.293Z"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 9278a35, on 2026-11-08.",
+      "check": "shipping",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/commit/9278a35795e7aeb68339f31241ce5d15de7d2510"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Issue #156 proposes publishing the folder tools/agent-memory-lint-fixtures-index-v2/ as one public dataset under the account hivepunk-547-db38b7a4 named agent-memory-lint-fixtures-index-v2, with exactly the five files README.md, index.json, index.md, index_check.py and self_test.py copied…",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Issue #156 says neither the public index nor search could confirm whether huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 exists, what its page status line says, or which files it serves.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Issue #156 asks that the reply report the live dataset URL, the page status line exactly as the live page shows it, and the served file list exactly as shown, and say plainly if any of the three could not be read.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Issue #156 says the folder's proposal should leave hivepunk-547-db38b7a4/agent-memory-lint-fixtures untouched.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Issue #133 says the index.json for the index-v2 work would hold one entry per folder under tools/agent-memory-lint-fixtures/ — clean/, bad-rows/, bad-card/ — each with its rule and expected exit code, with index.md the same index as a table, and that the self-test output lives in the repository's…",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/133"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Issue #133 says the public index listed hivemindos.app pages, the SuperAgent API and the HivePunkz agent pages, but no Hugging Face dataset page, so it could not confirm that hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 exists.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/133"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Issue #98 says there is no hivemindos organisation and the account is hivepunk-547-db38b7a4, so anything published lands only there, and that where a published README.md already exists it should be republished with the same title so it updates in place.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Issue #156 is labelled bee-547 and bee-proposal and carries the line 'Written by a bee on a scout mission; a person decides', and says a person decides and an agent never merges anything.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "Issue #68 describes a README.md card for the related fixtures work stating that labels are hand-derived from check.py's rule code, that no checker ran so there is no stdout, exit code, diff or checksum, that both reproduce commands are UNRUN, and that self-agreement is not accuracy.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/68"
+    },
+    {
+      "id": "c10",
+      "label": "DERIVED",
+      "text": "On the pages read, the index-v2 dataset is a described plan rather than a confirmed live artifact, because issue #156 and issue #133 both say the dataset page and its files could not be confirmed from the public index or search.",
+      "check": "page",
+      "inputs": [
+        "c2",
+        "c6"
+      ],
+      "math": "c2 and c6 each state that the dataset page could not be confirmed; no page read shows the dataset page itself, so existence stays unconfirmed."
+    },
+    {
+      "id": "c11",
+      "label": "DERIVED",
+      "text": "The five file names in the publish request and the three fixture folders in the index line up as different layers: the index points at fixture folders in the GitHub repository, while the upload carries the index files rather than the fixture folders themselves.",
+      "check": "page",
+      "inputs": [
+        "c1",
+        "c5"
+      ],
+      "math": "c1 lists the five files to upload (README.md, index.json, index.md, index_check.py, self_test.py) and c5 says the index entries describe folders clean/, bad-rows/ and bad-card/ under tools/agent-memory-lint-fixtures/ in the repository; the two sets do not overlap, so the uploaded files index the…"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether the dataset hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 exists, what its page status line says, and which files it serves is not shown on any page read.",
+      "check": "page",
+      "missing": "Reading the live dataset page or its file listing at https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2."
+    }
+  ],
+  "counts": {
+    "fact": 11,
+    "derived": 2,
+    "unknown": 1
+  },
+  "risks": [
+    "The pages show no live Hugging Face dataset page for this work: issue #156 says neither the public index nor search could confirm whether the dataset exists, what its status line says, or which files it serves (https://github.com/HivemindOS-Agents/bee-scouts/issues/156)",
+    "Issue #133 says the public index lists no Hugging Face dataset page, so the existence of the index-v2 dataset could not be confirmed there (https://github.com/HivemindOS-Agents/bee-scouts/issues/133)",
+    "The description of the folder and its files comes from issue text, not from any page inside the repository, so the files themselves were not read",
+    "A long chain of earlier publishing proposals (#68, #70, #98, #109, #133, #156) has not produced a confirmed live page on any page read, so the same outcome is possible here (https://github.com/HivemindOS-Agents/bee-scouts/issues/68)",
+    "The issues are labelled as written by a bee on a scout mission with a person deciding, and a bee never merges anything, so the proposal has no confirmed approval or execution (https://github.com/HivemindOS-Agents/bee-scouts/issues/156)"
+  ],
+  "unknowns": [
+    "Whether the dataset hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 exists, what its page status line says, and which files it serves is not shown on any page read.: Reading the live dataset page or its file listing at https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2."
+  ],
+  "wouldChangeMind": [
+    "Reading the live Hugging Face dataset page for hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 showing the status line and served file list.",
+    "Reading the five files under tools/agent-memory-lint-fixtures-index-v2/ in the repository main branch and comparing them to the upload request.",
+    "A posted read-back reply or a recorded upload commit on the bee-scouts issue showing the upload actually happened."
+  ],
+  "sources": [
+    {
+      "title": "Publish agent-memory-lint-fixtures-index-v2 as one five-file Hugging Face upload · Issue #156 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156"
+    },
+    {
+      "title": "Publish agent-memory-lint-fixtures from the three drafted files, card copied byte-for-byte · Issue #98 · HivemindOS-Agents/bee-scouts · GitH",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98"
+    },
+    {
+      "title": "agent-memory-lint-fixtures: publish the six-row two-file dataset and return the live URL · Issue #109 · HivemindOS-Agents/bee-scouts · GitHu",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/109"
+    },
+    {
+      "title": "agent-memory-lint-fixtures-index-v2: name the GitHub path the index points at · Issue #133 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/133"
+    },
+    {
+      "title": "Publish agent-memory-lint fixtures v2 with the three disputes named in the card · Issue #68 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/68"
+    },
+    {
+      "title": "Publish agent-memory-lint fixtures as a 20-row Hugging Face dataset with caveat-first card · Issue #70 · HivemindOS-Agents/bee-scouts · GitH",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/70"
+    },
+    {
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-14T08:23:22.293Z"
+    }
+  ],
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-13-bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2.md",
+  "decidedBy": "bee"
+}
