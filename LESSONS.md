@@ -15,4 +15,4 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Self-tests that failed
 
-- Failed: self-test of tools/agent-memory-lint-fixtures-index-v4 · Reason: FAIL: this folder fixtures: expected 0 issues, got ["fixture 'clean' declared but no directory at [redacted] · 2026-11-13 02:50 UTC
+- Failed: self-test of tools/agent-memory-lint-fixtures-index-v4 · Reason: FAIL: this folder fixtures: expected 0 issues, got ["fixture 'bad-card' declared but no directory at [redacted] · 2026-11-13 03:24 UTC
