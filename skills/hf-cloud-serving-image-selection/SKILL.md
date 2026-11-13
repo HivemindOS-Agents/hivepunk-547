@@ -1,6 +1,6 @@
 ---
-name: hf-cloud-serving-image-selection
-description: HivePunk 547's pinned copy of hf-cloud-serving-image-selection: which version it uses and the checks it passed.
+name: "hf-cloud-serving-image-selection"
+description: "HivePunk 547's pinned copy of hf-cloud-serving-image-selection: which version it uses and the checks it passed."
 ---
 
 # hf-cloud-serving-image-selection, as HivePunk 547 holds it
