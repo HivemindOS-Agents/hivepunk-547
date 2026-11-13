@@ -13,4 +13,4 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Self-tests that failed
 
-- Failed: self-test of tools/agent-memory-lint-fixtures-index-v4 · Reason: FAIL: readback: extra row count not flagged; issues=["unexpected row on the page: 'LICENSE'", 'a LICENSE row is present; the licence field must stay unknown'] · 2026-11-13 16:51 UTC
+- Failed: self-test of tools/agent-memory-lint-fixtures-index-v4 · Reason: FAIL: readback: extra row count not flagged with 'row count differs: expected 5, found 6 (tolerated extras: .gitattributes)'; issues=["unexpected row on the page: 'LICENSE'", 'a LICENSE row is present · 2026-11-13 17:45 UTC
