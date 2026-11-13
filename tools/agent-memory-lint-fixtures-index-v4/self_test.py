@@ -13,9 +13,10 @@ it on bundled sample data:
     three mutated values -> exactly four issues, asserted one by one
   * this folder's own index.json + index.md pair -> 0 issues
   * the folder check over the three declared fixtures -> 0 issues
-  * readback on sample listings: a clean listing passes, a listing with an
-    extra LICENSE row fails on row count and on the LICENSE rule, and a
-    rewrapped index.md fails the byte comparison
+  * readback: every file decided by the sha256 of its bytes; a rewrapped
+    index.md with the same byte length and a different sha256 is caught and
+    the verdict is FAIL; a same-bytes file with a different 40-hex git blob id
+    is caught through the second fingerprint; a 64-hex id is not a git blob id
 
 A table with no issues is not called correct here; each expected finding is
 named and compared.
@@ -126,29 +127,69 @@ def test_folder(mod):
 
 
 def test_readback(mod):
-    # A clean listing passes the shape check.
+    # A clean listing passes the shape check and every row carries a 40-hex id.
     rows = mod.listing_rows(mod.SAMPLE_TREE)
     check(len(rows) == 5, "readback: sample listing has %d rows, expected 5" % len(rows))
     issues = mod.listing_verdict(rows)
     check(issues == [], "readback: clean sample listing raised %r" % issues)
     for r in rows:
-        check(r["hub_oid"], "readback: no object id read for %r" % r["path"])
+        check(mod.is_git_oid(r["hub_oid"]),
+              "readback: no 40-hex object id read for %r" % r["path"])
+
+    # The rewrapped fixture must have the same byte length as the clean one
+    # and a different sha256: that is what makes it a genuine rewrap.
+    clean = mod.INDEX_MD_CLEAN
+    rewrapped = mod.INDEX_MD_REWRAPPED
+    check(len(clean) == len(rewrapped),
+          "readback: rewrap changed byte length, %d vs %d" % (len(clean), len(rewrapped)))
+    check(mod.sha256(clean) != mod.sha256(rewrapped),
+          "readback: rewrap did not change sha256; the broken sample is byte-identical")
 
     # Byte-identical sample passes; the verdict must be PASS.
     byte_rows, byte_issues = mod.sample_compare(diff=False)
     check(byte_issues == [], "readback: clean sample bytes raised %r" % byte_issues)
     for r in byte_rows:
-        check(r["bytes_equal"] and r["sha256_equal"],
-              "readback: clean sample %r not equal" % r["path"])
+        check(r["length_equal"], "readback: clean sample %r length differs" % r["path"])
+        check(r["sha256_equal"], "readback: clean sample %r sha256 differs" % r["path"])
+        check(r["oid_equal"] is True,
+              "readback: clean sample %r oid_equal=%r" % (r["path"], r["oid_equal"]))
+        check(r["content_equal"], "readback: clean sample %r not decided equal" % r["path"])
     line = mod.verdict_line(byte_rows, [], [])
     check(line == "verdict: PASS", "readback: clean sample verdict %r" % line)
 
-    # A rewrapped index.md must be caught by the byte comparison.
+    # A rewrapped index.md must be caught by the sha256 comparison, at the
+    # same byte length, and the verdict must be FAIL.
     bad_rows, bad_issues = mod.sample_compare(diff=True)
     check(any("index.md" in i and "sha256 differs" in i for i in bad_issues),
           "readback: rewrapped index.md not caught; issues=%r" % bad_issues)
+    check(not any("index.md" in i and "length differs" in i for i in bad_issues),
+          "readback: rewrap reported as a length difference; issues=%r" % bad_issues)
+    rw = [r for r in bad_rows if r["path"] == "index.md"]
+    check(len(rw) == 1, "readback: no index.md row in the rewrapped run")
+    rw = rw[0]
+    check(rw["length_equal"], "readback: rewrapped index.md length_equal is False")
+    check(not rw["sha256_equal"], "readback: rewrapped index.md sha256_equal is True")
+    check(not rw["content_equal"], "readback: rewrapped index.md decided equal")
     line = mod.verdict_line(bad_rows, [], bad_issues)
     check(line == "verdict: FAIL", "readback: rewrapped verdict %r" % line)
+
+    # Same bytes, different 40-hex git blob id: caught by the second check.
+    same_rows, same_issues = mod.sample_compare(diff=False, gh_diff=True)
+    check(any("index.md" in i and "git blob id differs" in i for i in same_issues),
+          "readback: blob-id-only change not caught; issues=%r" % same_issues)
+    rw = [r for r in same_rows if r["path"] == "index.md"][0]
+    check(rw["sha256_equal"], "readback: blob-id run changed sha256_equal")
+    check(rw["oid_equal"] is False, "readback: blob-id run oid_equal=%r" % rw["oid_equal"])
+    check(not rw["content_equal"], "readback: blob-id run decided equal")
+    line = mod.verdict_line(same_rows, [], same_issues)
+    check(line == "verdict: FAIL", "readback: blob-id verdict %r" % line)
+
+    # Only a full 40-hex id is a git blob id.
+    check(mod.is_git_oid("a" * 40) is True, "readback: is_git_oid rejected 40 hex")
+    check(mod.is_git_oid("a" * 64) is False, "readback: is_git_oid accepted 64 hex")
+    check(mod.is_git_oid("") is False, "readback: is_git_oid accepted empty")
+    check(mod.is_git_oid(None) is False, "readback: is_git_oid accepted None")
+    check(mod.is_git_oid("g" * 40) is False, "readback: is_git_oid accepted non-hex")
 
     # An extra LICENSE row must fail on the rule and on the row count.
     rows = mod.listing_rows(mod.SAMPLE_TREE_EXTRA)
@@ -157,7 +198,8 @@ def test_readback(mod):
           "readback: LICENSE row not flagged; issues=%r" % issues)
     check(any("rows, expected" in i for i in issues),
           "readback: extra row count not flagged; issues=%r" % issues)
-    return "readback: listing 5 rows, bytes equal, LICENSE row flagged"
+    return ("readback: 5 rows, sha256 decides, rewrap caught, blob id caught,"
+            " LICENSE flagged")
 
 
 def main():
