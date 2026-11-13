@@ -2,12 +2,16 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **failed**
-- Ran: 2026-11-13T17:45:13Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43475833161
+- Result: **passed**
+- Ran: 2026-11-13T21:56:17Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43515011698
 
 What it printed (what failed first, then its last lines):
 
 ~~~
-FAIL: readback: extra row count not flagged with 'row count differs: expected 5, found 6 (tolerated extras: .gitattributes)'; issues=["unexpected row on the page: 'LICENSE'", 'a LICENSE row is present
+clean sample: 3 row(s), 0 issue(s)
+broken sample: 2 row(s), 4 issue(s), all expected
+this folder: 3 row(s), 0 issue(s), fixtures present
+readback: 5 rows, sha256 decides, rewrap caught, blob id caught, LICENSE flagged, row count not flagged (window)
+self-test: all checks passed
 ~~~
