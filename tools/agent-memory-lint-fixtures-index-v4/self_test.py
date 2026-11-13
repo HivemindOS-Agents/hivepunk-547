@@ -4,14 +4,18 @@
 Run with no arguments, from this folder. No network, no writes. Exits 0 only
 when every check passes.
 
-It imports the tool's own code (index_check.parse_markdown, index_check.compare)
-and runs it on bundled sample data:
+It imports the tool's own code (index_check.parse_markdown, index_check.compare,
+readback.listing_rows, readback.listing_verdict, readback.compare_bytes) and runs
+it on bundled sample data:
 
   * a clean sample of three entries and three matching rows -> 0 issues
   * a deliberately broken sample: three JSON entries, a two-row table, and
     three mutated values -> exactly four issues, asserted one by one
   * this folder's own index.json + index.md pair -> 0 issues
   * the folder check over the three declared fixtures -> 0 issues
+  * readback on sample listings: a clean listing passes, a listing with an
+    extra LICENSE row fails on row count and on the LICENSE rule, and a
+    rewrapped index.md fails the byte comparison
 
 A table with no issues is not called correct here; each expected finding is
 named and compared.
@@ -48,8 +52,7 @@ BROKEN_JSON = {
     ]
 }
 
-# Two rows: bad-card row missing, clean row's rule mutated, bad-rows glyph
-# written as an escaped pipe so the cell itself folds to 'bad-rows/' too.
+# Two rows: bad-card row missing, clean row's rule mutated, bad-rows code flipped.
 BROKEN_MD = (
     "| Path | Rule | Expected exit code |\n"
     "|---|---|---|\n"
@@ -76,14 +79,13 @@ def check(cond, msg):
         raise Fail(msg)
 
 
-def import_tool():
-    """Import the tool's own index_check.py from this folder."""
+def import_tool(name):
     sys.dont_write_bytecode = True
     here = os.path.dirname(os.path.abspath(__file__))
     if here not in sys.path:
         sys.path.insert(0, here)
-    import index_check
-    return index_check
+    mod = __import__(name)
+    return mod
 
 
 def test_clean(mod):
@@ -123,10 +125,47 @@ def test_folder(mod):
     return "this folder: %d row(s), 0 issue(s), fixtures present" % len(rows)
 
 
+def test_readback(mod):
+    # A clean listing passes the shape check.
+    rows = mod.listing_rows(mod.SAMPLE_TREE)
+    check(len(rows) == 5, "readback: sample listing has %d rows, expected 5" % len(rows))
+    issues = mod.listing_verdict(rows)
+    check(issues == [], "readback: clean sample listing raised %r" % issues)
+    for r in rows:
+        check(r["hub_oid"], "readback: no object id read for %r" % r["path"])
+
+    # Byte-identical sample passes; the verdict must be PASS.
+    byte_rows, byte_issues = mod.sample_compare(diff=False)
+    check(byte_issues == [], "readback: clean sample bytes raised %r" % byte_issues)
+    for r in byte_rows:
+        check(r["bytes_equal"] and r["sha256_equal"],
+              "readback: clean sample %r not equal" % r["path"])
+    line = mod.verdict_line(byte_rows, [], [])
+    check(line == "verdict: PASS", "readback: clean sample verdict %r" % line)
+
+    # A rewrapped index.md must be caught by the byte comparison.
+    bad_rows, bad_issues = mod.sample_compare(diff=True)
+    check(any("index.md" in i and "sha256 differs" in i for i in bad_issues),
+          "readback: rewrapped index.md not caught; issues=%r" % bad_issues)
+    line = mod.verdict_line(bad_rows, [], bad_issues)
+    check(line == "verdict: FAIL", "readback: rewrapped verdict %r" % line)
+
+    # An extra LICENSE row must fail on the rule and on the row count.
+    rows = mod.listing_rows(mod.SAMPLE_TREE_EXTRA)
+    issues = mod.listing_verdict(rows)
+    check(any("LICENSE" in i for i in issues),
+          "readback: LICENSE row not flagged; issues=%r" % issues)
+    check(any("rows, expected" in i for i in issues),
+          "readback: extra row count not flagged; issues=%r" % issues)
+    return "readback: listing 5 rows, bytes equal, LICENSE row flagged"
+
+
 def main():
     try:
-        mod = import_tool()
-        lines = [test_clean(mod), test_broken(mod), test_folder(mod)]
+        check_mod = import_tool("index_check")
+        lines = [test_clean(check_mod), test_broken(check_mod), test_folder(check_mod)]
+        rb = import_tool("readback")
+        lines.append(test_readback(rb))
     except Fail as e:
         sys.stderr.write("FAIL: %s\n" % e)
         return 1
