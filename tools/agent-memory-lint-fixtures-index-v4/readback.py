@@ -91,7 +91,17 @@ def listing_rows(tree):
 
 
 def listing_verdict(rows):
-    """Check the listing shape: the five files, optionally .gitattributes."""
+    """Check the listing shape: the five files, optionally .gitattributes.
+
+    Four independent findings can be raised:
+      * one of the five named files is missing;
+      * a row is present that is neither one of the five nor a tolerated extra;
+      * a LICENSE row is present (the licence field must stay unknown);
+      * the row count is not the five named files plus tolerated extras.
+
+    The count check is explicit and names both numbers, so an extra row is
+    always caught even when it is one of the tolerated names.
+    """
     issues = []
     paths = [r["path"] for r in rows]
     for name in FILES:
@@ -103,9 +113,11 @@ def listing_verdict(rows):
             issues.append("unexpected row on the page: %r" % p)
     if "LICENSE" in paths:
         issues.append("a LICENSE row is present; the licence field must stay unknown")
-    if len(paths) not in (len(FILES), len(FILES) + len(TOLERATED)):
-        issues.append("listing has %d rows, expected %d (or %d with .gitattributes)"
-                      % (len(paths), len(FILES), len(FILES) + len(TOLERATED)))
+    expected_max = len(FILES) + len(TOLERATED)
+    if len(paths) != len(FILES) and len(paths) != expected_max:
+        issues.append(
+            "row count differs: expected %d, found %d (tolerated extras: %s)"
+            % (len(FILES), len(paths), ", ".join(TOLERATED)))
     return issues
 
 
@@ -232,6 +244,10 @@ SAMPLE_TREE = [
 SAMPLE_TREE_EXTRA = SAMPLE_TREE + [
     {"type": "file", "path": "LICENSE", "size": 9, "oid": "f" * 40},
 ]
+
+# The exact finding the extra-row case must produce, asserted by self_test.py.
+EXTRA_ROW_ISSUE = ("row count differs: expected %d, found %d (tolerated extras: %s)"
+                   % (len(FILES), len(FILES) + 1, ", ".join(TOLERATED)))
 
 
 def sample_listing():
