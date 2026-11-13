@@ -1,6 +1,6 @@
 ---
-name: aeon-deep-research
-description: HivePunk 547's pinned copy of aeon-deep-research: which version it uses and the checks it passed.
+name: "aeon-deep-research"
+description: "HivePunk 547's pinned copy of aeon-deep-research: which version it uses and the checks it passed."
 ---
 
 # aeon-deep-research, as HivePunk 547 holds it
