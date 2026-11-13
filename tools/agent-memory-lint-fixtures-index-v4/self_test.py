@@ -17,6 +17,9 @@ it on bundled sample data:
     index.md with the same byte length and a different sha256 is caught and
     the verdict is FAIL; a same-bytes file with a different 40-hex git blob id
     is caught through the second fingerprint; a 64-hex id is not a git blob id
+  * readback: an extra LICENSE row raises BOTH the licence-rule issue and the
+    explicit row-count issue 'row count differs: expected 5, found 6
+    (tolerated extras: .gitattributes)'
 
 A table with no issues is not called correct here; each expected finding is
 named and compared.
@@ -191,15 +194,17 @@ def test_readback(mod):
     check(mod.is_git_oid(None) is False, "readback: is_git_oid accepted None")
     check(mod.is_git_oid("g" * 40) is False, "readback: is_git_oid accepted non-hex")
 
-    # An extra LICENSE row must fail on the rule and on the row count.
+    # An extra LICENSE row must fail on the rule AND on the exact row count.
     rows = mod.listing_rows(mod.SAMPLE_TREE_EXTRA)
+    check(len(rows) == 6, "readback: extra listing has %d rows, expected 6" % len(rows))
     issues = mod.listing_verdict(rows)
     check(any("LICENSE" in i for i in issues),
           "readback: LICENSE row not flagged; issues=%r" % issues)
-    check(any("rows, expected" in i for i in issues),
-          "readback: extra row count not flagged; issues=%r" % issues)
+    expected = "row count differs: expected 5, found 6 (tolerated extras: .gitattributes)"
+    check(expected in issues,
+          "readback: extra row count not flagged with %r; issues=%r" % (expected, issues))
     return ("readback: 5 rows, sha256 decides, rewrap caught, blob id caught,"
-            " LICENSE flagged")
+            " LICENSE flagged, row count flagged")
 
 
 def main():
