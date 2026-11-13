@@ -37,15 +37,22 @@ Anything else prints `verdict: FAIL` and exits 1.
 
 ## What the verify table means
 
-For each file it fetches the bytes from the Hub (`.../resolve/main/<file>`) and
-from GitHub (`raw.githubusercontent.com/.../<file>`), and compares byte length
-and sha256. Two matching sha256 values over the same path is the only evidence
-that nothing was edited or reformatted in transit; a size match alone is not.
+Each file is decided by the **sha256 of its content**. For every path the tool
+fetches the bytes from the Hub (`.../resolve/main/<file>`) and from GitHub
+(`raw.githubusercontent.com/.../<file>`) and compares hashes. Two matching
+sha256 values over the same path is the only evidence that nothing was edited or
+reformatted in transit.
 
-`tree` also reads the git object id the Hub reports per file, since git blob ids
-and sha256 are two independent fingerprints of the same bytes. The field name
-varies between Hub responses, so the script probes several and reports which one
-it used instead of assuming.
+Byte length is printed for the reader but decides nothing. A rewrap can keep the
+exact byte length and still change every byte: the built-in rewrapped sample is
+produced from the clean sample by `INDEX_MD_CLEAN.replace(b"---", b"--:")`, so
+it has the same length, a different sha256, and is caught.
+
+The git blob id is a **second, independent fingerprint**, used only when both
+sides give a full 40-hex id. `is_git_oid()` accepts exactly 40 hex characters: a
+64-hex LFS sha256, an empty value or a short id is not a blob id and can never
+false-fail a file. `tree` reads whatever id field the Hub reports and prints
+which field name it used instead of assuming one.
 
 ## Untested
 
