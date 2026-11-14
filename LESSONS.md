@@ -15,4 +15,5 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Self-tests that failed
 
+- Failed: self-test of tools/hf-publish-check · Reason: FAIL: good folder: expected ok, got ['README.md front matter: ok (keys: description)', 'referenced paths: 1 missing: data/rows.csv'] · 2026-11-14 15:33 UTC
 - Failed: self-test of tools/agent-memory-lint-fixture-catalog · Reason: FAIL: could not import generate_catalog: name 'dedent' is not defined · 2026-11-14 09:14 UTC
