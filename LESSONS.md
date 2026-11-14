@@ -12,4 +12,4 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Self-tests that failed
 
-- Failed: self-test of tools/agent-memory-lint-fixtures-index-v4 · Reason: FAIL: no fixture folder in the index exists on disk · 2026-11-14 04:11 UTC
+- Failed: self-test of tools/agent-memory-lint-fixtures-index-v4 · Reason: FAIL: this folder fixtures: expected 0 issues, got ["fixture 'fixtures/clean' declared but no directory at [redacted] · 2026-11-14 05:01 UTC
