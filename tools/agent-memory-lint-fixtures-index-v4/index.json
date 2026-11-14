@@ -7,19 +7,19 @@
   "tolerated_extra": [".gitattributes"],
   "entries": [
     {
-      "path": "clean/",
+      "path": "fixtures/clean/",
       "rule": "no findings on a clean fixture",
       "description": "lint over this fixture produces no findings and exits 0",
       "expected_exit_code": 0
     },
     {
-      "path": "bad-rows/",
+      "path": "fixtures/bad-rows/",
       "rule": "row count or empty-cell finding",
       "description": "lint over this fixture reports a row-count or empty-cell finding and exits 1",
       "expected_exit_code": 1
     },
     {
-      "path": "bad-card/",
+      "path": "fixtures/bad-card/",
       "rule": "missing closing 'What could not be checked' section",
       "description": "lint over this fixture reports a card missing its closing section and exits 1",
       "expected_exit_code": 1
