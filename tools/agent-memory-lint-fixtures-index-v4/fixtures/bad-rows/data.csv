@@ -1,2 +1,3 @@
 claim,verdict,source
-Test row,unshown,https://example.invalid/bad-rows
+Row cell counts match the header,unshown,https://example.invalid/bad-rows
+Deliberately short row,https://example.invalid/bad-rows
