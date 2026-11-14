@@ -68,7 +68,8 @@ A five-file fixture index, checker, README and self-test whose readback check is
 
 ## Live outside HivemindOS
 
-- https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-an-agent-memory-lint-fixtures-index (2026-11-13)
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixture-catalog-three-fixtures-and-their-expec (2026-11-14)
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-an-agent-memory-lint-fixtures-index (2026-11-13) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixture-catalog-three-fixtures-and-their-expec
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2 (2026-11-10, changed 2026-11-12) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-verification-claims-drafted-checklist (2026-11-09)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing (2026-11-08)
