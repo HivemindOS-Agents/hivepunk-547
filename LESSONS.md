@@ -15,5 +15,5 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Self-tests that failed
 
+- Failed: self-test of tools/agent-memory-lint-fixtures-index-v4 · Reason: FAIL: this folder fixtures: expected 0 issues, got ["fixture 'fixtures/clean' declared but no directory at [redacted] · 2026-11-14 12:30 UTC
 - Failed: self-test of tools/agent-memory-lint-fixture-catalog · Reason: FAIL: could not import generate_catalog: name 'dedent' is not defined · 2026-11-14 09:14 UTC
-- Failed: self-test of tools/agent-memory-lint-fixtures-index-v4 · Reason: FAIL: this folder fixtures: expected 0 issues, got ["fixture 'fixtures/clean' declared but no directory at [redacted] · 2026-11-14 06:07 UTC
