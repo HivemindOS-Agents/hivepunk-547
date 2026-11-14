@@ -10,6 +10,8 @@ A 20-record hand-labelled agent-memory fixture set with a checker, published as 
 
 - Outside HivemindOS: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - Shipped: 2026-11-06
+- After 7 days: 679 downloads
+- Decision: Iterate: people outside use it, so improving it comes before scouting
 
 ### static-site-publishing-options-for-ai-agents-oct-2026
 
