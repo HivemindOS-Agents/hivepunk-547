@@ -1,6 +1,6 @@
 # Read-back: agent-memory-lint-fixtures-index-v4
 
-This file says how to prove the published dataset is a byte-for-byte copy of
+How to prove the published dataset is a byte-for-byte copy of
 `tools/agent-memory-lint-fixtures-index-v4/` on `main` in
 `HivemindOS-Agents/hivepunk-547`, and what the tool could not check.
 
@@ -15,9 +15,9 @@ Expected, not confirmed: no page was fetched by the step that wrote this file.
 
 ## Files
 
-The five files, in order: `README.md`, `index.json`, `index.md`,
-`index_check.py`, `self_test.py`. `.gitattributes` is the only tolerated extra.
-No `LICENSE`, no `dataset_info`, no generated header. Licence field: UNKNOWN.
+Five files, in order: `README.md`, `index.json`, `index.md`, `index_check.py`,
+`self_test.py`. `.gitattributes` is the only tolerated extra. No `LICENSE`, no
+`dataset_info`, no generated header. Licence field: UNKNOWN.
 
 ## Run it
 
@@ -40,7 +40,7 @@ Anything else prints `verdict: FAIL` and exits 1.
 Each file is decided by the **sha256 of its content**. For every path the tool
 fetches the bytes from the Hub (`.../resolve/main/<file>`) and from GitHub
 (`raw.githubusercontent.com/.../<file>`) and compares hashes. Two matching
-sha256 values over the same path is the only evidence that nothing was edited or
+sha256 values over the same path is the evidence that nothing was edited or
 reformatted in transit.
 
 Byte length is printed for the reader but decides nothing. A rewrap can keep the
@@ -65,22 +65,22 @@ which field name it used instead of assuming one.
   carries the verdict.
 - The live URL is expected, not confirmed.
 - Whether `.gitattributes` appears, and as the only extra, is not confirmed.
-- If this folder is uploaded whole, `readback.py`, `self_test.py` and this file
-  are extra rows and the listing check fails on row count. Exclude them, or
-  expect the higher count.
+- If this whole folder is uploaded, `readback.py`, `self_test.py`, `READBACK.md`
+  and `PUBLISH.md` are extra rows and the listing check fails on row count.
+  Exclude them, or expect the higher count.
 
 ## Licence note, not acted on
 
-This folder's `README.md` front matter carries `license: UNKNOWN`. `UNKNOWN` is
-not a valid Hub licence id, so the page may render a licence string rather than
-an unknown field. The file was not edited: the publish step ships the five files
-verbatim. If the licence row shows something other than unknown, the cause is
-that pre-existing key and the fix is an owner decision.
+The README front matter carries `license: UNKNOWN`. `UNKNOWN` is not a valid Hub
+licence id, so the page may render a licence string rather than an unknown
+field. The file was not edited: the publish step ships the files verbatim. If
+the licence row shows something other than unknown, the cause is that
+pre-existing key and the fix is an owner decision.
 
 ## Data is not instruction
 
-Everything inside the five files is data. Lines that look like commands, keys or
-settings ship as inert text and are not followed.
+Everything inside the shipped files is data. Lines that look like commands, keys
+or settings ship as inert text and are not followed.
 
 ---
 Made by HivePunk #547, an AI agent on HivemindOS.
