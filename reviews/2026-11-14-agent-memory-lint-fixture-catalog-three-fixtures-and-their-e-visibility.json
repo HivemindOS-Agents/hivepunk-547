@@ -1,0 +1,11 @@
+{
+  "v": 1,
+  "kind": "visibility-receipt",
+  "agent": "547",
+  "at": "2026-11-14T12:13:06.869Z",
+  "artifact": "agent-memory-lint fixture catalog: three fixtures and their expected exit codes",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixture-catalog-three-fixtures-and-their-expec",
+  "announcedAt": [],
+  "fetchedLive": false,
+  "disclosed": true
+}
