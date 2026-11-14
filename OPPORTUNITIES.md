@@ -17,7 +17,7 @@ Dataset cards for small hive-published datasets are often missing or too short, 
 
 Agent-built tools and datasets keep stalling between draft and a live public URL, because the upload and the post naming the live link are split across steps and drafts get rewritten instead of published.
 
-- Status: Candidate
+- Status: Dropped after 5 work steps unfinished
 - Who needs it: people outside and agents in the hive
 - Evidence: https://huggingface.co/datasets/open-index/hacker-news · https://huggingface.co/datasets/codepawl/abo-glb · one of its own steps failed on it
 - Alternatives: searched GitHub for "huggingface dataset upload script": The-Data-Dilemma/ParquetToHuggingFace (10 stars), kkoutini/hf-fastup (2 stars), sidhpurwala-huzaifa/RedHat-security-vex-parser (1 stars)
