@@ -6,22 +6,20 @@ when every check passes.
 
 It imports the tool's own code (index_check.parse_markdown, index_check.compare,
 readback.listing_rows, readback.listing_verdict, readback.compare_bytes) and runs
-it on bundled sample data:
+it on bundled sample data.
 
-  * a clean sample of three entries and three matching rows -> 0 issues
-  * a deliberately broken sample: three JSON entries, a two-row table, and
-    three mutated values -> exactly four issues, asserted one by one
+  * clean sample of three entries and three matching rows -> 0 issues
+  * broken sample: three JSON entries, a two-row table and three mutated values
+    -> exactly four issues, asserted one by one
   * this folder's own index.json + index.md pair -> 0 issues
-  * the folder check over the three declared fixtures -> 0 issues
   * readback: every file decided by the sha256 of its bytes; a rewrapped
-    index.md with the same byte length and a different sha256 is caught and
-    the verdict is FAIL; a same-bytes file with a different 40-hex git blob id
-    is caught through the second fingerprint; a 64-hex id is not a git blob id
+    index.md with the same byte length and a different sha256 is caught and the
+    verdict is FAIL; a same-bytes file with a different 40-hex git blob id is
+    caught through the second fingerprint; a 64-hex id is not a git blob id
   * readback: an extra LICENSE row raises the licence-rule issue and the
     unexpected-row finding. The shipped listing_verdict() accepts a 5- or
     6-row window, so the six-row LICENSE sample is inside it and raises NO
-    row-count finding; this test asserts only the two findings that are
-    actually produced.
+    row-count finding; this test asserts only the two findings actually made.
 
 A table with no issues is not called correct here; each expected finding is
 named and compared.
@@ -90,8 +88,7 @@ def import_tool(name):
     here = os.path.dirname(os.path.abspath(__file__))
     if here not in sys.path:
         sys.path.insert(0, here)
-    mod = __import__(name)
-    return mod
+    return __import__(name)
 
 
 def test_clean(mod):
@@ -141,8 +138,6 @@ def test_readback(mod):
         check(mod.is_git_oid(r["hub_oid"]),
               "readback: no 40-hex object id read for %r" % r["path"])
 
-    # The rewrapped fixture must have the same byte length as the clean one
-    # and a different sha256: that is what makes it a genuine rewrap.
     clean = mod.INDEX_MD_CLEAN
     rewrapped = mod.INDEX_MD_REWRAPPED
     check(len(clean) == len(rewrapped),
@@ -150,7 +145,6 @@ def test_readback(mod):
     check(mod.sha256(clean) != mod.sha256(rewrapped),
           "readback: rewrap did not change sha256; the broken sample is byte-identical")
 
-    # Byte-identical sample passes; the verdict must be PASS.
     byte_rows, byte_issues = mod.sample_compare(diff=False)
     check(byte_issues == [], "readback: clean sample bytes raised %r" % byte_issues)
     for r in byte_rows:
@@ -162,8 +156,6 @@ def test_readback(mod):
     line = mod.verdict_line(byte_rows, [], [])
     check(line == "verdict: PASS", "readback: clean sample verdict %r" % line)
 
-    # A rewrapped index.md must be caught by the sha256 comparison, at the
-    # same byte length, and the verdict must be FAIL.
     bad_rows, bad_issues = mod.sample_compare(diff=True)
     check(any("index.md" in i and "sha256 differs" in i for i in bad_issues),
           "readback: rewrapped index.md not caught; issues=%r" % bad_issues)
@@ -178,7 +170,6 @@ def test_readback(mod):
     line = mod.verdict_line(bad_rows, [], bad_issues)
     check(line == "verdict: FAIL", "readback: rewrapped verdict %r" % line)
 
-    # Same bytes, different 40-hex git blob id: caught by the second check.
     same_rows, same_issues = mod.sample_compare(diff=False, gh_diff=True)
     check(any("index.md" in i and "git blob id differs" in i for i in same_issues),
           "readback: blob-id-only change not caught; issues=%r" % same_issues)
@@ -189,17 +180,12 @@ def test_readback(mod):
     line = mod.verdict_line(same_rows, [], same_issues)
     check(line == "verdict: FAIL", "readback: blob-id verdict %r" % line)
 
-    # Only a full 40-hex id is a git blob id.
     check(mod.is_git_oid("a" * 40) is True, "readback: is_git_oid rejected 40 hex")
     check(mod.is_git_oid("a" * 64) is False, "readback: is_git_oid accepted 64 hex")
     check(mod.is_git_oid("") is False, "readback: is_git_oid accepted empty")
     check(mod.is_git_oid(None) is False, "readback: is_git_oid accepted None")
     check(mod.is_git_oid("g" * 40) is False, "readback: is_git_oid accepted non-hex")
 
-    # An extra LICENSE row must fail on the rule and on the unexpected row.
-    # The shipped listing_verdict() accepts a 5- or 6-row window, so the
-    # six-row sample does NOT raise a row-count issue; assert only the two
-    # findings the shipped code actually produces.
     rows = mod.listing_rows(mod.SAMPLE_TREE_EXTRA)
     check(len(rows) == 6, "readback: extra listing has %d rows, expected 6" % len(rows))
     issues = mod.listing_verdict(rows)
@@ -213,8 +199,8 @@ def test_readback(mod):
 
 def main():
     try:
-        check_mod = import_tool("index_check")
-        lines = [test_clean(check_mod), test_broken(check_mod), test_folder(check_mod)]
+        ic = import_tool("index_check")
+        lines = [test_clean(ic), test_broken(ic), test_folder(ic)]
         rb = import_tool("readback")
         lines.append(test_readback(rb))
     except Fail as e:
