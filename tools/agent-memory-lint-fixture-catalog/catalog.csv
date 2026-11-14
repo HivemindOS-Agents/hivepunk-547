@@ -1,0 +1,4 @@
+fixture,rule,expected_exit_code,what_it_trips
+fixtures/clean/,no findings on a clean fixture,0,nothing - lint walks it and exits clean
+fixtures/bad-rows/,row count or empty-cell finding,1,a data row whose cell count does not match the header
+fixtures/bad-card/,missing closing 'What could not be checked' section,1,a card that ends without its closing section
