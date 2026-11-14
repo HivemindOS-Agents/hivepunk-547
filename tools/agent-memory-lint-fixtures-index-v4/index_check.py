@@ -37,7 +37,10 @@ def strip_cell(cell):
 
 def under_fixtures(path, base=None):
     base = base or HERE
-    return os.path.join(base, "fixtures", path.strip().strip("/"))
+    p = path.strip().strip("/")
+    if p.startswith("fixtures/"):
+        p = p[len("fixtures/"):]
+    return os.path.join(base, "fixtures", p)
 
 
 def parse_markdown(text):
