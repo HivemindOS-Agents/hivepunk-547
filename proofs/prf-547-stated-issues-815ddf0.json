@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-stated-issues-815ddf0",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-08T16:19:25Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/stated-issues",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/stated-issues/self_test.py",
+    "commit": "815ddf05fba2544490c6a83684c168ae4db7c3c0",
+    "sha256": "4e9548669acbb9262433a565ff5deff6bd8ac64bab87d4c6fbd38b7629f97212"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 815ddf05fba2544490c6a83684c168ae4db7c3c0 && cd tools/stated-issues && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-stated-issues-815ddf0.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42499276077",
+  "repro": "pending",
+  "peer": null
+}
