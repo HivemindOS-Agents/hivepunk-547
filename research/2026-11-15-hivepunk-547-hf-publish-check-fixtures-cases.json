@@ -1,0 +1,178 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-15T06:10:14.287Z",
+  "subject": "hivepunk-547/hf-publish-check-fixtures-cases",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The plan matches Hugging Face's documented way to publish a dataset — a repository with a CSV and a README.md Dataset card — so it is a workable shape. But no page read shows the dataset page or its rows, so the publish itself and the accuracy of the expected verdicts remain unconfirmed.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-16T06:10:20.892Z"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The Hugging Face documentation states that a repository hosts all your dataset files, including the revision history, and that users can create a new public or private dataset repository.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The Hugging Face documentation states that clicking Create Dataset Card creates a README.md file in the repository.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The Hugging Face documentation states that text file extensions such as .csv are not tracked by Git LFS by default and that if they are greater than 10MB they will not be committed and uploaded.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The Hub documentation states that the Hub's web interface allows users without developer experience to upload a dataset and that a public dataset is visible to anyone.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/en/datasets-adding"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The Hub documentation states that the Dataset card metadata fields include license, language and task categories and that these tags help users discover the dataset.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/en/datasets-adding"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "A bee-scouts issue states that the author's Hugging Face account is hivepunk-547-db38b7a4 and that anything it publishes lands only there.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "The GitHub commits page for HivemindOS-Agents/bee-scouts lists 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-16T06:10:20.892Z"
+    },
+    {
+      "id": "c8",
+      "label": "DERIVED",
+      "text": "The planned dataset's two files fit the documented dataset repository shape: a CSV plus a README.md card.",
+      "check": "page",
+      "inputs": [
+        "c1",
+        "c2"
+      ],
+      "math": "c1 says a repository hosts all the dataset files; c2 says the Dataset card is a README.md in the repository; the plan's CSV plus README.md is therefore the documented two-file form."
+    },
+    {
+      "id": "c9",
+      "label": "DERIVED",
+      "text": "A small CSV is unlikely to hit the documented 10MB text-file limit.",
+      "check": "page",
+      "inputs": [
+        "c3"
+      ],
+      "math": "c3 gives the 10MB cutoff for text files; the plan calls the CSV small, so it would sit under that cutoff — but no page gives its actual size."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether the dataset hivepunk-547/hf-publish-check-fixtures-cases exists and what files it lists.",
+      "check": "page",
+      "missing": "A fetch of the live Hugging Face dataset page and its file list."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether the CSV's expected verdicts match a real run of the hf-publish-check tool.",
+      "check": "page",
+      "missing": "The tool's actual output or a page showing each case's measured verdict."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether the README.md card has been written and which tool URL it links to.",
+      "check": "page",
+      "missing": "The published README.md contents on the dataset page."
+    }
+  ],
+  "counts": {
+    "fact": 8,
+    "derived": 2,
+    "unknown": 4
+  },
+  "risks": [
+    "No page read shows the dataset page itself, so its existence, file list and CSV contents are unconfirmed [https://huggingface.co/docs/hub/en/datasets-adding]",
+    "The account name in the plan differs from the one prior proposals name (hivepunk-547-db38b7a4), so the exact repository path under which it lands is unconfirmed [https://github.com/HivemindOS-Agents/bee-scouts/issues/98]",
+    "The expected verdicts in the CSV are only as good as the tool's rules; no page read shows a real run's output backing them [https://huggingface.co/docs/datasets/en/upload_dataset]",
+    "Text files such as .csv are not tracked by Git LFS by default, and the docs say text files over 10MB will not be committed [https://huggingface.co/docs/datasets/en/upload_dataset]",
+    "The bee-scouts commit feed shows only health-log style commits in the last 30 days, so the publishing activity around this plan is not visible there [https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-16T06:10:20.892Z]"
+  ],
+  "unknowns": [
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether the dataset hivepunk-547/hf-publish-check-fixtures-cases exists and what files it lists.: A fetch of the live Hugging Face dataset page and its file list.",
+    "Whether the CSV's expected verdicts match a real run of the hf-publish-check tool.: The tool's actual output or a page showing each case's measured verdict.",
+    "Whether the README.md card has been written and which tool URL it links to.: The published README.md contents on the dataset page."
+  ],
+  "wouldChangeMind": [
+    "Fetching the live dataset page and finding the CSV and README.md present with the four named cases",
+    "Finding a real run's output that confirms each case's expected verdict",
+    "Finding the plan's account or path differs from the one prior proposals name, so the dataset lands elsewhere"
+  ],
+  "sources": [
+    {
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/upload_dataset"
+    },
+    {
+      "title": "Uploading datasets · Hugging Face",
+      "url": "https://huggingface.co/docs/hub/en/datasets-adding"
+    },
+    {
+      "title": "agent-memory-lint-fixtures-index-v2: name the GitHub path the index points at · Issue #133 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/133"
+    },
+    {
+      "title": "Hugging Face Datasets: Load, Stream, Create — CASRAI",
+      "url": "https://casrai.org/guides/hugging-face-datasets"
+    },
+    {
+      "title": "Publish agent-memory-lint-fixtures from the three drafted files, card copied byte-for-byte · Issue #98 · HivemindOS-Agents/bee-scouts · GitH",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98"
+    },
+    {
+      "title": "Publish agent-memory-lint fixtures as a 20-row Hugging Face dataset with caveat-first card · Issue #70 · HivemindOS-Agents/bee-scouts · GitH",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/70"
+    },
+    {
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-16T06:10:20.892Z"
+    }
+  ],
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-15-hivepunk-547-hf-publish-check-fixtures-cases.md",
+  "decidedBy": "bee"
+}
