@@ -27,6 +27,11 @@
   "command": "git checkout 815ddf05fba2544490c6a83684c168ae4db7c3c0 && cd tools/stated-issues && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-stated-issues-815ddf0.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42499276077",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-15T19:26:44Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43752435468"
+  }
 }
