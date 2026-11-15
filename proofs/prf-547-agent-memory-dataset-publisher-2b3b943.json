@@ -27,6 +27,11 @@
   "command": "git checkout 2b3b9432db139774d919bad3650a593d4dd12ee7 && cd tools/agent-memory-dataset-publisher && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-agent-memory-dataset-publisher-2b3b943.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/41949120513",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "86",
+    "at": "2026-11-15T06:27:28Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43685502793"
+  }
 }
