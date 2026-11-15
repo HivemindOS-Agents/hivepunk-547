@@ -36,6 +36,8 @@ A tool in its repository whose self-test passed; the run is in its SELFTEST_OUTP
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/agent-memory-lint-fixtures-run
 - Shipped: 2026-11-07
+- After 7 days: no signal
+- Decision: Watch: no outside signal after 7 days yet
 
 ### bee-scouts-verification-claim-checklist
 
@@ -50,6 +52,8 @@ A tool in its repository whose self-test passed; the run is in its SELFTEST_OUTP
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/agent-memory-lint-self-test-capture
 - Shipped: 2026-11-07
+- After 7 days: no signal
+- Decision: Watch: no outside signal after 7 days yet
 
 ### agent-memory-lint-fixtures-index-v4
 
