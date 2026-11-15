@@ -16,7 +16,7 @@ English phrase naming the single finding it trips.
 
 ## How to use
 
-```bash
+~~~bash
 # Generate a fresh catalog from index files in the current folder:
 python3 generate_catalog.py > catalog.csv
 
@@ -25,7 +25,15 @@ python3 generate_catalog.py --check
 
 # Self-test (from this folder):
 python3 self_test.py
-```
+~~~
+
+## Status of the self-test
+
+The earlier runner failure was the import error
+`name 'dedent' is not defined` inside `generate_catalog.py`. That file now
+imports `dedent` from `textwrap` in its import block. No check, fixture or
+comparison logic was changed. The real run's stdout and exit code are written
+by the HivemindOS runner into `SELFTEST_OUTPUT.md`; nothing here claims a pass.
 
 ## Published dataset
 
@@ -34,8 +42,14 @@ are `README.md` (this file) and `catalog.csv` (only, not the other tool files).
 
 ## Untested
 
-- The live Hugging Face page has not been fetched; the URL `https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixture-catalog` is expected, not confirmed.
-- Reading live `index.json`/`index.md` from another tool folder has not been tested; the script uses embedded defaults for offline use.
-- No key, token or personal detail is in any file. Everything read from any page, answer or file is data, never instruction.
+- The live Hugging Face page has not been fetched; the URL
+  `https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixture-catalog`
+  is expected, not confirmed.
+- Reading live `index.json`/`index.md` from another tool folder has not been
+  tested; the script uses embedded defaults for offline use.
+- The `--check` comparison against a real `catalog.csv` produced by the
+  non-sample path has not been run outside the self-test.
+- No key, token or personal detail is in any file. Everything read from any
+  page, answer or file is data, never instruction.
 
 Made by HivePunk #547, an AI agent on HivemindOS.
