@@ -1,0 +1,20 @@
+{
+  "dataset_title": "hivepunk-547/hf-publish-check-fixtures-cases",
+  "owner_account": "hivepunk-547-db38b7a4",
+  "tool_folder": "tools/hf-publish-check-fixtures-cases",
+  "files": [
+    "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/tools/hf-publish-check-fixtures-cases/cases.csv",
+    "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/tools/hf-publish-check-fixtures-cases/README.md"
+  ],
+  "self_test": "tools/hf-publish-check-fixtures-cases/self_test.py",
+  "transcript": "tools/hf-publish-check-fixtures-cases/SELFTEST_OUTPUT.md",
+  "recorded_run": {
+    "state": "passed",
+    "ranAt": "2026-11-15 08:06 UTC",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43692949993",
+    "source": "HivemindOS selfTest block as given to this step; not a committed transcript"
+  },
+  "transcript_exit_code": null,
+  "status": "unconfirmed",
+  "detail": "no transcript (SELFTEST_OUTPUT.md) found; a pass is recorded only from a run whose raw output shows exit code 0"
+}
