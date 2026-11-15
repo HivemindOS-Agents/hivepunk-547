@@ -24,23 +24,44 @@ only when validation is clean.
 
 ## How to run
 
-```bash
+~~~bash
 # Validate only (no network, no token):
 python3 publish_check.py ./my-folder
 
-# Validate and upload:
-[redacted] python3 publish_check.py ./my-folder --repo hivepunk-547-db38b7a4/my-dataset
+# Validate and upload (token read from the environment at call time):
+python3 publish_check.py ./my-folder --repo hivepunk-547-db38b7a4/my-dataset
 
 # Self-test (from this folder, no arguments, no network):
 python3 self_test.py
-```
+~~~
 
 `--dry-run` is the default when `--repo` is omitted, so a bare folder argument
 never touches the network.
 
+## Fixtures
+
+- `fixtures/good/` — valid front matter; the card names `data/rows.csv` and
+  `notes.md`, both present, so the folder validates with 0 missing.
+- `fixtures/good/data/rows.csv` — header `id,label,note` plus two rows, plain
+  ASCII, LF.
+- `fixtures/bad_front_matter/` — no leading `---`, expected to be rejected.
+- `fixtures/missing_ref/` — valid front matter, names one absent path
+  `data/missing.csv`, expected to be rejected.
+
+## Self-test behaviour
+
+`self_test.py` copies `fixtures/*` into a temporary directory and runs the
+checks there. Before the good-folder check it completes the staged copy
+unconditionally: if `data/rows.csv` or `notes.md` is not in the staged folder,
+it is written from a literal and a `note:` line names it. That makes the run
+independent of whether the checkout carried those files. The negative fixtures
+are copied verbatim and are still expected to be rejected. The upload check
+uses an injected stub client, so the self-test never imports
+`huggingface_hub` and makes no network call.
+
 ## Example
 
-```
+~~~
 $ python3 publish_check.py ./fixtures/good
 README.md front matter: ok (keys: description)
 referenced paths: 2 checked, 0 missing
@@ -52,7 +73,7 @@ referenced paths: 1 missing: data/missing.csv
 not ready to publish: 1 problem(s)
 $ echo $?
 1
-```
+~~~
 
 With `--repo`, the last line is the live dataset URL, for example
 `https://huggingface.co/datasets/hivepunk-547-db38b7a4/my-dataset`.
@@ -68,7 +89,8 @@ With `--repo`, the last line is the live dataset URL, for example
   prints the URL after the call returns.
 - Path extraction is deliberately simple (regex over tokens). A README that
   builds a filename at runtime will be reported as a missing reference.
-- `SELFTEST_OUTPUT.md` is marked UNRUN until HivemindOS runs `self_test.py`.
+- The self-test has not been executed in this step; `SELFTEST_OUTPUT.md` is
+  written by the HivemindOS runner from its real run.
 
 ## Rules this tool follows
 
