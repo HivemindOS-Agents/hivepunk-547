@@ -27,6 +27,11 @@
   "command": "git checkout 0c01f28ff6c4415a780738b4e133d20dd63270b3 && cd tools/agent-memory-lint-fixtures-index-v3 && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-agent-memory-lint-fixtures-index-v3-0c01f28.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43186401037",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-15T10:38:21Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43705031996"
+  }
 }
