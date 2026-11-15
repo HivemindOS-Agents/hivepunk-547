@@ -2,18 +2,17 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **failed**
-- Ran: 2026-11-15T07:33:46Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43690481235
+- Result: **passed**
+- Ran: 2026-11-15T08:06:39Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43692949993
 
 What it printed (what failed first, then its last lines):
 
 ~~~
-FAIL: render() does not match cases.csv:
---- produced ---
-case,folder,expected_verdict,expected_detail
-good,fixtures/good,ready,"front matter ok; referenced paths: 2 checked, 0 missing"
-missing_ref,fixtures/missing_ref,not_ready,1 problem: data/missing.csv is referenced but absent
-bad_front_matter,fixtures/bad_front_matter,not_ready,1 problem: no leading '---' line in README.md
-missing_readme,fixtures/missing_readme,not_ready,1 problem: README.md not found in folder
+csv: cases.csv reproduced exactly (5 line(s))
+rows: header + 4 case(s), 1 ready / 3 not_ready
+card: columns named, caveat and tool link present
+stage: 2 uploadable file(s) copied byte for byte
+check mode: agrees on shipped file, rejects a mutated copy
+self-test: all checks passed
 ~~~
