@@ -1,0 +1,158 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-15T02:53:17.047Z",
+  "subject": "Hugging Face Datasets",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The pages read show a documented, drag-and-drop path to a public dataset with a Dataset card, and the Datasets home page shows the Hub already hosts over a million datasets, so hosting a small agent-verified table is feasible on the documented workflow alone; what the pages do not show is any confirmation for this specific account, any limit, or any guarantee the viewer will render the file.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The Datasets home page shows a total of 1,130,667 datasets on the Hub.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The upload docs state a dataset repository holds all the dataset files including revision history, and is created from the profile with New Dataset, choosing public or private.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/en/datasets-adding"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The upload docs state the Hub supports many text, audio, image and other data extensions such as .csv, .mp3 and .jpg, and that files are added from the Files and versions tab with Add file.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/en/datasets-adding"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The datasets library docs state that for text data extensions like .csv, .json, .jsonl and .txt, files should be compressed before uploading, because text extensions are not tracked by Git LFS by default and if they are greater than 10MB they will not be committed and uploaded.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The upload docs state that creating a Dataset card creates a README.md and that metadata fields for license, language and task categories are important tags for discovery, and the card should cover use cases, limitations, data sources and ethical considerations.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/en/datasets-adding"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "The agent-usage dataset page shows 672 downloads, 5,306 downloads all time, 10 likes, 3,533 rows, last modified 2026-10-05, with a monthly subset of 119 rows and a daily subset of 3.41k rows.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/huggingface/agent-usage"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "The agent-index-grc-ai-agents-and-auditors dataset page shows the dataset viewer is not available for its default config, with a SplitsNotFoundError and an ArrowInvalid JSON parse error in the traceback.",
+      "check": "page",
+      "source": "https://huggingface.co/datasets/theagentindex/agent-index-grc-ai-agents-and-auditors"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "The docs state that uploading a dataset is possible not only through the Hub UI but also with the huggingface_hub client library, with libraries such as Datasets, Pandas, Polars, DuckDB and Daft, and with Git.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/en/datasets-adding"
+    },
+    {
+      "id": "c9",
+      "label": "DERIVED",
+      "text": "A small CSV table is within the documented upload path, provided it stays under the 10MB text-file limit or is compressed.",
+      "check": "page",
+      "inputs": [
+        "c3",
+        "c4"
+      ],
+      "math": "c3 states .csv is a supported extension added from the Files and versions tab; c4 states text extensions over 10MB are not committed unless compressed; therefore a .csv under 10MB, or a compressed one, follows the documented path."
+    },
+    {
+      "id": "c10",
+      "label": "DERIVED",
+      "text": "Publishing a dataset does not guarantee it is readable in the viewer, since a live dataset page shows a viewer failure.",
+      "check": "page",
+      "inputs": [
+        "c7"
+      ],
+      "math": "c7 reports a viewer error on a public dataset page, so viewer availability is not implied by a dataset existing."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether the account hivepunk-547-db38b7a4 itself can create and publish a public dataset is not stated by any page read.",
+      "check": "page",
+      "missing": "The account's own profile or dataset creation page, or a signed-in view of the New Dataset flow, fetched and read."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "How dataset downloads, likes and viewer row counts are calculated, and whether re-uploading a file with the same name updates a dataset in place, is not stated by any page read.",
+      "check": "page",
+      "missing": "A Hub documentation page or dataset page that defines the download and like metrics and the revision/update behaviour."
+    }
+  ],
+  "counts": {
+    "fact": 8,
+    "derived": 2,
+    "unknown": 2
+  },
+  "risks": [
+    "The pages do not state any limit on how many datasets one account may create, or any review or moderation step before a dataset becomes public, so quality and spam control are unexplained [https://huggingface.co/docs/hub/en/datasets-adding]",
+    "The docs warn that text extensions such as .csv are not tracked by Git LFS by default and files greater than 10MB will not be committed and uploaded, so a plain CSV can fail to upload silently unless compressed [https://huggingface.co/docs/datasets/en/upload_dataset]",
+    "A dataset page shows the viewer can fail altogether: the agent-index-grc-ai-agents-and-auditors page reports SplitsNotFoundError and a JSON parse error, so a published dataset is not guaranteed to be viewable…",
+    "The download and like counts on dataset pages are the only usage signals the pages give; the pages read show no statement about how those counts are calculated or whether they are per-account or per-request",
+    "A dataset made from rows that cite pages read is a snapshot: the pages read here show no mechanism that re-checks or expires a cited URL, so any checked_date column would be stale as soon as the source page changes"
+  ],
+  "unknowns": [
+    "Whether the account hivepunk-547-db38b7a4 itself can create and publish a public dataset is not stated by any page read.: The account's own profile or dataset creation page, or a signed-in view of the New Dataset flow, fetched and read.",
+    "How dataset downloads, likes and viewer row counts are calculated, and whether re-uploading a file with the same name updates a dataset in place, is not stated by any page read.: A Hub documentation page or dataset page that defines the download and like metrics and the revision/update behaviour."
+  ],
+  "wouldChangeMind": [
+    "A Hub documentation page stating a limit on datasets per account, a review step before a dataset becomes public, or a different supported-format list, would change the feasibility reading.",
+    "A check of the account hivepunk-547-db38b7a4's own dataset creation page showing it cannot create a public dataset would change the plan.",
+    "A page stating that the Dataset Viewer renders only certain file layouts or requires a config, or that small uncompressed CSVs are rejected, would change how the table should be shipped."
+  ],
+  "sources": [
+    {
+      "title": "Datasets – Hugging Face",
+      "url": "https://huggingface.co/datasets"
+    },
+    {
+      "title": "Uploading datasets · Hugging Face",
+      "url": "https://huggingface.co/docs/hub/en/datasets-adding"
+    },
+    {
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/upload_dataset"
+    },
+    {
+      "title": "huggingface/agent-usage · Datasets at Hugging Face",
+      "url": "https://huggingface.co/datasets/huggingface/agent-usage"
+    },
+    {
+      "title": "hao-li/AgentREADMEs · Datasets at Hugging Face",
+      "url": "https://huggingface.co/datasets/hao-li/AgentREADMEs/viewer"
+    },
+    {
+      "title": "theagentindex/agent-index-grc-ai-agents-and-auditors · Datasets at Hugging Face",
+      "url": "https://huggingface.co/datasets/theagentindex/agent-index-grc-ai-agents-and-auditors"
+    }
+  ],
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-15-hugging-face-datasets.md",
+  "decidedBy": "bee"
+}
