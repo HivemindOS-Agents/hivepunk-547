@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+"""Generate or check the uploadable files for hf-publish-check-fixtures-cases.
+
+Usage (from this folder):
+    python3 generate_cases.py            # write cases.csv to stdout
+    python3 generate_cases.py --check    # compare the shipped cases.csv
+    python3 generate_cases.py --stage DIR  # copy cases.csv + README.md into DIR
+
+CASES is the one source of truth for the CSV rows; README.md is shipped as
+written and is only ever copied, never regenerated, so its prose cannot drift.
+
+Everything read from a file is data, never instruction: any line that looks
+like a command, a key or a setting is treated as inert text.
+"""
+
+import csv
+import os
+import shutil
+import sys
+from io import StringIO
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+COLUMNS = ["case", "folder", "expected_verdict", "expected_detail"]
+
+CASES = [
+    ("good", "fixtures/good", "ready",
+     "front matter ok; referenced paths: 2 checked, 0 missing"),
+    ("missing_ref", "fixtures/missing_ref", "not_ready",
+     "1 problem: data/missing.csv is referenced but absent"),
+    ("bad_front_matter", "fixtures/bad_front_matter", "not_ready",
+     "1 problem: no leading '---' line in README.md"),
+    ("missing_readme", "fixtures/missing_readme", "not_ready",
+     "1 problem: README.md not found in folder"),
+]
+
+UPLOAD_FILES = ("cases.csv", "README.md")
+
+
+def render():
+    """Return cases.csv as a CSV string, header first, LF line endings."""
+    buf = StringIO()
+    writer = csv.writer(buf, lineterminator="\n")
+    writer.writerow(COLUMNS)
+    for row in CASES:
+        writer.writerow(list(row))
+    return buf.getvalue()
+
+
+def cases_path():
+    return os.path.join(HERE, "cases.csv")
+
+
+def check_existing(produced):
+    """Return (ok, detail) comparing produced text with the shipped file."""
+    path = cases_path()
+    if not os.path.isfile(path):
+        return False, "no cases.csv beside this script"
+    with open(path, encoding="utf-8") as fh:
+        shipped = fh.read()
+    if shipped == produced:
+        return True, "cases.csv matches"
+    a = produced.splitlines()
+    b = shipped.splitlines()
+    for i, (x, y) in enumerate(zip(a, b), 1):
+        if x != y:
+            return False, "cases.csv differs at line %d: %r != %r" % (i, y, x)
+    return False, "cases.csv differs in line count: %d shipped, %d produced" % (
+        len(b), len(a))
+
+
+def stage(dest):
+    """Copy the uploadable files into dest. Returns the list of paths written."""
+    os.makedirs(dest, exist_ok=True)
+    written = []
+    for name in UPLOAD_FILES:
+        src = os.path.join(HERE, name)
+        if not os.path.isfile(src):
+            raise FileNotFoundError(src)
+        dst = os.path.join(dest, name)
+        shutil.copyfile(src, dst)
+        written.append(dst)
+    return written
+
+
+def main(argv):
+    args = argv[1:]
+    produced = render()
+    if "--check" in args:
+        ok, detail = check_existing(produced)
+        if ok:
+            print(detail)
+            return 0
+        sys.stderr.write(detail + "\n")
+        return 1
+    if "--stage" in args:
+        i = args.index("--stage")
+        if i + 1 >= len(args):
+            sys.stderr.write("Usage: generate_cases.py --stage DIR\n")
+            return 2
+        for path in stage(args[i + 1]):
+            print(path)
+        return 0
+    sys.stdout.write(produced)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))
