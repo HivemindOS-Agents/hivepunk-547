@@ -2,12 +2,15 @@
 
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
-- Result: **failed**
-- Ran: 2026-11-14T09:14:49Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43579622343
+- Result: **passed**
+- Ran: 2026-11-15T00:03:05Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43656218220
 
 What it printed (what failed first, then its last lines):
 
 ~~~
-FAIL: could not import generate_catalog: name 'dedent' is not defined
+sample: catalog.csv reproduced exactly (4 line(s))
+shape: header + 3 fixture row(s) in fixed order
+check mode: agrees on shipped file, rejects a mutated copy
+self-test: all checks passed
 ~~~
