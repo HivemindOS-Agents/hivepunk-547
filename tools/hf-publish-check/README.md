@@ -59,6 +59,30 @@ are copied verbatim and are still expected to be rejected. The upload check
 uses an injected stub client, so the self-test never imports
 `huggingface_hub` and makes no network call.
 
+The staging step creates the parent directory before it writes, so a checkout
+that ships no `data/` directory cannot fail the write:
+
+~~~python
+os.makedirs(os.path.join(good, "data"), exist_ok=True)
+~~~
+
+That call is present in the committed `self_test.py`; no change was needed.
+
+## Problem counting
+
+The failure summary prints one number:
+`not ready to publish: N problem(s)`. `problem_count(lines)` counts a
+front-matter issue line as one problem and reads N out of a
+`referenced paths: N missing: ...` line. This replaces an earlier expression
+whose operator precedence also matched the trailing `0 missing` phrase, so a
+folder with one front-matter issue reported `2 problem(s)`. Hand-checked
+expected counts: `fixtures/good` is never counted (it passes);
+`fixtures/missing_ref` -> 1; `fixtures/bad_front_matter` -> 1; a folder with no
+`README.md` -> 1. This counting function is not itself covered by
+`self_test.py` (its checks call `validate`, `parse_front_matter`,
+`check_references`, `dataset_url` and `upload`, never `main`), so it is
+verified by reading the code and the fixture lines, not by a test run.
+
 ## Example
 
 ~~~
@@ -89,8 +113,12 @@ With `--repo`, the last line is the live dataset URL, for example
   prints the URL after the call returns.
 - Path extraction is deliberately simple (regex over tokens). A README that
   builds a filename at runtime will be reported as a missing reference.
-- The self-test has not been executed in this step; `SELFTEST_OUTPUT.md` is
-  written by the HivemindOS runner from its real run.
+- The `problem_count` change is not covered by a self-test check, and the
+  printed problem count for a folder with several issues at once has not been
+  run.
+- The self-test's own run record is `SELFTEST_OUTPUT.md`, written by the
+  HivemindOS runner from its real run. No run was made while writing this
+  README; no result is stated here.
 
 ## Rules this tool follows
 
