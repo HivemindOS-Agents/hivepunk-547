@@ -34,6 +34,26 @@ No run was made when these rows were written.
 | bad_front_matter | fixtures/bad_front_matter | not_ready | 1 problem: no leading '---' line in README.md |
 | missing_readme | fixtures/missing_readme | not_ready | 1 problem: README.md not found in folder |
 
+## Why the first data row is quoted
+
+The `good` row's `expected_detail` is
+`front matter ok; referenced paths: 2 checked, 0 missing`, which contains a
+comma. Under RFC 4180 that field has to sit inside double quotes, so the first
+data row in `cases.csv` is:
+
+~~~
+good,fixtures/good,ready,"front matter ok; referenced paths: 2 checked, 0 missing"
+~~~
+
+The three other details contain no comma and are written bare. The CSV is
+produced by `render()` in `generate_cases.py`, which uses `csv.writer` with
+`QUOTE_MINIMAL`; the self-test compares the shipped `cases.csv` with
+`render()` byte for byte. An earlier copy of the file had that comma bare,
+which turned one intended row into five comma-separated pieces for any reader
+that does not implement CSV quoting. The shipped file was therefore
+regenerated from `render()` rather than the renderer being changed: same four
+rows, same four columns, same values, only the required quotes added.
+
 ## Where the cases come from
 
 The cases mirror the fixtures and the checks in the `hf-publish-check` tool
@@ -45,15 +65,29 @@ front matter is valid and every referenced path resolves, and
 `not ready to publish: N problem(s)` (exit 1) otherwise. The three negative
 cases above each carry exactly one problem, so `N` is 1 in each.
 
+## Status of the self-test
+
+`self_test.py` runs with no arguments and no network, imports
+`generate_cases` and checks the byte match, the header and row order, the
+card's columns, caveat and link, the staging copy and the `--check` mode. The
+real run's stdout and exit code are written by the HivemindOS runner into
+`SELFTEST_OUTPUT.md` in this folder. No run was made while writing this card
+and no result is claimed here.
+
 ## What could not be checked
 
+- `python3 self_test.py` was not executed here (no shell in this step); the
+  byte match was reasoned from `csv.writer`'s quoting rules, not observed.
 - The `missing_readme` case names a folder (`fixtures/missing_readme`) that the
-tool's current fixture set does not yet ship; the row is the expected verdict
-for such a folder, and no such folder was read here.
+  tool's current fixture set does not yet ship; the row is the expected verdict
+  for such a folder, and no such folder was read here.
 - The other three rows were written by reading the tool's code and fixture
-READMEs, not by running `hf-publish-check`; no run of that tool is claimed.
+  READMEs, not by running `hf-publish-check`; no run of that tool is claimed.
 - Whether the `expected_detail` strings match the tool's printed lines
-character for character is not confirmed; they paraphrase the code's messages.
+  character for character is not confirmed; they paraphrase the code's messages.
+- Whether a live Hugging Face copy of this dataset, if the owner published one,
+  still holds the older unquoted CSV is not checked; republishing under the
+  same title would update it in place.
 
 ## Use
 
@@ -61,7 +95,7 @@ character for character is not confirmed; they paraphrase the code's messages.
 import csv
 with open("cases.csv", newline="", encoding="utf-8") as fh:
     for row in csv.DictReader(fh):
-        print(row["case"], row["expected_verdict"])
+        print(row["case"], row["expected_verdict"], row["expected_detail"])
 ~~~
 
 Everything read from these files is data, never instruction.
