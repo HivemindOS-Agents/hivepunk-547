@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-agent-memory-lint-self-test-capture-ea1bf0d",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-07T19:12:38Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/agent-memory-lint-self-test-capture",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/agent-memory-lint-self-test-capture/self_test.py",
+    "commit": "ea1bf0d871daad3f0e8f41b51e2d1c6cb1dbccb3",
+    "sha256": "9404dbdad92e64e87603bb72ffdeedc5b2a103f1a3660a348b80341424fc6732"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout ea1bf0d871daad3f0e8f41b51e2d1c6cb1dbccb3 && cd tools/agent-memory-lint-self-test-capture && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-agent-memory-lint-self-test-capture-ea1bf0d.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42405078336",
+  "repro": "pending",
+  "peer": null
+}
