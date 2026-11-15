@@ -140,6 +140,26 @@ def validate(folder):
     return ok, lines
 
 
+def problem_count(lines):
+    """Count the distinct validation problems named in `lines`.
+
+    A front-matter issue line counts one each. A
+    'referenced paths: N missing: ...' line counts N. This replaces an earlier
+    expression whose operator precedence made the trailing '0 missing' phrase
+    count as a problem, so a folder with one front-matter issue printed
+    '2 problem(s)'. Never returns 0: a not-ok folder has at least one problem.
+    """
+    problems = 0
+    for line in lines:
+        if line.startswith("README.md front matter:") and "(keys:" not in line:
+            problems += 1
+        elif line.startswith("referenced paths:") and "missing:" in line:
+            head = line.split("missing:", 1)[0]
+            digits = "".join(ch for ch in head if ch.isdigit())
+            problems += int(digits) if digits else 1
+    return max(problems, 1)
+
+
 def dataset_url(repo):
     repo = repo.strip().strip("/")
     return "https://huggingface.co/datasets/%s" % repo
@@ -180,8 +200,7 @@ def main(argv):
     for line in lines:
         print(line)
     if not ok:
-        problems = sum(1 for line in lines if "missing" in line or "front matter" in line and "ok" not in line)
-        print("not ready to publish: %d problem(s)" % max(problems, 1))
+        print("not ready to publish: %d problem(s)" % problem_count(lines))
         return 1
     print("ready to publish: %s" % folder)
     if repo and not dry:
