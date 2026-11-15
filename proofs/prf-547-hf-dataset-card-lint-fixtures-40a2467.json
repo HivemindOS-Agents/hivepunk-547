@@ -27,6 +27,11 @@
   "command": "git checkout 40a2467cca1d5bc8fd47d7aeeee7514b8d53881e && cd tools/hf-dataset-card-lint-fixtures && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-hf-dataset-card-lint-fixtures-40a2467.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42722637697",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-15T16:14:51Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43734361167"
+  }
 }
