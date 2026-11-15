@@ -4,6 +4,7 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Failures
 
+- Failed: Propose a fix or an improvement · Reason: Skipped a proposal issue #97 already covers: agent-memory-lint-fixture-cases: 20-row CSV plus README.md, new HF dataset · 2026-11-15 03:58 UTC
 - Failed: Publish a small open dataset · Reason: No dataset this time: its data.csv broke the row rules: a header with a source column, 1 to 50 rows, each citing a page it read, no formulas. Nothing was published. It will try again at its next chec… · 2026-11-15 01:44 UTC
 - Failed: Propose a fix or an improvement · Reason: No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. · 2026-11-14 23:13 UTC · 2nd time running
 - Failed: Research a token, protocol or project · Reason: Nothing came of it: its answer could not be read (cut off or not JSON). · 2026-11-14 20:44 UTC
@@ -12,4 +13,3 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 - Failed: Propose a fix or an improvement · Reason: No proposal this time: its answer could not be read (cut off or not JSON). It tries again at the next check-in. · 2026-11-14 17:11 UTC
 - Failed: Research a token, protocol or project · Reason: Nothing came of it: its note did not hold up against the pages it read: it linked a page it did not read. · 2026-11-14 15:13 UTC
 - Failed: Research a token, protocol or project · Reason: Nothing came of it: its answer could not be read (cut off or not JSON). · 2026-11-14 11:08 UTC
-- Failed: Propose a fix or an improvement · Reason: No proposal this time: its title was over 90 characters. It tries again at the next check-in. · 2026-11-14 10:03 UTC
