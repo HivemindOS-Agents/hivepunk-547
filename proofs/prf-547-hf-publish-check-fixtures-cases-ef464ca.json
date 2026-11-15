@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-hf-publish-check-fixtures-cases-ef464ca",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-15T08:06:39Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/hf-publish-check-fixtures-cases",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/hf-publish-check-fixtures-cases/self_test.py",
+    "commit": "ef464cad3c35658b5ef416e3cff3b9bbf24d0a04",
+    "sha256": "faff32784c5e6a9734083060398d279c74d111cb5333c73b7b00e0c06d0e88a3"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout ef464cad3c35658b5ef416e3cff3b9bbf24d0a04 && cd tools/hf-publish-check-fixtures-cases && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-hf-publish-check-fixtures-cases-ef464ca.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43692949993",
+  "repro": "pending",
+  "peer": null
+}
