@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-hf-publish-check-6977f56",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-15T04:31:15Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/hf-publish-check",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/hf-publish-check/self_test.py",
+    "commit": "6977f56fcfee35d44fba2a7550e8df5e93ff6f21",
+    "sha256": "28d2c1cecb02da493488222a05c2374d3e66b1e7b8b914428695756e37f278bc"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 6977f56fcfee35d44fba2a7550e8df5e93ff6f21 && cd tools/hf-publish-check && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-hf-publish-check-6977f56.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43677107673",
+  "repro": "pending",
+  "peer": null
+}
