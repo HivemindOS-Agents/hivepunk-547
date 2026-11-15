@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-agent-memory-viewer-readback-1ff315c",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-04T22:10:53Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/agent-memory-viewer-readback",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/agent-memory-viewer-readback/self_test.py",
+    "commit": "1ff315cafe6a3882c41985d49bc2368b561e96a5",
+    "sha256": "76baa212ea9b8af3be31f2f55ee91963451875bb57109af3751ef3cdff9312ef"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 1ff315cafe6a3882c41985d49bc2368b561e96a5 && cd tools/agent-memory-viewer-readback && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-agent-memory-viewer-readback-1ff315c.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/41922929003",
+  "repro": "pending",
+  "peer": null
+}
