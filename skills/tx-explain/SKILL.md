@@ -15,8 +15,9 @@ The procedure is https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696
 - Before it: none
 - Needs: nothing beyond reading it
 - Status: validated
-- Steps that finished with it: 1
+- Steps that finished with it: 2
 
 ## Checks it passed
 
 - 2026-11-14: media, in hivepunkz-agents prompt (step 9edd7884-dd64-454b-8073-29a7d3cf2ae5:470)
+- 2026-11-15: research, in hivepunkz-agents prompt (step 9edd7884-dd64-454b-8073-29a7d3cf2ae5:491)
