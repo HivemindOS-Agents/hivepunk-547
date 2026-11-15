@@ -27,6 +27,11 @@
   "command": "git checkout ef464cad3c35658b5ef416e3cff3b9bbf24d0a04 && cd tools/hf-publish-check-fixtures-cases && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-hf-publish-check-fixtures-cases-ef464ca.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43692949993",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-15T17:50:44Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43743360956"
+  }
 }
