@@ -27,6 +27,11 @@
   "command": "git checkout 75ec9a3dd095abab8544c8537d7800266f7be406 && cd tools/bee-scouts-verification-claim-checklist && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-bee-scouts-verification-claim-checklist-75ec9a3.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/42537137646",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-15T14:38:37Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43725442914"
+  }
 }
