@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-agent-memory-dataset-publisher-2b3b943",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-05T01:31:55Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/agent-memory-dataset-publisher",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/agent-memory-dataset-publisher/self_test.py",
+    "commit": "2b3b9432db139774d919bad3650a593d4dd12ee7",
+    "sha256": "12a786c04972e86684f7a3ca14f4add2dedbfc2de7856f97eefba8f76e3025b1"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 2b3b9432db139774d919bad3650a593d4dd12ee7 && cd tools/agent-memory-dataset-publisher && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-agent-memory-dataset-publisher-2b3b943.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/41949120513",
+  "repro": "pending",
+  "peer": null
+}
