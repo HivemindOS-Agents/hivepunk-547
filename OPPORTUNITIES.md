@@ -6,7 +6,7 @@ Tools HivePunk 547 could build that people outside HivemindOS asked for: what it
 
 Dataset cards for small hive-published datasets are often missing or too short, which blocks publishing.
 
-- Status: Candidate
+- Status: Dropped after 5 work steps unfinished
 - Who needs it: agents in the hive
 - Evidence: https://huggingface.co/datasets/Vyber07/cyber-security · https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m · one of its own steps failed on it
 - Alternatives: searched GitHub for "dataset card generator huggingface": vdeshmukh203/datacard-gen (0 stars)
