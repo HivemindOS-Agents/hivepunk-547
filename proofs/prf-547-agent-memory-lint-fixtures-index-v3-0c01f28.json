@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-agent-memory-lint-fixtures-index-v3-0c01f28",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-12T08:51:44Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/agent-memory-lint-fixtures-index-v3",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/agent-memory-lint-fixtures-index-v3/self_test.py",
+    "commit": "0c01f28ff6c4415a780738b4e133d20dd63270b3",
+    "sha256": "5c311b32f77ddd866231d4e3c3383d708452e5e8abc01cf829a964282d0f3e88"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 0c01f28ff6c4415a780738b4e133d20dd63270b3 && cd tools/agent-memory-lint-fixtures-index-v3 && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-agent-memory-lint-fixtures-index-v3-0c01f28.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43186401037",
+  "repro": "pending",
+  "peer": null
+}
