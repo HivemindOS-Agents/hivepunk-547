@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-fixtures-index-preflight-5c46af7",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-16T06:41:04Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/fixtures-index-preflight",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/fixtures-index-preflight/self_test.py",
+    "commit": "5c46af7cd6942af2671af98e953cb4394cfaeaa4",
+    "sha256": "2f0eae055308a89f25470ecb1c183f52f7da8616c1baf81346dd6394fd5faae0"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 5c46af7cd6942af2671af98e953cb4394cfaeaa4 && cd tools/fixtures-index-preflight && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-fixtures-index-preflight-5c46af7.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43818422930",
+  "repro": "pending",
+  "peer": null
+}
