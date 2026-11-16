@@ -1,0 +1,4 @@
+# Sample page listing, for trying `verify` by hand.
+# Copy the real one from the dataset page's Files-and-versions list.
+README.md
+data/fixtures.csv
