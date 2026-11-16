@@ -1,0 +1,262 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-16T01:46:44.446Z",
+  "subject": "agent-memory-lint-fixtures-index-v2",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The pages show a well-specified publish plan for a five-file folder and a named target dataset URL, but every page read is a proposal or a triage comment, not the live Hub listing, so the artifact should be treated as described-but-unverified rather than published. It is still worth knowing as a small, checkable example of a self-testing index folder, provided a reader verifies the live page and file list directly.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 1 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-17T01:46:52.678Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is f6af6ee, on 2026-11-15.",
+      "check": "shipping",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/commit/f6af6ee1a3d1096fa6406e7355c288b0e36d88a6"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The folder tools/agent-memory-lint-fixtures-index-v2/ is described as holding README.md, index.json, index.md, index_check.py and self_test.py.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "quote": "The folder tools/agent-memory-lint-fixtures-index-v2/ holds README.md, index.json, index.md, index_check.py and self_test.py",
+      "sourceId": "src-1",
+      "quoteSha256": "a70e1ffee7e63dda50460de4228a691f4983794af1ad67d9b2418ae2bd5a147d"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The proposal asks for the folder to be published as one public dataset under the account hivepunk-547-db38b7a4 named agent-memory-lint-fixtures-index-v2, with the five files copied byte-for-byte and .gitattributes as the only tolerated extra.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "quote": "Publish the folder as one public dataset under my account hivepunk-547-db38b7a4 named agent-memory-lint-fixtures-index-v2, with exactly the five files README.md, index.json, index.md, index_check.py and self_test.py copied byte-for-byte and no edits; .gitattributes is the only tolerated extra.",
+      "sourceId": "src-1",
+      "quoteSha256": "9bebc224f678df66181939458e2e0245c522eba6e7046ee42bdf1a57923182cb"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The proposal says the reply should report the live dataset URL, the page status line exactly as shown, and the served file list exactly as shown, and say plainly if any of the three could not be read.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "quote": "report the live dataset URL https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 , the page status line exactly as the live page shows it, and the served file list exactly as shown, and say plainly if any of the three could not be read.",
+      "sourceId": "src-1",
+      "quoteSha256": "b7cb188843cce60e81824ca7f820aad0ae646951a2dceff8211d31f78147366b"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Another issue says none of the snippets read was a live Hub page, so it could not confirm whether the dataset exists, what its status line says, or which files it serves.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "quote": "Those snippets describe plans and edits to local files; none is a live Hub page, so I could not confirm from the public index or search whether huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 exists, what its page status line says, or which files it serves.",
+      "sourceId": "src-1",
+      "quoteSha256": "49617fa0a44e0f4ee3dcde317e710e86fcb95f0f65ca90308baa34c0244cb1c9"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "An issue describes a 'Live read-back' step that records the HTTP status line from GET of the dataset URL, the sibling file names returned by the Hub API listing, and the read date, and stops if the listing does not carry all five names.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/147",
+      "quote": "commit to add a 'Live read-back' section holding, verbatim, the HTTP status line from GET https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 and the file names returned by the Hub API listing for the same repo, with the read date; if the listing does not carry",
+      "sourceId": "src-3",
+      "quoteSha256": "11258db8de061bfa3919e9235f843a6e43e819f8cbb18c7041acc3709aa05afc"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "A related dataset, hivepunk-547-*/agent-memory-lint-fixtures, is described by a commenter as being on the Hub, and that issue is closed as completed.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/109",
+      "quote": "already done. The agent's own to-do, and it is done: dataset hivepunk-547-*/agent-memory-lint-fixtures is on the Hub.",
+      "sourceId": "src-5",
+      "quoteSha256": "342cf8f77955ae83204e5ba97a15259d6c30bdf3627610ffbf5885cc69d59b28"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "One issue asks for the dataset card to name the GitHub path the index points at and the location of the self-test output.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/133",
+      "quote": "The card must state that the index points at the fixture folders in the public GitHub repository HivemindOS-Agents/hivepunk-547 under tools/agent-memory-lint-fixtures/, and that the self-test output lives in that repository's ARTIFACTS.md.",
+      "sourceId": "src-2",
+      "quoteSha256": "4ccb320fc95c49aad2d326e4adb05ad99f05454b989a91cffa65f820ec7a9935"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "The issue about pasting the Hub listing read-back was closed as duplicate, with a commenter saying it is superseded by the agent's newer to-do on the same artifact.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/147",
+      "quote": "Closing in the 16 Nov triage: superseded by #180 (the agent's newer to-do on the same artifact, also closed in this triage and kept in the agent's own repo).",
+      "sourceId": "src-3",
+      "quoteSha256": "f9b37f4fb5922351ceba4adf667087351ee1bc2934c11d12e98ca4efa7bc4d2f"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "The bee-scouts repository has 50 raw commits in the last 30 days, of which the page states 1 is real work, and its latest real commit is f6af6ee on 2026-11-15.",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-17T01:46:52.678Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether the dataset hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 is live, and what its status line and served file list are.",
+      "check": "page",
+      "missing": "Fetching the dataset URL and the Hub API listing for that repository."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether the fixture folders the index is said to point at exist in the named GitHub repository.",
+      "check": "page",
+      "missing": "Reading the tools/agent-memory-lint-fixtures/ folder and ARTIFACTS.md in HivemindOS-Agents/hivepunk-547."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether the folder's self_test.py was run and what exit code it produced.",
+      "check": "page",
+      "missing": "Running the self-test in the folder, or a page showing its recorded exit code."
+    }
+  ],
+  "counts": {
+    "fact": 11,
+    "derived": 0,
+    "unknown": 3
+  },
+  "risks": [
+    "No page read shows the live Hugging Face dataset page, its status line or its served file list, so the existence and contents of the published dataset are unconfirmed",
+    "The pages are agent-authored proposals closed by a person in triage, so the described upload may never have been executed under those exact names",
+    "The fixture folders the index reportedly points at are described but no page read shows them in the repository",
+    "The upload is described as byte-for-byte unchanged with no edits, additions or omissions, which leaves no page-read mechanism for correcting a wrong file after publication",
+    "The dataset is described as pending under one named account only, with no organisation, so any listing under a different name would not be the artifact described"
+  ],
+  "unknowns": [
+    "Whether the dataset hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 is live, and what its status line and served file list are.: Fetching the dataset URL and the Hub API listing for that repository.",
+    "Whether the fixture folders the index is said to point at exist in the named GitHub repository.: Reading the tools/agent-memory-lint-fixtures/ folder and ARTIFACTS.md in HivemindOS-Agents/hivepunk-547.",
+    "Whether the folder's self_test.py was run and what exit code it produced.: Running the self-test in the folder, or a page showing its recorded exit code."
+  ],
+  "wouldChangeMind": [
+    "A live Hugging Face page at the named dataset URL showing the five files, which would move this from described to published",
+    "A Hub listing that serves a different set of file names than the five described, which would mean the upload did not match the folder",
+    "A page showing the folder's self-test command and its recorded exit code, which would make the self-test claim checkable"
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Publish agent-memory-lint-fixtures-index-v2 as one five-file Hugging Face upload · Issue #156 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "status": 200,
+      "fetchedAt": "2026-11-16T01:46:52.176Z",
+      "extractor": "page-text-v1",
+      "sha256": "597b9b9bfd0b6dfa215a6e3514a10ddc786978a298618981864bce52a623825f",
+      "bytes": 225519,
+      "quote": "The folder tools/agent-memory-lint-fixtures-index-v2/ holds README.md, index.json, index.md, index_check.py and self_test.py",
+      "quoteSha256": "a70e1ffee7e63dda50460de4228a691f4983794af1ad67d9b2418ae2bd5a147d"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "agent-memory-lint-fixtures-index-v2: name the GitHub path the index points at · Issue #133 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/133",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/133",
+      "status": 200,
+      "fetchedAt": "2026-11-16T01:46:52.205Z",
+      "extractor": "page-text-v1",
+      "sha256": "539d4dc5a2624f2125991a9a9014613fd425b0007897a3e4e979e3e462467b62",
+      "bytes": 225837,
+      "quote": "The card must state that the index points at the fixture folders in the public GitHub repository HivemindOS-Agents/hivepunk-547 under tools/agent-memory-lint-fixtures/, and that the self-test output lives in that repository's ARTIFACTS.md.",
+      "quoteSha256": "4ccb320fc95c49aad2d326e4adb05ad99f05454b989a91cffa65f820ec7a9935"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "agent-memory-lint-fixtures-index-v2: paste the Hub listing read-back into ARTIFACTS.md · Issue #147 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/147",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/147",
+      "status": 200,
+      "fetchedAt": "2026-11-16T01:46:52.149Z",
+      "extractor": "page-text-v1",
+      "sha256": "3d875011c76e621003ed63166139d0e3ffeaac27906913ac400251a993f99cfb",
+      "bytes": 225772,
+      "quote": "commit to add a 'Live read-back' section holding, verbatim, the HTTP status line from GET https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 and the file names returned by the Hub API listing for the same repo, with the read date; if the listing does not carry",
+      "quoteSha256": "11258db8de061bfa3919e9235f843a6e43e819f8cbb18c7041acc3709aa05afc"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Publish agent-memory-lint-fixtures from the three drafted files, card copied byte-for-byte · Issue #98 · HivemindOS-Agents/bee-scouts · GitH",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98",
+      "status": 200,
+      "fetchedAt": "2026-11-16T01:46:52.083Z",
+      "extractor": "page-text-v1",
+      "sha256": "f665f5a857ca18142ca6ac1a0f865fc88288f92763f7a6dd35868296bb1ffba8",
+      "bytes": 219461,
+      "quote": "Where a published README.md already exists, republish with the same title so it updates in place.",
+      "quoteSha256": "a9515c38db3a9040e7271ae68e66b5ba5f11f084acc05821ce26050dc18c2c4d"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "agent-memory-lint-fixtures: publish the six-row two-file dataset and return the live URL · Issue #109 · HivemindOS-Agents/bee-scouts · GitHu",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/109",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/109",
+      "status": 200,
+      "fetchedAt": "2026-11-16T01:46:52.187Z",
+      "extractor": "page-text-v1",
+      "sha256": "b131333690c57eeb1df1859d28c3f8bf512708f0bac82f292f33790db69e2990",
+      "bytes": 228238,
+      "quote": "already done. The agent's own to-do, and it is done: dataset hivepunk-547-*/agent-memory-lint-fixtures is on the Hub.",
+      "quoteSha256": "342cf8f77955ae83204e5ba97a15259d6c30bdf3627610ffbf5885cc69d59b28"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "ARTIFACTS.md: one row per published dataset with its self-test exit code · Issue #120 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/120",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/120",
+      "status": 200,
+      "fetchedAt": "2026-11-16T01:46:52.678Z",
+      "extractor": "page-text-v1",
+      "sha256": "7b16d79de40376cd10885277e1558ffb1b09501631992742830b60fbc47a0b33",
+      "bytes": 219898,
+      "quote": "a reader see which datasets were published and on what evidence, instead of hunting through issue threads.",
+      "quoteSha256": "6caae2125c00d8d2805a766cfca2adda0e4ef72c8ee444e5565f78158daedd5e"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-17T01:46:52.678Z",
+      "fetchedAt": "2026-11-16T01:46:44.446Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "0119c688e7faa5f059a3e9206fe63117678dfc26ce45fe45e7524d5afd21f4b8"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-16-agent-memory-lint-fixtures-index-v2.md",
+  "decidedBy": "bee"
+}
