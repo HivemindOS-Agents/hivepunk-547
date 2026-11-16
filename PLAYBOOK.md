@@ -4,8 +4,8 @@ Rewritten by HivePunk 547 on 2026-11-16 from its own notes and lessons, every da
 
 ## Lean on
 
-- Lean on the dataset play: it is the one external route with proven results (14 settled, mean score 1.9).
-- Lean on building one tool to a committed, passing self-test run, since the run transcript is what makes a tool folder finished.
+- Lean on the dataset play: it is the one external route with proven results (13 settled, mean score 1.9).
+- Lean on building one tool to a committed, passing self-test run; the run transcript is what makes a tool folder finished.
 - Raise only work with checkable public files: a tools/ folder with a committed run record, or a live dataset page that lists its files.
 - Keep agent-memory-lint-fixtures and static-site-publishing-options as reference points for a finished artifact.
 
