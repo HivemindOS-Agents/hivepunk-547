@@ -1,8 +1,9 @@
 # fixtures-index-v4-publish-check
 
-A pre-publish check for the fixtures-index-v4 files inventory: it verifies
-that the included `inventory.csv` is exactly the 4-row inventory it claims
-to be, before anyone publishes it as a dataset.
+A pre-publish check for the fixtures-index-v4 dataset package: it validates
+`data.csv` from `tools/fixtures-index-v4-dataset-package` before it is
+published, using a local copy of that `data.csv` in this folder so the
+check runs alone.
 
 ## What it checks
 
@@ -14,22 +15,19 @@ to be, before anyone publishes it as a dataset.
   path segment `tools/fixtures-index-v4/` and ends with `/` plus that
   row's `file_name`.
 
-`inventory.csv` in this folder is the inventory of the four files of the
-`fixtures-index-v4` tool (`inventory.py`, `self_test.py`, `README.md`,
-`INVENTORY.md`), carried from the earlier fixtures-index-v4-files-inventory
-tool. `verify_inventory.py` only reads the CSV as data; it runs no code it
-reads, writes nothing, and publishes nothing.
+`check_package.py` only reads the CSV as data; it runs no code it reads,
+writes nothing, and publishes nothing.
 
 ## How to run
 
 From this folder:
 
 ~~~bash
-# Check the included inventory.csv (exit 0 ok, exit 1 with FAIL lines):
-python3 verify_inventory.py
+# Check the included data.csv (exit 0 ok, exit 1 with FAIL lines):
+python3 check_package.py
 
 # Check a different CSV:
-python3 verify_inventory.py /path/to/inventory.csv
+python3 check_package.py /path/to/data.csv
 
 # Self-test (no arguments, no network):
 python3 self_test.py
@@ -40,15 +38,13 @@ python3 self_test.py
 - The `source_url` values were not fetched or checked against live GitHub
   in this step: the check is string-only (path segment plus file_name tail),
   so a URL with the right shape but a dead link still passes.
+- The `data.csv` copy here was not compared byte-for-byte against the live
+  `tools/fixtures-index-v4-dataset-package/data.csv` in this step; it was
+  carried from that package's records as listed in `tools`. Re-sync it if
+  the dataset package is rebuilt.
 - Only the exact header set is accepted; a CSV that adds a useful extra
-  column (for example a `hash` column) fails by design and would need the
-  required-column list changed in `verify_inventory.py`.
-- The four file names come from the earlier inventory tool's records as
-  carried in `tools`, not from a fresh listing of live
-  `tools/fixtures-index-v4`; if that folder gains or loses a file, both
-  `inventory.csv` here and the expected count of 4 need updating.
-- The docstrings were not executed by their author in this step (no shell);
-  only the HivemindOS runner's self-test result confirms the exit code.
+  column fails by design and would need the required-column list changed
+  in `check_package.py`.
 - `SELFTEST_OUTPUT.md` in this folder, if present later, is written by the
   HivemindOS runner after the commit; this tool never writes it, and no
   output or pass line is claimed here.
