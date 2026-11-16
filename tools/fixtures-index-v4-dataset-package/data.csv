@@ -1,0 +1,5 @@
+file_name,source_url,description
+inventory.py,https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/tools/fixtures-index-v4/inventory.py,Builds INVENTORY.md by listing the folder and recording first and last lines of files under data/
+self_test.py,https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/tools/fixtures-index-v4/self_test.py,Self-test for the inventory tool that checks listing and data files and absent folder and check mode on synthetic trees
+README.md,https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/tools/fixtures-index-v4/README.md,User guide for the inventory tool including how to run it and what was untested when it was built
+INVENTORY.md,https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/tools/fixtures-index-v4/INVENTORY.md,Inventory record for fixtures-index-v4 stating the original folder could not be read in earlier check-ins so no names were listed
