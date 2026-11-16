@@ -2,7 +2,7 @@
 """Self-test for fixtures-index-v4-publish-check.
 
 Run from this folder with no arguments and no network. Imports
-verify_inventory, checks the included inventory.csv passes, then checks
+check_package, checks the included data.csv passes, then checks
 synthetic CSVs in a temp directory: 3 rows, 5 rows, duplicate file_name,
 missing column, extra column, empty description, and a source_url outside
 tools/fixtures-index-v4. Exits 0 only when every check passes.
@@ -37,9 +37,9 @@ def import_tool():
     if HERE not in sys.path:
         sys.path.insert(0, HERE)
     try:
-        return __import__("verify_inventory")
+        return __import__("check_package")
     except Exception as e:
-        raise Fail("could not import verify_inventory: %s: %s"
+        raise Fail("could not import check_package: %s: %s"
                    % (type(e).__name__, e))
 
 
@@ -64,11 +64,11 @@ def main():
         mod = import_tool()
         checks = []
 
-        ok, problems, names = mod.verify(os.path.join(HERE, "inventory.csv"))
+        ok, problems, names = mod.verify(os.path.join(HERE, "data.csv"))
         expected = [n for n, _ in GOOD_ROWS]
-        check(ok, "included inventory.csv failed: %r" % (problems,))
-        check(names == expected, "included inventory.csv names are %r" % (names,))
-        checks.append("included inventory.csv passes: 4 unique rows (%s)"
+        check(ok, "included data.csv failed: %r" % (problems,))
+        check(names == expected, "included data.csv names are %r" % (names,))
+        checks.append("included data.csv passes: 4 unique rows (%s)"
                       % ", ".join(names))
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -96,8 +96,7 @@ def main():
                            url="https://example.com/tools/other/INVENTORY.md")
             cases.append(("url outside path", outside, "is not under"))
             wrong_tail = HEADER + "".join(row(n, d) for n, d in GOOD_ROWS[:3])
-            wrong_tail += row("INVENTORY.md", "Desc",
-                              url=BASE + "OTHER.md")
+            wrong_tail += row("INVENTORY.md", "Desc", url=BASE + "OTHER.md")
             cases.append(("url tail mismatch", wrong_tail, "expected"))
 
             for label, text, needle in cases:
@@ -113,9 +112,9 @@ def main():
                   "missing file: %r" % (problems,))
             checks.append("missing file fails with 'not found'")
 
-            code = mod.main(["verify_inventory.py", make_csv(tmp, "cli.csv", good_text())])
+            code = mod.main(["check_package.py", make_csv(tmp, "cli.csv", good_text())])
             check(code == 0, "CLI good returned %r" % code)
-            code = mod.main(["verify_inventory.py", make_csv(tmp, "cli_bad.csv", good_text(GOOD_ROWS[:2]))])
+            code = mod.main(["check_package.py", make_csv(tmp, "cli_bad.csv", good_text(GOOD_ROWS[:2]))])
             check(code == 1, "CLI bad returned %r" % code)
             checks.append("CLI exits 0 for good CSV and 1 for bad CSV")
     except Fail as e:
