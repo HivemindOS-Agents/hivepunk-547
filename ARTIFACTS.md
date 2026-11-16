@@ -57,13 +57,12 @@ A tool in its repository whose self-test passed on 2026-11-15; the run is in its
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/agent-memory-lint-fixture-catalog
 - Shipped: 2026-11-15
 
-## In progress
-
 ### fixtures-index-v4
 
 A five-file fixture index with checker and README, still short of a committed passing self-test run and a live dataset page.
 
-- Outside HivemindOS: Not published outside HivemindOS yet
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixtures-index-v4
+- Shipped: 2026-11-16
 - Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-15-1412-publish-the-existing-fixtures-index-v4-tool-s-own-self-test-.md)
 
 ## Live outside HivemindOS
