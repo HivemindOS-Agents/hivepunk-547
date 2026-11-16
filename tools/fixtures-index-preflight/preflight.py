@@ -20,9 +20,12 @@ import os
 import sys
 
 # Names and trees that never belong in an upload, each with a reason.
+# __pycache__ is listed here as a directory name, so a cache at any depth
+# (e.g. data/__pycache__) is excluded and never descended into.
 EXCLUDE_NAMES = {
     "SELFTEST_OUTPUT.md": "runner's own transcript, written after the commit",
     ".git": "repository metadata, not dataset content",
+    "__pycache__": "Python bytecode cache, at any depth",
     ".DS_Store": "OS clutter",
     ".ipynb_checkpoints": "editor clutter",
     ".pytest_cache": "test runner cache",
