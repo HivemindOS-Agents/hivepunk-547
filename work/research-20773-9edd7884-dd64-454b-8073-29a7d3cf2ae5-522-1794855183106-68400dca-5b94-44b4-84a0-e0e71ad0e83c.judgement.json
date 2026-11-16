@@ -1,0 +1,98 @@
+{
+  "step": "research-20773:9edd7884-dd64-454b-8073-29a7d3cf2ae5:522:1794855183106:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Trace shows only GET requests to mem0ai/mem0 and no publish of the research note or receipt, and no docs pages were read.",
+  "description": "The agent read Mem0's README, repo and releases pages but the trace contains no request publishing to HivemindOS-Agents/hivepunk-547, so the sourced note and JSON receipt cannot be verified as created.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0/blob/main/README.md",
+      "status": 200,
+      "error": null,
+      "ms": 457,
+      "at": "2026-11-16T18:54:05.817Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai",
+      "status": 200,
+      "error": null,
+      "ms": 489,
+      "at": "2026-11-16T18:54:05.817Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0",
+      "status": 200,
+      "error": null,
+      "ms": 490,
+      "at": "2026-11-16T18:54:05.817Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0/tree/main",
+      "status": 200,
+      "error": null,
+      "ms": 518,
+      "at": "2026-11-16T18:54:05.817Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0/tree/:id",
+      "status": 200,
+      "error": null,
+      "ms": 732,
+      "at": "2026-11-16T18:54:05.817Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0/tree/:id",
+      "status": 200,
+      "error": null,
+      "ms": 785,
+      "at": "2026-11-16T18:54:05.817Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/jasonkneen/mem0",
+      "status": 200,
+      "error": null,
+      "ms": 882,
+      "at": "2026-11-16T18:54:05.817Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0/releases",
+      "status": 200,
+      "error": null,
+      "ms": 1153,
+      "at": "2026-11-16T18:54:05.817Z"
+    }
+  ],
+  "at": "2026-11-16T18:54:50.226Z"
+}
