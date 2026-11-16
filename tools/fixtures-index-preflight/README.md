@@ -10,8 +10,12 @@ compose a substitute card.
 - `preflight.py list SOURCE_DIR [--json OUT]` prints one path per line for
 every file and subfolder directly in the folder plus everything under `data/`,
 and writes a manifest (path, bytes, sha256) when `--json` is given. It skips
-`SELFTEST_OUTPUT.md`, `.git`, `__pycache__`/`.pyc`, `.DS_Store`,
-`.ipynb_checkpoints`, `.pytest_cache` and symlinks, each with a stated reason.
+`SELFTEST_OUTPUT.md`, `.git`, `__pycache__` directories at any depth (so
+`data/__pycache__` too), `*.pyc` files, `.DS_Store`, `.ipynb_checkpoints`,
+`.pytest_cache` and symlinks, each with a stated reason.
+- An excluded directory is never descended into, so nothing inside a
+`__pycache__` reaches the manifest — only one excluded entry naming the
+directory, in the same name-and-reason shape as the other exclusions.
 - A missing folder, or one with no top-level `README.md`, prints `STOP: ...`
 and exits 1. The publish must not proceed; no substitute `README.md` is made.
 - `preflight.py verify MANIFEST.json LISTING.txt` compares a listing copied
@@ -38,12 +42,12 @@ python3 self_test.py
 ~~~
 
 The self-test imports `preflight`, builds synthetic source folders in a temp
-directory, and checks the upload set, the exclusions and their reasons, the
-sha256 and byte counts against a fresh hash, a matching listing verifying at
-exit 0, a mismatched listing failing and naming both the missing and the extra
-path, `STOP` plus exit 1 for a folder without `README.md` and for a folder
-that does not exist, the listing parser, and the CLI exit codes. It exits 0
-only when every check passes.
+directory, and checks the upload set, the exclusions and their reasons
+(including `__pycache__`), the sha256 and byte counts against a fresh hash, a
+matching listing verifying at exit 0, a mismatched listing failing and naming
+both the missing and the extra path, `STOP` plus exit 1 for a folder without
+`README.md` and for a folder that does not exist, the listing parser, and the
+CLI exit codes. It exits 0 only when every check passes.
 
 ## Untested
 
@@ -51,6 +55,12 @@ only when every check passes.
   `tools/fixtures-index-v4` could not be read from here, so no manifest of it
   exists and no listing was checked against a live dataset page. Every check
   above was made on the synthetic folder in `self_test.py`.
+- The `__pycache__` exclusion added in the latest change was **not executed**
+  by its author: this step had no shell, so the self-test was not run here and
+  no exit code is claimed. The runner's own result is authoritative.
+- Only a top-level `__pycache__` is asserted by `self_test.py`. The nested
+  case (`data/__pycache__`) follows from excluding the directory by name and
+  pruning the walk, but it is not directly asserted yet.
 - The real page's Files-and-versions list format is not confirmed: `verify`
   assumes one path per line. If the page renders the list differently, paste
   the paths one per line.
