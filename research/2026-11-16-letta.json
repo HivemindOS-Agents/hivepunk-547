@@ -1,0 +1,193 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-16T21:55:11.256Z",
+  "subject": "Letta",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Letta is worth evaluating for recurring work needing durable, inspectable context because its current design stores memory as versioned Markdown files without requiring a vector database, but its benefits for a specific workload and its operating costs remain unproven in the pages read.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Letta is a platform for persistent agents with a CLI, desktop app, web interface, messaging channels, and Agent SDK.",
+      "check": "page",
+      "source": "https://rywalker.com/research/letta",
+      "quote": "Letta is a platform for persistent agents, with a CLI, desktop app, web interface, messaging channels, and Agent SDK.",
+      "sourceId": "src-1",
+      "quoteSha256": "b047eb353b3a599eab0edadf9acc4ff085cd0baa2e9fe0a1b4c8bba3b3a426f6"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Current development lives in letta-ai/letta-code and the older Letta V1 API server is retired.",
+      "check": "page",
+      "source": "https://rywalker.com/research/letta",
+      "quote": "Current development lives in letta-ai/letta-code; the older Letta V1 API server is retired.",
+      "sourceId": "src-1",
+      "quoteSha256": "de2f01ac70e763ff39316e80dbf4f99efe3e9cd4307e7eb049dd97adb9b3ab35"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "MemFS stores memory in git-backed Markdown, with selected files in every prompt and deeper references read on demand.",
+      "check": "page",
+      "source": "https://rywalker.com/research/letta",
+      "quote": "MemFS stores memory in git-backed Markdown, with selected files in every prompt and deeper references read on demand.",
+      "sourceId": "src-1",
+      "quoteSha256": "94a466e31a323786a1e18626842ec3e96d0b27787fb507eb6752e73b304f844e"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "MemFS does not require a vector database and uses versioned Markdown files without a semantic index by default.",
+      "check": "page",
+      "source": "https://rywalker.com/research/letta",
+      "quote": "Does Letta memory require a vector database? No. MemFS uses versioned Markdown files without a semantic index by default; an optional search mod adds semantic or hybrid retrieval with QMD.",
+      "sourceId": "src-1",
+      "quoteSha256": "472abf799be69c29f9ed66b8c11e1de7383881792cc1e5253ca7bd85e2870416"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The public harness license is Apache 2.0.",
+      "check": "page",
+      "source": "https://rywalker.com/research/letta",
+      "quote": "License Apache 2.0 for the public harness",
+      "sourceId": "src-1",
+      "quoteSha256": "3af599288b20213b244d580d54b9a435fd306cfbd53b24c2824c6aee3ea1a3d3"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "As checked September 15, 2026, Personal Pro is $20/month and Teams Pro is $20/seat/month.",
+      "check": "page",
+      "source": "https://rywalker.com/research/letta",
+      "quote": "As checked September 15, 2026, Personal Pro is $20/month and Teams Pro is $20/seat/month.",
+      "sourceId": "src-1",
+      "quoteSha256": "6337c07bc3f30f2c03dfe0fd7256fb4d86d8b0aeadfbe704fa54743c55e516a2"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Local runtime and self-hosted App Server can retain state without a Letta account, but remote model providers still receive prompts and operators manage backups.",
+      "check": "page",
+      "source": "https://rywalker.com/research/letta",
+      "quote": "Local state and self-hosting are supported, but remote model providers still receive prompts and operators manage backups.",
+      "sourceId": "src-1",
+      "quoteSha256": "08df3d7de8c79e506a2b4a09b4af024279c152b76939348a2b71c8b33e0b91ec"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Letta Filesystem scores 74.0% on the LoCoMo benchmark by storing conversational histories in a file.",
+      "check": "page",
+      "source": "https://www.letta.com/research/",
+      "quote": "Letta Filesystem scores 74.0% on the LoCoMo benchmark by simply storing conversational histories in a file, beating out specialized memory tool libraries.",
+      "sourceId": "src-2",
+      "quoteSha256": "2577e0896028ecf6610d07573543e0564c72404d6d2878c46e035f6594999a39"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "Letta was formerly MemGPT, an open-source framework transforming stateless LLMs into stateful agents with persistent memory.",
+      "check": "page",
+      "source": "https://lin-guanguo.github.io/llm-memory-research/letta.research/",
+      "quote": "Letta (formerly MemGPT) is an open-source framework that transforms stateless LLMs into stateful agents with persistent memory.",
+      "sourceId": "src-3",
+      "quoteSha256": "b7a43badefd01b8978951f176b1c461ab751e3e168e12a132b8aa9b2d8fd342c"
+    },
+    {
+      "id": "c10",
+      "label": "DERIVED",
+      "text": "For new work, Letta Code/MemFS is the current target rather than the retired V1 Python server architecture.",
+      "check": "page",
+      "inputs": [
+        "c2",
+        "c3"
+      ],
+      "math": "c2 says current development is letta-code and V1 is retired; c3 describes MemFS as the current memory approach, so current work should target letta-code/MemFS, not V1."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether Letta's memory mechanisms improve accuracy on a specific workload is not established.",
+      "check": "page",
+      "missing": "Independent evaluation on the specific workload, with task-completion and memory-quality measures."
+    }
+  ],
+  "counts": {
+    "fact": 9,
+    "derived": 1,
+    "unknown": 1
+  },
+  "risks": [
+    "Remote model providers still receive prompts even with local state/self-hosting, and self-hosted state needs the operator's own backups.",
+    "The $20 base price does not mean unlimited inference; plans have different billing units and usage charges.",
+    "Old Python-server / V1 tutorials are not current deployment instructions, risking wrong setup.",
+    "The 'agent reviews before applying' dreaming option adds a model conversation and token cost and is not a human approval step.",
+    "Memory quality and maintenance need explicit evaluation; the pages do not establish improved accuracy on a particular workload."
+  ],
+  "unknowns": [
+    "Whether Letta's memory mechanisms improve accuracy on a specific workload is not established.: Independent evaluation on the specific workload, with task-completion and memory-quality measures."
+  ],
+  "wouldChangeMind": [
+    "Independent benchmarks on a relevant workload showing MemFS does or does not improve task completion versus alternatives.",
+    "Audited security or production-adoption evidence for Letta Code/App Server, or documented backup/recovery and data-handling practices.",
+    "Verified total-cost data showing inference and review costs under typical recurring use, beyond the $20 base prices stated."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Letta | Ry Walker Research | Ry Walker",
+      "url": "https://rywalker.com/research/letta",
+      "finalUrl": "https://rywalker.com/research/letta",
+      "status": 200,
+      "fetchedAt": "2026-11-16T21:55:18.471Z",
+      "extractor": "page-text-v1",
+      "sha256": "884644090a921d9dbd56f1c74fd6c748a66c1c7eec20366a3448e761975483e7",
+      "bytes": 93297,
+      "quote": "Letta is a platform for persistent agents, with a CLI, desktop app, web interface, messaging channels, and Agent SDK.",
+      "quoteSha256": "b047eb353b3a599eab0edadf9acc4ff085cd0baa2e9fe0a1b4c8bba3b3a426f6"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Research | Letta",
+      "url": "https://www.letta.com/research/",
+      "finalUrl": "https://www.letta.com/research/",
+      "status": 200,
+      "fetchedAt": "2026-11-16T21:55:18.356Z",
+      "extractor": "page-text-v1",
+      "sha256": "e0141bf5954d78cabe1b63a1f14d96a6fce300bd8d4b0575d02d34a10c28298b",
+      "bytes": 15610,
+      "quote": "Letta Filesystem scores 74.0% on the LoCoMo benchmark by simply storing conversational histories in a file, beating out specialized memory tool libraries.",
+      "quoteSha256": "2577e0896028ecf6610d07573543e0564c72404d6d2878c46e035f6594999a39"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Letta - LLM Agent Research",
+      "url": "https://lin-guanguo.github.io/llm-memory-research/letta.research/",
+      "finalUrl": "https://lin-guanguo.github.io/llm-memory-research/letta.research/",
+      "status": 200,
+      "fetchedAt": "2026-11-16T21:55:18.325Z",
+      "extractor": "page-text-v1",
+      "sha256": "760c3ae2ffa33e563e9705445e0acf1e47529405532922f7ae99900193165519",
+      "bytes": 89196,
+      "quote": "Letta (formerly MemGPT) is an open-source framework that transforms stateless LLMs into stateful agents with persistent memory.",
+      "quoteSha256": "b7a43badefd01b8978951f176b1c461ab751e3e168e12a132b8aa9b2d8fd342c"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-16-letta.md",
+  "decidedBy": "bee"
+}
