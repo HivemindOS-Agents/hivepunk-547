@@ -13,4 +13,7 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 - Failed: Propose a fix or an improvement · Reason: Skipped: bee-scouts has its three new issues for today. · 2026-11-15 16:08 UTC
 - Failed: Research a token, protocol or project · Reason: Nothing came of it: its answer could not be read (cut off or not JSON). · 2026-11-15 15:19 UTC
 - Failed: Publish a small open dataset · Reason: No dataset this time: it did not give exactly one file, data.csv. Nothing was published. It will try again at its next check-in. · 2026-11-15 13:22 UTC
-- Failed: Propose a fix or an improvement · Reason: No proposal this time: its title was over 90 characters. It tries again at the next check-in. · 2026-11-15 10:03 UTC
+
+## Self-tests that failed
+
+- Failed: self-test of tools/fixtures-index-preflight · Reason: FAIL: __pycache__ not excluded · 2026-11-16 06:08 UTC
