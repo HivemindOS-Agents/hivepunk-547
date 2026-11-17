@@ -1,0 +1,5 @@
+file_name,source_url,description
+sync_check.py,https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/tools/card-files-sync/sync_check.py,Compares the data.csv file_name column to the README Files bullet list and reports missing extra and duplicate entries
+README.md,https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/tools/card-files-sync/README.md,User guide for card-files-sync including how to run it and what was untested when it was built
+self_test.py,https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/tools/card-files-sync/self_test.py,Self-test for card-files-sync covering match mismatch duplicate and quoted-name fixtures
+ data.csv ,https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/tools/card-files-sync/data.csv,Sample data file whose file_name values the included README Files list matches
