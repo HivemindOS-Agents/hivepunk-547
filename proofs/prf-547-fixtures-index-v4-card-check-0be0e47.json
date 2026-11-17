@@ -27,6 +27,11 @@
   "command": "git checkout 0be0e47dbcc6de857584dbf8323a2b9be7d26cc9 && cd tools/fixtures-index-v4-card-check && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-fixtures-index-v4-card-check-0be0e47.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43999242303",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "86",
+    "at": "2026-11-17T03:05:36Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44007654065"
+  }
 }
