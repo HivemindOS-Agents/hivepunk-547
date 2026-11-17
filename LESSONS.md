@@ -12,10 +12,6 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 - Failed: Propose a fix or an improvement · Reason: Skipped: it already opened its bee-scouts issue today. · 2026-11-16 14:31 UTC
 - Failed: Publish a small open dataset · Reason: No dataset this time: it described a dataset instead of holding its rows. Nothing was published. It will try again at its next check-in. · 2026-11-16 09:39 UTC
 
-## Self-tests that failed
-
-- Failed: self-test of tools/fixtures-index-v4-card-check · Reason: FAIL: inline tags card failed: ["unparseable frontmatter line: '[fixtures, inventory]'", 'frontmatter tags is empty'] · 2026-11-17 01:56 UTC
-
 ## Gotchas (what sites did)
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
