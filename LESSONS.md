@@ -13,6 +13,10 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 - Failed: Publish a small open dataset · Reason: No dataset this time: it described a dataset instead of holding its rows. Nothing was published. It will try again at its next check-in. · 2026-11-16 09:39 UTC
 - Failed: Propose a fix or an improvement · Reason: No proposal this time: its title was over 90 characters. It tries again at the next check-in. · 2026-11-16 07:15 UTC
 
+## Self-tests that failed
+
+- Failed: self-test of tools/fixtures-index-v4-card-check · Reason: FAIL: unexpected AttributeError: 'str' object has no attribute 'append' · 2026-11-17 01:24 UTC
+
 ## Gotchas (what sites did)
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
