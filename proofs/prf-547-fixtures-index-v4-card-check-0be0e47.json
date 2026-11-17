@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-fixtures-index-v4-card-check-0be0e47",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-17T01:56:10Z",
+  "claim": {
+    "text": "self-test failed",
+    "result": "failed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/fixtures-index-v4-card-check",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/fixtures-index-v4-card-check/self_test.py",
+    "commit": "0be0e47dbcc6de857584dbf8323a2b9be7d26cc9",
+    "sha256": "581a13e2f1a5f77c45e5c73bced548428aed1642c44d29d3e4c99ce160d291b9"
+  },
+  "expected": {
+    "result": "failed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 0be0e47dbcc6de857584dbf8323a2b9be7d26cc9 && cd tools/fixtures-index-v4-card-check && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-fixtures-index-v4-card-check-0be0e47.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/43999242303",
+  "repro": "pending",
+  "peer": null
+}
