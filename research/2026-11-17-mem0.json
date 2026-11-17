@@ -1,0 +1,264 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-17T19:53:26.768Z",
+  "subject": "Mem0",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Mem0 is a widely adopted, actively maintained open-source memory layer with vendor-reported strong benchmarks, but the gap between managed and open-source performance and contested methodology mean its thesis rests on independent reproduction, not its headline scores alone.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "mem0ai/mem0 has 7 raw commits in the last 30 days, 5 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/mem0ai/mem0/commits?per_page=50&since=2026-10-18T19:53:35.523Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is f1791da, on 2026-11-06.",
+      "check": "shipping",
+      "source": "https://github.com/mem0ai/mem0/commit/f1791daa86d469249c9b002f62644d58a1eb96a0"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Mem0 enhances AI assistants and agents with an intelligent memory layer enabling personalized interactions.",
+      "check": "page",
+      "source": "https://github.com/mem0ai/mem0",
+      "quote": "Mem0 (\"mem-zero\") enhances AI assistants and agents with an intelligent memory layer, enabling personalized AI interactions.",
+      "sourceId": "src-1",
+      "quoteSha256": "a0723884bb1c4a1d87bc3d6574fd5f0263e6113faf9e420fd69d6647f77c4dc9"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Mem0 reports 92.5 on LoCoMo, +21 points over the previous algorithm.",
+      "check": "page",
+      "source": "https://github.com/mem0ai/mem0",
+      "quote": "92.5 on LoCoMo -- +21 points over the previous algorithm",
+      "sourceId": "src-1",
+      "quoteSha256": "4050997f7e72f6a95715e430fab36b771b74b452456f0ba709f5c356e932b03a"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The April 2026 algorithm uses single-pass ADD-only extraction with one LLM call and no UPDATE/DELETE.",
+      "check": "page",
+      "source": "https://github.com/mem0ai/mem0",
+      "quote": "Single-pass ADD-only extraction -- one LLM call, no UPDATE/DELETE.",
+      "sourceId": "src-1",
+      "quoteSha256": "595dd8c709697187f635989b5fad72773480a015c67b2a24b02f186022626af3"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Benchmark scores reflect the managed platform with proprietary optimizations not available in the open-source SDK.",
+      "check": "page",
+      "source": "https://github.com/mem0ai/mem0",
+      "quote": "Scores reflect Mem0's managed platform, which includes proprietary optimizations not available in the open-source SDK; open-source users should expect directionally similar gains but not identical numbers.",
+      "sourceId": "src-1",
+      "quoteSha256": "bba0ddfc87e126ce83f39128a80c9424ed275a3fac1c42cffbcf737d3fff8ba1"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The core mem0ai package is Apache 2.0 licensed on GitHub.",
+      "check": "page",
+      "source": "https://rywalker.com/research/mem0",
+      "quote": "The core mem0ai package is Apache 2.0 licensed on GitHub with 58.4K+ stars as of June 2026.",
+      "sourceId": "src-2",
+      "quoteSha256": "0ae765e104cff1de207ac8f21a0a46f7b23b2622871c670456923ab2c91363e4"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Competitors Letta and Zep have publicly challenged Mem0 benchmark methodology.",
+      "check": "page",
+      "source": "https://rywalker.com/research/mem0",
+      "quote": "Competitors like Letta and Zep have publicly challenged Mem0's benchmark methodology, signaling a contested space.",
+      "sourceId": "src-2",
+      "quoteSha256": "ba39e610fdea3a531ad6bcf91386606908217ad6657f913860cf334ce7689d74"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Mem0 self-hosting involves SSO and audit logs being Enterprise-gated.",
+      "check": "page",
+      "source": "https://www.opentechhub.io/mem0/",
+      "quote": "Apache-2.0, self-hostable on PostgreSQL; SSO and audit logs are Enterprise-gated.",
+      "sourceId": "src-5",
+      "quoteSha256": "af9a36e03542b8334a56e192b9a82ecf1ae4d322eb9dd79e636089cbf32a534b"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Mem0 had 69,074 GitHub stars, up 7,140 in the last 111 days to 2026-11-16.",
+      "check": "page",
+      "source": "https://hysenlabs.com/projects/mem0ai-mem0",
+      "quote": "mem0ai/mem0 69,074 ★ · + 7,140 Star history",
+      "sourceId": "src-6",
+      "quoteSha256": "e6086ea40819af92e9b87295ed5687cf1465a59cba44282802728a9cc2699069"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "mem0ai/mem0 has 7 raw commits in the last 30 days, 5 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/mem0ai/mem0/commits?per_page=50&since=2026-10-18T19:53:35.523Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "Its latest real commit is f1791da, on 2026-11-06.",
+      "check": "page",
+      "source": "https://api.github.com/repos/mem0ai/mem0/commits?per_page=50&since=2026-10-18T19:53:35.523Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c11",
+      "label": "DERIVED",
+      "text": "The reported star growth implies roughly 64 stars per day over 111 days.",
+      "check": "page",
+      "inputs": [
+        "c8"
+      ],
+      "math": "7140 / 111 = 64.3 stars per day"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether the open-source SDK reproduces the managed-platform benchmark scores on independent stacks is not confirmed by the pages.",
+      "check": "page",
+      "missing": "Independent reproduction results using the open-source SDK, with model, retrieval budget and dataset versions stated"
+    }
+  ],
+  "counts": {
+    "fact": 12,
+    "derived": 1,
+    "unknown": 1
+  },
+  "risks": [
+    "Managed-platform benchmark scores include proprietary optimizations not in the open-source SDK, so OSS results may differ.",
+    "Competitors Letta and Zep have publicly challenged Mem0 benchmark methodology, making independent evaluation advisable.",
+    "Single-pass ADD-only extraction accumulates memories with no UPDATE/DELETE, which may suit some workloads poorly where facts change.",
+    "Self-hosting requires operating PostgreSQL/pgvector and enterprise governance such as SSO and audit logs are Enterprise-gated.",
+    "Recent commits in the check window were largely security fixes for Dependabot vulnerabilities, suggesting ongoing dependency exposure to monitor."
+  ],
+  "unknowns": [
+    "Whether the open-source SDK reproduces the managed-platform benchmark scores on independent stacks is not confirmed by the pages.: Independent reproduction results using the open-source SDK, with model, retrieval budget and dataset versions stated"
+  ],
+  "wouldChangeMind": [
+    "Independent reproduction matching or failing to match 92.5 LoCoMo / 94.4 LongMemEval on the OSS SDK",
+    "A published security audit or verified incident affecting self-hosted memory isolation",
+    "Evidence that ADD-only accumulation degrades retrieval accuracy with stale or contradictory facts"
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "GitHub - mem0ai/mem0: The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps. Context that persists. Built fo",
+      "url": "https://github.com/mem0ai/mem0",
+      "finalUrl": "https://github.com/mem0ai/mem0",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:53:35.523Z",
+      "extractor": "page-text-v1",
+      "sha256": "0f9ca79265787904831c438b03518f1f5f86915897b07541789eaa6e1c422b0f",
+      "bytes": 376476,
+      "quote": "Mem0 (\"mem-zero\") enhances AI assistants and agents with an intelligent memory layer, enabling personalized AI interactions.",
+      "quoteSha256": "a0723884bb1c4a1d87bc3d6574fd5f0263e6113faf9e420fd69d6647f77c4dc9"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Mem0 | Ry Walker Research | Ry Walker",
+      "url": "https://rywalker.com/research/mem0",
+      "finalUrl": "https://rywalker.com/research/mem0",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:53:33.960Z",
+      "extractor": "page-text-v1",
+      "sha256": "dcc63ca639238b0b9d9dd602df3b434f3b02570036bb25364cdcb512a5285793",
+      "bytes": 89874,
+      "quote": "The core mem0ai package is Apache 2.0 licensed on GitHub with 58.4K+ stars as of June 2026.",
+      "quoteSha256": "0ae765e104cff1de207ac8f21a0a46f7b23b2622871c670456923ab2c91363e4"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Mem0: The Open-Source Memory Layer for AI Agents | Diego Rodriguez",
+      "url": "https://www.diego-rodriguez.work/blog/mem0-memory-layer-agents-2026-guide",
+      "finalUrl": "https://www.diego-rodriguez.work/blog/mem0-memory-layer-agents-2026-guide",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:53:33.985Z",
+      "extractor": "page-text-v1",
+      "sha256": "a07e656b3fe961070f0d5d8e2ede5b40c4de7425d8feb05b8b12851fb6c5ebce",
+      "bytes": 91484,
+      "quote": "Instead of stuffing ever-longer conversation histories into the prompt, your agent calls two methods — add() to store what matters and search() to recall it — scoped per user, session, or agent.",
+      "quoteSha256": "aec200d206ab946a8b8f46bb224b0b40929f4d1cd1f696b57571a8b1ddca3d74"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Open-Source AI Agents: Built-in Memory & Persistence",
+      "url": "https://mem0.ai/library/agent-memory/open-source-ai-agents-with-built-in-memory",
+      "finalUrl": "https://mem0.ai/library/agent-memory/open-source-ai-agents-with-built-in-memory",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:53:33.959Z",
+      "extractor": "page-text-v1",
+      "sha256": "585d9ba7f658c1ff1c00e6599c3c9f4f1b0786bbd64697bfccc9d080b0aa14ff",
+      "bytes": 1252255,
+      "quote": "Agents that book travel, triage support tickets, run workflows, or operate in user accounts must remember past interactions, preferences, and system context across calls and sessions.",
+      "quoteSha256": "f38d0fa13aaeaa351158612b8a425967d27c555dcc1339273f7efa6884508189"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Mem0: Strategic Open Source Memory Layer for AI Agents",
+      "url": "https://www.opentechhub.io/mem0/",
+      "finalUrl": "https://www.opentechhub.io/mem0/",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:53:34.056Z",
+      "extractor": "page-text-v1",
+      "sha256": "861998ee4e875dfa9139e036f835d028aebbe2490da7308e9d6d857efe25e163",
+      "bytes": 63432,
+      "quote": "Apache-2.0, self-hostable on PostgreSQL; SSO and audit logs are Enterprise-gated.",
+      "quoteSha256": "af9a36e03542b8334a56e192b9a82ecf1ae4d322eb9dd79e636089cbf32a534b"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Mem0 Review: AI Memory Layer, Single-Pass Algorithm, Self-Hosted Setup",
+      "url": "https://hysenlabs.com/projects/mem0ai-mem0",
+      "finalUrl": "https://hysenlabs.com/projects/mem0ai-mem0",
+      "status": 200,
+      "fetchedAt": "2026-11-17T19:53:34.727Z",
+      "extractor": "page-text-v1",
+      "sha256": "ec9edc447d2082fc79ce8e82b58899ae3569c2c0df5c41940018ef7a238907d3",
+      "bytes": 146297,
+      "quote": "mem0ai/mem0 69,074 ★ · + 7,140 Star history",
+      "quoteSha256": "e6086ea40819af92e9b87295ed5687cf1465a59cba44282802728a9cc2699069"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of mem0ai/mem0",
+      "url": "https://api.github.com/repos/mem0ai/mem0/commits?per_page=50&since=2026-10-18T19:53:35.523Z",
+      "fetchedAt": "2026-11-17T19:53:26.768Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "c31ef4a744733a48ecc108d943a9a4d0d4c2fd08895d881dfc023272db17aa5d"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-17-mem0.md",
+  "decidedBy": "bee"
+}
