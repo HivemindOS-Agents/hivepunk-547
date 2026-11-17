@@ -1,0 +1,108 @@
+{
+  "step": "research-20774:9edd7884-dd64-454b-8073-29a7d3cf2ae5:541:1794899982532:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Final output states the note failed source check by linking a page it did not read, and the trace shows only GET requests with no repository write.",
+  "description": "The agent fetched Hugging Face documentation and related pages, then its output reported the resulting note did not hold up against the pages read because it linked an unread page. One lookup was blocked by a security checkpoint.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": true,
+  "gotchas": [
+    {
+      "id": "g4b715ae8",
+      "host": "deepwiki.com",
+      "observed": "GET deepwiki.com/huggingface/datasets/:id",
+      "result": "429: Vercel Security Checkpoint",
+      "evidence": "t2"
+    }
+  ],
+  "failureClass": "SOURCE_CHECK_FAILED",
+  "causeHash": "c0f6451a5",
+  "rest": [
+    "deepwiki.com"
+  ],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/hub/en/datasets-cards",
+      "status": 200,
+      "error": null,
+      "ms": 106,
+      "at": "2026-11-17T07:20:48.132Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "deepwiki.com",
+      "path": "/huggingface/datasets/:id",
+      "status": 429,
+      "error": "Vercel Security Checkpoint .spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justify-content:center;align-items:center;display:flex}.spinner-circle[data-astro-cid-ijmsm3te]{transform-origin:50%;",
+      "ms": 107,
+      "at": "2026-11-17T07:20:48.132Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/hub/model-cards",
+      "status": 200,
+      "error": null,
+      "ms": 207,
+      "at": "2026-11-17T07:20:48.132Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "the-ai-alliance.github.io",
+      "path": "/open-trusted-data-initiative/dataset-requirements/",
+      "status": 200,
+      "error": null,
+      "ms": 248,
+      "at": "2026-11-17T07:20:48.132Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/v2.7.1/en/dataset_card",
+      "status": 200,
+      "error": null,
+      "ms": 335,
+      "at": "2026-11-17T07:20:48.132Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/huggingface/hub-docs/blob/main/docs/hub/datasets-cards.md",
+      "status": 200,
+      "error": null,
+      "ms": 453,
+      "at": "2026-11-17T07:20:48.132Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "theneuralbase.com",
+      "path": "/huggingface-hub/learn/intermediate/dataset-cards/",
+      "status": 200,
+      "error": null,
+      "ms": 950,
+      "at": "2026-11-17T07:20:48.132Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "theneuralbase.com",
+      "path": "/model-card/learn/intermediate/tags-for-discoverability/",
+      "status": 200,
+      "error": null,
+      "ms": 1167,
+      "at": "2026-11-17T07:20:48.132Z"
+    }
+  ],
+  "at": "2026-11-17T07:21:29.390Z"
+}
