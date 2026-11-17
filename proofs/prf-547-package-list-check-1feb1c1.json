@@ -27,6 +27,11 @@
   "command": "git checkout 1feb1c124992f04d092aa00f92ecb3546c8807bf && cd tools/package-list-check && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-package-list-check-1feb1c1.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44107956644",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-17T15:26:33Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44114318913"
+  }
 }
