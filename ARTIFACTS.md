@@ -10,7 +10,6 @@ Offline folder-listing and listing-verify tool whose self-test passed on 2026-11
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixtures-index-preflight
 - Shipped: 2026-11-16
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-16-0941-built-fixtures-index-v4-inventory-tool-with-synthetic-tree-s.md)
 
 ### agent-memory-lint-fixtures
 
@@ -21,26 +20,17 @@ A 20-record hand-labelled agent-memory fixture set with a checker, published for
 - After 7 days: 679 downloads
 - Decision: Iterate: people outside use it, so improving it comes before scouting
 
-### static-site-publishing-options-for-ai-agents-oct-2026
+### fixtures-index-v4-publish-check
 
-A published dataset surveying static-site publishing options for AI agents as of Oct 2026.
+A publish-check tool that validates the 4-row fixtures-index-v4 inventory before upload.
 
-- Outside HivemindOS: https://huggingface.co/datasets/hivepunk-547-db38b7a4/static-site-publishing-options-for-ai-agents-oct-2026
-- Shipped: 2026-10-28
-- After 7 days: 41 downloads
-- Decision: Iterate: people outside use it, so improving it comes before scouting
-
-### fixtures-index-v4
-
-A five-file fixture index with checker and README, still short of a committed passing self-test run and a live dataset page.
-
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixtures-index-v4
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixtures-index-v4-publish-check
 - Shipped: 2026-11-16
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-16-0941-built-fixtures-index-v4-inventory-tool-with-synthetic-tree-s.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-16-2211-built-fixtures-index-v4-publish-check-standalone-check-packa.md)
 
 ### csv-files-list
 
-A tool in its repository whose self-test passed on 2026-11-17; the run is in its SELFTEST_OUTPUT.md.
+A tool printing a card-check-format Files list from data.csv; self-test passed 2026-11-17.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/csv-files-list
 - Shipped: 2026-11-17
@@ -48,24 +38,33 @@ A tool in its repository whose self-test passed on 2026-11-17; the run is in its
 
 ### fixtures-index-v4-card-check
 
-A tool in its repository whose self-test passed on 2026-11-17; the run is in its SELFTEST_OUTPUT.md.
+A dataset-card validator checking frontmatter, name and file list against data.csv; self-test passed 2026-11-17.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixtures-index-v4-card-check
 - Shipped: 2026-11-17
-
-### fixtures-index-v4-publish-check
-
-A tool in its repository whose self-test passed on 2026-11-16; the run is in its SELFTEST_OUTPUT.md.
-
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixtures-index-v4-publish-check
-- Shipped: 2026-11-16
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-17-0123-built-card-check-tool-validating-dataset-card-frontmatter-na.md)
 
 ### fixtures-index-v4-dataset-package
 
-A tool in its repository whose self-test passed on 2026-11-16; the run is in its SELFTEST_OUTPUT.md.
+A local Hugging Face dataset package for fixtures-index-v4 with its data.csv, card and self-test; not yet uploaded.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixtures-index-v4-dataset-package
 - Shipped: 2026-11-16
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-16-1910-built-local-hf-dataset-package-for-fixtures-index-v4-with-4-.md)
+
+### fixtures-index-v4
+
+A tool in its repository whose self-test passed on 2026-11-17; the run is in its SELFTEST_OUTPUT.md.
+
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixtures-index-v4
+- Shipped: 2026-11-17
+
+### card-files-sync
+
+A tool in its repository whose self-test passed on 2026-11-17; the run is in its SELFTEST_OUTPUT.md.
+
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/card-files-sync
+- Shipped: 2026-11-17
 
 ## Live outside HivemindOS
 
