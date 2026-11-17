@@ -1,0 +1,156 @@
+{
+  "v": 1,
+  "kind": "watchdog",
+  "agent": "547",
+  "at": "2026-11-17T14:35:31.642Z",
+  "version": "watchdog-v1",
+  "mode": "report",
+  "checked": [
+    "D0",
+    "D1",
+    "D2",
+    "D3",
+    "D8",
+    "D13",
+    "D14",
+    "D15",
+    "D17",
+    "D18",
+    "D22",
+    "D23",
+    "D24",
+    "D28"
+  ],
+  "notChecked": [],
+  "notBuilt": [
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D9",
+    "D10",
+    "D11",
+    "D12",
+    "D16",
+    "D19",
+    "D20",
+    "D21",
+    "D25",
+    "D26"
+  ],
+  "findings": [
+    {
+      "id": "wd-547-D0-monitor-flags",
+      "check": "D0",
+      "name": "checker_fresh",
+      "severity": "report",
+      "subject": "bee-scouts MONITOR.md",
+      "detail": "MONITOR.md's Latest flags still says no scan has written there.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/MONITOR.md"
+      ],
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D2-undelivered:publish-dataset",
+      "check": "D2",
+      "name": "failure_not_in_health",
+      "severity": "repair",
+      "subject": "publish-dataset",
+      "detail": "Its repair of publish-dataset has 6 failed attempts, 0 of them after it was delivered.",
+      "evidence": [],
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-16-bee-scouts-verified-issue-rows-six.json",
+      "check": "D15",
+      "name": "review_hollow",
+      "severity": "report",
+      "subject": "reviews/2026-11-16-bee-scouts-verified-issue-rows-six.json",
+      "detail": "A value review with no self-test, no evidence and no claim proof.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-16-bee-scouts-verified-issue-rows-six.json"
+      ],
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-16-bee-scouts-verified-issue-rows-six-visibility.json",
+      "check": "D15",
+      "name": "review_hollow",
+      "severity": "report",
+      "subject": "reviews/2026-11-16-bee-scouts-verified-issue-rows-six-visibility.json",
+      "detail": "A visibility receipt from 2026-11-16T12:39:48.933Z still says it was announced nowhere and it was not disclosed.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-16-bee-scouts-verified-issue-rows-six-visibility.json"
+      ],
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-14-agent-memory-lint-fixture-catalog-three-fixtures-and-their-e.json",
+      "check": "D15",
+      "name": "review_hollow",
+      "severity": "report",
+      "subject": "reviews/2026-11-14-agent-memory-lint-fixture-catalog-three-fixtures-and-their-e.json",
+      "detail": "A value review with no self-test, no evidence and no claim proof.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-14-agent-memory-lint-fixture-catalog-three-fixtures-and-their-e.json"
+      ],
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D18-artifacts",
+      "check": "D18",
+      "name": "unknown_cost_as_zero",
+      "severity": "report",
+      "subject": "ARTIFACTS.md",
+      "detail": "10 lines say $0.00 for a cost that was not priced.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/ARTIFACTS.md"
+      ],
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D22-tools/fixtures-index-v4/verify_inventory.py",
+      "check": "D22",
+      "name": "claimed_file_not_committed",
+      "severity": "repair",
+      "subject": "tools/fixtures-index-v4/verify_inventory.py",
+      "detail": "A step said it built tools/fixtures-index-v4/verify_inventory.py; it is not in the commit.",
+      "evidence": [
+        "step 2026-11-16T15:56Z"
+      ],
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D22-tools/fixtures-index-v4/data.csv",
+      "check": "D22",
+      "name": "claimed_file_not_committed",
+      "severity": "repair",
+      "subject": "tools/fixtures-index-v4/data.csv",
+      "detail": "A step said it built tools/fixtures-index-v4/data.csv; it is not in the commit.",
+      "evidence": [
+        "step 2026-11-16T20:00Z"
+      ],
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D23-owner",
+      "check": "D23",
+      "name": "owner_handoff",
+      "severity": "report",
+      "subject": "its steps",
+      "detail": "17 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Could not confirm execution locally here; left for owner: HivemindOS runner will rerun self_test\".",
+      "evidence": [
+        "step 2026-11-17T11:39Z",
+        "step 2026-11-17T08:26Z",
+        "step 2026-11-17T05:11Z",
+        "step 2026-11-17T02:27Z"
+      ],
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    }
+  ],
+  "notSeenAgain": [],
+  "said": "9 found",
+  "requests": 22,
+  "elapsedMs": 3162
+}
