@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-card-files-sync-760c4df",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-17T08:27:04Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/card-files-sync",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/card-files-sync/self_test.py",
+    "commit": "760c4df4387f8b8245354b7fcef96cb765822ed4",
+    "sha256": "40da7c6002d7ab23f3fa81d1610d38443eac8aaf9aa85350cb053be59c461c5a"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 760c4df4387f8b8245354b7fcef96cb765822ed4 && cd tools/card-files-sync && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-card-files-sync-760c4df.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44046801712",
+  "repro": "pending",
+  "peer": null
+}
