@@ -1,0 +1,210 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-17T13:33:18.967Z",
+  "subject": "fixtures-index-v4",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Hugging Face's documented repository and README.md card model fit the proposed publication, but the evidence read does not confirm that a fixtures-index-v4 dataset has been published under a new name. The safe conclusion is therefore that this is a well-formed publishing proposal, not a verified published dataset.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 1 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-18T13:33:26.810Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 7d4b447, on 2026-11-17.",
+      "check": "shipping",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/commit/7d4b447e4e5e465bc21a70c8b0cba8899ea5d8c4"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "A Hugging Face dataset README.md is called a dataset card and is rendered on the dataset's main page.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/en/datasets-cards",
+      "quote": "Each dataset may be documented by the README.md file in the repository. This file is called a dataset card , and the Hugging Face Hub will render its contents on the dataset’s main page.",
+      "sourceId": "src-3",
+      "quoteSha256": "51b63f0af9cc67ed691924148ee554d851bbbe310063c2e1ec44918de0e9ad74"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "To host and share a dataset, you create a dataset repository on the Hugging Face Hub and upload data files.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/main/en/repository_structure",
+      "quote": "To host and share your dataset, create a dataset repository on the Hugging Face Hub and upload your data files.",
+      "sourceId": "src-2",
+      "quoteSha256": "36ef3f470791992726591ce6f4642441420f5b33033f876c3b883039f75660bd"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "A public dataset is visible to anyone, whereas a private dataset can only be viewed by its owner or organization members.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "A public dataset is visible to anyone, whereas a private dataset can only be viewed by you or members of your organization.",
+      "sourceId": "src-5",
+      "quoteSha256": "cab18150c0f70ddde75be6db4a959a966826743b55922310557ade84335dce12"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Text file extensions are not tracked by Git LFS by default, and if they are greater than 10MB they will not be committed and uploaded.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "Text file extensions are not tracked by Git LFS by default, and if they’re greater than 10MB, they will not be committed and uploaded.",
+      "sourceId": "src-5",
+      "quoteSha256": "b9cef03b81d664d8eb5de7693c1ea8119a258735471aab80870071114da6013b"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "For a different dataset, a card listing all four filenames was proposed so a read-back could check four files rather than three.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/137",
+      "quote": "The card is the only place that says which fixture files belong to this dataset, so naming example.txt makes the read-back a check for four files rather than three.",
+      "sourceId": "src-1",
+      "quoteSha256": "93c1b25b746047e70957fb900a9b9710f388cf379890e4e12a7b5f8033f5a94e"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 1 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-18T13:33:26.810Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Its latest real commit is 7d4b447, on 2026-11-17.",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-18T13:33:26.810Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "Whether a new fixtures-index-v4 dataset exists on Hugging Face under a new name.",
+      "check": "page",
+      "missing": "A readable Hugging Face dataset page or repository listing showing the new name and its files."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "Whether index.py, README.md and self_test.py were published unchanged.",
+      "check": "page",
+      "missing": "File contents or hashes for the local tools/fixtures-index-v4 files and the published copies that can be compared."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether the finished lint-fixtures target repository was left unmodified.",
+      "check": "page",
+      "missing": "A before-and-after check or commit record for that target repository around the publication."
+    }
+  ],
+  "counts": {
+    "fact": 9,
+    "derived": 0,
+    "unknown": 3
+  },
+  "risks": [
+    "The pages do not confirm the new dataset name, URL, or that index.py, README.md and self_test.py were uploaded unchanged, so publication cannot be treated as done.",
+    "A dataset card that does not list its files cannot be checked against the repository contents, repeating the weakness raised for another dataset.",
+    "Text files over the stated size limit may not be uploaded by default, so a file list alone does not prove every file transferred."
+  ],
+  "unknowns": [
+    "Whether a new fixtures-index-v4 dataset exists on Hugging Face under a new name.: A readable Hugging Face dataset page or repository listing showing the new name and its files.",
+    "Whether index.py, README.md and self_test.py were published unchanged.: File contents or hashes for the local tools/fixtures-index-v4 files and the published copies that can be compared.",
+    "Whether the finished lint-fixtures target repository was left unmodified.: A before-and-after check or commit record for that target repository around the publication."
+  ],
+  "wouldChangeMind": [
+    "A Hugging Face page for the new dataset showing exactly index.py, README.md and self_test.py in its file list.",
+    "A dataset card on that page listing those three files by name.",
+    "Evidence comparing published files with the local tools/fixtures-index-v4 originals and showing the lint-fixtures target unchanged."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "hf-dataset-card-lint-fixtures card: name all four files, example.txt included · Issue #137 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/137",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/137",
+      "status": 200,
+      "fetchedAt": "2026-11-17T13:33:26.810Z",
+      "extractor": "page-text-v1",
+      "sha256": "ea0e0e98c8b6d9c7fc0da7cf63b9ed896a4c037dba732c5f0e3f2fc9b1ea3d8f",
+      "bytes": 221656,
+      "quote": "The card is the only place that says which fixture files belong to this dataset, so naming example.txt makes the read-back a check for four files rather than three.",
+      "quoteSha256": "93c1b25b746047e70957fb900a9b9710f388cf379890e4e12a7b5f8033f5a94e"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Structure your repository · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/main/en/repository_structure",
+      "finalUrl": "https://huggingface.co/docs/datasets/main/en/repository_structure",
+      "status": 200,
+      "fetchedAt": "2026-11-17T13:33:26.181Z",
+      "extractor": "page-text-v1",
+      "sha256": "40326851a7b686490a2ae478af985661eb2898dc64af6d0e19d927ac0b471d1a",
+      "bytes": 176858,
+      "quote": "To host and share your dataset, create a dataset repository on the Hugging Face Hub and upload your data files.",
+      "quoteSha256": "36ef3f470791992726591ce6f4642441420f5b33033f876c3b883039f75660bd"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Dataset Cards · Hugging Face",
+      "url": "https://huggingface.co/docs/hub/en/datasets-cards",
+      "finalUrl": "https://huggingface.co/docs/hub/en/datasets-cards",
+      "status": 200,
+      "fetchedAt": "2026-11-17T13:33:26.115Z",
+      "extractor": "page-text-v1",
+      "sha256": "61515fd20709c2b1c86882dee247488a610ddb7bcdcd56ef67a97b2512aa9ba9",
+      "bytes": 212038,
+      "quote": "Each dataset may be documented by the README.md file in the repository. This file is called a dataset card , and the Hugging Face Hub will render its contents on the dataset’s main page.",
+      "quoteSha256": "51b63f0af9cc67ed691924148ee554d851bbbe310063c2e1ec44918de0e9ad74"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "status": 200,
+      "fetchedAt": "2026-11-17T13:33:26.140Z",
+      "extractor": "page-text-v1",
+      "sha256": "8fed25625396c281d567e51d7292ea20a07443a00892abecbbb231be1873a4f5",
+      "bytes": 150303,
+      "quote": "A public dataset is visible to anyone, whereas a private dataset can only be viewed by you or members of your organization.",
+      "quoteSha256": "cab18150c0f70ddde75be6db4a959a966826743b55922310557ade84335dce12"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-18T13:33:26.810Z",
+      "fetchedAt": "2026-11-17T13:33:18.967Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "3bc25e50e34c25f2c45515eb463852fcbe25b83540d067679e45171310568fbf"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-17-fixtures-index-v4.md",
+  "decidedBy": "bee"
+}
