@@ -27,6 +27,11 @@
   "command": "git checkout 760c4df4387f8b8245354b7fcef96cb765822ed4 && cd tools/card-files-sync && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-card-files-sync-760c4df.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44046801712",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-17T09:06:37Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44052493272"
+  }
 }
