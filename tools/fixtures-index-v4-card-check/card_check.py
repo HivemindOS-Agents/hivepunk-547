@@ -54,7 +54,11 @@ def parse_frontmatter(text):
             continue
         bullet = re.match(r"^\s*-\s+(.+\S)\s*$", line)
         if bullet and current == "tags":
-            meta.setdefault("tags", []).append(bullet.group(1).strip().strip("'\""))
+            existing = meta.get("tags")
+            if not isinstance(existing, list):
+                existing = [existing] if existing else []
+                meta["tags"] = existing
+            existing.append(bullet.group(1).strip().strip("'\""))
             continue
         m = re.match(r"^([A-Za-z0-9_-]+)\s*:\s*(.*)$", line)
         if not m:
@@ -67,6 +71,8 @@ def parse_frontmatter(text):
             meta["tags"] = [p.strip().strip("'\"") for p in inner.split(",") if p.strip()] if inner else []
         elif key == "tags" and value:
             meta["tags"] = [value]
+        elif key == "tags":
+            meta["tags"] = []
         else:
             meta[key] = value.strip("'\"")
     body = "\n".join(lines[end + 1:])
