@@ -33,6 +33,11 @@ DEFAULT_NAME = "fixtures-index-v4"
 REQUIRED_KEYS = ["license", "language", "tags"]
 
 
+def _parse_inline_list(value):
+    inner = value[1:-1].strip()
+    return [p.strip().strip("'\"") for p in inner.split(",") if p.strip()] if inner else []
+
+
 def parse_frontmatter(text):
     """Return (meta, body, problems). meta values are str or list for tags."""
     problems = []
@@ -60,6 +65,10 @@ def parse_frontmatter(text):
                 meta["tags"] = existing
             existing.append(bullet.group(1).strip().strip("'\""))
             continue
+        stripped = line.strip()
+        if current == "tags" and stripped.startswith("[") and stripped.endswith("]"):
+            meta["tags"] = _parse_inline_list(stripped)
+            continue
         m = re.match(r"^([A-Za-z0-9_-]+)\s*:\s*(.*)$", line)
         if not m:
             problems.append("unparseable frontmatter line: %r" % raw)
@@ -67,8 +76,7 @@ def parse_frontmatter(text):
         key, value = m.group(1).strip(), m.group(2).strip()
         current = key
         if key == "tags" and value.startswith("[") and value.endswith("]"):
-            inner = value[1:-1].strip()
-            meta["tags"] = [p.strip().strip("'\"") for p in inner.split(",") if p.strip()] if inner else []
+            meta["tags"] = _parse_inline_list(value)
         elif key == "tags" and value:
             meta["tags"] = [value]
         elif key == "tags":
