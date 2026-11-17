@@ -27,6 +27,11 @@
   "command": "git checkout 2387ee3bcc7a333833ad81f6f0a4703d2d3b72f7 && cd tools/csv-index-diff && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-csv-index-diff-2387ee3.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44143642267",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-17T18:33:05Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44148994313"
+  }
 }
