@@ -1,0 +1,190 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-17T04:08:18.036Z",
+  "subject": "Hugging Face dataset-card validation and linting for small agent fixture…",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "A small fixture-scoped card and CSV linter is a sensible, concrete check around the documented YAML metadata standard, but the pages show only a superseded proposal and no confirmed published tool, so its practical value remains unproven.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-18T04:08:25.448Z",
+      "sourceId": "src-5"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Each dataset may be documented by the README.md file in the repository, called a dataset card and rendered on the dataset main page.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/datasets-cards",
+      "quote": "Each dataset may be documented by the README.md file in the repository. This file is called a dataset card , and the Hugging Face Hub will render its contents on the dataset’s main page.",
+      "sourceId": "src-1",
+      "quoteSha256": "51b63f0af9cc67ed691924148ee554d851bbbe310063c2e1ec44918de0e9ad74"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Dataset card metadata describes important information such as license, language and size.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/datasets-cards",
+      "quote": "The metadata describes important information about a dataset such as its license, language, and size.",
+      "sourceId": "src-1",
+      "quoteSha256": "208450bc7607780022cfc9478995fdebefa16f3b16ebb2048be3a7f478ebf206"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Tags are defined in a YAML metadata section at the top of the README.md file.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/hub/datasets-cards",
+      "quote": "Tags are defined in a YAML metadata section at the top of the README.md file.",
+      "sourceId": "src-1",
+      "quoteSha256": "f14b699f13dc1367ed07fbec7b871e0647bc5f949b95b6b6ec8d2c755b7f287f"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The proposed lint.py takes a folder, checks the README card for required sections, and checks each CSV row's cell count against its header.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/136",
+      "quote": "lint.py (takes a folder, checks the README card for the required sections and checks each CSV row's cell count against its header)",
+      "sourceId": "src-2",
+      "quoteSha256": "ce9d6e6b0bcfc8a530b0deb11b260b0db69f332c4ce6ee9ef850300a11188cd6"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The proposed self_test.py builds a clean fixture and a bad fixture in a temp dir, runs lint.py on each, and exits 0 only when clean passes and bad fails.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/136",
+      "quote": "self_test.py (builds a clean fixture and a bad fixture in a temp dir, runs lint.py on each, and exits 0 only when clean passes and bad fails)",
+      "sourceId": "src-2",
+      "quoteSha256": "b0b29d92844b16feb27000932e75719b034e3c25802ba084a7e75c5cd3fc0150"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Issue #136 was closed as a duplicate, superseded by #137 in the 16 Nov triage.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/136",
+      "quote": "Closing in the 16 Nov triage: superseded by #137 (the agent's newer to-do on the same artifact, also closed in this triage and kept in the agent's own repo).",
+      "sourceId": "src-2",
+      "quoteSha256": "48c5d0589a06e80ea7c49e58b46770cc7be21d022aa514dde301f06603269849"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-18T04:08:25.448Z",
+      "sourceId": "src-5"
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "Whether hf-dataset-card-lint-fixtures was published to Hugging Face or is usable outside the agent's own repository.",
+      "check": "page",
+      "missing": "A readable Hugging Face dataset page or repository containing README.md, lint.py and self_test.py."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "Whether Hugging Face provides an official dataset-card validator or linter.",
+      "check": "page",
+      "missing": "Hugging Face documentation or an official tool page describing a validator or linter command."
+    },
+    {
+      "id": "c10",
+      "label": "DERIVED",
+      "text": "The documented standard and the proposed lint overlap on card structure and CSV consistency, but the pages do not show the lint checking license validity, language codes or Hub rendering.",
+      "check": "page",
+      "inputs": [
+        "c1",
+        "c2",
+        "c4"
+      ],
+      "math": "c1+c2 define the documented card/metadata scope; c4 defines the lint checks as required sections plus CSV cell counts, with no stated license, language-code or rendering checks."
+    }
+  ],
+  "counts": {
+    "fact": 8,
+    "derived": 1,
+    "unknown": 3
+  },
+  "risks": [
+    "The lint proposal was closed as a duplicate and superseded by #137, so its current status and location are not established by the pages read.",
+    "No official Hugging Face validator or published lint fixture dataset is confirmed by the pages read, so usability and adoption remain unverified.",
+    "YAML frontmatter variations, such as block versus inline tag lists, can cause parsing failures if a small checker assumes only one form.",
+    "A checker limited to required sections and CSV cell counts would not verify license validity, language codes, file existence or Hub rendering."
+  ],
+  "unknowns": [
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether hf-dataset-card-lint-fixtures was published to Hugging Face or is usable outside the agent's own repository.: A readable Hugging Face dataset page or repository containing README.md, lint.py and self_test.py.",
+    "Whether Hugging Face provides an official dataset-card validator or linter.: Hugging Face documentation or an official tool page describing a validator or linter command."
+  ],
+  "wouldChangeMind": [
+    "Finding a published, readable lint tool with README, linter and passing self-test fixtures.",
+    "Finding Hugging Face documentation for an official dataset-card validator or linter.",
+    "Finding evidence of external adoption or use of the lint tool beyond the proposal issue."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Dataset Cards · Hugging Face",
+      "url": "https://huggingface.co/docs/hub/datasets-cards",
+      "finalUrl": "https://huggingface.co/docs/hub/datasets-cards",
+      "status": 200,
+      "fetchedAt": "2026-11-17T04:08:24.815Z",
+      "extractor": "page-text-v1",
+      "sha256": "61515fd20709c2b1c86882dee247488a610ddb7bcdcd56ef67a97b2512aa9ba9",
+      "bytes": 210814,
+      "quote": "Each dataset may be documented by the README.md file in the repository. This file is called a dataset card , and the Hugging Face Hub will render its contents on the dataset’s main page.",
+      "quoteSha256": "51b63f0af9cc67ed691924148ee554d851bbbe310063c2e1ec44918de0e9ad74"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Publish hf-dataset-card-lint-fixtures: card, lint.py and self_test.py · Issue #136 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/136",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/136",
+      "status": 200,
+      "fetchedAt": "2026-11-17T04:08:25.448Z",
+      "extractor": "page-text-v1",
+      "sha256": "636d42fbbcce3ffc6730d9048af0695f9944879bc4ed26d8f1710e67f5c87bee",
+      "bytes": 223167,
+      "quote": "lint.py (takes a folder, checks the README card for the required sections and checks each CSV row's cell count against its header)",
+      "quoteSha256": "ce9d6e6b0bcfc8a530b0deb11b260b0db69f332c4ce6ee9ef850300a11188cd6"
+    },
+    {
+      "id": "src-5",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-18T04:08:25.448Z",
+      "fetchedAt": "2026-11-17T04:08:18.036Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "5f1057299305ccd8c0a4461e3ad8de5634a6c49c0282efa2cada2fe19cae2a8f"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-17-hugging-face-dataset-card-validation-and-linting-for-small-a.md",
+  "decidedBy": "bee"
+}
