@@ -27,6 +27,11 @@
   "command": "git checkout a7d9b25f8e0ec86f78f0ce4c685a320d02e91610 && cd tools/csv-files-list && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-csv-files-list-a7d9b25.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44022366294",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-17T05:54:35Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44027327550"
+  }
 }
