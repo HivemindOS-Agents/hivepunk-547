@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
-"""Self-test for fixtures-index-v4 inventory tool.
+"""Self-test for fixtures-index-v4.
 
-Run from this folder with no arguments and no network. Imports inventory,
-builds synthetic folders in a temp directory, and checks:
-  1. direct listing has one path per entry, including data/;
-  2. data files are listed recursively with correct first and last lines;
-  3. INVENTORY.md itself is not listed as a direct entry;
-  4. an absent folder renders ABSENT and invents no file names;
-  5. render() output for a known tree matches the expected text exactly;
-  6. main() with --check writes nothing and returns 0 for a real folder.
-Exits 0 only when every check passes.
+Run from this folder with no arguments and no network. Imports
+index, then checks it on synthetic fixture folders in a temp
+directory: a normal folder, an empty directory, a folder with a
+binary file (blank lines, exact byte size), and sorting of names.
+Also checks the missing-path and not-a-directory failures and CLI
+exit codes. Exits 0 only if all checks pass.
 """
 
+import contextlib
+import io
 import os
 import sys
 import tempfile
@@ -33,94 +32,112 @@ def import_tool():
     if HERE not in sys.path:
         sys.path.insert(0, HERE)
     try:
-        return __import__("inventory")
+        return __import__("index")
     except Exception as e:
-        raise Fail("could not import inventory: %s: %s" % (type(e).__name__, e))
+        raise Fail("could not import index: %s: %s" % (type(e).__name__, e))
 
 
-def make_tree(base):
-    src = os.path.join(base, "fixtures-index-v4")
-    os.makedirs(os.path.join(src, "data", "sub"))
-    with open(os.path.join(src, "README.md"), "w", encoding="utf-8") as fh:
-        fh.write("# card\n")
-    with open(os.path.join(src, "self_test.py"), "w", encoding="utf-8") as fh:
-        fh.write("# test\n")
-    with open(os.path.join(src, "data", "a.csv"), "w", encoding="utf-8") as fh:
-        fh.write("col1,col2\n1,2\n3,4\n")
-    with open(os.path.join(src, "data", "sub", "b.txt"), "w", encoding="utf-8") as fh:
-        fh.write("only line\n")
-    with open(os.path.join(src, "INVENTORY.md"), "w", encoding="utf-8") as fh:
-        fh.write("stale\n")
-    return src
+def write(folder, name, data):
+    path = os.path.join(folder, name)
+    mode = "wb" if isinstance(data, bytes) else "w"
+    with open(path, mode) as fh:
+        fh.write(data)
+    return path
 
 
-def test_direct(mod, src):
-    direct, _ = mod.scan(src)
-    check(direct == ["README.md", "data", "self_test.py"],
-          "direct listing is %r" % (direct,))
-    return "direct listing is exactly README.md, data, self_test.py (no INVENTORY.md)"
-
-
-def test_data(mod, src):
-    _, data_files = mod.scan(src)
-    check(data_files == ["data/a.csv", "data/sub/b.txt"],
-          "data files are %r" % (data_files,))
-    first, last = mod.first_last(os.path.join(src, "data", "a.csv"))
-    check(first == "col1,col2" and last == "3,4", "first/last a.csv: %r / %r" % (first, last))
-    first, last = mod.first_last(os.path.join(src, "data", "sub", "b.txt"))
-    check(first == "only line" and last == "only line", "first/last b.txt: %r / %r" % (first, last))
-    return "data/a.csv first col1,col2 last 3,4; data/sub/b.txt single line"
-
-
-def test_render_exact(mod, src):
-    text = mod.render(src)
-    for needle in ("README.md", "data/", "self_test.py", "data/a.csv",
-                   "first: col1,col2", "last: 3,4", "first: only line"):
-        check(needle in text, "rendered inventory missing %r" % needle)
-    check("stale" not in text, "rendered inventory leaked stale INVENTORY.md content")
-    return "rendered inventory contains every expected path and first/last line"
-
-
-def test_absent(mod, base):
-    missing = os.path.join(base, "not_there")
-    direct, data_files = mod.scan(missing)
-    check(direct is None and data_files is None, "absent folder did not return None")
-    text = mod.render(missing)
-    check("ABSENT" in text, "absent render does not say ABSENT")
-    check("README.md" not in text and "data/" not in text.replace("under data/", ""),
-          "absent render invented a file name")
-    return "absent folder: ABSENT, no invented names"
-
-
-def test_check_writes_nothing(mod, src):
-    before = sorted(os.listdir(src))
-    code = mod.main(["inventory.py", "--check", src])
-    check(code == 0, "--check returned %r, expected 0" % code)
-    check(sorted(os.listdir(src)) == before, "--check changed the folder")
-    code = mod.main(["inventory.py", "--check", os.path.join(src, "not_there")])
-    check(code == 1, "--check on absent folder returned %r, expected 1" % code)
-    return "--check prints, writes nothing, exits 0 real / 1 absent"
+def rows_by_name(rows):
+    return {r[0]: r for r in rows}
 
 
 def main():
     try:
         mod = import_tool()
-        with tempfile.TemporaryDirectory() as base:
-            src = make_tree(base)
-            lines = [
-                test_direct(mod, src),
-                test_data(mod, src),
-                test_render_exact(mod, src),
-                test_absent(mod, base),
-                test_check_writes_nothing(mod, src),
-            ]
+        checks = []
+
+        with tempfile.TemporaryDirectory() as tmp:
+            normal = os.path.join(tmp, "normal")
+            os.mkdir(normal)
+            write(normal, "a.py", "one\ntwo\nthree\n")
+            write(normal, "b.md", "# title\n\nbody")
+            write(normal, "c.txt", "")
+            write(normal, "d.json", '{"a": 1}\n')
+            write(normal, "e.csv", "x,y\n1,2\n")
+            sub = os.path.join(normal, "sub")
+            os.mkdir(sub)
+            write(sub, "inner.py", "hidden\n")
+            ok, problems, rows = mod.verify(normal)
+            check(ok, "normal fixture failed: %r" % (problems,))
+            check([r[0] for r in rows] == ["a.py", "b.md", "c.txt", "d.json", "e.csv"],
+                  "normal rows are %r" % (rows,))
+            by = rows_by_name(rows)
+            check(by["a.py"][2] == 3, "a.py lines are %r" % (by["a.py"],))
+            check(by["b.md"][2] == 3, "b.md lines (no trailing newline) are %r" % (by["b.md"],))
+            check(by["c.txt"][2] == 0, "c.txt lines are %r" % (by["c.txt"],))
+            check(by["d.json"][2] == 1, "d.json lines are %r" % (by["d.json"],))
+            check(by["e.csv"][2] == 2, "e.csv lines are %r" % (by["e.csv"],))
+            check(by["a.py"][1] == len("one\ntwo\nthree\n"), "a.py bytes are %r" % (by["a.py"],))
+            check(all(r[0] != "inner.py" for r in rows), "subdirectory file was indexed")
+            checks.append("normal fixture: sizes and line counts correct, subdirectory skipped")
+
+            empty = os.path.join(tmp, "empty")
+            os.mkdir(empty)
+            ok, problems, rows = mod.verify(empty)
+            check(ok and rows == [], "empty dir: %r %r" % (problems, rows))
+            check(mod.render_csv(rows) == "file_name,bytes,lines\n",
+                  "empty CSV is %r" % (mod.render_csv(rows),))
+            checks.append("empty directory yields header only")
+
+            binary = os.path.join(tmp, "binary")
+            os.mkdir(binary)
+            payload = bytes(range(256)) * 4
+            write(binary, "blob.bin", payload)
+            write(binary, "UPPER.PY", "x\ny\n")
+            ok, problems, rows = mod.verify(binary)
+            check(ok, "binary fixture failed: %r" % (problems,))
+            by = rows_by_name(rows)
+            check(by["blob.bin"][1] == len(payload), "blob.bin bytes are %r" % (by["blob.bin"],))
+            check(by["blob.bin"][2] is None, "blob.bin lines should be blank: %r" % (by["blob.bin"],))
+            check(by["UPPER.PY"][2] == 2, "UPPER.PY lines are %r" % (by["UPPER.PY"],))
+            check("blob.bin,%d,\n" % len(payload) in mod.render_csv(rows),
+                  "binary CSV row missing: %r" % (mod.render_csv(rows),))
+            checks.append("binary-size fixture: exact bytes, blank lines, uppercase extension counted")
+
+            sorting = os.path.join(tmp, "sorting")
+            os.mkdir(sorting)
+            for name in ["zebra.txt", "apple.txt", "Mango.txt", "banana.txt"]:
+                write(sorting, name, "x\n")
+            ok, problems, rows = mod.verify(sorting)
+            check(ok, "sorting fixture failed: %r" % (problems,))
+            names = [r[0] for r in rows]
+            check(names == sorted(names), "rows not sorted: %r" % (names,))
+            check(names == ["Mango.txt", "apple.txt", "banana.txt", "zebra.txt"],
+                  "sorted names are %r" % (names,))
+            checks.append("sorting fixture: rows sorted by file_name")
+
+            ok, problems, rows = mod.verify(os.path.join(tmp, "missing"))
+            check(not ok and any("not found" in p for p in problems), "missing path: %r" % (problems,))
+            not_dir = write(tmp, "afile.txt", "x\n")
+            ok, problems, rows = mod.verify(not_dir)
+            check(not ok and any("not a directory" in p for p in problems), "not a directory: %r" % (problems,))
+            checks.append("missing path and not-a-directory fail with clear messages")
+
+            buf = io.StringIO()
+            with contextlib.redirect_stdout(buf):
+                code = mod.main(["index.py", normal])
+            check(code == 0 and buf.getvalue().startswith("file_name,bytes,lines\n"),
+                  "CLI good %r %r" % (code, buf.getvalue()))
+            buf = io.StringIO()
+            with contextlib.redirect_stdout(buf):
+                code = mod.main(["index.py", os.path.join(tmp, "missing")])
+            check(code == 1 and "FAIL:" in buf.getvalue(), "CLI bad %r %r" % (code, buf.getvalue()))
+            checks.append("CLI exits 0 with CSV for good dir and 1 with FAIL for missing dir")
     except Fail as e:
         sys.stderr.write("FAIL: %s\n" % e)
         return 1
     except Exception as e:
         sys.stderr.write("FAIL: unexpected %s: %s\n" % (type(e).__name__, e))
         return 1
-    for line in lines:
+    for line in checks:
         print(line)
     print("self-test: all checks passed")
     return 0
