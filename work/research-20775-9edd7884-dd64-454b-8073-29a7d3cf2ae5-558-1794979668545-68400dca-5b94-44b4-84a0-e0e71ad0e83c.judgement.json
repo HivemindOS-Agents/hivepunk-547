@@ -1,0 +1,98 @@
+{
+  "step": "research-20775:9edd7884-dd64-454b-8073-29a7d3cf2ae5:558:1794979668545:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No file-write or repo-commit request appears in the trace; only read-only GETs were made, so creation of the .md research note and .json receipt cannot be verified.",
+  "description": "The agent fetched Mem0 pages from mem0.ai, rywalker.com, and github.com/mem0ai/mem0, all returning 200, but the trace shows no request to write research/[redacted]-mem0.md or research/[redacted]-mem0.json to the user's repo. The final output only claims a GitHub link, which is not evidenced by any trace item.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "mem0.ai",
+      "path": "/research",
+      "status": 200,
+      "error": null,
+      "ms": 159,
+      "at": "2026-11-18T05:28:48.314Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "mem0.ai",
+      "path": "/",
+      "status": 200,
+      "error": null,
+      "ms": 160,
+      "at": "2026-11-18T05:28:48.314Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "rywalker.com",
+      "path": "/research/mem0",
+      "status": 200,
+      "error": null,
+      "ms": 363,
+      "at": "2026-11-18T05:28:48.314Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0/blob/main/README.md",
+      "status": 200,
+      "error": null,
+      "ms": 391,
+      "at": "2026-11-18T05:28:48.314Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0",
+      "status": 200,
+      "error": null,
+      "ms": 481,
+      "at": "2026-11-18T05:28:48.314Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai",
+      "status": 200,
+      "error": null,
+      "ms": 511,
+      "at": "2026-11-18T05:28:48.314Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0/tree/main",
+      "status": 200,
+      "error": null,
+      "ms": 566,
+      "at": "2026-11-18T05:28:48.314Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0/tree/:id",
+      "status": 200,
+      "error": null,
+      "ms": 664,
+      "at": "2026-11-18T05:28:48.314Z"
+    }
+  ],
+  "at": "2026-11-18T05:29:30.716Z"
+}
