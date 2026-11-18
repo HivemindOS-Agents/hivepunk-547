@@ -27,6 +27,11 @@
   "command": "git checkout 97b0c85d878ddb29367f2e3583c71c3d9101526e && cd tools/dataset-manifest-check && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-dataset-manifest-check-97b0c85.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44324058479",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-18T15:04:50Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44331398468"
+  }
 }
