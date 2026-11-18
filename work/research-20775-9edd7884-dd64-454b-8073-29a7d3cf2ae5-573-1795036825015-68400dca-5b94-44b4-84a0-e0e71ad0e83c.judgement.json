@@ -1,0 +1,98 @@
+{
+  "step": "research-20775:9edd7884-dd64-454b-8073-29a7d3cf2ae5:573:1795036825015:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No publish request in trace; only reads, cannot verify note/receipt published",
+  "description": "The agent read eight LangMem pages but the trace shows no request publishing the note or receipt to the repo, despite the output claiming a link.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "www.langchain.com",
+      "path": "/blog/langmem-sdk-launch",
+      "status": 200,
+      "error": null,
+      "ms": 72,
+      "at": "2026-11-18T21:21:24.109Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "langchain-ai.github.io",
+      "path": "/langmem/",
+      "status": 200,
+      "error": null,
+      "ms": 144,
+      "at": "2026-11-18T21:21:24.109Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "langchain-ai.github.io",
+      "path": "/langmem/concepts/conceptual_guide/",
+      "status": 200,
+      "error": null,
+      "ms": 148,
+      "at": "2026-11-18T21:21:24.109Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "www.usecarly.com",
+      "path": "/blog/langmem/",
+      "status": 200,
+      "error": null,
+      "ms": 204,
+      "at": "2026-11-18T21:21:24.109Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "ai-tldr.dev",
+      "path": "/tools/langmem/",
+      "status": 200,
+      "error": null,
+      "ms": 288,
+      "at": "2026-11-18T21:21:24.109Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "rywalker.com",
+      "path": "/research/langmem",
+      "status": 200,
+      "error": null,
+      "ms": 320,
+      "at": "2026-11-18T21:21:24.109Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/langchain-ai/langmem",
+      "status": 200,
+      "error": null,
+      "ms": 525,
+      "at": "2026-11-18T21:21:24.109Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "www.agentpatternscatalog.org",
+      "path": "/landing/compositions/langmem/",
+      "status": 200,
+      "error": null,
+      "ms": 596,
+      "at": "2026-11-18T21:21:24.109Z"
+    }
+  ],
+  "at": "2026-11-18T21:21:57.052Z"
+}
