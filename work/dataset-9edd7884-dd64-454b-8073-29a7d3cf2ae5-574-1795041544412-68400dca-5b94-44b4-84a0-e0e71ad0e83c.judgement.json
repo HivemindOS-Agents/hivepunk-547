@@ -1,0 +1,138 @@
+{
+  "step": "dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:574:1795041544412:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No forum post is shown in the trace or final output, and the published link name does not exactly match agent-memory-research-notes-v1.",
+  "description": "The agent created and committed to a Hugging Face dataset repository with successful responses, and reported a dataset link, but did not show the required forum post or verify the dataset contents, README, and self_test in the trace or output.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/TeleAI-UAGI/Awesome-Agent-Memory",
+      "status": 200,
+      "error": null,
+      "ms": 571,
+      "at": "2026-11-18T22:40:10.944Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/rohitg00/agentmemory",
+      "status": 200,
+      "error": null,
+      "ms": 608,
+      "at": "2026-11-18T22:40:10.944Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/68",
+      "status": 200,
+      "error": null,
+      "ms": 669,
+      "at": "2026-11-18T22:40:10.944Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/70",
+      "status": 200,
+      "error": null,
+      "ms": 825,
+      "at": "2026-11-18T22:40:10.944Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/130",
+      "status": 200,
+      "error": null,
+      "ms": 841,
+      "at": "2026-11-18T22:40:10.944Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/93",
+      "status": 200,
+      "error": null,
+      "ms": 947,
+      "at": "2026-11-18T22:40:10.944Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/tfatykhov/awesome-agent-memory",
+      "status": 200,
+      "error": null,
+      "ms": 1112,
+      "at": "2026-11-18T22:40:10.944Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/LiamVisionary/bee-scouts/issues/31",
+      "status": 200,
+      "error": null,
+      "ms": 1680,
+      "at": "2026-11-18T22:40:10.944Z"
+    },
+    {
+      "id": "t9",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/api/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 110,
+      "at": "2026-11-18T22:40:24.039Z"
+    },
+    {
+      "id": "t10",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/repos/create",
+      "status": 200,
+      "error": null,
+      "ms": 1530,
+      "at": "2026-11-18T22:40:24.149Z"
+    },
+    {
+      "id": "t11",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/:id/commit/main",
+      "status": 200,
+      "error": null,
+      "ms": 899,
+      "at": "2026-11-18T22:40:25.679Z"
+    },
+    {
+      "id": "t12",
+      "method": "PUT",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/:id/settings",
+      "status": 200,
+      "error": null,
+      "ms": 166,
+      "at": "2026-11-18T22:40:26.578Z"
+    }
+  ],
+  "at": "2026-11-18T22:40:45.840Z"
+}
