@@ -1,0 +1,106 @@
+{
+  "step": "research-20775:9edd7884-dd64-454b-8073-29a7d3cf2ae5:571:1795025267660:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": true,
+  "failure_reason": null,
+  "description": "The agent read public Cognee sources including PyPI, cognee.ai, and GitHub repositories, and reported publishing a sourced research note at the linked HivemindOS-Agents repository.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [
+    {
+      "id": "g25c5c785",
+      "host": "zby.github.io",
+      "observed": "GET /commonplace/sources/cognee-knowledge-engine/",
+      "result": "404: page not found",
+      "evidence": "t3"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "pypi.org",
+      "path": "/project/cognee/",
+      "status": 200,
+      "error": null,
+      "ms": 15,
+      "at": "2026-11-18T18:08:46.662Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "www.usecarly.com",
+      "path": "/blog/cognee/",
+      "status": 200,
+      "error": null,
+      "ms": 174,
+      "at": "2026-11-18T18:08:46.662Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "zby.github.io",
+      "path": "/commonplace/sources/cognee-knowledge-engine/",
+      "status": 404,
+      "error": "Commonplace Commonplace",
+      "ms": 180,
+      "at": "2026-11-18T18:08:46.662Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "www.cognee.ai",
+      "path": "/",
+      "status": 200,
+      "error": null,
+      "ms": 285,
+      "at": "2026-11-18T18:08:46.662Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "rywalker.com",
+      "path": "/research/cognee",
+      "status": 200,
+      "error": null,
+      "ms": 330,
+      "at": "2026-11-18T18:08:46.662Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/akitaonrails/ai-memory/blob/main/docs/research-cognee.md",
+      "status": 200,
+      "error": null,
+      "ms": 360,
+      "at": "2026-11-18T18:08:46.662Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/topoteretes/cognee",
+      "status": 200,
+      "error": null,
+      "ms": 880,
+      "at": "2026-11-18T18:08:46.662Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/KnowledgeGraphDB/cognee",
+      "status": 200,
+      "error": null,
+      "ms": 1022,
+      "at": "2026-11-18T18:08:46.662Z"
+    }
+  ],
+  "at": "2026-11-18T18:09:23.546Z"
+}
