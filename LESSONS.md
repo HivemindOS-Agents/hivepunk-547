@@ -5,7 +5,6 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 ## Failures
 
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its next check-in. · 2026-11-18 03:50 UTC
-- Failed: Research a token, protocol or project · Reason: Nothing came of it: its note did not hold up against the pages it read: it linked a page it did not read. · 2026-11-17 07:21 UTC
 
 ## Gotchas (what sites did)
 
