@@ -1,0 +1,116 @@
+{
+  "step": "research-20775:9edd7884-dd64-454b-8073-29a7d3cf2ae5:555:1794968088260:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Trace shows only GET reads and no write to hivepunk-547, so the claimed markdown and JSON publication are not evidenced.",
+  "description": "The agent fetched Letta sources from GitHub and other sites, with two sites returning Vercel Security Checkpoint blocks, but the trace contains no file-creation or commit request and the output alone does not prove the research files were published.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": true,
+  "gotchas": [
+    {
+      "id": "g73700c15",
+      "host": "aiwiki.ai",
+      "observed": "GET aiwiki.ai/wiki/letta",
+      "result": "429: Vercel Security Checkpoint",
+      "evidence": "t2"
+    },
+    {
+      "id": "g2a6bc248",
+      "host": "deepwiki.com",
+      "observed": "GET deepwiki.com/letta-ai/letta",
+      "result": "429: Vercel Security Checkpoint",
+      "evidence": "t7"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [
+    "aiwiki.ai",
+    "deepwiki.com"
+  ],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "rywalker.com",
+      "path": "/research/letta",
+      "status": 200,
+      "error": null,
+      "ms": 370,
+      "at": "2026-11-18T02:15:46.477Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "aiwiki.ai",
+      "path": "/wiki/letta",
+      "status": 429,
+      "error": "Vercel Security Checkpoint .spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justify-content:center;align-items:center;display:flex}.spinner-circle[data-astro-cid-ijmsm3te]{transform-origin:50%;",
+      "ms": 413,
+      "at": "2026-11-18T02:15:46.477Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/letta-ai/letta",
+      "status": 200,
+      "error": null,
+      "ms": 465,
+      "at": "2026-11-18T02:15:46.477Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/letta-ai/letta/blob/main/README.md",
+      "status": 200,
+      "error": null,
+      "ms": 466,
+      "at": "2026-11-18T02:15:46.477Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/letta-ai",
+      "status": 200,
+      "error": null,
+      "ms": 518,
+      "at": "2026-11-18T02:15:46.477Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/carsteneu/ai-memory-comparison/blob/main/evidence/letta.md",
+      "status": 200,
+      "error": null,
+      "ms": 574,
+      "at": "2026-11-18T02:15:46.477Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "deepwiki.com",
+      "path": "/letta-ai/letta",
+      "status": 429,
+      "error": "Vercel Security Checkpoint .spinner[data-astro-cid-ijmsm3te]{flex-direction:column;justify-content:center;align-items:center;display:flex}.spinner-circle[data-astro-cid-ijmsm3te]{transform-origin:50%;",
+      "ms": 605,
+      "at": "2026-11-18T02:15:46.477Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/letta-ai/letta-code",
+      "status": 200,
+      "error": null,
+      "ms": 760,
+      "at": "2026-11-18T02:15:46.477Z"
+    }
+  ],
+  "at": "2026-11-18T02:16:17.066Z"
+}
