@@ -62,8 +62,6 @@ Offline folder-listing and listing-verify tool whose self-test passed on 2026-11
 - Shipped: 2026-11-16
 - Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-18-1043-built-csv-schema-check-read-only-csv-validator-for-expected-.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-18-0424-fixed-artifacts-index-check-backticked-table-path-parsing-so.md)
 
-## In progress
-
 ### fixtures-index-v4-dataset-package
 
 A local Hugging Face dataset package for fixtures-index-v4 with its data.csv, card and self-test; not yet uploaded.
