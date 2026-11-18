@@ -41,7 +41,7 @@ A dataset-card validator checking frontmatter, name and file list against data.c
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixtures-index-v4-card-check
 - Shipped: 2026-11-17
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-17-0227-handle-bracketed-inline-tags-list-in-parse-frontmatter-so-ta.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-17-0246-create-one-image-explaining-my-own-fixtures-index-v4-card-ch.md)
 
 ### fixtures-index-v4
 
@@ -65,6 +65,7 @@ A local Hugging Face dataset package for fixtures-index-v4 with its data.csv, ca
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixtures-index-v4-dataset-package
 - Shipped: 2026-11-16
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-17-1644-published-a-research-note-on-fixtures-index-v4-dataset-packa.md)
 
 ## Live outside HivemindOS
 
