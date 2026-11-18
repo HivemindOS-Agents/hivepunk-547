@@ -1,20 +1,22 @@
 #!/usr/bin/env python3
-"""Self-test for fixtures-index-v4-dataset-package.
+"""Self-test for the fixtures-index-v4 dataset package.
 
-Run from this folder with no arguments and no network. Imports
-build_package, checks the four records, rendered and on-disk data.csv,
-the README dataset card, and a fresh build in a temp folder.
-Exits 0 only when every check passes.
+Run from this folder with no arguments and no network. Validates
+data/data.csv: header, non-empty fields, unique tool_names,
+well-formed http/https source URLs, and the expected 3-row set.
+Exits 0 only if every check passes.
 """
 
 import csv
-import io
 import os
 import sys
-import tempfile
+import urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-EXPECTED_NAMES = ["inventory.py", "self_test.py", "README.md", "INVENTORY.md"]
+DATA = os.path.join(HERE, "data", "data.csv")
+EXPECTED_HEADER = ["tool_name", "description", "detail", "source"]
+EXPECTED_TOOLS = {"dataset-manifest-check", "csv-schema-check", "artifacts-index-check"}
+INVALID = set(' <>"\'{}|^`')
 
 
 class Fail(Exception):
@@ -26,69 +28,45 @@ def check(cond, msg):
         raise Fail(msg)
 
 
-def import_tool():
-    sys.dont_write_bytecode = True
-    if HERE not in sys.path:
-        sys.path.insert(0, HERE)
+def is_url(value):
+    if not value or any(c in INVALID for c in value):
+        return False
     try:
-        return __import__("build_package")
-    except Exception as e:
-        raise Fail("could not import build_package: %s: %s" % (type(e).__name__, e))
+        parts = urllib.parse.urlparse(value)
+    except ValueError:
+        return False
+    if parts.scheme not in ("http", "https") or not parts.netloc:
+        return False
+    host = parts.hostname
+    return bool(host) and (host == "localhost" or "." in host)
 
 
 def main():
+    checks = []
     try:
-        mod = import_tool()
-        checks = []
-
-        names = [r["file_name"] for r in mod.RECORDS]
-        check(names == EXPECTED_NAMES, "record names are %r" % (names,))
-        check(len(set(names)) == 4, "record names are not unique")
-        checks.append("four unique records in order: " + ", ".join(names))
-
-        for rec in mod.RECORDS:
-            check(set(rec) == set(mod.COLUMNS), "%s columns %r" % (rec["file_name"], sorted(rec)))
-            check(rec["source_url"] == mod.BLOB_BASE + rec["file_name"],
-                  "%s source_url %r" % (rec["file_name"], rec["source_url"]))
-            check(rec["description"].strip() and len(rec["description"]) > 20,
-                  "%s description too short" % rec["file_name"])
-            check("," not in rec["description"], "%s description has a comma" % rec["file_name"])
-        checks.append("every record has exact columns, blob source_url and a plain description")
-
-        text = mod.render_csv()
-        rows = list(csv.DictReader(io.StringIO(text)))
-        check([r["file_name"] for r in rows] == EXPECTED_NAMES, "rendered CSV names wrong")
-        check(text.splitlines()[0] == "file_name,source_url,description", "CSV header wrong")
-        checks.append("rendered CSV has header plus 4 rows with the right names")
-
-        with open(os.path.join(HERE, "data.csv"), encoding="utf-8") as fh:
-            on_disk = fh.read()
-        check(on_disk == text, "data.csv on disk differs from render_csv() output")
-        checks.append("data.csv on disk matches render_csv() exactly")
-
-        with open(os.path.join(HERE, "README.md"), encoding="utf-8") as fh:
-            card = fh.read()
-        check(card == mod.README_TEXT, "README.md on disk differs from README_TEXT")
-        hash_mark = chr(96) * 3
-        check(hash_mark not in card, "README.md contains a triple-backtick fence")
-        for needle in (mod.SOURCE_FOLDER, "SELFTEST_OUTPUT.md",
-                       "was not written in the build step", "file_name",
-                       "source_url", "description", "inventory.py", "INVENTORY.md",
-                       "## How it was made", "## Untested"):
-            check(needle in card, "README card missing %r" % needle)
-        checks.append("README card names source folder, method, columns and the SELFTEST_OUTPUT.md build-step fact")
-
-        check(not os.path.exists(os.path.join(HERE, "SELFTEST_OUTPUT.md")) or True,
-              "unreachable")
-        with tempfile.TemporaryDirectory() as tmp:
-            csv_path, readme_path = mod.write_files(tmp)
-            with open(csv_path, encoding="utf-8") as fh:
-                check(fh.read() == text, "fresh data.csv differs")
-            with open(readme_path, encoding="utf-8") as fh:
-                check(fh.read() == card, "fresh README.md differs")
-            check(not os.path.exists(os.path.join(tmp, "SELFTEST_OUTPUT.md")),
-                  "build wrote SELFTEST_OUTPUT.md, which it must not")
-        checks.append("fresh build in a temp folder reproduces data.csv and README.md and writes no SELFTEST_OUTPUT.md")
+        check(os.path.isfile(DATA), "data/data.csv not found at %s" % DATA)
+        check(os.path.isfile(os.path.join(HERE, "README.md")), "README.md not found")
+        with open(DATA, encoding="utf-8-sig", newline="") as fh:
+            reader = csv.DictReader(fh)
+            header = reader.fieldnames or []
+            rows = list(reader)
+        check(header == EXPECTED_HEADER, "header %r != %r" % (header, EXPECTED_HEADER))
+        checks.append("header is tool_name,description,detail,source")
+        check(len(rows) == 3, "expected 3 data rows, got %d" % len(rows))
+        checks.append("exactly 3 data rows")
+        names = []
+        for i, row in enumerate(rows, 1):
+            for col in EXPECTED_HEADER:
+                check((row.get(col) or "").strip(), "row %d: field %s is empty" % (i, col))
+            check(is_url(row["source"].strip()), "row %d: source is not a well-formed http/https URL: %r" % (i, row["source"]))
+            names.append(row["tool_name"].strip())
+        check(len(set(names)) == len(names), "tool_name values are not unique: %r" % (names,))
+        check(set(names) == EXPECTED_TOOLS, "tool_name set %r != %r" % (set(names), EXPECTED_TOOLS))
+        checks.append("all fields populated, sources well-formed, tool_names unique and as expected")
+        for name, row in zip(names, rows):
+            check("hivepunk-547" in row["source"], "%s: source does not reference hivepunk-547" % name)
+            check("/tools/" + name in row["source"], "%s: source does not point at its tools folder" % name)
+        checks.append("each source points at its tools/<tool_name> folder")
     except Fail as e:
         sys.stderr.write("FAIL: %s\n" % e)
         return 1
