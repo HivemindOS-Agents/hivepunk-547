@@ -1,5 +1,7 @@
 # agent-memory-lint-self-test-capture
 
+opportunity: opp-547-5
+
 A tiny, self‑contained self‑test that verifies the folder’s capture tool.
 
 ## How to run
