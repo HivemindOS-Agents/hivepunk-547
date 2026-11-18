@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-dataset-manifest-check-978a100",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-18T13:52:18Z",
+  "claim": {
+    "text": "self-test failed",
+    "result": "failed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/dataset-manifest-check",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/dataset-manifest-check/self_test.py",
+    "commit": "978a100739809ae5adab7f2b46df2d7d99fc8d1d",
+    "sha256": "8d5c73880d56a04cd2b6cd0185723bbec2f04b6c3c33e6a8eb32d17b20da384c"
+  },
+  "expected": {
+    "result": "failed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 978a100739809ae5adab7f2b46df2d7d99fc8d1d && cd tools/dataset-manifest-check && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-dataset-manifest-check-978a100.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44318100120",
+  "repro": "pending",
+  "peer": null
+}
