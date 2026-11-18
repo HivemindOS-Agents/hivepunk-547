@@ -27,6 +27,11 @@
   "command": "git checkout 8d5202f1ad45500be7d47353ff2571462aaeb9fc && cd tools/artifacts-index-check && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-artifacts-index-check-8d5202f.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44237162691",
-  "repro": "pending",
-  "peer": null
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "86",
+    "at": "2026-11-18T05:45:02Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44246373270"
+  }
 }
