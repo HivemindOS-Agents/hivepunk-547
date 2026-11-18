@@ -1,0 +1,250 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-18T11:46:01.854Z",
+  "subject": "Zep Graphiti",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Graphiti is a credible, actively developed open-source temporal memory framework whose main differentiator is time-aware fact invalidation with provenance, but its strongest performance claims come from its own vendor and paper and need independent verification before production reliance.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "getzep/graphiti has 35 raw commits in the last 30 days, 13 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/getzep/graphiti/commits?per_page=50&since=2026-10-19T11:46:09.208Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 869c1b2, on 2026-11-15.",
+      "check": "shipping",
+      "source": "https://github.com/getzep/graphiti/commit/869c1b279e01a2767a464581e1cb657ce0e39271"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Graphiti is a framework for building and querying temporal context graphs for AI agents.",
+      "check": "page",
+      "source": "https://github.com/getzep/graphiti",
+      "quote": "Graphiti is a framework for building and querying temporal context graphs for AI agents.",
+      "sourceId": "src-1",
+      "quoteSha256": "bcc836e20f390798f5569be730d3fda2dae6251bb2096faa829f5e3401459c34"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Graphiti tracks how facts change over time and maintains provenance to source data.",
+      "check": "page",
+      "source": "https://github.com/getzep/graphiti",
+      "quote": "Graphiti's context graphs track how facts change over time, maintain provenance to source data, and support both prescribed and learned ontology",
+      "sourceId": "src-1",
+      "quoteSha256": "ca06fa2950e6b0879814cb41704d55683cb8c065d5fcbc78a9667452c05f56f9"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "A context graph contains entities, facts/relationships, episodes for provenance, and custom types defined via Pydantic models.",
+      "check": "page",
+      "source": "https://github.com/getzep/graphiti",
+      "quote": "A context graph contains: Component What it stores Entities (nodes) People, products, policies, concepts — with summaries that evolve over time Facts / Relationships (edges) Triplets (Entity → Relationship → Entity) with temporal validity windows Episodes (provenance) Raw data as ingested — the",
+      "sourceId": "src-1",
+      "quoteSha256": "454180287eeeb7d83fa6e8f0d12a87431f3a9b6aceb5eee33392cee6e1c14d67"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Graphiti is the open-source temporal knowledge graph framework, while Zep is the unified enterprise context layer using Graphiti and running a managed Context Lake on Konig.",
+      "check": "page",
+      "source": "https://help.getzep.com/graphiti/getting-started/overview",
+      "quote": "Graphiti and Zep Graphiti is the open-source temporal knowledge graph framework.",
+      "sourceId": "src-4",
+      "quoteSha256": "f63460e2bfc7aebbc7d6b7c21928e32ba253719ccda4c8109f5a31f8756b05dc"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Graphiti hybrid search combines vector similarity, BM25 full-text and graph traversal into a single ranked answer with no LLM-in-the-loop reranking.",
+      "check": "page",
+      "source": "https://help.getzep.com/graphiti/getting-started/overview",
+      "quote": "Hybrid Search: Combines vector similarity, BM25 full-text, and graph traversal into a single ranked answer, with no LLM-in-the-loop reranking.",
+      "sourceId": "src-4",
+      "quoteSha256": "730f53b21e5349cf174f3ef28ec86cf346f4003d8ad22955ee883b47651a9059"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Graphiti runs on Neo4j, FalkorDB or Amazon Neptune, with LLM and embedding providers including OpenAI, Azure OpenAI, Gemini and Anthropic.",
+      "check": "page",
+      "source": "https://help.getzep.com/graphiti/getting-started/overview",
+      "quote": "Pluggable Backends: Runs on Neo4j, FalkorDB, or Amazon Neptune, with LLM and embedding providers including OpenAI, Azure OpenAI, Gemini, and Anthropic.",
+      "sourceId": "src-4",
+      "quoteSha256": "ad63f0fa571c406d1e08d41b4f319a38ef2089329080b56faf7c5384e746b101"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "In the DMR benchmark, Zep demonstrates 94.8% versus 93.4% for MemGPT, according to the arXiv abstract.",
+      "check": "page",
+      "source": "https://arxiv.org/abs/2501.13956",
+      "quote": "In the DMR benchmark, which the MemGPT team established as their primary evaluation metric, Zep demonstrates superior performance (94.8% vs 93.4%).",
+      "sourceId": "src-5",
+      "quoteSha256": "3c27bc0197e45c477d41b4024f9c272f351c0af97668416556c1fd4758ed92cc"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "On LongMemEval, the arXiv abstract reports accuracy improvements of up to 18.5% and response latency reduction of 90% versus baseline implementations.",
+      "check": "page",
+      "source": "https://arxiv.org/abs/2501.13956",
+      "quote": "In this evaluation, Zep achieves substantial results with accuracy improvements of up to 18.5% while simultaneously reducing response latency by 90% compared to baseline implementations.",
+      "sourceId": "src-5",
+      "quoteSha256": "49ad18c7d0602f6d13c48c454293321d80103d46326a554a14289dab6a4ff611"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "Zep's website reports LoCoMo 94.7% accuracy, 155 ms retrieval latency and 5,760 tokens context size.",
+      "check": "page",
+      "source": "https://www.getzep.com/platform/graphiti/",
+      "quote": "LoCoMo 94.7% accuracy Retrieval latency 155 ms Context size 5,760 tokens",
+      "sourceId": "src-3",
+      "quoteSha256": "2b4bf6768fa654a671cd485a7b6e4ebd0990c777b24b3c642ce62949d616ddf0"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "getzep/graphiti has 35 raw commits in the last 30 days, 13 of them real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/getzep/graphiti/commits?per_page=50&since=2026-10-19T11:46:09.208Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c11",
+      "label": "FACT",
+      "text": "Its latest real commit is 869c1b2, on 2026-11-15.",
+      "check": "page",
+      "source": "https://api.github.com/repos/getzep/graphiti/commits?per_page=50&since=2026-10-19T11:46:09.208Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether Graphiti has had an independent security audit or penetration test is unknown from the pages read.",
+      "check": "page",
+      "missing": "A security audit or penetration-test report published by Zep or an independent auditor covering Graphiti."
+    }
+  ],
+  "counts": {
+    "fact": 13,
+    "derived": 0,
+    "unknown": 1
+  },
+  "risks": [
+    "Self-hosting Graphiti requires the user to supply and operate a graph database, an LLM and an embedder, as stated on the GitHub page.",
+    "The headline accuracy, latency and token figures are vendor-reported on Zep's website and in a Zep-authored arXiv paper; the pages read do not provide independent replication.",
+    "Benchmark results from January 2025 may not describe the current version's performance, and the pages read do not give a version-by-version comparison.",
+    "The commercial Zep platform and the open-source framework are distinct, so managed governance, SOC 2, HIPAA and BYOC claims for Zep do not automatically apply to self-hosted Graphiti.",
+    "Recent commits include removal of the Kuzu driver, so users depending on Kuzu would need to migrate, based on the commit messages shown by the API."
+  ],
+  "unknowns": [
+    "Whether Graphiti has had an independent security audit or penetration test is unknown from the pages read.: A security audit or penetration-test report published by Zep or an independent auditor covering Graphiti."
+  ],
+  "wouldChangeMind": [
+    "Independent replication of the benchmark accuracy and latency figures on a current version.",
+    "Published production adoption, cost and reliability data from users outside Zep.",
+    "An independent security audit or clear licence and data-governance terms for self-hosted deployments."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "GitHub - getzep/graphiti: Build Real-Time Knowledge Graphs for AI Agents · GitHub",
+      "url": "https://github.com/getzep/graphiti",
+      "finalUrl": "https://github.com/getzep/graphiti",
+      "status": 200,
+      "fetchedAt": "2026-11-18T11:46:09.085Z",
+      "extractor": "page-text-v1",
+      "sha256": "a842883c8053b7016be04e764130249d4f6f77451bfc41522f3ee708f7391edb",
+      "bytes": 554259,
+      "quote": "Graphiti is a framework for building and querying temporal context graphs for AI agents.",
+      "quoteSha256": "bcc836e20f390798f5569be730d3fda2dae6251bb2096faa829f5e3401459c34"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+      "url": "https://arxiv.org/html/2501.13956v1",
+      "finalUrl": "https://arxiv.org/html/2501.13956v1",
+      "status": 200,
+      "fetchedAt": "2026-11-18T11:46:08.545Z",
+      "extractor": "page-text-v1",
+      "sha256": "5dd09a97290cb2b4b89334b43257ff74419d380be0a6eda93a92d78bea89751b",
+      "bytes": 137854,
+      "quote": "While existing retrieval-augmented generation (RAG) frameworks for large language model (LLM)-based agents are limited to static document retrieval, enterprise applications demand dynamic knowledge integration from diverse sources including ongoing conversations and business data.",
+      "quoteSha256": "61e1d084c7ec8cce3cd634a383b40ef0b52d47a46a54f7a2f2c011eea7724bcf"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Graphiti | Zep",
+      "url": "https://www.getzep.com/platform/graphiti/",
+      "finalUrl": "https://www.getzep.com/platform/graphiti/",
+      "status": 200,
+      "fetchedAt": "2026-11-18T11:46:09.208Z",
+      "extractor": "page-text-v1",
+      "sha256": "388588819400021aec098406387b6ccfc3e409642571d92ea2dd63ce31a272bb",
+      "bytes": 143611,
+      "quote": "LoCoMo 94.7% accuracy Retrieval latency 155 ms Context size 5,760 tokens",
+      "quoteSha256": "2b4bf6768fa654a671cd485a7b6e4ebd0990c777b24b3c642ce62949d616ddf0"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Overview | Zep Documentation",
+      "url": "https://help.getzep.com/graphiti/getting-started/overview",
+      "finalUrl": "https://help.getzep.com/graphiti/getting-started/overview",
+      "status": 200,
+      "fetchedAt": "2026-11-18T11:46:08.722Z",
+      "extractor": "page-text-v1",
+      "sha256": "a26500dceb95947a3ae56cceb4155e3c16231735f2621dfe6dcd4ed772819d6c",
+      "bytes": 154913,
+      "quote": "Graphiti and Zep Graphiti is the open-source temporal knowledge graph framework.",
+      "quoteSha256": "f63460e2bfc7aebbc7d6b7c21928e32ba253719ccda4c8109f5a31f8756b05dc"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "[2501.13956] Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+      "url": "https://arxiv.org/abs/2501.13956",
+      "finalUrl": "https://arxiv.org/abs/2501.13956",
+      "status": 200,
+      "fetchedAt": "2026-11-18T11:46:08.546Z",
+      "extractor": "page-text-v1",
+      "sha256": "2509a34d107a6528bcdb28d9355dc5a8ae0f1694a2f5bee565fa1c3846efd92a",
+      "bytes": 43598,
+      "quote": "In the DMR benchmark, which the MemGPT team established as their primary evaluation metric, Zep demonstrates superior performance (94.8% vs 93.4%).",
+      "quoteSha256": "3c27bc0197e45c477d41b4024f9c272f351c0af97668416556c1fd4758ed92cc"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of getzep/graphiti",
+      "url": "https://api.github.com/repos/getzep/graphiti/commits?per_page=50&since=2026-10-19T11:46:09.208Z",
+      "fetchedAt": "2026-11-18T11:46:01.854Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "dbfdf7daa9f498f09273f2792f639ee2f460c5dcbd151ce3814dd894b9aa85e8"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-18-zep-graphiti.md",
+  "decidedBy": "bee"
+}
