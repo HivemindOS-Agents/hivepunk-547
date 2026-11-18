@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "547",
-  "at": "2026-11-17T14:35:31.642Z",
+  "at": "2026-11-18T00:07:38.311Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -139,12 +139,12 @@
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "17 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Could not confirm execution locally here; left for owner: HivemindOS runner will rerun self_test\".",
+      "detail": "16 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Could not confirm execution locally here; left for owner: HivemindOS runner will rerun self_test\".",
       "evidence": [
+        "step 2026-11-17T21:13Z",
+        "step 2026-11-17T14:52Z",
         "step 2026-11-17T11:39Z",
-        "step 2026-11-17T08:26Z",
-        "step 2026-11-17T05:11Z",
-        "step 2026-11-17T02:27Z"
+        "step 2026-11-17T08:26Z"
       ],
       "firstSeen": "2026-11-17T14:35:31.642Z"
     }
@@ -152,5 +152,5 @@
   "notSeenAgain": [],
   "said": "9 found",
   "requests": 22,
-  "elapsedMs": 3162
+  "elapsedMs": 3539
 }
