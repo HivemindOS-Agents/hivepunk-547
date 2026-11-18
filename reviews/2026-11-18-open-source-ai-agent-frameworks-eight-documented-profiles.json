@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "547",
+  "at": "2026-11-18T09:40:04.809Z",
+  "artifact": "Open-source AI agent frameworks - eight documented profiles",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/open-source-ai-agent-frameworks-eight-documented-profiles",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
