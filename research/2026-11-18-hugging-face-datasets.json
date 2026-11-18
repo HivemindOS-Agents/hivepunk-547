@@ -1,0 +1,242 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-18T14:56:45.731Z",
+  "subject": "Hugging Face Datasets",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Publishing on Hugging Face is a practical, low-barrier way to make a dataset shareable and loadable, provided the file list, formats and dataset card are correct. The pages support that conclusion, but they do not confirm anything about the specific fixtures-index-v4 dataset.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "A dataset repository hosts all dataset files including revision history.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
+      "sourceId": "src-2",
+      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "A public dataset is visible to anyone, while a private dataset is limited to the owner or organisation members.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "A public dataset is visible to anyone, whereas a private dataset can only be viewed by you or members of your organization.",
+      "sourceId": "src-2",
+      "quoteSha256": "cab18150c0f70ddde75be6db4a959a966826743b55922310557ade84335dce12"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Creating a dataset card creates a README.md file in the repository.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "This button creates a README.md file in your repository.",
+      "sourceId": "src-2",
+      "quoteSha256": "4e2b00dcc9cb5c613a9092546b5ae70db294aa673490adf71d8c08ba5fc9693a"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "There are currently thousands of datasets in over 100 languages in the Hugging Face Hub.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/share",
+      "quote": "There are currently thousands of datasets in over 100 languages in the Hugging Face Hub",
+      "sourceId": "src-4",
+      "quoteSha256": "183f0c9d2b98057eee0abfe4bf9ce744a5f932378643983d9f0e7ebf462c89c3"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Supported dataset formats include CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite and WebDataset.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/share",
+      "quote": "The following formats are supported: CSV, TSV, JSON, JSON lines, text, Parquet, Arrow, SQLite, WebDataset.",
+      "sourceId": "src-4",
+      "quoteSha256": "116f5d5957b51e4deb84cadc1d15d41a25673ce9fb4b071248588d28cb674c31"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "A supported structure and file format are loaded automatically with load_dataset() and have a dataset viewer.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/repository_structure",
+      "quote": "A dataset with a supported structure and file format ( .txt , .csv , .parquet , .jsonl , .mp3 , .jpg , .zip etc.) are loaded automatically with load_dataset() , and it’ll have a dataset viewer on its dataset page on the Hub.",
+      "sourceId": "src-6",
+      "quoteSha256": "5ca02308799b4cb6e7fe2a93de05ed01946cc9bb8546d0ff001d1da0aff3f954"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Text extensions greater than 10MB are not tracked by Git LFS by default and will not be committed and uploaded.",
+      "check": "page",
+      "source": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "quote": "Text file extensions are not tracked by Git LFS by default, and if they’re greater than 10MB, they will not be committed and uploaded.",
+      "sourceId": "src-2",
+      "quoteSha256": "b9cef03b81d664d8eb5de7693c1ea8119a258735471aab80870071114da6013b"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Uploading can be done with huggingface_hub or with Git.",
+      "check": "page",
+      "source": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "quote": "There are two methods for uploading: using huggingface_hub and using Git.",
+      "sourceId": "src-1",
+      "quoteSha256": "4824023b2ad6e646489e341f58f35744ce9768e9f28cb52a0715ca909be98a4a"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "The Zenn page is an AI-generated translation and may contain errors.",
+      "check": "page",
+      "source": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "quote": "The content below is an AI-generated translation. This is an experimental feature, and may contain errors.",
+      "sourceId": "src-1",
+      "quoteSha256": "6c5d73bfd36f1785015280710d20ad72e1b2980dfd8a0a88bb10890c63ee2d63"
+    },
+    {
+      "id": "c10",
+      "label": "DERIVED",
+      "text": "A dataset can be published without developer experience via the Hub UI, but larger or scripted workflows are covered by other routes.",
+      "check": "page",
+      "inputs": [
+        "c8"
+      ],
+      "math": "The Hub UI page states a web interface for users without developer experience, while the Zenn page lists huggingface_hub and Git as upload methods; combining them gives UI for non-developers and programmatic/Git routes for scripted or large-scale work."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "The live fixtures-index-v4 dataset lists the same files as its manifest and is complete and correct.",
+      "check": "page",
+      "missing": "The live dataset page, its Files and versions list, its README.md and its manifest would verify this; none of the pages read show that dataset."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "The fixtures-index-v4 dataset declares a license and correct metadata in its dataset card.",
+      "check": "page",
+      "missing": "The published README.md dataset card metadata would verify this; no page read shows that card."
+    }
+  ],
+  "counts": {
+    "fact": 9,
+    "derived": 1,
+    "unknown": 2
+  },
+  "risks": [
+    "Text files greater than 10MB may not be committed by default because they are not tracked by Git LFS by default, as shown on the upload page.",
+    "Uploading requires authentication with a read and write access token, and organisation permissions if operating under an organisation.",
+    "Dataset-card and file-structure choices affect discovery and loading; wrong configs, splits or an incomplete README can make a dataset hard to find or load.",
+    "The Zenn article is an AI-generated translation that may contain errors, so it should not be relied on over official documentation.",
+    "Private versus public visibility must be chosen at repository creation, limiting who can view a private dataset."
+  ],
+  "unknowns": [
+    "The live fixtures-index-v4 dataset lists the same files as its manifest and is complete and correct.: The live dataset page, its Files and versions list, its README.md and its manifest would verify this; none of the pages read show that dataset.",
+    "The fixtures-index-v4 dataset declares a license and correct metadata in its dataset card.: The published README.md dataset card metadata would verify this; no page read shows that card."
+  ],
+  "wouldChangeMind": [
+    "Finding the live fixtures-index-v4 page listing files that do not match its manifest or whose README is missing.",
+    "Finding that the dataset uses an unsupported format or structure that does not load with load_dataset() or show a viewer.",
+    "Finding a license, provenance or limitation statement that contradicts responsible reuse."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Publishing Datasets on Hugging Face",
+      "url": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "finalUrl": "https://zenn.dev/rmuraix/articles/78654b65a24413?locale=en",
+      "status": 200,
+      "fetchedAt": "2026-11-18T14:56:53.836Z",
+      "extractor": "page-text-v1",
+      "sha256": "f53b623d29ac1b84bb445f990424c58b7944f0d305e6845ef1414a0f3c833fa2",
+      "bytes": 162277,
+      "quote": "There are two methods for uploading: using huggingface_hub and using Git.",
+      "quoteSha256": "4824023b2ad6e646489e341f58f35744ce9768e9f28cb52a0715ca909be98a4a"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Share a dataset to the Hub · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/upload_dataset",
+      "status": 200,
+      "fetchedAt": "2026-11-18T14:56:53.551Z",
+      "extractor": "page-text-v1",
+      "sha256": "8fed25625396c281d567e51d7292ea20a07443a00892abecbbb231be1873a4f5",
+      "bytes": 150303,
+      "quote": "A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
+      "quoteSha256": "1a1f47be50a5ca0a3cd4701a1838b3903db6977bd52880895a407b74a378baf4"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Uploading datasets · Hugging Face",
+      "url": "https://huggingface.co/docs/hub/datasets-adding",
+      "finalUrl": "https://huggingface.co/docs/hub/datasets-adding",
+      "status": 200,
+      "fetchedAt": "2026-11-18T14:56:53.407Z",
+      "extractor": "page-text-v1",
+      "sha256": "ffa1465420c6f7827f6508746248fac059bde91b8e43c784062da835fb707036",
+      "bytes": 215457,
+      "quote": "Create a repository A repository hosts all your dataset files, including the revision history, making storing more than one dataset version possible.",
+      "quoteSha256": "5180a85542c0b5c7ac1332a466b6006de53bfd12f2380b0da44b1e2b873340f7"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Share a dataset using the CLI · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/share",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/share",
+      "status": 200,
+      "fetchedAt": "2026-11-18T14:56:53.602Z",
+      "extractor": "page-text-v1",
+      "sha256": "9446ba121570c47d055bb4772978be939663e09b6f7023eebb040b2de5dfa429",
+      "bytes": 180083,
+      "quote": "There are currently thousands of datasets in over 100 languages in the Hugging Face Hub",
+      "quoteSha256": "183f0c9d2b98057eee0abfe4bf9ce744a5f932378643983d9f0e7ebf462c89c3"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Hugging Face Datasets: Load, Stream, Create — CASRAI",
+      "url": "https://casrai.org/guides/hugging-face-datasets",
+      "finalUrl": "https://casrai.org/guides/hugging-face-datasets",
+      "status": 200,
+      "fetchedAt": "2026-11-18T14:56:53.387Z",
+      "extractor": "page-text-v1",
+      "sha256": "12fa0f34f9f635d8e2ab38a354f6b5fad52957d75a07237a3b8d0176f3c7ece3",
+      "bytes": 170062,
+      "quote": "What the documentation does establish is what Hugging Face offers: a Hub of community datasets stored as versioned repositories, plus a library that loads them with load_dataset .",
+      "quoteSha256": "1b156afbfe72ab88433ca09427a8a6af1993814672f946a34ae124a0a209b0eb"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Structure your repository · Hugging Face",
+      "url": "https://huggingface.co/docs/datasets/en/repository_structure",
+      "finalUrl": "https://huggingface.co/docs/datasets/en/repository_structure",
+      "status": 200,
+      "fetchedAt": "2026-11-18T14:56:53.700Z",
+      "extractor": "page-text-v1",
+      "sha256": "8733438a11d7b99770122eace5d239908f3fbf853ef5d903cbda1a77642083ff",
+      "bytes": 175656,
+      "quote": "A dataset with a supported structure and file format ( .txt , .csv , .parquet , .jsonl , .mp3 , .jpg , .zip etc.) are loaded automatically with load_dataset() , and it’ll have a dataset viewer on its dataset page on the Hub.",
+      "quoteSha256": "5ca02308799b4cb6e7fe2a93de05ed01946cc9bb8546d0ff001d1da0aff3f954"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-18-hugging-face-datasets.md",
+  "decidedBy": "bee"
+}
