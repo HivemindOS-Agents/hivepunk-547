@@ -21,8 +21,10 @@ Checks (read-only, no network, writes nothing):
   * every listed path exists under the root directory as a file;
   * listed paths may not escape the root (no ../ or absolute paths);
   * files under root that are not listed are flagged as unlisted,
-    excluding the manifest file itself. Directories are walked
-    recursively; symlinks to directories are not followed.
+    excluding the manifest file itself and any other manifest.*
+    file (e.g. a dataset folder holding manifest.txt alongside
+    manifest.json). Directories are walked recursively; symlinks
+    to directories are not followed.
 
 Prints counts and a PASS/FAIL summary, e.g.:
   PASS: manifest.txt (listed: 3, present: 3, missing: 0, unlisted: 0)
@@ -121,7 +123,6 @@ def parse_manifest(path):
     if ext == ".csv":
         return _entries_from_csv(text)
     if ext in (".txt", ".tsv", ".md", ""):
-        # Try JSON by content as a fallback for extensionless JSON.
         stripped = text.strip()
         if stripped.startswith("[") or stripped.startswith("{"):
             try:
@@ -142,6 +143,10 @@ def _is_unsafe(entry):
         return True
     parts = entry.replace("\\", "/").split("/")
     return any(part in ("..",) for part in parts)
+
+
+def _is_manifest_file(name):
+    return name.startswith("manifest.")
 
 
 def check(manifest_path, root=None, allow_unlisted=False):
@@ -196,6 +201,8 @@ def check(manifest_path, root=None, allow_unlisted=False):
         for name in sorted(filenames):
             full = os.path.join(dirpath, name)
             if os.path.abspath(full) == manifest_abs:
+                continue
+            if _is_manifest_file(name):
                 continue
             rel = os.path.relpath(full, root_abs).replace(os.sep, "/")
             if rel not in seen:
