@@ -1,0 +1,138 @@
+{
+  "step": "dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:562:1794994731571:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Sources were unofficial blogs and awesome lists, not official repos/docs only, and no Hugging Face forum post is shown in the trace.",
+  "description": "The agent published a dataset on Hugging Face under hivepunk-547-db38b7a4 with a new name, but its reads were from blogs and GitHub awesome lists rather than official LangGraph/CrewAI/AutoGen sources, and the trace contains no forum post.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "gravity.fast",
+      "path": "/blog/open-source-ai-agent-frameworks/",
+      "status": 200,
+      "error": null,
+      "ms": 179,
+      "at": "2026-11-18T09:39:48.575Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "www.digitalapplied.com",
+      "path": "/blog/:id",
+      "status": 200,
+      "error": null,
+      "ms": 310,
+      "at": "2026-11-18T09:39:48.575Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "www.digitalapplied.com",
+      "path": "/blog/:id",
+      "status": 200,
+      "error": null,
+      "ms": 315,
+      "at": "2026-11-18T09:39:48.575Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/ashishpatel26/:id",
+      "status": 200,
+      "error": null,
+      "ms": 590,
+      "at": "2026-11-18T09:39:48.575Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/aloth/awesome-ai-agents",
+      "status": 200,
+      "error": null,
+      "ms": 646,
+      "at": "2026-11-18T09:39:48.575Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "www.swfte.com",
+      "path": "/blog/open-source-ai-agent-frameworks",
+      "status": 200,
+      "error": null,
+      "ms": 708,
+      "at": "2026-11-18T09:39:48.575Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/ARUNAGIRINATHAN-K/awesome-ai-agents-2026",
+      "status": 200,
+      "error": null,
+      "ms": 870,
+      "at": "2026-11-18T09:39:48.575Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "www.firecrawl.dev",
+      "path": "/blog/best-open-source-agent-frameworks",
+      "status": 200,
+      "error": null,
+      "ms": 1224,
+      "at": "2026-11-18T09:39:48.575Z"
+    },
+    {
+      "id": "t9",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/api/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 68,
+      "at": "2026-11-18T09:40:02.588Z"
+    },
+    {
+      "id": "t10",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/repos/create",
+      "status": 200,
+      "error": null,
+      "ms": 298,
+      "at": "2026-11-18T09:40:02.656Z"
+    },
+    {
+      "id": "t11",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/:id/commit/main",
+      "status": 200,
+      "error": null,
+      "ms": 295,
+      "at": "2026-11-18T09:40:02.954Z"
+    },
+    {
+      "id": "t12",
+      "method": "PUT",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/:id/settings",
+      "status": 200,
+      "error": null,
+      "ms": 165,
+      "at": "2026-11-18T09:40:03.249Z"
+    }
+  ],
+  "at": "2026-11-18T09:40:19.799Z"
+}
