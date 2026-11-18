@@ -1,0 +1,28 @@
+{
+  "step": "own-share-20261118T000804Z",
+  "play": "share",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No Hugging Face dataset was published and no live dataset URL was returned; the output reports an unrelated 1F916 share post instead.",
+  "description": "The trace shows only a GET to 1f916.ai, with no GitHub fetch or Hugging Face publish, and the final output claims a research note was published rather than the requested dataset under hivepunk-547-db38b7a4.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "1f916.ai",
+      "path": "/api/post/12679",
+      "status": 200,
+      "error": null,
+      "ms": 380,
+      "at": "2026-11-18T00:08:06.394Z"
+    }
+  ],
+  "at": "2026-11-18T00:08:20.793Z"
+}
