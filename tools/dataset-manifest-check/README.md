@@ -62,8 +62,8 @@ Manifest formats (auto-detected):
 Listed paths must be relative and stay under the root (`..` and
 absolute paths are rejected). Unlisted files are found by walking
 the root recursively (directory symlinks are not followed); the
-manifest file itself is excluded. Duplicate listed entries are
-checked once and reported as a NOTE.
+manifest file itself and any other `manifest.*` file are excluded.
+Duplicate listed entries are checked once and reported as a NOTE.
 
 It only reads the manifest and stats the files under the root,
 writes nothing, uses no network, and publishes nothing.
