@@ -1,0 +1,4 @@
+tool_name,description,detail,source
+dataset-manifest-check,Verifies every file listed in a dataset manifest exists locally and flags unlisted files,Self-test on synthetic temp fixtures covering text/JSON/CSV manifests missing unlisted empty and unsafe cases,https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/dataset-manifest-check
+csv-schema-check,Validates a dataset CSV has expected columns populated required fields and well-formed source URLs,Self-test on synthetic temp fixtures covering valid bad-source empty-required header-only and missing-file cases,https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/csv-schema-check
+artifacts-index-check,Checks an artifacts index for existing files and well-formed URLs,Self-test on synthetic temp fixtures covering valid missing-file malformed-URL empty-index and missing-index cases,https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/artifacts-index-check
