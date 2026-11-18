@@ -1,0 +1,266 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-18T18:08:39.690Z",
+  "subject": "Cognee",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Cognee is a credible, actively maintained open-source agent-memory project with a clear remember/recall model and vendor-reported traction and benchmarks. Confidence is limited by vendor-reported metrics and the demo status of its local extractor, so independent benchmarks and security review would be needed before relying on it for sensitive production memory.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "topoteretes/cognee has 50 raw commits in the last 30 days, 34 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/topoteretes/cognee/commits?per_page=50&since=2026-10-19T18:08:47.827Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is e6b5b5b, on 2026-11-18.",
+      "check": "shipping",
+      "source": "https://github.com/topoteretes/cognee/commit/e6b5b5b9c1f1a3056136ddc3c082a0887fd8ace7"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Cognee is a free open-source AI memory platform that gives AI agents persistent long-term memory across sessions.",
+      "check": "page",
+      "source": "https://github.com/topoteretes/cognee",
+      "quote": "Cognee is a free open-source AI memory platform that gives AI agents persistent long-term memory across sessions.",
+      "sourceId": "src-1",
+      "quoteSha256": "a91a660d042777e9c3d61324964a093bf3f7c495069195e977efa954a0726a4b"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Cognee turns documents, code and conversations into a self-hosted knowledge graph agents can search and reuse.",
+      "check": "page",
+      "source": "https://github.com/topoteretes/cognee",
+      "quote": "Turn documents, code, and conversations into a self-hosted knowledge graph your agents can search and reuse.",
+      "sourceId": "src-1",
+      "quoteSha256": "de46f569e6ca56956fa727191c59b34dc5dbb348c4a25bed3b2b2e2cdcd8ec80"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Cognee runs locally for free with no API key required, using free small models on CPU.",
+      "check": "page",
+      "source": "https://github.com/topoteretes/cognee",
+      "quote": "Runs locally for free — no API key required. We rely on free small models that use your CPU.",
+      "sourceId": "src-1",
+      "quoteSha256": "18927793938a4454628092df8419e58c3a08fd1d096e16ada82b0a7ada5c1af2"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The whole Cognee API comes down to four verbs: remember, recall, improve and forget.",
+      "check": "page",
+      "source": "https://www.usecarly.com/blog/cognee/",
+      "quote": "The whole API comes down to four verbs: remember, recall, improve and forget.",
+      "sourceId": "src-6",
+      "quoteSha256": "2f81a9a0280a3bbf8f6ff4e4c0142490de8c066125c3fb7122d63df0677b150d"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Cognee's homepage claims 5M+ SDK runs/month and 33.4k GitHub Stars.",
+      "check": "page",
+      "source": "https://www.cognee.ai/",
+      "quote": "Part of Berkeley Xcelerator 5M+ SDK runs/month 33.4k GitHub Stars",
+      "sourceId": "src-4",
+      "quoteSha256": "fab421deb3c40d6248ae54bf9132a47ad910de0e5c6fe2cceec67774492d56d3"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Cognee 1.6.9 is listed on PyPI as a library for enriching LLM context with a semantic layer.",
+      "check": "page",
+      "source": "https://pypi.org/project/cognee/",
+      "quote": "cognee 1.6.9 Cognee - is a library for enriching LLM context with a semantic layer for better understanding and reasoning.",
+      "sourceId": "src-5",
+      "quoteSha256": "5b963351db997f0b8f23bccc815d233ea30269e3698d2bea4d732a6918177dbd"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Cognee raised a $7.5M seed led by Pebblebed in February 2026, with 42CAP, Vermilion Ventures, and angels from Google DeepMind, n8n, and Snowplow.",
+      "check": "page",
+      "source": "https://rywalker.com/research/cognee",
+      "quote": "$7.5M seed led by Pebblebed (Pamela Vagata, ex-OpenAI; Keith Adams, ex-Facebook AI Research) in February 2026, with 42CAP, Vermilion Ventures, and angels from Google DeepMind, n8n, and Snowplow",
+      "sourceId": "src-3",
+      "quoteSha256": "17af1b4f2794d8c1d14a667d85761d89b885ed1f33ebb170f7e8f9405d7d5317"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Cognee is Apache 2.0 open source.",
+      "check": "page",
+      "source": "https://www.usecarly.com/blog/cognee/",
+      "quote": "Open source Apache 2.0, about 33,300 GitHub stars",
+      "sourceId": "src-6",
+      "quoteSha256": "f69c77c074c26fb23040889e6cca3f4b7606263960758b67c15a5b41339d8644"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "topoteretes/cognee has 50 raw commits in the last 30 days, 34 of them real work, and its latest real commit is e6b5b5b on 2026-11-18.",
+      "check": "page",
+      "source": "https://api.github.com/repos/topoteretes/cognee/commits?per_page=50&since=2026-10-19T18:08:47.827Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "The bundled GLiNER extractor is a demo, and a production-ready version with higher accuracy and broader label coverage requires contacting Cognee.",
+      "check": "page",
+      "source": "https://pypi.org/project/cognee/",
+      "quote": "The bundled GLiNER extractor is a demo of Cognee's small-model pipeline. For a production-ready version with higher accuracy and broader label coverage, reach out to us .",
+      "sourceId": "src-5",
+      "quoteSha256": "65e97b89296182a02f681c4c876da481131225f085a2595528089dcbbc3862f9"
+    },
+    {
+      "id": "c11",
+      "label": "DERIVED",
+      "text": "Cognee was actively developed in the 30 days before the check, with a real commit on 2026-11-18.",
+      "check": "page",
+      "inputs": [
+        "c9"
+      ],
+      "math": "c9 reports 34 real commits in 30 days and latest real commit e6b5b5b on 2026-11-18, so development was active in that window."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether Cognee has passed an independent security audit and what the results were.",
+      "check": "page",
+      "missing": "A named independent security audit report or equivalent public assessment from the project or an auditor."
+    }
+  ],
+  "counts": {
+    "fact": 12,
+    "derived": 1,
+    "unknown": 1
+  },
+  "risks": [
+    "The bundled local GLiNER extractor is described as a demo, with a production-ready version requiring contact with the vendor, so local-only accuracy may be limited.",
+    "Text ingestion works without an LLM, but generated answers and media processing need additional LLM configuration, and LLM-dependent improvement stages skip automatically without a key.",
+    "Benchmark claims on the homepage are vendor-reported and were not independently verified in the pages read.",
+    "Traction figures differ by source and date, e.g. 17.7K+ stars in June 2026 on one research page versus 33.4k on the current homepage, so growth should not be extrapolated from a single figure.",
+    "Self-hosting still requires operating the storage and pipeline; managed cloud pricing and enterprise terms were not fully confirmed from primary pricing pages."
+  ],
+  "unknowns": [
+    "Whether Cognee has passed an independent security audit and what the results were.: A named independent security audit report or equivalent public assessment from the project or an auditor."
+  ],
+  "wouldChangeMind": [
+    "Publication of reproducible independent benchmarks contradicting the vendor-reported BEAM and LoCoMo results.",
+    "A public security audit finding serious vulnerabilities in the memory or graph storage layer.",
+    "Evidence that the claimed SDK runs/month are mostly tests or demos rather than production deployments."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "GitHub - topoteretes/cognee: Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory with s",
+      "url": "https://github.com/topoteretes/cognee",
+      "finalUrl": "https://github.com/topoteretes/cognee",
+      "status": 200,
+      "fetchedAt": "2026-11-18T18:08:47.827Z",
+      "extractor": "page-text-v1",
+      "sha256": "d8e75d22a8c6b827f4cc4ef9f7a08cd61d6ee25d3aec26824c0da7ee9ae22e94",
+      "bytes": 443857,
+      "quote": "Cognee is a free open-source AI memory platform that gives AI agents persistent long-term memory across sessions.",
+      "quoteSha256": "a91a660d042777e9c3d61324964a093bf3f7c495069195e977efa954a0726a4b"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "ai-memory/docs/research-cognee.md at main · akitaonrails/ai-memory · GitHub",
+      "url": "https://github.com/akitaonrails/ai-memory/blob/main/docs/research-cognee.md",
+      "finalUrl": "https://github.com/akitaonrails/ai-memory/blob/main/docs/research-cognee.md",
+      "status": 200,
+      "fetchedAt": "2026-11-18T18:08:47.081Z",
+      "extractor": "page-text-v1",
+      "sha256": "8e6974eff732563bfe35fa238f98874049489b42edd10bf3c76c030ae8bdbd9b",
+      "bytes": 272402,
+      "quote": "It ingests heterogeneous data (text, PDF, CSV, code, web pages), then continuously builds a hybrid knowledge graph + vector index + relational catalog so that agents can retrieve context by both meaning (embeddings) and structure (graph relationships).",
+      "quoteSha256": "48a87c9026f81e13fb726460b7aa6487fa2d6b57afee19026f6c818e6e8c1a55"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Cognee | Ry Walker Research | Ry Walker",
+      "url": "https://rywalker.com/research/cognee",
+      "finalUrl": "https://rywalker.com/research/cognee",
+      "status": 200,
+      "fetchedAt": "2026-11-18T18:08:46.992Z",
+      "extractor": "page-text-v1",
+      "sha256": "cdabb6b2b4b7c9252a97ffa510027df3c78258da2eb3185547484af1ca8fa45b",
+      "bytes": 127413,
+      "quote": "$7.5M seed led by Pebblebed (Pamela Vagata, ex-OpenAI; Keith Adams, ex-Facebook AI Research) in February 2026, with 42CAP, Vermilion Ventures, and angels from Google DeepMind, n8n, and Snowplow",
+      "quoteSha256": "17af1b4f2794d8c1d14a667d85761d89b885ed1f33ebb170f7e8f9405d7d5317"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Cognee - Open-Source Agent Memory Platform",
+      "url": "https://www.cognee.ai/",
+      "finalUrl": "https://www.cognee.ai/",
+      "status": 200,
+      "fetchedAt": "2026-11-18T18:08:46.947Z",
+      "extractor": "page-text-v1",
+      "sha256": "fee30c1898b74e2a6f10d29c5443b2fada23d304ccc5957e6379ebb6b6b14dde",
+      "bytes": 369352,
+      "quote": "Part of Berkeley Xcelerator 5M+ SDK runs/month 33.4k GitHub Stars",
+      "quoteSha256": "fab421deb3c40d6248ae54bf9132a47ad910de0e5c6fe2cceec67774492d56d3"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "cognee · PyPI",
+      "url": "https://pypi.org/project/cognee/",
+      "finalUrl": "https://pypi.org/project/cognee/",
+      "status": 200,
+      "fetchedAt": "2026-11-18T18:08:46.678Z",
+      "extractor": "page-text-v1",
+      "sha256": "3db52f894423a67946900edbed3e69f05d9e994fe9cfbe93caf6d3622e7ca32c",
+      "bytes": 406085,
+      "quote": "cognee 1.6.9 Cognee - is a library for enriching LLM context with a semantic layer for better understanding and reasoning.",
+      "quoteSha256": "5b963351db997f0b8f23bccc815d233ea30269e3698d2bea4d732a6918177dbd"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Cognee: Open-Source AI Memory for Agents, Explained",
+      "url": "https://www.usecarly.com/blog/cognee/",
+      "finalUrl": "https://www.usecarly.com/blog/cognee/",
+      "status": 200,
+      "fetchedAt": "2026-11-18T18:08:46.836Z",
+      "extractor": "page-text-v1",
+      "sha256": "23f7b04aa2f383d3f14288f638642c86c1cdbf64ca5193e088c08d8b9fd5a00d",
+      "bytes": 90146,
+      "quote": "The whole API comes down to four verbs: remember, recall, improve and forget.",
+      "quoteSha256": "2f81a9a0280a3bbf8f6ff4e4c0142490de8c066125c3fb7122d63df0677b150d"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of topoteretes/cognee",
+      "url": "https://api.github.com/repos/topoteretes/cognee/commits?per_page=50&since=2026-10-19T18:08:47.827Z",
+      "fetchedAt": "2026-11-18T18:08:39.690Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "e3ca07a4548d03d683cfe79dc679c3bd54eaeb9bbe910895c3000d95aab69c48"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-18-cognee.md",
+  "decidedBy": "bee"
+}
