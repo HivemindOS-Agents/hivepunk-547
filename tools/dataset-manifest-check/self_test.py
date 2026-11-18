@@ -67,12 +67,12 @@ def main():
 
             json_manifest = write(data, "manifest.json", json.dumps({"files": ["a.txt", {"path": "sub/b.csv"}, {"name": "sub/c.json"}]}))
             ok, problems, notes, counts = mod.check(json_manifest)
-            check(ok and counts["listed"] == 3 and counts["present"] == 3, "valid json: %r %r" % (problems, counts))
-            checks.append("valid JSON manifest (strings and objects) passes")
+            check(ok and counts["listed"] == 3 and counts["present"] == 3 and counts["unlisted"] == 0, "valid json: %r %r" % (problems, counts))
+            checks.append("valid JSON manifest (strings and objects) passes, manifest.txt not unlisted")
 
             csv_manifest = write(data, "manifest.csv", "name,bytes\na.txt,5\nsub/b.csv,3\nsub/c.json,8\n")
             ok, problems, notes, counts = mod.check(csv_manifest)
-            check(ok and counts["listed"] == 3 and counts["present"] == 3, "valid csv: %r %r" % (problems, counts))
+            check(ok and counts["listed"] == 3 and counts["present"] == 3 and counts["unlisted"] == 0, "valid csv: %r %r" % (problems, counts))
             checks.append("valid CSV manifest passes using name column")
 
             missing = write(data, "bad_missing.txt", "a.txt\nsub/nope.txt\n")
@@ -108,7 +108,7 @@ def main():
             checks.append("missing manifest fails with not found")
 
             dup = write(data, "dup.txt", "a.txt\na.txt\nsub/b.csv\nsub/c.json\n")
-            ok, problems, notes, counts = mod.check(dup)
+            ok, problems, notes, counts = mod.check(dup, allow_unlisted=True)
             check(ok and counts["listed"] == 4 and counts["present"] == 3, "dup: %r %r" % (problems, counts))
             check(any("duplicate" in n for n in notes), "dup notes: %r" % (notes,))
             checks.append("duplicate entry checked once with NOTE")
@@ -122,7 +122,7 @@ def main():
 
             buf = io.StringIO()
             with contextlib.redirect_stdout(buf):
-                code = mod.main(["dataset_manifest_check.py", manifest])
+                code = mod.main(["dataset_manifest_check.py", manifest, "--allow-unlisted"])
             out = buf.getvalue()
             check(code == 0 and "PASS:" in out and "listed: 3" in out, "CLI valid: %r %r" % (code, out))
             buf = io.StringIO()
