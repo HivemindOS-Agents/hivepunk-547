@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "547",
+  "at": "2026-11-18T06:31:46.719Z",
+  "artifact": "AI Agent Memory Tools - Letta Mem0 and Open Tools",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/ai-agent-memory-tools-letta-mem0-and-open-tools",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
