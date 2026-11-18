@@ -1,0 +1,266 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-18T21:21:17.485Z",
+  "subject": "LangMem",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "LangMem is a genuinely adopted, low-level memory toolkit whose hot-path and background modes plus procedural memory make it distinctive, but its pre-1.0 status, stale release and dependency-heavy recent commits mean production reliance should be weighed against maintenance and memory-quality risks.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "langchain-ai/langmem has 6 raw commits in the last 30 days, 2 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/langchain-ai/langmem/commits?per_page=50&since=2026-10-19T21:21:24.849Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 4beb9c3, on 2026-11-16.",
+      "check": "shipping",
+      "source": "https://github.com/langchain-ai/langmem/commit/4beb9c36a40953f09357e5b2dd62ecc726f22d13"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "LangMem helps agents learn and adapt from their interactions over time.",
+      "check": "page",
+      "source": "https://langchain-ai.github.io/langmem/",
+      "quote": "LangMem helps agents learn and adapt from their interactions over time. It provides tooling to extract important information from conversations, optimize agent behavior through prompt refinement, and maintain long-term memory.",
+      "sourceId": "src-3",
+      "quoteSha256": "0595dda37fe380351694048c4741cf06fd76b573366486ce4497e5f46762ee59"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "LangMem offers a core memory API that works with any storage system.",
+      "check": "page",
+      "source": "https://langchain-ai.github.io/langmem/",
+      "quote": "Core memory API that works with any storage system",
+      "sourceId": "src-3",
+      "quoteSha256": "5e36dfa90b1d34b637e5ec9de9aeb164368a1951d53ab4d47ddd0ec45c7c1d15"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "LangMem provides memory management tools and a background memory manager.",
+      "check": "page",
+      "source": "https://langchain-ai.github.io/langmem/",
+      "quote": "Memory management tools that agents can use to record and search information during active conversations \"in the hot path\" ⚙️ Background memory manager that automatically extracts, consolidates, and updates agent knowledge",
+      "sourceId": "src-3",
+      "quoteSha256": "342196ec841329b61c9580d8f673bc5bd2473bfcf75f57f1a6d3a33f16dec3f1"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "LangMem integrates natively with LangGraph's long-term memory store.",
+      "check": "page",
+      "source": "https://langchain-ai.github.io/langmem/",
+      "quote": "Native integration with LangGraph's Long-term Memory Store , available by default in all LangGraph Platform deployments",
+      "sourceId": "src-3",
+      "quoteSha256": "fab63e09f10bbf4db53eb2f2fd319597e715cb1d617b9f2372ed1e940a6b4504"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "LangMem is installed with pip install -U langmem.",
+      "check": "page",
+      "source": "https://langchain-ai.github.io/langmem/",
+      "quote": "pip install -U langmem",
+      "sourceId": "src-3",
+      "quoteSha256": "c899c37a34f54ac1c4f72bc89ff4a44e767e9db6994d12fd78bdb2d476a5ac3c"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "LangMem models three memory types: semantic, episodic and procedural.",
+      "check": "page",
+      "source": "https://rywalker.com/research/langmem",
+      "quote": "Three memory types — semantic (facts/knowledge), episodic (past experiences), and procedural (learned behaviors/prompt rules) — modeled after human memory",
+      "sourceId": "src-2",
+      "quoteSha256": "63ff5e2fc8b09545c2dd63cfb6bec7f2a3e2bf8bbd8aa41e651fcf6a2a6111fc"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Each LangMem memory operation follows a pattern of accepting conversations and current memory, prompting an LLM, and returning updated memory state.",
+      "check": "page",
+      "source": "https://langchain-ai.github.io/langmem/concepts/conceptual_guide/",
+      "quote": "At its core, each memory operation in LangMem follows the same pattern: Accept conversation(s) and current memory state Prompt an LLM to determine how to expand or consolidate the memory state Respond with the updated memory state",
+      "sourceId": "src-6",
+      "quoteSha256": "3404fa7dfaf8e48278dbd1a487af4c67868cc48d25f18463423cf92c94448b82"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "InMemoryStore keeps memories in process memory and they are lost on restart.",
+      "check": "page",
+      "source": "https://langchain-ai.github.io/langmem/",
+      "quote": "InMemoryStore keeps memories in process memory—they'll be lost on restart.",
+      "sourceId": "src-3",
+      "quoteSha256": "9263d80070fe0767d62df57b4f867c778c1f5f9ce4003b1222abc1001666ca6e"
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "LangMem's latest release stated is 0.0.30 on October 27, 2025.",
+      "check": "page",
+      "missing": "Its source does not state 30."
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "Ry Walker reports about 746K monthly PyPI downloads and 5M+ total as of June 2026.",
+      "check": "page",
+      "source": "https://rywalker.com/research/langmem",
+      "quote": "Real adoption (~746K monthly PyPI downloads, 5M+ total as of June 2026) but still pre-1.0",
+      "sourceId": "src-2",
+      "quoteSha256": "0ae73ef86a0463184c14fe7eb71ecac62cfb01d4c138cde941c8b46847f52ba2"
+    },
+    {
+      "id": "c11",
+      "label": "FACT",
+      "text": "langchain-ai/langmem has 6 raw commits in the last 30 days, 2 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/langchain-ai/langmem/commits?per_page=50&since=2026-10-19T21:21:24.849Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c12",
+      "label": "DERIVED",
+      "text": "Of the 6 raw recent commits, 4 were not classified as real work by the service check.",
+      "check": "page",
+      "inputs": [
+        "c11"
+      ],
+      "math": "6 raw commits minus 2 real-work commits equals 4 non-real-work commits."
+    }
+  ],
+  "counts": {
+    "fact": 12,
+    "derived": 1,
+    "unknown": 1
+  },
+  "risks": [
+    "It remains pre-1.0 at version 0.0.30, with no newer release shown since October 2025 despite repository commits.",
+    "Recent activity in the service check is mostly dependency bumps, with only 2 of 6 raw commits counted as real work.",
+    "Each memory extraction is an LLM call, implying ongoing model cost and latency not quantified in the pages.",
+    "InMemoryStore loses memories on restart, so production use requires a persistent DB-backed store.",
+    "Over-extraction can reduce precision and under-extraction can reduce recall, per LangMem's conceptual guide."
+  ],
+  "unknowns": [
+    "LangMem's latest release stated is 0.0.30 on October 27, 2025.: Its source does not state 30."
+  ],
+  "wouldChangeMind": [
+    "A newer PyPI release at 1.0 or a published maintenance roadmap with dates.",
+    "Independent benchmarks showing reliable consolidation, recall and cost at production scale.",
+    "Evidence of a security/privacy audit covering namespaces, deletion and cross-user isolation."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "GitHub - langchain-ai/langmem · GitHub",
+      "url": "https://github.com/langchain-ai/langmem",
+      "finalUrl": "https://github.com/langchain-ai/langmem",
+      "status": 200,
+      "fetchedAt": "2026-11-18T21:21:24.689Z",
+      "extractor": "page-text-v1",
+      "sha256": "390e2100be4c29897018de0fab9ae96cc6dcb42160a1aa1fc444db9beeb35ec2",
+      "bytes": 268297,
+      "quote": "Native integration with LangGraph's Long-term Memory Store , available by default in all LangGraph Platform deployments Installation pip install -U langmem Configure your environment with an API key for your favorite LLM provider: export [redacted] sk-...",
+      "quoteSha256": "1e6ad720365c563e841523d1aab1a03fd43d2ecb47982d0fb055a95300a54a86"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "LangMem | Ry Walker Research | Ry Walker",
+      "url": "https://rywalker.com/research/langmem",
+      "finalUrl": "https://rywalker.com/research/langmem",
+      "status": 200,
+      "fetchedAt": "2026-11-18T21:21:24.429Z",
+      "extractor": "page-text-v1",
+      "sha256": "37a1bb825a3cd4d82a9351c800ed276af14181569390d6ea16d7a1d89b8cff56",
+      "bytes": 93326,
+      "quote": "Three memory types — semantic (facts/knowledge), episodic (past experiences), and procedural (learned behaviors/prompt rules) — modeled after human memory",
+      "quoteSha256": "63ff5e2fc8b09545c2dd63cfb6bec7f2a3e2bf8bbd8aa41e651fcf6a2a6111fc"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "LangMem",
+      "url": "https://langchain-ai.github.io/langmem/",
+      "finalUrl": "https://langchain-ai.github.io/langmem/",
+      "status": 200,
+      "fetchedAt": "2026-11-18T21:21:24.253Z",
+      "extractor": "page-text-v1",
+      "sha256": "5fd4c558859b0e2a431cf3d29fecdccc714a694d52b8300a6092c45ed2030ac5",
+      "bytes": 49610,
+      "quote": "LangMem helps agents learn and adapt from their interactions over time. It provides tooling to extract important information from conversations, optimize agent behavior through prompt refinement, and maintain long-term memory.",
+      "quoteSha256": "0595dda37fe380351694048c4741cf06fd76b573366486ce4497e5f46762ee59"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "LangMem: LangChain's Long-Term Memory SDK, Explained",
+      "url": "https://www.usecarly.com/blog/langmem/",
+      "finalUrl": "https://www.usecarly.com/blog/langmem/",
+      "status": 200,
+      "fetchedAt": "2026-11-18T21:21:24.313Z",
+      "extractor": "page-text-v1",
+      "sha256": "c85e17d1c97a1a247e5b7939840b8b61d585b42f8c5df926d48c42617cbc08cd",
+      "bytes": 87293,
+      "quote": "Carly is an AI executive assistant She connects to your email, your calendar and thousands of other apps, then acts the moment something arrives: replies, files, books the meeting, texts, WhatsApps and calls people for you, updates your CRM, and so much more.",
+      "quoteSha256": "3f6982cc0ae743de2eef1862e6fa7278324397168ba04d74224098b225160c79"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "LangMem SDK for agent long-term memory",
+      "url": "https://www.langchain.com/blog/langmem-sdk-launch",
+      "finalUrl": "https://www.langchain.com/blog/langmem-sdk-launch",
+      "status": 200,
+      "fetchedAt": "2026-11-18T21:21:24.181Z",
+      "extractor": "page-text-v1",
+      "sha256": "43f09aa1cafa88919cd225457a2d5be8b36eaaed851762cfa1ef91d049729bc4",
+      "bytes": 175976,
+      "quote": "At LangChain, we’ve found it useful to first identify the capabilities your agent needs to be able to learn, map these to specific memory types or approaches, and only then implement them in your agent.",
+      "quoteSha256": "9f0dfaacc36a9cf969675217d1a0ea639497d61be17313157a3fe154a289c66a"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Long-term Memory in LLM Applications",
+      "url": "https://langchain-ai.github.io/langmem/concepts/conceptual_guide/",
+      "finalUrl": "https://langchain-ai.github.io/langmem/concepts/conceptual_guide/",
+      "status": 200,
+      "fetchedAt": "2026-11-18T21:21:24.257Z",
+      "extractor": "page-text-v1",
+      "sha256": "8a0b92d27fb97a82d4a9373408ae5a870ac1b2b9d7f521761f8bb4a278e1918b",
+      "bytes": 102736,
+      "quote": "At its core, each memory operation in LangMem follows the same pattern: Accept conversation(s) and current memory state Prompt an LLM to determine how to expand or consolidate the memory state Respond with the updated memory state",
+      "quoteSha256": "3404fa7dfaf8e48278dbd1a487af4c67868cc48d25f18463423cf92c94448b82"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of langchain-ai/langmem",
+      "url": "https://api.github.com/repos/langchain-ai/langmem/commits?per_page=50&since=2026-10-19T21:21:24.849Z",
+      "fetchedAt": "2026-11-18T21:21:17.485Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "fac679d2270e86502abe8776ef234fa0caaae71d8cee2f62827ce98bce3f412f"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-18-langmem.md",
+  "decidedBy": "bee"
+}
