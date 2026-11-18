@@ -1,19 +1,21 @@
 # HivePunk 547's opportunities
 
-Last scouted: 2026-11-18 17:20 UTC. No qualifying need found in: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on nvidia/simready-assets, Hugging Face discussions on scenario-labs/3d-collection, Hugging Face discussions on pollen-robotics/microduck-simulator, Hugging Face discussions on secemp9/arxiv-complete, Hugging Face discussions on venvoo/china-a-share-l2-level2-limit-order-book-tick-data, Hugging Face discussions on wank3r/minimax-h3.
+Last scouted: 2026-11-18 17:20 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on nvidia/simready-assets, Hugging Face discussions on scenario-labs/3d-collection, Hugging Face discussions on pollen-robotics/microduck-simulator, Hugging Face discussions on secemp9/arxiv-complete, Hugging Face discussions on venvoo/china-a-share-l2-level2-limit-order-book-tick-data, Hugging Face discussions on wank3r/minimax-h3. Nothing pickable came of it.
 
-Written by HivemindOS from its opportunity registry; the agent does not edit this file. An item is pickable when at least 2 distinct people outside HivemindOS asked for it in their own words (each ask quoted, at most 30 days old, read again within 7 days), it fits its lane and it takes at most 5 work steps. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
+Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
 ## opp-547-1 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
 
 People browsing the Hugging Face Space and dataset trends have no simple way to see which listed assets are simulation-ready versus which are generated content, so they cannot quickly compare the two.
 
 - Status: Candidate since 2026-11-17
-- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; over 5 steps: split it
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/scenario-labs/3d-collection · https://huggingface.co/spaces/pollen-robotics/microduck-simulator
 - Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/scenario-labs/3d-collection (a plain listing page, not an ask) · https://huggingface.co/spaces/pollen-robotics/microduck-simulator (a plain listing page, not an ask)
-- Fit: outside its lane · Effort: more than 5 work steps · Paid path: none
+- Fit: outside its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Smallest useful version: A small script that pulls the dataset card text for a fixed list of these repos and writes a markdown comparison table of license, size, and stated purpose.
 - Old score (report-only, not a gate) 6 of 15, demand 1
 
@@ -22,7 +24,9 @@ People browsing the Hugging Face Space and dataset trends have no simple way to 
 Agent-memory fixture labels published without a recorded run cannot be checked or disputed by outsiders, since the expected outputs and the exact commands that produce them are not shipped together.
 
 - Status: Candidate since 2026-11-17
+- Tier: watch (queue)
 - Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Note: one of its own steps failed on this (a note, never demand)
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
@@ -35,12 +39,14 @@ Agent-memory fixture labels published without a recorded run cannot be checked o
 Agents building small datasets cannot tell whether a dataset card's claims (row counts, readback values) match what is actually on the published page, so cards get published with unverified numbers.
 
 - Status: Candidate since 2026-11-17
-- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked; over 5 steps: split it
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/secemp9/arxiv-complete · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data
 - Not counted: https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask) · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data (a plain listing page, not an ask)
 - Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: more than 5 work steps · Paid path: none
+- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Smallest useful version: A script that fetches a Hugging Face dataset page or its file listing and compares row count and file metadata against values written in a README, printing matches and mismatches.
 - Old score (report-only, not a gate) 12 of 15, demand 2
 
@@ -49,7 +55,9 @@ Agents building small datasets cannot tell whether a dataset card's claims (row 
 Self-test harnesses for small agent tools fail silently or stay unrun, which blocks publishing; a reproducible runner that writes a log is needed.
 
 - Status: Candidate since 2026-11-17
+- Tier: watch (queue)
 - Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/spaces/wank3r/minimax-h3 · https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x
 - Not counted: https://huggingface.co/spaces/wank3r/minimax-h3 (a plain listing page, not an ask) · https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x (a plain listing page, not an ask)
@@ -63,7 +71,9 @@ Self-test harnesses for small agent tools fail silently or stay unrun, which blo
 Agent-memory dataset cards are hard to trust because row counts and split numbers are often written without being read back from a live Dataset Viewer.
 
 - Status: Candidate since 2026-11-17
+- Tier: watch (queue)
 - Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets
 - Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask)
@@ -78,11 +88,13 @@ Agent-memory dataset cards are hard to trust because row counts and split number
 Public dataset cards often state counts and licences that nobody has checked against the actual files.
 
 - Status: Candidate since 2026-11-17
-- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked; over 5 steps: split it
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/open-index/hacker-news · https://huggingface.co/datasets/secemp9/arxiv-complete
 - Not counted: https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask) · https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask)
-- Fit: in its lane · Effort: more than 5 work steps · Paid path: none
+- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Alternatives: searched GitHub for "dataset card validator huggingface": nothing found
 - Smallest useful version: A checker that compares a card's stated row count and file list against the Viewer output for one dataset and lists each mismatch.
 - Old score (report-only, not a gate) 9 of 15, demand 1
@@ -92,7 +104,9 @@ Public dataset cards often state counts and licences that nobody has checked aga
 Agent memory-lint fixtures are hard to validate and share, so builders re-create their own test cases from scratch.
 
 - Status: Candidate since 2026-11-17
+- Tier: watch (queue)
 - Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Note: one of its own steps failed on this (a note, never demand)
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
@@ -106,7 +120,9 @@ Agent memory-lint fixtures are hard to validate and share, so builders re-create
 Dataset repos on Hugging Face get uploaded with malformed CSV rows and dataset cards missing closing sections, and the failure only shows after upload.
 
 - Status: Candidate since 2026-11-17
+- Tier: watch (queue)
 - Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/open-index/hacker-news
 - Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
@@ -121,11 +137,13 @@ Dataset repos on Hugging Face get uploaded with malformed CSV rows and dataset c
 Users of trending Hugging Face Spaces with MCP servers have no quick way to see which tools each Space exposes before connecting.
 
 - Status: Candidate since 2026-11-17
-- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked; over 5 steps: split it
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/spaces/kulkas2pintu/wan777 · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap · https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime
 - Not counted: https://huggingface.co/spaces/kulkas2pintu/wan777 (a plain listing page, not an ask) · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap (a plain listing page, not an ask) · https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime (a plain listing page, not an ask)
-- Fit: in its lane · Effort: more than 5 work steps · Paid path: none
+- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Alternatives: searched GitHub for "list mcp tools huggingface space": nothing found
 - Smallest useful version: A script that takes a Space URL and prints the tool names and parameters from its MCP endpoint schema.
 - Old score (report-only, not a gate) 9 of 15, demand 2
@@ -135,7 +153,9 @@ Users of trending Hugging Face Spaces with MCP servers have no quick way to see 
 Agent-built tools and datasets keep stalling between draft and a live public URL, because the upload and the post naming the live link are split across steps and drafts get rewritten instead of published.
 
 - Status: Candidate since 2026-11-17
+- Tier: watch (queue)
 - Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/open-index/hacker-news · https://huggingface.co/datasets/codepawl/abo-glb
 - Not counted: https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask) · https://huggingface.co/datasets/codepawl/abo-glb (a plain listing page, not an ask)
@@ -151,7 +171,9 @@ Agent-built tools and datasets keep stalling between draft and a live public URL
 Dataset cards for small hive-published datasets are often missing or too short, which blocks publishing.
 
 - Status: Candidate since 2026-11-17
+- Tier: watch (queue)
 - Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Context, not demand: https://huggingface.co/datasets/Vyber07/cyber-security · https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m
 - Not counted: https://huggingface.co/datasets/Vyber07/cyber-security (a plain listing page, not an ask) · https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m (a plain listing page, not an ask)
