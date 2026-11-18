@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-csv-schema-check-f65d04f",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-18T10:43:26Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/csv-schema-check",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/csv-schema-check/self_test.py",
+    "commit": "f65d04fd66641749af0eac3b0b66654412abaa13",
+    "sha256": "b8159efeccea81bd285f68fb987e478fbc0cae4dcc21037a3787c158f3c4269a"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout f65d04fd66641749af0eac3b0b66654412abaa13 && cd tools/csv-schema-check && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-csv-schema-check-f65d04f.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44288038078",
+  "repro": "pending",
+  "peer": null
+}
