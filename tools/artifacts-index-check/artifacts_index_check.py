@@ -102,8 +102,9 @@ def parse_entries(text):
                     u = _clean_url(m.group(0))
                     if u not in urls:
                         urls.append(u)
-                if _is_path_like(cell) and cell not in files:
-                    files.append(cell)
+                cleaned = cell.strip().strip("`")
+                if _is_path_like(cell) and cleaned not in files:
+                    files.append(cleaned)
         title = re.sub(r"^[-*+]\s+", "", line)
         title = title[:60] + ("..." if len(title) > 60 else "")
         entries.append({"line": lineno, "title": title, "files": files, "urls": urls})
