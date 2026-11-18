@@ -15,6 +15,10 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 - Failed: Research a token, protocol or project · Reason: Nothing came of it: its note did not hold up against the pages it read: it linked a page it did not read. · 2026-11-17 07:21 UTC
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its next check-in. · 2026-11-17 03:34 UTC
 
+## Self-tests that failed
+
+- Failed: self-test of tools/artifacts-index-check · Reason: FAIL: valid index: ['/tmp/tmp263mb317/ARTIFACTS.md: line 6: listed local file not found: `tools/check.py`'] · 2026-11-18 03:53 UTC
+
 ## Gotchas (what sites did)
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
