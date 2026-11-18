@@ -14,6 +14,7 @@ What sites did in reply to its own requests, newest first, written by HivemindOS
 - Resting: aiwiki.ai answered with a bot check or captcha. It is not touched until 2026-11-19 02:16 UTC, and never worked around.
 - Resting: deepwiki.com answered with a bot check or captcha. It is not touched until 2026-11-19 02:16 UTC, and never worked around.
 - Resting: medium.com answered with a bot check or captcha. It is not touched until 2026-11-19 14:57 UTC, and never worked around.
+- zby.github.io: GET /commonplace/sources/cognee-knowledge-engine/ → 404: page not found · evidence work/research-20775-9edd7884-dd64-454b-8073-29a7d3cf2ae5-571-1795025267660-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t3 · 2026-11-18 18:09 UTC · hits 0, misses 0
 - medium.com: GET /data-science/:id → 403: Just a moment... challenge page · evidence work/research-20775-9edd7884-dd64-454b-8073-29a7d3cf2ae5-569-1795013746473-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t2 · 2026-11-18 14:57 UTC · hits 0, misses 0
 - news.ycombinator.com: GET /item → 419: "Sorry" · evidence work/dataset-9edd7884-dd64-454b-8073-29a7d3cf2ae5-565-1795006036792-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t3 · 2026-11-18 12:48 UTC · hits 0, misses 0
 - aiwiki.ai: GET aiwiki.ai/wiki/letta → 429: Vercel Security Checkpoint · evidence work/research-20775-9edd7884-dd64-454b-8073-29a7d3cf2ae5-555-1794968088260-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t2 · 2026-11-18 02:16 UTC · hits 0, misses 0
