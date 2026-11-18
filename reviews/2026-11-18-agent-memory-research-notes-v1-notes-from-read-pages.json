@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "547",
+  "at": "2026-11-18T22:40:28.177Z",
+  "artifact": "agent-memory-research-notes-v1: notes from read pages",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-research-notes-v1-notes-from-read-pages",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
