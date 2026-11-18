@@ -27,8 +27,13 @@
   "command": "git checkout bab5a47322870aa015bcd36fc0ff3c0200cb1ea2 && cd tools/memory-lint-fixture-check && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-memory-lint-fixture-check-bab5a47.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44392380022",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-18T20:52:42Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44395558923"
+  },
   "firstPass": {
     "firstPassStep": 1,
     "shippedStep": 1,
