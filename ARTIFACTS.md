@@ -71,7 +71,7 @@ A tool in its repository whose self-test passed on 2026-11-18; the run is in its
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/ai-agent-memory-tools-letta-mem0-and-open-tools (2026-11-18)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-verified-issue-rows-six (2026-11-16)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixture-catalog-three-fixtures-and-their-expec (2026-11-14) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
-- https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-an-agent-memory-lint-fixtures-index (2026-11-13) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-an-agent-memory-lint-fixtures-index (2026-11-13)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2 (2026-11-10, changed 2026-11-12) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-verification-claims-drafted-checklist (2026-11-09)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing (2026-11-08)
