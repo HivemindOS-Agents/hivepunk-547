@@ -2,16 +2,20 @@
 
 opportunity: none
 
-A small read-only Python checker for a dataset manifest. It
-verifies that every file listed in the manifest exists locally
-under a root directory, and flags files under that root that are
-not listed in the manifest. It prints counts and a PASS/FAIL
-summary, and writes nothing.
+A small read-only Python checker comparing a dataset manifest
+JSON file list against a supplied public file-listing text
+file. It compares the exact normalised sets and reports
+d daplicates on either side, PASS/FAIL counts, and the sorted
+differences (`only_in_manifest`, `only_in_listing`). It writes
+nothing and uses no network.
 
-Live Hugging Face pages were not checked by this tool: it does
-not use the network, does not fetch any dataset page or file,
-and does not verify that local files match a remote dataset.
-It only checks local existence against the manifest.
+Live datasets were not checked by this tool: it does not fetch
+Hugging Face, GitHub, or any other page, does not verify that
+a supplied listing is complete or current, and does not check
+file contents, sizes, or hashes. It only compares the two
+lists you give it. If the supplied listing is stale or
+incomplete, the result reflects that listing, not the live
+dataset.
 
 ## Files
 
@@ -24,62 +28,56 @@ It only checks local existence against the manifest.
 From this folder:
 
 ~~~bash
-# Check a manifest; root defaults to the manifest's folder:
-python3 dataset_manifest_check.py /path/to/manifest.txt
+# Compare a manifest against a supplied listing:
+python3 dataset_manifest_check.py /path/to/manifest.json /path/to/listing.txt
 
-# Check a manifest against a different root folder:
-python3 dataset_manifest_check.py /path/to/manifest.json --root /path/to/data
-
-# Report unlisted files as NOTE instead of failing:
-python3 dataset_manifest_check.py /path/to/manifest.csv --allow-unlisted
+# Strip a common prefix (e.g. a dataset folder prefix) first:
+python3 dataset_manifest_check.py /path/to/manifest.json /path/to/listing.txt --strip-prefix dataset/
 
 # Self-test (no arguments, no network, temp files only):
 python3 self_test.py
 ~~~
 
-On success it prints e.g. `PASS: manifest.txt (listed: 3,
-present: 3, missing: 0, unlisted: 0)` and exits 0. Otherwise it
-prints one `FAIL:` line per specific problem plus a summary line
+On success it prints e.g. `PASS: manifest.json vs listing.txt
+(manifest: 3, listing: 3, common: 3, only_in_manifest: 0,
+only_in_listing: 0, duplicates_manifest: 0,
+duplicates_listing: 0)` and exits 0. Otherwise it prints one
+`FAIL:` line per difference or duplicate plus a summary line
 with the same counts and exits 1, e.g.:
 
 ~~~text
-FAIL: manifest.txt: listed file not found: data/missing.csv
-FAIL: manifest.txt: unlisted file: data/extra.txt
-FAIL: manifest.txt (listed: 3, present: 2, missing: 1, unlisted: 1)
+FAIL: only in manifest: data/missing.csv
+FAIL: only in listing: data/extra.txt
+FAIL: manifest.json vs listing.txt (manifest: 3, listing: 3, common: 2, only_in_manifest: 1, only_in_listing: 1, duplicates_manifest: 0, duplicates_listing: 0)
 ~~~
 
-Manifest formats (auto-detected):
+Manifest formats: JSON as a list of path strings, or an object
+with a `files` list whose entries are strings or objects with a
+`path`/`file`/`filename`/`name` field.
 
-- JSON (`.json`): a list of path strings, or an object with a
-  `files` list whose entries are strings or objects with a
-  `path`/`file`/`filename`/`name` field.
-- CSV (`.csv`): a header row containing a `path`, `file`,
-  `filename` or `name` column; each following row lists one path.
-- Text (`.txt`, `.tsv`, `.md`, extensionless): one path per line;
-  blank lines and `#` comment lines are ignored and a leading
-  `- `, `* ` or `+ ` bullet marker is stripped.
+Listing format: one path per line; blank lines and `#` comment
+lines are ignored and a leading `- `, `* ` or `+ ` bullet
+marker is stripped.
 
-Listed paths must be relative and stay under the root (`..` and
-absolute paths are rejected). Unlisted files are found by walking
-the root recursively (directory symlinks are not followed); the
-manifest file itself and any other `manifest.*` file are excluded.
-Duplicate listed entries are checked once and reported as a NOTE.
+Normalisation on both sides: strip whitespace, convert
+backslashes to slashes, remove leading `./` and `/`, and remove
+`--strip-prefix` when given. PASS requires equal unique sets
+and no duplicates on either side.
 
-It only reads the manifest and stats the files under the root,
-writes nothing, uses no network, and publishes nothing.
+It only reads the two named files, writes nothing, uses no
+network, and publishes nothing.
 
 ## Untested
 
 - Untested against live Hugging Face datasets or pages: no live
-  dataset manifest or folder was read by this tool, and remote
-  file lists were not compared with local files (see above).
-- Manifests using other shapes (nested objects, YAML, archives)
-  are not supported and will report an invalid-manifest failure
-  rather than a partial check.
-- Hidden files, permissions-denied folders, and broken symlinks
-  under the root were not tested; unreadable folders are
-  skipped by the walk and broken symlinks are not counted as
-  files.
+  manifest or file listing was fetched or compared, and remote
+  listings in other formats (HTML pages, API JSON, tree views
+  with sizes/dates on the same line) are not parsed; supply a
+  plain one-path-per-line text file instead.
+- File contents, byte sizes, checksums, and whether listed
+  files actually exist on disk or remotely were not tested.
+- Manifest shapes other than a list or a `files` list (nested
+  objects, YAML, archives) report an invalid-manifest failure.
 - `SELFTEST_OUTPUT.md` in this folder, if present later, is
   written by the HivemindOS runner after the commit; this tool
   never writes it, and no output or pass line is claimed here.
