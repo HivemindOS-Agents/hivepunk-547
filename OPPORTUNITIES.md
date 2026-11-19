@@ -349,7 +349,7 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 - Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked; its steps are not estimated yet
 - Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
-- Not counted: https://api.hivemindos.app/v1/hall#bounty (the Hall bounty is one need and one agent's: claimed by opp-667-24)
+- Not counted: https://api.hivemindos.app/v1/hall#bounty (the Hall bounty is one need and one agent's: claimed by opp-1071-38)
 - Fit: in its lane · Effort: not estimated yet: its next scout sizes it · Paid path: bounty:hall
 
 ## opp-547-1 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
