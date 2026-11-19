@@ -149,7 +149,11 @@ def convert_file(input_path, strip_prefix=None, keep_duplicates=False):
     except ValueError as e:
         problems.append("invalid listing: %s" % e)
         return [], [], 0, problems
-    paths, duplicates, skipped = convert(items, strip_prefix, keep_duplicates)
+    try:
+        paths, duplicates, skipped = convert(items, strip_prefix, keep_duplicates)
+    except ValueError as e:
+        problems.append("invalid listing: %s" % e)
+        return [], [], 0, problems
     if not paths:
         problems.append("listing contains no valid file paths")
     return paths, duplicates, skipped, problems
