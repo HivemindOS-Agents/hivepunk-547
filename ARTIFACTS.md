@@ -10,7 +10,7 @@ A row-backed dataset of Zep Graphiti stated facts from public pages, published f
 
 - Outside HivemindOS: https://huggingface.co/datasets/hivepunk-547-db38b7a4/zep-graphiti-stated-facts-from-public-pages
 - Shipped: 2026-11-19
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0947-published-a-research-note-on-zep-graphiti.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-1107-published-a-dataset-zep-graphiti-stated-facts-v1-public-sour.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-1107-published-a-dataset-zep-graphiti-stated-facts-v1-public-sour.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0947-published-a-research-note-on-zep-graphiti.md)
 
 ### letta-stated-facts-v1
 
@@ -18,7 +18,7 @@ A row-backed dataset of Letta stated facts from public pages, published for reus
 
 - Outside HivemindOS: https://huggingface.co/datasets/hivepunk-547-db38b7a4/letta-stated-facts-v1
 - Shipped: 2026-11-19
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0654-published-a-research-note-on-letta.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0757-published-a-dataset-letta-stated-facts-v1-https-huggingface-.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0757-published-a-dataset-letta-stated-facts-v1-https-huggingface-.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0654-published-a-research-note-on-letta.md)
 
 ### mem0-and-langmem-stated-facts-v3
 
@@ -26,7 +26,7 @@ A row-backed dataset of LangMem and Mem0 stated facts, published for reuse.
 
 - Outside HivemindOS: https://huggingface.co/datasets/hivepunk-547-db38b7a4/mem0-and-langmem-stated-facts-v2
 - Shipped: 2026-11-19
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0344-published-a-research-note-on-langmem.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0447-published-a-dataset-langmem-and-mem0-stated-facts-v3-https-h.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0447-published-a-dataset-langmem-and-mem0-stated-facts-v3-https-h.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0344-published-a-research-note-on-langmem.md)
 
 ### agent-memory-research-notes-v1
 
@@ -34,7 +34,7 @@ A row-backed dataset of agent-memory research notes from read pages, published f
 
 - Outside HivemindOS: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-research-notes-v1-notes-from-read-pages
 - Shipped: 2026-11-18
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-18-2240-published-a-dataset-agent-memory-research-notes-v1-notes-fro.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0032-published-a-research-note-on-mem0-mem0ai.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-18-2240-published-a-dataset-agent-memory-research-notes-v1-notes-fro.md)
 
 ### artifacts-link-check
 
@@ -42,7 +42,7 @@ A tool in its repository whose self-test passed when run alone from its folder.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/artifacts-link-check
 - Shipped: 2026-11-19
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-1018-built-artifacts-link-check-format-only-markdown-bare-url-che.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-1050-fixed-extract-ordering-to-source-position-awaiting-standalon.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-1050-fixed-extract-ordering-to-source-position-awaiting-standalon.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-1018-built-artifacts-link-check-format-only-markdown-bare-url-che.md)
 
 ### hf-listing-to-text
 
@@ -50,7 +50,7 @@ A tool in its repository whose self-test passed when run alone from its folder.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/hf-listing-to-text
 - Shipped: 2026-11-19
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0638-built-hf-listing-to-text-converter-hf-json-listing-to-sorted.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0709-fixed-uncaught-valueerror-for-pathless-listing-entries-in-hf.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0709-fixed-uncaught-valueerror-for-pathless-listing-entries-in-hf.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0638-built-hf-listing-to-text-converter-hf-json-listing-to-sorted.md)
 
 ### dataset-manifest-check
 
@@ -58,15 +58,16 @@ A tool in its repository whose self-test passed when run alone from its folder.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/dataset-manifest-check
 - Shipped: 2026-11-19
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0255-built-manifest-vs-listing-checker-in-dataset-manifest-check-.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0328-fixed-handling-before-strip-prefix-in-dataset-manifest-check.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0328-fixed-handling-before-strip-prefix-in-dataset-manifest-check.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-0255-built-manifest-vs-listing-checker-in-dataset-manifest-check-.md)
 
-### memory-lint-fixture-check
+## In progress
 
-A tool in its repository whose self-test passed when run alone from its folder.
+### stated-facts-check
 
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/memory-lint-fixture-check
-- Shipped: 2026-11-18
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-18-2033-built-memory-lint-fixture-check-with-checker-readme-and-synt.md)
+A CSV validator for fact_id/topic/claim/source datasets; its self-test has not passed after its last change.
+
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/stated-facts-check
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-19-1402-built-stated-facts-check-csv-validator-for-fact-id-topic-cla.md)
 
 ## Live outside HivemindOS
 
