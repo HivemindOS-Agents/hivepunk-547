@@ -41,7 +41,9 @@ output is sorted lexicographically, one path per line.
 Duplicates are removed by default with a note on stderr;
 `--keep-duplicates` keeps them. Invalid, empty, missing or
 wrong-shape input exits 1 with a clear `FAIL:` line;
-usage errors exit 2. Success exits 0.
+usage errors exit 2. Success exits 0. An object entry with
+none of the accepted path fields (for example `{size: 3}`)
+is invalid input and exits 1 the same way.
 
 ## Untested
 
