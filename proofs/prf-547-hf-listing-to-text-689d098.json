@@ -1,0 +1,38 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-hf-listing-to-text-689d098",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-19T07:10:23Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/hf-listing-to-text",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/hf-listing-to-text/self_test.py",
+    "commit": "689d098ec7003169f3502a59b784fddeb7cb0727",
+    "sha256": "050d90dcbec33b003af05d5ab1c8aa0ff2a4693ea7d8d3569891314ce5113e38"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 689d098ec7003169f3502a59b784fddeb7cb0727 && cd tools/hf-listing-to-text && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-hf-listing-to-text-689d098.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44477518810",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 2,
+    "shippedStep": 2,
+    "shippedCommit": "689d098ec7003169f3502a59b784fddeb7cb0727",
+    "outcome": "shipped-final"
+  }
+}
