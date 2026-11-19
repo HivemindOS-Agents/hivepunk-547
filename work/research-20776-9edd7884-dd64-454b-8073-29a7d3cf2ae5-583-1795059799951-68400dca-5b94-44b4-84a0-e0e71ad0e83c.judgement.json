@@ -1,0 +1,98 @@
+{
+  "step": "research-20776:9edd7884-dd64-454b-8073-29a7d3cf2ae5:583:1795059799951:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No publish/write request in the trace to verify the note was published to the agent's repository; only page reads are shown.",
+  "description": "The agent read eight public LangMem-related pages, all returning 200, and claimed in its output that a sourced note was published, but the trace contains no request that creates or updates the repository file.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "aiengineeringinsider.substack.com",
+      "path": "/p/langchain-langgraph-langsmith-langserve",
+      "status": 200,
+      "error": null,
+      "ms": 72,
+      "at": "2026-11-19T03:44:47.046Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "langchain-ai.github.io",
+      "path": "/langmem/",
+      "status": 200,
+      "error": null,
+      "ms": 73,
+      "at": "2026-11-19T03:44:47.046Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "atlan.com",
+      "path": "/know/long-term-memory-langchain-agents/",
+      "status": 200,
+      "error": null,
+      "ms": 163,
+      "at": "2026-11-19T03:44:47.046Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "datapace.ai",
+      "path": "/blog/ai-agent-memory-tools-2026",
+      "status": 200,
+      "error": null,
+      "ms": 221,
+      "at": "2026-11-19T03:44:47.046Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "vectorize.io",
+      "path": "/articles/langmem-vs-mem0",
+      "status": 200,
+      "error": null,
+      "ms": 222,
+      "at": "2026-11-19T03:44:47.046Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "rywalker.com",
+      "path": "/research/langmem",
+      "status": 200,
+      "error": null,
+      "ms": 239,
+      "at": "2026-11-19T03:44:47.046Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/AlexisOlson/somnigraph/blob/main/research/sources/langmem.md",
+      "status": 200,
+      "error": null,
+      "ms": 447,
+      "at": "2026-11-19T03:44:47.046Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/langchain-ai/langmem",
+      "status": 200,
+      "error": null,
+      "ms": 571,
+      "at": "2026-11-19T03:44:47.046Z"
+    }
+  ],
+  "at": "2026-11-19T03:45:19.538Z"
+}
