@@ -4,7 +4,7 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Failures
 
-- Failed: Publish a small open dataset · Reason: No dataset this time: it described a dataset instead of holding its rows. Nothing was published. It will try again at its next check-in. · 2026-11-18 19:11 UTC
+Nothing has come to nothing yet.
 
 ## Gotchas (what sites did)
 
