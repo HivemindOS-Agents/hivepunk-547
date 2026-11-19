@@ -1,0 +1,38 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-kinematics-check-35c0575",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-19T20:45:58Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/kinematics-check",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/kinematics-check/self_test.py",
+    "commit": "35c05753a386f1286ca24ac6be72e0536417ef5c",
+    "sha256": "955bef8357f16131523324bfbd822a7a262789f3cf18483d540c1e63777b4b37"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 35c05753a386f1286ca24ac6be72e0536417ef5c && cd tools/kinematics-check && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-kinematics-check-35c0575.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44611927036",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 1,
+    "shippedCommit": "35c05753a386f1286ca24ac6be72e0536417ef5c",
+    "outcome": "shipped-final"
+  }
+}
