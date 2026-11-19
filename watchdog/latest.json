@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "547",
-  "at": "2026-11-18T00:07:38.311Z",
+  "at": "2026-11-19T00:15:26.725Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -52,50 +52,28 @@
       "firstSeen": "2026-11-17T14:35:31.642Z"
     },
     {
-      "id": "wd-547-D2-undelivered:publish-dataset",
-      "check": "D2",
-      "name": "failure_not_in_health",
-      "severity": "repair",
-      "subject": "publish-dataset",
-      "detail": "Its repair of publish-dataset has 6 failed attempts, 0 of them after it was delivered.",
-      "evidence": [],
-      "firstSeen": "2026-11-17T14:35:31.642Z"
-    },
-    {
-      "id": "wd-547-D15-reviews/2026-11-16-bee-scouts-verified-issue-rows-six.json",
+      "id": "wd-547-D15-reviews/2026-11-18-zep-graphiti-stated-facts-from-public-pages.json",
       "check": "D15",
       "name": "review_hollow",
       "severity": "report",
-      "subject": "reviews/2026-11-16-bee-scouts-verified-issue-rows-six.json",
+      "subject": "reviews/2026-11-18-zep-graphiti-stated-facts-from-public-pages.json",
       "detail": "A value review with no self-test, no evidence and no claim proof.",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-16-bee-scouts-verified-issue-rows-six.json"
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-18-zep-graphiti-stated-facts-from-public-pages.json"
       ],
-      "firstSeen": "2026-11-17T14:35:31.642Z"
+      "firstSeen": "2026-11-19T00:15:26.725Z"
     },
     {
-      "id": "wd-547-D15-reviews/2026-11-16-bee-scouts-verified-issue-rows-six-visibility.json",
+      "id": "wd-547-D15-reviews/2026-11-18-open-source-ai-agent-frameworks-eight-documented-profiles.json",
       "check": "D15",
       "name": "review_hollow",
       "severity": "report",
-      "subject": "reviews/2026-11-16-bee-scouts-verified-issue-rows-six-visibility.json",
-      "detail": "A visibility receipt from 2026-11-16T12:39:48.933Z still says it was announced nowhere and it was not disclosed.",
-      "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-16-bee-scouts-verified-issue-rows-six-visibility.json"
-      ],
-      "firstSeen": "2026-11-17T14:35:31.642Z"
-    },
-    {
-      "id": "wd-547-D15-reviews/2026-11-14-agent-memory-lint-fixture-catalog-three-fixtures-and-their-e.json",
-      "check": "D15",
-      "name": "review_hollow",
-      "severity": "report",
-      "subject": "reviews/2026-11-14-agent-memory-lint-fixture-catalog-three-fixtures-and-their-e.json",
+      "subject": "reviews/2026-11-18-open-source-ai-agent-frameworks-eight-documented-profiles.json",
       "detail": "A value review with no self-test, no evidence and no claim proof.",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-14-agent-memory-lint-fixture-catalog-three-fixtures-and-their-e.json"
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-18-open-source-ai-agent-frameworks-eight-documented-profiles.json"
       ],
-      "firstSeen": "2026-11-17T14:35:31.642Z"
+      "firstSeen": "2026-11-19T00:15:26.725Z"
     },
     {
       "id": "wd-547-D18-artifacts",
@@ -110,28 +88,28 @@
       "firstSeen": "2026-11-17T14:35:31.642Z"
     },
     {
-      "id": "wd-547-D22-tools/fixtures-index-v4/verify_inventory.py",
+      "id": "wd-547-D22-tools/artifacts-index-check/check.py",
       "check": "D22",
       "name": "claimed_file_not_committed",
       "severity": "repair",
-      "subject": "tools/fixtures-index-v4/verify_inventory.py",
-      "detail": "A step said it built tools/fixtures-index-v4/verify_inventory.py; it is not in the commit.",
+      "subject": "tools/artifacts-index-check/check.py",
+      "detail": "A step said it built tools/artifacts-index-check/check.py; it is not in the commit.",
       "evidence": [
-        "step 2026-11-16T15:56Z"
+        "step 2026-11-18T04:24Z"
       ],
-      "firstSeen": "2026-11-17T14:35:31.642Z"
+      "firstSeen": "2026-11-19T00:15:26.725Z"
     },
     {
-      "id": "wd-547-D22-tools/fixtures-index-v4/data.csv",
+      "id": "wd-547-D22-tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py",
       "check": "D22",
       "name": "claimed_file_not_committed",
       "severity": "repair",
-      "subject": "tools/fixtures-index-v4/data.csv",
-      "detail": "A step said it built tools/fixtures-index-v4/data.csv; it is not in the commit.",
+      "subject": "tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py",
+      "detail": "A step said it built tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py; it is not in the commit.",
       "evidence": [
-        "step 2026-11-16T20:00Z"
+        "step 2026-11-18T23:44Z"
       ],
-      "firstSeen": "2026-11-17T14:35:31.642Z"
+      "firstSeen": "2026-11-19T00:15:26.725Z"
     },
     {
       "id": "wd-547-D23-owner",
@@ -139,18 +117,55 @@
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "16 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Could not confirm execution locally here; left for owner: HivemindOS runner will rerun self_test\".",
+      "detail": "11 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: run the publish step with the new name and confirm the live package matches the synthetic assumptions\".",
       "evidence": [
-        "step 2026-11-17T21:13Z",
-        "step 2026-11-17T14:52Z",
-        "step 2026-11-17T11:39Z",
-        "step 2026-11-17T08:26Z"
+        "step 2026-11-18T07:34Z",
+        "step 2026-11-18T04:24Z",
+        "step 2026-11-18T03:52Z",
+        "step 2026-11-18T00:40Z"
       ],
       "firstSeen": "2026-11-17T14:35:31.642Z"
     }
   ],
-  "notSeenAgain": [],
-  "said": "9 found",
+  "notSeenAgain": [
+    {
+      "id": "wd-547-D2-undelivered:publish-dataset",
+      "check": "D2",
+      "subject": "publish-dataset",
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-16-bee-scouts-verified-issue-rows-six.json",
+      "check": "D15",
+      "subject": "reviews/2026-11-16-bee-scouts-verified-issue-rows-six.json",
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-16-bee-scouts-verified-issue-rows-six-visibility.json",
+      "check": "D15",
+      "subject": "reviews/2026-11-16-bee-scouts-verified-issue-rows-six-visibility.json",
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-14-agent-memory-lint-fixture-catalog-three-fixtures-and-their-e.json",
+      "check": "D15",
+      "subject": "reviews/2026-11-14-agent-memory-lint-fixture-catalog-three-fixtures-and-their-e.json",
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D22-tools/fixtures-index-v4/verify_inventory.py",
+      "check": "D22",
+      "subject": "tools/fixtures-index-v4/verify_inventory.py",
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    },
+    {
+      "id": "wd-547-D22-tools/fixtures-index-v4/data.csv",
+      "check": "D22",
+      "subject": "tools/fixtures-index-v4/data.csv",
+      "firstSeen": "2026-11-17T14:35:31.642Z"
+    }
+  ],
+  "said": "7 found",
   "requests": 22,
-  "elapsedMs": 3539
+  "elapsedMs": 2744
 }
