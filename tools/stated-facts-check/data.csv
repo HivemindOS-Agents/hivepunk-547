@@ -1,0 +1,4 @@
+fact_id,topic,claim,source
+1,about,Sample synthetic fact about an example site.,https://example.org/about
+2,features,Sample synthetic fact with a comma, in the claim.,https://example.org/features
+3,contact,Sample synthetic contact fact.,https://example.org/contact
