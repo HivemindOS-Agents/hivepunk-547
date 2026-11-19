@@ -1,0 +1,249 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-19T03:44:40.137Z",
+  "subject": "LangMem",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "LangMem is a useful LangGraph-native memory layer with demonstrated adoption, but its pre-1.0 release cadence and LLM-dependent dedup and retrieval quality make it a proceed-with-tests choice rather than a proven default.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "AlexisOlson/somnigraph has 0 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/AlexisOlson/somnigraph/commits?per_page=50&since=2026-10-20T03:44:47.672Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether AlexisOlson/somnigraph is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "LangMem helps agents learn and adapt from interactions by extracting important information, optimizing behavior through prompt refinement, and maintaining long-term memory.",
+      "check": "page",
+      "source": "https://langchain-ai.github.io/langmem/",
+      "quote": "LangMem helps agents learn and adapt from their interactions over time. It provides tooling to extract important information from conversations, optimize agent behavior through prompt refinement, and maintain long-term memory.",
+      "sourceId": "src-6",
+      "quoteSha256": "0595dda37fe380351694048c4741cf06fd76b573366486ce4497e5f46762ee59"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "LangMem is installed with pip install -U langmem.",
+      "check": "page",
+      "source": "https://langchain-ai.github.io/langmem/",
+      "quote": "pip install -U langmem",
+      "sourceId": "src-6",
+      "quoteSha256": "c899c37a34f54ac1c4f72bc89ff4a44e767e9db6994d12fd78bdb2d476a5ac3c"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "LangMem has three memory types: semantic, episodic and procedural.",
+      "check": "page",
+      "source": "https://rywalker.com/research/langmem",
+      "quote": "Three memory types — semantic (facts/knowledge), episodic (past experiences), and procedural (learned behaviors/prompt rules) — modeled after human memory",
+      "sourceId": "src-1",
+      "quoteSha256": "63ff5e2fc8b09545c2dd63cfb6bec7f2a3e2bf8bbd8aa41e651fcf6a2a6111fc"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "LangMem has two integration modes: hot-path tools and background memory managers.",
+      "check": "page",
+      "source": "https://rywalker.com/research/langmem",
+      "quote": "Two integration modes: hot-path tools agents call during conversations, and background memory managers that extract memories asynchronously",
+      "sourceId": "src-1",
+      "quoteSha256": "25ac09e49f7332dfb5a789334291c38cafdd66569c311627b8d84d82fc6585df"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "LangMem had about 746K monthly PyPI downloads and 5M+ total as of June 2026.",
+      "check": "page",
+      "source": "https://rywalker.com/research/langmem",
+      "quote": "Real adoption (~746K monthly PyPI downloads, 5M+ total as of June 2026) but still pre-1.0 — latest release is 0.0.30 from October 2025, with active repo commits continuing into June 2026",
+      "sourceId": "src-1",
+      "quoteSha256": "5b0541b8ea6a2b190dc4b3c7a76e9819b3c7766d63c348a3c201a0196ac4a2ac"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "LangMem had ~1.5K GitHub stars as of June 2026.",
+      "check": "page",
+      "source": "https://rywalker.com/research/langmem",
+      "quote": "It ships as a lightweight pip install langmem package with ~1.5K GitHub stars as of June 2026 [ 1 ] .",
+      "sourceId": "src-1",
+      "quoteSha256": "0589932e9206092c8e44f8d931e72fb93c46f511206961fe4a6eebe7d8feae9c"
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "The latest PyPI release of LangMem is 0.0.30, published October 27, 2025.",
+      "check": "page",
+      "missing": "Its source does not state 30."
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "LangMem persistence, indexing and search are delegated to langgraph.store.BaseStore, with InMemoryStore for dev and AsyncPostgresStore for prod.",
+      "check": "page",
+      "source": "https://github.com/AlexisOlson/somnigraph/blob/main/research/sources/langmem.md",
+      "quote": "All persistence, indexing, and search are delegated to langgraph.store.BaseStore ( InMemoryStore for dev, AsyncPostgresStore for prod).",
+      "sourceId": "src-2",
+      "quoteSha256": "98c5ed1860eee00cbb130b3b368a0d5262e4b4f3acf055eec98762b2e4c4feba"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "The hot-path manage memory tool has zero dedup, zero enrichment and zero quality/salience gating.",
+      "check": "page",
+      "source": "https://github.com/AlexisOlson/somnigraph/blob/main/research/sources/langmem.md",
+      "quote": "Zero dedup, zero enrichment, zero quality/salience gating — the LLM decides everything via the tool's instruction string.",
+      "sourceId": "src-2",
+      "quoteSha256": "b1519bb66f58147e865e8ac08dc87457febbbdbdfa6f6e601fb240b10ff38e00"
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "LangMem combines high download traction with pre-1.0 status, so adoption does not by itself prove release maturity.",
+      "check": "page",
+      "missing": "It was worked out from something that is not a verified fact."
+    },
+    {
+      "id": "c11",
+      "label": "FACT",
+      "text": "AlexisOlson/somnigraph has 0 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/AlexisOlson/somnigraph/commits?per_page=50&since=2026-10-20T03:44:47.672Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether LangMem will reach a 1.0 release or maintain a faster release cadence.",
+      "check": "page",
+      "missing": "A public roadmap, release plan, or newer PyPI release after 0.0.30 from October 27, 2025."
+    }
+  ],
+  "counts": {
+    "fact": 10,
+    "derived": 0,
+    "unknown": 4
+  },
+  "risks": [
+    "Pre-1.0 status and slow release cadence: latest PyPI release 0.0.30 from October 2025 despite ongoing repo activity.",
+    "Hot-path memory tool has zero dedup, zero enrichment and zero quality/salience gating, with the LLM deciding via the tool instruction string, per the somnigraph source analysis.",
+    "Retrieval is pure semantic vector search delegated to BaseStore, with no BM25/FTS, reranker or graph expansion described in that source.",
+    "No custom storage, themes, priority, decay, validity intervals, source attribution or trust in the base memory schema described in that source.",
+    "Framework choice risk: positioned for memory primitives inside LangGraph, rather than memory as a service behind any framework."
+  ],
+  "unknowns": [
+    "Whether AlexisOlson/somnigraph is still shipping: None of its commits in the last 30 days is real work.",
+    "The latest PyPI release of LangMem is 0.0.30, published October 27, 2025.: Its source does not state 30.",
+    "LangMem combines high download traction with pre-1.0 status, so adoption does not by itself prove release maturity.: It was worked out from something that is not a verified fact.",
+    "Whether LangMem will reach a 1.0 release or maintain a faster release cadence.: A public roadmap, release plan, or newer PyPI release after 0.0.30 from October 27, 2025."
+  ],
+  "wouldChangeMind": [
+    "A newer PyPI release at or above 1.0, or a public roadmap committing to one.",
+    "Independent benchmark results showing LangMem beat no-tool and alternative baselines on cost and quality for long histories.",
+    "A security audit or documented production case studies covering memory corruption, privacy, and multi-user isolation."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "LangMem | Ry Walker Research | Ry Walker",
+      "url": "https://rywalker.com/research/langmem",
+      "finalUrl": "https://rywalker.com/research/langmem",
+      "status": 200,
+      "fetchedAt": "2026-11-19T03:44:47.285Z",
+      "extractor": "page-text-v1",
+      "sha256": "37a1bb825a3cd4d82a9351c800ed276af14181569390d6ea16d7a1d89b8cff56",
+      "bytes": 93326,
+      "quote": "Three memory types — semantic (facts/knowledge), episodic (past experiences), and procedural (learned behaviors/prompt rules) — modeled after human memory",
+      "quoteSha256": "63ff5e2fc8b09545c2dd63cfb6bec7f2a3e2bf8bbd8aa41e651fcf6a2a6111fc"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "somnigraph/research/sources/langmem.md at main · AlexisOlson/somnigraph · GitHub",
+      "url": "https://github.com/AlexisOlson/somnigraph/blob/main/research/sources/langmem.md",
+      "finalUrl": "https://github.com/AlexisOlson/somnigraph/blob/main/research/sources/langmem.md",
+      "status": 200,
+      "fetchedAt": "2026-11-19T03:44:47.560Z",
+      "extractor": "page-text-v1",
+      "sha256": "8ba24eb00ac76924e9e747cb94a3b27cb14f99490026cd56941766994ec74d7a",
+      "bytes": 282218,
+      "quote": "All persistence, indexing, and search are delegated to langgraph.store.BaseStore ( InMemoryStore for dev, AsyncPostgresStore for prod).",
+      "quoteSha256": "98c5ed1860eee00cbb130b3b368a0d5262e4b4f3acf055eec98762b2e4c4feba"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "GitHub - langchain-ai/langmem · GitHub",
+      "url": "https://github.com/langchain-ai/langmem",
+      "finalUrl": "https://github.com/langchain-ai/langmem",
+      "status": 200,
+      "fetchedAt": "2026-11-19T03:44:47.672Z",
+      "extractor": "page-text-v1",
+      "sha256": "390e2100be4c29897018de0fab9ae96cc6dcb42160a1aa1fc444db9beeb35ec2",
+      "bytes": 268302,
+      "quote": "Native integration with LangGraph's Long-term Memory Store , available by default in all LangGraph Platform deployments Installation pip install -U langmem Configure your environment with an API key for your favorite LLM provider: export [redacted] sk-...",
+      "quoteSha256": "1e6ad720365c563e841523d1aab1a03fd43d2ecb47982d0fb055a95300a54a86"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "LangMem vs Mem0 vs Zep vs Letta vs Cognee: how to choose",
+      "url": "https://datapace.ai/blog/ai-agent-memory-tools-2026",
+      "finalUrl": "https://datapace.ai/blog/ai-agent-memory-tools-2026",
+      "status": 200,
+      "fetchedAt": "2026-11-19T03:44:47.268Z",
+      "extractor": "page-text-v1",
+      "sha256": "8ada5b43f26acb94dc033803ff552b490d6cdcdc942531ab5567d0c96e71d85d",
+      "bytes": 231727,
+      "quote": "Benchmark numbers, and the disputes between them, are attributed in line to whoever produced them, which is not always the vendor whose product they describe.",
+      "quoteSha256": "37118f9158d60d360a12fa0d38dbaf310ab2d06f1e434e1740ef7b5dffaa4e4f"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "LangMem",
+      "url": "https://langchain-ai.github.io/langmem/",
+      "finalUrl": "https://langchain-ai.github.io/langmem/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T03:44:47.119Z",
+      "extractor": "page-text-v1",
+      "sha256": "5fd4c558859b0e2a431cf3d29fecdccc714a694d52b8300a6092c45ed2030ac5",
+      "bytes": 49610,
+      "quote": "LangMem helps agents learn and adapt from their interactions over time. It provides tooling to extract important information from conversations, optimize agent behavior through prompt refinement, and maintain long-term memory.",
+      "quoteSha256": "0595dda37fe380351694048c4741cf06fd76b573366486ce4497e5f46762ee59"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of AlexisOlson/somnigraph",
+      "url": "https://api.github.com/repos/AlexisOlson/somnigraph/commits?per_page=50&since=2026-10-20T03:44:47.672Z",
+      "fetchedAt": "2026-11-19T03:44:40.137Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "955be96d361226aae94d27ea10389935acd363277c2d7fc261adec29d52ae592"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-19-langmem.md",
+  "decidedBy": "bee"
+}
