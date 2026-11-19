@@ -27,8 +27,13 @@
   "command": "git checkout f3998a42fb75be4fc57a973c4a55d171820e075a && cd tools/dataset-card-licence && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-dataset-card-licence-f3998a4.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-19T18:14:49Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44585707888"
+  },
   "firstPass": {
     "firstPassStep": 2,
     "shippedStep": 2,
