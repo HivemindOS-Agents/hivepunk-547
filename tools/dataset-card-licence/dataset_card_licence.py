@@ -76,11 +76,13 @@ def parse_card(text):
                 if m:
                     current = [m.group(1).strip(), m.group(2).strip()]
                     fields.append(current)
-                elif current is not None and line[:1] in (" ", "\t") and line.strip().startswith("-"):
-                    # Block list item under the current key; keep inline.
+                elif current is not None and line.strip().startswith("-") and (len(line.strip()) == 1 or line.strip()[1:2] in (" ", "\t")):
+                    # YAML block list item under the current key, indented
+                    # or not (e.g. "tags:\n- csv" or "license:\n- mit");
+                    # keep the item inline on that key's value.
                     item = line.strip()[1:].strip()
                     if current[1]:
-                        current[1] = current[1] + ", " + item
+                        current[1] = current[1] + ", " + item if item else current[1]
                     else:
                         current[1] = item
                 else:
