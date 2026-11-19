@@ -1,0 +1,262 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-19T12:59:27.383Z",
+  "subject": "Cognee",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Cognee is a credible, actively developed agent-memory project with local and hosted paths, but its strongest performance and production-readiness claims remain unverified in the pages read. Its value now is as an open-source knowledge-graph memory layer to test against simpler file or vector approaches.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "topoteretes/cognee has 50 raw commits in the last 30 days, 31 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/topoteretes/cognee/commits?per_page=50&since=2026-10-20T12:59:32.239Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is c8a0943, on 2026-11-18.",
+      "check": "shipping",
+      "source": "https://github.com/topoteretes/cognee/commit/c8a094375821f2d8c7c4945d3b2202e2e5d6603e"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Cognee is a free open-source AI memory platform that gives AI agents persistent long-term memory across sessions.",
+      "check": "page",
+      "source": "https://github.com/topoteretes/cognee",
+      "quote": "Cognee is a free open-source AI memory platform that gives AI agents persistent long-term memory across sessions.",
+      "sourceId": "src-2",
+      "quoteSha256": "a91a660d042777e9c3d61324964a093bf3f7c495069195e977efa954a0726a4b"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Cognee turns documents, code, and conversations into a self-hosted knowledge graph agents can search and reuse.",
+      "check": "page",
+      "source": "https://github.com/topoteretes/cognee",
+      "quote": "Turn documents, code, and conversations into a self-hosted knowledge graph your agents can search and reuse.",
+      "sourceId": "src-2",
+      "quoteSha256": "de46f569e6ca56956fa727191c59b34dc5dbb348c4a25bed3b2b2e2cdcd8ec80"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Cognee runs locally for free with no API key required and relies on free small models that use CPU.",
+      "check": "page",
+      "source": "https://github.com/topoteretes/cognee",
+      "quote": "Runs locally for free — no API key required. We rely on free small models that use your CPU.",
+      "sourceId": "src-2",
+      "quoteSha256": "18927793938a4454628092df8419e58c3a08fd1d096e16ada82b0a7ada5c1af2"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Cognee runs an entity extraction pipeline, as contrasted with Letta's text blocks, Mem0's vector store and Graphiti's time-stamped relationships.",
+      "check": "page",
+      "source": "https://codepointer.substack.com/p/agent-memory-systems-and-knowledge",
+      "quote": "Cognee runs an entity extraction pipeline.",
+      "sourceId": "src-1",
+      "quoteSha256": "6f4502b007552c4d390df53999a32a37b3fb8dc64956ca6d3bc6b060dada08c0"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Cognee's core API comes down to four verbs: remember, recall, improve and forget.",
+      "check": "page",
+      "source": "https://www.usecarly.com/blog/cognee/",
+      "quote": "The whole API comes down to four verbs: remember, recall, improve and forget.",
+      "sourceId": "src-4",
+      "quoteSha256": "2f81a9a0280a3bbf8f6ff4e4c0142490de8c066125c3fb7122d63df0677b150d"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Cognee combines a relational database for metadata, a vector store for meaning-based search, and a graph for how facts connect.",
+      "check": "page",
+      "source": "https://www.usecarly.com/blog/cognee/",
+      "quote": "Cognee combines three kinds of storage in one engine: a relational database for metadata, a vector store for meaning-based search, and a graph for how facts connect.",
+      "sourceId": "src-4",
+      "quoteSha256": "902ede7bbbed67fb7a2973afddd83fe28e72f1a2ef94b2b2b537ea9ba9a349f9"
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "PyPI lists cognee version 1.6.10.",
+      "check": "page",
+      "missing": "Its source does not state 10."
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "topoteretes/cognee has 50 raw commits in the last 30 days, 31 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/topoteretes/cognee/commits?per_page=50&since=2026-10-20T12:59:32.239Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "Its latest real commit is c8a0943, on 2026-11-18.",
+      "check": "page",
+      "source": "https://api.github.com/repos/topoteretes/cognee/commits?per_page=50&since=2026-10-20T12:59:32.239Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "Cognee's homepage claims 5M+ SDK runs/month and 33.4k GitHub Stars.",
+      "check": "page",
+      "source": "https://www.cognee.ai/",
+      "quote": "5M+ SDK runs/month 33.4k GitHub Stars",
+      "sourceId": "src-6",
+      "quoteSha256": "7d7ad1ba54fca36177d0db933a19e9f7650cd5697ce52f6aa10420bdfc5ed5d3"
+    },
+    {
+      "id": "c11",
+      "label": "DERIVED",
+      "text": "About 62% of the 50 raw commits in the last 30 days were real work.",
+      "check": "page",
+      "inputs": [
+        "c8"
+      ],
+      "math": "31 / 50 = 0.62 = 62%"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Independent verification of Cognee's BEAM 0.79 and LoCoMo 91% scores, production extraction accuracy, and large-scale reliability.",
+      "check": "page",
+      "missing": "Independent benchmark reports, evaluation methodology, and production deployment data not shown in the pages read"
+    }
+  ],
+  "counts": {
+    "fact": 11,
+    "derived": 1,
+    "unknown": 2
+  },
+  "risks": [
+    "Graph tooling adds complexity compared with files or vector stores, a concern raised in the comparative review of agent-memory systems.",
+    "The bundled GLiNER extractor is described as a demo, with a production-ready version requiring contact with Cognee, so local extraction accuracy is not confirmed.",
+    "Generated answers and media processing require additional LLM configuration, so fully local operation is limited to ingestion, retrieval and session storage.",
+    "Memory must be actively managed, including consolidation, updates when facts change and eventually forgetting, which the guide identifies as necessary but does not show is solved automatically.",
+    "Benchmark and adoption figures are largely self-reported on Cognee's homepage and a competitor's explainer, with no independent verification in the pages read."
+  ],
+  "unknowns": [
+    "PyPI lists cognee version 1.6.10.: Its source does not state 10.",
+    "Independent verification of Cognee's BEAM 0.79 and LoCoMo 91% scores, production extraction accuracy, and large-scale reliability.: Independent benchmark reports, evaluation methodology, and production deployment data not shown in the pages read"
+  ],
+  "wouldChangeMind": [
+    "Independent benchmark results confirming or contradicting the BEAM and LoCoMo scores",
+    "Evidence that local GLiNER extraction is production-ready without contacting Cognee",
+    "Independent usage data contradicting the 5M+ SDK runs/month claim"
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Agent Memory Systems and Knowledge Graphs: Letta, Mem0, Graphiti, and Cognee",
+      "url": "https://codepointer.substack.com/p/agent-memory-systems-and-knowledge",
+      "finalUrl": "https://codepointer.dev/p/agent-memory-systems-and-knowledge",
+      "status": 200,
+      "fetchedAt": "2026-11-19T12:59:31.788Z",
+      "extractor": "page-text-v1",
+      "sha256": "36419675d43d65cdb6afbd4b338d253247ca8b5bf96414f07069cdba4a3d53df",
+      "bytes": 224595,
+      "quote": "Cognee runs an entity extraction pipeline.",
+      "quoteSha256": "6f4502b007552c4d390df53999a32a37b3fb8dc64956ca6d3bc6b060dada08c0"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "GitHub - topoteretes/cognee: Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory with s",
+      "url": "https://github.com/topoteretes/cognee",
+      "finalUrl": "https://github.com/topoteretes/cognee",
+      "status": 200,
+      "fetchedAt": "2026-11-19T12:59:32.239Z",
+      "extractor": "page-text-v1",
+      "sha256": "654eab957b3de823ce33cbd136942cc2511aa6327338ff56db97caa1d802e6f5",
+      "bytes": 443809,
+      "quote": "Cognee is a free open-source AI memory platform that gives AI agents persistent long-term memory across sessions.",
+      "quoteSha256": "a91a660d042777e9c3d61324964a093bf3f7c495069195e977efa954a0726a4b"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "AI Agent Memory: The Definitive Guide | Cognee",
+      "url": "https://www.cognee.ai/agent-memory",
+      "finalUrl": "https://www.cognee.ai/agent-memory",
+      "status": 200,
+      "fetchedAt": "2026-11-19T12:59:32.093Z",
+      "extractor": "page-text-v1",
+      "sha256": "500e76d9bd934a31d8f8ee281b28110ac5c1fd615696b493e8e9e70762a10ef7",
+      "bytes": 355415,
+      "quote": "It captures data accumulated across tasks, sessions, and external sources, and provides shared context that can be reused by one AI agent or a fleet of agents.",
+      "quoteSha256": "035572cfffd92b63c7637eac1dc9f28b15974acd12f7eb0dee0f43363167d2c8"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Cognee: Open-Source AI Memory for Agents, Explained",
+      "url": "https://www.usecarly.com/blog/cognee/",
+      "finalUrl": "https://www.usecarly.com/blog/cognee/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T12:59:31.806Z",
+      "extractor": "page-text-v1",
+      "sha256": "23f7b04aa2f383d3f14288f638642c86c1cdbf64ca5193e088c08d8b9fd5a00d",
+      "bytes": 90146,
+      "quote": "The whole API comes down to four verbs: remember, recall, improve and forget.",
+      "quoteSha256": "2f81a9a0280a3bbf8f6ff4e4c0142490de8c066125c3fb7122d63df0677b150d"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "cognee · PyPI",
+      "url": "https://pypi.org/project/cognee/",
+      "finalUrl": "https://pypi.org/project/cognee/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T12:59:31.683Z",
+      "extractor": "page-text-v1",
+      "sha256": "bfeaa9d87c8453954681b2498f4e23ca4f6524f8275e7c890a7c4ddbeacb4c5b",
+      "bytes": 407506,
+      "quote": "Community Plugins &amp; Add-ons Cognee is a free open-source AI memory platform that gives AI agents persistent long-term memory across sessions.",
+      "quoteSha256": "be1f89f66edddbc0f6a73f5318733b7e96f2fe7fad3add402d9cc1d878ece6f9"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "cognee - Memory for Agents, Teams, and People",
+      "url": "https://www.cognee.ai/",
+      "finalUrl": "https://www.cognee.ai/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T12:59:31.931Z",
+      "extractor": "page-text-v1",
+      "sha256": "fee30c1898b74e2a6f10d29c5443b2fada23d304ccc5957e6379ebb6b6b14dde",
+      "bytes": 369352,
+      "quote": "5M+ SDK runs/month 33.4k GitHub Stars",
+      "quoteSha256": "7d7ad1ba54fca36177d0db933a19e9f7650cd5697ce52f6aa10420bdfc5ed5d3"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of topoteretes/cognee",
+      "url": "https://api.github.com/repos/topoteretes/cognee/commits?per_page=50&since=2026-10-20T12:59:32.239Z",
+      "fetchedAt": "2026-11-19T12:59:27.383Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "339978b16c65ed7e70d27996a5d1467920f556c0a65124a289af054ff02c42e2"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-19-cognee.md",
+  "decidedBy": "bee"
+}
