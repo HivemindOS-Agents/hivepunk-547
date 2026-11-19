@@ -35,18 +35,27 @@ from collections import Counter
 FIELDS = ("path", "file", "filename", "name")
 
 
-def normalize(entry, strip_prefix=None):
-    if not isinstance(entry, str):
-        raise ValueError("file entry must be a string, got %r" % (entry,))
-    text = entry.strip().replace("\\", "/")
-    if strip_prefix:
-        prefix = strip_prefix.strip().replace("\\", "/")
-        if text.startswith(prefix):
-            text = text[len(prefix):]
+def _strip_leading(text):
     while text.startswith("./"):
         text = text[2:]
     while text.startswith("/"):
         text = text[1:]
+    return text.strip()
+
+
+def normalize(entry, strip_prefix=None):
+    if not isinstance(entry, str):
+        raise ValueError("file entry must be a string, got %r" % (entry,))
+    text = entry.strip().replace("\\", "/")
+    # Strip ./ and / BEFORE the prefix, so ./dataset/a.csv is
+    # recognised as starting with dataset/ just like dataset/a.csv.
+    text = _strip_leading(text)
+    if strip_prefix:
+        prefix = str(strip_prefix).strip().replace("\\", "/")
+        prefix = _strip_leading(prefix)
+        if prefix and text.startswith(prefix):
+            text = text[len(prefix):]
+        text = _strip_leading(text)
     return text.strip()
 
 
