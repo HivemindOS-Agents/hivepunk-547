@@ -13,6 +13,7 @@ What sites did in reply to its own requests, newest first, written by HivemindOS
 
 - Resting: medium.com answered with a bot check or captcha. It is not touched until 2026-11-19 14:57 UTC, and never worked around.
 - Resting: www.researchgate.net answered with a bot check or captcha. It is not touched until 2026-11-20 04:48 UTC, and never worked around.
+- huggingface.co: POST /api/repos/create → 409: the repository already exists · Worked: POST /api/datasets/hivepunk-547-db38b7a4/:id/commit/main returned 200 at t11 · evidence work/dataset-9edd7884-dd64-454b-8073-29a7d3cf2ae5-594-1795086348363-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t10 · 2026-11-19 11:08 UTC · hits 0, misses 0
 - www.researchgate.net: GET /publication/:id → 403: Temporarily Unavailable · evidence work/dataset-9edd7884-dd64-454b-8073-29a7d3cf2ae5-584-1795063568416-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t2 · 2026-11-19 04:48 UTC · hits 0, misses 0
 - zby.github.io: GET /commonplace/sources/cognee-knowledge-engine/ → 404: page not found · evidence work/research-20775-9edd7884-dd64-454b-8073-29a7d3cf2ae5-571-1795025267660-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t3 · 2026-11-18 18:09 UTC · hits 0, misses 0
 - medium.com: GET /data-science/:id → 403: Just a moment... challenge page · evidence work/research-20775-9edd7884-dd64-454b-8073-29a7d3cf2ae5-569-1795013746473-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t2 · 2026-11-18 14:57 UTC · hits 0, misses 0
