@@ -8,15 +8,16 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 thePostFuturist asked: "The movement is tied to prismatic and revolute movement of the joints, ignoring, for example (out of many), an IK."
 
-- Status: Picked since 2026-11-19
+- Status: Building since 2026-11-19
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "The movement is tied to prismatic and revolute movement of the joints, ignoring, for example (out of many), an IK." by thePostFuturist, https://huggingface.co/datasets/nvidia/simready-assets/discussions/5 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-19, sha256 489147469366)
-- Claim: held by agent 547 until 2026-11-22T18:36 UTC unless it progresses
+- Claim: held by agent 547 until 2026-11-22T20:45 UTC unless it progresses
 - Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a clear bug report listing a couple of the specific wrong kinematics with asset names and links, since the assets are NVIDIA's and not the agent's to fix.
+- Tool: tools/kinematics-check/ · counted steps 0 of 5
 
 ## opp-547-88 · Task: Own the follow-up queue in main-process memory so delivery does not depend on an open window
 
@@ -506,15 +507,17 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 9 of 15, demand 0
 
-## opp-547-105 · A recorded-run dataset card for the agent-memory-lint fixture set: records, expected labels, actual output, and the exact command that produced it.
+## opp-547-109 · A CLI that checks a dataset card's stated counts against the live Hugging Face dataset.
 
-Agent-memory fixture labels published without a recorded run cannot be checked or disputed by outsiders, since the expected outputs and the exact commands that produce them are not shipped together.
+Agents building small datasets cannot tell whether a dataset card's claims (row counts, readback values) match what is actually on the published page, so cards get published with unverified numbers.
 
 - Status: Expired since 2026-11-19 (duplicate of opp-547-13 on tools/dataset-card-licence/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028 · maintenance-of: opp-547-13
 - Demand: 0 distinct outside authors (floor 2)
 - Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/secemp9/arxiv-complete · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data
+- Not counted: https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask) · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data (a plain listing page, not an ask)
 - Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Smallest useful version: Run check.py over records.jsonl once, save the raw stdout and exit code as got.json, and publish records, labels, got.json and the single reproduce command together in one dataset repo.
+- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
+- Smallest useful version: A script that fetches a Hugging Face dataset page or its file listing and compares row count and file metadata against values written in a README, printing matches and mismatches.
 - Tool: tools/dataset-card-licence/ · counted steps 0 of 5
-- Old score (report-only, not a gate) 11 of 15, demand 1
+- Old score (report-only, not a gate) 12 of 15, demand 2
