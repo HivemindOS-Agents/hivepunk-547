@@ -1,0 +1,264 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-19T00:32:23.986Z",
+  "subject": "Mem0 (mem0ai)",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Mem0 is a credible, actively maintained open-source agent-memory project with strong community traction and vendor-reported efficiency gains. Its value is offset by the gap between managed-platform benchmarks and open-source performance and by default external-model and telemetry settings that must be changed for private deployments.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "mem0ai/mem0 has 8 raw commits in the last 30 days, 6 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/mem0ai/mem0/commits?per_page=50&since=2026-10-20T00:32:31.587Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is fff8a64, on 2026-11-18.",
+      "check": "shipping",
+      "source": "https://github.com/mem0ai/mem0/commit/fff8a6472512d1bc1a4bccab8c645b65a1df7fe5"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Mem0 enhances AI assistants and agents with an intelligent memory layer, enabling personalized AI interactions.",
+      "check": "page",
+      "source": "https://github.com/mem0ai/mem0",
+      "quote": "Mem0 (\"mem-zero\") enhances AI assistants and agents with an intelligent memory layer, enabling personalized AI interactions.",
+      "sourceId": "src-1",
+      "quoteSha256": "a0723884bb1c4a1d87bc3d6574fd5f0263e6113faf9e420fd69d6647f77c4dc9"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Mem0 dynamically extracts, consolidates and retrieves salient information from ongoing conversations.",
+      "check": "page",
+      "source": "https://arxiv.org/abs/2504.19413",
+      "quote": "We introduce Mem0, a scalable memory-centric architecture that addresses this issue by dynamically extracting, consolidating, and retrieving salient information from ongoing conversations.",
+      "sourceId": "src-6",
+      "quoteSha256": "6c67c4eff9c0281b6159a00eb0c93597a3c9642cae9360c5f25e2982306a262c"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Mem0 supports multi-level memory retaining User, Session and Agent state.",
+      "check": "page",
+      "source": "https://github.com/mem0ai/mem0",
+      "quote": "Multi-Level Memory : Seamlessly retains User, Session, and Agent state with adaptive personalization",
+      "sourceId": "src-1",
+      "quoteSha256": "964f63a8bfc18070a1473778a04dd91f992e816863c307b6ca7261bbdbe2392f"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The scanned repository listing shows Stars: 66K and Forks: 7,766.",
+      "check": "page",
+      "source": "https://www.mrtechking.com/mem0-github/",
+      "quote": "Stars: 66K. Forks: 7,766. Last push: Sep 25, 2026.",
+      "sourceId": "src-3",
+      "quoteSha256": "2ea8a7e4c5221ba2a6be54ada23406f1601644996a0147248ec6f3387da7ef00"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The open-source code is Apache-2.0.",
+      "check": "page",
+      "source": "https://www.mrtechking.com/mem0-github/",
+      "quote": "The open-source code is Apache-2.0, and the README is candid that its headline benchmark scores come from the platform, which includes optimizations the open-source SDK does not.",
+      "sourceId": "src-3",
+      "quoteSha256": "2d0c99a899c938a5992d5319becb999501e3ea31c23737b09fa52b1e092ea226"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Anonymous telemetry goes to PostHog until MEM0_TELEMETRY=false, and the default configuration sends conversations to OpenAI to extract memories.",
+      "check": "page",
+      "source": "https://www.mrtechking.com/mem0-github/",
+      "quote": "anonymous usage telemetry goes to PostHog until you set MEM0_TELEMETRY=false, and the default configuration sends your conversations to OpenAI to extract memories.",
+      "sourceId": "src-3",
+      "quoteSha256": "ddc08e3aef91afb03b9face6401de6aa715907f0a78698f4e9cf1e662ef7d85c"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "The GitHub page benchmark table shows LoCoMo old 71.4 and new 92.5 at 7.0K tokens and 0.88s latency.",
+      "check": "page",
+      "source": "https://github.com/mem0ai/mem0",
+      "quote": "LoCoMo 71.4 92.5 7.0K 0.88s",
+      "sourceId": "src-1",
+      "quoteSha256": "92eeecb8141d5d09ad27be4448e89ff3086b380a0242907fc724e059a34563cb"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Scores reflect the managed platform with proprietary optimizations not available in the open-source SDK.",
+      "check": "page",
+      "source": "https://github.com/mem0ai/mem0",
+      "quote": "Scores reflect Mem0's managed platform, which includes proprietary optimizations not available in the open-source SDK; open-source users should expect directionally similar gains but not identical numbers.",
+      "sourceId": "src-1",
+      "quoteSha256": "bba0ddfc87e126ce83f39128a80c9424ed275a3fac1c42cffbcf737d3fff8ba1"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "mem0ai/mem0 has 8 raw commits in the last 30 days, 6 real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/mem0ai/mem0/commits?per_page=50&since=2026-10-20T00:32:31.587Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "Its latest real commit is fff8a64, on 2026-11-18.",
+      "check": "page",
+      "source": "https://api.github.com/repos/mem0ai/mem0/commits?per_page=50&since=2026-10-20T00:32:31.587Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c11",
+      "label": "DERIVED",
+      "text": "The new algorithm's LoCoMo score is 21.1 points above the old score shown in the table.",
+      "check": "page",
+      "inputs": [
+        "c7"
+      ],
+      "math": "92.5 - 71.4 = 21.1"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether independent reproduction confirms the vendor benchmark numbers for the open-source SDK.",
+      "check": "page",
+      "missing": "Independent evaluation running the open-sourced evaluation framework on the open-source SDK, not the managed platform."
+    }
+  ],
+  "counts": {
+    "fact": 12,
+    "derived": 1,
+    "unknown": 1
+  },
+  "risks": [
+    "Default configuration sends conversations to OpenAI for extraction, so self-hosting still needs model and privacy configuration.",
+    "Anonymous usage telemetry is on by default, so privacy-sensitive deployments must set MEM0_TELEMETRY=false.",
+    "Headline benchmark scores reflect the managed platform with proprietary optimizations not in the open-source SDK, so open-source users should not expect identical numbers.",
+    "Benchmark methodology has been publicly challenged by competitors, so vendor numbers need independent evaluation.",
+    "Memory that is never overwritten under the new ADD-only algorithm can accumulate stale or conflicting facts if deletion and lifecycle policies are not managed."
+  ],
+  "unknowns": [
+    "Whether independent reproduction confirms the vendor benchmark numbers for the open-source SDK.: Independent evaluation running the open-sourced evaluation framework on the open-source SDK, not the managed platform."
+  ],
+  "wouldChangeMind": [
+    "Independent reproduction showing open-source scores close to managed-platform scores would strengthen the thesis.",
+    "Independent reproduction showing much lower open-source scores or higher costs would weaken it.",
+    "Evidence of default telemetry or external-model sending being removed or reversed would change the privacy risk assessment."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "GitHub - mem0ai/mem0: The Memory Layer for AI Agents - Drop-in memory infrastructure for AI agents and apps. Context that persists. Built fo",
+      "url": "https://github.com/mem0ai/mem0",
+      "finalUrl": "https://github.com/mem0ai/mem0",
+      "status": 200,
+      "fetchedAt": "2026-11-19T00:32:31.587Z",
+      "extractor": "page-text-v1",
+      "sha256": "2fdcd264edb627f1329ee60bbc5f3eb5f791bbf7134ada45585442ceef2441cd",
+      "bytes": 376216,
+      "quote": "Mem0 (\"mem-zero\") enhances AI assistants and agents with an intelligent memory layer, enabling personalized AI interactions.",
+      "quoteSha256": "a0723884bb1c4a1d87bc3d6574fd5f0263e6113faf9e420fd69d6647f77c4dc9"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "url": "https://arxiv.org/html/2504.19413v1",
+      "finalUrl": "https://arxiv.org/html/2504.19413v1",
+      "status": 200,
+      "fetchedAt": "2026-11-19T00:32:30.636Z",
+      "extractor": "page-text-v1",
+      "sha256": "dfc78f2d7cc28664d2aab2c864603e9c3c338c89d30241b21c910b157265a490",
+      "bytes": 244706,
+      "quote": "Large Language Models (LLMs) have demonstrated remarkable prowess in generating contextually coherent responses, yet their fixed context windows pose fundamental challenges for maintaining consistency over prolonged multi-session dialogues.",
+      "quoteSha256": "2661eafd9f0719672431aaa868d0fa22f10ae1a3c0c14cbdfe3ea8424cd44b43"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Mem0: Long-Term Memory for AI Agents (GitHub, Scanned)",
+      "url": "https://www.mrtechking.com/mem0-github/",
+      "finalUrl": "https://www.mrtechking.com/mem0-github/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T00:32:30.856Z",
+      "extractor": "page-text-v1",
+      "sha256": "4b0fd0b1c3dab6cf0fd0b18dea2244499400b597721c69549a39ec2c9ec08edb",
+      "bytes": 153191,
+      "quote": "Stars: 66K. Forks: 7,766. Last push: Sep 25, 2026.",
+      "quoteSha256": "2ea8a7e4c5221ba2a6be54ada23406f1601644996a0147248ec6f3387da7ef00"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Mem0 | Ry Walker Research | Ry Walker",
+      "url": "https://rywalker.com/research/mem0",
+      "finalUrl": "https://rywalker.com/research/mem0",
+      "status": 200,
+      "fetchedAt": "2026-11-19T00:32:30.860Z",
+      "extractor": "page-text-v1",
+      "sha256": "dcc63ca639238b0b9d9dd602df3b434f3b02570036bb25364cdcb512a5285793",
+      "bytes": 89874,
+      "quote": "It extracts, compresses, and retrieves key facts from conversations, enabling personalized AI experiences across sessions without stuffing full chat history into context windows.",
+      "quoteSha256": "d7310593d8ab3e1aa73ac41947148be3ad5ef96717018592374ae3c3cccc3658"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Mem0: The Open-Source Memory Layer for AI Agents | Diego Rodriguez",
+      "url": "https://www.diego-rodriguez.work/blog/mem0-memory-layer-agents-2026-guide",
+      "finalUrl": "https://www.diego-rodriguez.work/blog/mem0-memory-layer-agents-2026-guide",
+      "status": 200,
+      "fetchedAt": "2026-11-19T00:32:30.874Z",
+      "extractor": "page-text-v1",
+      "sha256": "a07e656b3fe961070f0d5d8e2ede5b40c4de7425d8feb05b8b12851fb6c5ebce",
+      "bytes": 91484,
+      "quote": "Instead of stuffing ever-longer conversation histories into the prompt, your agent calls two methods — add() to store what matters and search() to recall it — scoped per user, session, or agent.",
+      "quoteSha256": "aec200d206ab946a8b8f46bb224b0b40929f4d1cd1f696b57571a8b1ddca3d74"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "[2504.19413] Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory",
+      "url": "https://arxiv.org/abs/2504.19413",
+      "finalUrl": "https://arxiv.org/abs/2504.19413",
+      "status": 200,
+      "fetchedAt": "2026-11-19T00:32:30.666Z",
+      "extractor": "page-text-v1",
+      "sha256": "94046d09241abf7b8a09931a59151f17e13609e8a5487199a2ea186fe5fbacb4",
+      "bytes": 42996,
+      "quote": "We introduce Mem0, a scalable memory-centric architecture that addresses this issue by dynamically extracting, consolidating, and retrieving salient information from ongoing conversations.",
+      "quoteSha256": "6c67c4eff9c0281b6159a00eb0c93597a3c9642cae9360c5f25e2982306a262c"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of mem0ai/mem0",
+      "url": "https://api.github.com/repos/mem0ai/mem0/commits?per_page=50&since=2026-10-20T00:32:31.587Z",
+      "fetchedAt": "2026-11-19T00:32:23.986Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "e7bfe3a798ca410693c8553bd237ab650bdb56f85203e705923012b390f25872"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-19-mem0-mem0ai.md",
+  "decidedBy": "bee"
+}
