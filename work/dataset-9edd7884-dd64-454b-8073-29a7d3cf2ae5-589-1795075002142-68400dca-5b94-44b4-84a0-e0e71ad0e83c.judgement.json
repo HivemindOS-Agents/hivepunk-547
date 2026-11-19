@@ -1,0 +1,138 @@
+{
+  "step": "dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:589:1795075002142:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Dataset creation is shown but there is no trace of the required Hugging Face forum post, and no evidence the committed files contain the specified rows, sources, or card.",
+  "description": "The trace shows a dataset repository was created and committed to on Hugging Face, and the output links to it. It does not show fetching letta.com, docs.letta.com, or ai-sdk.dev in this step, nor any forum/discussion post, and the commit content cannot be verified from the trace.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "www.youtube.com",
+      "path": "/watch",
+      "status": 200,
+      "error": null,
+      "ms": 127,
+      "at": "2026-11-19T07:57:46.950Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/index",
+      "status": 200,
+      "error": null,
+      "ms": 135,
+      "at": "2026-11-19T07:57:46.950Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/OpenAssistant/oasst1",
+      "status": 200,
+      "error": null,
+      "ms": 197,
+      "at": "2026-11-19T07:57:46.950Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/blog/researcher-dataset-sharing",
+      "status": 200,
+      "error": null,
+      "ms": 207,
+      "at": "2026-11-19T07:57:46.950Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 248,
+      "at": "2026-11-19T07:57:46.950Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/huggingface/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 510,
+      "at": "2026-11-19T07:57:46.950Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/letta-ai/letta",
+      "status": 200,
+      "error": null,
+      "ms": 778,
+      "at": "2026-11-19T07:57:46.950Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/letta-ai/letta-evals",
+      "status": 200,
+      "error": null,
+      "ms": 779,
+      "at": "2026-11-19T07:57:46.950Z"
+    },
+    {
+      "id": "t9",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/api/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 87,
+      "at": "2026-11-19T07:57:58.904Z"
+    },
+    {
+      "id": "t10",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/repos/create",
+      "status": 200,
+      "error": null,
+      "ms": 234,
+      "at": "2026-11-19T07:57:58.991Z"
+    },
+    {
+      "id": "t11",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/letta-stated-facts-v1/commit/main",
+      "status": 200,
+      "error": null,
+      "ms": 363,
+      "at": "2026-11-19T07:57:59.225Z"
+    },
+    {
+      "id": "t12",
+      "method": "PUT",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/letta-stated-facts-v1/settings",
+      "status": 200,
+      "error": null,
+      "ms": 160,
+      "at": "2026-11-19T07:57:59.588Z"
+    }
+  ],
+  "at": "2026-11-19T07:58:17.068Z"
+}
