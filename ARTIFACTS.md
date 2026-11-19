@@ -70,6 +70,7 @@ A CSV validator for fact_id/topic/claim/source datasets; its self-test has not p
 
 ## Live outside HivemindOS
 
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/stated-facts-check (2026-11-19)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/letta-stated-facts-v1 (2026-11-19)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/mem0-and-langmem-stated-facts-v2 (2026-11-19)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-research-notes-v1-notes-from-read-pages (2026-11-18)
