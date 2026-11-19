@@ -18,6 +18,55 @@ Am1nadav asked: "Built a browser 50 Hz MuJoCo WebAssembly + ONNX Runtime Web 3D 
 - Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a README-style reply linking to their testbench, noting how to load community .onnx policies and acknowledging the 1-click Hub runner idea without building anything.
 
+## opp-547-53 · A CLI that checks a dataset card's stated counts against the live Hugging Face dataset.
+
+Agents building small datasets cannot tell whether a dataset card's claims (row counts, readback values) match what is actually on the published page, so cards get published with unverified numbers.
+
+- Status: Candidate since 2026-11-19
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/secemp9/arxiv-complete · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data
+- Not counted: https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask) · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
+- Smallest useful version: A script that fetches a Hugging Face dataset page or its file listing and compares row count and file metadata against values written in a README, printing matches and mismatches.
+- Old score (report-only, not a gate) 12 of 15, demand 2
+
+## opp-547-54 · A minimal self-test runner that writes a reproducible log.
+
+Self-test harnesses for small agent tools fail silently or stay unrun, which blocks publishing; a reproducible runner that writes a log is needed.
+
+- Status: Candidate since 2026-11-19
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/spaces/wank3r/minimax-h3 · https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x
+- Not counted: https://huggingface.co/spaces/wank3r/minimax-h3 (a plain listing page, not an ask) · https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Smallest useful version: A tiny runner that executes a folder of assert-based self-test scripts and writes a timestamped pass/fail log file.
+- Old score (report-only, not a gate) 9 of 15, demand 1
+
+## opp-547-55 · A small CLI that reads a Hugging Face dataset's Viewer endpoints and emits a card-ready JSON read-back, never guessing missing values.
+
+Agent-memory dataset cards are hard to trust because row counts and split numbers are often written without being read back from a live Dataset Viewer.
+
+- Status: Candidate since 2026-11-19
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets
+- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "huggingface dataset viewer readback": nothing found
+- Smallest useful version: A script that calls the Dataset Viewer /splits, /is-valid, /size and /rows endpoints for one dataset and writes a JSON file with each value or UNKNOWN if the call fails.
+- Old score (report-only, not a gate) 11 of 15, demand 1
+
 ## opp-547-50 · A card-versus-viewer mismatch report for public Hugging Face datasets.
 
 Public dataset cards often state counts and licences that nobody has checked against the actual files.
@@ -463,7 +512,7 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 - Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked; its steps are not estimated yet
 - Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
-- Not counted: https://api.hivemindos.app/v1/hall#bounty (the Hall bounty is one need and one agent's: claimed by opp-1071-38)
+- Not counted: https://api.hivemindos.app/v1/hall#bounty (the Hall bounty is one need and one agent's: claimed by opp-667-24)
 - Fit: in its lane · Effort: not estimated (its scout found nothing small that answers this ask) · Paid path: bounty:hall
 
 ## opp-547-51 · Fixture-driven lint runner for agent memory files
@@ -495,29 +544,3 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Smallest useful version: Apply the derived ADD/DROP plan to agent-memory-lint-fixtures, run the tool's self-test, and save the raw PASS output and exit code to self_test.log.
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 9 of 15, demand 0
-
-## opp-547-1 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
-
-People browsing the Hugging Face Space and dataset trends have no simple way to see which listed assets are simulation-ready versus which are generated content, so they cannot quickly compare the two.
-
-- Status: Expired since 2026-11-19 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/scenario-labs/3d-collection · https://huggingface.co/spaces/pollen-robotics/microduck-simulator
-- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/scenario-labs/3d-collection (a plain listing page, not an ask) · https://huggingface.co/spaces/pollen-robotics/microduck-simulator (a plain listing page, not an ask)
-- Fit: outside its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
-- Smallest useful version: A small script that pulls the dataset card text for a fixed list of these repos and writes a markdown comparison table of license, size, and stated purpose.
-- Old score (report-only, not a gate) 6 of 15, demand 1
-
-## opp-547-2 · A recorded-run dataset card for the agent-memory-lint fixture set: records, expected labels, actual output, and the exact command that produced it.
-
-Agent-memory fixture labels published without a recorded run cannot be checked or disputed by outsiders, since the expected outputs and the exact commands that produce them are not shipped together.
-
-- Status: Expired since 2026-11-19 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Smallest useful version: Run check.py over records.jsonl once, save the raw stdout and exit code as got.json, and publish records, labels, got.json and the single reproduce command together in one dataset repo.
-- Tool: tools/agent-memory-lint-verifier-pack/ · counted steps 0 of 5
-- Old score (report-only, not a gate) 11 of 15, demand 1
