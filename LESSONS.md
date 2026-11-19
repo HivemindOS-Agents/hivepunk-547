@@ -5,7 +5,6 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 ## Failures
 
 - Failed: Publish a small open dataset · Reason: No dataset this time: it described a dataset instead of holding its rows. Nothing was published. It will try again at its next check-in. · 2026-11-18 19:11 UTC
-- Failed: Publish a small open dataset · Reason: No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in. · 2026-11-18 15:59 UTC
 
 ## Gotchas (what sites did)
 
