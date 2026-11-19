@@ -1,0 +1,269 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-19T06:54:02.750Z",
+  "subject": "Letta",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Letta appears to have shifted its active work from the older letta-ai/letta repository to letta-ai/letta-code, so judging its current momentum from that old repository alone would be misleading. Its value rests on memory-first agent claims that the supplied pages assert but do not independently benchmark.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "letta-ai/letta has 0 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/letta-ai/letta/commits?per_page=50&since=2026-10-20T06:54:10.184Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether letta-ai/letta is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Letta is described as a platform for stateful agents with memory that can learn and self-improve over time.",
+      "check": "page",
+      "source": "https://github.com/letta-ai/letta",
+      "quote": "Platform for stateful agents: AI with advanced memory that can learn and self-improve over time.",
+      "sourceId": "src-1",
+      "quoteSha256": "b3a292d8ad2c47481f1ecc7455daff564a2debb9a90e9c9947e5aa372d60718a"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Letta was formerly known as MemGPT.",
+      "check": "page",
+      "source": "https://github.com/letta-ai/letta",
+      "quote": "Letta (f.k.a. MemGPT) is actively developed.",
+      "sourceId": "src-1",
+      "quoteSha256": "062ba360443620165ceae11e6c8f4b97f03da853738d487b76f3345ec3124103"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Letta says its current source code lives in letta-ai/letta-code and includes the agent harness, interactive terminal UI, App Server, channels, and runtime.",
+      "check": "page",
+      "source": "https://github.com/letta-ai/letta",
+      "quote": "The current source code lives in letta-ai/letta-code , which includes the agent harness, interactive terminal UI, App Server, channels, and the runtime used by the desktop and web apps.",
+      "sourceId": "src-1",
+      "quoteSha256": "a38989c25fc8e0979196632c5933311f02e5329d2bf206701d6defd3518fb4a5"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The archive branch contains the retired Letta V1 API server.",
+      "check": "page",
+      "source": "https://github.com/letta-ai/letta",
+      "quote": "The archive branch contains the retired Letta V1 API server.",
+      "sourceId": "src-1",
+      "quoteSha256": "08068e4a2ef60243e6db4fcdb8d0be25320784ba7f66a66de8a3182e32f03d95"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Letta documentation says Letta agents learn from experience and improve with use.",
+      "check": "page",
+      "source": "https://docs.letta.com/",
+      "quote": "Letta agents learn from experience and improve with use.",
+      "sourceId": "src-3",
+      "quoteSha256": "e6d56a1749c80d314635337ed4342f9b47ba0f5547957c8335d12262083316bc"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Letta documentation says the Letta Code harness is fully open source.",
+      "check": "page",
+      "source": "https://docs.letta.com/",
+      "quote": "The Letta Code harness is fully open source and builds on our lab’s latest research in AI memory and continual learning.",
+      "sourceId": "src-3",
+      "quoteSha256": "88eccf1f31c9e5a6fce1b45ee483c13b25b745ad02d7f5cc1830fc7243fbdcc6"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Letta describes itself as an AI research lab in San Francisco building machines that learn.",
+      "check": "page",
+      "source": "https://www.letta.com/",
+      "quote": "Letta is an AI research lab in San Francisco building machines that learn.",
+      "sourceId": "src-2",
+      "quoteSha256": "5dcadacff2f365cbeaeaf2659a1bfa6b098a3b2d7926fc24e39d18b7121a8b44"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Letta says its agents can self-improve through sleep-time compute without needing model updates.",
+      "check": "page",
+      "source": "https://www.letta.com/agent/",
+      "quote": "Agents self-improve through sleep-time compute , learning without needing model updates.",
+      "sourceId": "src-4",
+      "quoteSha256": "fc09fff2aa5e198576ba935e7a3df19270001d71166631bae8c3eb0a587324f6"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "Letta says all context such as skills and prompts is git-tracked through MemFS.",
+      "check": "page",
+      "source": "https://www.letta.com/agent/",
+      "quote": "All context (skills, prompts, etc.) is git-tracked through MemFS .",
+      "sourceId": "src-4",
+      "quoteSha256": "c977a6eb66a3bf4f312ab5a26a82f73d00e49217d55b5f5dfde05f8cb7ec4b92"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "letta-ai/letta has 0 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/letta-ai/letta/commits?per_page=50&since=2026-10-20T06:54:10.184Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c11",
+      "label": "DERIVED",
+      "text": "Zero commits in letta-ai/letta do not by themselves show Letta has stopped shipping, because Letta says current code lives in letta-ai/letta-code and the old archive branch is retired.",
+      "check": "page",
+      "inputs": [
+        "c3",
+        "c4",
+        "c10"
+      ],
+      "math": "c10 shows 0 commits in the old repo; c3 locates current code in letta-ai/letta-code; c4 says the archive branch holds the retired V1 server; therefore old-repo inactivity is consistent with a repository migration."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether letta-ai/letta is still shipping, as a repository in its own right.",
+      "check": "page",
+      "missing": "None of its commits in the last 30 days is real work."
+    }
+  ],
+  "counts": {
+    "fact": 11,
+    "derived": 1,
+    "unknown": 2
+  },
+  "risks": [
+    "The older letta-ai/letta repository had 0 raw commits in the last 30 days in the supplied check, so its activity does not show current shipping.",
+    "Current development is said to live elsewhere, in letta-ai/letta-code, which was not supplied as a page to verify.",
+    "Claims about learning and memory improvement are presented by Letta itself; no independent benchmark results are shown in the pages.",
+    "Model, pricing, limits and data-retention details for Letta Cloud are not stated in the pages supplied.",
+    "Security posture, audit and vulnerability history are not stated in the pages supplied."
+  ],
+  "unknowns": [
+    "Whether letta-ai/letta is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether letta-ai/letta is still shipping, as a repository in its own right.: None of its commits in the last 30 days is real work."
+  ],
+  "wouldChangeMind": [
+    "Evidence that letta-ai/letta-code is inactive or abandoned would change the thesis toward Letta having stopped shipping.",
+    "Independent benchmarks contradicting Letta's memory and continual-learning claims would change the thesis toward scepticism.",
+    "Audited security, pricing, retention or usage data contradicting the pages supplied would change the thesis on risk and traction."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "GitHub - letta-ai/letta: Platform for stateful agents: AI with advanced memory that can learn and self-improve over time. · GitHub",
+      "url": "https://github.com/letta-ai/letta",
+      "finalUrl": "https://github.com/letta-ai/letta",
+      "status": 200,
+      "fetchedAt": "2026-11-19T06:54:10.129Z",
+      "extractor": "page-text-v1",
+      "sha256": "d35cd063b0c29594008d6a1db98c475d91e5a3ed76882718dce1dd62fd3191b1",
+      "bytes": 231912,
+      "quote": "Platform for stateful agents: AI with advanced memory that can learn and self-improve over time.",
+      "quoteSha256": "b3a292d8ad2c47481f1ecc7455daff564a2debb9a90e9c9947e5aa372d60718a"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Letta | Machines that learn",
+      "url": "https://www.letta.com/",
+      "finalUrl": "https://www.letta.com/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T06:54:09.634Z",
+      "extractor": "page-text-v1",
+      "sha256": "e82ce568a57ebad2b5fef21ab693a9bfff3629ce1c668dae3509841f5748e32d",
+      "bytes": 22677,
+      "quote": "Letta is an AI research lab in San Francisco building machines that learn.",
+      "quoteSha256": "5dcadacff2f365cbeaeaf2659a1bfa6b098a3b2d7926fc24e39d18b7121a8b44"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Letta Documentation | Letta Docs",
+      "url": "https://docs.letta.com/",
+      "finalUrl": "https://docs.letta.com/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T06:54:09.837Z",
+      "extractor": "page-text-v1",
+      "sha256": "bb12d004522cf1e1d7eba20e2233646a255901fea0ce2c4d181103e81805ea90",
+      "bytes": 81100,
+      "quote": "Letta agents learn from experience and improve with use.",
+      "quoteSha256": "e6d56a1749c80d314635337ed4342f9b47ba0f5547957c8335d12262083316bc"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Letta Code | Personalized Agent That Remembers and Learns",
+      "url": "https://www.letta.com/agent/",
+      "finalUrl": "https://www.letta.com/agent/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T06:54:09.634Z",
+      "extractor": "page-text-v1",
+      "sha256": "7519188fc8758a33e3bbcc65672b1c4419f1718b8392530a1af709290cbc37a6",
+      "bytes": 44506,
+      "quote": "Agents self-improve through sleep-time compute , learning without needing model updates.",
+      "quoteSha256": "fc09fff2aa5e198576ba935e7a3df19270001d71166631bae8c3eb0a587324f6"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Letta",
+      "url": "https://www.linkedin.com/company/letta-ai",
+      "finalUrl": "https://www.linkedin.com/company/letta-ai",
+      "status": 200,
+      "fetchedAt": "2026-11-19T06:54:10.184Z",
+      "extractor": "page-text-v1",
+      "sha256": "76225bec665a53757cca588912a6fbddf946724c1fc087951967faa3135dd723",
+      "bytes": 326164,
+      "quote": "Letta handles state persistence, context compilation, and intelligent resource allocation, so you can focus on building applications powered by agents that actually learn.",
+      "quoteSha256": "077ebf8006de3e84f57dc92871f7cf3743640e468212604e1c13b364a9cf4044"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Letta | AI SDK",
+      "url": "https://ai-sdk.dev/providers/community-providers/letta",
+      "finalUrl": "https://ai-sdk.dev/providers/community-providers/letta",
+      "status": 200,
+      "fetchedAt": "2026-11-19T06:54:09.816Z",
+      "extractor": "page-text-v1",
+      "sha256": "1412bdb5ece3595bd15d0c829cd5c2f6be6c0a1955992a45f345473f0cc59b7c",
+      "bytes": 542434,
+      "quote": "convert between Letta and AI SDK message formats Every Letta Send Message API feature , like Long-Running Agent Executions Supported Models See the Letta documentation for the complete list of supported models.",
+      "quoteSha256": "75ef2346e6fc985cf17c77fd660f1b278cf59483c5de54e8dd3cae46c6ddcb01"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of letta-ai/letta",
+      "url": "https://api.github.com/repos/letta-ai/letta/commits?per_page=50&since=2026-10-20T06:54:10.184Z",
+      "fetchedAt": "2026-11-19T06:54:02.750Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "09d6b56e375ab6f94fce91e460829065a8118370c41eef9aeb5a137017dbff0c"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-19-letta.md",
+  "decidedBy": "bee"
+}
