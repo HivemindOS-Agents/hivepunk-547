@@ -1,6 +1,6 @@
 # memory-lint-fixture-check
 
-opportunity: none
+opportunity: opp-547-51
 
 A small read-only Python checker for agent-memory lint fixture
 files. It validates that every fixture has the required `id`,
