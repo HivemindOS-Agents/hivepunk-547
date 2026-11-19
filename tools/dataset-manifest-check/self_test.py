@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Self-test for dataset-manifest-check.
+"""Self-test for dataset-manifest-check (manifest vs listing).
 
 Run from this folder with no arguments and no network. Imports
-dataset_manifest_check, then checks it on synthetic fixtures in a
-temp directory: valid text/JSON/CSV manifests, missing listed
-files, unlisted files, empty manifest, unsafe paths, missing
-manifest, and CLI exit codes. Exits 0 only if all checks pass.
+dataset_manifest_check, then checks it on synthetic fixtures in
+a temp directory: exact match, missing/extra files, duplicates
+on each side, object-form manifest, listing comments/bullets,
+./ and prefix normalisation, empty/invalid/missing inputs, and
+CLI exit codes. Exits 0 only if all checks pass.
 """
 
 import contextlib
@@ -37,9 +38,8 @@ def import_tool():
         raise Fail("could not import dataset_manifest_check: %s: %s" % (type(e).__name__, e))
 
 
-def write(root, rel, text):
-    path = os.path.join(root, rel)
-    os.makedirs(os.path.dirname(path), exist_ok=True)
+def write(root, name, text):
+    path = os.path.join(root, name)
     with open(path, "w", encoding="utf-8", newline="") as fh:
         fh.write(text)
     return path
@@ -50,95 +50,67 @@ def main():
         mod = import_tool()
         checks = []
         with tempfile.TemporaryDirectory() as tmp:
-            data = os.path.join(tmp, "data")
-            os.makedirs(data)
-            write(data, "a.txt", "alpha\n")
-            write(data, "sub/b.csv", "x,y\n1,2\n")
-            write(data, "sub/c.json", "{\"k\": 1}\n")
+            manifest = write(tmp, "manifest.json", json.dumps(["data/a.csv", "data/b.csv", "README.md"]))
+            listing = write(tmp, "listing.txt", "# public listing\n\ndata/a.csv\n- data/b.csv\n* README.md\n")
+            ok, result, problems, notes = mod.check(manifest, listing)
+            check(ok and result["common"] == 3 and result["manifest_count"] == 3 and result["listing_count"] == 3, "exact: %r %r" % (problems, result))
+            checks.append("exact sets pass (comments, blank lines and bullets handled)")
 
-            manifest = write(data, "manifest.txt", "# dataset files\na.txt\nsub/b.csv\nsub/c.json\n")
-            ok, problems, notes, counts = mod.check(manifest)
-            check(ok and problems == [] and counts == {"listed": 3, "present": 3, "missing": 0, "unlisted": 0}, "valid text: %r %r" % (problems, counts))
-            checks.append("valid text manifest passes with counts 3/3/0/0")
+            manifest2 = write(tmp, "m2.json", json.dumps({"files": [{"path": "data/a.csv"}, {"file": "data/missing.csv"}]}))
+            listing2 = write(tmp, "l2.txt", "data/a.csv\ndata/extra.txt\n")
+            ok, result, problems, notes = mod.check(manifest2, listing2)
+            check(not ok and result["only_in_manifest"] == ["data/missing.csv"] and result["only_in_listing"] == ["data/extra.txt"] and result["common"] == 1, "diff: %r %r" % (problems, result))
+            checks.append("object-form manifest: missing/extra reported sorted, common counted")
 
-            text_entries = mod.parse_manifest(manifest)
-            check(text_entries == ["a.txt", "sub/b.csv", "sub/c.json"], "text parse: %r" % (text_entries,))
-            checks.append("text parser ignores comment and keeps order")
+            dup_m = write(tmp, "dupm.json", json.dumps(["a.txt", "a.txt", "b.txt"]))
+            dup_l = write(tmp, "dupl.txt", "a.txt\nb.txt\nb.txt\n")
+            ok, result, problems, notes = mod.check(dup_m, dup_l)
+            check(not ok and result["duplicates_in_manifest"] == ["a.txt"] and result["duplicates_in_listing"] == ["b.txt"] and result["common"] == 2, "dups: %r %r" % (problems, result))
+            checks.append("duplicates on either side fail and name the entry")
 
-            json_manifest = write(data, "manifest.json", json.dumps({"files": ["a.txt", {"path": "sub/b.csv"}, {"name": "sub/c.json"}]}))
-            ok, problems, notes, counts = mod.check(json_manifest)
-            check(ok and counts["listed"] == 3 and counts["present"] == 3 and counts["unlisted"] == 0, "valid json: %r %r" % (problems, counts))
-            checks.append("valid JSON manifest (strings and objects) passes, manifest.txt not unlisted")
+            prefixed_m = write(tmp, "pm.json", json.dumps(["dataset/a.csv", "dataset/b.csv"]))
+            prefixed_l = write(tmp, "pl.txt", "./dataset/a.csv\ndataset/b.csv\n")
+            ok, result, problems, notes = mod.check(prefixed_m, prefixed_l, strip_prefix="dataset/")
+            check(ok and result["common"] == 2, "prefix: %r %r" % (problems, result))
+            ok2, result2, _, _ = mod.check(prefixed_m, prefixed_l)
+            check(ok2, "leading ./ alone should also match: %r" % (result2,))
+            checks.append("--strip-prefix and leading ./ normalisation work")
 
-            csv_manifest = write(data, "manifest.csv", "name,bytes\na.txt,5\nsub/b.csv,3\nsub/c.json,8\n")
-            ok, problems, notes, counts = mod.check(csv_manifest)
-            check(ok and counts["listed"] == 3 and counts["present"] == 3 and counts["unlisted"] == 0, "valid csv: %r %r" % (problems, counts))
-            checks.append("valid CSV manifest passes using name column")
+            empty_m = write(tmp, "empty.json", "[]")
+            ok, result, problems, notes = mod.check(empty_m, listing)
+            check(not ok and any("lists no files" in p for p in problems), "empty manifest: %r" % (problems,))
+            checks.append("empty manifest fails")
 
-            missing = write(data, "bad_missing.txt", "a.txt\nsub/nope.txt\n")
-            ok, problems, notes, counts = mod.check(missing)
-            joined = " ".join(problems)
-            check(not ok and counts["missing"] == 1 and "listed file not found: sub/nope.txt" in joined, "missing: %r %r" % (problems, counts))
-            checks.append("missing listed file fails naming sub/nope.txt")
+            bad = write(tmp, "bad.json", "not json")
+            ok, result, problems, notes = mod.check(bad, listing)
+            check(not ok and any("not valid JSON" in p for p in problems), "bad json: %r" % (problems,))
+            checks.append("invalid JSON manifest fails")
 
-            unlisted = write(data, "bad_unlisted.txt", "a.txt\n")
-            ok, problems, notes, counts = mod.check(unlisted)
-            joined = " ".join(problems)
-            check(not ok and counts["unlisted"] >= 2 and "unlisted file: sub/b.csv" in joined and "unlisted file: sub/c.json" in joined, "unlisted: %r %r" % (problems, counts))
-            check(notes == [] or all("unlisted" not in n for n in notes), "unlisted notes: %r" % (notes,))
-            checks.append("unlisted files are flagged and fail")
+            ok, result, problems, notes = mod.check(os.path.join(tmp, "nope.json"), listing)
+            check(not ok and any("not found" in p for p in problems), "missing manifest: %r" % (problems,))
+            ok, result, problems, notes = mod.check(manifest, os.path.join(tmp, "nope.txt"))
+            check(not ok and any("not found" in p for p in problems), "missing listing: %r" % (problems,))
+            checks.append("missing manifest or listing fails with not found")
 
-            ok2, problems2, notes2, counts2 = mod.check(unlisted, allow_unlisted=True)
-            check(ok2 and any("unlisted file: sub/b.csv" in n for n in notes2), "allow-unlisted: %r %r" % (problems2, notes2))
-            checks.append("--allow-unlisted reports unlisted as NOTE and passes")
-
-            empty = write(data, "empty.txt", "# nothing here\n")
-            ok, problems, notes, counts = mod.check(empty)
-            check(not ok and any("lists no files" in p for p in problems), "empty: %r" % (problems,))
-            checks.append("empty manifest fails with lists-no-files")
-
-            unsafe = write(data, "unsafe.txt", "../secret.txt\n/abs/path.txt\n")
-            ok, problems, notes, counts = mod.check(unsafe)
-            joined = " ".join(problems)
-            check(not ok and counts["missing"] == 2 and joined.count("escapes root") == 2, "unsafe: %r" % (problems,))
-            checks.append("unsafe ../ and absolute paths are rejected")
-
-            ok, problems, notes, counts = mod.check(os.path.join(data, "nope.txt"))
-            check(not ok and any("manifest not found" in p for p in problems), "missing manifest: %r" % (problems,))
-            checks.append("missing manifest fails with not found")
-
-            dup = write(data, "dup.txt", "a.txt\na.txt\nsub/b.csv\nsub/c.json\n")
-            ok, problems, notes, counts = mod.check(dup, allow_unlisted=True)
-            check(ok and counts["listed"] == 4 and counts["present"] == 3, "dup: %r %r" % (problems, counts))
-            check(any("duplicate" in n for n in notes), "dup notes: %r" % (notes,))
-            checks.append("duplicate entry checked once with NOTE")
-
-            other_root = os.path.join(tmp, "elsewhere")
-            os.makedirs(other_root)
-            write(other_root, "a.txt", "x\n")
-            ok, problems, notes, counts = mod.check(manifest, root=other_root)
-            check(not ok and counts["missing"] == 2, "other root: %r %r" % (problems, counts))
-            checks.append("--root override checks against the other folder")
+            direct = mod.compare(["x.txt", "y.txt"], ["y.txt", "z.txt"])
+            check(direct["only_in_manifest"] == ["x.txt"] and direct["only_in_listing"] == ["z.txt"] and not direct["ok"], "compare(): %r" % (direct,))
+            checks.append("compare() returns exact set differences")
 
             buf = io.StringIO()
             with contextlib.redirect_stdout(buf):
-                code = mod.main(["dataset_manifest_check.py", manifest, "--allow-unlisted"])
+                code = mod.main(["dataset_manifest_check.py", manifest, listing])
             out = buf.getvalue()
-            check(code == 0 and "PASS:" in out and "listed: 3" in out, "CLI valid: %r %r" % (code, out))
+            check(code == 0 and "PASS:" in out and "common: 3" in out, "CLI pass: %r %r" % (code, out))
             buf = io.StringIO()
             with contextlib.redirect_stdout(buf):
-                code = mod.main(["dataset_manifest_check.py", missing])
+                code = mod.main(["dataset_manifest_check.py", manifest2, listing2])
             out = buf.getvalue()
-            check(code == 1 and "FAIL:" in out and "missing: 1" in out, "CLI fail: %r %r" % (code, out))
+            check(code == 1 and "FAIL:" in out and "only in manifest: data/missing.csv" in out and "only in listing: data/extra.txt" in out, "CLI fail: %r %r" % (code, out))
             buf = io.StringIO()
             with contextlib.redirect_stdout(buf):
-                code = mod.main(["dataset_manifest_check.py", unlisted, "--allow-unlisted"])
-            check(code == 0 and "NOTE:" in buf.getvalue(), "CLI allow: %r %r" % (code, buf.getvalue()))
-            buf = io.StringIO()
-            with contextlib.redirect_stdout(buf):
-                code = mod.main(["dataset_manifest_check.py"])
-            check(code == 1 and "usage" in buf.getvalue(), "CLI no args: %r %r" % (code, buf.getvalue()))
-            checks.append("CLI exits 0 with PASS, 1 with FAIL, handles flags and no args")
+                code = mod.main(["dataset_manifest_check.py", manifest + ","]) if False else mod.main(["dataset_manifest_check.py"])
+            check(code == 2 and "usage" in buf.getvalue(), "CLI usage: %r %r" % (code, buf.getvalue()))
+            checks.append("CLI exits 0 with PASS, 1 with FAIL, 2 on usage error")
     except Fail as e:
         sys.stderr.write("FAIL: %s\n" % e)
         return 1
