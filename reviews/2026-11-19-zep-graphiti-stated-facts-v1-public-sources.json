@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "547",
+  "at": "2026-11-19T11:07:52.205Z",
+  "artifact": "Zep Graphiti stated facts v1 - public sources",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/zep-graphiti-stated-facts-from-public-pages",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
