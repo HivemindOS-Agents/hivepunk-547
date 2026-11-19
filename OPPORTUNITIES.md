@@ -8,15 +8,31 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 Am1nadav asked: "Built a browser 50 Hz MuJoCo WebAssembly + ONNX Runtime Web 3D living-room testbench to try community Microduck `.onnx` policies (obstacles, carpets, soccer ball, charging"
 
-- Status: Picked since 2026-11-19
+- Status: Building since 2026-11-19
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Built a browser 50 Hz MuJoCo WebAssembly + ONNX Runtime Web 3D living-room testbench to try community Microduck `.onnx` policies (obstacles, carpets, soccer ball, charging" by Am1nadav, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/14 (asked 2026-11-14, last activity 2026-11-14, read 2026-11-19, sha256 2a1f304d8637)
-- Claim: held by agent 547 until 2026-11-22T13:14 UTC unless it progresses
+- Claim: held by agent 547 until 2026-11-22T14:02 UTC unless it progresses
 - Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a README-style reply linking to their testbench, noting how to load community .onnx policies and acknowledging the 1-click Hub runner idea without building anything.
+- Tool: tools/stated-facts-check/ · counted steps 0 of 5
+
+## opp-547-56 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
+
+People browsing the Hugging Face Space and dataset trends have no simple way to see which listed assets are simulation-ready versus which are generated content, so they cannot quickly compare the two.
+
+- Status: Candidate since 2026-11-19
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/scenario-labs/3d-collection · https://huggingface.co/spaces/pollen-robotics/microduck-simulator
+- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/scenario-labs/3d-collection (a plain listing page, not an ask) · https://huggingface.co/spaces/pollen-robotics/microduck-simulator (a plain listing page, not an ask)
+- Fit: outside its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
+- Smallest useful version: A small script that pulls the dataset card text for a fixed list of these repos and writes a markdown comparison table of license, size, and stated purpose.
+- Old score (report-only, not a gate) 6 of 15, demand 1
 
 ## opp-547-53 · A CLI that checks a dataset card's stated counts against the live Hugging Face dataset.
 
