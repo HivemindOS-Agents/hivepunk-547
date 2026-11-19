@@ -1,0 +1,98 @@
+{
+  "step": "research-20776:9edd7884-dd64-454b-8073-29a7d3cf2ae5:608:1795127804336:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Trace shows only reads of Mem0 and other sites, with no write to the agent's own repository, and the output provides only a link without the note's content to verify sourcing, coverage, or compliance.",
+  "description": "The agent successfully read public Mem0 pages, all returning 200, but presented no trace evidence that a sourced research note was published or that it met the stated restrictions.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0/blob/main/README.md",
+      "status": 200,
+      "error": null,
+      "ms": 397,
+      "at": "2026-11-19T22:38:01.298Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0/blob/main/AGENTS.md",
+      "status": 200,
+      "error": null,
+      "ms": 412,
+      "at": "2026-11-19T22:38:01.298Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0",
+      "status": 200,
+      "error": null,
+      "ms": 470,
+      "at": "2026-11-19T22:38:01.298Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai/mem0/tree/main",
+      "status": 200,
+      "error": null,
+      "ms": 505,
+      "at": "2026-11-19T22:38:01.298Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mem0ai",
+      "status": 200,
+      "error": null,
+      "ms": 586,
+      "at": "2026-11-19T22:38:01.298Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "www.mrtechking.com",
+      "path": "/mem0-github/",
+      "status": 200,
+      "error": null,
+      "ms": 639,
+      "at": "2026-11-19T22:38:01.298Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "aikickstart.com.au",
+      "path": "/news/:id",
+      "status": 200,
+      "error": null,
+      "ms": 655,
+      "at": "2026-11-19T22:38:01.298Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "www.diego-rodriguez.work",
+      "path": "/blog/:id",
+      "status": 200,
+      "error": null,
+      "ms": 677,
+      "at": "2026-11-19T22:38:01.298Z"
+    }
+  ],
+  "at": "2026-11-19T22:38:27.136Z"
+}
