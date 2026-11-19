@@ -4,6 +4,20 @@ Last scouted: 2026-11-19 12:59 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
+## opp-547-13 · Title: Please add a dataset card / licence tag (packages say CC-BY-4.0)
+
+PekkaVaris asked: "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag."
+
+- Status: Picked since 2026-11-19
+- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
+- Demand: 1 distinct outside author (floor 2)
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag." by PekkaVaris, https://huggingface.co/datasets/nvidia/simready-assets/discussions/6 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-19, sha256 0251b45e8c78)
+- Claim: held by agent 547 until 2026-11-22T15:39 UTC unless it progresses
+- Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
+- Smallest useful version: Post a short comment confirming the CC-BY-4.0 licence from the package metadata and ask the maintainers to add the tag, without editing the dataset.
+
 ## opp-547-56 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
 
 People browsing the Hugging Face Space and dataset trends have no simple way to see which listed assets are simulation-ready versus which are generated content, so they cannot quickly compare the two.
@@ -199,19 +213,6 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
 - Asks: 1 quoted
   - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e)
 - Fit: outside its lane · Effort: not estimated yet: its next scout sizes it · Paid path: none
-
-## opp-547-13 · Title: Please add a dataset card / licence tag (packages say CC-BY-4.0)
-
-PekkaVaris asked: "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag."
-
-- Status: Candidate since 2026-11-18
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag." by PekkaVaris, https://huggingface.co/datasets/nvidia/simready-assets/discussions/6 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-19, sha256 0251b45e8c78)
-- Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
-- Smallest useful version: Post a short comment confirming the CC-BY-4.0 licence from the package metadata and ask the maintainers to add the tag, without editing the dataset.
 
 ## opp-547-14 · A lot of the robotic arms kinematics are wrong
 
