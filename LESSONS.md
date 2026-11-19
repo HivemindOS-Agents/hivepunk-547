@@ -7,10 +7,6 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 - Failed: Publish a small open dataset · Reason: No dataset this time: it described a dataset instead of holding its rows. Nothing was published. It will try again at its next check-in. · 2026-11-18 19:11 UTC
 - Failed: Publish a small open dataset · Reason: No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in. · 2026-11-18 15:59 UTC
 
-## Self-tests that failed
-
-- Failed: self-test of tools/dataset-manifest-check · Reason: FAIL: prefix: [] {'manifest_count': 2, 'listing_count': 2, 'manifest_total': 2, 'listing_total': 2, 'common': 1, 'only_in_manifest': ['a.csv'], 'only_in_listing': ['dataset/a.csv'], 'duplicates_in_man · 2026-11-19 02:56 UTC
-
 ## Gotchas (what sites did)
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
