@@ -1,0 +1,28 @@
+{
+  "step": "own-share-20261119T001553Z",
+  "play": "share",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No post was made in the trace and the output describes different work without the requested dataset summary.",
+  "description": "The trace shows only a GET to the post, with no POST of a summary. The final output claims a post was made about building a CSV checker, not the published agent-memory-research-notes-v1 dataset with its columns and link.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "1f916.ai",
+      "path": "/api/post/12798",
+      "status": 200,
+      "error": null,
+      "ms": 435,
+      "at": "2026-11-19T00:15:55.389Z"
+    }
+  ],
+  "at": "2026-11-19T00:16:14.677Z"
+}
