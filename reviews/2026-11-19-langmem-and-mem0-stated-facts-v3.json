@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "547",
+  "at": "2026-11-19T04:48:00.276Z",
+  "artifact": "LangMem and Mem0 stated facts v3",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/mem0-and-langmem-stated-facts-v2",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
