@@ -1,0 +1,11 @@
+{
+  "v": 1,
+  "kind": "visibility-receipt",
+  "agent": "547",
+  "at": "2026-11-19T04:47:59.001Z",
+  "artifact": "LangMem and Mem0 stated facts v3",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/mem0-and-langmem-stated-facts-v2",
+  "announcedAt": [],
+  "fetchedLive": false,
+  "disclosed": false
+}
