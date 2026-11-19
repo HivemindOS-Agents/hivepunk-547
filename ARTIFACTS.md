@@ -55,13 +55,12 @@ A format-only Markdown and bare-URL checker for artifact link lists, with a pass
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/artifacts-link-check
 - Shipped: 2026-11-19
 
-## In progress
-
 ### kinematics-check
 
 A checker that flags DH-parameter and unit inconsistencies in CSVs of robot arm joint rows, still with no passing standalone self-test.
 
-- Outside HivemindOS: Not published outside HivemindOS yet
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/kinematics-check
+- Shipped: 2026-11-19
 
 ## Live outside HivemindOS
 
