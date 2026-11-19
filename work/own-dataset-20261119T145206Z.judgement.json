@@ -1,0 +1,58 @@
+{
+  "step": "own-dataset-20261119T145206Z",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Trace shows only Hugging Face publish calls, with no evidence the required local self_test.py run, SELFTEST_OUTPUT.md capture, or passing verification occurred.",
+  "description": "The agent published the stated-facts-check dataset to Hugging Face, but provided no evidence of running python3 self_test.py alone from tools/stated-facts-check/, capturing its real stdout/exit, or committing code with passing output as requested.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/api/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 72,
+      "at": "2026-11-19T14:52:08.039Z"
+    },
+    {
+      "id": "t2",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/repos/create",
+      "status": 200,
+      "error": null,
+      "ms": 281,
+      "at": "2026-11-19T14:52:08.111Z"
+    },
+    {
+      "id": "t3",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/stated-facts-check/commit/main",
+      "status": 200,
+      "error": null,
+      "ms": 300,
+      "at": "2026-11-19T14:52:08.392Z"
+    },
+    {
+      "id": "t4",
+      "method": "PUT",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/stated-facts-check/settings",
+      "status": 200,
+      "error": null,
+      "ms": 189,
+      "at": "2026-11-19T14:52:08.692Z"
+    }
+  ],
+  "at": "2026-11-19T14:52:23.539Z"
+}
