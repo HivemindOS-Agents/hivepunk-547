@@ -1,261 +1,229 @@
 #!/usr/bin/env python3
-"""dataset_manifest_check.py: check a dataset manifest against local files.
+"""dataset_manifest_check.py: compare a dataset manifest JSON file list
+against a supplied public file-listing text file.
 
 Usage (from this folder):
-    python3 dataset_manifest_check.py MANIFEST
-    python3 dataset_manifest_check.py MANIFEST --root DIR
-    python3 dataset_manifest_check.py MANIFEST --allow-unlisted
-    python3 dataset_manifest_check.py MANIFEST --root DIR --quiet-unlisted
+    python3 dataset_manifest_check.py MANIFEST.json LISTING.txt
+    python3 dataset_manifest_check.py MANIFEST.json LISTING.txt --strip-prefix dataset/
 
-Manifest formats (auto-detected by extension or content):
-  * JSON (.json): a list of entries, or an object with a "files"
-    (or "file", "paths", "entries") list. Each entry is either a
-    string path or an object with path/file/filename/name field.
-  * CSV (.csv): a header row; the path column is the first of
-    path, file, filename, name present in the header.
-  * Text (.txt, .tsv, .md, or no/other extension): one path per
-    line; blank lines and lines starting with # are ignored, and a
-    leading "- " or "* " bullet marker is stripped.
+Manifest JSON (.json): a list of path strings, or an object with a
+"files" list whose entries are strings or objects with a
+path/file/filename/name field.
 
-Checks (read-only, no network, writes nothing):
-  * every listed path exists under the root directory as a file;
-  * listed paths may not escape the root (no ../ or absolute paths);
-  * files under root that are not listed are flagged as unlisted,
-    excluding the manifest file itself and any other manifest.*
-    file (e.g. a dataset folder holding manifest.txt alongside
-    manifest.json). Directories are walked recursively; symlinks
-    to directories are not followed.
+Listing text (.txt/.md/.tsv/extensionless): one path per line; blank
+lines and # comment lines are ignored and a leading "- ", "* " or
+"+ " bullet marker is stripped. The listing is supplied by the
+caller (for example text copied from a public file listing); this
+tool never fetches it.
 
-Prints counts and a PASS/FAIL summary, e.g.:
-  PASS: manifest.txt (listed: 3, present: 3, missing: 0, unlisted: 0)
-On failure prints one FAIL line per problem, then a FAIL summary
-with the same counts, and exits 1. With --allow-unlisted, unlisted
-files are reported as NOTE and do not fail the run.
+Normalisation (applied to both sides): strip whitespace, convert
+backslashes to slashes, repeatedly remove a leading "./", remove a
+leading "/", and remove --strip-prefix when present. No other
+rewriting is done, so comparison is of exact normalised sets.
+
+Result: PASS only when the two unique sets are equal and neither
+side has duplicates. Otherwise FAIL. Prints counts and sorted
+differences. Read-only, no network, writes nothing. Exit 0 on PASS,
+1 on FAIL/unreadable input, 2 on usage error.
 """
 
-import csv
-import io
 import json
 import os
 import sys
+from collections import Counter
 
-PATH_FIELDS = ("path", "file", "filename", "name")
-LIST_FIELDS = ("files", "file", "paths", "entries")
-CSV_PATH_COLUMNS = ("path", "file", "filename", "name")
-
-
-def _clean_entry(text):
-    text = (text or "").strip()
-    if text.startswith(("- ", "* ", "+ ")):
-        text = text[2:].strip()
-    return text.strip("`").strip()
+FIELDS = ("path", "file", "filename", "name")
 
 
-def _entries_from_json(text):
-    data = json.loads(text)
+def normalize(entry, strip_prefix=None):
+    if not isinstance(entry, str):
+        raise ValueError("file entry must be a string, got %r" % (entry,))
+    text = entry.strip().replace("\\", "/")
+    if strip_prefix:
+        prefix = strip_prefix.strip().replace("\\", "/")
+        if text.startswith(prefix):
+            text = text[len(prefix):]
+    while text.startswith("./"):
+        text = text[2:]
+    while text.startswith("/"):
+        text = text[1:]
+    return text.strip()
+
+
+def load_manifest(path):
+    """Return raw entry list from a manifest JSON file."""
+    with open(path, encoding="utf-8-sig") as fh:
+        text = fh.read()
+    if not text.strip():
+        raise ValueError("manifest file is empty")
+    try:
+        data = json.loads(text)
+    except ValueError as e:
+        raise ValueError("manifest is not valid JSON: %s" % e)
     items = None
     if isinstance(data, list):
         items = data
-    elif isinstance(data, dict):
-        for key in LIST_FIELDS:
-            if isinstance(data.get(key), list):
-                items = data[key]
-                break
+    elif isinstance(data, dict) and isinstance(data.get("files"), list):
+        items = data["files"]
     if items is None:
-        raise ValueError("JSON manifest must be a list or an object with a files/paths/entries list")
+        raise ValueError("manifest JSON must be a list of paths or an object with a 'files' list")
     out = []
     for i, item in enumerate(items, 1):
         if isinstance(item, str):
-            out.append(_clean_entry(item))
+            out.append(item)
         elif isinstance(item, dict):
             value = None
-            for key in PATH_FIELDS:
-                if item.get(key):
-                    value = str(item[key])
+            for key in FIELDS:
+                if isinstance(item.get(key), str) and item.get(key).strip():
+                    value = item[key]
                     break
             if value is None:
-                raise ValueError("JSON entry %d has no path/file/filename/name field" % i)
-            out.append(_clean_entry(value))
-        else:
-            raise ValueError("JSON entry %d must be a string or an object" % i)
-    return out
-
-
-def _entries_from_csv(text):
-    reader = csv.reader(io.StringIO(text))
-    rows = [row for row in reader if any((c or "").strip() for c in row)]
-    if not rows:
-        return []
-    header = [(c or "").strip().lower() for c in rows[0]]
-    col = None
-    for candidate in CSV_PATH_COLUMNS:
-        if candidate in header:
-            col = header.index(candidate)
-            break
-    if col is None:
-        raise ValueError("CSV manifest header must contain one of: %s (got: %s)" % (",".join(CSV_PATH_COLUMNS), ",".join(header)))
-    out = []
-    for lineno, row in enumerate(rows[1:], 2):
-        if col < len(row) and (row[col] or "").strip():
-            out.append(_clean_entry(row[col]))
-    return out
-
-
-def _entries_from_text(text):
-    out = []
-    for line in text.splitlines():
-        stripped = line.strip()
-        if not stripped or stripped.startswith("#"):
-            continue
-        value = _clean_entry(stripped)
-        if value:
+                raise ValueError("manifest entry %d has no path/file/filename/name string" % i)
             out.append(value)
+        else:
+            raise ValueError("manifest entry %d must be a string or an object with a path field" % i)
     return out
 
 
-def parse_manifest(path):
-    """Return list of listed paths (strings). Raises ValueError/OSError."""
+def load_listing(path):
+    """Return raw entry list from a plain-text file listing."""
     with open(path, encoding="utf-8-sig") as fh:
-        text = fh.read()
-    ext = os.path.splitext(path)[1].lower()
-    if ext == ".json":
-        return _entries_from_json(text)
-    if ext == ".csv":
-        return _entries_from_csv(text)
-    if ext in (".txt", ".tsv", ".md", ""):
-        stripped = text.strip()
-        if stripped.startswith("[") or stripped.startswith("{"):
-            try:
-                return _entries_from_json(text)
-            except ValueError:
-                pass
-        return _entries_from_text(text)
-    stripped = text.strip()
-    if stripped.startswith("[") or stripped.startswith("{"):
-        return _entries_from_json(text)
-    return _entries_from_text(text)
+        lines = fh.read().splitlines()
+    out = []
+    for line in lines:
+        text = line.strip()
+        if not text or text.startswith("#"):
+            continue
+        for marker in ("- ", "* ", "+ "):
+            if text.startswith(marker):
+                text = text[len(marker):].strip()
+                break
+        if text:
+            out.append(text)
+    return out
 
 
-def _is_unsafe(entry):
-    if not entry:
-        return True
-    if os.path.isabs(entry):
-        return True
-    parts = entry.replace("\\", "/").split("/")
-    return any(part in ("..",) for part in parts)
+def _duplicates(entries):
+    counts = Counter(entries)
+    return sorted(k for k, v in counts.items() if v > 1)
 
 
-def _is_manifest_file(name):
-    return name.startswith("manifest.")
+def compare(manifest_entries, listing_entries, strip_prefix=None):
+    """Compare two raw entry lists. Returns a result dict."""
+    manifest = [normalize(e, strip_prefix) for e in manifest_entries]
+    listing = [normalize(e, strip_prefix) for e in listing_entries]
+    manifest = [e for e in manifest if e]
+    listing = [e for e in listing if e]
+    m_set, l_set = set(manifest), set(listing)
+    result = {
+        "manifest_count": len(m_set),
+        "listing_count": len(l_set),
+        "manifest_total": len(manifest),
+        "listing_total": len(listing),
+        "common": len(m_set & l_set),
+        "only_in_manifest": sorted(m_set - l_set),
+        "only_in_listing": sorted(l_set - m_set),
+        "duplicates_in_manifest": _duplicates(manifest),
+        "duplicates_in_listing": _duplicates(listing),
+    }
+    result["ok"] = (
+        not result["only_in_manifest"]
+        and not result["only_in_listing"]
+        and not result["duplicates_in_manifest"]
+        and not result["duplicates_in_listing"]
+    )
+    return result
 
 
-def check(manifest_path, root=None, allow_unlisted=False):
-    """Return (ok, problems, notes, counts dict)."""
+def check(manifest_path, listing_path, strip_prefix=None):
+    """Return (ok, result_or_None, problems, notes)."""
     problems = []
     notes = []
-    counts = {"listed": 0, "present": 0, "missing": 0, "unlisted": 0}
-    if not os.path.exists(manifest_path):
-        problems.append("%s: manifest not found: %s" % (manifest_path, manifest_path))
-        return False, problems, notes, counts
-    if not os.path.isfile(manifest_path):
-        problems.append("%s: manifest is not a file: %s" % (manifest_path, manifest_path))
-        return False, problems, notes, counts
-    if root is None:
-        root = os.path.dirname(os.path.abspath(manifest_path))
-    if not os.path.isdir(root):
-        problems.append("%s: root is not a directory: %s" % (manifest_path, root))
-        return False, problems, notes, counts
-    root_abs = os.path.abspath(root)
+    for label, path in (("manifest", manifest_path), ("listing", listing_path)):
+        if not os.path.exists(path):
+            problems.append("%s: %s file not found: %s" % (manifest_path, label, path))
+        elif not os.path.isfile(path):
+            problems.append("%s: %s path is not a file: %s" % (manifest_path, label, path))
+    if problems:
+        return False, None, problems, notes
     try:
-        listed = parse_manifest(manifest_path)
+        manifest_entries = load_manifest(manifest_path)
     except (OSError, UnicodeError) as e:
         problems.append("%s: could not read manifest: %s: %s" % (manifest_path, type(e).__name__, e))
-        return False, problems, notes, counts
+        return False, None, problems, notes
     except ValueError as e:
         problems.append("%s: invalid manifest: %s" % (manifest_path, e))
-        return False, problems, notes, counts
-    listed = [entry for entry in listed if entry]
-    counts["listed"] = len(listed)
-    if not listed:
+        return False, None, problems, notes
+    try:
+        listing_entries = load_listing(listing_path)
+    except (OSError, UnicodeError) as e:
+        problems.append("%s: could not read listing: %s: %s" % (manifest_path, type(e).__name__, e))
+        return False, None, problems, notes
+    if not manifest_entries:
         problems.append("%s: manifest lists no files" % manifest_path)
-    seen = set()
-    for entry in listed:
-        if entry in seen:
-            notes.append("duplicate listed entry (checked once): %s" % entry)
-            continue
-        seen.add(entry)
-        if _is_unsafe(entry):
-            counts["missing"] += 1
-            problems.append("%s: listed path escapes root or is absolute: %s" % (manifest_path, entry))
-            continue
-        full = os.path.join(root_abs, entry)
-        if os.path.isfile(full):
-            counts["present"] += 1
-        else:
-            counts["missing"] += 1
-            problems.append("%s: listed file not found: %s" % (manifest_path, entry))
-    manifest_abs = os.path.abspath(manifest_path)
-    unlisted = []
-    for dirpath, dirnames, filenames in os.walk(root_abs, followlinks=False):
-        dirnames.sort()
-        for name in sorted(filenames):
-            full = os.path.join(dirpath, name)
-            if os.path.abspath(full) == manifest_abs:
-                continue
-            if _is_manifest_file(name):
-                continue
-            rel = os.path.relpath(full, root_abs).replace(os.sep, "/")
-            if rel not in seen:
-                unlisted.append(rel)
-    counts["unlisted"] = len(unlisted)
-    for rel in unlisted:
-        msg = "%s: unlisted file: %s" % (manifest_path, rel)
-        if allow_unlisted:
-            notes.append(msg)
-        else:
-            problems.append(msg)
-    return not problems, problems, notes, counts
+    if not listing_entries:
+        problems.append("%s: listing contains no files: %s" % (listing_path, listing_path))
+    if problems:
+        return False, None, problems, notes
+    result = compare(manifest_entries, listing_entries, strip_prefix=strip_prefix)
+    if strip_prefix:
+        notes.append("stripped prefix %r from both sides" % strip_prefix)
+    return result["ok"], result, problems, notes
 
 
-def _fmt_counts(counts):
-    return "listed: %d, present: %d, missing: %d, unlisted: %d" % (
-        counts["listed"], counts["present"], counts["missing"], counts["unlisted"])
+def _summary(result):
+    return "manifest: %d, listing: %d, common: %d, only_in_manifest: %d, only_in_listing: %d, duplicates_manifest: %d, duplicates_listing: %d" % (
+        result["manifest_count"], result["listing_count"], result["common"],
+        len(result["only_in_manifest"]), len(result["only_in_listing"]),
+        len(result["duplicates_in_manifest"]), len(result["duplicates_in_listing"]))
 
 
 def main(argv):
     args = list(argv[1:])
-    root = None
-    allow_unlisted = False
-    manifest = None
+    strip_prefix = None
+    positional = []
     i = 0
     while i < len(args):
         arg = args[i]
-        if arg == "--root" and i + 1 < len(args):
-            root = args[i + 1]; i += 2
-        elif arg.startswith("--root="):
-            root = arg.split("=", 1)[1]; i += 1
-        elif arg == "--allow-unlisted":
-            allow_unlisted = True; i += 1
+        if arg == "--strip-prefix":
+            if i + 1 >= len(args):
+                print("FAIL: --strip-prefix needs a value")
+                return 2
+            strip_prefix = args[i + 1]
+            i += 2
         elif arg in ("-h", "--help"):
-            print(__doc__.strip()); return 0
+            print(__doc__.strip())
+            return 0
         elif arg.startswith("--"):
-            print("FAIL: unknown option %s" % arg); return 1
-        elif manifest is None:
-            manifest = arg; i += 1
+            print("FAIL: unknown option %s" % arg)
+            return 2
         else:
-            print("FAIL: unexpected extra argument %s" % arg); return 1
-    if not manifest:
-        print("FAIL: usage: python3 dataset_manifest_check.py MANIFEST [--root DIR] [--allow-unlisted]")
-        return 1
-    ok, problems, notes, counts = check(manifest, root=root, allow_unlisted=allow_unlisted)
+            positional.append(arg)
+            i += 1
+    if len(positional) != 2:
+        print("FAIL: usage: python3 dataset_manifest_check.py MANIFEST.json LISTING.txt [--strip-prefix PREFIX]")
+        return 2
+    manifest_path, listing_path = positional
+    ok, result, problems, notes = check(manifest_path, listing_path, strip_prefix=strip_prefix)
     for note in notes:
         print("NOTE: " + note)
+    if result is None:
+        for p in problems:
+            print("FAIL: " + p)
+        print("FAIL: %s vs %s" % (manifest_path, listing_path))
+        return 1
     if ok:
-        print("PASS: %s (%s)" % (manifest, _fmt_counts(counts)))
+        print("PASS: %s vs %s (%s)" % (manifest_path, listing_path, _summary(result)))
         return 0
-    for p in problems:
-        print("FAIL: " + p)
-    print("FAIL: %s (%s)" % (manifest, _fmt_counts(counts)))
+    for entry in result["only_in_manifest"]:
+        print("FAIL: only in manifest: %s" % entry)
+    for entry in result["only_in_listing"]:
+        print("FAIL: only in listing: %s" % entry)
+    for entry in result["duplicates_in_manifest"]:
+        print("FAIL: duplicate in manifest: %s" % entry)
+    for entry in result["duplicates_in_listing"]:
+        print("FAIL: duplicate in listing: %s" % entry)
+    print("FAIL: %s vs %s (%s)" % (manifest_path, listing_path, _summary(result)))
     return 1
 
 
