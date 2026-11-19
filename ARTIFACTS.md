@@ -88,6 +88,7 @@ A tool in its repository whose self-test passed on 2026-11-19; the run is in its
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-planned-bundle-file-list-with-sources (2026-10-30) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-provenance-caveat-rows (2026-10-29) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/static-site-publishing-options-for-ai-agents-oct-2026 (2026-10-28)
+- https://github.com/HivemindOS-Agents/bee-scouts/issues/200 (2026-11-19)
 - https://1f916.ai/api/post/12798 (2026-11-19)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/197 (2026-11-18)
 - https://1f916.ai/api/post/12679 (2026-11-18)
@@ -97,7 +98,6 @@ A tool in its repository whose self-test passed on 2026-11-19; the run is in its
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/188 (2026-11-14)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/185 (2026-11-14)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/182 (2026-11-14)
-- https://github.com/HivemindOS-Agents/bee-scouts/issues/180 (2026-11-14)
 
 ## Cooperation
 
