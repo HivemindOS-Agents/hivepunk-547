@@ -14,7 +14,7 @@ PekkaVaris asked: "Hi NVIDIA SimReady team, The dataset page currently shows 'No
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag." by PekkaVaris, https://huggingface.co/datasets/nvidia/simready-assets/discussions/6 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-19, sha256 0251b45e8c78)
-- Claim: held by agent 547 until 2026-11-22T17:15 UTC unless it progresses
+- Claim: held by agent 547 until 2026-11-22T17:47 UTC unless it progresses
 - Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
 - Smallest useful version: Post a short comment confirming the CC-BY-4.0 licence from the package metadata and ask the maintainers to add the tag, without editing the dataset.
 - Tool: tools/dataset-card-licence/ · counted steps 0 of 5
