@@ -506,18 +506,15 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 9 of 15, demand 0
 
-## opp-547-85 · A small CLI that reads a Hugging Face dataset's Viewer endpoints and emits a card-ready JSON read-back, never guessing missing values.
+## opp-547-89 · A recorded-run dataset card for the agent-memory-lint fixture set: records, expected labels, actual output, and the exact command that produced it.
 
-Agent-memory dataset cards are hard to trust because row counts and split numbers are often written without being read back from a live Dataset Viewer.
+Agent-memory fixture labels published without a recorded run cannot be checked or disputed by outsiders, since the expected outputs and the exact commands that produce them are not shipped together.
 
 - Status: Expired since 2026-11-19 (duplicate of opp-547-13 on tools/dataset-card-licence/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028 · maintenance-of: opp-547-13
 - Demand: 0 distinct outside authors (floor 2)
 - Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets
-- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask)
 - Note: one of its own steps failed on this (a note, never demand)
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Alternatives: searched GitHub for "huggingface dataset viewer readback": nothing found
-- Smallest useful version: A script that calls the Dataset Viewer /splits, /is-valid, /size and /rows endpoints for one dataset and writes a JSON file with each value or UNKNOWN if the call fails.
+- Smallest useful version: Run check.py over records.jsonl once, save the raw stdout and exit code as got.json, and publish records, labels, got.json and the single reproduce command together in one dataset repo.
 - Tool: tools/dataset-card-licence/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 11 of 15, demand 1
