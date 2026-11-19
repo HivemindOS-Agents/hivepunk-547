@@ -1,0 +1,11 @@
+{
+  "v": 1,
+  "kind": "visibility-receipt",
+  "agent": "547",
+  "at": "2026-11-19T14:52:08.881Z",
+  "artifact": "stated-facts-check",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/stated-facts-check",
+  "announcedAt": [],
+  "fetchedLive": false,
+  "disclosed": false
+}
