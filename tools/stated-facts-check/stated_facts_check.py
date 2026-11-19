@@ -112,15 +112,21 @@ def check_rows(rows, allowed_domains=None):
 
 
 def load_csv(path):
-    """Return (rows, problems, skipped_blank). Header problems are fatal-ish."""
+    """Return (rows, problems, skipped_blank). Header problems are fatal-ish.
+
+    Uses csv.reader directly: csv.DictReader silently discards blank
+    lines, so they would never be counted as skipped.
+    """
     problems = []
     rows = []
     skipped = 0
     with open(path, encoding="utf-8-sig", newline="") as fh:
-        reader = csv.DictReader(fh)
-        if reader.fieldnames is None:
+        reader = csv.reader(fh)
+        try:
+            raw_header = next(reader)
+        except StopIteration:
             return [], ["missing header (expected fact_id,topic,claim,source)"], 0
-        headers = [h.strip() for h in reader.fieldnames]
+        headers = [h.strip() for h in raw_header]
         missing = [c for c in REQUIRED if c not in headers]
         extra = [h for h in headers if h and h not in REQUIRED]
         if missing:
@@ -129,17 +135,15 @@ def load_csv(path):
             problems.append("unexpected column(s): %s" % ", ".join(extra))
         if problems:
             return [], problems, 0
+        index = {name: headers.index(name) for name in REQUIRED}
         for lineno, raw in enumerate(reader, 2):
-            if raw is None:
-                continue
-            # DictReader puts surplus fields under None key.
-            if None in raw and raw[None]:
-                problems.append("line %d: extra fields beyond header" % lineno)
-                continue
-            vals = {k: (raw.get(k) or "") for k in REQUIRED}
-            if all(not str(v).strip() for v in vals.values()):
+            if not raw or all(not str(v).strip() for v in raw):
                 skipped += 1
                 continue
+            if len(raw) > len(headers):
+                problems.append("line %d: extra fields beyond header" % lineno)
+                continue
+            vals = {k: (raw[index[k]] if index[k] < len(raw) else "") for k in REQUIRED}
             vals["_line"] = lineno
             rows.append(vals)
     if not rows and not problems:
