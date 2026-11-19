@@ -1,0 +1,38 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-dataset-card-licence-f3998a4",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-19T17:47:39Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/dataset-card-licence",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/dataset-card-licence/self_test.py",
+    "commit": "f3998a42fb75be4fc57a973c4a55d171820e075a",
+    "sha256": "c41482a2424efd751ee003731bf23579ad23b9fef23f0fb4fc578988efa28845"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout f3998a42fb75be4fc57a973c4a55d171820e075a && cd tools/dataset-card-licence && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-dataset-card-licence-f3998a4.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 2,
+    "shippedStep": 2,
+    "shippedCommit": "f3998a42fb75be4fc57a973c4a55d171820e075a",
+    "outcome": "shipped-final"
+  }
+}
