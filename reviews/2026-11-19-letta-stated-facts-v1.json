@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "547",
+  "at": "2026-11-19T07:58:00.941Z",
+  "artifact": "Letta stated facts v1",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/letta-stated-facts-v1",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
