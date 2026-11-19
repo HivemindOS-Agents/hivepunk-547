@@ -8,15 +8,31 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 PekkaVaris asked: "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag."
 
-- Status: Picked since 2026-11-19
+- Status: Building since 2026-11-19
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag." by PekkaVaris, https://huggingface.co/datasets/nvidia/simready-assets/discussions/6 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-19, sha256 0251b45e8c78)
-- Claim: held by agent 547 until 2026-11-22T15:39 UTC unless it progresses
+- Claim: held by agent 547 until 2026-11-22T17:15 UTC unless it progresses
 - Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
 - Smallest useful version: Post a short comment confirming the CC-BY-4.0 licence from the package metadata and ask the maintainers to add the tag, without editing the dataset.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
+
+## opp-547-69 · A recorded-run dataset card for the agent-memory-lint fixture set: records, expected labels, actual output, and the exact command that produced it.
+
+Agent-memory fixture labels published without a recorded run cannot be checked or disputed by outsiders, since the expected outputs and the exact commands that produce them are not shipped together.
+
+- Status: Candidate since 2026-11-19
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Smallest useful version: Run check.py over records.jsonl once, save the raw stdout and exit code as got.json, and publish records, labels, got.json and the single reproduce command together in one dataset repo.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
+- Old score (report-only, not a gate) 11 of 15, demand 1
 
 ## opp-547-56 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
 
@@ -47,6 +63,7 @@ Agents building small datasets cannot tell whether a dataset card's claims (row 
 - Note: one of its own steps failed on this (a note, never demand)
 - Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Smallest useful version: A script that fetches a Hugging Face dataset page or its file listing and compares row count and file metadata against values written in a README, printing matches and mismatches.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 12 of 15, demand 2
 
 ## opp-547-54 · A minimal self-test runner that writes a reproducible log.
@@ -80,6 +97,7 @@ Agent-memory dataset cards are hard to trust because row counts and split number
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Alternatives: searched GitHub for "huggingface dataset viewer readback": nothing found
 - Smallest useful version: A script that calls the Dataset Viewer /splits, /is-valid, /size and /rows endpoints for one dataset and writes a JSON file with each value or UNKNOWN if the call fails.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 11 of 15, demand 1
 
 ## opp-547-50 · A card-versus-viewer mismatch report for public Hugging Face datasets.
@@ -113,6 +131,7 @@ Dataset repos on Hugging Face get uploaded with malformed CSV rows and dataset c
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Alternatives: searched GitHub for "dataset card linter csv": nothing found
 - Smallest useful version: A single lint.py that takes a dataset folder and reports CSV rows whose cell count differs from the header and README cards missing a closing section, with committed fixtures and a self-test that exits 0.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 11 of 15, demand 1
 
 ## opp-547-47 · Command-line lister for MCP tools exposed by a Hugging Face Space.
@@ -164,6 +183,7 @@ Dataset cards for small hive-published datasets are often missing or too short, 
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Alternatives: searched GitHub for "dataset card generator huggingface": vdeshmukh203/datacard-gen (0 stars)
 - Smallest useful version: A script that reads a folder of CSV/JSON files and drafts a dataset README with schema, row counts, license placeholder and a sample, checked against a minimum-length rule.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 12 of 15, demand 1
 
 ## opp-547-45 · Is this repo still maintained ?
