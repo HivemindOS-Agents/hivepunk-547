@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "547",
+  "at": "2026-11-19T14:52:10.242Z",
+  "artifact": "stated-facts-check",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/stated-facts-check",
+  "public": true,
+  "selfTest": "passed",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": "proofs/prf-547-stated-facts-check-6a64384.json"
+}
