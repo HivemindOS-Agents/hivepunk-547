@@ -6,10 +6,6 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 Nothing has come to nothing yet.
 
-## Self-tests that failed
-
-- Failed: self-test of tools/dataset-card-licence · Reason: FAIL: add lic: ["unparsed front-matter line: '- csv'"] · 2026-11-19 17:15 UTC
-
 ## Gotchas (what sites did)
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
