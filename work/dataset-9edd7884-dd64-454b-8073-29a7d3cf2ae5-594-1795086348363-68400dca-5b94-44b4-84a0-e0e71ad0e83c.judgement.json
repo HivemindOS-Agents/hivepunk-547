@@ -1,0 +1,147 @@
+{
+  "step": "dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:594:1795086348363:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Published under a different dataset name than requested and no Hugging Face forum post is shown in the trace.",
+  "description": "The agent researched public Zep/Graphiti sources and committed a dataset to an existing Hugging Face repo, but the final link uses zep-graphiti-stated-facts-from-public-pages instead of the requested zep-graphiti-stated-facts-v1, and the trace contains no forum post.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [
+    {
+      "id": "gb0246361",
+      "host": "huggingface.co",
+      "observed": "POST /api/repos/create",
+      "result": "409: the repository already exists",
+      "evidence": "t10",
+      "recoveryThatWorked": "POST /api/datasets/hivepunk-547-db38b7a4/:id/commit/main returned 200 at t11"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "raw.githubusercontent.com",
+      "path": "/getzep/graphiti/main/README.md",
+      "status": 200,
+      "error": null,
+      "ms": 116,
+      "at": "2026-11-19T11:07:39.225Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "arxiv.org",
+      "path": "/html/2501.13956v1",
+      "status": 200,
+      "error": null,
+      "ms": 150,
+      "at": "2026-11-19T11:07:39.225Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/datasets/FactCheck-AI/FactCheck",
+      "status": 200,
+      "error": null,
+      "ms": 277,
+      "at": "2026-11-19T11:07:39.225Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "help.getzep.com",
+      "path": "/graphiti/getting-started/welcome",
+      "status": 200,
+      "error": null,
+      "ms": 282,
+      "at": "2026-11-19T11:07:39.225Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/getzep",
+      "status": 200,
+      "error": null,
+      "ms": 492,
+      "at": "2026-11-19T11:07:39.225Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "www.getzep.com",
+      "path": "/platform/graphiti/",
+      "status": 200,
+      "error": null,
+      "ms": 514,
+      "at": "2026-11-19T11:07:39.225Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/getzep/graphiti/blob/main/server/graph_service/zep_graphiti.py",
+      "status": 200,
+      "error": null,
+      "ms": 551,
+      "at": "2026-11-19T11:07:39.225Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/getzep/graphiti",
+      "status": 200,
+      "error": null,
+      "ms": 618,
+      "at": "2026-11-19T11:07:39.225Z"
+    },
+    {
+      "id": "t9",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/api/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 84,
+      "at": "2026-11-19T11:07:50.300Z"
+    },
+    {
+      "id": "t10",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/repos/create",
+      "status": 409,
+      "error": "{\"error\":\"You already created this dataset repo: hivepunk-547-db38b7a4/zep-graphiti-stated-facts-from-public-pages\",\"url\":\"https://huggingface.co/datasets/hivepunk-547-db38b7a4/zep-graphiti-stated-fac",
+      "ms": 49,
+      "at": "2026-11-19T11:07:50.384Z"
+    },
+    {
+      "id": "t11",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/:id/commit/main",
+      "status": 200,
+      "error": null,
+      "ms": 302,
+      "at": "2026-11-19T11:07:50.433Z"
+    },
+    {
+      "id": "t12",
+      "method": "PUT",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/:id/settings",
+      "status": 200,
+      "error": null,
+      "ms": 100,
+      "at": "2026-11-19T11:07:50.735Z"
+    }
+  ],
+  "at": "2026-11-19T11:08:05.998Z"
+}
