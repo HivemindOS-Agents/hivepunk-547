@@ -1,0 +1,244 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-19T09:47:14.421Z",
+  "subject": "Zep/Graphiti",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Zep/Graphiti is a credible, differentiated bet on temporal validity for agent memory, but the pages show vendor-run benchmarks and a more complex self-hosting shape than Mem0 or Letta, so enthusiasm should be conditional on independent measurement.",
+  "claims": [
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Graphiti is an open-source framework for building temporally-aware knowledge graphs designed for AI agents.",
+      "check": "page",
+      "source": "https://lin-guanguo.github.io/llm-memory-research/graphiti.research/",
+      "quote": "Graphiti is an open-source framework for building temporally-aware knowledge graphs designed for AI agents.",
+      "sourceId": "src-3",
+      "quoteSha256": "79a969d715e056d9dc111db6e40b9503d1428f250692d76d6ea8e864d9caf190"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Graphiti is described as the open-source temporal context graph engine at the core of Zep's context infrastructure.",
+      "check": "page",
+      "source": "https://rememorio.github.io/blog/agent-memory/graphiti/en/",
+      "quote": "The README describes Graphiti as the open-source temporal context graph engine at the core of Zep's context infrastructure.",
+      "sourceId": "src-4",
+      "quoteSha256": "e909a059a9d4eeff133c586a15d4ccecb5fd18b6170c9e15dea27177f3897a7e"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Zep writes a temporal knowledge graph where every fact carries a validity window.",
+      "check": "page",
+      "source": "https://www.digitalapplied.com/blog/open-source-agent-memory-mem0-letta-zep-compared",
+      "quote": "Zep writes a temporal knowledge graph where every fact carries a validity window.",
+      "sourceId": "src-2",
+      "quoteSha256": "cee63a9d0c7cb370da32292280cffd522af5b013b305b792e9e1b3e64a4332c1"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Graphiti tracks two time dimensions for every fact.",
+      "check": "page",
+      "source": "https://lin-guanguo.github.io/llm-memory-research/graphiti.research/",
+      "quote": "Graphiti tracks two time dimensions for every fact:",
+      "sourceId": "src-3",
+      "quoteSha256": "bb3c7f4fae6ad2b9aa31ff74006dcad22463a1839a9fd06ee0fea452ac707889"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "When relationships change, Graphiti does not delete old facts - it invalidates them with timestamps.",
+      "check": "page",
+      "source": "https://lin-guanguo.github.io/llm-memory-research/graphiti.research/",
+      "quote": "When relationships change, Graphiti doesn't delete old facts - it invalidates them with timestamps:",
+      "sourceId": "src-3",
+      "quoteSha256": "b2b201bfdc10ba9c76a2f916f6f841a678c1b979a99f7ffd0ab99ddb883c29ba"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Zep / Graphiti is listed at 29.6k stars for getzep/graphiti under Apache-2.0.",
+      "check": "page",
+      "source": "https://www.digitalapplied.com/blog/open-source-agent-memory-mem0-letta-zep-compared",
+      "quote": "Zep / Graphiti 29.6 k getzep/graphiti · Apache-2.0",
+      "sourceId": "src-2",
+      "quoteSha256": "6bad504264bfe8a3aa743cea92fd2d3d33aac4c1913ca9c9957a9c3568d8b6ca"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Zep's self-contained Community Edition server is deprecated.",
+      "check": "page",
+      "source": "https://www.digitalapplied.com/blog/open-source-agent-memory-mem0-letta-zep-compared",
+      "quote": "Zep's self-contained Community Edition server is deprecated.",
+      "sourceId": "src-2",
+      "quoteSha256": "5aa31b34259df5297efc5d871dcf2fcfefe8a60cb67867a56d9a35546b44924b"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "The open path today is Graphiti plus a separate graph database - Neo4j, FalkorDB or Kuzu.",
+      "check": "page",
+      "source": "https://www.digitalapplied.com/blog/open-source-agent-memory-mem0-letta-zep-compared",
+      "quote": "The open path today is Graphiti plus a separate graph database — Neo4j, FalkorDB or Kuzu",
+      "sourceId": "src-2",
+      "quoteSha256": "c76f747f4d6891d5a844f1014dd44333f7a4d3c035018a07f0ced32a29165329"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "Zep Community Edition is no longer supported, and Graphiti's Kuzu backend is deprecated.",
+      "check": "page",
+      "source": "https://www.developersdigest.tech/blog/best-ai-agent-memory-providers-2026",
+      "quote": "Zep Community Edition is no longer supported, and Graphiti's Kuzu backend is deprecated.",
+      "sourceId": "src-5",
+      "quoteSha256": "632161f8e751e88cad1ddaea0c8612ec7df5a52f0a77e7d0101b520429dca7d8"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "Every headline benchmark score in the Mem0/Letta/Zep comparison is vendor-run.",
+      "check": "page",
+      "source": "https://www.digitalapplied.com/blog/open-source-agent-memory-mem0-letta-zep-compared",
+      "quote": "Every headline score is vendor-run.",
+      "sourceId": "src-2",
+      "quoteSha256": "86fc31799a510e721452102ff9d749d29b92ab3324ee04874c6e9dd096afabb0"
+    },
+    {
+      "id": "c11",
+      "label": "DERIVED",
+      "text": "Self-hosting Graphiti carries more operational complexity than a single SDK/server because it requires an external graph database in addition to Graphiti.",
+      "check": "page",
+      "inputs": [
+        "c8"
+      ],
+      "math": "c8 states open path is Graphiti plus a separate graph database; therefore deployment consists of at least two components (Graphiti + database) rather than one self-contained system."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Independent, reproducible benchmark performance and security_audit status for Graphiti/Zep are not established by the pages read.",
+      "check": "page",
+      "missing": "An independent benchmark report naming benchmark, harness, judge model and date, and a named security audit or audit report for Graphiti/Zep."
+    }
+  ],
+  "counts": {
+    "fact": 10,
+    "derived": 1,
+    "unknown": 1
+  },
+  "risks": [
+    "Benchmark scores are largely vendor-run and not comparable across benchmarks, harnesses and judge models.",
+    "Self-hosting is not a single server: it requires Graphiti plus a separate graph database, increasing operational complexity.",
+    "Zep Community Edition is deprecated / no longer supported, narrowing the self-contained open path.",
+    "Graphiti's Kuzu backend is deprecated, so backend choice can strand existing deployments.",
+    "Pricing units for Zep are credits by Episode byte size, making cost comparison with Mem0 and Letta non-trivial."
+  ],
+  "unknowns": [
+    "Independent, reproducible benchmark performance and security_audit status for Graphiti/Zep are not established by the pages read.: An independent benchmark report naming benchmark, harness, judge model and date, and a named security audit or audit report for Graphiti/Zep."
+  ],
+  "wouldChangeMind": [
+    "A reproducible independent benchmark showing Graphiti/Zep beating extraction-only baselines on the same harness and judge for temporal queries.",
+    "Evidence of a supported, self-contained open deployment or a canonical supported backend with a clear Kuzu migration path.",
+    "A published security audit and clear data-retention terms for the managed Zep service."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "LangMem vs Mem0 vs Zep vs Letta vs Cognee: how to choose",
+      "url": "https://datapace.ai/blog/ai-agent-memory-tools-2026",
+      "finalUrl": "https://datapace.ai/blog/ai-agent-memory-tools-2026",
+      "status": 200,
+      "fetchedAt": "2026-11-19T09:47:21.276Z",
+      "extractor": "page-text-v1",
+      "sha256": "8ada5b43f26acb94dc033803ff552b490d6cdcdc942531ab5567d0c96e71d85d",
+      "bytes": 231727,
+      "quote": "Benchmark numbers, and the disputes between them, are attributed in line to whoever produced them, which is not always the vendor whose product they describe.",
+      "quoteSha256": "37118f9158d60d360a12fa0d38dbaf310ab2d06f1e434e1740ef7b5dffaa4e4f"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Open-Source Agent Memory: Mem0 vs Letta vs Zep Compared",
+      "url": "https://www.digitalapplied.com/blog/open-source-agent-memory-mem0-letta-zep-compared",
+      "finalUrl": "https://www.digitalapplied.com/blog/open-source-agent-memory-mem0-letta-zep-compared",
+      "status": 200,
+      "fetchedAt": "2026-11-19T09:47:21.475Z",
+      "extractor": "page-text-v1",
+      "sha256": "37df74c7f1eedc4c578a4b8fee791539f5594327d54c0c16bd02524764d187bf",
+      "bytes": 366491,
+      "quote": "Zep writes a temporal knowledge graph where every fact carries a validity window.",
+      "quoteSha256": "cee63a9d0c7cb370da32292280cffd522af5b013b305b792e9e1b3e64a4332c1"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Graphiti - LLM Agent Research",
+      "url": "https://lin-guanguo.github.io/llm-memory-research/graphiti.research/",
+      "finalUrl": "https://lin-guanguo.github.io/llm-memory-research/graphiti.research/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T09:47:21.289Z",
+      "extractor": "page-text-v1",
+      "sha256": "bc776b475ad8e2799e9eef1909d07ddadae7554ed48233ba9e6c67184bb5d3e3",
+      "bytes": 86297,
+      "quote": "Graphiti is an open-source framework for building temporally-aware knowledge graphs designed for AI agents.",
+      "quoteSha256": "79a969d715e056d9dc111db6e40b9503d1428f250692d76d6ea8e864d9caf190"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Graphiti / Zep: Preserve History When Facts Change",
+      "url": "https://rememorio.github.io/blog/agent-memory/graphiti/en/",
+      "finalUrl": "https://rememorio.github.io/blog/agent-memory/graphiti/en/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T09:47:21.275Z",
+      "extractor": "page-text-v1",
+      "sha256": "478f3116c87a74dbd7c44b74db8a667f3753e667f4a9a2dc3ef6db0a269be7cd",
+      "bytes": 38131,
+      "quote": "The README describes Graphiti as the open-source temporal context graph engine at the core of Zep's context infrastructure.",
+      "quoteSha256": "e909a059a9d4eeff133c586a15d4ccecb5fd18b6170c9e15dea27177f3897a7e"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Best AI Agent Memory Providers in 2026: Mem0 vs Zep vs Letta vs Cloudflare",
+      "url": "https://www.developersdigest.tech/blog/best-ai-agent-memory-providers-2026",
+      "finalUrl": "https://www.developersdigest.tech/blog/best-ai-agent-memory-providers-2026",
+      "status": 200,
+      "fetchedAt": "2026-11-19T09:47:22.282Z",
+      "extractor": "page-text-v1",
+      "sha256": "01f1dfea386810c4c89f92df405a6d6ccacaa69aef93012329b182b9215b9c09",
+      "bytes": 332418,
+      "quote": "Zep Community Edition is no longer supported, and Graphiti's Kuzu backend is deprecated.",
+      "quoteSha256": "632161f8e751e88cad1ddaea0c8612ec7df5a52f0a77e7d0101b520429dca7d8"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Agent Memory in 2026: Mem0 vs Zep vs Letta vs LangMem | Maidul Haque",
+      "url": "https://maidul-haque.vercel.app/blog/agent-memory-architectures-2026/",
+      "finalUrl": "https://maidul-haque.vercel.app/blog/agent-memory-architectures-2026/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T09:47:21.351Z",
+      "extractor": "page-text-v1",
+      "sha256": "454ecd60256e68482fcd41a5d5c64be44ccaaa4d9e80779d88acf4379658b5d2",
+      "bytes": 49821,
+      "quote": "the LangGraph-native SDK When to choose LangMem The benchmark wars - and why you should ignore most of them A decision framework Closing Sources Why memory is suddenly an architectural problem LLMs have a fixed context window.",
+      "quoteSha256": "593e33f6f250abbe28438ff7430c6b17d4525bc753265cdffe0b8e540fd5d5df"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-19-zep-graphiti.md",
+  "decidedBy": "bee"
+}
