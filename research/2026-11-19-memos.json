@@ -1,0 +1,260 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-19T16:11:54.258Z",
+  "subject": "MemOS",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "MemOS looks like a credible, actively developed agent-memory layer with strong claimed benchmark gains, but the note rests mainly on project-authored claims, so adoption confidence should wait for independent replication.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "MemTensor/MemOS has 35 raw commits in the last 30 days, 26 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/MemTensor/MemOS/commits?per_page=50&since=2026-10-20T16:12:06.583Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 3a16e5f, on 2026-11-09.",
+      "check": "shipping",
+      "source": "https://github.com/MemTensor/MemOS/commit/3a16e5fe3048a209f722806f4123fa2e533588fd"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "MemOS is a Memory Operating System for LLMs and AI agents that unifies store / retrieve / manage for long-term memory.",
+      "check": "page",
+      "source": "https://github.com/MemTensor/MemOS",
+      "quote": "MemOS is a Memory Operating System for LLMs and AI agents that unifies store / retrieve / manage for long-term memory, enabling context-aware and personalized interactions",
+      "sourceId": "src-1",
+      "quoteSha256": "26057b26c71e58064dce7a0880340cf758475e543093b297c187da7c4a8263d3"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "MemOS proposes treating memory as a manageable system resource and unifying plaintext, activation-based, and parameter-level memories.",
+      "check": "page",
+      "source": "https://arxiv.org/abs/2507.03724",
+      "quote": "we propose MemOS, a memory operating system that treats memory as a manageable system resource. It unifies the representation, scheduling, and evolution of plaintext, activation-based, and parameter-level memories",
+      "sourceId": "src-3",
+      "quoteSha256": "ad59abdd1243d25534f1ea71b544aaaf30d89543316dce6bbd65c4e6943c8eab"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The basic unit, a MemCube, encapsulates memory content and metadata such as provenance and versioning.",
+      "check": "page",
+      "source": "https://arxiv.org/abs/2507.03724",
+      "quote": "As the basic unit, a MemCube encapsulates both memory content and metadata such as provenance and versioning.",
+      "sourceId": "src-3",
+      "quoteSha256": "f53e1e07a4fee7128c2cc78de2ba7b68fd68fec40fdbccd2f52cc9888834a287"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "MemOS has a Unified Memory API to add, retrieve, edit, and delete memory.",
+      "check": "page",
+      "source": "https://github.com/MemTensor/MemOS",
+      "quote": "Unified Memory API : A single API to add, retrieve, edit, and delete memory—structured as a graph, inspectable and editable by design, not a black-box embedding store.",
+      "sourceId": "src-1",
+      "quoteSha256": "09dfdc749b9eee82f0105e046d14e2726674fb85f43afd6d4c2b1cb329341499"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "MemTensor/MemOS has 35 raw commits in the last 30 days, 26 of them real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/MemTensor/MemOS/commits?per_page=50&since=2026-10-20T16:12:06.583Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c6",
+      "label": "UNKNOWN",
+      "text": "Its latest real commit is 3a16e5f, on 2026-11-09.",
+      "check": "page",
+      "missing": "It gave no source it read for this."
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "With MemOS, OpenClaw improves average task completion from 36.63% to 50.87% across five agent tasks.",
+      "check": "page",
+      "source": "https://github.com/MemTensor/MemOS",
+      "quote": "With MemOS, OpenClaw improves average task completion from 36.63% to 50.87% across five agent tasks.",
+      "sourceId": "src-1",
+      "quoteSha256": "54e4e78fde3ba0ab50d88abde83de6ac41def44abf39313f69474e27d31dbabd"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "MemOS also achieves 88.83 on LoCoMo and 89.20 on LongMemEval.",
+      "check": "page",
+      "source": "https://github.com/MemTensor/MemOS",
+      "quote": "MemOS also achieves 88.83 on LoCoMo and 89.20 on LongMemEval , and leads in OmniMemEval",
+      "sourceId": "src-1",
+      "quoteSha256": "bf59534ea4e268366df4cafff3725b613c56e603a6df705af95ddffa640e0945"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "MemOS (MemOS-0630) consistently ranks first in all LoCoMo categories, outperforming mem0, LangMem, Zep, and OpenAI-Memory.",
+      "check": "page",
+      "source": "https://arxiv.org/html/2507.03724v1",
+      "quote": "MemOS (MemOS-0630) consistently ranks first in all categories, outperforming strong baselines such as mem0, LangMem, Zep, and OpenAI-Memory",
+      "sourceId": "src-2",
+      "quoteSha256": "eaa2ff527a394b0b478facd374c81c06e1f8ef78e6540f3047aef2ac6e7a2a7f"
+    },
+    {
+      "id": "c10",
+      "label": "DERIVED",
+      "text": "The claimed OpenClaw gain is 14.24 percentage points.",
+      "check": "page",
+      "inputs": [
+        "c7"
+      ],
+      "math": "50.87 - 36.63 = 14.24"
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Independent replication of the LoCoMo, LongMemEval and OmniMemEval results.",
+      "check": "page",
+      "missing": "An independent evaluation with same data, models and scoring, not authored by MemTensor or project partners."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Exact licence terms, cloud pricing, data-retention and memory-deletion guarantees.",
+      "check": "page",
+      "missing": "A licence file text, pricing page and privacy / retention documentation from the project."
+    }
+  ],
+  "counts": {
+    "fact": 10,
+    "derived": 1,
+    "unknown": 3
+  },
+  "risks": [
+    "Benchmark claims are largely from project-affiliated authors and pages, with no independent replication shown in the pages read.",
+    "Complexity risk: a three-type memory system with MemCubes, scheduling and migration is harder to audit and integrate than a simpler retrieval store.",
+    "Local-first and cloud variants increase deployment choices, but the pages do not show comparative cost, latency percentiles, or failure modes."
+  ],
+  "unknowns": [
+    "Its latest real commit is 3a16e5f, on 2026-11-09.: It gave no source it read for this.",
+    "Independent replication of the LoCoMo, LongMemEval and OmniMemEval results.: An independent evaluation with same data, models and scoring, not authored by MemTensor or project partners.",
+    "Exact licence terms, cloud pricing, data-retention and memory-deletion guarantees.: A licence file text, pricing page and privacy / retention documentation from the project."
+  ],
+  "wouldChangeMind": [
+    "Independent replication that fails to reproduce the claimed LoCoMo or OpenClaw gains.",
+    "Evidence of serious privacy, deletion or multi-tenant isolation failures in production use.",
+    "A sustained drop in real commit activity or release quality after 2026-11-09."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "GitHub - MemTensor/MemOS: Self-evolving memory OS for LLM & AI Agents: ultra-persistent memory, hybrid-retrieval, and cross-task skill reuse",
+      "url": "https://github.com/MemTensor/MemOS",
+      "finalUrl": "https://github.com/MemTensor/MemOS",
+      "status": 200,
+      "fetchedAt": "2026-11-19T16:11:59.069Z",
+      "extractor": "page-text-v1",
+      "sha256": "d439bbc51ba896eb7ffd4dfe5f279766e32bca85679366dd94164941abe66217",
+      "bytes": 381256,
+      "quote": "MemOS is a Memory Operating System for LLMs and AI agents that unifies store / retrieve / manage for long-term memory, enabling context-aware and personalized interactions",
+      "quoteSha256": "26057b26c71e58064dce7a0880340cf758475e543093b297c187da7c4a8263d3"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "\\titlefontMemOS: A Memory OS for AI System",
+      "url": "https://arxiv.org/html/2507.03724v1",
+      "finalUrl": "https://arxiv.org/html/2507.03724v1",
+      "status": 200,
+      "fetchedAt": "2026-11-19T16:11:58.695Z",
+      "extractor": "page-text-v1",
+      "sha256": "3600755d7a31b7dbeca971b8e909fe58cfec21fed56307b5a4d3ee4247eb593a",
+      "bytes": 471584,
+      "quote": "MemOS (MemOS-0630) consistently ranks first in all categories, outperforming strong baselines such as mem0, LangMem, Zep, and OpenAI-Memory",
+      "quoteSha256": "eaa2ff527a394b0b478facd374c81c06e1f8ef78e6540f3047aef2ac6e7a2a7f"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "[2507.03724] MemOS: A Memory OS for AI System",
+      "url": "https://arxiv.org/abs/2507.03724",
+      "finalUrl": "https://arxiv.org/abs/2507.03724",
+      "status": 200,
+      "fetchedAt": "2026-11-19T16:11:58.664Z",
+      "extractor": "page-text-v1",
+      "sha256": "ecde23123920fe8518c59589b95dd108f377bca0dcf924a1601fa066a5bc9eda",
+      "bytes": 48799,
+      "quote": "we propose MemOS, a memory operating system that treats memory as a manageable system resource. It unifies the representation, scheduling, and evolution of plaintext, activation-based, and parameter-level memories",
+      "quoteSha256": "ad59abdd1243d25534f1ea71b544aaaf30d89543316dce6bbd65c4e6943c8eab"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "MemOS: An Operating System for Memory-Augmented Generation (MAG) in Large Language Models (Short Version)",
+      "url": "https://arxiv.org/html/2505.22101v1",
+      "finalUrl": "https://arxiv.org/html/2505.22101v1",
+      "status": 200,
+      "fetchedAt": "2026-11-19T16:11:58.664Z",
+      "extractor": "page-text-v1",
+      "sha256": "053c9c8e90cfbfc25ed967e6993a2e472fd08a35df897773b278b78eb870df12",
+      "bytes": 102876,
+      "quote": "While emerging methods like Retrieval-Augmented Generation (RAG) incorporate plaintext memory, they lack lifecycle management and multi-modal integration, limiting their capacity for long-term knowledge evolution.",
+      "quoteSha256": "38fdc856f0345301df4a65ae201f2efa41447a1349a50927c5b8287b99d10ab6"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "INTELLIGENCE BEGINS WITH MEMORY",
+      "url": "https://memos.openmem.net/",
+      "finalUrl": "https://memos.openmem.net/",
+      "status": 200,
+      "fetchedAt": "2026-11-19T16:12:03.212Z",
+      "extractor": "page-text-v1",
+      "sha256": "4b5813d6cb12a6ef46fd5d8cb94f9f821b90268c01dfeaae10058f5af3922fb1",
+      "bytes": 260888,
+      "quote": "MemOS Evaluated on the LoCoMo and LongMemEval benchmarks with LLM-as-a-Judge metrics, reporting average scores across temporal reasoning, multi-hop, open-domain, single-hop, and long-term memory tasks Want to learn about the complete evaluation framework?",
+      "quoteSha256": "59257027e410e11fe632108418fec3783af83b942ab3595ed06ffd1c3a5a3967"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Paper page - MemOS: A Memory OS for AI System",
+      "url": "https://huggingface.co/papers/2507.03724",
+      "finalUrl": "https://huggingface.co/papers/2507.03724",
+      "status": 200,
+      "fetchedAt": "2026-11-19T16:11:58.938Z",
+      "extractor": "page-text-v1",
+      "sha256": "cb8375c84932c894fa3b34167b471f6bd2184c25ecf4c1071aa5413db5feefd1",
+      "bytes": 206078,
+      "quote": "open-source, industrial-grade memory operating system for large language models (LLMs), designed to systematically address the challenges of long-term dialogue, cross-session reasoning, and personalized memory management.",
+      "quoteSha256": "3cf4c6f18ec09f65951561bfdf15975579322d45fa63856f382e7cd0d77a0e26"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of MemTensor/MemOS",
+      "url": "https://api.github.com/repos/MemTensor/MemOS/commits?per_page=50&since=2026-10-20T16:12:06.583Z",
+      "fetchedAt": "2026-11-19T16:11:54.258Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "5e89990ff76f281acc1c696efff8dd186fa4515fd4be48f5c5087700b214f4cd"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-19-memos.md",
+  "decidedBy": "bee"
+}
