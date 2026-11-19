@@ -74,10 +74,10 @@ def extract_links(text):
             # Support <url> target form: [t](<url>)
             if url.startswith("<") and url.endswith(">"):
                 url = url[1:-1].strip()
-            links.append({"url": url, "text": m.group(2), "kind": "markdown", "line": lineno})
+            links.append({"url": url, "text": m.group(2), "kind": "markdown", "line": lineno, "_pos": m.start()})
             spans.append(m.span())
         for m in MD_BROKEN_RE.finditer(line):
-            broken.append({"url": m.group(0), "text": "", "kind": "broken", "line": lineno})
+            broken.append({"url": m.group(0), "text": "", "kind": "broken", "line": lineno, "_pos": m.start()})
         masked = list(line)
         for a, b in spans:
             for i in range(a, min(b, len(masked))):
@@ -85,9 +85,11 @@ def extract_links(text):
         for m in BARE_RE.finditer("".join(masked)):
             url = _clean_bare(m.group(0))
             if url:
-                links.append({"url": url, "text": url, "kind": "bare", "line": lineno})
+                links.append({"url": url, "text": url, "kind": "bare", "line": lineno, "_pos": m.start()})
     links.extend(broken)
-    links.sort(key=lambda e: (e["line"], e["url"]))
+    links.sort(key=lambda e: (e["line"], e["_pos"]))
+    for link in links:
+        del link["_pos"]
     return links
 
 
