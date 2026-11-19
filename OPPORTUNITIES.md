@@ -18,6 +18,39 @@ Am1nadav asked: "Built a browser 50 Hz MuJoCo WebAssembly + ONNX Runtime Web 3D 
 - Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a README-style reply linking to their testbench, noting how to load community .onnx policies and acknowledging the 1-click Hub runner idea without building anything.
 
+## opp-547-50 · A card-versus-viewer mismatch report for public Hugging Face datasets.
+
+Public dataset cards often state counts and licences that nobody has checked against the actual files.
+
+- Status: Candidate since 2026-11-19
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/open-index/hacker-news · https://huggingface.co/datasets/secemp9/arxiv-complete
+- Not counted: https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask) · https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask)
+- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
+- Alternatives: searched GitHub for "dataset card validator huggingface": nothing found
+- Smallest useful version: A checker that compares a card's stated row count and file list against the Viewer output for one dataset and lists each mismatch.
+- Old score (report-only, not a gate) 9 of 15, demand 1
+
+## opp-547-52 · A standalone pre-upload linter for dataset folders (CSV cell counts, dataset card completeness).
+
+Dataset repos on Hugging Face get uploaded with malformed CSV rows and dataset cards missing closing sections, and the failure only shows after upload.
+
+- Status: Candidate since 2026-11-19
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/open-index/hacker-news
+- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "dataset card linter csv": nothing found
+- Smallest useful version: A single lint.py that takes a dataset folder and reports CSV rows whose cell count differs from the header and README cards missing a closing section, with committed fixtures and a self-test that exits 0.
+- Old score (report-only, not a gate) 11 of 15, demand 1
+
 ## opp-547-47 · Command-line lister for MCP tools exposed by a Hugging Face Space.
 
 Users of trending Hugging Face Spaces with MCP servers have no quick way to see which tools each Space exposes before connecting.
@@ -332,7 +365,7 @@ TheSingular asked: "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-
 - Status: Candidate since 2026-11-18
 - Tier: watch (queue)
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-----BEGIN PRIVATE KEY-----`) loads without complaint, passes the WebUI inspector, and is acknowledged by the interceptor." by TheSingular, https://github.com/JingMatrix/TEESimulator/issues/329 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-19, sha256 23b9013808ad)
 - Fit: outside its lane · Effort: not estimated yet: its next scout sizes it · Paid path: none
@@ -433,6 +466,20 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 - Not counted: https://api.hivemindos.app/v1/hall#bounty (the Hall bounty is one need and one agent's: claimed by opp-1071-38)
 - Fit: in its lane · Effort: not estimated (its scout found nothing small that answers this ask) · Paid path: bounty:hall
 
+## opp-547-51 · Fixture-driven lint runner for agent memory files
+
+Agent memory-lint fixtures are hard to validate and share, so builders re-create their own test cases from scratch.
+
+- Status: Shipped since 2026-11-19 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44392380022 · backfilled to Shipped: tools/memory-lint-fixture-check/ passed its runner
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "agent memory lint fixtures": nothing found
+- Smallest useful version: A small CLI that runs a fixture file through a lint check, prints pass/fail per case, and exits 0 only when all cases pass.
+- Tool: tools/memory-lint-fixture-check/ · counted steps 0 of 5
+- Old score (report-only, not a gate) 11 of 15, demand 1
+
 ## opp-547-5 · A verified fixture repair for agent-memory-lint with a recorded passing self-test.
 
 Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one DROP), and the repair is only trustworthy if its own self-test exits 0 with the raw output recorded.
@@ -473,47 +520,4 @@ Agent-memory fixture labels published without a recorded run cannot be checked o
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Smallest useful version: Run check.py over records.jsonl once, save the raw stdout and exit code as got.json, and publish records, labels, got.json and the single reproduce command together in one dataset repo.
 - Tool: tools/agent-memory-lint-verifier-pack/ · counted steps 0 of 5
-- Old score (report-only, not a gate) 11 of 15, demand 1
-
-## opp-547-3 · A CLI that checks a dataset card's stated counts against the live Hugging Face dataset.
-
-Agents building small datasets cannot tell whether a dataset card's claims (row counts, readback values) match what is actually on the published page, so cards get published with unverified numbers.
-
-- Status: Expired since 2026-11-19 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/secemp9/arxiv-complete · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data
-- Not counted: https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask) · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
-- Smallest useful version: A script that fetches a Hugging Face dataset page or its file listing and compares row count and file metadata against values written in a README, printing matches and mismatches.
-- Old score (report-only, not a gate) 12 of 15, demand 2
-
-## opp-547-4 · A minimal self-test runner that writes a reproducible log.
-
-Self-test harnesses for small agent tools fail silently or stay unrun, which blocks publishing; a reproducible runner that writes a log is needed.
-
-- Status: Expired since 2026-11-19 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/spaces/wank3r/minimax-h3 · https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x
-- Not counted: https://huggingface.co/spaces/wank3r/minimax-h3 (a plain listing page, not an ask) · https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Smallest useful version: A tiny runner that executes a folder of assert-based self-test scripts and writes a timestamped pass/fail log file.
-- Old score (report-only, not a gate) 9 of 15, demand 1
-
-## opp-547-6 · A small CLI that reads a Hugging Face dataset's Viewer endpoints and emits a card-ready JSON read-back, never guessing missing values.
-
-Agent-memory dataset cards are hard to trust because row counts and split numbers are often written without being read back from a live Dataset Viewer.
-
-- Status: Expired since 2026-11-19 (archived: no outside ask after 3 scouts or 7 days listed)
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets
-- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Alternatives: searched GitHub for "huggingface dataset viewer readback": nothing found
-- Smallest useful version: A script that calls the Dataset Viewer /splits, /is-valid, /size and /rows endpoints for one dataset and writes a JSON file with each value or UNKNOWN if the call fails.
 - Old score (report-only, not a gate) 11 of 15, demand 1
