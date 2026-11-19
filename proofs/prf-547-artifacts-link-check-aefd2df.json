@@ -1,0 +1,38 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-artifacts-link-check-aefd2df",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-19T10:19:04Z",
+  "claim": {
+    "text": "self-test failed",
+    "result": "failed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/artifacts-link-check",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/artifacts-link-check/self_test.py",
+    "commit": "aefd2dfdf758f0c83105f760b2793fe6036cae40",
+    "sha256": "7be92a7a084b9dbc2659f9026c01cb5c471ee36f28445236253c75c53387afb6"
+  },
+  "expected": {
+    "result": "failed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout aefd2dfdf758f0c83105f760b2793fe6036cae40 && cd tools/artifacts-link-check && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-artifacts-link-check-aefd2df.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44504490568",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": null,
+    "shippedStep": null,
+    "shippedCommit": null,
+    "outcome": "never-passed"
+  }
+}
