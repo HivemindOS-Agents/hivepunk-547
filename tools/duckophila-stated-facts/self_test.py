@@ -51,7 +51,7 @@ def main():
             return fail("row %d: source_url not http(s): %r" % (i, url))
         if label not in tool.LABELS:
             return fail("row %d: bad label %r" % (i, label))
-        key = fact.strip().lower()
+        key = fact.strip().casefold()
         if key in seen:
             return fail("row %d: duplicate fact" % i)
         seen.add(key)
@@ -90,11 +90,14 @@ def main():
     checks.append("every committed row has a non-empty source_url")
 
     # 6. The validator rejects the cases it is meant to reject.
+    #    The duplicate case must repeat a fact already seen above
+    #    (case/whitespace-insensitively), otherwise no duplicate
+    #    is detected.
     bad_rows = [
         ("no url", "", "FACT", ""),
         ("bad scheme", "ftp://example.org/x", "FACT", ""),
         ("bad label", "https://github.com/joeynyc/awesome-microduck", "MAYBE", ""),
-        ("dup", "https://github.com/joeynyc/awesome-microduck", "FACT", ""),
+        ("  No URL  ", "https://github.com/joeynyc/awesome-microduck", "FACT", ""),
     ]
     bad_problems = tool.validate(bad_rows)
     needles = ("empty source_url", "not http(s)", "unknown label", "duplicate fact")
