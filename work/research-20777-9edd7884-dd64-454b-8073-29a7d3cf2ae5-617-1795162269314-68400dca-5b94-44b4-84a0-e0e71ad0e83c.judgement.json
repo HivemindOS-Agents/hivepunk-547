@@ -1,0 +1,116 @@
+{
+  "step": "research-20777:9edd7884-dd64-454b-8073-29a7d3cf2ae5:617:1795162269314:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": true,
+  "failure_reason": null,
+  "description": "The agent retrieved the Microduck platform details from Pollen Robotics and GitHub sources and published the claimed research note at the linked GitHub path in its final output. Two ancillary retailer sites returned bot-verification challenges but were not required for the core research.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": true,
+  "gotchas": [
+    {
+      "id": "gde92d3d9",
+      "host": "robotis.us",
+      "observed": "GET /products/pollen-robotics-microduck",
+      "result": "429: Verifying your connection... bot challenge page",
+      "evidence": "t1"
+    },
+    {
+      "id": "gf38dd52e",
+      "host": "store.pollen-robotics.com",
+      "observed": "GET /products/microduck",
+      "result": "429: Verifying your connection... bot challenge page",
+      "evidence": "t4"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [
+    "robotis.us",
+    "store.pollen-robotics.com"
+  ],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "robotis.us",
+      "path": "/products/pollen-robotics-microduck",
+      "status": 429,
+      "error": "Verifying your connection... Your connection needs to be verified before you can proceed Enable JavaScript and cookies to continue (function(){window._cf_chl_opt = {cFPWv: 'b',cH: 'rYabtCyvLUTWy02_hvz",
+      "ms": 11,
+      "at": "2026-11-20T08:13:01.937Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "pollen-robotics.com",
+      "path": "/microduck/",
+      "status": 200,
+      "error": null,
+      "ms": 45,
+      "at": "2026-11-20T08:13:01.937Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "pollen-robotics.com",
+      "path": "/microduck/blog/introducing-microduck/",
+      "status": 200,
+      "error": null,
+      "ms": 47,
+      "at": "2026-11-20T08:13:01.937Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "store.pollen-robotics.com",
+      "path": "/products/microduck",
+      "status": 429,
+      "error": "Verifying your connection... Your connection needs to be verified before you can proceed Enable JavaScript and cookies to continue (function(){window._cf_chl_opt = {cFPWv: 'b',cH: 'zJWlijdMwNQERn1nlT7",
+      "ms": 106,
+      "at": "2026-11-20T08:13:01.937Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "techplanet.today",
+      "path": "/post/:id",
+      "status": 200,
+      "error": null,
+      "ms": 257,
+      "at": "2026-11-20T08:13:01.937Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "robotics.growbotics.ai",
+      "path": "/projects/software/microduck",
+      "status": 200,
+      "error": null,
+      "ms": 429,
+      "at": "2026-11-20T08:13:01.937Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/pollen-robotics/microduck",
+      "status": 200,
+      "error": null,
+      "ms": 433,
+      "at": "2026-11-20T08:13:01.937Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/joeynyc/awesome-microduck",
+      "status": 200,
+      "error": null,
+      "ms": 686,
+      "at": "2026-11-20T08:13:01.937Z"
+    }
+  ],
+  "at": "2026-11-20T08:13:52.175Z"
+}
