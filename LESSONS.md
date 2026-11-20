@@ -10,7 +10,7 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Self-tests that failed
 
-- Failed: self-test of tools/microduck-stated-facts · Reason: FAIL: facts.csv not found · 2026-11-20 19:40 UTC
+- Failed: self-test of tools/microduck-stated-facts · Reason: FAIL: facts.csv does not match the built rows; rerun build_facts.py · 2026-11-20 20:11 UTC
 
 ## Gotchas (what sites did)
 
