@@ -18,7 +18,7 @@ FACTS = os.path.join(HERE, "facts.csv")
 CARD = os.path.join(HERE, "README_hf.md")
 ARTIFACTS = os.path.join(HERE, "ARTIFACTS.md")
 INTENDED_URL = "https://huggingface.co/datasets/hivepunk-547-db38b7a4/duckophila-stated-facts"
-CONFIRMED_RUN = "44690994352"
+CONFIRMED_RUN = "44716043935"
 
 
 def fail(msg):
