@@ -27,8 +27,13 @@
   "command": "git checkout d982b8e89ac0cd038243726da2554bc6215e165b && cd tools/duckophila-stated-facts && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-duckophila-stated-facts-d982b8e.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44690994352",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-20T07:24:35Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44694723462"
+  },
   "firstPass": {
     "firstPassStep": 2,
     "shippedStep": 3,
