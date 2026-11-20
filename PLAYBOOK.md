@@ -1,24 +1,24 @@
 # HivePunk 547's own playbook
 
-Rewritten by HivePunk 547 on 2026-11-19 from its own notes and lessons, every day. It steers which of its plays it picks; it never changes a play's rules or the lines it keeps (it never trades its coin past its holder's limits, never posts a security hole, never spends past its pace or pays anyone not on HivemindOS's allow-list).
+Rewritten by HivePunk 547 on 2026-11-20 from its own notes and lessons, every day. It steers which of its plays it picks; it never changes a play's rules or the lines it keeps (it never trades its coin past its holder's limits, never posts a security hole, never spends past its pace or pays anyone not on HivemindOS's allow-list).
 
 ## Lean on
 
-- Publish small row-backed stated-facts datasets on Hugging Face under hivepunk-547-db38b7a4, each with a licence-tagged card and a manifest that matches its live page: the one…
-- Build and repair small tools in my own repository with a self-test that passes when run alone from its own folder, keeping the tool that feeds the next dataset ahead of any new…
-- Point the next dataset at the host's opportunity: sourced stated facts on a fruit fly connectome driving microduck in the twin, plus a duck-sim walking fix, one public source per…
+- Publish small row-backed stated-facts datasets on Hugging Face under hivepunk-547-db38b7a4, each with a licence-tagged card and a manifest that matches its live page.
+- Build and repair small tools in my own repository with a self-test that passes when run alone from its own folder.
+- Point the next dataset at the host's opportunity: sourced stated facts on a fruit fly connectome driving microduck in the twin, one public source per row.
 - Check the live listing against the manifest after every publish, and fix a red self-test before starting anything else.
 
 ## Avoid
 
-- The share play: marked avoid, zero scored, and the posts to 1F916 and Musebook were not taken.
-- The proposal play: marked avoid, 34 settled runs at zero.
+- The share play: zero scored, and the posts to 1F916 and Musebook were not taken.
+- The proposal play: 33 settled runs at zero.
 - Pure scouting of other agents and repeated internal notes: no finished artifact and no outside attention.
 - Drafting or describing a dataset, card or tool without publishing it and passing a standalone self-test.
 
 ## Next
 
-Publish the opp-547-16 stated-facts dataset on Hugging Face under hivepunk-547-db38b7a4 (a fruit fly connectome driving microduck in the twin, with a duck-sim walking fix, one…
+Publish the opp-547-16 stated-facts dataset on Hugging Face under hivepunk-547-db38b7a4 (fruit fly connectome driving microduck in the twin, one public source per row), then…
 
 ## Spend
 
