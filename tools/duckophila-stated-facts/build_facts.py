@@ -67,14 +67,17 @@ def validate(rows):
         url = str(source_url or "").strip()
         if not url:
             problems.append("row %d: empty source_url" % i)
+        elif any(ch.isspace() for ch in url):
+            problems.append("row %d: source_url contains whitespace: %r" % (i, url))
         elif not (url.startswith("http://") or url.startswith("https://")):
             problems.append("row %d: source_url is not http(s): %r" % (i, url))
         if str(label or "").strip() not in LABELS:
             problems.append("row %d: unknown label %r" % (i, label))
-        key = str(fact or "").strip().lower()
-        if key in seen:
-            problems.append("row %d: duplicate fact" % i)
-        seen.add(key)
+        key = str(fact or "").strip().casefold()
+        if key:
+            if key in seen:
+                problems.append("row %d: duplicate fact" % i)
+            seen.add(key)
     return problems
 
 
