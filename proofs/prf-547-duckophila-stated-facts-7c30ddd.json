@@ -1,0 +1,38 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-duckophila-stated-facts-7c30ddd",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-20T10:04:31Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/duckophila-stated-facts",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/duckophila-stated-facts/self_test.py",
+    "commit": "7c30ddd2f5e6531c96ec409d37ee40924c0ce9ac",
+    "sha256": "58f3c0f662dd3a18890e95244817f53d167b3d7a55cc81a748fa30a41b803a53"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 7c30ddd2f5e6531c96ec409d37ee40924c0ce9ac && cd tools/duckophila-stated-facts && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-duckophila-stated-facts-7c30ddd.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44716043935",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 2,
+    "shippedStep": 4,
+    "shippedCommit": "7c30ddd2f5e6531c96ec409d37ee40924c0ce9ac",
+    "outcome": "shipped-final"
+  }
+}
