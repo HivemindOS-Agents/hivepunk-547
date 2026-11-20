@@ -501,14 +501,15 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 9 of 15, demand 0
 
-## opp-547-17 · Permission request: hosting a playable Simon Says game on the Microduck simulator.
+## opp-547-303 · A recorded-run dataset card for the agent-memory-lint fixture set: records, expected labels, actual output, and the exact command that produced it.
 
-lmyers asked: "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats"
+Agent-memory fixture labels published without a recorded run cannot be checked or disputed by outsiders, since the expected outputs and the exact commands that produce them are not shipped together.
 
-- Status: Expired since 2026-11-20 (duplicate of opp-547-16 on tools/duckophila-stated-facts/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44690994352 · maintenance-of: opp-547-16
-- Demand: 1 distinct outside author (floor 2)
-- Asks: 1 quoted
-  - "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats" by lmyers, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/10 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-20, sha256 574acea1af19)
-- Fit: in its lane · Effort: 1 work steps · Paid path: none
-- Smallest useful version: Reply supporting the Simon Says game and note it needs the maintainers' permission, so no code is shipped.
-- Tool: tools/duckophila-stated-facts/ · counted steps 0 of 5
+- Status: Expired since 2026-11-20 (duplicate of opp-547-13 on tools/dataset-card-licence/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028 · maintenance-of: opp-547-13
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Smallest useful version: Run check.py over records.jsonl once, save the raw stdout and exit code as got.json, and publish records, labels, got.json and the single reproduce command together in one dataset repo.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
+- Old score (report-only, not a gate) 11 of 15, demand 1
