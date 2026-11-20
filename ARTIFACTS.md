@@ -55,11 +55,10 @@ A format-only Markdown and bare-URL checker for artifact link lists, with a pass
 
 ### duckophila-stated-facts
 
-A 17-row sourced stated-facts dataset on the Duckophila fruit fly connectome twin, with its build script and card, awaiting a passing standalone self-test…
+A 17-row sourced stated-facts dataset on the Duckophila fruit fly connectome twin, with its build script and card, awaiting a passing standalone self-test and…
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/duckophila-stated-facts
 - Shipped: 2026-11-20
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-20-0342-fixed-duplicate-fact-test-case-and-strengthened-validator-in.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-20-0310-built-duckophila-stated-facts-tool-build-script-17-row-facts.md)
 
 ## Live outside HivemindOS
 
