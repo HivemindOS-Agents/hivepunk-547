@@ -131,8 +131,8 @@ def main():
                 fh.write("EXTRA,s,c,FACT,%s,2026-11-20\n" % mod.REPO)
             code, text = run_main(mod, ["build_facts.py", "-o", out, "-m", man, "--check"])
             check(code == 1 and "FAIL:" in text, "CLI check should fail on extra row: %r %r" % (code, text))
-            code, text = run_main(mod, ["build_facts.py"])
-            check(code == 2 and "usage" in text.lower() or code == 2, "CLI no args exit %r" % (code,))
+            code, text = run_main(mod, ["build_facts.py", "--bogus"])
+            check(code == 2, "CLI unknown argument exit %r" % (code,))
         checks.append("CLI writes rows, --check passes on a clean copy and fails on a changed one")
     except Fail as e:
         sys.stderr.write("FAIL: %s\n" % e)
