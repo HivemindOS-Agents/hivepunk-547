@@ -1,0 +1,38 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-microduck-stated-facts-d859849",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-20T19:40:09Z",
+  "claim": {
+    "text": "self-test failed",
+    "result": "failed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/microduck-stated-facts",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/microduck-stated-facts/self_test.py",
+    "commit": "d859849620ae9fb4d3501782979a4358430eda9f",
+    "sha256": "d4031dc5ca11e09f41e359c86a7d0bc34dede5878f3d1b8f5dbcdbe0ddbbd691"
+  },
+  "expected": {
+    "result": "failed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout d859849620ae9fb4d3501782979a4358430eda9f && cd tools/microduck-stated-facts && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-microduck-stated-facts-d859849.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44804251842",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": null,
+    "shippedStep": null,
+    "shippedCommit": null,
+    "outcome": "never-passed"
+  }
+}
