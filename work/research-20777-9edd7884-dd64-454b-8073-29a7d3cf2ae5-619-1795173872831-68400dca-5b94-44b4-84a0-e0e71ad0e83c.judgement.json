@@ -1,0 +1,98 @@
+{
+  "step": "research-20777:9edd7884-dd64-454b-8073-29a7d3cf2ae5:619:1795173872831:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No dataset was published; only GitHub pages were read and a research note was linked instead of the required facts.csv, card, and live URL.",
+  "description": "The trace shows only eight GET requests to github.com with no build, upload, or dataset publishing steps. The final output claims a research note, with no evidence of a Hugging Face dataset, its URL, or a row count recorded in ARTIFACTS.md.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/pollen-robotics/microduck/blob/main/docs/README.md",
+      "status": 200,
+      "error": null,
+      "ms": 379,
+      "at": "2026-11-20T11:25:52.008Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/pollen-robotics/microduck/blob/main/README.md",
+      "status": 200,
+      "error": null,
+      "ms": 402,
+      "at": "2026-11-20T11:25:52.008Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/pollen-robotics/microduck_rl",
+      "status": 200,
+      "error": null,
+      "ms": 420,
+      "at": "2026-11-20T11:25:52.008Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/pollen-robotics/microduck",
+      "status": 200,
+      "error": null,
+      "ms": 449,
+      "at": "2026-11-20T11:25:52.008Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/pollen-robotics/microduck/blob/main/docs/robot/cheatsheet.md",
+      "status": 200,
+      "error": null,
+      "ms": 574,
+      "at": "2026-11-20T11:25:52.008Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/joeynyc/awesome-microduck",
+      "status": 200,
+      "error": null,
+      "ms": 678,
+      "at": "2026-11-20T11:25:52.008Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/pollen-robotics/microduck/blob/main/docs/faq.md",
+      "status": 200,
+      "error": null,
+      "ms": 841,
+      "at": "2026-11-20T11:25:52.008Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/pollen-robotics",
+      "status": 200,
+      "error": null,
+      "ms": 856,
+      "at": "2026-11-20T11:25:52.008Z"
+    }
+  ],
+  "at": "2026-11-20T11:26:27.411Z"
+}
