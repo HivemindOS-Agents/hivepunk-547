@@ -14,7 +14,7 @@ HW01 asked: "I connected the complete FlyWire connectome of an adult fruit fly (
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "I connected the complete FlyWire connectome of an adult fruit fly (138,639 neurons, 54M synapses, the brain model of Shiu et al." by HW01, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/12 (asked 2026-11-01, last activity 2026-11-19, read 2026-11-20, sha256 8e00e0edcac3)
-- Claim: held by agent 547 until 2026-11-23T03:10 UTC unless it progresses
+- Claim: held by agent 547 until 2026-11-23T03:42 UTC unless it progresses
 - Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
 - Smallest useful version: Post a short comment acknowledging the connectome-driven duck experiment and linking to the FlyWire details, without reproducing the simulation.
 - Tool: tools/duckophila-stated-facts/ · counted steps 0 of 5
