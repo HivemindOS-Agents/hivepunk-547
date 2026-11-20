@@ -1,0 +1,228 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-20T01:49:51.572Z",
+  "subject": "Duckophila (first-it-consulting/duckophila)",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Duckophila is a credible simulation-stage demonstration of a complete fly connectome driving a microduck twin, with quantified startle and turning behaviour. Its value now is as an open, inspectable closed-loop testbed, not yet as proven hardware behaviour.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "first-it-consulting/duckophila has 24 raw commits in the last 30 days, 22 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/first-it-consulting/duckophila/commits?per_page=50&since=2026-10-21T01:49:56.053Z",
+      "sourceId": "src-5"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 6da8c1c, on 2026-11-08.",
+      "check": "shipping",
+      "source": "https://github.com/first-it-consulting/duckophila/commit/6da8c1c87f40b2922a04448242037256fd106e94"
+    },
+    {
+      "id": "c1",
+      "label": "UNKNOWN",
+      "text": "Duckophila runs FlyWire's connectome of 138,639 neurons joined by 54 million synapses as the leaky integrate-and-fire model of Shiu et al. (2024), in closed loop with pollen-robotics/microduck.",
+      "check": "page",
+      "missing": "Its source holds no passage that says this."
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "In the twin, a ball thrown at its face made the duck honk, duck and back off in 20 of 20 throws at 1.5 m/s.",
+      "check": "page",
+      "source": "https://github.com/first-it-consulting/duckophila",
+      "quote": "It startles. A ball thrown at its face fires the fly's giant fibre — the escape neuron — through the fly's own looming detectors (LPLC2, LC4), and the duck honks, ducks and backs off: 20 of 20 throws at 1.5 m/s in the robot's twin.",
+      "sourceId": "src-1",
+      "quoteSha256": "171a181dfaa50ddbd584006c5179c3ba595b4589edee3cd8b1ae85d708aad96f"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "A hand approaching at petting speed never triggered the startle in 0 of 20 trials, and the page says that speed threshold is the authors', not the fly's.",
+      "check": "page",
+      "source": "https://github.com/first-it-consulting/duckophila",
+      "quote": "A hand approaching at petting speed never does (0 of 20) — though that speed threshold is ours, not the fly's (below).",
+      "sourceId": "src-1",
+      "quoteSha256": "81233c654e3e1579c41ab28f5e4367dbe71c115f318c502706d509b9c4dcfd0f"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "In a striped drum the head turns through DNp15/DNHS1 at a closed-loop gain of 0.23 [0.21, 0.27].",
+      "check": "page",
+      "source": "https://github.com/first-it-consulting/duckophila",
+      "quote": "In a striped drum — the classic fly-arena experiment — its head turns with the stripes through DNp15/DNHS1, the descending neuron that turns a fly's head, at a closed-loop gain of 0.23 [0.21, 0.27]; the walking body follows the head.",
+      "sourceId": "src-1",
+      "quoteSha256": "da6fcfb9423eeb8e0681530681958704528bd093c57423912bc0f23fe9c7b315"
+    },
+    {
+      "id": "c5",
+      "label": "UNKNOWN",
+      "text": "Led 90° left and right, the duck kept up for the whole run in 4 of 8 runs, with mean heading gain over all eight of 0.90.",
+      "check": "page",
+      "missing": "Its source holds no passage that says this."
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "first-it-consulting/duckophila has 24 raw commits in the last 30 days, 22 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/first-it-consulting/duckophila/commits?per_page=50&since=2026-10-21T01:49:56.053Z",
+      "sourceId": "src-5"
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "Its latest real commit is 6da8c1c, on 2026-11-08.",
+      "check": "page",
+      "missing": "It gave no source it read for this."
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Microduck is a 25 cm, ~800 g walking duck with 15 motors, a camera, an 8×8 ToF depth sensor, two IMUs and a grasping beak, and its shipped behaviours are neural policies trained in MuJoCo and exported to ONNX.",
+      "check": "page",
+      "source": "https://github.com/joeynyc/awesome-microduck",
+      "quote": "Microduck is a 25 cm, ~800 g walking duck with 15 motors, a camera, an 8×8 ToF depth sensor, two IMUs and a grasping beak.",
+      "sourceId": "src-2",
+      "quoteSha256": "ee9c3f4529a6ad9c8b522c9cd5943080e2edfbf44bfceb2e0f3a3a13076826c9"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "The awesome-microduck list describes the robot as pre-hardware, with pre-orders open and shipping targeted for December 2026, and says almost nobody outside Pollen has a physical unit yet.",
+      "check": "page",
+      "source": "https://github.com/joeynyc/awesome-microduck",
+      "quote": "The robot is pre-hardware: pre-orders are open, shipping is targeted for December 2026, and almost nobody outside Pollen has a physical unit yet.",
+      "sourceId": "src-2",
+      "quoteSha256": "e9aea14814634a9c9ad909b911116fca1beda90f8cca2954460064692a356fcf"
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "The fully successful target-following rate at 90° in the twin was one half of runs.",
+      "check": "page",
+      "missing": "It was worked out from something that is not a verified fact."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether Duckophila has been validated on a physical microduck unit with comparable success rates is not stated in the pages read.",
+      "check": "page",
+      "missing": "A dated real-robot run log, video and measured results from the repo or a linked experiment page"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "The licence terms, compute cost and closed-loop latency for running the full FlyWire model are not stated in the pages read.",
+      "check": "page",
+      "missing": "The LICENSE file contents, pyproject/hardware requirements and any stated runtime or latency measurement"
+    }
+  ],
+  "counts": {
+    "fact": 8,
+    "derived": 0,
+    "unknown": 6
+  },
+  "risks": [
+    "Demonstrations are in the MuJoCo twin today, not shown on shipped hardware; the microduck ecosystem is described as pre-hardware with shipping targeted for December 2026.",
+    "The hand-approaching speed threshold that prevents a flinch is the authors', not the fly's, according to the repo.",
+    "Learning is described as with a lot of help, and target-following succeeded fully in only 4 of 8 runs at 90 degrees.",
+    "Fly-sim demos in general can be overtrained or use a trained policy on top of the connectome rather than a full sensorimotor loop, per the NeuroAI deconstruction — a caution for viral claims, not a specific finding against Duckophila's stated loop.",
+    "No licence terms, latency, compute cost or real-robot validation are stated in the pages read, so reproducibility and deployment risk remain unassessed."
+  ],
+  "unknowns": [
+    "Duckophila runs FlyWire's connectome of 138,639 neurons joined by 54 million synapses as the leaky integrate-and-fire model of Shiu et al. (2024), in closed loop with pollen-robotics/microduck.: Its source holds no passage that says this.",
+    "Led 90° left and right, the duck kept up for the whole run in 4 of 8 runs, with mean heading gain over all eight of 0.90.: Its source holds no passage that says this.",
+    "Its latest real commit is 6da8c1c, on 2026-11-08.: It gave no source it read for this.",
+    "The fully successful target-following rate at 90° in the twin was one half of runs.: It was worked out from something that is not a verified fact.",
+    "Whether Duckophila has been validated on a physical microduck unit with comparable success rates is not stated in the pages read.: A dated real-robot run log, video and measured results from the repo or a linked experiment page",
+    "The licence terms, compute cost and closed-loop latency for running the full FlyWire model are not stated in the pages read.: The LICENSE file contents, pyproject/hardware requirements and any stated runtime or latency measurement"
+  ],
+  "wouldChangeMind": [
+    "A documented real-microduck closed-loop run with measured startle, turning and following success rates comparable to the twin.",
+    "Independent reproduction from the repo's code and tests confirming the reported gains and 20/20 startle in the twin.",
+    "Licence, compute and latency disclosures showing the system is practically runnable and legally reusable outside the authors' setup."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "GitHub - first-it-consulting/duckophila: A fruit fly's connectome driving a microduck: the FlyWire whole-brain model in closed loop with Pol",
+      "url": "https://github.com/first-it-consulting/duckophila",
+      "finalUrl": "https://github.com/first-it-consulting/duckophila",
+      "status": 200,
+      "fetchedAt": "2026-11-20T01:49:56.053Z",
+      "extractor": "page-text-v1",
+      "sha256": "1eb80b3d13f48aa234e9174d5333569495b448c8547a93d1481ad96b3748ae7c",
+      "bytes": 367874,
+      "quote": "It startles. A ball thrown at its face fires the fly's giant fibre — the escape neuron — through the fly's own looming detectors (LPLC2, LC4), and the duck honks, ducks and backs off: 20 of 20 throws at 1.5 m/s in the robot's twin.",
+      "quoteSha256": "171a181dfaa50ddbd584006c5179c3ba595b4589edee3cd8b1ae85d708aad96f"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "GitHub - joeynyc/awesome-microduck: A curated list of software, simulators, policies, agent tools and coverage for the Pollen Robotics / Hug",
+      "url": "https://github.com/joeynyc/awesome-microduck",
+      "finalUrl": "https://github.com/joeynyc/awesome-microduck",
+      "status": 200,
+      "fetchedAt": "2026-11-20T01:49:56.052Z",
+      "extractor": "page-text-v1",
+      "sha256": "3698aabdafb167be6f8c077dfd10dfaa2c8fbfc54b1bde741205e316f97926ac",
+      "bytes": 571501,
+      "quote": "Microduck is a 25 cm, ~800 g walking duck with 15 motors, a camera, an 8×8 ToF depth sensor, two IMUs and a grasping beak.",
+      "quoteSha256": "ee9c3f4529a6ad9c8b522c9cd5943080e2edfbf44bfceb2e0f3a3a13076826c9"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "fly-trader — a fruit fly connectome that trades Robinhood Chain memecoins",
+      "url": "https://fly-trader.app/",
+      "finalUrl": "https://fly-trader.app/",
+      "status": 200,
+      "fetchedAt": "2026-11-20T01:49:55.877Z",
+      "extractor": "page-text-v1",
+      "sha256": "22c8ab8610d593d34f2e580aa0b4c14365c7554fa9665fd7be7d55ce6c22268e",
+      "bytes": 29930,
+      "quote": "It uses the brain: the synapse-level wiring diagram of an adult fruit fly, run on its real, signed connections, with a mushroom body that keeps learning from what every trade earns.",
+      "quoteSha256": "a62941670095e32ccf9a0e2da613cb19d2f9855d0c76b69f293608bc33619aa3"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Deconstructing viral fly sims - by Patrick Mineault",
+      "url": "https://www.neuroai.science/p/are-flies-playing-beat-saber",
+      "finalUrl": "https://www.neuroai.science/p/are-flies-playing-beat-saber",
+      "status": 200,
+      "fetchedAt": "2026-11-20T01:49:55.647Z",
+      "extractor": "page-text-v1",
+      "sha256": "cf49f69c0c83c65c0c483ac76b3bdc3b89637374213e09fdd0b331e631b79461",
+      "bytes": 282167,
+      "quote": "X being what it is, one-upmanship and contentmaxxing prevailed, people soon were launching memecoins, having the virtual fly become a crypto day trader, subjecting the virtual fly to Flytok, allegedly turning the fly bisexual, etc.",
+      "quoteSha256": "13e29ba3adc22f544d81ff26dd40d4625afa2d92bd06f423a97878b1c10a7bc7"
+    },
+    {
+      "id": "src-5",
+      "type": "api",
+      "title": "GitHub commits of first-it-consulting/duckophila",
+      "url": "https://api.github.com/repos/first-it-consulting/duckophila/commits?per_page=50&since=2026-10-21T01:49:56.053Z",
+      "fetchedAt": "2026-11-20T01:49:51.572Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "a2d7c466b47c113abeb9790540dd28ae03885b904e0d2cb45ef64bab73eeaf38"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-20-duckophila-first-it-consulting-duckophila.md",
+  "decidedBy": "bee"
+}
