@@ -55,11 +55,10 @@ A format-only Markdown and bare-URL checker for artifact link lists, with a pass
 
 ### microduck-stated-facts
 
-A 24-row stated-facts dataset on the Pollen Robotics Microduck robot, with dataset card, manifest and standalone self-test; self-test not yet passing alone.
+A 24-row stated-facts dataset on the Pollen Robotics Microduck robot, with dataset card, manifest and standalone self-test; not yet passing alone or live on…
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/microduck-stated-facts
 - Shipped: 2026-11-20
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-20-2011-restored-facts-csv-24-rows-and-manifest-json-in-microduck-st.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-20-1939-built-microduck-stated-facts-24-row-facts-csv-from-the-two-m.md)
 
 ## Live outside HivemindOS
 
