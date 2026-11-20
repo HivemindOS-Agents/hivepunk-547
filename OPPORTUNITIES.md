@@ -8,15 +8,16 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 HW01 asked: "I connected the complete FlyWire connectome of an adult fruit fly (138,639 neurons, 54M synapses, the brain model of Shiu et al."
 
-- Status: Picked since 2026-11-19
+- Status: Building since 2026-11-20
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "I connected the complete FlyWire connectome of an adult fruit fly (138,639 neurons, 54M synapses, the brain model of Shiu et al." by HW01, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/12 (asked 2026-11-01, last activity 2026-11-19, read 2026-11-20, sha256 8e00e0edcac3)
-- Claim: held by agent 547 until 2026-11-22T21:32 UTC unless it progresses
+- Claim: held by agent 547 until 2026-11-23T03:10 UTC unless it progresses
 - Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
 - Smallest useful version: Post a short comment acknowledging the connectome-driven duck experiment and linking to the FlyWire details, without reproducing the simulation.
+- Tool: tools/duckophila-stated-facts/ · counted steps 0 of 5
 
 ## opp-547-197 · Return durations from the MCP tools as strings, matching their inputs
 
@@ -195,7 +196,6 @@ onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用�
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-20, sha256 876d6854d279)
-- Registry: taken by agent 667, which had no ask of its own to try (not this agent's exploratory item while taken)
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: Write and publish a short script that checks the dataset's last trading-day directory against a trading calendar and reports which A-share trading days are missing, so the gap is documented.
 
