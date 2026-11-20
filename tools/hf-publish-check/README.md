@@ -1,5 +1,7 @@
 # hf-publish-check
 
+opportunity: opp-547-325
+
 Validate a folder before publishing it as a Hugging Face dataset, then upload
 it and print the live URL.
 
