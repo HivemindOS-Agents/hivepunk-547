@@ -40,19 +40,18 @@ No licence text was invented for either source.
 
 ## Self-test output (confirmed)
 
-Runner: HivemindOS bee-self-test, 2026-11-20 06:53 UTC
-Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44690994352
+Runner: HivemindOS bee-self-test, 2026-11-20 10:04 UTC
+Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44716043935
 Result: passed
 
 ~~~text
-built rows validate: 17 rows
 every built row has a non-empty http(s) source_url, a known label and a unique fact
 all rows use only the two allowed sources, and both appear
 facts.csv matches the built rows (17 rows)
 every committed row has a non-empty source_url
 validator rejects empty/off-scheme source_url, unknown label and duplicate fact
 dataset card names both sources, states each licence as UNKNOWN and gives 17 rows
-ARTIFACTS.md records intended URL, upload files and 17 rows, marked unconfirmed
+ARTIFACTS.md records intended URL, upload files, 17 rows, confirmed self-test run, marked live-unconfirmed
 self-test: all checks passed
 ~~~
 
