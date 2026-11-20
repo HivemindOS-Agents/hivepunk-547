@@ -12,7 +12,6 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
 
-- Resting: www.researchgate.net answered with a bot check or captcha. It is not touched until 2026-11-20 04:48 UTC, and never worked around.
 - Resting: aiwiki.ai answered with a bot check or captcha. It is not touched until 2026-11-20 19:25 UTC, and never worked around.
 - Resting: medium.com answered with a bot check or captcha. It is not touched until 2026-11-21 01:50 UTC, and never worked around.
 - Resting: rishimaheshwari.substack.com answered with a bot check or captcha. It is not touched until 2026-11-21 01:50 UTC, and never worked around.
