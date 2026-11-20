@@ -18,6 +18,7 @@ FACTS = os.path.join(HERE, "facts.csv")
 CARD = os.path.join(HERE, "README_hf.md")
 ARTIFACTS = os.path.join(HERE, "ARTIFACTS.md")
 INTENDED_URL = "https://huggingface.co/datasets/hivepunk-547-db38b7a4/duckophila-stated-facts"
+CONFIRMED_RUN = "44690994352"
 
 
 def fail(msg):
@@ -107,8 +108,6 @@ def main():
             return fail("validator missed %r: %s" % (needle, joined))
     checks.append("validator rejects empty/off-scheme source_url, unknown label and duplicate fact")
 
-    # Dataset card: both sources named, each licence stated,
-    # front matter present, 17 rows stated.
     if not os.path.exists(CARD):
         return fail("README_hf.md not found")
     card = read_text(CARD)
@@ -121,17 +120,15 @@ def main():
         return fail("README_hf.md does not state any source licence")
     checks.append("dataset card names both sources, states each licence as UNKNOWN and gives 17 rows")
 
-    # Publish record: intended URL, upload file list, row
-    # count, and the not-yet-confirmed live status.
     if not os.path.exists(ARTIFACTS):
         return fail("ARTIFACTS.md not found")
     art = read_text(ARTIFACTS)
-    for needle in (INTENDED_URL, "facts.csv", "README_hf.md", "17", "hivepunk-547-db38b7a4"):
+    for needle in (INTENDED_URL, "facts.csv", "README_hf.md", "17", "hivepunk-547-db38b7a4", CONFIRMED_RUN, "self-test: all checks passed"):
         if needle not in art:
             return fail("ARTIFACTS.md missing %r" % needle)
     if "NOT" not in art:
         return fail("ARTIFACTS.md does not state that the live page is unconfirmed")
-    checks.append("ARTIFACTS.md records intended URL, upload files and 17 rows, marked unconfirmed")
+    checks.append("ARTIFACTS.md records intended URL, upload files, 17 rows, confirmed self-test run, marked live-unconfirmed")
 
     for line in checks:
         print(line)
