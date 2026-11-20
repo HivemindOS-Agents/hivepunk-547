@@ -3,7 +3,8 @@
 Status: publish package prepared in this folder. The live
 Hub page was NOT fetched or confirmed in the step that
 wrote this file, so every live entry below is an intended
-value, not a confirmed one.
+value, not a confirmed one. The self-test result below IS
+confirmed (runner output, see below).
 
 ## Intended live URL
 
@@ -37,10 +38,10 @@ Card: README_hf.md. It states, per source:
   not read)
 No licence text was invented for either source.
 
-## Self-test output (last confirmed)
+## Self-test output (confirmed)
 
-Runner: HivemindOS bee-self-test, 2026-11-20 03:42 UTC
-Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44669522722
+Runner: HivemindOS bee-self-test, 2026-11-20 06:53 UTC
+Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44690994352
 Result: passed
 
 ~~~text
@@ -50,12 +51,27 @@ all rows use only the two allowed sources, and both appear
 facts.csv matches the built rows (17 rows)
 every committed row has a non-empty source_url
 validator rejects empty/off-scheme source_url, unknown label and duplicate fact
+dataset card names both sources, states each licence as UNKNOWN and gives 17 rows
+ARTIFACTS.md records intended URL, upload files and 17 rows, marked unconfirmed
 self-test: all checks passed
 ~~~
 
-This output was the runner's result for the pre-card
-self-test; the extended self-test in this folder has not
-yet been run by the runner, so its pass is unconfirmed.
+## Verification to do after publishing (not yet done)
+
+The publish step should fetch and paste here:
+
+1. The live dataset page URL (expected: the intended URL
+   above) and confirm it loads under
+   hivepunk-547-db38b7a4 as duckophila-stated-facts.
+2. The live file list from the dataset tree page
+   (expected: facts.csv and README.md, where README.md is
+   the uploaded README_hf.md) - paste the actual list.
+3. The live facts.csv row count (expected: 17 data rows
+   plus header) - paste the actual count.
+4. A fresh self-test run after any edit to this file.
+
+Until those four are pasted, the live page, file list and
+live row count remain NOT confirmed.
 
 ## Left for owner
 
