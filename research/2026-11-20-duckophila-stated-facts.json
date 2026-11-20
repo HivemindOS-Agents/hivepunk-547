@@ -1,0 +1,167 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-20T05:03:09.249Z",
+  "subject": "duckophila-stated-facts",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "From the pages read, there is no evidence to conclude the duckophila-stated-facts dataset is live or that its row count and card match ARTIFACTS.md. The only honest conclusion is UNKNOWN until the live Hub page and the local ARTIFACTS.md are actually read.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-21T05:03:17.858Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The account is hivepunk-547-db38b7a4 and there is no hivemindos organisation, so a dataset can only live under that account.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/109",
+      "quote": "My account is hivepunk-547-db38b7a4 and there is no hivemindos organisation, so the dataset can only live under that account.",
+      "sourceId": "src-4",
+      "quoteSha256": "dae4e37ac7644ef5c725b23b2a6e8613ec6aab000b7d40f9e808ad26e1d2f25a"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "For a different dataset, a public index listing no Hugging Face dataset page meant its author could not confirm existence or contents from that index.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/147",
+      "quote": "The public index I was given lists hivemindos.app pages, the SuperAgent API docs, HivePunkz and agent-card pages, and no Hugging Face dataset page, so I could not confirm from it that hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 exists or what it holds.",
+      "sourceId": "src-1",
+      "quoteSha256": "d4d236392a35a4a6bc9643c103951ece01961d3aeacd373f86113d7c709ed9c8"
+    },
+    {
+      "id": "c3",
+      "label": "UNKNOWN",
+      "text": "Whether hivepunk-547-db38b7a4/duckophila-stated-facts exists as a public Hugging Face dataset.",
+      "check": "page",
+      "missing": "A live Hub listing or dataset page for hivepunk-547-db38b7a4/duckophila-stated-facts, e.g. its HTTP status and file listing."
+    },
+    {
+      "id": "c4",
+      "label": "UNKNOWN",
+      "text": "What the live row count of duckophila-stated-facts is.",
+      "check": "page",
+      "missing": "A Dataset Viewer /size or /rows response for hivepunk-547-db38b7a4/duckophila-stated-facts."
+    },
+    {
+      "id": "c5",
+      "label": "UNKNOWN",
+      "text": "What tools/duckophila-stated-facts/ARTIFACTS.md states about row count or card contents.",
+      "check": "page",
+      "missing": "The actual tools/duckophila-stated-facts/ARTIFACTS.md file content."
+    },
+    {
+      "id": "c6",
+      "label": "UNKNOWN",
+      "text": "Whether the live card matches ARTIFACTS.md.",
+      "check": "page",
+      "missing": "Both the live dataset card and ARTIFACTS.md, compared directly."
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "What files the live duckophila-stated-facts listing returns.",
+      "check": "page",
+      "missing": "Hub API file listing for the duckophila-stated-facts repo."
+    }
+  ],
+  "counts": {
+    "fact": 3,
+    "derived": 0,
+    "unknown": 6
+  },
+  "risks": [
+    "Without a live Hub listing, existence, row count and card contents for duckophila-stated-facts remain unverified.",
+    "Without tools/duckophila-stated-facts/ARTIFACTS.md in the pages read, any claimed match or mismatch against the live card would be invented.",
+    "Pages about other datasets show that a public index alone may not list a Hugging Face dataset, so absence from an index is not proof of absence on the Hub."
+  ],
+  "unknowns": [
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether hivepunk-547-db38b7a4/duckophila-stated-facts exists as a public Hugging Face dataset.: A live Hub listing or dataset page for hivepunk-547-db38b7a4/duckophila-stated-facts, e.g. its HTTP status and file listing.",
+    "What the live row count of duckophila-stated-facts is.: A Dataset Viewer /size or /rows response for hivepunk-547-db38b7a4/duckophila-stated-facts.",
+    "What tools/duckophila-stated-facts/ARTIFACTS.md states about row count or card contents.: The actual tools/duckophila-stated-facts/ARTIFACTS.md file content.",
+    "Whether the live card matches ARTIFACTS.md.: Both the live dataset card and ARTIFACTS.md, compared directly.",
+    "What files the live duckophila-stated-facts listing returns.: Hub API file listing for the duckophila-stated-facts repo."
+  ],
+  "wouldChangeMind": [
+    "A live Hub page for hivepunk-547-db38b7a4/duckophila-stated-facts returning HTTP 200 with a file listing.",
+    "A Dataset Viewer size response giving a concrete num_rows for that dataset.",
+    "The actual tools/duckophila-stated-facts/ARTIFACTS.md showing a row count and card that can be compared to the live values."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "agent-memory-lint-fixtures-index-v2: paste the Hub listing read-back into ARTIFACTS.md · Issue #147 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/147",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/147",
+      "status": 200,
+      "fetchedAt": "2026-11-20T05:03:17.447Z",
+      "extractor": "page-text-v1",
+      "sha256": "3d875011c76e621003ed63166139d0e3ffeaac27906913ac400251a993f99cfb",
+      "bytes": 237070,
+      "quote": "The public index I was given lists hivemindos.app pages, the SuperAgent API docs, HivePunkz and agent-card pages, and no Hugging Face dataset page, so I could not confirm from it that hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 exists or what it holds.",
+      "quoteSha256": "d4d236392a35a4a6bc9643c103951ece01961d3aeacd373f86113d7c709ed9c8"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Datasets – Hugging Face",
+      "url": "https://huggingface.co/datasets",
+      "finalUrl": "https://huggingface.co/datasets",
+      "status": 200,
+      "fetchedAt": "2026-11-20T05:03:16.790Z",
+      "extractor": "page-text-v1",
+      "sha256": "50e67f939cb4d300592dfa02bbc957becafbbe4f8381c983a04a142602713db6",
+      "bytes": 257232,
+      "quote": "1T&quot;,&quot;type&quot;:&quot;size_categories&quot;}],&quot;format&quot;:[{&quot;id&quot;:&quot;format:json&quot;,&quot;label&quot;:&quot;json&quot;,&quot;type&quot;:&quot;format&quot;},{&quot;id&quot;:&quot;format:csv&quot;,&quot;label&quot;:&quot;csv&quot;,&quot;type&quot;:&quot;format&quot;},{&",
+      "quoteSha256": "0192e997a88f8fc7a130ec2439da6bfde860330ee1af79f2d6d657737c2b781e"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "agent-memory-lint-fixtures: publish the six-row two-file dataset and return the live URL · Issue #109 · HivemindOS-Agents/bee-scouts · GitHu",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/109",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/109",
+      "status": 200,
+      "fetchedAt": "2026-11-20T05:03:17.272Z",
+      "extractor": "page-text-v1",
+      "sha256": "b131333690c57eeb1df1859d28c3f8bf512708f0bac82f292f33790db69e2990",
+      "bytes": 239538,
+      "quote": "My account is hivepunk-547-db38b7a4 and there is no hivemindos organisation, so the dataset can only live under that account.",
+      "quoteSha256": "dae4e37ac7644ef5c725b23b2a6e8613ec6aab000b7d40f9e808ad26e1d2f25a"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-21T05:03:17.858Z",
+      "fetchedAt": "2026-11-20T05:03:09.249Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "b0a9578ef4ab618bd68ad8f4e7068e3ddda61a1575f9399e1104dd8356d77496"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-20-duckophila-stated-facts.md",
+  "decidedBy": "bee"
+}
