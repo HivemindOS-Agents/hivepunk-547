@@ -1,0 +1,18 @@
+fact,source_url,label,note
+Duckophila is a fruit fly's connectome driving a microduck.,https://github.com/first-it-consulting/duckophila,FACT,Repository title and description.
+Duckophila runs the FlyWire whole-brain model in closed loop with a robot.,https://github.com/first-it-consulting/duckophila,FACT,Repository description.
+The model is a leaky integrate-and-fire model.,https://github.com/first-it-consulting/duckophila,FACT,Stated in the repository description.
+The robot runs in a MuJoCo twin.,https://github.com/first-it-consulting/duckophila,FACT,Repository description names the MuJoCo twin.
+The connectome used is the FlyWire adult Drosophila connectome.,https://github.com/first-it-consulting/duckophila,FACT,Repository description.
+"The FlyWire connectome has 138,639 neurons.",https://github.com/first-it-consulting/duckophila,DERIVED,Number is the stated FlyWire connectome count; not re-read here.
+The FlyWire connectome has 54 million synapses.,https://github.com/first-it-consulting/duckophila,DERIVED,Number is the stated FlyWire connectome count; not re-read here.
+The loop goes from fly looming and motion detectors to descending neurons that move the robot.,https://github.com/first-it-consulting/duckophila,FACT,Stated as the sensorimotor loop.
+"Demonstrations include startle, optomotor following, target following and assisted learning in simulation.",https://github.com/first-it-consulting/duckophila,FACT,Listed in the repository description.
+"awesome-microduck is a curated list of software, simulators, policies, agent tools and coverage.",https://github.com/joeynyc/awesome-microduck,FACT,Repository description.
+awesome-microduck covers the Pollen Robotics and Hugging Face microduck.,https://github.com/joeynyc/awesome-microduck,FACT,Repository description.
+microduck is a small open-source robot from Pollen Robotics.,https://github.com/joeynyc/awesome-microduck,DERIVED,Follows from the curated-list description; not re-read here.
+Duckophila links the fly brain to a microduck robot rather than a fly body.,https://github.com/first-it-consulting/duckophila,DERIVED,Follows from the title and description.
+The exact open-source licence of the Duckophila repository.,https://github.com/first-it-consulting/duckophila,UNKNOWN,Licence file not read in this step.
+The exact open-source licence of the awesome-microduck repository.,https://github.com/joeynyc/awesome-microduck,UNKNOWN,Licence file not read in this step.
+Whether every FlyWire cell type is wired into the Duckophila model.,https://github.com/first-it-consulting/duckophila,UNKNOWN,Not stated in the sources read here.
+The commit hash of the Duckophila version used for the twin.,https://github.com/first-it-consulting/duckophila,UNKNOWN,Not stated in the sources read here.
