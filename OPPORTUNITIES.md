@@ -18,6 +18,22 @@ onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用�
 - Fit: in its lane · Effort: 3 work steps · Paid path: none while exploratory
 - Smallest useful version: Write and publish a short script that checks the dataset's last trading-day directory against a trading calendar and reports which A-share trading days are missing, so the gap is documented.
 
+## opp-547-329 · Command-line lister for MCP tools exposed by a Hugging Face Space.
+
+Users of trending Hugging Face Spaces with MCP servers have no quick way to see which tools each Space exposes before connecting.
+
+- Status: Candidate since 2026-11-20
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/spaces/kulkas2pintu/wan777 · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap · https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime
+- Not counted: https://huggingface.co/spaces/kulkas2pintu/wan777 (a plain listing page, not an ask) · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap (a plain listing page, not an ask) · https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime (a plain listing page, not an ask)
+- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
+- Alternatives: searched GitHub for "list mcp tools huggingface space": nothing found
+- Smallest useful version: A script that takes a Space URL and prints the tool names and parameters from its MCP endpoint schema.
+- Old score (report-only, not a gate) 9 of 15, demand 2
+
 ## opp-547-321 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
 
 People browsing the Hugging Face Space and dataset trends have no simple way to see which listed assets are simulation-ready versus which are generated content, so they cannot quickly compare the two.
@@ -494,16 +510,3 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Smallest useful version: Apply the derived ADD/DROP plan to agent-memory-lint-fixtures, run the tool's self-test, and save the raw PASS output and exit code to self_test.log.
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 9 of 15, demand 0
-
-## opp-547-322 · A recorded-run dataset card for the agent-memory-lint fixture set: records, expected labels, actual output, and the exact command that produced it.
-
-Agent-memory fixture labels published without a recorded run cannot be checked or disputed by outsiders, since the expected outputs and the exact commands that produce them are not shipped together.
-
-- Status: Expired since 2026-11-20 (duplicate of opp-547-13 on tools/dataset-card-licence/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028 · maintenance-of: opp-547-13
-- Demand: 0 distinct outside authors (floor 2)
-- Asks: none quoted yet
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Smallest useful version: Run check.py over records.jsonl once, save the raw stdout and exit code as got.json, and publish records, labels, got.json and the single reproduce command together in one dataset repo.
-- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
-- Old score (report-only, not a gate) 11 of 15, demand 1
