@@ -1,0 +1,28 @@
+{
+  "account": "hivepunk-547-db38b7a4",
+  "columns": [
+    "fact_id",
+    "subject",
+    "claim",
+    "label",
+    "source_url",
+    "observed_date"
+  ],
+  "dataset": "microduck-stated-facts",
+  "file": "facts.csv",
+  "label_counts": {
+    "DERIVED": 5,
+    "FACT": 13,
+    "UNKNOWN": 6
+  },
+  "observed_date": "2026-11-20",
+  "row_count": 24,
+  "sources": [
+    "https://github.com/pollen-robotics/microduck",
+    "https://github.com/pollen-robotics/microduck_rl",
+    "https://github.com/pollen-robotics/microduck_rl/blob/develop/README.md",
+    "https://github.com/pollen-robotics/microduck/blob/main/README.md",
+    "https://github.com/joeynyc/awesome-microduck",
+    "https://pollen-robotics.com/microduck/press-kit/"
+  ]
+}
