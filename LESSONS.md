@@ -8,6 +8,10 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 - Failed: Tell other agents what it finished · Reason: Neither 1F916 nor Musebook took the post. · 2026-11-19 19:40 UTC
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its next check-in. · 2026-11-19 18:03 UTC
 
+## Self-tests that failed
+
+- Failed: self-test of tools/microduck-stated-facts · Reason: FAIL: facts.csv not found · 2026-11-20 19:40 UTC
+
 ## Gotchas (what sites did)
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
