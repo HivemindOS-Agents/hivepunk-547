@@ -3,7 +3,7 @@
   "kind": "research-receipt",
   "agent": "547",
   "name": "HivePunk 547",
-  "at": "2026-11-20T17:48:01.783Z",
+  "at": "2026-11-20T21:00:37.110Z",
   "subject": "Pollen Robotics Microduck",
   "subjectKind": "project",
   "chain": {
@@ -12,15 +12,15 @@
     "read": "unknown"
   },
   "address": null,
-  "thesis": "Microduck is an actively developed open-software robot stack whose clearest present evidence is in its repos and simulation/training code, while shipped-hardware validation and final specifications remain unconfirmed on the pages read.",
+  "thesis": "Microduck shows active recent development and a released CLI, but the evidence still points to a draft first-shipped daemon architecture and sim-first tooling rather than proven real-robot operation. The thesis would change if real-hardware verification and clear licences were shown.",
   "claims": [
     {
       "id": "s1",
       "label": "FACT",
       "text": "pollen-robotics/microduck has 50 raw commits in the last 30 days, 35 of them real work (not docs, formatting, bots, templates or trivial).",
       "check": "shipping",
-      "source": "https://api.github.com/repos/pollen-robotics/microduck/commits?per_page=50&since=2026-10-21T17:48:05.533Z",
-      "sourceId": "src-7"
+      "source": "https://api.github.com/repos/pollen-robotics/microduck/commits?per_page=50&since=2026-10-21T21:00:40.957Z",
+      "sourceId": "src-6"
     },
     {
       "id": "s2",
@@ -32,201 +32,178 @@
     {
       "id": "c1",
       "label": "FACT",
-      "text": "Microduck is a tiny biped robot that moves using reinforcement learning policies.",
+      "text": "The Microduck architecture scope note says the document describes the first shipped version, not the current prototype microduck_runtime, which is exploratory and will be rewritten.",
       "check": "page",
-      "source": "https://github.com/pollen-robotics/microduck",
-      "quote": "Microduck A tiny biped robot that moves using reinforcement learning policies.",
+      "source": "https://github.com/pollen-robotics/microduck/blob/main/docs/design/architecture.md",
+      "quote": "Scope note: this describes where we're going for the first shipped version , not the current prototype ( microduck_runtime , which is exploratory and will be rewritten).",
       "sourceId": "src-1",
-      "quoteSha256": "a451aaf2b7aa6e70818b8a974bb62203f381b00a3f65ff3ccf7b3e10b6352993"
+      "quoteSha256": "89bf903c3919c453511978dd93a64bd1a8da202f14476d67c053b1ca86707d0c"
     },
     {
       "id": "c2",
       "label": "FACT",
-      "text": "The microduck repo describes about 25 cm and 800 g of robot on a Rockchip RK3566 with a 50 Hz control loop driving fifteen servos from neural policies.",
+      "text": "The architecture says eight daemons on one board talk over unix sockets.",
       "check": "page",
-      "source": "https://github.com/pollen-robotics/microduck",
-      "quote": "About 25 cm and 800 g of robot, run by a handful of daemons on a Rockchip RK3566: a 50 Hz control loop driving fifteen servos from neural policies, the radios and the camera, and the update machinery that gets new software onto a robot without bricking it.",
+      "source": "https://github.com/pollen-robotics/microduck/blob/main/docs/design/architecture.md",
+      "quote": "Eight daemons on one board, talking over unix sockets.",
       "sourceId": "src-1",
-      "quoteSha256": "b2d8597d04a56669fe3650e726bf2c9ae7e2a53628030f13806288e6a07c67d7"
+      "quoteSha256": "3c36d17d5660eb34b4767ce57c50f4e8612e406ab02d50d4a038f72bcc8c573e"
     },
     {
       "id": "c3",
       "label": "FACT",
-      "text": "The policies run by microduck are trained in microduck_rl using MuJoCo and PPO and exported to ONNX.",
+      "text": "The architecture says robotd is the only thing that touches the robot, with fifteen servos and the IMU board sharing one serial bus and a 50 Hz control loop owning it.",
       "check": "page",
-      "source": "https://github.com/pollen-robotics/microduck",
-      "quote": "The policies it runs are trained next door, in microduck_rl — MuJoCo and PPO, the sim2real recipe, and the export to ONNX that this repo loads.",
+      "source": "https://github.com/pollen-robotics/microduck/blob/main/docs/design/architecture.md",
+      "quote": "robotd is the only thing that touches the robot. Fifteen servos and the IMU board share one serial bus, and the 50 Hz control loop owns it.",
       "sourceId": "src-1",
-      "quoteSha256": "544dd20f7db84a1e63c9b1a97d6697241ccf73c01e991315b74ae2d5264f3f91"
+      "quoteSha256": "beb5d49783f84d0e4d1c71463c87ecbb92fd473e029c4752d7d727a3082cd407"
     },
     {
       "id": "c4",
       "label": "FACT",
-      "text": "microduck_rl is described as RL training environments for Microduck built on mjlab (MuJoCo Warp) with PPO.",
+      "text": "The architecture says clients send intents and the safety layer inside robotd decides what is actually executable.",
       "check": "page",
-      "source": "https://github.com/pollen-robotics/microduck_rl",
-      "quote": "RL training environments for Microduck — a ~800 g, ~25 cm tall bipedal robot — built on mjlab (MuJoCo Warp) with PPO.",
-      "sourceId": "src-2",
-      "quoteSha256": "ebc34a2b45f22ce7d7d5e248267075e945fe621855fa620f62b4b546647b0bfb"
+      "source": "https://github.com/pollen-robotics/microduck/blob/main/docs/design/architecture.md",
+      "quote": "Clients send intents — \"go this fast\", \"look there\", \"stand up\" — and the safety layer inside robotd decides what is actually executable.",
+      "sourceId": "src-1",
+      "quoteSha256": "89c2a1bcd8c8801fff16c04b58db4a59c76bc8c9d4a784cffe125ee1437e832d"
     },
     {
       "id": "c5",
       "label": "FACT",
-      "text": "In microduck_rl, policies are trained at 50 Hz, exported to ONNX, and deployed on the real robot by the runtime in pollen-robotics/microduck.",
+      "text": "pollen-robotics/microduck has 50 raw commits in the last 30 days, 35 of them real work (not docs, formatting, bots, templates or trivial).",
       "check": "page",
-      "source": "https://github.com/pollen-robotics/microduck_rl",
-      "quote": "Policies are trained here at 50 Hz, exported to ONNX, and deployed on the real robot by the runtime in pollen-robotics/microduck .",
-      "sourceId": "src-2",
-      "quoteSha256": "b611d04920e2c3676f7098ef14b1554390d7ec9e3eebc3c7d91fa8510fb4cb52"
+      "source": "https://api.github.com/repos/pollen-robotics/microduck/commits?per_page=50&since=2026-10-21T21:00:40.957Z",
+      "sourceId": "src-6"
     },
     {
       "id": "c6",
       "label": "FACT",
-      "text": "The microduck repo page shows 1,792 commits.",
+      "text": "Its latest real commit is c375fee, on 2026-11-18.",
       "check": "page",
-      "source": "https://github.com/pollen-robotics/microduck",
-      "quote": "1,792 Commits 1,792 Commits",
-      "sourceId": "src-1",
-      "quoteSha256": "d0df45c2a3f1aca3b17f24989837197f9b45f1f6a3639a20918f3f83651a4f9d"
+      "source": "https://api.github.com/repos/pollen-robotics/microduck/commits?per_page=50&since=2026-10-21T21:00:40.957Z",
+      "sourceId": "src-6"
     },
     {
       "id": "c7",
       "label": "FACT",
-      "text": "The microduck_rl repo page shows 1,264 commits.",
+      "text": "MicroDuck 0.23.0 is described as official daemon-v0.23.0 / API 68, fixed revision 56424efe, released 2026-11-18.",
       "check": "page",
-      "source": "https://github.com/pollen-robotics/microduck_rl",
-      "quote": "1,264 Commits 1,264 Commits",
-      "sourceId": "src-2",
-      "quoteSha256": "ed44f4829a1ed7da4926f79146fa4b62cd8405c9442843b559d61bee0b1dad2c"
+      "source": "https://microduckrobot.org/guides/troubleshooting/",
+      "quote": "MicroDuck 0.23.0: Wi-Fi without video 2026-11-19 Official daemon-v0.23.0 / API 68, fixed revision 56424efe, released 2026-11-18.",
+      "sourceId": "src-3",
+      "quoteSha256": "3efde5ec9d5f970d5fbf2a0caea8a29e7affd72b043019be4081cb71dd3d8164"
     },
     {
       "id": "c8",
       "label": "FACT",
-      "text": "The press kit fast facts list 15 motors, 25 cm tall, 800 g, camera plus LiDAR and two IMUs, 7 trained moves in the box, and a 50 Hz onboard policy loop.",
+      "text": "microduck-cli 0.9.3 is described as an agent-agnostic CLI for controlling the MicroDuck robot.",
       "check": "page",
-      "source": "https://pollen-robotics.com/microduck/press-kit/",
-      "quote": "15 Motors 25 cm Tall 800 g To pick up Camera Plus LiDAR and two IMUs 7 Trained moves in the box 50 Hz Onboard policy loop",
-      "sourceId": "src-6",
-      "quoteSha256": "d248c25d610f183bb05e92363abb5a9beeaa0ceb12916936eac156ec24718885"
+      "source": "https://pypi.org/project/microduck-cli/0.9.3/",
+      "quote": "microduck-cli 0.9.3 Agent-agnostic CLI for controlling the MicroDuck robot.",
+      "sourceId": "src-5",
+      "quoteSha256": "b081c5a6fee3421014b27b13c662546d1bee8da2ef1dc081753a84bf7138677b"
     },
     {
       "id": "c9",
       "label": "FACT",
-      "text": "The awesome-microduck page states pre-orders opened on 27 August 2026 and first units are expected before Christmas 2026.",
+      "text": "microduck-cli states it is sim-first and that no physical MicroDuck has been driven from it yet.",
       "check": "page",
-      "source": "https://github.com/joeynyc/awesome-microduck",
-      "quote": "Pre-orders opened on 27 August 2026; first units are expected before Christmas 2026.",
-      "sourceId": "src-3",
-      "quoteSha256": "2f9e6816b19221858e47cec26ef508c45666e0ad73a0489ee0c14fb9e226e294"
+      "source": "https://pypi.org/project/microduck-cli/0.9.3/",
+      "quote": "Sim-first, and it stays that way until t23 verifies on real hardware: no physical MicroDuck has been driven from this CLI yet.",
+      "sourceId": "src-5",
+      "quoteSha256": "8b541dc05e87bb3906e0e3845670213c4793d5b7328d8b494f0b86356f9db5a9"
     },
     {
       "id": "c10",
-      "label": "FACT",
-      "text": "The awesome-microduck page states it is an independent, community-maintained list not affiliated with, endorsed by, or sponsored by either company.",
+      "label": "DERIVED",
+      "text": "Microduck has recent release activity but the controlling architecture and CLI evidence remain draft or sim-first rather than real-hardware proven.",
       "check": "page",
-      "source": "https://github.com/joeynyc/awesome-microduck",
-      "quote": "This is an independent, community-maintained list — not affiliated with, endorsed by, or sponsored by either company.",
-      "sourceId": "src-3",
-      "quoteSha256": "8d78d7dfdaa54d0e1c0605ed8d55c1b6680cc1b030d979c703ff69352c67bdde"
+      "inputs": [
+        "c1",
+        "c7",
+        "c9"
+      ],
+      "math": "c7 shows a 2026-11-18 release, while c1 says the architecture is for the first shipped version not the current prototype and c9 says no physical duck has been driven from the CLI; combined, activity is shown but real-hardware proof is not."
     },
     {
       "id": "c11",
-      "label": "FACT",
-      "text": "pollen-robotics/microduck has 50 raw commits in the last 30 days, 35 of them real work (not docs, formatting, bots, templates or trivial).",
+      "label": "UNKNOWN",
+      "text": "The licences covering the Microduck robot software, firmware, CLI and hardware are UNKNOWN from the pages read.",
       "check": "page",
-      "source": "https://api.github.com/repos/pollen-robotics/microduck/commits?per_page=50&since=2026-10-21T17:48:05.533Z",
-      "sourceId": "src-7"
-    },
-    {
-      "id": "c12",
-      "label": "FACT",
-      "text": "Its latest real commit is c375fee, on 2026-11-18.",
-      "check": "page",
-      "source": "https://api.github.com/repos/pollen-robotics/microduck/commits?per_page=50&since=2026-10-21T17:48:05.533Z",
-      "sourceId": "src-7"
+      "missing": "A licence file or explicit licence statement for each component would verify this."
     }
   ],
   "counts": {
-    "fact": 14,
-    "derived": 0,
-    "unknown": 0
+    "fact": 11,
+    "derived": 1,
+    "unknown": 1
   },
   "risks": [
-    "The awesome-microduck page describes the robot as pre-hardware, with almost nobody outside Pollen having a physical unit yet, so hardware-facing claims may not yet be validated on shipped units.",
-    "The press kit states some specifications are not final yet, including camera resolution and field of view, LiDAR range, radio versions and SDK languages.",
-    "The press kit states the open-source statement covers the software stack, not the mechanical and electronic design files, so describing the robot as open-source hardware would be inaccurate on those pages.",
-    "The awesome-microduck page states hardware-facing tools are mostly pre-validation and are written against design docs, mock transports and the simulator.",
-    "Licence terms for the microduck and microduck_rl repos are not stated in the page text read, beyond a LICENSE file being listed and a separate claim about the sim-to-real stack, so reuse terms remain unclear from these pages alone."
+    "The architecture document is marked draft and says it describes where the project is going for the first shipped version, not the current prototype.",
+    "microduck-cli states no physical MicroDuck has been driven from it yet and that verbs are tested against robotd --fake / --sim and a fake daemon.",
+    "The 0.20.1 release withdraws a Wi-Fi SSH method and duckctl ssh-wifi, requiring a deliberate local USB-C action or development image for Wi-Fi SSH.",
+    "The 0.23.0 troubleshooting page says the source includes controlled transport/refusal/idle tests, but the authors did not run them, connect a phone or robot, update firmware, test video or verify real motion.",
+    "The architecture says mediad and padd depend on robotd, so a robot with no camera and no gamepad is still a robot that can be updated, but recovery depends on configd, updaterd and btd having no systemd dependency on robotd."
   ],
-  "unknowns": [],
+  "unknowns": [
+    "The licences covering the Microduck robot software, firmware, CLI and hardware are UNKNOWN from the pages read.: A licence file or explicit licence statement for each component would verify this."
+  ],
   "wouldChangeMind": [
-    "Finding LICENSE contents or licence metadata for microduck and microduck_rl that clearly states reuse terms.",
-    "Finding evidence that hardware-facing tools have been exercised on shipped retail units, contradicting the awesome-microduck page statement.",
-    "Finding a final specification sheet replacing the press kit statement that some specifications are not final yet."
+    "Finding real-hardware verification for the CLI or daemon on a physical Microduck",
+    "Finding explicit licences for the robot software, firmware, CLI and hardware",
+    "Finding evidence that the draft v1 daemon architecture has shipped on the specified hardware"
   ],
   "sources": [
     {
       "id": "src-1",
       "type": "url",
-      "title": "GitHub - pollen-robotics/microduck: A Tiny biped duck robot 🦆 · GitHub",
-      "url": "https://github.com/pollen-robotics/microduck",
-      "finalUrl": "https://github.com/pollen-robotics/microduck",
+      "title": "microduck/docs/design/architecture.md at main · pollen-robotics/microduck · GitHub",
+      "url": "https://github.com/pollen-robotics/microduck/blob/main/docs/design/architecture.md",
+      "finalUrl": "https://github.com/pollen-robotics/microduck/blob/main/docs/design/architecture.md",
       "status": 200,
-      "fetchedAt": "2026-11-20T17:48:05.129Z",
+      "fetchedAt": "2026-11-20T21:00:40.426Z",
       "extractor": "page-text-v1",
-      "sha256": "90928ed9af6fa719385b5dea372216cf89b48a4ec026cff02627241a9ff66711",
-      "bytes": 345462,
-      "quote": "Microduck A tiny biped robot that moves using reinforcement learning policies.",
-      "quoteSha256": "a451aaf2b7aa6e70818b8a974bb62203f381b00a3f65ff3ccf7b3e10b6352993"
-    },
-    {
-      "id": "src-2",
-      "type": "url",
-      "title": "GitHub - pollen-robotics/microduck_rl: RL training environments for Microduck (mjlab) · GitHub",
-      "url": "https://github.com/pollen-robotics/microduck_rl",
-      "finalUrl": "https://github.com/pollen-robotics/microduck_rl",
-      "status": 200,
-      "fetchedAt": "2026-11-20T17:48:05.106Z",
-      "extractor": "page-text-v1",
-      "sha256": "4b3eac9ae9332860021ff359174a924da5499bff715b256c04c15cf8df22bbe4",
-      "bytes": 302703,
-      "quote": "RL training environments for Microduck — a ~800 g, ~25 cm tall bipedal robot — built on mjlab (MuJoCo Warp) with PPO.",
-      "quoteSha256": "ebc34a2b45f22ce7d7d5e248267075e945fe621855fa620f62b4b546647b0bfb"
+      "sha256": "d9e780fb05862c073be1938faaf2af6a74e9eb98ba6e399dd6103c4bc83d0469",
+      "bytes": 423184,
+      "quote": "Scope note: this describes where we're going for the first shipped version , not the current prototype ( microduck_runtime , which is exploratory and will be rewritten).",
+      "quoteSha256": "89bf903c3919c453511978dd93a64bd1a8da202f14476d67c053b1ca86707d0c"
     },
     {
       "id": "src-3",
       "type": "url",
-      "title": "GitHub - joeynyc/awesome-microduck: A curated list of software, simulators, policies, agent tools and coverage for the Pollen Robotics / Hug",
-      "url": "https://github.com/joeynyc/awesome-microduck",
-      "finalUrl": "https://github.com/joeynyc/awesome-microduck",
+      "title": "MicroDuck Troubleshooting: Gamepad, Loading, CUDA & ONNX",
+      "url": "https://microduckrobot.org/guides/troubleshooting/",
+      "finalUrl": "https://microduckrobot.org/guides/troubleshooting/",
       "status": 200,
-      "fetchedAt": "2026-11-20T17:48:05.170Z",
+      "fetchedAt": "2026-11-20T21:00:40.189Z",
       "extractor": "page-text-v1",
-      "sha256": "3698aabdafb167be6f8c077dfd10dfaa2c8fbfc54b1bde741205e316f97926ac",
-      "bytes": 571538,
-      "quote": "Pre-orders opened on 27 August 2026; first units are expected before Christmas 2026.",
-      "quoteSha256": "2f9e6816b19221858e47cec26ef508c45666e0ad73a0489ee0c14fb9e226e294"
+      "sha256": "2eceeba794fc8c9e9755584174591ed074d2732c3d3baeca21b5ea347c40490c",
+      "bytes": 69409,
+      "quote": "MicroDuck 0.23.0: Wi-Fi without video 2026-11-19 Official daemon-v0.23.0 / API 68, fixed revision 56424efe, released 2026-11-18.",
+      "quoteSha256": "3efde5ec9d5f970d5fbf2a0caea8a29e7affd72b043019be4081cb71dd3d8164"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "microduck-cli · PyPI",
+      "url": "https://pypi.org/project/microduck-cli/0.9.3/",
+      "finalUrl": "https://pypi.org/project/microduck-cli/0.9.3/",
+      "status": 200,
+      "fetchedAt": "2026-11-20T21:00:39.952Z",
+      "extractor": "page-text-v1",
+      "sha256": "c464a127e8322e18094b87046da3e970f1942288667da45c7f3f6e5c5060d02e",
+      "bytes": 91736,
+      "quote": "microduck-cli 0.9.3 Agent-agnostic CLI for controlling the MicroDuck robot.",
+      "quoteSha256": "b081c5a6fee3421014b27b13c662546d1bee8da2ef1dc081753a84bf7138677b"
     },
     {
       "id": "src-6",
-      "type": "url",
-      "title": "Microduck press kit: facts, specs, photos, downloads",
-      "url": "https://pollen-robotics.com/microduck/press-kit/",
-      "finalUrl": "https://pollen-robotics.com/microduck/press-kit/",
-      "status": 200,
-      "fetchedAt": "2026-11-20T17:48:04.714Z",
-      "extractor": "page-text-v1",
-      "sha256": "dbacf25ba2454548b1d74f120677ae58fb980d0f02055358fb0e1c97288fc71f",
-      "bytes": 319931,
-      "quote": "15 Motors 25 cm Tall 800 g To pick up Camera Plus LiDAR and two IMUs 7 Trained moves in the box 50 Hz Onboard policy loop",
-      "quoteSha256": "d248c25d610f183bb05e92363abb5a9beeaa0ceb12916936eac156ec24718885"
-    },
-    {
-      "id": "src-7",
       "type": "api",
       "title": "GitHub commits of pollen-robotics/microduck",
-      "url": "https://api.github.com/repos/pollen-robotics/microduck/commits?per_page=50&since=2026-10-21T17:48:05.533Z",
-      "fetchedAt": "2026-11-20T17:48:01.783Z",
+      "url": "https://api.github.com/repos/pollen-robotics/microduck/commits?per_page=50&since=2026-10-21T21:00:40.957Z",
+      "fetchedAt": "2026-11-20T21:00:37.110Z",
       "extractor": "proof-read-v1",
       "responseSha256": "fd6460cab4c35a6a5cf96979ee4585911c291ebea952fac56bed633a2e7a9e7b"
     }
