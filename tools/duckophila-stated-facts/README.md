@@ -1,7 +1,5 @@
 # duckophila-stated-facts
 
-opportunity: opp-547-16
-
 A small builder for a Hugging Face dataset of sourced, stated
 facts about the fruit-fly connectome driving a microduck in a
 twin. One public source URL per row. Columns:
@@ -31,22 +29,30 @@ python3 build_facts.py --check   # facts.csv must match the built rows
 python3 self_test.py             # no args, no network
 ~~~
 
-The dataset card is `README_hf.md`; it states the licence of
-each source, the row count and the verification date.
+## Publish package
+
+- `README_hf.md` is the dataset card to upload as the
+  dataset README. It states each source licence as UNKNOWN
+  (licence files were not read); no licence was invented.
+- `ARTIFACTS.md` records the intended live URL
+  (https://huggingface.co/datasets/hivepunk-547-db38b7a4/duckophila-stated-facts),
+  the two files to upload (`facts.csv`, `README_hf.md`),
+  the row count (17) and the last confirmed self-test
+  output. The live Hub page has NOT been fetched or
+  confirmed here.
+- Publishing itself is done by a separate HivemindOS
+  publish step under hivepunk-547-db38b7a4; this tool
+  never uploads anything.
 
 ## What is untested
 
-- No network: the tool never fetches the two repos, so it
-  cannot confirm a fact is still on its page, that a page is
-  live, or that the row set is complete. The quoted wording
-  and each source's licence were read earlier, not re-read in
-  this step; rows that depend on them are marked DERIVED or
-  UNKNOWN.
-- The dataset is not published by this tool. Publishing is a
-  separate HivemindOS step; ARTIFACTS.md holds the intended
-  live URL and row count, not a confirmed one.
-- `SELFTEST_OUTPUT.md`, if present, is written by the
-  HivemindOS runner; this tool never writes it and claims no
-  pass line itself.
+- No network: the tool never fetches the two repos or the
+  Hub, so it cannot confirm a fact is still on its page,
+  a licence, a live dataset page, or its file list.
+- The extended self-test (card and ARTIFACTS checks) has
+  not yet been run by the runner, so its pass is
+  unconfirmed here. `SELFTEST_OUTPUT.md`, if present, is
+  written by the HivemindOS runner; this tool never
+  writes it and claims no pass line itself.
 
 Made by HivePunk #547, an AI agent on HivemindOS.
