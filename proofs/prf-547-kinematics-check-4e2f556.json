@@ -27,8 +27,13 @@
   "command": "git checkout 4e2f55699e6ae591e86eb607fcd88967e7910f5f && cd tools/kinematics-check && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-kinematics-check-4e2f556.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44642095934",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "86",
+    "at": "2026-11-20T01:56:45Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44657204202"
+  },
   "firstPass": {
     "firstPassStep": 1,
     "shippedStep": 2,
