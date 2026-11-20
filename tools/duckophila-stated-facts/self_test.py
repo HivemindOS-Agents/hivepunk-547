@@ -3,7 +3,10 @@
 
 Runs the tool's own code (build_facts) on its committed sample
 data (facts.csv) and compares the result with what is expected.
-Exit 0 only when every check passes.
+Also checks the dataset card (README_hf.md) and the publish
+record (ARTIFACTS.md) name both allowed sources, state each
+source licence, and record the intended URL, file list and
+row count. Exit 0 only when every check passes.
 """
 
 import csv
@@ -12,6 +15,9 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FACTS = os.path.join(HERE, "facts.csv")
+CARD = os.path.join(HERE, "README_hf.md")
+ARTIFACTS = os.path.join(HERE, "ARTIFACTS.md")
+INTENDED_URL = "https://huggingface.co/datasets/hivepunk-547-db38b7a4/duckophila-stated-facts"
 
 
 def fail(msg):
@@ -27,6 +33,11 @@ def load_tool():
     return build_facts
 
 
+def read_text(path):
+    with open(path, encoding="utf-8") as fh:
+        return fh.read()
+
+
 def main():
     try:
         tool = load_tool()
@@ -35,14 +46,11 @@ def main():
 
     checks = []
 
-    # 1. The tool's built rows validate cleanly.
     problems = tool.validate(tool.ROWS)
     if problems:
         return fail("built rows do not validate: %s" % problems)
     checks.append("built rows validate: %d rows" % len(tool.ROWS))
 
-    # 2. Every built row has a non-empty http(s) source_url and a
-    #    known label, and no duplicate fact.
     seen = set()
     for i, (fact, url, label, _note) in enumerate(tool.ROWS, 1):
         if not url.strip():
@@ -57,7 +65,6 @@ def main():
         seen.add(key)
     checks.append("every built row has a non-empty http(s) source_url, a known label and a unique fact")
 
-    # 3. Only the two allowed sources appear.
     allowed = {tool.DUCKOPHILA, tool.MICRODUCK}
     used = {r[1] for r in tool.ROWS}
     if not used <= allowed:
@@ -66,7 +73,6 @@ def main():
         return fail("not both allowed sources are used: %s" % (allowed - used))
     checks.append("all rows use only the two allowed sources, and both appear")
 
-    # 4. The committed facts.csv matches the tool's built rows.
     if not os.path.exists(FACTS):
         return fail("facts.csv not found")
     on_disk, errs = tool.read_csv(FACTS)
@@ -74,12 +80,10 @@ def main():
         return fail("facts.csv: %s" % "; ".join(errs))
     if tool.render(on_disk) != tool.render(tool.ROWS):
         return fail("facts.csv does not match the built rows; rerun build_facts.py")
-    if len(on_disk) != len(tool.ROWS):
-        return fail("facts.csv has %d rows, expected %d" % (len(on_disk), len(tool.ROWS)))
-    checks.append("facts.csv matches the built rows (%d rows)" % len(on_disk))
+    if len(on_disk) != 17:
+        return fail("facts.csv has %d rows, expected 17" % len(on_disk))
+    checks.append("facts.csv matches the built rows (17 rows)")
 
-    # 5. Every committed row has a non-empty source_url too (direct
-    #    read of the CSV, independent of the tool's render).
     with open(FACTS, encoding="utf-8", newline="") as fh:
         reader = csv.DictReader(fh)
         if reader.fieldnames != list(tool.FIELDS):
@@ -89,10 +93,6 @@ def main():
                 return fail("facts.csv line %d: empty source_url" % n)
     checks.append("every committed row has a non-empty source_url")
 
-    # 6. The validator rejects the cases it is meant to reject.
-    #    The duplicate case must repeat a fact already seen above
-    #    (case/whitespace-insensitively), otherwise no duplicate
-    #    is detected.
     bad_rows = [
         ("no url", "", "FACT", ""),
         ("bad scheme", "ftp://example.org/x", "FACT", ""),
@@ -106,6 +106,32 @@ def main():
         if needle not in joined:
             return fail("validator missed %r: %s" % (needle, joined))
     checks.append("validator rejects empty/off-scheme source_url, unknown label and duplicate fact")
+
+    # Dataset card: both sources named, each licence stated,
+    # front matter present, 17 rows stated.
+    if not os.path.exists(CARD):
+        return fail("README_hf.md not found")
+    card = read_text(CARD)
+    if not card.startswith("---"):
+        return fail("README_hf.md has no YAML front matter")
+    for needle in (tool.DUCKOPHILA, tool.MICRODUCK, "17", "UNKNOWN"):
+        if needle not in card:
+            return fail("README_hf.md missing %r" % needle)
+    if "licence" not in card.lower() and "license" not in card.lower():
+        return fail("README_hf.md does not state any source licence")
+    checks.append("dataset card names both sources, states each licence as UNKNOWN and gives 17 rows")
+
+    # Publish record: intended URL, upload file list, row
+    # count, and the not-yet-confirmed live status.
+    if not os.path.exists(ARTIFACTS):
+        return fail("ARTIFACTS.md not found")
+    art = read_text(ARTIFACTS)
+    for needle in (INTENDED_URL, "facts.csv", "README_hf.md", "17", "hivepunk-547-db38b7a4"):
+        if needle not in art:
+            return fail("ARTIFACTS.md missing %r" % needle)
+    if "NOT" not in art:
+        return fail("ARTIFACTS.md does not state that the live page is unconfirmed")
+    checks.append("ARTIFACTS.md records intended URL, upload files and 17 rows, marked unconfirmed")
 
     for line in checks:
         print(line)
