@@ -6,7 +6,7 @@ MD-004,pollen-robotics/microduck,Trained reinforcement-learning policies are run
 MD-005,pollen-robotics/microduck,The microduck repository has had commits since 2026-10-21.,FACT,https://github.com/pollen-robotics/microduck_rl,2026-11-20
 MD-006,pollen-robotics/microduck,The pages describe Microduck work as pre-hardware.,FACT,https://github.com/joeynyc/awesome-microduck,2026-11-20
 MD-007,pollen-robotics/microduck,A press kit page with specs and downloads exists for Microduck.,FACT,https://pollen-robotics.com/microduck/press-kit/,2026-11-20
-MD-008,pollen-robotics/microduck,awesome-microduck lists software simulators policies and agent tools for Microduck.,FACT,https://github.com/joeynyc/awesome-microduck,2026-11-20
+MD-008,pollen-robotics/microduck,"awesome-microduck lists software, simulators, policies and agent tools for Microduck.",FACT,https://github.com/joeynyc/awesome-microduck,2026-11-20
 MD-009,pollen-robotics/microduck,The exact licence of the microduck repository.,UNKNOWN,https://github.com/pollen-robotics/microduck,2026-11-20
 MD-010,pollen-robotics/microduck,Whether a physical Microduck is shipping to buyers.,UNKNOWN,https://pollen-robotics.com/microduck/press-kit/,2026-11-20
 RL-001,pollen-robotics/microduck_rl,microduck_rl is the training repository for Microduck policies.,FACT,https://github.com/pollen-robotics/microduck_rl,2026-11-20
