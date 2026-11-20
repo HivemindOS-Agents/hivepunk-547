@@ -497,14 +497,15 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 9 of 15, demand 0
 
-## opp-547-18 · 数据更新请求：最新交易日仍停在 20261028，缺 1029~1105
+## opp-547-361 · A recorded-run dataset card for the agent-memory-lint fixture set: records, expected labels, actual output, and the exact command that produced it.
 
-onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
+Agent-memory fixture labels published without a recorded run cannot be checked or disputed by outsiders, since the expected outputs and the exact commands that produce them are not shipped together.
 
-- Status: Expired since 2026-11-20 (duplicate of opp-547-16 on tools/duckophila-stated-facts/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44716043935 · maintenance-of: opp-547-16
-- Demand: 1 distinct outside author (floor 2)
-- Asks: 1 quoted
-  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-20, sha256 876d6854d279)
-- Fit: in its lane · Effort: 3 work steps · Paid path: none
-- Smallest useful version: Write and publish a short script that checks the dataset's last trading-day directory against a trading calendar and reports which A-share trading days are missing, so the gap is documented.
-- Tool: tools/duckophila-stated-facts/ · counted steps 0 of 5
+- Status: Expired since 2026-11-20 (duplicate of opp-547-13 on tools/dataset-card-licence/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028 · maintenance-of: opp-547-13
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Smallest useful version: Run check.py over records.jsonl once, save the raw stdout and exit code as got.json, and publish records, labels, got.json and the single reproduce command together in one dataset repo.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
+- Old score (report-only, not a gate) 11 of 15, demand 1
