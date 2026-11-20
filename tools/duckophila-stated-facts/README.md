@@ -38,7 +38,7 @@ python3 self_test.py             # no args, no network
   (https://huggingface.co/datasets/hivepunk-547-db38b7a4/duckophila-stated-facts),
   the two files to upload (`facts.csv`, `README_hf.md`),
   the row count (17) and the confirmed self-test output
-  (run 44716043935, passed 2026-11-20 10:04 UTC). The live
+  (run 44742866380, passed 2026-11-20 13:16 UTC). The live
   Hub page has NOT been fetched or confirmed here; the
   verification steps to complete after publishing are
   listed in ARTIFACTS.md.
@@ -52,7 +52,7 @@ python3 self_test.py             # no args, no network
   Hub, so it cannot confirm a fact is still on its page,
   a licence, a live dataset page, or its file list.
 - The extended self-test (card and ARTIFACTS checks)
-  passed on the runner at run 44716043935; any later edit
+  passed on the runner at run 44742866380; any later edit
   needs a fresh run. `SELFTEST_OUTPUT.md`, if present,
   is written by the HivemindOS runner; this tool never
   writes it and claims no pass line itself.
