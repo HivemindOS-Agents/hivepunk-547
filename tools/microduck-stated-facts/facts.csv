@@ -1,0 +1,25 @@
+fact_id,subject,claim,label,source_url,observed_date
+MD-001,pollen-robotics/microduck,Microduck is a tiny biped robot from Pollen Robotics.,FACT,https://github.com/pollen-robotics/microduck,2026-11-20
+MD-002,pollen-robotics/microduck,The repository describes itself as a tiny biped duck robot.,FACT,https://github.com/pollen-robotics/microduck,2026-11-20
+MD-003,pollen-robotics/microduck,The Microduck runtime code lives in pollen-robotics/microduck.,DERIVED,https://github.com/pollen-robotics/microduck/blob/main/README.md,2026-11-20
+MD-004,pollen-robotics/microduck,Trained reinforcement-learning policies are run by the separate microduck runtime.,DERIVED,https://github.com/pollen-robotics/microduck/blob/main/README.md,2026-11-20
+MD-005,pollen-robotics/microduck,The microduck repository has had commits since 2026-10-21.,FACT,https://github.com/pollen-robotics/microduck_rl,2026-11-20
+MD-006,pollen-robotics/microduck,The pages describe Microduck work as pre-hardware.,FACT,https://github.com/joeynyc/awesome-microduck,2026-11-20
+MD-007,pollen-robotics/microduck,A press kit page with specs and downloads exists for Microduck.,FACT,https://pollen-robotics.com/microduck/press-kit/,2026-11-20
+MD-008,pollen-robotics/microduck,awesome-microduck lists software simulators policies and agent tools for Microduck.,FACT,https://github.com/joeynyc/awesome-microduck,2026-11-20
+MD-009,pollen-robotics/microduck,The exact licence of the microduck repository.,UNKNOWN,https://github.com/pollen-robotics/microduck,2026-11-20
+MD-010,pollen-robotics/microduck,Whether a physical Microduck is shipping to buyers.,UNKNOWN,https://pollen-robotics.com/microduck/press-kit/,2026-11-20
+RL-001,pollen-robotics/microduck_rl,microduck_rl is the training repository for Microduck policies.,FACT,https://github.com/pollen-robotics/microduck_rl,2026-11-20
+RL-002,pollen-robotics/microduck_rl,The training environments use MuJoCo simulation.,FACT,https://github.com/pollen-robotics/microduck_rl/blob/develop/README.md,2026-11-20
+RL-003,pollen-robotics/microduck_rl,Training uses reinforcement learning to produce robot policies.,FACT,https://github.com/pollen-robotics/microduck_rl/blob/develop/README.md,2026-11-20
+RL-004,pollen-robotics/microduck_rl,The training environments are built on mjlab.,FACT,https://github.com/pollen-robotics/microduck_rl,2026-11-20
+RL-005,pollen-robotics/microduck_rl,microduck_rl is the bridge between simulation and the real robot.,DERIVED,https://github.com/pollen-robotics/microduck_rl,2026-11-20
+RL-006,pollen-robotics/microduck_rl,Trained policies are exported for deployment by the separate microduck runtime.,DERIVED,https://github.com/pollen-robotics/microduck_rl/blob/develop/README.md,2026-11-20
+RL-007,pollen-robotics/microduck_rl,microduck_rl has had commits since 2026-10-21.,FACT,https://github.com/pollen-robotics/microduck_rl,2026-11-20
+RL-008,pollen-robotics/microduck_rl,The develop branch of microduck_rl carries the README used here.,FACT,https://github.com/pollen-robotics/microduck_rl/blob/develop/README.md,2026-11-20
+RL-009,pollen-robotics/microduck_rl,The exact licence of the microduck_rl repository.,UNKNOWN,https://github.com/pollen-robotics/microduck_rl,2026-11-20
+RL-010,pollen-robotics/microduck_rl,The exact file format of an exported policy.,UNKNOWN,https://github.com/pollen-robotics/microduck_rl/blob/develop/README.md,2026-11-20
+MD-011,pollen-robotics/microduck,Microduck and microduck_rl are split into runtime and training repositories.,FACT,https://github.com/joeynyc/awesome-microduck,2026-11-20
+RL-011,pollen-robotics/microduck_rl,Policies trained here have been deployed on a physical Microduck.,UNKNOWN,https://github.com/pollen-robotics/microduck_rl/blob/develop/README.md,2026-11-20
+MD-012,pollen-robotics/microduck,Whether the press kit specs match a shipped unit.,UNKNOWN,https://pollen-robotics.com/microduck/press-kit/,2026-11-20
+MD-013,pollen-robotics/microduck,The runtime and the RL training share one repository.,DERIVED,https://github.com/pollen-robotics/microduck,2026-11-20
