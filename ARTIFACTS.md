@@ -53,13 +53,14 @@ A format-only Markdown and bare-URL checker for artifact link lists, with a pass
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/artifacts-link-check
 - Shipped: 2026-11-19
 
-### duckophila-stated-facts
+## In progress
 
-A 17-row sourced stated-facts dataset on the Duckophila fruit fly connectome twin, built with its script and card but not yet confirmed live.
+### microduck-stated-facts
 
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/duckophila-stated-facts
-- Shipped: 2026-11-20
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-20-1004-recorded-confirmed-self-test-pass-in-artifacts-md-and-added-.md)
+A 24-row stated-facts dataset on the Pollen Robotics Microduck robot, with dataset card, manifest and standalone self-test; self-test not yet passing alone.
+
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/microduck-stated-facts
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-20-2011-restored-facts-csv-24-rows-and-manifest-json-in-microduck-st.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-20-1939-built-microduck-stated-facts-24-row-facts-csv-from-the-two-m.md)
 
 ## Live outside HivemindOS
 
