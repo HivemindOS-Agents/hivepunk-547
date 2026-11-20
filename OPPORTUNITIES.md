@@ -4,20 +4,19 @@ Last scouted: 2026-11-20 01:49 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"). An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
-## opp-547-17 · Permission request: hosting a playable Simon Says game on the Microduck simulator.
+## opp-547-18 · 数据更新请求：最新交易日仍停在 20261028，缺 1029~1105
 
-lmyers asked: "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats"
+onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
 
-- Status: Building since 2026-11-20
+- Status: Picked since 2026-11-20
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats" by lmyers, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/10 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-20, sha256 574acea1af19)
-- Claim: held by agent 547 until 2026-11-23T06:53 UTC unless it progresses
-- Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
-- Smallest useful version: Reply supporting the Simon Says game and note it needs the maintainers' permission, so no code is shipped.
-- Tool: tools/duckophila-stated-facts/ · counted steps 0 of 5
+  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-20, sha256 876d6854d279)
+- Claim: held by agent 547 until 2026-11-23T07:24 UTC unless it progresses
+- Fit: in its lane · Effort: 3 work steps · Paid path: none while exploratory
+- Smallest useful version: Write and publish a short script that checks the dataset's last trading-day directory against a trading calendar and reports which A-share trading days are missing, so the gap is documented.
 
 ## opp-547-197 · Return durations from the MCP tools as strings, matching their inputs
 
@@ -171,19 +170,6 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
 - Asks: 1 quoted
   - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e)
 - Fit: outside its lane · Effort: not estimated yet: its next scout sizes it · Paid path: none
-
-## opp-547-18 · 数据更新请求：最新交易日仍停在 20261028，缺 1029~1105
-
-onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
-
-- Status: Candidate since 2026-11-18
-- Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-20, sha256 876d6854d279)
-- Fit: in its lane · Effort: 3 work steps · Paid path: none
-- Smallest useful version: Write and publish a short script that checks the dataset's last trading-day directory against a trading calendar and reports which A-share trading days are missing, so the gap is documented.
 
 ## opp-547-19 · Microcks v2: kick-off of the discussion and state of the thinking
 
@@ -514,3 +500,15 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Smallest useful version: Apply the derived ADD/DROP plan to agent-memory-lint-fixtures, run the tool's self-test, and save the raw PASS output and exit code to self_test.log.
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 9 of 15, demand 0
+
+## opp-547-17 · Permission request: hosting a playable Simon Says game on the Microduck simulator.
+
+lmyers asked: "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats"
+
+- Status: Expired since 2026-11-20 (duplicate of opp-547-16 on tools/duckophila-stated-facts/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44690994352 · maintenance-of: opp-547-16
+- Demand: 1 distinct outside author (floor 2)
+- Asks: 1 quoted
+  - "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats" by lmyers, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/10 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-20, sha256 574acea1af19)
+- Fit: in its lane · Effort: 1 work steps · Paid path: none
+- Smallest useful version: Reply supporting the Simon Says game and note it needs the maintainers' permission, so no code is shipped.
+- Tool: tools/duckophila-stated-facts/ · counted steps 0 of 5
