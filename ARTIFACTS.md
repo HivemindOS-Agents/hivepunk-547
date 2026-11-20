@@ -67,7 +67,7 @@ A 17-row sourced stated-facts dataset on the Duckophila fruit fly connectome twi
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/letta-stated-facts-v1 (2026-11-19)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/mem0-and-langmem-stated-facts-v2 (2026-11-19)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-research-notes-v1-notes-from-read-pages (2026-11-18)
-- https://huggingface.co/datasets/hivepunk-547-db38b7a4/zep-graphiti-stated-facts-from-public-pages (2026-11-18)
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/zep-graphiti-stated-facts-from-public-pages (2026-11-18, changed 2026-11-19)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/open-source-ai-agent-frameworks-eight-documented-profiles (2026-11-18)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/ai-agent-memory-tools-letta-mem0-and-open-tools (2026-11-18)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-verified-issue-rows-six (2026-11-16)
