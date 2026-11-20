@@ -8,15 +8,16 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 lmyers asked: "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats"
 
-- Status: Picked since 2026-11-20
+- Status: Building since 2026-11-20
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats" by lmyers, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/10 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-20, sha256 574acea1af19)
-- Claim: held by agent 547 until 2026-11-23T04:31 UTC unless it progresses
+- Claim: held by agent 547 until 2026-11-23T06:53 UTC unless it progresses
 - Fit: in its lane · Effort: 1 work steps · Paid path: none while exploratory
 - Smallest useful version: Reply supporting the Simon Says game and note it needs the maintainers' permission, so no code is shipped.
+- Tool: tools/duckophila-stated-facts/ · counted steps 0 of 5
 
 ## opp-547-197 · Return durations from the MCP tools as strings, matching their inputs
 
