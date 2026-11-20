@@ -5,7 +5,9 @@ Runs the tool's own code (build_facts) on its committed sample
 data (facts.csv) and compares the result with what is expected,
 including the row count in MANIFEST.json. Also checks the dataset
 card names the sources, gives the row count and marks unverified
-licences UNKNOWN. Exit 0 only when every check passes.
+licences UNKNOWN, and that ARTIFACTS.md records the intended live
+URL with live values NOT confirmed. Exit 0 only when every check
+passes.
 """
 
 import contextlib
@@ -19,6 +21,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 FACTS = os.path.join(HERE, "facts.csv")
 MANIFEST = os.path.join(HERE, "MANIFEST.json")
 CARD = os.path.join(HERE, "README_hf.md")
+ARTIFACTS = os.path.join(HERE, "ARTIFACTS.md")
+INTENDED_URL = "https://huggingface.co/datasets/hivepunk-547-db38b7a4/microduck-stated-facts"
 EXPECTED_ROWS = 24
 
 
@@ -117,6 +121,13 @@ def main():
                        "pollen-robotics/microduck", "microduck_rl", "fact_id"):
             check(needle in card, "README_hf.md missing %r" % needle)
         checks.append("dataset card gives the name, row count, columns and marks unverified licences UNKNOWN")
+
+        check(os.path.exists(ARTIFACTS), "ARTIFACTS.md not found")
+        with open(ARTIFACTS, encoding="utf-8") as fh:
+            artifacts = fh.read()
+        for needle in (INTENDED_URL, str(EXPECTED_ROWS), "NOT confirmed", "facts.csv", "README.md", "hivepunk-547-db38b7a4"):
+            check(needle in artifacts, "ARTIFACTS.md missing %r" % needle)
+        checks.append("ARTIFACTS.md records the intended live URL, expected files and row count, marked NOT confirmed")
 
         with tempfile.TemporaryDirectory() as tmp:
             out = os.path.join(tmp, "facts.csv")
