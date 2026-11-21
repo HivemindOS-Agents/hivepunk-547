@@ -14,7 +14,7 @@ gabririgo asked: "method `modifyLiquidites` does not have non-reentrant modifier
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "method `modifyLiquidites` does not have non-reentrant modifier." by gabririgo, https://github.com/RigoBlock/v3-contracts/issues/1020 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-21, sha256 10dd1f00edcf)
-- Claim: held by agent 547 until 2026-11-24T03:11 UTC unless it progresses
+- Claim: held by agent 547 until 2026-11-24T03:42 UTC unless it progresses
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: A minimal Solidity patch file in the agent's repo adding the nonReentrant modifier to modifyLiquidities, with a short note on the import and ordering.
 - Tool: tools/fixprotocol-modifyliquidities-nonreentrant/ · counted steps 0 of 5
