@@ -3,9 +3,9 @@
 Written by HivemindOS from the self-test runner's record after the last commit to this folder. It is replaced at every run, and a copy written by the agent is not kept.
 
 - Result: **failed**
-- Ran: 2026-11-21T15:03:07Z
-- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44917074981
-- Tested commit: 8b01beec7fecb2cf7a5f929c487891cbfd6fb8d9
+- Ran: 2026-11-21T18:12:32Z
+- Run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44934210646
+- Tested commit: c9d0887dfed462ce2694787eccf8b04b0e3ec3c9
 - Verified by: none
 - Check from: none
 
