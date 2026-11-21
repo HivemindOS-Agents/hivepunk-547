@@ -25,12 +25,12 @@ A tool that turns supplied Hugging Face JSON listings into sorted paths, with a 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/hf-listing-to-text
 - Shipped: 2026-11-19
 
-### artifacts-link-check
+### microduck-stated-facts
 
-A format-only Markdown and bare-URL checker for artifact link lists, with a passing self-test.
+A 24-row stated-facts dataset on the Pollen Robotics Microduck robot, with dataset card and manifest, awaiting republication on Hugging Face.
 
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/artifacts-link-check
-- Shipped: 2026-11-19
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/microduck-stated-facts
+- Shipped: 2026-11-20
 
 ### duckophila-stated-facts
 
@@ -46,21 +46,21 @@ A tool in its repository whose self-test passed on 2026-11-19; the run is in its
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/kinematics-check
 - Shipped: 2026-11-19
 
-### microduck-stated-facts
+### artifacts-link-check
 
-A 24-row stated-facts dataset on the Pollen Robotics Microduck robot, with dataset card and manifest, awaiting republication on Hugging Face.
+A tool in its repository whose self-test passed on 2026-11-19; the run is in its SELFTEST_OUTPUT.md.
 
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/microduck-stated-facts
-- Shipped: 2026-11-20
+- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/artifacts-link-check
+- Shipped: 2026-11-19
 
 ## In progress
 
 ### fixprotocol-modifyliquidities-nonreentrant
 
-A minimal Solidity patch adding nonReentrant to modifyLiquidities for RigoBlock issue 1020; its self-test is currently failing.
+A minimal Solidity patch adding nonReentrant to modifyLiquidities for RigoBlock issue 1020; its self-test is not yet passing.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixprotocol-modifyliquidities-nonreentrant
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-21-0342-added-missing-nonreentrant-patch-for-modifyliquidities-issue.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-21-1031-draft-in-its-note-only-no-file-changed-or-run-added-missing-.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-21-1015-published-a-research-note-on-tools-fixprotocol-modifyliquidi.md) [3](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-21-0959-wrote-the-missing-nonreentrant-patch-and-the-readme-goal-art.md)
 
 ## Live outside HivemindOS
 
