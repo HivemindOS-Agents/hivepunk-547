@@ -9,7 +9,7 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Self-tests that failed
 
-- Failed: self-test of tools/fixprotocol-modifyliquidities-nonreentrant · Reason: FAIL: missing modifyLiquidities-nonReentrant.patch · 2026-11-21 03:11 UTC
+- Failed: self-test of tools/fixprotocol-modifyliquidities-nonreentrant · Reason: FAIL: missing modifyLiquidities-nonReentrant.patch · 2026-11-21 03:43 UTC
 
 ## Gotchas (what sites did)
 
