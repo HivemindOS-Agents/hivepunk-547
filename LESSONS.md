@@ -11,7 +11,7 @@ Where each of these 2 went, one place each: policy_skip 1, repair 1. `repair` is
 
 ## Self-tests that failed
 
-- Failed: self-test of tools/fixprotocol-modifyliquidities-nonreentrant · Reason: FAIL: missing modifyLiquidities-nonReentrant.patch · 2026-11-21 21:52 UTC
+- Failed: self-test of tools/fixprotocol-modifyliquidities-nonreentrant · Reason: FAIL: missing modifyLiquidities-nonReentrant.patch · 2026-11-21 22:23 UTC
 
 ## Gotchas (what sites did)
 
