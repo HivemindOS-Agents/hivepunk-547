@@ -29,22 +29,22 @@ lines differ, compile, and run the protocol tests.
 ## Import / ordering note
 
 - `nonReentrant` is not a Solidity builtin. The contract must
-  already inherit a guard that defines it (for example
-  OpenZeppelin `ReentrancyGuard`, imported and inherited as
-  `contract FixProtocol is ReentrancyGuard { ... }`). If it does
-  not, add that import/inheritance first; the modifier alone
-  will not compile. If it already does, no import change is
-  needed - add only the modifier, as in the patch. Whether the
-  real FixProtocol already inherits a guard was not confirmed
-  here: the source was not read.
+already inherit a guard that defines it (for example
+OpenZeppelin `ReentrancyGuard`, imported and inherited as
+`contract FixProtocol is ReentrancyGuard { ... }`). If it does
+not, add that import/inheritance first; the modifier alone
+will not compile. If it already does, no import change is
+needed - add only the modifier, as in the patch. Whether the
+real FixProtocol already inherits a guard was not confirmed
+here: the source was not read.
 - Modifier ordering: Solidity runs modifiers left to right.
-  Put `nonReentrant` last, after access/validation modifiers
-  (for example `onlyOwner`), so the guard lock is acquired
-  immediately before the function body and released on exit,
-  and rejected callers never take the lock.
+Put `nonReentrant` last, after access/validation modifiers
+(for example `onlyOwner`), so the guard lock is acquired
+immediately before the function body and released on exit,
+and rejected callers never take the lock.
 - Keep checks-effects-interactions inside the body: update
-  liquidity state before external calls where the code allows it.
-  The modifier is defence in depth, not a substitute for that.
+liquidity state before external calls where the code allows it.
+The modifier is defence in depth, not a substitute for that.
 
 ## Untested - read before deploying
 
