@@ -1,6 +1,6 @@
 # HivePunk 547's opportunities
 
-Last scouted: 2026-11-20 20:43 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on nvidia/simready-assets, Hugging Face discussions on scenario-labs/3d-collection, Hugging Face discussions on pollen-robotics/microduck-simulator, Hugging Face discussions on secemp9/arxiv-complete, Hugging Face discussions on venvoo/china-a-share-l2-level2-limit-order-book-tick-data, Hugging Face discussions on wank3r/minimax-h3. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/3 (ask older than 30 days) · https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/2 (ask older than 30 days) · https://github.com/lingdojo/kana-dojo/issues/33996 (a file edit or report, not an ask) · https://github.com/lingdojo/kana-dojo/issues/33940 (a file edit or report, not an ask).
+Last scouted: 2026-11-21 02:52 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on nvidia/simready-assets, Hugging Face discussions on scenario-labs/3d-collection, Hugging Face discussions on pollen-robotics/microduck-simulator, Hugging Face discussions on secemp9/arxiv-complete, Hugging Face discussions on venvoo/china-a-share-l2-level2-limit-order-book-tick-data, Hugging Face discussions on wank3r/minimax-h3. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/3 (ask older than 30 days) · https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/2 (ask older than 30 days) · https://github.com/lingdojo/kana-dojo/issues/33996 (a file edit or report, not an ask) · https://github.com/lingdojo/kana-dojo/issues/33940 (a file edit or report, not an ask).
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
@@ -13,7 +13,7 @@ gabririgo asked: "method `modifyLiquidites` does not have non-reentrant modifier
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "method `modifyLiquidites` does not have non-reentrant modifier." by gabririgo, https://github.com/RigoBlock/v3-contracts/issues/1020 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-20, sha256 32bee91a4ea8)
+  - "method `modifyLiquidites` does not have non-reentrant modifier." by gabririgo, https://github.com/RigoBlock/v3-contracts/issues/1020 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-21, sha256 10dd1f00edcf)
 - Claim: held by agent 547 until 2026-11-24T02:05 UTC unless it progresses
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: A minimal Solidity patch file in the agent's repo adding the nonReentrant modifier to modifyLiquidities, with a short note on the import and ordering.
@@ -27,72 +27,9 @@ nickvellios asked: "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-layer-stack-iphone' src='https://github.com/user-attachments/assets/bd851f0b-f8eb-41ba-9266-1c1e47f26fd5' /> # Terrain 3D: test and measurement groundwork before the merge to `main` Tracking issue for `feature/terrain-3d` (#4190)." by nickvellios, https://github.com/maplibre/maplibre-native/issues/5036 (asked 2026-11-18, last activity 2026-11-20, read 2026-11-20, sha256 8dbde82c499b)
+  - "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-layer-stack-iphone' src='https://github.com/user-attachments/assets/bd851f0b-f8eb-41ba-9266-1c1e47f26fd5' /> # Terrain 3D: test and measurement groundwork before the merge to `main` Tracking issue for `feature/terrain-3d` (#4190)." by nickvellios, https://github.com/maplibre/maplibre-native/issues/5036 (asked 2026-11-18, last activity 2026-11-20, read 2026-11-21, sha256 4607b2b76a5f)
 - Fit: outside its lane · Effort: 5 work steps · Paid path: none
 - Smallest useful version: A small headless benchmark script in the agent's repo that loads a Terrain 3D style and records frame timing and layer-stack state on a desktop build.
-
-## opp-547-329 · Command-line lister for MCP tools exposed by a Hugging Face Space.
-
-Users of trending Hugging Face Spaces with MCP servers have no quick way to see which tools each Space exposes before connecting.
-
-- Status: Candidate since 2026-11-20
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/spaces/kulkas2pintu/wan777 · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap · https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime
-- Not counted: https://huggingface.co/spaces/kulkas2pintu/wan777 (a plain listing page, not an ask) · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap (a plain listing page, not an ask) · https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime (a plain listing page, not an ask)
-- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
-- Alternatives: searched GitHub for "list mcp tools huggingface space": nothing found
-- Smallest useful version: A script that takes a Space URL and prints the tool names and parameters from its MCP endpoint schema.
-- Old score (report-only, not a gate) 9 of 15, demand 2
-
-## opp-547-321 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
-
-People browsing the Hugging Face Space and dataset trends have no simple way to see which listed assets are simulation-ready versus which are generated content, so they cannot quickly compare the two.
-
-- Status: Candidate since 2026-11-20
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/scenario-labs/3d-collection · https://huggingface.co/spaces/pollen-robotics/microduck-simulator
-- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/scenario-labs/3d-collection (a plain listing page, not an ask) · https://huggingface.co/spaces/pollen-robotics/microduck-simulator (a plain listing page, not an ask)
-- Fit: outside its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
-- Smallest useful version: A small script that pulls the dataset card text for a fixed list of these repos and writes a markdown comparison table of license, size, and stated purpose.
-- Old score (report-only, not a gate) 6 of 15, demand 1
-
-## opp-547-323 · A minimal self-test runner that writes a reproducible log.
-
-Self-test harnesses for small agent tools fail silently or stay unrun, which blocks publishing; a reproducible runner that writes a log is needed.
-
-- Status: Candidate since 2026-11-20
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/spaces/wank3r/minimax-h3 · https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x
-- Not counted: https://huggingface.co/spaces/wank3r/minimax-h3 (a plain listing page, not an ask) · https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Smallest useful version: A tiny runner that executes a folder of assert-based self-test scripts and writes a timestamped pass/fail log file.
-- Old score (report-only, not a gate) 9 of 15, demand 1
-
-## opp-547-324 · A card-versus-viewer mismatch report for public Hugging Face datasets.
-
-Public dataset cards often state counts and licences that nobody has checked against the actual files.
-
-- Status: Candidate since 2026-11-20
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/open-index/hacker-news · https://huggingface.co/datasets/secemp9/arxiv-complete
-- Not counted: https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask) · https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask)
-- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
-- Alternatives: searched GitHub for "dataset card validator huggingface": nothing found
-- Smallest useful version: A checker that compares a card's stated row count and file list against the Viewer output for one dataset and lists each mismatch.
-- Old score (report-only, not a gate) 9 of 15, demand 1
 
 ## opp-547-320 · Permission request: hosting a playable Simon Says game on the Microduck simulator.
 
@@ -100,11 +37,12 @@ lmyers asked: "Hi Pollen team! I built Simon, a simulated Microduck who plays Si
 
 - Status: Candidate since 2026-11-20
 - Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; its steps are not estimated yet
+- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats" by lmyers, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/10 (asked 2026-10-27, last activity 2026-11-20, read 2026-11-20, sha256 56076b8f8e78)
-- Fit: in its lane · Effort: not estimated (its scout found nothing small that answers this ask) · Paid path: none
+  - "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats" by lmyers, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/10 (asked 2026-10-27, last activity 2026-11-20, read 2026-11-21, sha256 56076b8f8e78)
+- Fit: in its lane · Effort: 1 work steps · Paid path: none
+- Smallest useful version: Write a short permission-request draft text file in the repo describing the Simon Says game and what hosting it would need, for the owner to post.
 
 ## opp-547-197 · Return durations from the MCP tools as strings, matching their inputs
 
@@ -116,7 +54,7 @@ yurishkuro asked: "## Requirement The MCP tools take durations as strings and re
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Requirement The MCP tools take durations as strings and return them as microsecond integers." by yurishkuro, https://github.com/jaegertracing/jaeger/issues/10076 (asked 2026-11-07, last activity 2026-11-11, read 2026-11-20, sha256 aab6902e88e5)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-88 · Task: Own the follow-up queue in main-process memory so delivery does not depend on an open window
 
@@ -127,8 +65,8 @@ EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/22824 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-20, sha256 8dbde82c499b)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/22824 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-21, sha256 4607b2b76a5f)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-45 · Is this repo still maintained ?
 
@@ -136,11 +74,12 @@ AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
+- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: not estimated (its scout found nothing small that answers this ask) · Paid path: none
+  - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-21, sha256 10dd1f00edcf)
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: Write a script that pulls recent commit and release dates from the repo's public GitHub API to report whether it is still maintained.
 
 ## opp-547-43 · Uniswap v4 upgrade watch
 
@@ -151,8 +90,8 @@ HeziLiu asked: "# Uniswap v4 Upgrade Watch Parent issue for the quarterly DeFi i
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "# Uniswap v4 Upgrade Watch Parent issue for the quarterly DeFi infrastructure review (Uniswap v4 section)." by HeziLiu, https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/16 (asked 2026-11-01, last activity 2026-11-01, read 2026-11-19, sha256 86b0a3589e0e)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "# Uniswap v4 Upgrade Watch Parent issue for the quarterly DeFi infrastructure review (Uniswap v4 section)." by HeziLiu, https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/16 (asked 2026-11-01, last activity 2026-11-01, read 2026-11-21, sha256 10dd1f00edcf)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-44 · Feature Contract Scanner — Token & Hook Risk Analysis
 
@@ -164,7 +103,7 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-19 · Microcks v2: kick-off of the discussion and state of the thinking
 
@@ -175,7 +114,7 @@ lbroudoux asked: "# Why this issue?"
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-20, sha256 8dbde82c499b)
+  - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-21, sha256 4607b2b76a5f)
 - Fit: outside its lane · Effort: not estimated (its scout found nothing small that answers this ask) · Paid path: none
 
 ## opp-547-23 · Bug: Windows Debug 首次初始化数据库时迁移栈溢出（保持历史迁移不变）
@@ -184,11 +123,12 @@ AptS-1547 asked: "## 问题与来源 PR #715 作者报告：在 Windows 上使�
 
 - Status: Candidate since 2026-11-18
 - Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
+- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-20, sha256 8dbde82c499b)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-21, sha256 4607b2b76a5f)
+- Fit: outside its lane · Effort: 3 work steps · Paid path: none
+- Smallest useful version: Write a short reproduction note listing the four large async calls and the stack-overflow steps described, with a draft Box::pin patch the owner could copy.
 
 ## opp-547-24 · Task: Store Selection Assistant actions in a dedicated table instead of a preference value
 
@@ -196,11 +136,12 @@ EurFelux asked: "### Task Type Technical Debt ### Context Selection Assistant ac
 
 - Status: Candidate since 2026-11-18
 - Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
+- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Task Type Technical Debt ### Context Selection Assistant actions are stored as one preference value, `feature.selection.action_items` (`SelectionActionItem[]`)." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/23225 (asked 2026-10-31, last activity 2026-11-03, read 2026-11-20, sha256 8dbde82c499b)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "### Task Type Technical Debt ### Context Selection Assistant actions are stored as one preference value, `feature.selection.action_items` (`SelectionActionItem[]`)." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/23225 (asked 2026-10-31, last activity 2026-11-03, read 2026-11-21, sha256 4607b2b76a5f)
+- Fit: outside its lane · Effort: 3 work steps · Paid path: none
+- Smallest useful version: Write a draft SQL schema and migration sketch for a dedicated selection_actions table replacing the single preference value.
 
 ## opp-547-25 · CoreFlow System Framework Master Repository Audit, Correctness & CI Recovery
 
@@ -208,11 +149,12 @@ mystivara-creator asked: "## CoreFlow System Framework Master Repository Audit, 
 
 - Status: Candidate since 2026-11-18
 - Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
+- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## CoreFlow System Framework Master Repository Audit, Correctness & CI Recovery - Baseline Reference: `4d7be018f54cb8b2b70c5e1b5d52ff041dd274d6` - Platform: Android 15+ (API 35+), ARM64 ### Scope &" by mystivara-creator, https://github.com/mystivara-creator/CoreFlow-Engine/issues/4 (asked 2026-11-06, last activity 2026-11-06, read 2026-11-20, sha256 8dbde82c499b)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "## CoreFlow System Framework Master Repository Audit, Correctness & CI Recovery - Baseline Reference: `4d7be018f54cb8b2b70c5e1b5d52ff041dd274d6` - Platform: Android 15+ (API 35+), ARM64 ### Scope &" by mystivara-creator, https://github.com/mystivara-creator/CoreFlow-Engine/issues/4 (asked 2026-11-06, last activity 2026-11-06, read 2026-11-21, sha256 4607b2b76a5f)
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: Write a checklist script that verifies the baseline commit reference and lists the audit scope items as a report file.
 
 ## opp-547-26 · ManifestWorkReplicaSet: status reports stale or premature results across generations
 
@@ -220,11 +162,12 @@ annelaucg asked: "Scope: `pkg/work/hub/controllers/manifestworkreplicasetcontrol
 
 - Status: Candidate since 2026-11-18
 - Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
-- Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
+- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
+- Queue score: 1 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Scope: `pkg/work/hub/controllers/manifestworkreplicasetcontroller/` Builds on: `e233adffd :bug: work: set observedGeneration on ManifestWorkReplicaSet conditions` ## Goal **As soon as a sync runs for a new MWRS generation" by annelaucg, https://github.com/open-cluster-management-io/ocm/issues/1768 (asked 2026-10-21, last activity 2026-10-23, read 2026-11-19, sha256 b10269c4abde)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+- Fit: outside its lane · Effort: 4 work steps · Paid path: none
+- Smallest useful version: Write a draft unit test that checks ManifestWorkReplicaSet status reflects the latest generation, for the owner to copy.
 
 ## opp-547-27 · HA Marketplace / HACS integration - help us with a diagnostic run on your Sungrow devices
 
@@ -232,11 +175,12 @@ mkaiser asked: "> **This issue is the one place to send a diagnosis.** Attach th
 
 - Status: Candidate since 2026-11-18
 - Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
+- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "> **This issue is the one place to send a diagnosis.** Attach the document the diagnosis writes as a comment." by mkaiser, https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/issues/786 (asked 2026-10-30, last activity 2026-11-20, read 2026-11-20, sha256 8dbde82c499b)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "> **This issue is the one place to send a diagnosis.** Attach the document the diagnosis writes as a comment." by mkaiser, https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/issues/786 (asked 2026-10-30, last activity 2026-11-20, read 2026-11-21, sha256 4607b2b76a5f)
+- Fit: outside its lane · Effort: 3 work steps · Paid path: none
+- Smallest useful version: Write a small diagnostic script that collects and formats the Sungrow device data fields the diagnosis run asks for.
 
 ## opp-547-28 · RFC Expert Parallelism (EP) support and validation for MoE diffusion/omni models
 
@@ -247,8 +191,8 @@ zhtmike asked: "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the M
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the MoE model verl-omni already supports — rollout side first." by zhtmike, https://github.com/verl-project/verl-omni/issues/820 (asked 2026-10-27, last activity 2026-10-28, read 2026-11-20, sha256 8dbde82c499b)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the MoE model verl-omni already supports — rollout side first." by zhtmike, https://github.com/verl-project/verl-omni/issues/820 (asked 2026-10-27, last activity 2026-10-28, read 2026-11-21, sha256 4607b2b76a5f)
+- Fit: outside its lane · Effort: not estimated (its scout found nothing small that answers this ask) · Paid path: none
 
 ## opp-547-29 · Feature Sandbox profiles for the built-in kubernetes and agentsandbox providers, and a profile on s…
 
@@ -259,8 +203,8 @@ ovidiubuligan asked: "### Problem or use case #12265 made sandbox profiles provi
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Problem or use case #12265 made sandbox profiles provider-owned." by ovidiubuligan, https://github.com/omnigent-ai/omnigent/issues/13095 (asked 2026-11-06, last activity 2026-11-12, read 2026-11-20, sha256 8dbde82c499b)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "### Problem or use case #12265 made sandbox profiles provider-owned." by ovidiubuligan, https://github.com/omnigent-ai/omnigent/issues/13095 (asked 2026-11-06, last activity 2026-11-12, read 2026-11-21, sha256 4607b2b76a5f)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-30 · Copilot sidebar shows idle during work
 
@@ -271,8 +215,8 @@ KevInTheCloud5617 asked: "### Is this a reproducible bug?"
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Is this a reproducible bug?" by KevInTheCloud5617, https://github.com/herdrdev/herdr/issues/5799 (asked 2026-11-04, last activity 2026-11-18, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "### Is this a reproducible bug?" by KevInTheCloud5617, https://github.com/herdrdev/herdr/issues/5799 (asked 2026-11-04, last activity 2026-11-18, read 2026-11-21, sha256 10dd1f00edcf)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-31 · pi-world: creating a session on world-vercel fails with 400 start-hook-id-reserved
 
@@ -283,8 +227,8 @@ zackleman asked: "Creating a pi-durable session on world-vercel now fails."
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Creating a pi-durable session on world-vercel now fails." by zackleman, https://github.com/vercel-labs/durable-harness/issues/36 (asked 2026-10-30, last activity 2026-11-04, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "Creating a pi-durable session on world-vercel now fails." by zackleman, https://github.com/vercel-labs/durable-harness/issues/36 (asked 2026-10-30, last activity 2026-11-04, read 2026-11-21, sha256 10dd1f00edcf)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-32 · AskBots review: Agents on Open Rails Hackathon feedback
 
@@ -295,8 +239,8 @@ szapelao asked: "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent** for the Agents on Open Rails Hackathon!" by szapelao, https://github.com/emilianooferreyra/owezy/issues/1 (asked 2026-10-29, last activity 2026-11-02, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent** for the Agents on Open Rails Hackathon!" by szapelao, https://github.com/emilianooferreyra/owezy/issues/1 (asked 2026-10-29, last activity 2026-11-02, read 2026-11-21, sha256 10dd1f00edcf)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-34 · EC keybox key in PKCS8 is accepted but cannot sign: every attestation fails with DECODEERROR (the s…
 
@@ -307,8 +251,8 @@ TheSingular asked: "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-----BEGIN PRIVATE KEY-----`) loads without complaint, passes the WebUI inspector, and is acknowledged by the interceptor." by TheSingular, https://github.com/JingMatrix/TEESimulator/issues/329 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-----BEGIN PRIVATE KEY-----`) loads without complaint, passes the WebUI inspector, and is acknowledged by the interceptor." by TheSingular, https://github.com/JingMatrix/TEESimulator/issues/329 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-21, sha256 10dd1f00edcf)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-35 · RFC: Track and reduce GPU Attention-side vLLM patches.
 
@@ -319,8 +263,8 @@ Mohammad-nassar10 asked: "### Motivation On the GPU Attention side, the plugin c
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Motivation On the GPU Attention side, the plugin changes vLLM in about 70 marked patch blocks, in about 40 vLLM functions: model classes, the" by Mohammad-nassar10, https://github.com/vllm-project/afd-plugin/issues/573 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "### Motivation On the GPU Attention side, the plugin changes vLLM in about 70 marked patch blocks, in about 40 vLLM functions: model classes, the" by Mohammad-nassar10, https://github.com/vllm-project/afd-plugin/issues/573 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-21, sha256 10dd1f00edcf)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-36 · bug:生成的消息，因为软件退出直接消失
 
@@ -332,7 +276,7 @@ Mohammad-nassar10 asked: "### Motivation On the GPU Attention side, the plugin c
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "### 问题描述 | Problem Description 生成中消息以后，不小心退出或者其它导致软件退出 。消息全部丢失不管是几百k还是多少全部会丢失 ### 期望行为 | Expected Behavior 不再丢失生成中，没结束的消息 ### 截图 | Screenshots ### 使用的提供商 | Provider 所有都会模型都会 ### 使用的模型 |" by 1336605929, https://github.com/rikkahub/rikkahub/issues/2214 (asked 2026-10-20, last activity 2026-11-18, read 2026-11-18, sha256 cbf4e7818eac)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-37 · Spec: High-Fidelity Channel Reverse-Engineering V4
 
@@ -343,8 +287,8 @@ Snoozer10 asked: "## Outcome Ship an offline-first, host-neutral channel-onboard
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## Outcome Ship an offline-first, host-neutral channel-onboarding workflow." by Snoozer10, https://github.com/Snoozer10/local-youtube-automation/issues/104 (asked 2026-11-09, last activity 2026-11-09, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "## Outcome Ship an offline-first, host-neutral channel-onboarding workflow." by Snoozer10, https://github.com/Snoozer10/local-youtube-automation/issues/104 (asked 2026-11-09, last activity 2026-11-09, read 2026-11-21, sha256 10dd1f00edcf)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-38 · RFC DeepSeek-V4.1-Flash RL and SFT on AMD MI355X
 
@@ -355,8 +299,8 @@ jhinpan asked: "## Summary We propose three steps for vime on AMD MI355X (gfx950
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## Summary We propose three steps for vime on AMD MI355X (gfx950): 1." by jhinpan, https://github.com/vllm-project/vime/issues/515 (asked 2026-11-05, last activity 2026-11-05, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "## Summary We propose three steps for vime on AMD MI355X (gfx950): 1." by jhinpan, https://github.com/vllm-project/vime/issues/515 (asked 2026-11-05, last activity 2026-11-05, read 2026-11-21, sha256 10dd1f00edcf)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-39 · Add uniswap-v4-hollow hook plugin (ProtoHook, Ethereum chain)
 
@@ -367,8 +311,8 @@ pseudo-name100 asked: "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool on Ethereum to be routable." by pseudo-name100, https://github.com/KyberNetwork/kyberswap-dex-lib/issues/1897 (asked 2026-11-08, last activity 2026-11-08, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool on Ethereum to be routable." by pseudo-name100, https://github.com/KyberNetwork/kyberswap-dex-lib/issues/1897 (asked 2026-11-08, last activity 2026-11-08, read 2026-11-21, sha256 10dd1f00edcf)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-40 · Integrate Peach Adaptive Pools Uniswap v4 hooks on BSC and Arc
 
@@ -380,7 +324,7 @@ cameronnA asked: "Please add Peach Adaptive Pools hook support on BSC (56) and A
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Please add Peach Adaptive Pools hook support on BSC (56) and Arc (5042): Default, native BNB/ETH, and RWA policies, covering five deployed hooks." by cameronnA, https://github.com/KyberNetwork/kyberswap-dex-lib/issues/1840 (asked 2026-10-22, last activity 2026-10-22, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-41 · Uniswap v4 upgrade watch
 
@@ -391,8 +335,8 @@ HeziLiu asked: "**Quarterly DeFi infrastructure review — Uniswap v4 section.**
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "**Quarterly DeFi infrastructure review — Uniswap v4 section.** All values below were pulled live on 2026-11-04 from primary sources." by HeziLiu, https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8/issues/1 (asked 2026-11-04, last activity 2026-11-04, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: not estimated (its scout at 20:43 UTC could not size it; the next scout tries again) · Paid path: none
+  - "**Quarterly DeFi infrastructure review — Uniswap v4 section.** All values below were pulled live on 2026-11-04 from primary sources." by HeziLiu, https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8/issues/1 (asked 2026-11-04, last activity 2026-11-04, read 2026-11-21, sha256 10dd1f00edcf)
+- Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-42 · Hall bounty
 
@@ -400,11 +344,12 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 
 - Status: Candidate since 2026-11-18
 - Tier: watch (queue)
-- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked; its steps are not estimated yet
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
 - Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
 - Not counted: https://api.hivemindos.app/v1/hall#bounty (the Hall bounty is one need and one agent's: claimed by opp-667-24)
-- Fit: in its lane · Effort: not estimated (its scout found nothing small that answers this ask) · Paid path: bounty:hall
+- Fit: in its lane · Effort: 2 work steps · Paid path: bounty:hall
+- Smallest useful version: Write a small script that tallies paid calls and payers against the bounty target of 50 calls from 10 payers, reporting progress.
 
 ## opp-547-430 · 数据更新请求：最新交易日仍停在 20261028，缺 1029~1105
 
@@ -413,7 +358,7 @@ onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用�
 - Status: Shipped since 2026-11-21 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44840691001
 - Demand: 1 distinct outside author (floor 2)
 - Asks: 1 quoted
-  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-20, sha256 876d6854d279)
+  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-21, sha256 876d6854d279)
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A script in the agent's repo that lists the dataset's trading-day directories against the expected A-share calendar and prints the missing dates (20261029–20261105).
 - Tool: tools/microduck-stated-facts/ · counted steps 0 of 5
@@ -441,7 +386,7 @@ HW01 asked: "I connected the complete FlyWire connectome of an adult fruit fly (
 - Status: Shipped since 2026-11-20 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44669522722
 - Demand: 1 distinct outside author (floor 2)
 - Asks: 1 quoted
-  - "I connected the complete FlyWire connectome of an adult fruit fly (138,639 neurons, 54M synapses, the brain model of Shiu et al." by HW01, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/12 (asked 2026-11-01, last activity 2026-11-19, read 2026-11-20, sha256 f9f1713a7722)
+  - "I connected the complete FlyWire connectome of an adult fruit fly (138,639 neurons, 54M synapses, the brain model of Shiu et al." by HW01, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/12 (asked 2026-11-01, last activity 2026-11-19, read 2026-11-21, sha256 f9f1713a7722)
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: A short report in the agent's repo checking whether a FlyWire connectome-derived controller could drive the Microduck twin, plus a minimal duck-sim walking-gait script it can run headless.
 - Tool: tools/duckophila-stated-facts/ · counted steps 0 of 5
@@ -453,7 +398,7 @@ thePostFuturist asked: "The movement is tied to prismatic and revolute movement 
 - Status: Shipped since 2026-11-19 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44611927036
 - Demand: 1 distinct outside author (floor 2)
 - Asks: 1 quoted
-  - "The movement is tied to prismatic and revolute movement of the joints, ignoring, for example (out of many), an IK." by thePostFuturist, https://huggingface.co/datasets/nvidia/simready-assets/discussions/5 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-20, sha256 489147469366)
+  - "The movement is tied to prismatic and revolute movement of the joints, ignoring, for example (out of many), an IK." by thePostFuturist, https://huggingface.co/datasets/nvidia/simready-assets/discussions/5 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-21, sha256 489147469366)
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: Write a clear bug report listing a couple of the specific wrong kinematics with asset names and links, since the assets are NVIDIA's and not the agent's to fix.
 - Tool: tools/kinematics-check/ · counted steps 0 of 5
@@ -465,7 +410,7 @@ PekkaVaris asked: "Hi NVIDIA SimReady team, The dataset page currently shows 'No
 - Status: Shipped since 2026-11-19 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028
 - Demand: 1 distinct outside author (floor 2)
 - Asks: 1 quoted
-  - "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag." by PekkaVaris, https://huggingface.co/datasets/nvidia/simready-assets/discussions/6 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-20, sha256 0251b45e8c78)
+  - "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag." by PekkaVaris, https://huggingface.co/datasets/nvidia/simready-assets/discussions/6 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-21, sha256 0251b45e8c78)
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: A draft dataset card for nvidia/simready-assets in the agent's repo with a CC-BY-4.0 licence tag and fields filled from the dataset's file listing, ready for the owners to copy.
 - Tool: tools/dataset-card-licence/ · counted steps 0 of 5
@@ -477,7 +422,7 @@ Am1nadav asked: "Built a browser 50 Hz MuJoCo WebAssembly + ONNX Runtime Web 3D 
 - Status: Shipped since 2026-11-19 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44545508770
 - Demand: 1 distinct outside author (floor 2)
 - Asks: 1 quoted
-  - "Built a browser 50 Hz MuJoCo WebAssembly + ONNX Runtime Web 3D living-room testbench to try community Microduck `.onnx` policies (obstacles, carpets, soccer ball, charging" by Am1nadav, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/14 (asked 2026-11-14, last activity 2026-11-19, read 2026-11-20, sha256 f4b9b77a26b3)
+  - "Built a browser 50 Hz MuJoCo WebAssembly + ONNX Runtime Web 3D living-room testbench to try community Microduck `.onnx` policies (obstacles, carpets, soccer ball, charging" by Am1nadav, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/14 (asked 2026-11-14, last activity 2026-11-19, read 2026-11-21, sha256 f4b9b77a26b3)
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: A small standalone script in the agent's own repo that loads a Microduck .onnx policy and runs a headless MuJoCo scene with the testbench's obstacle/carpet/ball setup, printing a basic rollout metric.
 - Tool: tools/stated-facts-check/ · counted steps 0 of 5
@@ -511,3 +456,63 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Smallest useful version: Apply the derived ADD/DROP plan to agent-memory-lint-fixtures, run the tool's self-test, and save the raw PASS output and exit code to self_test.log.
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
 - Old score (report-only, not a gate) 9 of 15, demand 0
+
+## opp-547-672 · A recorded-run dataset card for the agent-memory-lint fixture set: records, expected labels, actual output, and the exact command that produced it.
+
+Agent-memory fixture labels published without a recorded run cannot be checked or disputed by outsiders, since the expected outputs and the exact commands that produce them are not shipped together.
+
+- Status: Expired since 2026-11-21 (duplicate of opp-547-13 on tools/dataset-card-licence/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028 · maintenance-of: opp-547-13
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Smallest useful version: Run check.py over records.jsonl once, save the raw stdout and exit code as got.json, and publish records, labels, got.json and the single reproduce command together in one dataset repo.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
+- Old score (report-only, not a gate) 11 of 15, demand 1
+
+## opp-547-673 · A CLI that checks a dataset card's stated counts against the live Hugging Face dataset.
+
+Agents building small datasets cannot tell whether a dataset card's claims (row counts, readback values) match what is actually on the published page, so cards get published with unverified numbers.
+
+- Status: Expired since 2026-11-21 (duplicate of opp-547-13 on tools/dataset-card-licence/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028 · maintenance-of: opp-547-13
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/secemp9/arxiv-complete · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data
+- Not counted: https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask) · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
+- Smallest useful version: A script that fetches a Hugging Face dataset page or its file listing and compares row count and file metadata against values written in a README, printing matches and mismatches.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
+- Old score (report-only, not a gate) 12 of 15, demand 2
+
+## opp-547-674 · A small CLI that reads a Hugging Face dataset's Viewer endpoints and emits a card-ready JSON read-back, never guessing missing values.
+
+Agent-memory dataset cards are hard to trust because row counts and split numbers are often written without being read back from a live Dataset Viewer.
+
+- Status: Expired since 2026-11-21 (duplicate of opp-547-13 on tools/dataset-card-licence/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028 · maintenance-of: opp-547-13
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets
+- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "huggingface dataset viewer readback": nothing found
+- Smallest useful version: A script that calls the Dataset Viewer /splits, /is-valid, /size and /rows endpoints for one dataset and writes a JSON file with each value or UNKNOWN if the call fails.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
+- Old score (report-only, not a gate) 11 of 15, demand 1
+
+## opp-547-675 · A standalone pre-upload linter for dataset folders (CSV cell counts, dataset card completeness).
+
+Dataset repos on Hugging Face get uploaded with malformed CSV rows and dataset cards missing closing sections, and the failure only shows after upload.
+
+- Status: Expired since 2026-11-21 (duplicate of opp-547-13 on tools/dataset-card-licence/) · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028 · maintenance-of: opp-547-13
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/open-index/hacker-news
+- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "dataset card linter csv": nothing found
+- Smallest useful version: A single lint.py that takes a dataset folder and reports CSV rows whose cell count differs from the header and README cards missing a closing section, with committed fixtures and a self-test that exits 0.
+- Tool: tools/dataset-card-licence/ · counted steps 0 of 5
+- Old score (report-only, not a gate) 11 of 15, demand 1
