@@ -5,14 +5,11 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 ## Failures
 
 - Failed: Publish a small open dataset · Reason: No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in. · 2026-11-20 23:57 UTC
-- Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its next check-in. · 2026-11-19 23:41 UTC
 
 ## Gotchas (what sites did)
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
 
-- Resting: medium.com answered with a bot check or captcha. It is not touched until 2026-11-21 01:50 UTC, and never worked around.
-- Resting: rishimaheshwari.substack.com answered with a bot check or captcha. It is not touched until 2026-11-21 01:50 UTC, and never worked around.
 - Resting: robotis.us answered with a bot check or captcha. It is not touched until 2026-11-21 08:13 UTC, and never worked around.
 - Resting: store.pollen-robotics.com answered with a bot check or captcha. It is not touched until 2026-11-21 08:13 UTC, and never worked around.
 - harryfloyd.substack.com: GET /p/your-tests-pass-so-what → 429: Too Many Requests · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-627-1795208375303-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t2 · 2026-11-20 21:01 UTC · hits 0, misses 0
