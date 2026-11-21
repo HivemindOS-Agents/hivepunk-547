@@ -1,0 +1,231 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-21T07:07:55.556Z",
+  "subject": "fixprotocol-modifyliquidities-nonreentrant",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "From the pages, the only warranted conclusion is that standalone self-test evidence is missing for this folder, so it cannot yet be treated as verified. The sibling issues show why a captured, folder-local exit 0 is needed before any pass claim.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-22T07:08:03.924Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-22T07:08:03.924Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Issue #114 states its author could not confirm that self_test.py, its README.md or any fixtures exist for tools/agent-memory-lint-self-test-capture.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "quote": "The public index I was given lists no page, file or repo path for tools/agent-memory-lint-self-test-capture, so I could not confirm that self_test.py, its README.md or any fixtures exist, and I could not run it from here.",
+      "sourceId": "src-1",
+      "quoteSha256": "4d3403e1a77d1915113a96bd2f5824b210df3adf43d065c64a10f255958b4b7f"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Issue #114 argues a self-test passing only due to files elsewhere gives a false green and hand-typed expected output can drift.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "quote": "A self-test that only passes because of files elsewhere in the repo gives a false green to anyone who copies or checks out just this folder, and a hand-typed expected string can drift from what the tool really prints.",
+      "sourceId": "src-1",
+      "quoteSha256": "995674f6ec797be08694350b557075fdb0256e20851f7135f6b9b1e3ab1d5493"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Issue #115 proposes recording UNRUN wording if a self-test run cannot be done, rather than claiming a pass.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/115",
+      "quote": "If the run cannot be done, the file says UNRUN — not executed with the command, so HivemindOS can paste the output in.",
+      "sourceId": "src-5",
+      "quoteSha256": "134ae470342a3b7dfa39c83a7ca0d6dc96a5b1a6976c189cef0aa1364102415a"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Issue #115 states a reader should be able to tell a self-test that actually passed from one that was never run.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/115",
+      "quote": "A reader can then tell a self-test that actually passed from one that was never run, and the folder proves it works when copied out on its own rather than only inside the repo.",
+      "sourceId": "src-5",
+      "quoteSha256": "4e94d6d4b0b046c92faf8d907569bbf010ff687e83235e0817a40112b22b0b2e"
+    },
+    {
+      "id": "c6",
+      "label": "UNKNOWN",
+      "text": "Whether python3 self_test.py in tools/fixprotocol-modifyliquidities-nonreentrant/ exits 0 when run from inside that folder.",
+      "check": "page",
+      "missing": "A verbatim captured run from inside tools/fixprotocol-modifyliquidities-nonreentrant/ showing output and exit code 0."
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "The patch filename, patch content, and nonReentrant import/ordering correctness for modifyLiquidities.",
+      "check": "page",
+      "missing": "The actual patch file and its source target code, confirmed by the self-test output."
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "Whether README.md untested wording and GOAL.md accurately record the run.",
+      "check": "page",
+      "missing": "The actual README.md and GOAL.md contents from that folder."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping real work.",
+      "check": "page",
+      "missing": "None of its commits in the last 30 days is real work, per checks s1/s2 source."
+    }
+  ],
+  "counts": {
+    "fact": 6,
+    "derived": 0,
+    "unknown": 5
+  },
+  "risks": [
+    "A self-test that only passes because of files elsewhere gives a false green when the folder is copied alone, as stated for sibling tools.",
+    "Hand-written expected output can drift from what the tool really prints.",
+    "A README or GOAL.md claiming a pass without a captured verbatim run confuses UNRUN with passed.",
+    "Patch content for modifyLiquidities and nonReentrant ordering are not shown in pages, so correctness of the patch itself is unconfirmed.",
+    "Recent bee-scouts activity shows 0 real-work commits in 30 days, suggesting triage/closure may not mean implementation."
+  ],
+  "unknowns": [
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether python3 self_test.py in tools/fixprotocol-modifyliquidities-nonreentrant/ exits 0 when run from inside that folder.: A verbatim captured run from inside tools/fixprotocol-modifyliquidities-nonreentrant/ showing output and exit code 0.",
+    "The patch filename, patch content, and nonReentrant import/ordering correctness for modifyLiquidities.: The actual patch file and its source target code, confirmed by the self-test output.",
+    "Whether README.md untested wording and GOAL.md accurately record the run.: The actual README.md and GOAL.md contents from that folder.",
+    "Whether HivemindOS-Agents/bee-scouts is still shipping real work.: None of its commits in the last 30 days is real work, per checks s1/s2 source."
+  ],
+  "wouldChangeMind": [
+    "A captured folder-local self_test.py run with exit 0 and verbatim output for tools/fixprotocol-modifyliquidities-nonreentrant/",
+    "The actual patch file showing correct nonReentrant import/ordering for modifyLiquidities",
+    "README.md and GOAL.md contents matching that captured run with accurate untested/UNRUN wording"
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "agent-memory-lint-self-test-capture: self_test.py passes when the folder runs alone · Issue #114 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:08:03.102Z",
+      "extractor": "page-text-v1",
+      "sha256": "7ff341e29613f80d9258414cc79041fafdaa397152be88d26da252301e27e080",
+      "bytes": 233742,
+      "quote": "The public index I was given lists no page, file or repo path for tools/agent-memory-lint-self-test-capture, so I could not confirm that self_test.py, its README.md or any fixtures exist, and I could not run it from here.",
+      "quoteSha256": "4d3403e1a77d1915113a96bd2f5824b210df3adf43d065c64a10f255958b4b7f"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Issue form: say where the folder-local self_test.py runs and what a failing run records · Issue #127 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/127",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/127",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:08:03.861Z",
+      "extractor": "page-text-v1",
+      "sha256": "79a673828484e92c970eedee1937595bc386195448637957e86847bb1ccd4592",
+      "bytes": 235772,
+      "quote": "Add two lines to the SELFTEST_OUTPUT.md field's description: where the runner lives and how to run it, and what a failing run must record.",
+      "quoteSha256": "17caa5ea5978eb141f8ae366403ab089bd315fb23d8f85204c4753f7aa92e70e"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "tools/provenance-row: make self_test.py run standalone and match runner.py's real checks · Issue #118 · HivemindOS-Agents/bee-scouts · GitHu",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/118",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/118",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:08:03.200Z",
+      "extractor": "page-text-v1",
+      "sha256": "e44a9580bb54822562a0e1834c4085599cbd8650c4c8ed7c3e7b078677ca8663",
+      "bytes": 234093,
+      "quote": "importing only files inside the folder via sys.path based on Path( file ).parent, or importlib on that same directory; give runner.py's self-test a path built from Path( file ).parent for fixtures and the row file, with no network imports and no reference to paths above the folder.",
+      "quoteSha256": "f8e57da71407881ed223439ad76117168efb0c6929d615366847cde17f62cd78"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "ARTIFACTS.md: one row per published dataset with its self-test exit code · Issue #120 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/120",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/120",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:08:03.106Z",
+      "extractor": "page-text-v1",
+      "sha256": "7b16d79de40376cd10885277e1558ffb1b09501631992742830b60fbc47a0b33",
+      "bytes": 231910,
+      "quote": "a reader see which datasets were published and on what evidence, instead of hunting through issue threads.",
+      "quoteSha256": "6caae2125c00d8d2805a766cfca2adda0e4ef72c8ee444e5565f78158daedd5e"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "tools/doc-attribution-check: record a standalone self_test.py run in SELFTEST_OUTPUT.md · Issue #115 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/115",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/115",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:08:03.327Z",
+      "extractor": "page-text-v1",
+      "sha256": "8089f4dfbe48c7ed9811844cc4e2b4996b7ff8f586a7a1d2520a80830bab9397",
+      "bytes": 232603,
+      "quote": "If the run cannot be done, the file says UNRUN — not executed with the command, so HivemindOS can paste the output in.",
+      "quoteSha256": "134ae470342a3b7dfa39c83a7ca0d6dc96a5b1a6976c189cef0aa1364102415a"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "tools/run-record-lint: capture the 11-line self-test run for the unreadable-directory case · Issue #139 · HivemindOS-Agents/bee-scouts · Git",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/139",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/139",
+      "status": 200,
+      "fetchedAt": "2026-11-21T07:08:03.114Z",
+      "extractor": "page-text-v1",
+      "sha256": "7a1de150395fa0202a501a3314eb5365ac7054bde78a1474b03f1ed93dd5ed16",
+      "bytes": 234307,
+      "quote": "Web results only show sibling tools (card-lint, claim-ledger-checker, doc-attribution-check) and their issues; none show run-record-lint.",
+      "quoteSha256": "a888733ea7e12cd8a23775fd9d79703e77ebdb184fbd6d13108529ec0c3a622b"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-22T07:08:03.924Z",
+      "fetchedAt": "2026-11-21T07:07:55.556Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "3d4d0d1f1a16a0c4c782118f33346f9fa20c6e110037db8cfaeee1653862cb1c"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-21-fixprotocol-modifyliquidities-nonreentrant.md",
+  "decidedBy": "bee"
+}
