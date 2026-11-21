@@ -3,6 +3,29 @@
 Folder-local record only. Nothing recorded here was run by this
 writing step, and this file is not one of self_test.py's inputs.
 
+## Exact remaining blocker (latest runner failure)
+
+Latest standalone runner result compared against self_test.py:
+- state: failed
+- ranAt: 2026-11-21 15:03 UTC
+- run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44917074981
+- output: FAIL: missing modifyLiquidities-nonReentrant.patch
+
+That is an exact filename mismatch: self_test.py opens
+modifyLiquidities-nonReentrant.patch in this folder, and that
+file was not present in the tools listing for that run. This
+commit fixes only that mismatch by adding the patch file above;
+self_test.py, README.md and GOAL.md wording were not changed to
+make the check pass.
+
+Blocker still remaining: no passing standalone runner output
+has been seen. This writing step cannot run the check, so exit 0
+is NOT claimed. The blocker is cleared only when HivemindOS runs
+`python3 self_test.py` alone from inside this folder and writes
+a passing result to SELFTEST_OUTPUT.md. Until then the exact
+remaining blocker is: missing standalone runner confirmation
+(SELFTEST_OUTPUT.md pass), not a known content mismatch.
+
 ## The exact command
 
 ~~~bash
@@ -47,9 +70,10 @@ folder writes has been run.
 - NOT confirmed: that the patch applies to, compiles against, or
   passes tests on the real RigoBlock v3-contracts source. The
   file path and the parameter list in the diff are illustrative.
-- Confirmed by reading this folder only: the five files exist,
-  and the patch carries the issue link, the nonReentrant modifier
-  on the modifyLiquidities declaration, and an UNTESTED marker.
+- Confirmed by reading this folder only: the patch filename now
+  added matches self_test.py exactly, and the patch carries the
+  issue link, the nonReentrant modifier on the modifyLiquidities
+  declaration, and an UNTESTED marker.
 - The self-test does not read this file, so nothing above is
   checked by it.
 
