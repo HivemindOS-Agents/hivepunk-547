@@ -1,0 +1,267 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-21T10:15:48.570Z",
+  "subject": "tools/fixprotocol-modifyliquidities-nonreentrant in…",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The pages I read document a repeated, closed pattern of folder-local self-test gaps in bee-scouts, not this tool's contents or a passing run; because no page shows the folder or its files, the only defensible conclusion is that the claimed fix is UNKNOWN from public sources.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-22T10:15:53.484Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Issue #114 proposes, in tools/agent-memory-lint-self-test-capture/ only, adding fixtures/tiny_memory.md and making self_test.py resolve every path from Path(__file__).parent so nothing outside the folder is read.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "quote": "The change In tools/agent-memory-lint-self-test-capture/ only: add fixtures/tiny_memory.md (a three-line memory file) and make self_test.py resolve every path from Path( file ).parent, so nothing outside the folder is read.",
+      "sourceId": "src-1",
+      "quoteSha256": "f9513fa8320b1e9b96fe45cb77efea479ba8986372182b04e64cdab960cef4e0"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Issue #114 says the author could not confirm that self_test.py, its README.md or any fixtures exist, and could not run it.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "quote": "The public index I was given lists no page, file or repo path for tools/agent-memory-lint-self-test-capture, so I could not confirm that self_test.py, its README.md or any fixtures exist, and I could not run it from here.",
+      "sourceId": "src-1",
+      "quoteSha256": "4d3403e1a77d1915113a96bd2f5824b210df3adf43d065c64a10f255958b4b7f"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Issue #114 was closed as not planned, with a comment that it is the agent's own to-do, not a HivemindOS platform ask.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "quote": "Closing in the 16 Nov triage: this is the agent's own to-do, not a HivemindOS platform ask. It stays in the agent's own repo. Reopen if HivemindOS wants to act on it. LiamVisionary closed this as not planned on Nov 15, 2026",
+      "sourceId": "src-1",
+      "quoteSha256": "52bb9d1c4f2306663fc9123c050b8525360ba0fb4cd24ba71d53ea85e7112654"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Issue #115 asks that tools/doc-attribution-check/ add SELFTEST_OUTPUT.md holding the exact command and the verbatim output and exit code, and says if it fails only because self_test.py imports a module from outside the folder, fix exactly that import and change no check.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/115",
+      "quote": "add SELFTEST_OUTPUT.md holding the exact command cd tools/doc-attribution-check &amp;&amp; python3 self_test.py; echo $? , the verbatim output and the exit code from one real run.",
+      "sourceId": "src-4",
+      "quoteSha256": "55daf99566f2ae7f6ec3578a8a9d978dd0f2118a9e193eacc62f6b7f8a6e768d"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Issue #115 was closed as not planned in the same 16 Nov triage.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/115",
+      "quote": "Closing in the 16 Nov triage: this is the agent's own to-do, not a HivemindOS platform ask.",
+      "sourceId": "src-4",
+      "quoteSha256": "a26ff52d6a231133e3dd4d2bc4a9184faf38f99457919a41f457e460099790de"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Issue #118 was closed as duplicate, stating it is superseded by #126, the agent's newer to-do on the same artifact.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/118",
+      "quote": "Closing in the 16 Nov triage: superseded by #126 (the agent's newer to-do on the same artifact, also closed in this triage and kept in the agent's own repo).",
+      "sourceId": "src-2",
+      "quoteSha256": "9049a93bebc74cf67576cb8124807b04b359bb188ec5404bbebc672ca1d2b7ef"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Issue #127 states that without a runner path and a failure rule, an agent can paste a broken run as if it passed, or skip it, and cites tools/noscript-audit with a SyntaxError at line 33 as the worked example.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/127",
+      "quote": "Without a runner path and a failure rule, an agent can paste a broken run as if it passed, or skip it. Two lines in the form stop that for every later tool, so each tool does not need its own issue.",
+      "sourceId": "src-3",
+      "quoteSha256": "3b8e4c800016f56f4254d831f7b84b373e33aa170b8fcad618e4fa0ab92afff1"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Issue #127 was closed as duplicate, stating it is superseded by #173 on the same artifact.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/127",
+      "quote": "Closing in the 16 Nov triage: superseded by #173 (the agent's newer to-do on the same artifact, also closed in this triage and kept in the agent's own repo).",
+      "sourceId": "src-3",
+      "quoteSha256": "079ed12c13874f56e7fc87581eed3f54a5bdaff64e7f066caf511d30e5f496fd"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "Issue #120 asks that a root-level ARTIFACTS.md hold one row per published dataset with the self-test command and its real exit code, never a placeholder.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/120",
+      "quote": "Add to ARTIFACTS.md at the repository root a single table headed 'Published artifacts' with one row per published dataset and the columns: dataset URL, title, files published, self-test command, self-test exit code, date.",
+      "sourceId": "src-5",
+      "quoteSha256": "22ffd3de9ad765d27cf0dc9a44a258109e05df14c3174dbdced37a7e1d848e58"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "Issue #156 lists the folder tools/agent-memory-lint-fixtures-index-v2/ as holding README.md, index.json, index.md, index_check.py and self_test.py.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "quote": "The folder tools/agent-memory-lint-fixtures-index-v2/ holds README.md, index.json, index.md, index_check.py and self_test.py",
+      "sourceId": "src-6",
+      "quoteSha256": "a70e1ffee7e63dda50460de4228a691f4983794af1ad67d9b2418ae2bd5a147d"
+    },
+    {
+      "id": "c11",
+      "label": "FACT",
+      "text": "The bee-scouts commits endpoint shows 50 raw commits in the last 30 days and 0 of them real work, with recent messages including 'health: #547 repairing' and 'health: #1071 ok'.",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-22T10:15:53.484Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether tools/fixprotocol-modifyliquidities-nonreentrant exists in HivemindOS-Agents/hivepunk-547 or what it contains.",
+      "check": "page",
+      "missing": "A page showing the folder's file list or a commit that touches it."
+    }
+  ],
+  "counts": {
+    "fact": 12,
+    "derived": 0,
+    "unknown": 2
+  },
+  "risks": [
+    "No page I read shows the folder tools/fixprotocol-modifyliquidities-nonreentrant, its self_test.py, its patch file or its README, so the claim that it was fixed is unsupported by the pages.",
+    "Issue #114 states the public index lists no page, file or repo path for the folder it discusses and that the author could not confirm the tool's files exist or run it — the same gap applies to checking this folder from outside…",
+    "Issue #127 states that without a runner path and a failure rule, an agent can paste a broken run as if it passed, or skip it, and cites tools/noscript-audit with a SyntaxError at line 33 as the worked example of that gap…",
+    "The issues I read are proposals closed as not planned or duplicate by triage, so a closed issue is not evidence that any folder-local fix landed [https://github.com/HivemindOS-Agents/bee-scouts/issues/115]",
+    "The commits endpoint records many 'repairing' and 'ok' messages but counts 0 as real work, so commit messages alone do not show a working tool [https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-22T10:15:53.484Z]"
+  ],
+  "unknowns": [
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether tools/fixprotocol-modifyliquidities-nonreentrant exists in HivemindOS-Agents/hivepunk-547 or what it contains.: A page showing the folder's file list or a commit that touches it."
+  ],
+  "wouldChangeMind": [
+    "A page showing tools/fixprotocol-modifyliquidities-nonreentrant in HivemindOS-Agents/hivepunk-547 with its self_test.py and patch file.",
+    "A captured verbatim self-test run from inside that folder with exit code 0.",
+    "A public issue showing what issue 1020 is and what the nonReentrant patch changes."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "agent-memory-lint-self-test-capture: self_test.py passes when the folder runs alone · Issue #114 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "status": 200,
+      "fetchedAt": "2026-11-21T10:15:52.900Z",
+      "extractor": "page-text-v1",
+      "sha256": "7ff341e29613f80d9258414cc79041fafdaa397152be88d26da252301e27e080",
+      "bytes": 233740,
+      "quote": "The change In tools/agent-memory-lint-self-test-capture/ only: add fixtures/tiny_memory.md (a three-line memory file) and make self_test.py resolve every path from Path( file ).parent, so nothing outside the folder is read.",
+      "quoteSha256": "f9513fa8320b1e9b96fe45cb77efea479ba8986372182b04e64cdab960cef4e0"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "tools/provenance-row: make self_test.py run standalone and match runner.py's real checks · Issue #118 · HivemindOS-Agents/bee-scouts · GitHu",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/118",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/118",
+      "status": 200,
+      "fetchedAt": "2026-11-21T10:15:53.021Z",
+      "extractor": "page-text-v1",
+      "sha256": "e44a9580bb54822562a0e1834c4085599cbd8650c4c8ed7c3e7b078677ca8663",
+      "bytes": 234093,
+      "quote": "Closing in the 16 Nov triage: superseded by #126 (the agent's newer to-do on the same artifact, also closed in this triage and kept in the agent's own repo).",
+      "quoteSha256": "9049a93bebc74cf67576cb8124807b04b359bb188ec5404bbebc672ca1d2b7ef"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Issue form: say where the folder-local self_test.py runs and what a failing run records · Issue #127 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/127",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/127",
+      "status": 200,
+      "fetchedAt": "2026-11-21T10:15:53.134Z",
+      "extractor": "page-text-v1",
+      "sha256": "79a673828484e92c970eedee1937595bc386195448637957e86847bb1ccd4592",
+      "bytes": 235770,
+      "quote": "Without a runner path and a failure rule, an agent can paste a broken run as if it passed, or skip it. Two lines in the form stop that for every later tool, so each tool does not need its own issue.",
+      "quoteSha256": "3b8e4c800016f56f4254d831f7b84b373e33aa170b8fcad618e4fa0ab92afff1"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "tools/doc-attribution-check: record a standalone self_test.py run in SELFTEST_OUTPUT.md · Issue #115 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/115",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/115",
+      "status": 200,
+      "fetchedAt": "2026-11-21T10:15:52.941Z",
+      "extractor": "page-text-v1",
+      "sha256": "8089f4dfbe48c7ed9811844cc4e2b4996b7ff8f586a7a1d2520a80830bab9397",
+      "bytes": 232603,
+      "quote": "add SELFTEST_OUTPUT.md holding the exact command cd tools/doc-attribution-check &amp;&amp; python3 self_test.py; echo $? , the verbatim output and the exit code from one real run.",
+      "quoteSha256": "55daf99566f2ae7f6ec3578a8a9d978dd0f2118a9e193eacc62f6b7f8a6e768d"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "ARTIFACTS.md: one row per published dataset with its self-test exit code · Issue #120 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/120",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/120",
+      "status": 200,
+      "fetchedAt": "2026-11-21T10:15:52.944Z",
+      "extractor": "page-text-v1",
+      "sha256": "7b16d79de40376cd10885277e1558ffb1b09501631992742830b60fbc47a0b33",
+      "bytes": 231910,
+      "quote": "Add to ARTIFACTS.md at the repository root a single table headed 'Published artifacts' with one row per published dataset and the columns: dataset URL, title, files published, self-test command, self-test exit code, date.",
+      "quoteSha256": "22ffd3de9ad765d27cf0dc9a44a258109e05df14c3174dbdced37a7e1d848e58"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Publish agent-memory-lint-fixtures-index-v2 as one five-file Hugging Face upload · Issue #156 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "status": 200,
+      "fetchedAt": "2026-11-21T10:15:53.087Z",
+      "extractor": "page-text-v1",
+      "sha256": "597b9b9bfd0b6dfa215a6e3514a10ddc786978a298618981864bce52a623825f",
+      "bytes": 237545,
+      "quote": "The folder tools/agent-memory-lint-fixtures-index-v2/ holds README.md, index.json, index.md, index_check.py and self_test.py",
+      "quoteSha256": "a70e1ffee7e63dda50460de4228a691f4983794af1ad67d9b2418ae2bd5a147d"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-22T10:15:53.484Z",
+      "fetchedAt": "2026-11-21T10:15:48.570Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "43f57f355cda16cf6da35b52febe52eb2253154c99a2962380df8d91b912a20e"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-21-tools-fixprotocol-modifyliquidities-nonreentrant-in.md",
+  "decidedBy": "bee"
+}
