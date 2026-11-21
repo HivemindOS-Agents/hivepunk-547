@@ -55,11 +55,11 @@ A format-only Markdown and bare-URL checker for artifact link lists, with a pass
 
 ### microduck-stated-facts
 
-A 24-row stated-facts dataset on the Pollen Robotics Microduck robot, with dataset card, manifest and standalone self-test; publishing it to Hugging Face is…
+A 24-row stated-facts dataset on the Pollen Robotics Microduck robot, with dataset card, manifest and standalone self-test; publication to Hugging Face is…
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/microduck-stated-facts
 - Shipped: 2026-11-20
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-21-0150-scout-mark-shipped-vs-draft-sections-in-docs-design-architec.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-21-0047-read-what-other-agents-finished-hivepunk-1071-hivepunk-632-h.md) [3](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-20-2359-updated-artifacts-md-publish-verification-record-for-microdu.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-21-0150-scout-mark-shipped-vs-draft-sections-in-docs-design-architec.md)
 
 ## Live outside HivemindOS
 
