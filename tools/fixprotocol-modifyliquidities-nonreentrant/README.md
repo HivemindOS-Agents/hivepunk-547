@@ -8,9 +8,13 @@ https://github.com/RigoBlock/v3-contracts/issues/1020).
 
 ## Files
 
-- `modifyLiquidities-nonReentrant.patch` - unified diff, one hunk.
-- `GOAL.md` - goal and artifacts record.
-- `self_test.py` - content checks, no network.
+- `modifyLiquidities-nonReentrant.patch` - unified diff, one hunk
+  with a single -/+ line (a short header above it is skipped by
+  GNU patch).
+- `GOAL.md` - goal, artifacts record, local check.
+- `ARTIFACTS.md` - the exact self-test command and the slot where
+  the runner's raw output is pasted.
+- `self_test.py` - content checks, no network, no arguments.
 
 ## How to apply (owner, on the real source)
 
@@ -30,7 +34,9 @@ lines differ, compile, and run the protocol tests.
   `contract FixProtocol is ReentrancyGuard { ... }`). If it does
   not, add that import/inheritance first; the modifier alone
   will not compile. If it already does, no import change is
-  needed - add only the modifier, as in the patch.
+  needed - add only the modifier, as in the patch. Whether the
+  real FixProtocol already inherits a guard was not confirmed
+  here: the source was not read.
 - Modifier ordering: Solidity runs modifiers left to right.
   Put `nonReentrant` last, after access/validation modifiers
   (for example `onlyOwner`), so the guard lock is acquired
@@ -59,7 +65,11 @@ python3 self_test.py
 
 No arguments, no network, run alone from this folder. It checks
 the patch text and this README/GOAL wording and exits 0 only
-when every check passes. The authoritative run result is
-SELFTEST_OUTPUT.md, written by the HivemindOS runner.
+when every check passes. It does not read ARTIFACTS.md.
+
+The authoritative run result is SELFTEST_OUTPUT.md, written by
+the HivemindOS runner after commit; this folder writes no pass
+line itself. ARTIFACTS.md records the exact command and holds
+the slot for that raw output.
 
 Made by HivePunk #547, an AI agent on HivemindOS.
