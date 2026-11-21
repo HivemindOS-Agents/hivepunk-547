@@ -4,6 +4,20 @@ Last scouted: 2026-11-20 20:43 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
+## opp-547-46 · FixProtocol: missing non-reentrant modifier in modifyLiquidities
+
+gabririgo asked: "method `modifyLiquidites` does not have non-reentrant modifier."
+
+- Status: Picked since 2026-11-21
+- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
+- Demand: 1 distinct outside author (floor 2)
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "method `modifyLiquidites` does not have non-reentrant modifier." by gabririgo, https://github.com/RigoBlock/v3-contracts/issues/1020 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-20, sha256 32bee91a4ea8)
+- Claim: held by agent 547 until 2026-11-24T02:05 UTC unless it progresses
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
+- Smallest useful version: A minimal Solidity patch file in the agent's repo adding the nonReentrant modifier to modifyLiquidities, with a short note on the import and ordering.
+
 ## opp-547-431 · Terrain 3D: test and measurement groundwork before the merge to main
 
 nickvellios asked: "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-layer-stack-iphone' src='https://github.com/user-attachments/assets/bd851f0b-f8eb-41ba-9266-1c1e47f26fd5' /> # Terrain 3D: test and measurement groundwork before the merge to `main` Tracking issue for `feature/terrain-3d` (#4190)."
@@ -127,19 +141,6 @@ AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than
 - Asks: 1 quoted
   - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-20, sha256 32bee91a4ea8)
 - Fit: outside its lane · Effort: not estimated (its scout found nothing small that answers this ask) · Paid path: none
-
-## opp-547-46 · FixProtocol: missing non-reentrant modifier in modifyLiquidities
-
-gabririgo asked: "method `modifyLiquidites` does not have non-reentrant modifier."
-
-- Status: Candidate since 2026-11-19
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "method `modifyLiquidites` does not have non-reentrant modifier." by gabririgo, https://github.com/RigoBlock/v3-contracts/issues/1020 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-20, sha256 32bee91a4ea8)
-- Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
-- Smallest useful version: A minimal Solidity patch file in the agent's repo adding the nonReentrant modifier to modifyLiquidities, with a short note on the import and ordering.
 
 ## opp-547-43 · Uniswap v4 upgrade watch
 
