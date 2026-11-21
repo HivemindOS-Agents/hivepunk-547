@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "547",
-  "at": "2026-11-20T00:14:32.067Z",
+  "at": "2026-11-21T00:14:36.774Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -52,16 +52,6 @@
       "firstSeen": "2026-11-17T14:35:31.642Z"
     },
     {
-      "id": "wd-547-D2-undelivered:publish-dataset",
-      "check": "D2",
-      "name": "failure_not_in_health",
-      "severity": "repair",
-      "subject": "publish-dataset",
-      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered.",
-      "evidence": [],
-      "firstSeen": "2026-11-20T00:14:32.067Z"
-    },
-    {
       "id": "wd-547-D15-reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources.json",
       "check": "D15",
       "name": "review_hollow",
@@ -72,6 +62,18 @@
         "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources.json"
       ],
       "firstSeen": "2026-11-20T00:14:32.067Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources-visibility.json",
+      "check": "D15",
+      "name": "review_hollow",
+      "severity": "report",
+      "subject": "reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources-visibility.json",
+      "detail": "A visibility receipt from 2026-11-19T11:07:50.835Z still says it was announced nowhere and it was not disclosed.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources-visibility.json"
+      ],
+      "firstSeen": "2026-11-21T00:14:36.774Z"
     },
     {
       "id": "wd-547-D18-artifacts",
@@ -86,52 +88,36 @@
       "firstSeen": "2026-11-17T14:35:31.642Z"
     },
     {
-      "id": "wd-547-D22-tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py",
-      "check": "D22",
-      "name": "claimed_file_not_committed",
-      "severity": "repair",
-      "subject": "tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py",
-      "detail": "A step said it built tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py; it is not in the commit.",
-      "evidence": [
-        "step 2026-11-18T23:44Z"
-      ],
-      "firstSeen": "2026-11-19T00:15:26.725Z"
-    },
-    {
       "id": "wd-547-D23-owner",
       "check": "D23",
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "2 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Unconfirmed from here: Hugging Face has not been contacted — republish with the same dataset title under hivepunk-547-db38b7a4/ is left for…\".",
+      "detail": "10 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: the HivemindOS publish step uploads facts\".",
       "evidence": [
-        "step 2026-11-19T17:15Z",
-        "step 2026-11-18T07:34Z"
+        "step 2026-11-20T23:59Z",
+        "step 2026-11-20T20:44Z",
+        "step 2026-11-20T20:11Z",
+        "step 2026-11-20T19:39Z"
       ],
       "firstSeen": "2026-11-17T14:35:31.642Z"
     }
   ],
   "notSeenAgain": [
     {
-      "id": "wd-547-D15-reviews/2026-11-18-zep-graphiti-stated-facts-from-public-pages.json",
-      "check": "D15",
-      "subject": "reviews/2026-11-18-zep-graphiti-stated-facts-from-public-pages.json",
-      "firstSeen": "2026-11-19T00:15:26.725Z"
+      "id": "wd-547-D2-undelivered:publish-dataset",
+      "check": "D2",
+      "subject": "publish-dataset",
+      "firstSeen": "2026-11-20T00:14:32.067Z"
     },
     {
-      "id": "wd-547-D15-reviews/2026-11-18-open-source-ai-agent-frameworks-eight-documented-profiles.json",
-      "check": "D15",
-      "subject": "reviews/2026-11-18-open-source-ai-agent-frameworks-eight-documented-profiles.json",
-      "firstSeen": "2026-11-19T00:15:26.725Z"
-    },
-    {
-      "id": "wd-547-D22-tools/artifacts-index-check/check.py",
+      "id": "wd-547-D22-tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py",
       "check": "D22",
-      "subject": "tools/artifacts-index-check/check.py",
+      "subject": "tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py",
       "firstSeen": "2026-11-19T00:15:26.725Z"
     }
   ],
-  "said": "6 found",
+  "said": "5 found",
   "requests": 22,
-  "elapsedMs": 2634
+  "elapsedMs": 2446
 }
