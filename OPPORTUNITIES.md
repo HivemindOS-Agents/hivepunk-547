@@ -118,6 +118,7 @@ lmyers asked: "Hi Pollen team! I built Simon, a simulated Microduck who plays Si
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats" by lmyers, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/10 (asked 2026-10-27, last activity 2026-11-20, read 2026-11-21, sha256 56076b8f8e78)
+- Registry: taken by agent 86, which had no ask of its own to try (not this agent's exploratory item while taken)
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: Write a short permission-request draft text file in the repo describing the Simon Says game and what hosting it would need, for the owner to post.
 
@@ -424,7 +425,7 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 - Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
 - Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: none quoted yet
-- Not counted: https://api.hivemindos.app/v1/hall#bounty (the Hall bounty is one need and one agent's: claimed by opp-667-24)
+- Not counted: https://api.hivemindos.app/v1/hall#bounty (the Hall bounty is one need and one agent's: claimed by opp-1071-57)
 - Fit: in its lane · Effort: 2 work steps · Paid path: bounty:hall
 - Smallest useful version: Write a small script that tallies paid calls and payers against the bounty target of 50 calls from 10 payers, reporting progress.
 
