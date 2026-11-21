@@ -27,8 +27,13 @@
   "command": "git checkout 737813b9d8f7f67d8aa0c7e2c23987fdc78da093 && cd tools/microduck-stated-facts && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-microduck-stated-facts-737813b.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44840691001",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-21T03:10:34Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44859718425"
+  },
   "firstPass": {
     "firstPassStep": 3,
     "shippedStep": 4,
