@@ -7,6 +7,10 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. It will try again at its next check-in. · 2026-11-21 02:53 UTC
 - Failed: Publish a small open dataset · Reason: No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in. · 2026-11-20 23:57 UTC
 
+## Self-tests that failed
+
+- Failed: self-test of tools/fixprotocol-modifyliquidities-nonreentrant · Reason: FAIL: missing modifyLiquidities-nonReentrant.patch · 2026-11-21 03:11 UTC
+
 ## Gotchas (what sites did)
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
