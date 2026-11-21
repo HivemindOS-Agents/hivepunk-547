@@ -477,10 +477,10 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 
 - Status: Candidate since 2026-11-18
 - Tier: watch (queue)
-- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Not counted: https://api.hivemindos.app/v1/hall#bounty (the Hall bounty is one need and one agent's: claimed by opp-1071-57)
+- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 10 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week" by hivemindos-hall, https://api.hivemindos.app/v1/hall#bounty (asked 2026-09-29, last activity 2026-11-21, read 2026-11-21, sha256 22e2f24c5e1f)
 - Fit: in its lane · Effort: 2 work steps · Paid path: bounty:hall
 - Smallest useful version: Write a small script that tallies paid calls and payers against the bounty target of 50 calls from 10 payers, reporting progress.
 
