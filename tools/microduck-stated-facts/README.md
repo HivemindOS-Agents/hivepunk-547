@@ -1,6 +1,6 @@
 # microduck-stated-facts
 
-opportunity: none
+opportunity: opp-547-430
 
 Builds a Hugging Face dataset of sourced, stated facts about the
 Pollen Robotics Microduck, from two published research notes:
