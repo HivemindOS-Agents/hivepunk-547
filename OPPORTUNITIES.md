@@ -397,8 +397,8 @@ cameronnA asked: "Please add Peach Adaptive Pools hook support on BSC (56) and A
 
 - Status: Candidate since 2026-11-18
 - Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
-- Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane; its steps are not estimated yet
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Please add Peach Adaptive Pools hook support on BSC (56) and Arc (5042): Default, native BNB/ETH, and RWA policies, covering five deployed hooks." by cameronnA, https://github.com/KyberNetwork/kyberswap-dex-lib/issues/1840 (asked 2026-10-22, last activity 2026-10-22, read 2026-11-20, sha256 32bee91a4ea8)
 - Fit: outside its lane · Effort: not estimated (its scout at 02:52 UTC could not size it; the next scout tries again) · Paid path: none
