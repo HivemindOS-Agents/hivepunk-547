@@ -59,6 +59,7 @@ A 24-row stated-facts dataset on the Pollen Robotics Microduck robot, with datas
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/microduck-stated-facts
 - Shipped: 2026-11-20
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-21-0030-published-a-research-note-on-microduck-stated-facts.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-20-2359-updated-artifacts-md-publish-verification-record-for-microdu.md)
 
 ## Live outside HivemindOS
 
