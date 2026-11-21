@@ -1,0 +1,242 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-21T03:58:57.087Z",
+  "subject": "RigoBlock v3-contracts",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "On the public pages read, this is a confirmed but low-priority missing-modifier issue that remains Open with no linked fix, so the current public status is unfixed and not directly exploitable as reported.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "RigoBlock/v3-contracts has 50 raw commits in the last 30 days, 21 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/RigoBlock/v3-contracts/commits?per_page=50&since=2026-10-22T03:59:00.662Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is c75040b, on 2026-11-19.",
+      "check": "shipping",
+      "source": "https://github.com/RigoBlock/v3-contracts/commit/c75040b7a09c0df661441211992cc40ac967a597"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "RigoBlock v3-contracts is described as Smart contracts of RigoBlock v3.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts",
+      "quote": "Smart contracts of RigoBlock v3",
+      "sourceId": "src-2",
+      "quoteSha256": "6f7bb0ee0f4235000ad77827469adf89613b47e103f3eef975df09fc372171f0"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Issue #1020 is titled Fix[Protocol]: missing non-reentrant modifier in modifyLiquidities and is shown as Open.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "quote": "Open Open Fix[Protocol]: missing non-reentrant modifier in modifyLiquidities #1020",
+      "sourceId": "src-1",
+      "quoteSha256": "5291feb2b97cc9da618ee34e26e71b969b0db2519d212c25d6cda2fdca2e660a"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The issue was opened on Nov 19, 2026 by gabririgo.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "quote": "gabririgo opened on Nov 19, 2026",
+      "sourceId": "src-1",
+      "quoteSha256": "a7e6bbbbe06a3b54037c3c21bab6d90dfc904e3c42a0a81ee1aba61d1aa99f69"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The issue body says modifyLiquidites does not have a non-reentrant modifier, is not directly exploitable, a malicious uniswap v4 hook could abuse it, and it is low priority as privileged-role-gated with no funds at risk.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "quote": "method modifyLiquidites does not have non-reentrant modifier. It is not directly exploitable, but a malicious uniswap v4 hook could abuse it. Low priority as priviledged-role-gated and no funds at risk.",
+      "sourceId": "src-1",
+      "quoteSha256": "7b8f76e16189c695181ae2984df0563001b201641a416e5d0b5391841aa1f4e1"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The issue page shows no development branches or pull requests linked to it.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "quote": "No branches or pull requests",
+      "sourceId": "src-1",
+      "quoteSha256": "41f128817bea1c73ea9e9b02f0e06597491e2368419046eb8c4527fc43544d16"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Rigoblock V3 smart contracts are deprecated and not covered by the Program, as stated on the bug bounty page.",
+      "check": "page",
+      "source": "https://docs.rigoblock.com/bug-bounty",
+      "quote": "Rigoblock V3 smart contracts are deprecated and not covered by the Program.",
+      "sourceId": "src-3",
+      "quoteSha256": "74c326c8f2d1100c0b9d2463e87c1d72125cdfa0161ae912ab6a44bdbbbb819e"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "RigoBlock/v3-contracts has 50 raw commits in the last 30 days, 21 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/RigoBlock/v3-contracts/commits?per_page=50&since=2026-10-22T03:59:00.662Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Its latest real commit is c75040b, on 2026-11-19.",
+      "check": "page",
+      "source": "https://api.github.com/repos/RigoBlock/v3-contracts/commits?per_page=50&since=2026-10-22T03:59:00.662Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "Whether the missing non-reentrant modifier has since been added to the code is unknown from the pages read.",
+      "check": "page",
+      "missing": "A public commit, pull request, or release that adds the non-reentrant modifier to modifyLiquidities would verify whether the issue has been fixed."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether the affected contract is deployed and reachable by a malicious Uniswap v4 hook in production is unknown from the pages read.",
+      "check": "page",
+      "missing": "A deployed contract address, chain, and code verification for the contract containing modifyLiquidities would verify live exposure."
+    }
+  ],
+  "counts": {
+    "fact": 10,
+    "derived": 0,
+    "unknown": 2
+  },
+  "risks": [
+    "A malicious Uniswap v4 hook could abuse the missing modifier, per the issue reporter.",
+    "The issue is privileged-role-gated, so abuse may depend on privileged access rather than anyone being able to exploit it directly.",
+    "Rigoblock V3 smart contracts are described as deprecated and not covered by the current bug bounty program, which may affect incentives to fix or disclose further issues.",
+    "No fix branch or pull request was shown on the issue page, so the missing modifier may remain unpatched in the public code shown.",
+    "The issue does not name the affected contract, file, or deployed addresses, limiting assessment of live exposure."
+  ],
+  "unknowns": [
+    "Whether the missing non-reentrant modifier has since been added to the code is unknown from the pages read.: A public commit, pull request, or release that adds the non-reentrant modifier to modifyLiquidities would verify whether the issue has been fixed.",
+    "Whether the affected contract is deployed and reachable by a malicious Uniswap v4 hook in production is unknown from the pages read.: A deployed contract address, chain, and code verification for the contract containing modifyLiquidities would verify live exposure."
+  ],
+  "wouldChangeMind": [
+    "A merged commit or pull request adding the non-reentrant modifier to modifyLiquidities and closing #1020.",
+    "Verified deployment details showing the function is unreachable by external hooks or is not used in production.",
+    "Evidence that the issue was withdrawn, marked wontfix, or added to Known Issues with a documented mitigation."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Fix[Protocol]: missing non-reentrant modifier in `modifyLiquidities` · Issue #1020 · RigoBlock/v3-contracts · GitHub",
+      "url": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "finalUrl": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "status": 200,
+      "fetchedAt": "2026-11-21T03:59:00.662Z",
+      "extractor": "page-text-v1",
+      "sha256": "d41290bbc3e29326668130e6021e9c75a7529feb1fd35fe50246568f9f75a319",
+      "bytes": 199262,
+      "quote": "Open Open Fix[Protocol]: missing non-reentrant modifier in modifyLiquidities #1020",
+      "quoteSha256": "5291feb2b97cc9da618ee34e26e71b969b0db2519d212c25d6cda2fdca2e660a"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "GitHub - RigoBlock/v3-contracts: Smart contracts of RigoBlock v3 · GitHub",
+      "url": "https://github.com/RigoBlock/v3-contracts",
+      "finalUrl": "https://github.com/RigoBlock/v3-contracts",
+      "status": 200,
+      "fetchedAt": "2026-11-21T03:59:00.529Z",
+      "extractor": "page-text-v1",
+      "sha256": "938015b269e64e750e77c30b64ee5686ed32ae8e0fbf5d6320b680275ec13b07",
+      "bytes": 295859,
+      "quote": "Smart contracts of RigoBlock v3",
+      "quoteSha256": "6f7bb0ee0f4235000ad77827469adf89613b47e103f3eef975df09fc372171f0"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Bug Bounty | Rigoblock Documentation",
+      "url": "https://docs.rigoblock.com/bug-bounty",
+      "finalUrl": "https://docs.rigoblock.com/bug-bounty",
+      "status": 200,
+      "fetchedAt": "2026-11-21T03:58:59.849Z",
+      "extractor": "page-text-v1",
+      "sha256": "04cbb53e3da58236c7366a363c0ab578651804419346561d54be2cb3552f2982",
+      "bytes": 534127,
+      "quote": "Rigoblock V3 smart contracts are deprecated and not covered by the Program.",
+      "quoteSha256": "74c326c8f2d1100c0b9d2463e87c1d72125cdfa0161ae912ab6a44bdbbbb819e"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Known Issues | Rigoblock Documentation",
+      "url": "https://docs.rigoblock.com/bug-bounty/known-issues",
+      "finalUrl": "https://docs.rigoblock.com/bug-bounty/known-issues",
+      "status": 200,
+      "fetchedAt": "2026-11-21T03:58:59.860Z",
+      "extractor": "page-text-v1",
+      "sha256": "3a3710a5dcae6780c7bff73098507e810c6b34f00721639748a07cda40741c2b",
+      "bytes": 438848,
+      "quote": "Temporarily blocking a smart pool from executing transactions after a significant price drawdown is not a viable solution, as it could hinder operations during high-volatility periods—when the greatest opportunities arise—and unnecessarily increase gas costs.",
+      "quoteSha256": "bd8031b9a4cbc4cf1b9cd1c15a60d034ab372780cfa11e7d4450f8d6c6d495c7"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "RigoBlock · GitHub",
+      "url": "https://github.com/rigoblock",
+      "finalUrl": "https://github.com/rigoblock",
+      "status": 200,
+      "fetchedAt": "2026-11-21T03:59:00.525Z",
+      "extractor": "page-text-v1",
+      "sha256": "b2f2592ac4dc229938d01b8f445fe3015fc71c2762cf37c38548ce0639db96b8",
+      "bytes": 245879,
+      "quote": "agentic-operator Public Open source agentic API, tools and interface for the Rigoblock protocol Uh oh!",
+      "quoteSha256": "80ab3cfaf1a69b01111d7eae19635d34b5b1104d93a18617e640333f42813050"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "RigoBlock repositories · GitHub",
+      "url": "https://github.com/orgs/RigoBlock/repositories",
+      "finalUrl": "https://github.com/orgs/RigoBlock/repositories",
+      "status": 200,
+      "fetchedAt": "2026-11-21T03:59:00.554Z",
+      "extractor": "page-text-v1",
+      "sha256": "3abaf322ce248c34f0d2c4783c9062e42a580eb2619acb87c2e22949bcf3dc64",
+      "bytes": 354916,
+      "quote": "You switched accounts on another tab or window.",
+      "quoteSha256": "4ac799df5144579b343a658cf230d3bccc74d2647af5ca068556e9f00cf45c44"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of RigoBlock/v3-contracts",
+      "url": "https://api.github.com/repos/RigoBlock/v3-contracts/commits?per_page=50&since=2026-10-22T03:59:00.662Z",
+      "fetchedAt": "2026-11-21T03:58:57.087Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "31cd80c6fd93335994a544bb6d91bda275336f726bed5b4d03eb8331dcde099f"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-21-rigoblock-v3-contracts.md",
+  "decidedBy": "bee"
+}
