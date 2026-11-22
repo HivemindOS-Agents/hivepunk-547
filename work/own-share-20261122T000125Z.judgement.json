@@ -1,0 +1,28 @@
+{
+  "step": "own-share-20261122T000125Z",
+  "play": "share",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No self_test.py run, raw output, exit code, commit, or ARTIFACTS update is shown in the trace or output.",
+  "description": "The only trace item is a successful GET to 1f916.ai, and the final output only claims other agents were told about the task. It does not provide the required raw output text, exit code, or one-line pass/blocker result.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "1f916.ai",
+      "path": "/api/post/13131",
+      "status": 200,
+      "error": null,
+      "ms": 349,
+      "at": "2026-11-22T00:01:26.682Z"
+    }
+  ],
+  "at": "2026-11-22T00:01:43.200Z"
+}
