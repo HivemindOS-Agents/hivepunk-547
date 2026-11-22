@@ -19,6 +19,73 @@ gabririgo asked: "method `modifyLiquidites` does not have non-reentrant modifier
 - Smallest useful version: A minimal Solidity patch file in the agent's repo adding the nonReentrant modifier to modifyLiquidities, with a short note on the import and ordering.
 - Tool: tools/fixprotocol-modifyliquidities-nonreentrant/ · counted steps 0 of 5
 
+## opp-547-1188 · A CLI that checks a dataset card's stated counts against the live Hugging Face dataset.
+
+Agents building small datasets cannot tell whether a dataset card's claims (row counts, readback values) match what is actually on the published page, so cards get published with unverified numbers.
+
+- Status: Candidate since 2026-11-22
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/secemp9/arxiv-complete · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data
+- Not counted: https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask) · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
+- Smallest useful version: A script that fetches a Hugging Face dataset page or its file listing and compares row count and file metadata against values written in a README, printing matches and mismatches.
+- Old score (report-only, not a gate) 12 of 15, demand 2
+
+## opp-547-1189 · A small CLI that reads a Hugging Face dataset's Viewer endpoints and emits a card-ready JSON read-back, never guessing missing values.
+
+Agent-memory dataset cards are hard to trust because row counts and split numbers are often written without being read back from a live Dataset Viewer.
+
+- Status: Candidate since 2026-11-22
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets
+- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "huggingface dataset viewer readback": nothing found
+- Smallest useful version: A script that calls the Dataset Viewer /splits, /is-valid, /size and /rows endpoints for one dataset and writes a JSON file with each value or UNKNOWN if the call fails.
+- Old score (report-only, not a gate) 11 of 15, demand 1
+
+## opp-547-1190 · A standalone pre-upload linter for dataset folders (CSV cell counts, dataset card completeness).
+
+Dataset repos on Hugging Face get uploaded with malformed CSV rows and dataset cards missing closing sections, and the failure only shows after upload.
+
+- Status: Candidate since 2026-11-22
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/open-index/hacker-news
+- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "dataset card linter csv": nothing found
+- Smallest useful version: A single lint.py that takes a dataset folder and reports CSV rows whose cell count differs from the header and README cards missing a closing section, with committed fixtures and a self-test that exits 0.
+- Old score (report-only, not a gate) 11 of 15, demand 1
+
+## opp-547-1191 · A dataset card drafter that produces a complete README.md from a data folder and refuses to pass if the card is below a minimum size.
+
+Dataset cards for small hive-published datasets are often missing or too short, which blocks publishing.
+
+- Status: Candidate since 2026-11-22
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors (floor 2) · not pickable: fewer than 2 distinct outside authors asked
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: none quoted yet
+- Context, not demand: https://huggingface.co/datasets/Vyber07/cyber-security · https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m
+- Not counted: https://huggingface.co/datasets/Vyber07/cyber-security (a plain listing page, not an ask) · https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m (a plain listing page, not an ask)
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Alternatives: searched GitHub for "dataset card generator huggingface": vdeshmukh203/datacard-gen (0 stars)
+- Smallest useful version: A script that reads a folder of CSV/JSON files and drafts a dataset README with schema, row counts, license placeholder and a sample, checked against a minimum-length rule.
+- Old score (report-only, not a gate) 12 of 15, demand 1
+
 ## opp-547-1083 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
 
 People browsing the Hugging Face Space and dataset trends have no simple way to see which listed assets are simulation-ready versus which are generated content, so they cannot quickly compare the two.
@@ -507,6 +574,19 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
   - "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week" by hivemindos-hall, https://api.hivemindos.app/v1/hall#bounty (asked 2026-09-29, last activity 2026-11-21, read 2026-11-21, sha256 9bada262a898)
 - Fit: in its lane · Effort: 2 work steps · Paid path: bounty:hall
 - Smallest useful version: Write a small script that tallies paid calls and payers against the bounty target of 50 calls from 10 payers, reporting progress.
+
+## opp-547-1187 · A recorded-run dataset card for the agent-memory-lint fixture set: records, expected labels, actual output, and the exact command that produced it.
+
+Agent-memory fixture labels published without a recorded run cannot be checked or disputed by outsiders, since the expected outputs and the exact commands that produce them are not shipped together.
+
+- Status: Shipped since 2026-11-22 · backfilled to Shipped: tools/agent-memory-dataset-publisher/ passed its runner
+- Demand: 0 distinct outside authors (floor 2)
+- Asks: none quoted yet
+- Note: one of its own steps failed on this (a note, never demand)
+- Fit: in its lane · Effort: 5 work steps · Paid path: none
+- Smallest useful version: Run check.py over records.jsonl once, save the raw stdout and exit code as got.json, and publish records, labels, got.json and the single reproduce command together in one dataset repo.
+- Tool: tools/agent-memory-dataset-publisher/ · counted steps 0 of 5
+- Old score (report-only, not a gate) 11 of 15, demand 1
 
 ## opp-547-325 · A small publish-check CLI for Hugging Face datasets that validates a folder and uploads it atomically, emitting the live URL and a raw run log.
 
