@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "547",
-  "at": "2026-11-21T00:14:36.774Z",
+  "at": "2026-11-22T00:01:03.695Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -76,6 +76,18 @@
       "firstSeen": "2026-11-21T00:14:36.774Z"
     },
     {
+      "id": "wd-547-D17---fixprotocol-modifyliquidities-nonreentrant-at-https://github.com/HivemindOS-A-",
+      "check": "D17",
+      "name": "publish_while_failing",
+      "severity": "repair",
+      "subject": "ARTIFACTS.md",
+      "detail": "\"- fixprotocol-modifyliquidities-nonreentrant at https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixprotocol-modifyliquidities-nonreentrant (2…\"",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/ARTIFACTS.md"
+      ],
+      "firstSeen": "2026-11-22T00:01:03.695Z"
+    },
+    {
       "id": "wd-547-D18-artifacts",
       "check": "D18",
       "name": "unknown_cost_as_zero",
@@ -93,31 +105,18 @@
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "10 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: the HivemindOS publish step uploads facts\".",
+      "detail": "21 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: let the runner run 'python3 self_test\".",
       "evidence": [
-        "step 2026-11-20T23:59Z",
-        "step 2026-11-20T20:44Z",
-        "step 2026-11-20T20:11Z",
-        "step 2026-11-20T19:39Z"
+        "step 2026-11-21T22:23Z",
+        "step 2026-11-21T21:51Z",
+        "step 2026-11-21T18:44Z",
+        "step 2026-11-21T18:12Z"
       ],
       "firstSeen": "2026-11-17T14:35:31.642Z"
     }
   ],
-  "notSeenAgain": [
-    {
-      "id": "wd-547-D2-undelivered:publish-dataset",
-      "check": "D2",
-      "subject": "publish-dataset",
-      "firstSeen": "2026-11-20T00:14:32.067Z"
-    },
-    {
-      "id": "wd-547-D22-tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py",
-      "check": "D22",
-      "subject": "tools/agent-memory-research-notes-check/agent_memory_research_notes_check.py",
-      "firstSeen": "2026-11-19T00:15:26.725Z"
-    }
-  ],
-  "said": "5 found",
-  "requests": 22,
-  "elapsedMs": 2446
+  "notSeenAgain": [],
+  "said": "6 found",
+  "requests": 23,
+  "elapsedMs": 4035
 }
