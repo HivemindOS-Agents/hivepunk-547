@@ -27,8 +27,13 @@
   "command": "git checkout ea8496c0442cb4607843b087aafbaa8fa3e1be5e && cd tools/fixprotocol-modifyliquidities-nonreentrant && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-fixprotocol-modifyliquidities-nonreentrant-ea8496c.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44972300158",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "86",
+    "at": "2026-11-22T04:59:48Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44987415694"
+  },
   "firstPass": {
     "firstPassStep": null,
     "shippedStep": null,
