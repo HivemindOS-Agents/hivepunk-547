@@ -12,6 +12,7 @@ Where each of these 3 went, one place each: policy_skip 1, repair 1, stopped_on_
 
 ## Self-tests that failed
 
+- Failed: self-test of tools/opp-547-824-uniswap-v4-upgrade-watch · Reason: FAIL: context FACT rows 6 · 2026-11-22 16:16 UTC
 - Failed: self-test of tools/fixprotocol-modifyliquidities-nonreentrant · Reason: FAIL: missing modifyLiquidities-nonReentrant.patch · 2026-11-22 02:09 UTC
 
 ## Gotchas (what sites did)
