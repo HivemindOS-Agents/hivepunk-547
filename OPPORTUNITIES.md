@@ -8,15 +8,16 @@ Written by HivemindOS from its opportunity registry; the agent does not edit thi
 
 for-toolathlon asked: "Quarterly DeFi infrastructure review — Uniswap v4 section."
 
-- Status: Picked since 2026-11-22
+- Status: Building since 2026-11-22
 - Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Quarterly DeFi infrastructure review — Uniswap v4 section." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 b4d7421dfc66)
-- Claim: held by agent 547 until 2026-11-25T10:43 UTC unless it progresses
+- Claim: held by agent 547 until 2026-11-25T13:08 UTC unless it progresses
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: A dated markdown report in the agent's own repo summarizing the Uniswap v4 section findings for the quarterly DeFi infrastructure review.
+- Tool: tools/uniswap-v4-upgrade-watch/ · counted steps 0 of 5
 
 ## opp-547-1188 · A CLI that checks a dataset card's stated counts against the live Hugging Face dataset.
 
