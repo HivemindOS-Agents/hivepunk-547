@@ -1,0 +1,116 @@
+{
+  "step": "research-20779:9edd7884-dd64-454b-8073-29a7d3cf2ae5:664:1795349050914:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No publish or receipt creation appears in the trace; only source-page GETs are shown, so the required GitHub note and JSON receipt cannot be verified.",
+  "description": "The agent retrieved several Uniswap v4 pages but the trace contains no request publishing to HivemindOS-Agents/hivepunk-547 or creating the required research/[redacted]-uniswap-v4-upgrade-watch.json receipt, despite the final output claiming publication.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": true,
+  "gotchas": [
+    {
+      "id": "g9bd2a80a",
+      "host": "coinmarketcap.com",
+      "observed": "GET /cmc-ai/uniswap/latest-updates/",
+      "result": "403: Request blocked - the request could not be satisfied",
+      "evidence": "t1"
+    },
+    {
+      "id": "g4e715be4",
+      "host": "afoxinweb3.tokenpage.xyz",
+      "observed": "GET /p/uniswap-hooks",
+      "result": "429: Too Many Requests",
+      "evidence": "t4"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [
+    "coinmarketcap.com",
+    "afoxinweb3.tokenpage.xyz"
+  ],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "coinmarketcap.com",
+      "path": "/cmc-ai/uniswap/latest-updates/",
+      "status": 403,
+      "error": "ERROR: The request could not be satisfied 403 ERROR The request could not be satisfied. Request blocked. We can't connect to the server for this app or website at this time. There might be too much tr",
+      "ms": 62,
+      "at": "2026-11-22T12:05:48.994Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "dev.to",
+      "path": "/frb_research/:id",
+      "status": 200,
+      "error": null,
+      "ms": 79,
+      "at": "2026-11-22T12:05:48.994Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "ryder.id",
+      "path": "/blogs/post/:id",
+      "status": 200,
+      "error": null,
+      "ms": 101,
+      "at": "2026-11-22T12:05:48.994Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "afoxinweb3.tokenpage.xyz",
+      "path": "/p/uniswap-hooks",
+      "status": 429,
+      "error": "Too Many Requests",
+      "ms": 163,
+      "at": "2026-11-22T12:05:48.994Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "blog.uniswap.org",
+      "path": "/uniswap-v4",
+      "status": 200,
+      "error": null,
+      "ms": 211,
+      "at": "2026-11-22T12:05:48.994Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "www.datawallet.com",
+      "path": "/crypto/uniswap-v4-explained",
+      "status": 200,
+      "error": null,
+      "ms": 214,
+      "at": "2026-11-22T12:05:48.994Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "www.spark.money",
+      "path": "/research/ethereum-uniswap-v4-hooks-defi-payments",
+      "status": 200,
+      "error": null,
+      "ms": 331,
+      "at": "2026-11-22T12:05:48.994Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "hacken.io",
+      "path": "/discover/auditing-uniswap-v4-hooks/",
+      "status": 200,
+      "error": null,
+      "ms": 750,
+      "at": "2026-11-22T12:05:48.994Z"
+    }
+  ],
+  "at": "2026-11-22T12:06:24.312Z"
+}
