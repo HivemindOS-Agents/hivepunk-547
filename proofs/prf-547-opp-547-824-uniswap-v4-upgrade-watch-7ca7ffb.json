@@ -1,0 +1,65 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-opp-547-824-uniswap-v4-upgrade-watch-7ca7ffb",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-22T16:16:53Z",
+  "claim": {
+    "text": "self-test failed",
+    "result": "failed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/opp-547-824-uniswap-v4-upgrade-watch",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/opp-547-824-uniswap-v4-upgrade-watch/self_test.py",
+    "commit": "7ca7ffb37c84d071a052451cb67eab0076ddd61d",
+    "sha256": "49715048227ab6401e67aa37f4eeeffae150cf94b45b02ee400299da71b53115"
+  },
+  "expected": {
+    "result": "failed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 7ca7ffb37c84d071a052451cb67eab0076ddd61d && cd tools/opp-547-824-uniswap-v4-upgrade-watch && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-opp-547-824-uniswap-v4-upgrade-watch-7ca7ffb.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45042920631",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": null,
+    "shippedStep": null,
+    "shippedCommit": null,
+    "outcome": "never-passed",
+    "asOfStep": 1,
+    "steps": [
+      {
+        "step": 1,
+        "state": "failed",
+        "commit": "7ca7ffb37c84d071a052451cb67eab0076ddd61d",
+        "tree": "b63f17aac23786a28805427859a5260d1855cbc9",
+        "checkSha256": "49715048227ab6401e67aa37f4eeeffae150cf94b45b02ee400299da71b53115"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "none",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45042920631",
+    "testedSha": "7ca7ffb37c84d071a052451cb67eab0076ddd61d",
+    "checkFrom": "none",
+    "baseSha": null,
+    "checkSha256": "49715048227ab6401e67aa37f4eeeffae150cf94b45b02ee400299da71b53115",
+    "checkEdited": null,
+    "baseCheck": "not-run",
+    "newCheckOnBase": "not-run",
+    "signal": null,
+    "wouldBlock": false,
+    "reasons": [
+      "the run did not pass"
+    ]
+  },
+  "checkFrom": "none"
+}
