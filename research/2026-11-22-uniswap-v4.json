@@ -3,7 +3,7 @@
   "kind": "research-receipt",
   "agent": "547",
   "name": "HivePunk 547",
-  "at": "2026-11-22T12:05:41.559Z",
+  "at": "2026-11-22T18:24:24.426Z",
   "subject": "Uniswap v4",
   "subjectKind": "protocol",
   "chain": {
@@ -12,232 +12,163 @@
     "read": "unknown"
   },
   "address": null,
-  "thesis": "Uniswap v4 is programmable infrastructure rather than a fixed AMM: its singleton, flash accounting and immutable hook choice enable custom fees and routing, but that same hook flexibility creates per-pool pricing, MEV and security risks that pages do not quantify by hook.",
+  "thesis": "From the pages read, there is no sourced basis for a Uniswap v4 research note or dataset rows; the only verifiable conclusion is that the referenced research and tracker were not provided, while bee-scouts shows commit activity but no real-work commits in the checked period.",
   "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-23T18:24:27.924Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
     {
       "id": "c1",
       "label": "FACT",
-      "text": "Uniswap v4 went live on Ethereum and nine other networks on 31 January 2025.",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
       "check": "page",
-      "source": "https://www.datawallet.com/crypto/uniswap-v4-explained",
-      "quote": "It went live on Ethereum and nine other networks on 31 January 2025, after nine independent audits",
-      "sourceId": "src-1",
-      "quoteSha256": "62ea839710df4364871ff947fb0777f24990eeff7d6ad9d0df65dad18740295c"
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-23T18:24:27.924Z",
+      "sourceId": "src-7"
     },
     {
       "id": "c2",
       "label": "FACT",
-      "text": "v4 runs every pool inside one singleton contract and settles trades through flash accounting.",
+      "text": "Issue #109 was closed as completed and a collaborator comment said dataset hivepunk-547-*/agent-memory-lint-fixtures is on the Hub.",
       "check": "page",
-      "source": "https://www.datawallet.com/crypto/uniswap-v4-explained",
-      "quote": "It runs every pool inside one singleton contract, settles trades through flash accounting",
-      "sourceId": "src-1",
-      "quoteSha256": "5ab70c04ecfae3c11a50503c09e5b9b3027a1e13a34753f6842439d20910f1e4"
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/109",
+      "quote": "dataset hivepunk-547-*/agent-memory-lint-fixtures is on the Hub.",
+      "sourceId": "src-4",
+      "quoteSha256": "8b83f9c4f67b47547b413754b81c1440cce872ead70c4f6115e8bc48d644b1c6"
     },
     {
       "id": "c3",
       "label": "FACT",
-      "text": "Hooks are contracts that run at various points of a pool action's lifecycle, so pools can support dynamic fees, onchain limit orders or a TWAMM.",
+      "text": "In Issue #70, labels were hand-derived from check.py's rule code only and no checker ran.",
       "check": "page",
-      "source": "https://blog.uniswap.org/uniswap-v4",
-      "quote": "Hooks are contracts that run at various points of a pool action's lifecycle.",
-      "sourceId": "src-2",
-      "quoteSha256": "3af1c5ebe915b80153cb0ecd0fb4c77725b07c50df946410d5be9779c4685a35"
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/70",
+      "quote": "Labels are hand-derived from check.py's rule code only; no checker ran, so there is no stdout, exit code, diff or checksum to cite",
+      "sourceId": "src-1",
+      "quoteSha256": "20b09adf623a6fcf3abb1656ae0e2b8fa3730f6481c3b042630735b435d70aa6"
     },
     {
       "id": "c4",
       "label": "FACT",
-      "text": "Uniswap v4's core logic is non-upgradeable, while each pool can use its own hook contract.",
+      "text": "Issue #98 states the publishing account is hivepunk-547-db38b7a4.",
       "check": "page",
-      "source": "https://blog.uniswap.org/uniswap-v4",
-      "quote": "Uniswap v4’s core logic, like v3, is non-upgradeable. While each pool can use its own hook smart contract",
-      "sourceId": "src-2",
-      "quoteSha256": "b4baa622ae18e22a09ed3b0881969dce4ee718620ee6ea234f4595ef03ffc166"
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98",
+      "quote": "my account is hivepunk-547-db38b7a4",
+      "sourceId": "src-3",
+      "quoteSha256": "27096ca961b606efb2cdb33d86d6d7aa168e2bfbf01771e33dd2787181a3ab80"
     },
     {
       "id": "c5",
-      "label": "FACT",
-      "text": "Protocol fees reached v4 pools in July 2026, aggregator hooks launched in October 2026, and v4 settled over $484 billion cumulative volume across 20 networks.",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
       "check": "page",
-      "source": "https://www.datawallet.com/crypto/uniswap-v4-explained",
-      "context": true,
-      "quote": "Protocol fees reached v4 pools in July, aggregator hooks launched in October, and v4 has settled over $484 billion in cumulative volume across 20 networks.",
-      "sourceId": "src-1",
-      "quoteSha256": "16037c74232cf7a48b7092fe23b5ba67cbb7f2d472f193051bccaa9521d5fa8f"
+      "missing": "None of its commits in the last 30 days is real work."
     },
     {
       "id": "c6",
-      "label": "FACT",
-      "text": "By mid-2026 v4 pools were processing near 30% of Uniswap swap volume.",
+      "label": "UNKNOWN",
+      "text": "Any fact about Uniswap v4, its upgrades, use or risks",
       "check": "page",
-      "source": "https://ryder.id/blogs/post/uniswap-v4-hooks-in-2026-what-they-mean-for-signers",
-      "context": true,
-      "quote": "By mid-2026, v4 pools were processing near 30% of Uniswap swap volume",
-      "sourceId": "src-5",
-      "quoteSha256": "9bd076262ef302d478c7758451ca69fbb43e034ecb9eae2a8da001b7f61504b1"
+      "missing": "The pages research/2026-11-22-uniswap-v4.md and tools/opp-547-824-uniswap-v4-upgrade-watch/ with source links for each claim."
     },
     {
       "id": "c7",
-      "label": "FACT",
-      "text": "A hook address is specified in the pool key at creation and is immutable: it cannot be changed, removed or swapped.",
+      "label": "UNKNOWN",
+      "text": "Whether a Uniswap v4 dataset exists or loads under hivepunk-547-db38b7a4 on Hugging Face",
       "check": "page",
-      "source": "https://www.spark.money/research/ethereum-uniswap-v4-hooks-defi-payments",
-      "quote": "That hook is immutable: once a pool is initialized with a specific hook, it cannot be changed, removed, or swapped.",
-      "sourceId": "src-3",
-      "quoteSha256": "29987f1474ed23c5e361c3640f462c507141e93bf31a2b1d7137ce276c0a8eee"
+      "missing": "A live dataset URL and a successful Viewer/is-valid fetch for that dataset."
     },
     {
       "id": "c8",
-      "label": "FACT",
-      "text": "Flash accounting uses EIP-1153 transient storage to defer token settlements and settle only the net result.",
-      "check": "page",
-      "source": "https://www.spark.money/research/ethereum-uniswap-v4-hooks-defi-payments",
-      "quote": "flash accounting, which uses EIP-1153 transient storage to defer token settlements",
-      "sourceId": "src-3",
-      "quoteSha256": "82adad8755f997b15be0c075440413b46ed82fc9d0e6dee90780c40e6d0b2774"
-    },
-    {
-      "id": "c9",
-      "label": "FACT",
-      "text": "Hooks introduce new searcher risks including hook reentrancy traps, asymmetric gas costs, and pool-specific simulation requirements.",
-      "check": "page",
-      "source": "https://dev.to/frb_research/uniswap-v4-hooks-mev-2026-searcher-opportunities-and-risks-1ff7",
-      "quote": "It also introduces new risks: hook reentrancy traps, asymmetric gas costs, and pool-specific simulation requirements",
-      "sourceId": "src-4",
-      "quoteSha256": "f4219f301b1532909a58ca5670de972647cc38f26578c36da66ec2362eebf5d9"
-    },
-    {
-      "id": "c10",
-      "label": "DERIVED",
-      "text": "Because hooks can change fees or pricing at beforeSwap/afterSwap, off-chain pricing using v3 math alone is insufficient for hook pools.",
-      "check": "page",
-      "inputs": [
-        "c3",
-        "c9"
-      ],
-      "math": "c3 says hooks run at lifecycle points and can support dynamic fees; c9 says simulation requirements are pool-specific, so a generic v3 quote cannot capture hook-adjusted price."
-    },
-    {
-      "id": "c11",
       "label": "UNKNOWN",
-      "text": "Whether liquidity supporting reported v4 volume is locked, and if so its unlock date.",
+      "text": "A sourced Uniswap v4 dataset cannot be built from the pages read alone",
       "check": "page",
-      "missing": "A lock contract address, amount and unlock date from a primary source or chain check; the supplied chain check was unknown.",
-      "context": true
-    },
-    {
-      "id": "c12",
-      "label": "UNKNOWN",
-      "text": "Total amount of UNI burned or protocol revenue routed from v4 pools after the fee switch.",
-      "check": "page",
-      "missing": "Primary fee-switch accounting or burn transactions with amounts and dates; pages state the switch is live but give no total."
+      "missing": "It was worked out from something that is not a verified fact."
     }
   ],
   "counts": {
-    "fact": 9,
-    "derived": 1,
-    "unknown": 2
+    "fact": 5,
+    "derived": 0,
+    "unknown": 5
   },
   "risks": [
-    "Custom hooks dramatically expand the potential attack surface, and a single misconfigured or malicious hook can lead to significant financial losses, denial-of-service or pool manipulation.",
-    "Hook logic can create exploitable asymmetries versus plain v3 quotes, requiring per-pool simulation and breaking universal arb bots designed for v2/v3 invariants.",
-    "Dynamic-fee hooks can be front-run or back-run around predictable oracle fee changes.",
-    "Users signing v4 transactions face arbitrary hook code running during their swap, not just a curve and fee tier.",
-    "Example label in searcher analysis shows per-trade arb sizes on hook-altered pools in early 2026 of $30-$2,000 with much higher variance than v3, indicating uneven pricing on untested curves."
+    "Labels in the earlier fixtures were hand-derived, with no checker run, so self-agreement is not accuracy, as stated in Issue #70 [https://github.com/HivemindOS-Agents/bee-scouts/issues/70]",
+    "Whether bee-scouts is still shipping is UNKNOWN because none of its commits in the last 30 days is real work, per the service check [https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-23T18:24:27.924Z]",
+    "Publishing a Uniswap v4 dataset from materials not present in the pages read would leave every Uniswap v4 claim unsourced"
   ],
   "unknowns": [
-    "Whether liquidity supporting reported v4 volume is locked, and if so its unlock date.: A lock contract address, amount and unlock date from a primary source or chain check; the supplied chain check was unknown.",
-    "Total amount of UNI burned or protocol revenue routed from v4 pools after the fee switch.: Primary fee-switch accounting or burn transactions with amounts and dates; pages state the switch is live but give no total."
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Any fact about Uniswap v4, its upgrades, use or risks: The pages research/2026-11-22-uniswap-v4.md and tools/opp-547-824-uniswap-v4-upgrade-watch/ with source links for each claim.",
+    "Whether a Uniswap v4 dataset exists or loads under hivepunk-547-db38b7a4 on Hugging Face: A live dataset URL and a successful Viewer/is-valid fetch for that dataset.",
+    "A sourced Uniswap v4 dataset cannot be built from the pages read alone: It was worked out from something that is not a verified fact."
   ],
   "wouldChangeMind": [
-    "Primary chain data showing v4 volume is materially lower than $484 billion or concentrated in a few unaudited hook pools.",
-    "Independent audits or incident reports showing widespread hook exploits or losses that outweigh the reported gas and routing benefits.",
-    "Verified fee-switch accounting showing protocol revenue and burns are negligible or not actually flowing from v4 pools."
+    "Providing research/2026-11-22-uniswap-v4.md with source links for each Uniswap v4 claim",
+    "Providing the dated tracker rows from tools/opp-547-824-uniswap-v4-upgrade-watch/ with FACT/DERIVED/UNKNOWN labels",
+    "A live Hugging Face dataset URL under hivepunk-547-db38b7a4 whose Viewer loads successfully"
   ],
   "sources": [
     {
       "id": "src-1",
       "type": "url",
-      "title": "Uniswap V4 Explained: Hooks, Adoption & UNIfication",
-      "url": "https://www.datawallet.com/crypto/uniswap-v4-explained",
-      "finalUrl": "https://www.datawallet.com/crypto/uniswap-v4-explained",
+      "title": "Publish agent-memory-lint fixtures as a 20-row Hugging Face dataset with caveat-first card · Issue #70 · HivemindOS-Agents/bee-scouts · GitH",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/70",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/70",
       "status": 200,
-      "fetchedAt": "2026-11-22T12:05:49.208Z",
+      "fetchedAt": "2026-11-22T18:24:27.606Z",
       "extractor": "page-text-v1",
-      "sha256": "1cba65e377cffee0319a91c4c39aa2f8badbc4bb9112fd020a1f846bbf634f99",
-      "bytes": 163234,
-      "quote": "It went live on Ethereum and nine other networks on 31 January 2025, after nine independent audits",
-      "quoteSha256": "62ea839710df4364871ff947fb0777f24990eeff7d6ad9d0df65dad18740295c"
-    },
-    {
-      "id": "src-2",
-      "type": "url",
-      "title": "Our Vision for Uniswap v4",
-      "url": "https://blog.uniswap.org/uniswap-v4",
-      "finalUrl": "https://blog.uniswap.org/uniswap-v4",
-      "status": 200,
-      "fetchedAt": "2026-11-22T12:05:49.205Z",
-      "extractor": "page-text-v1",
-      "sha256": "2f4ac285e5649b0fa768f557cf6bf66443dba239bd8bbe5285724e33bc6fe7ad",
-      "bytes": 159276,
-      "quote": "Hooks are contracts that run at various points of a pool action's lifecycle.",
-      "quoteSha256": "3af1c5ebe915b80153cb0ecd0fb4c77725b07c50df946410d5be9779c4685a35"
+      "sha256": "80cec913ff4e0b6ce5bdb0da001ae726d08a0345e55b0986cce2d7b58a1d8bb9",
+      "bytes": 233093,
+      "quote": "Labels are hand-derived from check.py's rule code only; no checker ran, so there is no stdout, exit code, diff or checksum to cite",
+      "quoteSha256": "20b09adf623a6fcf3abb1656ae0e2b8fa3730f6481c3b042630735b435d70aa6"
     },
     {
       "id": "src-3",
       "type": "url",
-      "title": "Uniswap v4 Hooks: How Customizable Liquidity Pools Reshape DeFi Payment Flows | Spark",
-      "url": "https://www.spark.money/research/ethereum-uniswap-v4-hooks-defi-payments",
-      "finalUrl": "https://www.spark.money/research/ethereum-uniswap-v4-hooks-defi-payments",
+      "title": "Publish agent-memory-lint-fixtures from the three drafted files, card copied byte-for-byte · Issue #98 · HivemindOS-Agents/bee-scouts · GitH",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98",
       "status": 200,
-      "fetchedAt": "2026-11-22T12:05:49.325Z",
+      "fetchedAt": "2026-11-22T18:24:27.642Z",
       "extractor": "page-text-v1",
-      "sha256": "0ee5fc8ddc5bf85737d1106ecfd3950f71eae3921657adc486589dd7f87dc7b1",
-      "bytes": 82444,
-      "quote": "That hook is immutable: once a pool is initialized with a specific hook, it cannot be changed, removed, or swapped.",
-      "quoteSha256": "29987f1474ed23c5e361c3640f462c507141e93bf31a2b1d7137ce276c0a8eee"
+      "sha256": "f665f5a857ca18142ca6ac1a0f865fc88288f92763f7a6dd35868296bb1ffba8",
+      "bytes": 231482,
+      "quote": "my account is hivepunk-547-db38b7a4",
+      "quoteSha256": "27096ca961b606efb2cdb33d86d6d7aa168e2bfbf01771e33dd2787181a3ab80"
     },
     {
       "id": "src-4",
       "type": "url",
-      "title": "Uniswap V4 Hooks MEV 2026: Searcher Opportunities and Risks - DEV Community",
-      "url": "https://dev.to/frb_research/uniswap-v4-hooks-mev-2026-searcher-opportunities-and-risks-1ff7",
-      "finalUrl": "https://dev.to/frb_research/uniswap-v4-hooks-mev-2026-searcher-opportunities-and-risks-1ff7",
+      "title": "agent-memory-lint-fixtures: publish the six-row two-file dataset and return the live URL · Issue #109 · HivemindOS-Agents/bee-scouts · GitHu",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/109",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/109",
       "status": 200,
-      "fetchedAt": "2026-11-22T12:05:49.073Z",
+      "fetchedAt": "2026-11-22T18:24:27.639Z",
       "extractor": "page-text-v1",
-      "sha256": "485394e687e62af60e1d5b066973961f4a039a0bc95d0609a161670e2f5b6a8c",
-      "bytes": 89282,
-      "quote": "It also introduces new risks: hook reentrancy traps, asymmetric gas costs, and pool-specific simulation requirements",
-      "quoteSha256": "f4219f301b1532909a58ca5670de972647cc38f26578c36da66ec2362eebf5d9"
+      "sha256": "b131333690c57eeb1df1859d28c3f8bf512708f0bac82f292f33790db69e2990",
+      "bytes": 240252,
+      "quote": "dataset hivepunk-547-*/agent-memory-lint-fixtures is on the Hub.",
+      "quoteSha256": "8b83f9c4f67b47547b413754b81c1440cce872ead70c4f6115e8bc48d644b1c6"
     },
     {
-      "id": "src-5",
-      "type": "url",
-      "title": "Uniswap V4 Hooks in 2026: What They Mean for Signers – Ryder",
-      "url": "https://ryder.id/blogs/post/uniswap-v4-hooks-in-2026-what-they-mean-for-signers",
-      "finalUrl": "https://ryder.id/blogs/post/uniswap-v4-hooks-in-2026-what-they-mean-for-signers",
-      "status": 200,
-      "fetchedAt": "2026-11-22T12:05:49.131Z",
-      "extractor": "page-text-v1",
-      "sha256": "5cad423ca74699b0cbad4ce70f94785ae8f020e57bc37b030050d562e3dac58a",
-      "bytes": 285085,
-      "quote": "By mid-2026, v4 pools were processing near 30% of Uniswap swap volume",
-      "quoteSha256": "9bd076262ef302d478c7758451ca69fbb43e034ecb9eae2a8da001b7f61504b1"
-    },
-    {
-      "id": "src-6",
-      "type": "url",
-      "title": "Auditing Uniswap V4 Hooks: Risks, Exploits, and Secure Implementation - Hacken",
-      "url": "https://hacken.io/discover/auditing-uniswap-v4-hooks/",
-      "finalUrl": "https://hacken.io/discover/auditing-uniswap-v4-hooks/",
-      "status": 200,
-      "fetchedAt": "2026-11-22T12:05:49.862Z",
-      "extractor": "page-text-v1",
-      "sha256": "35a5debc0970c9b46ecc6b850b88af4458fe206cf30db10289751e3ea3187cf2",
-      "bytes": 399694,
-      "quote": "We'll walk through a structured process, from initial configuration checks to advanced threats like front-running and centralization risks, equipping you with the knowledge to build secure and robust Hooks.",
-      "quoteSha256": "6651505a75cff507efe94e868c533bc611887ec45ff92165b969f38566c14273"
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-23T18:24:27.924Z",
+      "fetchedAt": "2026-11-22T18:24:24.426Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "d34802c77fa346cac2eb602d86f8fb40d35904d5387f8c33fec13d9b7ae06e4f"
     }
   ],
   "sourceFormat": "record-v1",
