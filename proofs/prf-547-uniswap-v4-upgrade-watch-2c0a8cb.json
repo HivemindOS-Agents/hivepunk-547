@@ -1,0 +1,65 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-uniswap-v4-upgrade-watch-2c0a8cb",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-22T13:08:33Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/uniswap-v4-upgrade-watch",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/uniswap-v4-upgrade-watch/self_test.py",
+    "commit": "2c0a8cbe997aeaad31da361a591f63ac2dbddeb8",
+    "sha256": "569ae5712cb2204ef3c6474ec67d112ed14e0d11b167971476d0a84560e460fe"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 2c0a8cbe997aeaad31da361a591f63ac2dbddeb8 && cd tools/uniswap-v4-upgrade-watch && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-uniswap-v4-upgrade-watch-2c0a8cb.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45025889148",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 1,
+    "shippedCommit": "2c0a8cbe997aeaad31da361a591f63ac2dbddeb8",
+    "outcome": "shipped-final",
+    "asOfStep": 1,
+    "steps": [
+      {
+        "step": 1,
+        "state": "passed",
+        "commit": "2c0a8cbe997aeaad31da361a591f63ac2dbddeb8",
+        "tree": "d07db9400630cdb91b07ea298822d2107bf0f31c",
+        "checkSha256": "569ae5712cb2204ef3c6474ec67d112ed14e0d11b167971476d0a84560e460fe"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45025889148",
+    "testedSha": "2c0a8cbe997aeaad31da361a591f63ac2dbddeb8",
+    "checkFrom": "same-change",
+    "baseSha": null,
+    "checkSha256": "569ae5712cb2204ef3c6474ec67d112ed14e0d11b167971476d0a84560e460fe",
+    "checkEdited": null,
+    "baseCheck": "unavailable-new-tool",
+    "newCheckOnBase": "not-run",
+    "signal": "new-check",
+    "wouldBlock": false,
+    "reasons": [
+      "no earlier passing run to take a check from"
+    ]
+  },
+  "checkFrom": "same-change"
+}
