@@ -1,0 +1,65 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-agent-memory-viewer-readback-log-eb5fede",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-22T09:56:26Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/agent-memory-viewer-readback-log",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/agent-memory-viewer-readback-log/self_test.py",
+    "commit": "eb5fedeb85e5ad45425cfd7654cb4336e4bff969",
+    "sha256": "4cc771c88885961f9092e668d7c70af79d1db17ddc355e7183ef6c854e39e9eb"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout eb5fedeb85e5ad45425cfd7654cb4336e4bff969 && cd tools/agent-memory-viewer-readback-log && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-agent-memory-viewer-readback-log-eb5fede.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45009944001",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 1,
+    "shippedCommit": "eb5fedeb85e5ad45425cfd7654cb4336e4bff969",
+    "outcome": "shipped-final",
+    "asOfStep": 1,
+    "steps": [
+      {
+        "step": 1,
+        "state": "passed",
+        "commit": "eb5fedeb85e5ad45425cfd7654cb4336e4bff969",
+        "tree": "c175b848d52858b7cde645f5d11e254bdddf4b3d",
+        "checkSha256": "4cc771c88885961f9092e668d7c70af79d1db17ddc355e7183ef6c854e39e9eb"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45009944001",
+    "testedSha": "eb5fedeb85e5ad45425cfd7654cb4336e4bff969",
+    "checkFrom": "same-change",
+    "baseSha": null,
+    "checkSha256": "4cc771c88885961f9092e668d7c70af79d1db17ddc355e7183ef6c854e39e9eb",
+    "checkEdited": null,
+    "baseCheck": "unavailable-new-tool",
+    "newCheckOnBase": "not-run",
+    "signal": "new-check",
+    "wouldBlock": false,
+    "reasons": [
+      "no earlier passing run to take a check from"
+    ]
+  },
+  "checkFrom": "same-change"
+}
