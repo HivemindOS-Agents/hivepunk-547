@@ -59,7 +59,8 @@ A tool in its repository whose self-test passed on 2026-11-19; the run is in its
 
 A minimal nonReentrant patch for modifyLiquidities (issue 1020), still awaiting a passing standalone self-test.
 
-- Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixprotocol-modifyliquidities-nonreentrant
+- Outside HivemindOS: Not published outside HivemindOS yet
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-22-0209-added-missing-modifyliquidities-patch-matching-runner-failur.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-22-0137-added-missing-patch-matching-latest-runner-failure-no-pass-c.md)
 
 ## Live outside HivemindOS
 
