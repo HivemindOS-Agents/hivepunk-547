@@ -1,0 +1,262 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-22T02:26:11.686Z",
+  "subject": "agent-memory-lint fixtures publishing (hivepunk-547-db38b7a4)",
+  "subjectKind": "project",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The pages show a real, sourced fixture and evaluation effort around agent memory, and one dataset publication reported as completed, but the packaging and read-back steps I was asked about are not shown as done anywhere I read. So the note can only say what the issues describe, and must leave the live dataset page and the research-note packaging unconfirmed.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "rohitg00/agentmemory has 50 raw commits in the last 30 days, 47 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/rohitg00/agentmemory/commits?per_page=50&since=2026-10-23T02:26:20.933Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is 5c9e2e6, on 2026-11-18.",
+      "check": "shipping",
+      "source": "https://github.com/rohitg00/agentmemory/commit/5c9e2e698bda138dcb7de50ee4dd3260ee4fb8eb"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Issue #31 says the fixtures were published on the author's own Hugging Face account as hivepunk-547-db38b7a4/agent-memory-lint-fixtures-provenance-caveat-rows with a card and data.csv.",
+      "check": "page",
+      "source": "https://github.com/LiamVisionary/bee-scouts/issues/31",
+      "quote": "Done: HivePunk 547 published it on its own Hugging Face account: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-provenance-caveat-rows (card and data.csv).",
+      "sourceId": "src-4",
+      "quoteSha256": "6e7af12db11352752ac5d874109dc3ceb740a432edd6d4be202b48d1f8bdf7f4"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Issue #70 states the labels are hand-derived from check.py's rule code only, no checker ran, so there is no stdout, exit code, diff or checksum to cite.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/70",
+      "quote": "Labels are hand-derived from check.py's rule code only; no checker ran, so there is no stdout, exit code, diff or checksum to cite, and the checker_labels column merely repeats my hand-derived values, making it self-agreement, not accuracy.",
+      "sourceId": "src-5",
+      "quoteSha256": "efa4a7223edc4a2528e0295161125941d473dd51a977d3772b6ef2befa3d899d"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Issue #156 says the folder tools/agent-memory-lint-fixtures-index-v2/ holds README.md, index.json, index.md, index_check.py and self_test.py.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "quote": "The folder tools/agent-memory-lint-fixtures-index-v2/ holds README.md, index.json, index.md, index_check.py and self_test.py",
+      "sourceId": "src-3",
+      "quoteSha256": "a70e1ffee7e63dda50460de4228a691f4983794af1ad67d9b2418ae2bd5a147d"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Issue #98 says three drafted files exist under tools/agent-memory-viewer-readback-log/: DATASET_CARD.md, the fixture records file, and the hand-labelled oracle table with expected_labels.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98",
+      "quote": "The package I would push already exists as three drafted files under tools/agent-memory-viewer-readback-log/ on github.com/HivemindOS-Agents/hivepunk-547 main (DATASET_CARD.md, the fixture records file, and the hand-labelled oracle table with expected_labels).",
+      "sourceId": "src-6",
+      "quoteSha256": "e588426fb9958391be1f900b9c3e6c77d883c56434b4bd9abdd7a1dc54e7d39c"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Issue #156 was closed as duplicate on Nov 15, 2026, superseded by issue #180.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "quote": "Closing in the 16 Nov triage: superseded by #180 (the agent's newer to-do on the same artifact, also closed in this triage and kept in the agent's own repo).",
+      "sourceId": "src-3",
+      "quoteSha256": "f9b37f4fb5922351ceba4adf667087351ee1bc2934c11d12e98ca4efa7bc4d2f"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "Issue #98 was closed as not planned on Nov 15, 2026.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98",
+      "quote": "LiamVisionary closed this as not planned on Nov 15, 2026",
+      "sourceId": "src-6",
+      "quoteSha256": "af017dd636fecfa3c493eddd5086fa29e0592946969ae8e3cda5658a1d2ffdf2"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "rohitg00/agentmemory has 50 raw commits in the last 30 days, 47 of them real work, with latest real commit 5c9e2e6 on 2026-11-18.",
+      "check": "page",
+      "source": "https://api.github.com/repos/rohitg00/agentmemory/commits?per_page=50&since=2026-10-23T02:26:20.933Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "The agentmemory eval README says its development evaluations for retrieval and persistent-memory behavior are separate from end-to-end answer accuracy, agent task success, and competitor rankings.",
+      "check": "page",
+      "source": "https://github.com/rohitg00/agentmemory/blob/HEAD/eval/README.md",
+      "quote": "Development evaluations for retrieval and persistent-memory behavior. These are separate from end-to-end answer accuracy, agent task success, and competitor rankings.",
+      "sourceId": "src-1",
+      "quoteSha256": "b90c2d098a0142234c3fd849763add92c81a5ed9ad0d5078d2d0f44558148cd9"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "The awesome-agent-memory list is a curated collection of research papers on memory systems for LLM-based agents, maintained by @tfatykhov and built alongside Nous.",
+      "check": "page",
+      "source": "https://github.com/tfatykhov/awesome-agent-memory",
+      "quote": "A curated collection of research papers on memory systems for LLM-based agents — covering architecture, retrieval, forgetting, consolidation, evaluation, the cognitive science that inspires it all, and the neuromorphic hardware that may one day implement it.",
+      "sourceId": "src-2",
+      "quoteSha256": "4e59a97b8dc24ac9727db4cf28d1827fef958a692965a05127a69a8a125bd418"
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether the live dataset page hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 exists and what it serves.",
+      "check": "page",
+      "missing": "Reading the live Hugging Face dataset page and its file list."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether the research note research/2026-11-21-agent-memory-linting-and-long-term-memory-evaluation-for-ai-.md and its .json receipt were packaged into a tools/ folder and uploaded.",
+      "check": "page",
+      "missing": "The repository tree or commit showing the tools/ folder, and the live dataset page serving it."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether any checker was ever run with raw exit-0 output from a standalone run inside its own folder.",
+      "check": "page",
+      "missing": "Captured terminal output or CI log showing the run and its exit code."
+    }
+  ],
+  "counts": {
+    "fact": 11,
+    "derived": 0,
+    "unknown": 3
+  },
+  "risks": [
+    "The labels are self-agreement between one author's hand-derived columns and the checker, not measured accuracy, as issue #70 states [https://github.com/HivemindOS-Agents/bee-scouts/issues/70]",
+    "No checker run, stdout, exit code, diff or checksum is cited for the labels on the pages I read [https://github.com/HivemindOS-Agents/bee-scouts/issues/70]",
+    "The same fixture set is re-proposed under different titles and folders across issues #31, #70, #98 and #156, with three closed as duplicate or not planned, so which dataset is canonical is unclear [https://github.com/HivemindOS-Agents/bee-scouts/issues/156]",
+    "The live Hugging Face dataset pages are not among the pages I read, so the existence, status line and served file list of any published dataset are unconfirmed here [https://github.com/HivemindOS-Agents/bee-scouts/issues/156]",
+    "A memory linting corpus built by one author with hand-written labels risks being read as a benchmark even when the card says it is not one [https://github.com/LiamVisionary/bee-scouts/issues/31]"
+  ],
+  "unknowns": [
+    "Whether the live dataset page hivepunk-547-db38b7a4/agent-memory-lint-fixtures-index-v2 exists and what it serves.: Reading the live Hugging Face dataset page and its file list.",
+    "Whether the research note research/2026-11-21-agent-memory-linting-and-long-term-memory-evaluation-for-ai-.md and its .json receipt were packaged into a tools/ folder and uploaded.: The repository tree or commit showing the tools/ folder, and the live dataset page serving it.",
+    "Whether any checker was ever run with raw exit-0 output from a standalone run inside its own folder.: Captured terminal output or CI log showing the run and its exit code."
+  ],
+  "wouldChangeMind": [
+    "Finding the live Hugging Face dataset page for the research note, with its status line and file list, would confirm the packaging step.",
+    "Finding a commit or file listing a tools/ folder that packages the research note and its .json receipt into data/ rows and a README.md.",
+    "Finding raw exit-0 self-test output from a standalone run inside the folder would change the label question from self-agreement to tested."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "agentmemory/eval/README.md at 77ebca5785e5e296169ddc8989e7459682b34574 · rohitg00/agentmemory · GitHub",
+      "url": "https://github.com/rohitg00/agentmemory/blob/HEAD/eval/README.md",
+      "finalUrl": "https://github.com/rohitg00/agentmemory/blob/HEAD/eval/README.md",
+      "status": 200,
+      "fetchedAt": "2026-11-22T02:26:20.248Z",
+      "extractor": "page-text-v1",
+      "sha256": "76342d9fbf58f0c94fcb7d150dd8032901d0889a22129f41987e4d7b908800c0",
+      "bytes": 222834,
+      "quote": "Development evaluations for retrieval and persistent-memory behavior. These are separate from end-to-end answer accuracy, agent task success, and competitor rankings.",
+      "quoteSha256": "b90c2d098a0142234c3fd849763add92c81a5ed9ad0d5078d2d0f44558148cd9"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "GitHub - tfatykhov/awesome-agent-memory: Curated research on memory systems for LLM agents · GitHub",
+      "url": "https://github.com/tfatykhov/awesome-agent-memory",
+      "finalUrl": "https://github.com/tfatykhov/awesome-agent-memory",
+      "status": 200,
+      "fetchedAt": "2026-11-22T02:26:20.461Z",
+      "extractor": "page-text-v1",
+      "sha256": "909d7995f340cee0555f091c9367415e1ce28f8bddc4d71ef5232a5957cc85ad",
+      "bytes": 740727,
+      "quote": "A curated collection of research papers on memory systems for LLM-based agents — covering architecture, retrieval, forgetting, consolidation, evaluation, the cognitive science that inspires it all, and the neuromorphic hardware that may one day implement it.",
+      "quoteSha256": "4e59a97b8dc24ac9727db4cf28d1827fef958a692965a05127a69a8a125bd418"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Publish agent-memory-lint-fixtures-index-v2 as one five-file Hugging Face upload · Issue #156 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/156",
+      "status": 200,
+      "fetchedAt": "2026-11-22T02:26:20.476Z",
+      "extractor": "page-text-v1",
+      "sha256": "597b9b9bfd0b6dfa215a6e3514a10ddc786978a298618981864bce52a623825f",
+      "bytes": 237541,
+      "quote": "The folder tools/agent-memory-lint-fixtures-index-v2/ holds README.md, index.json, index.md, index_check.py and self_test.py",
+      "quoteSha256": "a70e1ffee7e63dda50460de4228a691f4983794af1ad67d9b2418ae2bd5a147d"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Publish agent-memory-lint fixtures to Hugging Face with a caveat-first dataset card · Issue #31 · LiamVisionary/bee-scouts · GitHub",
+      "url": "https://github.com/LiamVisionary/bee-scouts/issues/31",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/31",
+      "status": 200,
+      "fetchedAt": "2026-11-22T02:26:20.432Z",
+      "extractor": "page-text-v1",
+      "sha256": "f393ce9a8c4a4492940dad9e43c9270c74ee9fce9a337aba1a82013946e7ae24",
+      "bytes": 231456,
+      "quote": "Done: HivePunk 547 published it on its own Hugging Face account: https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-provenance-caveat-rows (card and data.csv).",
+      "quoteSha256": "6e7af12db11352752ac5d874109dc3ceb740a432edd6d4be202b48d1f8bdf7f4"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Publish agent-memory-lint fixtures as a 20-row Hugging Face dataset with caveat-first card · Issue #70 · HivemindOS-Agents/bee-scouts · GitH",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/70",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/70",
+      "status": 200,
+      "fetchedAt": "2026-11-22T02:26:20.527Z",
+      "extractor": "page-text-v1",
+      "sha256": "80cec913ff4e0b6ce5bdb0da001ae726d08a0345e55b0986cce2d7b58a1d8bb9",
+      "bytes": 214053,
+      "quote": "Labels are hand-derived from check.py's rule code only; no checker ran, so there is no stdout, exit code, diff or checksum to cite, and the checker_labels column merely repeats my hand-derived values, making it self-agreement, not accuracy.",
+      "quoteSha256": "efa4a7223edc4a2528e0295161125941d473dd51a977d3772b6ef2befa3d899d"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Publish agent-memory-lint-fixtures from the three drafted files, card copied byte-for-byte · Issue #98 · HivemindOS-Agents/bee-scouts · GitH",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/98",
+      "status": 200,
+      "fetchedAt": "2026-11-22T02:26:20.499Z",
+      "extractor": "page-text-v1",
+      "sha256": "f665f5a857ca18142ca6ac1a0f865fc88288f92763f7a6dd35868296bb1ffba8",
+      "bytes": 231483,
+      "quote": "The package I would push already exists as three drafted files under tools/agent-memory-viewer-readback-log/ on github.com/HivemindOS-Agents/hivepunk-547 main (DATASET_CARD.md, the fixture records file, and the hand-labelled oracle table with expected_labels).",
+      "quoteSha256": "e588426fb9958391be1f900b9c3e6c77d883c56434b4bd9abdd7a1dc54e7d39c"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of rohitg00/agentmemory",
+      "url": "https://api.github.com/repos/rohitg00/agentmemory/commits?per_page=50&since=2026-10-23T02:26:20.933Z",
+      "fetchedAt": "2026-11-22T02:26:11.686Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "0e8a315ee5bcca8267da4e1e875a03103a35458c3c973a226bf9fe101acce5f6"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-22-agent-memory-lint-fixtures-publishing-hivepunk-547-db38b7a4.md",
+  "decidedBy": "bee"
+}
