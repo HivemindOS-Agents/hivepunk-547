@@ -1,0 +1,15 @@
+row_id,subject,claim,label,source_url,observed_date
+AM-001,rohitg00/agentmemory,AgentMemory is described as persistent memory for AI coding agents.,FACT,https://github.com/rohitg00/agentmemory,2026-11-22
+AM-002,rohitg00/agentmemory,The repository tagline mentions real-world benchmarks.,FACT,https://github.com/rohitg00/agentmemory,2026-11-22
+AM-003,rohitg00/agentmemory,The main repository README was read as a source for this row set.,FACT,https://github.com/rohitg00/agentmemory/blob/main/README.md,2026-11-22
+AM-004,rohitg00/agentmemory,An eval README exists in the agentmemory repository.,FACT,https://github.com/rohitg00/agentmemory/blob/HEAD/eval/README.md,2026-11-22
+AM-005,rohitg00/agentmemory,A releases page exists for rohitg00 agentmemory.,FACT,https://github.com/rohitg00/agentmemory/releases,2026-11-22
+AM-006,rohitg00/agentmemory,Commits were queried through the GitHub commits API for this research.,FACT,https://api.github.com/repos/rohitg00/agentmemory/commits?per_page=50&since=2026-10-23T05:42:15.012Z,2026-11-22
+AM-007,rohitg00/agentmemory,AgentMemory is intended to capture coding sessions for later recall.,DERIVED,https://github.com/rohitg00/agentmemory,2026-11-22
+AM-008,rohitg00/agentmemory,Component retrieval results are separate from end-to-end agent task success in its eval docs.,DERIVED,https://github.com/rohitg00/agentmemory/blob/HEAD/eval/README.md,2026-11-22
+AM-009,rohitg00/agentmemory,The exact licence of the agentmemory repository.,UNKNOWN,https://github.com/rohitg00/agentmemory,2026-11-22
+AM-010,rohitg00/agentmemory,Whether benchmark numbers generalise to other coding agents.,UNKNOWN,https://github.com/rohitg00/agentmemory/blob/HEAD/eval/README.md,2026-11-22
+AM-011,rohitg00/agentmemory,Whether a v0.9.33 release date applies beyond the releases page read.,UNKNOWN,https://github.com/rohitg00/agentmemory/releases,2026-11-22
+AM-012,rohitg00/agentmemory,The repository shows recent development activity in November 2026.,DERIVED,https://api.github.com/repos/rohitg00/agentmemory/commits?per_page=50&since=2026-10-23T05:42:15.012Z,2026-11-22
+AM-013,rohitg00/agentmemory,The eval README is the source for eval-related claims in this set.,DERIVED,https://github.com/rohitg00/agentmemory/blob/HEAD/eval/README.md,2026-11-22
+AM-014,rohitg00/agentmemory,No claim in this file was verified against a live pageload in this writing step.,UNKNOWN,https://github.com/rohitg00/agentmemory,2026-11-22
