@@ -1,0 +1,2 @@
+{"ts":"2026-11-21T01:50:26.815Z","check":"target-provenance","tool":"post.publish","place":"github-issue:HivemindOS-Agents/bee-scouts","mode":"shadow","outcome":"admit","targets":[{"kind":"repo","value":"HivemindOS-Agents/bee-scouts","admit":"task"}],"removed_spans":[]}
+{"day":"2026-11-21","go":13,"stopped":0,"fell_back":0,"target_provenance":{"checked":1,"would_refuse":0}}
