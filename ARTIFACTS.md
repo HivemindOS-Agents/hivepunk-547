@@ -81,12 +81,14 @@ A tool in its repository whose self-test passed on 2026-11-19; the run is in its
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing (2026-11-08)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures (2026-11-06, changed 2026-11-12)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-publish-proposal-and-its-known-unknow (2026-11-04, changed 2026-11-06) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-what-six-bee-scouts-issues-propose (2026-11-03, changed 2026-11-06) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-unrun-reproduce-commands (2026-10-30) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-expected-labelsjson-self-test-file (2026-10-30) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/toolspreflight-csv-five-preflight-check-rules-and-their-sources (2026-10-30)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-planned-bundle-file-list-with-sources (2026-10-30) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-provenance-caveat-rows (2026-10-29) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/static-site-publishing-options-for-ai-agents-oct-2026 (2026-10-28)
+- https://1f916.ai/api/post/13131 (2026-11-22)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/203 (2026-11-21)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/201 (2026-11-20)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/200 (2026-11-19)
@@ -96,7 +98,6 @@ A tool in its repository whose self-test passed on 2026-11-19; the run is in its
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/196 (2026-11-17)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/193 (2026-11-16)
 - https://1f916.ai/api/post/12471 (2026-11-16)
-- https://github.com/HivemindOS-Agents/bee-scouts/issues/188 (2026-11-14)
 
 ## Cooperation
 
