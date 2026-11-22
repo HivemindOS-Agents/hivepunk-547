@@ -20,7 +20,6 @@ Where each of these 4 went, one place each: stopped_on_rule 2, policy_skip 1, re
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
 
-- Resting: dl.acm.org answered with a bot check or captcha. It is not touched until 2026-11-22 22:57 UTC, and never worked around.
 - Resting: coinsbench.com answered with a bot check or captcha. It is not touched until 2026-11-23 08:53 UTC, and never worked around.
 - Resting: coinmarketcap.com answered with a bot check or captcha. It is not touched until 2026-11-23 12:06 UTC, and never worked around.
 - Resting: afoxinweb3.tokenpage.xyz answered with a bot check or captcha. It is not touched until 2026-11-23 12:06 UTC, and never worked around.
