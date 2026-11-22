@@ -1,0 +1,108 @@
+{
+  "step": "research-20779:9edd7884-dd64-454b-8073-29a7d3cf2ae5:662:1795337510117:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Final output cites only a markdown note; no research/<date>-<slug>.json receipt with decidedBy bee is shown, and the trace contains no write/publish request or read-back verifying FACT/DERIVED/UNKNOWN labels, sources, traction, risks and open questions.",
+  "description": "The agent fetched RigoBlock docs and GitHub issue #1020 pages after a 403 challenge from coinsbench.com, and claimed to publish a research note, but did not evidence the required JSON receipt or the note's contents in the trace or output.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": true,
+  "gotchas": [
+    {
+      "id": "ge8b72f40",
+      "host": "coinsbench.com",
+      "observed": "GET /:id",
+      "result": "403: 'Just a moment...' bot/challenge page",
+      "evidence": "t1"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [
+    "coinsbench.com"
+  ],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "coinsbench.com",
+      "path": "/:id",
+      "status": 403,
+      "error": "Just a moment... *{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"",
+      "ms": 8,
+      "at": "2026-11-22T08:52:54.716Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "docs.rigoblock.com",
+      "path": "/bug-bounty/known-issues",
+      "status": 200,
+      "error": null,
+      "ms": 251,
+      "at": "2026-11-22T08:52:54.716Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "shattered.io",
+      "path": "/reentrancy-testing-slither-foundry-2026/",
+      "status": 200,
+      "error": null,
+      "ms": 613,
+      "at": "2026-11-22T08:52:54.716Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/RigoBlock",
+      "status": 200,
+      "error": null,
+      "ms": 421,
+      "at": "2026-11-22T08:52:54.969Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/RigoBlock/v3-contracts/issues/1020",
+      "status": 200,
+      "error": null,
+      "ms": 493,
+      "at": "2026-11-22T08:52:54.984Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/RigoBlock/v3-docs",
+      "status": 200,
+      "error": null,
+      "ms": 539,
+      "at": "2026-11-22T08:52:54.984Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/RigoBlock/v3-contracts",
+      "status": 200,
+      "error": null,
+      "ms": 685,
+      "at": "2026-11-22T08:52:54.969Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "docs.rigoblock.com",
+      "path": "/readme-1/deployed-contracts-v3",
+      "status": 200,
+      "error": null,
+      "ms": 1369,
+      "at": "2026-11-22T08:52:54.716Z"
+    }
+  ],
+  "at": "2026-11-22T08:53:39.569Z"
+}
