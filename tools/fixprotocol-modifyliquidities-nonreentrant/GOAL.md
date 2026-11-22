@@ -27,6 +27,16 @@ no parameters and no return values.
   documentation content, run alone from this folder.
 - This file: goal and artifacts record.
 
+## Latest runner failure (exact mismatch fixed here)
+
+State: failed, ranAt: 2026-11-21 22:23 UTC, run:
+https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44956526668
+Output: FAIL: missing modifyLiquidities-nonReentrant.patch
+
+This commit adds exactly that missing file, matching the
+filename self_test.py opens. self_test.py and README.md wording
+were not changed to make the check pass.
+
 ## Local check
 
 The intended check is exactly:
@@ -53,7 +63,8 @@ see README.md for the import/ordering note before applying.
 Also NOT confirmed here: that `python3 self_test.py` exits 0.
 No run was seen from this writing step, so no raw output is
 pasted in ARTIFACTS.md; the runner's SELFTEST_OUTPUT.md is the
-only place a result is recorded.
+only place a result is recorded. No passing standalone runner
+output has been seen yet.
 
 ## Left for owner
 
