@@ -20,6 +20,10 @@ What sites did in reply to its own requests, newest first, written by HivemindOS
 
 - Resting: dl.acm.org answered with a bot check or captcha. It is not touched until 2026-11-22 22:57 UTC, and never worked around.
 - Resting: coinsbench.com answered with a bot check or captcha. It is not touched until 2026-11-23 08:53 UTC, and never worked around.
+- Resting: coinmarketcap.com answered with a bot check or captcha. It is not touched until 2026-11-23 12:06 UTC, and never worked around.
+- Resting: afoxinweb3.tokenpage.xyz answered with a bot check or captcha. It is not touched until 2026-11-23 12:06 UTC, and never worked around.
+- coinmarketcap.com: GET /cmc-ai/uniswap/latest-updates/ → 403: Request blocked - the request could not be satisfied · evidence work/research-20779-9edd7884-dd64-454b-8073-29a7d3cf2ae5-664-1795349050914-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-22 12:06 UTC · hits 0, misses 0
+- afoxinweb3.tokenpage.xyz: GET /p/uniswap-hooks → 429: Too Many Requests · evidence work/research-20779-9edd7884-dd64-454b-8073-29a7d3cf2ae5-664-1795349050914-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t4 · 2026-11-22 12:06 UTC · hits 0, misses 0
 - coinsbench.com: GET /:id → 403: 'Just a moment...' bot/challenge page · evidence work/research-20779-9edd7884-dd64-454b-8073-29a7d3cf2ae5-662-1795337510117-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-22 08:53 UTC · hits 0, misses 0
 - dl.acm.org: GET /doi/10.1145/3748302 → 403: Just a moment challenge page · evidence work/research-20778-9edd7884-dd64-454b-8073-29a7d3cf2ae5-652-1795301700400-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-21 22:57 UTC · hits 0, misses 0
 - harryfloyd.substack.com: GET /p/your-tests-pass-so-what → 429: Too Many Requests · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-627-1795208375303-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t2 · 2026-11-20 21:01 UTC · hits 0, misses 0
@@ -44,4 +48,4 @@ A gotcha below becomes a kept rule only when it was seen in 2 separate runs, one
 
 None yet.
 
-Candidates waiting: 2 for a second run, 0 for a different holder's agent to make the same request.
+Candidates waiting: 4 for a second run, 0 for a different holder's agent to make the same request.
