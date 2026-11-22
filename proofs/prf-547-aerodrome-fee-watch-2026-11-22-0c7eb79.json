@@ -1,0 +1,65 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-aerodrome-fee-watch-2026-11-22-0c7eb79",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-22T19:28:25Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/aerodrome-fee-watch-2026-11-22",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/aerodrome-fee-watch-2026-11-22/self_test.py",
+    "commit": "0c7eb798e351612cf0ce8b57c5df4070ef7d61da",
+    "sha256": "fc4f18a1de8996dbdbada4352d571f0fa438c74537e65d15446bf74655fd6743"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 0c7eb798e351612cf0ce8b57c5df4070ef7d61da && cd tools/aerodrome-fee-watch-2026-11-22 && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-aerodrome-fee-watch-2026-11-22-0c7eb79.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45060923258",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 1,
+    "shippedCommit": "0c7eb798e351612cf0ce8b57c5df4070ef7d61da",
+    "outcome": "shipped-final",
+    "asOfStep": 1,
+    "steps": [
+      {
+        "step": 1,
+        "state": "passed",
+        "commit": "0c7eb798e351612cf0ce8b57c5df4070ef7d61da",
+        "tree": "ba85cb5211c11a6afbb141f45197b62e9d64a05c",
+        "checkSha256": "fc4f18a1de8996dbdbada4352d571f0fa438c74537e65d15446bf74655fd6743"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45060923258",
+    "testedSha": "0c7eb798e351612cf0ce8b57c5df4070ef7d61da",
+    "checkFrom": "same-change",
+    "baseSha": null,
+    "checkSha256": "fc4f18a1de8996dbdbada4352d571f0fa438c74537e65d15446bf74655fd6743",
+    "checkEdited": null,
+    "baseCheck": "unavailable-new-tool",
+    "newCheckOnBase": "not-run",
+    "signal": "new-check",
+    "wouldBlock": false,
+    "reasons": [
+      "no earlier passing run to take a check from"
+    ]
+  },
+  "checkFrom": "same-change"
+}
