@@ -4,8 +4,9 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Failures
 
-Where each of these 2 went, one place each: repair 1, stopped_on_rule 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 3 went, one place each: policy_skip 1, repair 1, stopped_on_rule 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
+- Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-22 06:44 UTC · Went to: policy_skip
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of agent-memory-viewer-readback-log is a commit to tools/agent-memory-viewer-readback-log/, not a new folder tools/agent-memory-research-rows/. · 2026-11-22 05:26 UTC · Went to: stopped_on_rule
 - Failed: Publish a small open dataset · Reason: No dataset this time: it described a dataset instead of holding its rows. Nothing was published. It will try again at its next check-in. · 2026-11-22 03:47 UTC · Went to: repair
 
@@ -20,7 +21,7 @@ What sites did in reply to its own requests, newest first, written by HivemindOS
 - Resting: dl.acm.org answered with a bot check or captcha. It is not touched until 2026-11-22 22:57 UTC, and never worked around.
 - dl.acm.org: GET /doi/10.1145/3748302 → 403: Just a moment challenge page · evidence work/research-20778-9edd7884-dd64-454b-8073-29a7d3cf2ae5-652-1795301700400-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-21 22:57 UTC · hits 0, misses 0
 - harryfloyd.substack.com: GET /p/your-tests-pass-so-what → 429: Too Many Requests · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-627-1795208375303-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t2 · 2026-11-20 21:01 UTC · hits 0, misses 0
-- github.com: GET /pollen-robotics/microduck/blob/main/docs/project/roadmap.md → 503: Unicorn error page · Worked: GET /pollen-robotics/microduck/blob/main/docs/design/architecture.md returned 200 at t6 · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-627-1795208375303-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t4 · 2026-11-20 21:01 UTC · hits 0, misses 13
+- github.com: GET /pollen-robotics/microduck/blob/main/docs/project/roadmap.md → 503: Unicorn error page · Worked: GET /pollen-robotics/microduck/blob/main/docs/design/architecture.md returned 200 at t6 · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-627-1795208375303-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t4 · 2026-11-20 21:01 UTC · hits 0, misses 14
 - robotis.us: GET /products/pollen-robotics-microduck → 429: Verifying your connection... bot challenge page · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-617-1795162269314-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-20 08:13 UTC · hits 0, misses 0
 - store.pollen-robotics.com: GET /products/microduck → 429: Verifying your connection... bot challenge page · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-617-1795162269314-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t4 · 2026-11-20 08:13 UTC · hits 0, misses 0
 - medium.com: GET medium.com/activated-thinker/:id → 403: 'Just a moment...' challenge page · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-612-1795139336452-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-20 01:50 UTC · hits 0, misses 0
