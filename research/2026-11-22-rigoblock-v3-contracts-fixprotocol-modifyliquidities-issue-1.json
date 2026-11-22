@@ -1,0 +1,263 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-22T08:52:48.129Z",
+  "subject": "RigoBlock v3-contracts — FixProtocol modifyLiquidities issue #1020",
+  "subjectKind": "protocol",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "This is a disclosed, low-priority hardening gap, not a confirmed exploitable loss, because the issue itself says it is not directly exploitable, privileged-role-gated and with no funds at risk. The main uncertainty is whether it has since been fixed in deployed contracts.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "RigoBlock/v3-contracts has 50 raw commits in the last 30 days, 21 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/RigoBlock/v3-contracts/commits?per_page=50&since=2026-10-23T08:52:56.086Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is c75040b, on 2026-11-19.",
+      "check": "shipping",
+      "source": "https://github.com/RigoBlock/v3-contracts/commit/c75040b7a09c0df661441211992cc40ac967a597"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Issue #1020 is titled Fix[Protocol]: missing non-reentrant modifier in modifyLiquidities and was opened on Nov 19, 2026.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "quote": "Fix[Protocol]: missing non-reentrant modifier in modifyLiquidities #1020",
+      "sourceId": "src-1",
+      "quoteSha256": "5d0a1525cb56fd4186d52df41c643fef14f25a99fdc637622afddf17c5b8e9c5"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The issue body says the method modifyLiquidites does not have a non-reentrant modifier.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "quote": "method modifyLiquidites does not have non-reentrant modifier.",
+      "sourceId": "src-1",
+      "quoteSha256": "184ed00dc19afe77b3d7b111466db57b4453b7a6082b3de530c6d8ee81be6f1d"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The issue says the issue is not directly exploitable, but a malicious Uniswap v4 hook could abuse it.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "quote": "It is not directly exploitable, but a malicious uniswap v4 hook could abuse it.",
+      "sourceId": "src-1",
+      "quoteSha256": "2648d6f72998074246af566591cf99b7d5006947095b002dbc39e016644ffe0c"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The issue describes the priority as low because it is privileged-role-gated and no funds are at risk.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "quote": "Low priority as priviledged-role-gated and no funds at risk.",
+      "sourceId": "src-1",
+      "quoteSha256": "55d0459e4ffc7f5ef4651b05f9b3010f4c134aba1f5d31a268ff5951cebe53fa"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The issue page shows no branches or pull requests linked under Development.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "quote": "No branches or pull requests",
+      "sourceId": "src-1",
+      "quoteSha256": "41f128817bea1c73ea9e9b02f0e06597491e2368419046eb8c4527fc43544d16"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "RigoBlock/v3-contracts describes itself as Smart contracts of RigoBlock v3.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts",
+      "quote": "Smart contracts of RigoBlock v3",
+      "sourceId": "src-2",
+      "quoteSha256": "6f7bb0ee0f4235000ad77827469adf89613b47e103f3eef975df09fc372171f0"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "The repository page shows 11 stars, 2 watching and 3 forks.",
+      "check": "page",
+      "source": "https://github.com/RigoBlock/v3-contracts",
+      "quote": "Stars 11 stars Watchers 2 watching Forks 3 forks",
+      "sourceId": "src-2",
+      "quoteSha256": "4aed8ef8b6b561d05d92ae6ae7a75d447895655631ed56dbcd6ee1d512bdced7"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "RigoBlock/v3-contracts has 50 raw commits in the last 30 days, 21 of them real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/RigoBlock/v3-contracts/commits?per_page=50&since=2026-10-23T08:52:56.086Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "The latest real commit is c75040b, on 2026-11-19.",
+      "check": "page",
+      "source": "https://api.github.com/repos/RigoBlock/v3-contracts/commits?per_page=50&since=2026-10-23T08:52:56.086Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c10",
+      "label": "DERIVED",
+      "text": "The issue should be treated as hardening rather than a confirmed theft, based on the page's own not-directly-exploitable and no-funds-at-risk statements.",
+      "check": "page",
+      "inputs": [
+        "c3",
+        "c4"
+      ],
+      "math": "c3 says not directly exploitable; c4 says privileged-role-gated and no funds at risk; together they support low-priority hardening over confirmed loss."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether issue #1020 has been fixed in a later commit or deployed contract is unknown from the pages read.",
+      "check": "page",
+      "missing": "A merged fix commit, pull request, or updated deployed-contract address linked from issue #1020."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether any deployed pool or user funds were affected is unknown from the pages read.",
+      "check": "page",
+      "missing": "A deployed-contract version check, incident report, or exploit proof showing affected addresses and amounts."
+    }
+  ],
+  "counts": {
+    "fact": 11,
+    "derived": 1,
+    "unknown": 2
+  },
+  "risks": [
+    "A malicious Uniswap v4 hook could abuse the missing modifier, according to the issue.",
+    "The fix status is unclear from the pages read: the issue shows no branches or pull requests.",
+    "Privileged-role gating limits who can reach the function, but the pages do not show the exact gate or affected deployed version.",
+    "No exploit proof, affected contract file, or post-fix audit is shown in the pages read.",
+    "Known-issues documentation lists other privileged-operator attack vectors, so operator trust remains a broader protocol risk context."
+  ],
+  "unknowns": [
+    "Whether issue #1020 has been fixed in a later commit or deployed contract is unknown from the pages read.: A merged fix commit, pull request, or updated deployed-contract address linked from issue #1020.",
+    "Whether any deployed pool or user funds were affected is unknown from the pages read.: A deployed-contract version check, incident report, or exploit proof showing affected addresses and amounts."
+  ],
+  "wouldChangeMind": [
+    "A merged commit adding the non-reentrant modifier and identifying the affected contract would clarify fix status.",
+    "A proof-of-concept or incident report showing reachable reentrancy and affected funds would raise severity.",
+    "Evidence that deployed v3 contracts do not contain the flagged implementation would lower concern."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Fix[Protocol]: missing non-reentrant modifier in `modifyLiquidities` · Issue #1020 · RigoBlock/v3-contracts · GitHub",
+      "url": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "finalUrl": "https://github.com/RigoBlock/v3-contracts/issues/1020",
+      "status": 200,
+      "fetchedAt": "2026-11-22T08:52:55.529Z",
+      "extractor": "page-text-v1",
+      "sha256": "d41290bbc3e29326668130e6021e9c75a7529feb1fd35fe50246568f9f75a319",
+      "bytes": 199263,
+      "quote": "Fix[Protocol]: missing non-reentrant modifier in modifyLiquidities #1020",
+      "quoteSha256": "5d0a1525cb56fd4186d52df41c643fef14f25a99fdc637622afddf17c5b8e9c5"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "GitHub - RigoBlock/v3-contracts: Smart contracts of RigoBlock v3 · GitHub",
+      "url": "https://github.com/RigoBlock/v3-contracts",
+      "finalUrl": "https://github.com/RigoBlock/v3-contracts",
+      "status": 200,
+      "fetchedAt": "2026-11-22T08:52:55.711Z",
+      "extractor": "page-text-v1",
+      "sha256": "938015b269e64e750e77c30b64ee5686ed32ae8e0fbf5d6320b680275ec13b07",
+      "bytes": 295859,
+      "quote": "Smart contracts of RigoBlock v3",
+      "quoteSha256": "6f7bb0ee0f4235000ad77827469adf89613b47e103f3eef975df09fc372171f0"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Known Issues | Rigoblock Documentation",
+      "url": "https://docs.rigoblock.com/bug-bounty/known-issues",
+      "finalUrl": "https://docs.rigoblock.com/bug-bounty/known-issues",
+      "status": 200,
+      "fetchedAt": "2026-11-22T08:52:54.968Z",
+      "extractor": "page-text-v1",
+      "sha256": "3a3710a5dcae6780c7bff73098507e810c6b34f00721639748a07cda40741c2b",
+      "bytes": 438848,
+      "quote": "Temporarily blocking a smart pool from executing transactions after a significant price drawdown is not a viable solution, as it could hinder operations during high-volatility periods—when the greatest opportunities arise—and unnecessarily increase gas costs.",
+      "quoteSha256": "bd8031b9a4cbc4cf1b9cd1c15a60d034ab372780cfa11e7d4450f8d6c6d495c7"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Deployed Contracts - v3 | Rigoblock Documentation",
+      "url": "https://docs.rigoblock.com/readme-1/deployed-contracts-v3",
+      "finalUrl": "https://docs.rigoblock.com/deployments/deployed-contracts-v3",
+      "status": 200,
+      "fetchedAt": "2026-11-22T08:52:56.086Z",
+      "extractor": "page-text-v1",
+      "sha256": "fafe52fa3af8055b0ae08da53460f28259f10248556ae5909f899c7cf16f9e45",
+      "bytes": 431038,
+      "quote": "Markdown versions of documentation pages are available by appending .md to page URLs.",
+      "quoteSha256": "1438b779fee04a0ab3968822d0013ab36e47a3c5e85de6e418ffce980229bf17"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "RigoBlock · GitHub",
+      "url": "https://github.com/RigoBlock",
+      "finalUrl": "https://github.com/RigoBlock",
+      "status": 200,
+      "fetchedAt": "2026-11-22T08:52:55.417Z",
+      "extractor": "page-text-v1",
+      "sha256": "4cbb0847b0dbf63d65cefa412044d43f7702e4443105c29b3996723839f45eca",
+      "bytes": 245902,
+      "quote": "agentic-operator Public Open source agentic API, tools and interface for the Rigoblock protocol Uh oh!",
+      "quoteSha256": "80ab3cfaf1a69b01111d7eae19635d34b5b1104d93a18617e640333f42813050"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "GitHub - RigoBlock/v3-docs: RigoBlock beautiful documentation · GitHub",
+      "url": "https://github.com/RigoBlock/v3-docs",
+      "finalUrl": "https://github.com/RigoBlock/v3-docs",
+      "status": 200,
+      "fetchedAt": "2026-11-22T08:52:55.578Z",
+      "extractor": "page-text-v1",
+      "sha256": "6147d7c50db3b1ce70a061bbfac218dc74497c10d3ced16f6be3b76d7ad10481",
+      "bytes": 223456,
+      "quote": "token-whitelists.md token-whitelists.md View all files Repository files navigation description Learn how to deploy and run your on-chain trading vaults, or query on-chain token prices.",
+      "quoteSha256": "1b2618594e039141f7f11150e9897547486ec213b80a39682ba5a5ff3589d4b8"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of RigoBlock/v3-contracts",
+      "url": "https://api.github.com/repos/RigoBlock/v3-contracts/commits?per_page=50&since=2026-10-23T08:52:56.086Z",
+      "fetchedAt": "2026-11-22T08:52:48.129Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "31cd80c6fd93335994a544bb6d91bda275336f726bed5b4d03eb8331dcde099f"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-22-rigoblock-v3-contracts-fixprotocol-modifyliquidities-issue-1.md",
+  "decidedBy": "bee"
+}
