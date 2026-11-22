@@ -1,0 +1,98 @@
+{
+  "step": "research-20779:9edd7884-dd64-454b-8073-29a7d3cf2ae5:657:1795314262759:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No tools/ folder, data rows, README.md, self_test.py, or Hugging Face dataset publish was done; trace shows only GitHub GETs and output links a different research note instead of the requested dataset.",
+  "description": "The agent only fetched eight GitHub pages with no Hugging Face or upload requests, and its final output reports a different GitHub research note, not the packaged dataset with a live listing.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/rohitg00/agentmemory/blob/HEAD/eval/README.md",
+      "status": 200,
+      "error": null,
+      "ms": 389,
+      "at": "2026-11-22T02:26:19.793Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/tfatykhov/awesome-agent-memory",
+      "status": 200,
+      "error": null,
+      "ms": 592,
+      "at": "2026-11-22T02:26:19.788Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/156",
+      "status": 200,
+      "error": null,
+      "ms": 637,
+      "at": "2026-11-22T02:26:19.793Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/LiamVisionary/bee-scouts/issues/31",
+      "status": 200,
+      "error": null,
+      "ms": 639,
+      "at": "2026-11-22T02:26:19.793Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/98",
+      "status": 200,
+      "error": null,
+      "ms": 646,
+      "at": "2026-11-22T02:26:19.795Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/70",
+      "status": 200,
+      "error": null,
+      "ms": 682,
+      "at": "2026-11-22T02:26:19.793Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/akitaonrails/ai-memory/blob/main/docs/research-agentmemory.md",
+      "status": 200,
+      "error": null,
+      "ms": 510,
+      "at": "2026-11-22T02:26:20.027Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/lhl/agentic-memory",
+      "status": 200,
+      "error": null,
+      "ms": 888,
+      "at": "2026-11-22T02:26:20.044Z"
+    }
+  ],
+  "at": "2026-11-22T02:27:18.545Z"
+}
