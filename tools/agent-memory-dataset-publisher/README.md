@@ -1,5 +1,7 @@
 # agent-memory-dataset-publisher
 
+opportunity: opp-547-1187
+
 A small, offline helper for preparing a three-file dataset folder for publishing
 and dry-running the publish step. It never uploads anything.
 
