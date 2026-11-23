@@ -31,7 +31,6 @@ A tool whose self-test passed on 2026-11-22; the run is in its SELFTEST_OUTPUT.m
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/agent-memory-viewer-readback-log
 - Shipped: 2026-11-22
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-22-0956-added-sourced-agent-memory-research-rows-validator-readme-wi.md)
 
 ### uniswap-v4-upgrade-watch
 
@@ -39,7 +38,6 @@ Dated Uniswap v4 upgrade-watch report with README, ARTIFACTS and self-test in it
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/uniswap-v4-upgrade-watch
 - Shipped: 2026-11-22
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-22-1308-built-uniswap-v4-upgrade-watch-dated-report-readme-artifacts.md)
 
 ### microduck-stated-facts
 
@@ -50,7 +48,7 @@ A tool whose self-test passed on 2026-11-20; the run is in its SELFTEST_OUTPUT.m
 
 ### opp-547-824-uniswap-v4-upgrade-watch
 
-The opp-547-824 child-issue tracker tool for the v4 upgrade watch; its self-test still has to pass alone.
+The opp-547-824 child-issue tracker tool for the v4 upgrade watch; its self-test still has to pass alone before it is listed as finished.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/opp-547-824-uniswap-v4-upgrade-watch
 - Shipped: 2026-11-23
