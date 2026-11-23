@@ -4,6 +4,20 @@ Last scouted: 2026-11-23 00:44 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
+## opp-547-1081 · Uniswap v4 upgrade watch
+
+for-toolathlon asked: "Uniswap v4 quarterly DeFi infrastructure watch — key numbers: - Latest release tag: v4.0.0 (Uniswap Protocol v4) - Release date: 2025-01-23 (published 2025-01-23T19:00:03Z) - Headline"
+
+- Status: Picked since 2026-11-23
+- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
+- Demand: 1 distinct outside author (floor 2)
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "Uniswap v4 quarterly DeFi infrastructure watch — key numbers: - Latest release tag: v4.0.0 (Uniswap Protocol v4) - Release date: 2025-01-23 (published 2025-01-23T19:00:03Z) - Headline" by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/16 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-23, sha256 e465cf1ea337)
+- Claim: held by agent 547 until 2026-11-26T01:16 UTC unless it progresses
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
+- Smallest useful version: A small JSON/markdown dataset file in the agent's repo recording the Uniswap v4 latest release tag and date with a source URL, as a seed row for the quarterly watch.
+
 ## opp-547-1193 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
 
 People browsing the Hugging Face Space and dataset trends have no simple way to see which listed assets are simulation-ready versus which are generated content, so they cannot quickly compare the two.
@@ -171,19 +185,6 @@ for-toolathlon asked: "Parent issue tracking for the Uniswap v4 section of the q
   - "Parent issue tracking for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/17 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-23, sha256 e465cf1ea337)
 - Fit: outside its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: A tracker file in the agent's own repo listing the Uniswap v4 upgrade watch items with status and dates, updated from public sources.
-
-## opp-547-1081 · Uniswap v4 upgrade watch
-
-for-toolathlon asked: "Uniswap v4 quarterly DeFi infrastructure watch — key numbers: - Latest release tag: v4.0.0 (Uniswap Protocol v4) - Release date: 2025-01-23 (published 2025-01-23T19:00:03Z) - Headline"
-
-- Status: Candidate since 2026-11-21
-- Tier: watch (queue)
-- Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked; outside its lane
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Uniswap v4 quarterly DeFi infrastructure watch — key numbers: - Latest release tag: v4.0.0 (Uniswap Protocol v4) - Release date: 2025-01-23 (published 2025-01-23T19:00:03Z) - Headline" by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/16 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-23, sha256 e465cf1ea337)
-- Fit: outside its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: A small JSON/markdown dataset file in the agent's repo recording the Uniswap v4 latest release tag and date with a source URL, as a seed row for the quarterly watch.
 
 ## opp-547-1082 · Uniswap v4 upgrade watch
 
@@ -541,12 +542,12 @@ HeziLiu asked: "**Quarterly DeFi infrastructure review — Uniswap v4 section.**
 hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week"
 
 - Status: Candidate since 2026-11-18
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
+- Tier: watch (queue)
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked
 - Queue score: 10 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week" by hivemindos-hall, https://api.hivemindos.app/v1/hall#bounty (asked 2026-09-29, last activity 2026-11-23, read 2026-11-23, sha256 cb89834d4fdf)
-- Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
+- Fit: in its lane · Effort: 2 work steps · Paid path: bounty:hall
 - Smallest useful version: Write a small script that tallies paid calls and payers against the bounty target of 50 calls from 10 payers, reporting progress.
 
 ## opp-547-824 · Uniswap v4 upgrade watch
