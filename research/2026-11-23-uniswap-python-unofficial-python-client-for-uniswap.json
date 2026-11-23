@@ -1,0 +1,220 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-23T03:54:28.008Z",
+  "subject": "uniswap-python (unofficial Python client for Uniswap)",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+  "thesis": "uniswap-python is a real, funded, maintained but low-activity community client. Real development is sparse, v4 support is beta, and the address data in the tracker pages is inconsistent, so it should be treated with caution.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "UNKNOWN",
+      "text": "The chain of 0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "check": "chain",
+      "missing": "The source answered 429."
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "uniswap-python/uniswap-python has 33 raw commits in the last 30 days, 3 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/uniswap-python/uniswap-python/commits?per_page=50&since=2026-10-24T03:54:31.496Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s3",
+      "label": "FACT",
+      "text": "Its latest real commit is 5fa5c57, on 2026-11-11.",
+      "check": "shipping",
+      "source": "https://github.com/uniswap-python/uniswap-python/commit/5fa5c575f08a052dd0e1f1f342ec1f63d8b6dacc"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "The project describes itself as the unofficial Python client for Uniswap.",
+      "check": "page",
+      "source": "https://github.com/uniswap-python/uniswap-python",
+      "quote": "uniswap-python The unofficial Python client for Uniswap",
+      "sourceId": "src-1",
+      "quoteSha256": "0caa352bbb2cc3b5130e6e32c5962210ec075a04a2c86d6a9836fcba40d11aa0"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Uniswap v4 support is labelled beta.",
+      "check": "page",
+      "source": "https://github.com/uniswap-python/uniswap-python",
+      "quote": "Supports Uniswap v4 (as of v0.8.0, beta)",
+      "sourceId": "src-1",
+      "quoteSha256": "ddbe675273adfbdb0457ac68e99280b6c4639263b330bf8cdc4d20242bc2f3af"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Version 0.9.0 added async versions and removed V1 support.",
+      "check": "page",
+      "source": "https://github.com/uniswap-python/uniswap-python",
+      "quote": "Added: Async versions of Uniswap V2-V4",
+      "sourceId": "src-1",
+      "quoteSha256": "7f3e18543a79aea8cb8e2a5235ba7b97dfb23bed3cc811262a8b4cff4b779f6b"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Only 3 of 33 recent commits were real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/uniswap-python/uniswap-python/commits?per_page=50&since=2026-10-24T03:54:31.496Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The latest real commit is 5fa5c57 from 2026-11-11.",
+      "check": "page",
+      "source": "https://api.github.com/repos/uniswap-python/uniswap-python/commits?per_page=50&since=2026-10-24T03:54:31.496Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "The Uniswap Grants Program funded v3 support.",
+      "check": "page",
+      "source": "https://github.com/uniswap-python/uniswap-python",
+      "quote": "The Uniswap Grants Program , which awarded a $15k grant (2021) that funded the development of Uniswap v3 support.",
+      "sourceId": "src-1",
+      "quoteSha256": "11575a99e6519fb6b24cf7c0d854c77780425894b69cdde6cbac84ade71b9d58"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Unit tests are described as under development.",
+      "check": "page",
+      "source": "https://github.com/uniswap-python/uniswap-python",
+      "quote": "Unit tests are under development using the pytest framework.",
+      "sourceId": "src-1",
+      "quoteSha256": "c03eec47fb5e296ca800b7713aa2ef1ff19386c9bfadc4f8c61f1e8e6d939549"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "One tracker issue gives one UNI address.",
+      "check": "page",
+      "source": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/11",
+      "quote": "UNI token contract address (Ethereum mainnet): 0x1f9840c85d25ce1befa9dee2eee5296c3b0b1dbf",
+      "sourceId": "src-3",
+      "quoteSha256": "34e3f2f92e4637ab9269018d7034450add15c7189be945fc660d16ffb4ded392"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "Another tracker issue gives a different UNI address.",
+      "check": "page",
+      "source": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-5/issues/1",
+      "quote": "UNI contract address: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "sourceId": "src-4",
+      "quoteSha256": "75cbffac52626e9ecda41bf0d24f90b9c0a85dca3b29e32a860d0ebc31a73000"
+    },
+    {
+      "id": "c10",
+      "label": "DERIVED",
+      "text": "The two tracker issues disagree on the UNI contract address.",
+      "check": "page",
+      "inputs": [
+        "c8",
+        "c9"
+      ],
+      "math": "0x1f9840c85d25... differs from 0x1f9840a85d5a... in the characters after the prefix, so at most one is correct."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "The chain and contract facts for 0x1f9840a85d5af5bf1d1762f925bdaddc4201f984 are unverified.",
+      "check": "page",
+      "missing": "A successful chain lookup; the source answered 429."
+    }
+  ],
+  "counts": {
+    "fact": 11,
+    "derived": 1,
+    "unknown": 2
+  },
+  "risks": [
+    "It is unofficial, and the README says forks are untested and the V2 and V3 custom routes are untested.",
+    "v4 support is labelled beta, and the README says unit tests are still under development.",
+    "Most recent commits are daily metric snapshots, so the commit count overstates real development.",
+    "The related tracker issues give conflicting UNI contract addresses, so copying an address from them is risky."
+  ],
+  "unknowns": [
+    "The chain of 0x1f9840a85d5af5bf1d1762f925bdaddc4201f984: The source answered 429.",
+    "The chain and contract facts for 0x1f9840a85d5af5bf1d1762f925bdaddc4201f984 are unverified.: A successful chain lookup; the source answered 429."
+  ],
+  "wouldChangeMind": [
+    "A security audit, or evidence of serious bugs, in the v4 code path.",
+    "Download or dependent-project counts showing real usage.",
+    "Sustained real-work commits, or a long gap with none."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "GitHub - uniswap-python/uniswap-python: 🦄 The unofficial Python client for the Uniswap exchange. · GitHub",
+      "url": "https://github.com/uniswap-python/uniswap-python",
+      "finalUrl": "https://github.com/uniswap-python/uniswap-python",
+      "status": 200,
+      "fetchedAt": "2026-11-23T03:54:31.206Z",
+      "extractor": "page-text-v1",
+      "sha256": "7c0c499ce4f807345eaac38e3673b24c25e3032c0aa5f01059fb140cb5bfb53a",
+      "bytes": 289120,
+      "quote": "uniswap-python The unofficial Python client for Uniswap",
+      "quoteSha256": "0caa352bbb2cc3b5130e6e32c5962210ec075a04a2c86d6a9836fcba40d11aa0"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Uniswap v4 upgrade watch · Issue #11 · mcpmark-eval-liuhezi/uniswap-v4-watch · GitHub",
+      "url": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/11",
+      "finalUrl": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/11",
+      "status": 200,
+      "fetchedAt": "2026-11-23T03:54:31.374Z",
+      "extractor": "page-text-v1",
+      "sha256": "4da5ec2d3e8d03bcc2e8c5523e80ba44ab8170b7e046670e21a133be84fa52fa",
+      "bytes": 226539,
+      "quote": "UNI token contract address (Ethereum mainnet): 0x1f9840c85d25ce1befa9dee2eee5296c3b0b1dbf",
+      "quoteSha256": "34e3f2f92e4637ab9269018d7034450add15c7189be945fc660d16ffb4ded392"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Uniswap v4 upgrade watch · Issue #1 · mcpmark-eval-liuhezi/uniswap-v4-watch-5 · GitHub",
+      "url": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-5/issues/1",
+      "finalUrl": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-5/issues/1",
+      "status": 200,
+      "fetchedAt": "2026-11-23T03:54:31.487Z",
+      "extractor": "page-text-v1",
+      "sha256": "9912472ca488e609230c762b01ff0d83476991bb8faa2459a84581f1a8f4e62c",
+      "bytes": 218353,
+      "quote": "UNI contract address: 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "quoteSha256": "75cbffac52626e9ecda41bf0d24f90b9c0a85dca3b29e32a860d0ebc31a73000"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of uniswap-python/uniswap-python",
+      "url": "https://api.github.com/repos/uniswap-python/uniswap-python/commits?per_page=50&since=2026-10-24T03:54:31.496Z",
+      "fetchedAt": "2026-11-23T03:54:28.008Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "3de5af8fdc2e4ecdb3e0d54eebc4a658f3f59c85cc30d9221d20b5ae30db76b2"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-23-uniswap-python-unofficial-python-client-for-uniswap.md",
+  "decidedBy": "bee"
+}
