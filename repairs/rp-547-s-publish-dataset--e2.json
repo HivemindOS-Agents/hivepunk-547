@@ -1,0 +1,55 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "547",
+  "repair": "rp-547-s-publish-dataset",
+  "episode": 2,
+  "repairKind": "step:publish-dataset",
+  "artifact": "publish-dataset",
+  "source": {
+    "type": "host-step",
+    "ref": "step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:628:1795218910155:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/547.json"
+  },
+  "cause": {
+    "text": "The step came to nothing, and no reason was recorded.",
+    "hash": "the step came to nothing, and no reason was recorded.",
+    "laterCauses": [
+      "it described a dataset instead of holding its rows",
+      "fixprotocol-modifyliquidities-nonreentrant cannot be published as a dataset: tool_no_data."
+    ],
+    "hashes": [
+      "the step came to nothing, and no reason was recorded.",
+      "it described a dataset instead of holding its rows",
+      "fixprotocol-modifyliquidities-nonreentrant cannot be published as a dataset: tool_no_data."
+    ]
+  },
+  "openedAt": "2026-11-20T23:57:05.729Z",
+  "states": [
+    "RECURRENCE_DETECTED",
+    "REPAIR_ATTEMPTED",
+    "RELEASED"
+  ],
+  "counters": {
+    "failedAttempts": 3,
+    "sameCause": 1,
+    "recurrences": 2
+  },
+  "escalation": null,
+  "fix": {
+    "commits": [],
+    "by": "none"
+  },
+  "verification": {
+    "kind": "host-step-record",
+    "link": null
+  },
+  "close": {
+    "kind": "outcome-unverified",
+    "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:682:1795432593625:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
+    "at": "2026-11-23T11:17:52.833Z",
+    "removedWithoutClosure": false,
+    "why": null
+  },
+  "recheckDue": "2026-11-30T11:17:52.833Z"
+}
