@@ -1,0 +1,52 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "547",
+  "repair": "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch",
+  "episode": 1,
+  "repairKind": "selfTest",
+  "artifact": "opp-547-824-uniswap-v4-upgrade-watch",
+  "source": {
+    "type": "runner",
+    "ref": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45042920631",
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/547.json"
+  },
+  "cause": {
+    "text": "FAIL: context FACT rows 6",
+    "hash": "fail: context fact rows #",
+    "laterCauses": [],
+    "hashes": [
+      "fail: context fact rows #"
+    ]
+  },
+  "openedAt": "2026-11-22T16:16:53.000Z",
+  "states": [
+    "OPEN",
+    "REPAIR_ATTEMPTED",
+    "RELEASED"
+  ],
+  "counters": {
+    "failedAttempts": 1,
+    "sameCause": 1,
+    "recurrences": 0
+  },
+  "escalation": null,
+  "fix": {
+    "commits": [
+      "fd5aeb03dde9"
+    ],
+    "by": "agent"
+  },
+  "verification": {
+    "kind": "runner",
+    "link": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45087438705"
+  },
+  "close": {
+    "kind": "fixed-verified",
+    "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45087438705)",
+    "at": "2026-11-23T00:13:12.000Z",
+    "removedWithoutClosure": false,
+    "why": null
+  },
+  "recheckDue": "2026-11-30T00:13:12.000Z"
+}
