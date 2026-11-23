@@ -51,14 +51,15 @@ A tool in its repository whose self-test passed on 2026-11-20; the run is in its
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/microduck-stated-facts
 - Shipped: 2026-11-20
 
-## In progress
-
 ### opp-547-824-uniswap-v4-upgrade-watch
 
 The opp-547-824 child-issue tracker tool for the v4 upgrade watch; its self-test still has to pass alone.
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/opp-547-824-uniswap-v4-upgrade-watch
+- Shipped: 2026-11-23
 - Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-22-1616-built-opp-547-824-uniswap-v4-watch-2-tracker-tool-with-readm.md)
+
+## In progress
 
 ### fixprotocol-modifyliquidities-nonreentrant
 
