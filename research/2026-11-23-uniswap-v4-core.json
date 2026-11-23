@@ -1,0 +1,227 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-23T07:02:56.966Z",
+  "subject": "Uniswap v4-core",
+  "subjectKind": "protocol",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "From the pages read, v4-core's architecture is clear but its present activity and security status are not confirmed, so it should be treated as an extensible platform whose safety depends heavily on individual hooks and deployments. The 0-commit check and missing audit details prevent a stronger conclusion.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "Uniswap/v4-core has 0 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/Uniswap/v4-core/commits?per_page=50&since=2026-10-24T07:03:04.322Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether Uniswap/v4-core is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Uniswap v4 is described as a new automated market maker protocol that provides extensible and customizable pools.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "quote": "Uniswap v4 is a new automated market maker protocol that provides extensible and customizable pools.",
+      "sourceId": "src-1",
+      "quoteSha256": "46cfb27c2155ecc7a41aa4c03fc1d6fe80944f2cd2affe76f633ffd1f5ca165a"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "v4-core hosts core pool logic for creating pools and executing pool actions like swapping and providing liquidity.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "context": true,
+      "quote": "v4-core hosts the core pool logic for creating pools and executing pool actions like swapping and providing liquidity.",
+      "sourceId": "src-1",
+      "quoteSha256": "3f42f85f1a9d2c63cdc0f670304f3051e70e99bab7da94c5ff49ca6cc298e07c"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "v4-core uses a singleton-style architecture where all pool state is managed in PoolManager.sol.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "quote": "v4-core uses a singleton-style architecture, where all pool state is managed in the PoolManager.sol contract.",
+      "sourceId": "src-1",
+      "quoteSha256": "1e0e9c443ee22ad3b4f1c0b6e944928284dbe99234462dd7d5ffd24f943a4607"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Pool actions can be taken after an initial call to unlock, with integrators implementing unlockCallback for actions including swap, modifyLiquidity, donate, take, settle, mint, and burn.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "quote": "Pool actions can be taken after an initial call to unlock . Integrators implement the unlockCallback and proceed with any of the following actions on the pools: swap modifyLiquidity donate take settle mint burn",
+      "sourceId": "src-1",
+      "quoteSha256": "b632fd8f38c90e50c1e8063036f95ba77a43f075610aec0ab1bb195ab1d3aaa7"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Any number of pool actions can run during unlock as long as accumulated deltas reach 0 by the unlock's release.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "quote": "Any number of actions can be run on the pools, as long as the deltas accumulated during the unlock reach 0 by the unlock’s release.",
+      "sourceId": "src-1",
+      "quoteSha256": "be15773adc8aed244ad6b555ea57291ab06fd24d352a65d130abdd57af204e83"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "A pool may be initialized with a hook contract implementing before/after callbacks for Initialize, AddLiquidity, RemoveLiquidity, Swap, and Donate.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "quote": "a pool may be initialized with a hook contract, that can implement any of the following callbacks in the lifecycle of pool actions: {before,after}Initialize {before,after}AddLiquidity {before,after}RemoveLiquidity {before,after}Swap {before,after}Donate",
+      "sourceId": "src-1",
+      "quoteSha256": "96d6107e4fa9e92ab3542b2f0438550c9af24933040068535358194bf0d1cf34"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Which callbacks are executed on a pool cannot change after pool initialization.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "quote": "which callbacks are executed on a pool cannot change after pool initialization.",
+      "sourceId": "src-1",
+      "quoteSha256": "305f8c29a011e88e0efbeedb4486622ee2fd369f25101bf6f29584ab908312e3"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "The README says the contracts in the repo are in early stages and were released as draft code so v4 can be built in public.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "quote": "The contracts in this repo are in early stages - we are releasing the draft code now so that v4 can be built in public, with open feedback and meaningful community contribution.",
+      "sourceId": "src-1",
+      "quoteSha256": "d03085c99d37246b6886962ed7abb7f2d53924d2596bede6c2112ffe2a1af9bf"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "The GitHub page for the main repository shows 1,518 Commits.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "quote": "Dismiss alert {{ message }} main Branches Tags Go to file Code Open more actions menu Latest commit History 1,518 Commits 1,518 Commits Folders and files Name Name Last commit message Last commit date .github .github docs docs lib lib licenses licenses snapshots snapshots src src test test .env",
+      "sourceId": "src-1",
+      "quoteSha256": "3453991a94b94fcbc9d751aa84428f315ad0c25cb8d33fb3a08ce2458eb35981"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "Uniswap/v4-core has 0 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/Uniswap/v4-core/commits?per_page=50&since=2026-10-24T07:03:04.322Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c11",
+      "label": "DERIVED",
+      "text": "Pool safety depends on both core manager and hook code, because customization moved risk into hook code.",
+      "check": "page",
+      "inputs": [
+        "c3",
+        "c6"
+      ],
+      "math": "Singleton core (c3) plus hook callbacks defining pool behaviour (c6) means a pool is not defined by the manager alone; safety must include the hook it points to."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Whether the OpenZeppelin audit of Uniswap v4 Core found issues, and whether they were fixed.",
+      "check": "page",
+      "missing": "Accessible audit report text with scope, findings, and remediation; the OpenZeppelin page read showed only news/navigation content."
+    }
+  ],
+  "counts": {
+    "fact": 11,
+    "derived": 1,
+    "unknown": 2
+  },
+  "risks": [
+    "Hook risk: Blockchain Lab states customization moved risk into unaudited code and that a pool's safety is its hook plus the manager.",
+    "Shared singleton risk: a hook that breaks lock accounting could affect every pool sharing the manager, according to Blockchain Lab.",
+    "Hook callbacks logic may be updated by hooks depending on implementation, even though which callbacks execute cannot change after pool initialization.",
+    "Early-stage risk: README describes contracts as early-stage draft code released for public feedback.",
+    "Audit risk is unconfirmed: the OpenZeppelin page read showed navigation/news content but no audit findings, scope, or fixes."
+  ],
+  "unknowns": [
+    "Whether Uniswap/v4-core is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether the OpenZeppelin audit of Uniswap v4 Core found issues, and whether they were fixed.: Accessible audit report text with scope, findings, and remediation; the OpenZeppelin page read showed only news/navigation content."
+  ],
+  "wouldChangeMind": [
+    "An accessible OpenZeppelin audit report showing scope, findings, and fixes for the exact v4-core commit.",
+    "Evidence of recent real commits or a release, contradicting the 0-commit 30-day check.",
+    "Verified live PoolManager deployment addresses with pool, hook, volume, and liquidity data from a reliable source."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "GitHub - Uniswap/v4-core: 🦄 🦄 🦄 🦄 Core smart contracts of Uniswap v4 · GitHub",
+      "url": "https://github.com/Uniswap/v4-core",
+      "finalUrl": "https://github.com/Uniswap/v4-core",
+      "status": 200,
+      "fetchedAt": "2026-11-23T07:03:04.050Z",
+      "extractor": "page-text-v1",
+      "sha256": "9c71a3de0fc546495fc959cc3e63207ea80db06a9221f6e0368356519e962927",
+      "bytes": 271372,
+      "quote": "Uniswap v4 is a new automated market maker protocol that provides extensible and customizable pools.",
+      "quoteSha256": "46cfb27c2155ecc7a41aa4c03fc1d6fe80944f2cd2affe76f633ffd1f5ca165a"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Uniswap v4 Core Audit",
+      "url": "https://blog.openzeppelin.com/uniswap-v4-core-audit",
+      "finalUrl": "https://www.openzeppelin.com/news",
+      "status": 200,
+      "fetchedAt": "2026-11-23T07:03:03.512Z",
+      "extractor": "page-text-v1",
+      "sha256": "eac6d4e60fa21f783d4c4091572a71d6c23b462920fda351de991375199b35ff",
+      "bytes": 291439,
+      "quote": "News | OpenZeppelin S&amp;P Global Completes Acquisition of OpenZeppelin | Read the announcement News from OpenZeppelin OpenZeppelin Brings Confidential Balances and Transfers to Stellar Product Releases &amp; Services October 22, 2026 OpenZeppelin Partners With Chainlink to Advance Onchain Finance",
+      "quoteSha256": "5b91517ae9deffc149bdcd85cce394c03b39e6f9f29d967d5732bfa018eff485"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Uniswap v4 Core | Blockchain Lab",
+      "url": "https://blockchainlab.com/whitepaper/uniswap-v4",
+      "finalUrl": "https://blockchainlab.com/whitepaper/uniswap-v4",
+      "status": 200,
+      "fetchedAt": "2026-11-23T07:03:03.381Z",
+      "extractor": "page-text-v1",
+      "sha256": "76aa76d0c2c102afce1a8a14f78cd06c5386d27c6e842d999917bc750019b35e",
+      "bytes": 43413,
+      "quote": "Hooks are the market A pool can point at code that runs before or after a swap, a liquidity change, or a donation.",
+      "quoteSha256": "8a09d413672b44eab2bc94e291608d7a28a959139103611b429de1fce1eae4d3"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of Uniswap/v4-core",
+      "url": "https://api.github.com/repos/Uniswap/v4-core/commits?per_page=50&since=2026-10-24T07:03:04.322Z",
+      "fetchedAt": "2026-11-23T07:02:56.966Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "ea70799d3685d3ea229d7e090fbb47f70f64c2dadf07a2aab1abdb69390dbd2e"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-23-uniswap-v4-core.md",
+  "decidedBy": "bee"
+}
