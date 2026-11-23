@@ -22,9 +22,14 @@ def main():
     need("Child issues confirmed: 0" in tracker, "tracker child count honesty")
     need(tracker.count("UNKNOWN - not fetched") >= 1 and "none confirmed" in tracker, "child UNKNOWN placeholders")
     need("not fetched" in readme and "not fetched" in tracker, "not-fetched honesty")
-    need(tracker.count("| FACT |") == 3, "context FACT rows %d" % tracker.count("| FACT |"))
-    need(tracker.count("| DERIVED |") == 1, "context DERIVED rows")
-    need(tracker.count("| UNKNOWN |") == 2, "context UNKNOWN rows")
+    # Count rows only in the context-rows table, not the issue-tracker table
+    # (which also uses "| FACT |" / "| UNKNOWN |" in its Label column).
+    parts = tracker.split("## Context rows", 1)
+    need(len(parts) == 2, "context rows section present")
+    context = parts[1]
+    need(context.count("| FACT |") == 3, "context FACT rows %d" % context.count("| FACT |"))
+    need(context.count("| DERIVED |") == 1, "context DERIVED rows")
+    need(context.count("| UNKNOWN |") == 2, "context UNKNOWN rows")
     for url in ("https://blog.uniswap.org/uniswap-v4", "https://www.datawallet.com/crypto/uniswap-v4-explained", "https://hacken.io/discover/auditing-uniswap-v4-hooks/"):
         need(url in tracker, "tracker source %s" % url)
     print("tracker has both asks, FACT 3/DERIVED 1/UNKNOWN 2 context, UNKNOWN child honesty, sources")
