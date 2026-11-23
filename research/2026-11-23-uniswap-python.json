@@ -1,0 +1,187 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-23T19:43:55.199Z",
+  "subject": "uniswap-python",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "From the page read, uniswap-python is a real Python tool with a long changelog and Uniswap v4 beta support, but the evidence read does not verify the separate uniswap-v4-upgrade-watch self-test or any current token activity. I therefore conclude it is worth knowing as a client library example, not as confirmed current traction for the upgrade-watch tool.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-24T19:43:58.574Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "uniswap-python is described as the unofficial Python client for Uniswap.",
+      "check": "page",
+      "source": "https://github.com/uniswap-python/uniswap-python",
+      "quote": "The unofficial Python client for Uniswap .",
+      "sourceId": "src-2",
+      "quoteSha256": "5052b24a849c598567653c75766c7ef9e03ca37bb587408c5a794295d16ff46d"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "The page lists a simple Python wrapper for available contract functions and variables.",
+      "check": "page",
+      "source": "https://github.com/uniswap-python/uniswap-python",
+      "quote": "A simple to use Python wrapper for all available contract functions and variables",
+      "sourceId": "src-2",
+      "quoteSha256": "9072833637f9a0b8322c2a22cef5af59c24ebfe6f0e316e535969ec2e4650507"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The page lists a basic CLI to get prices and token metadata.",
+      "check": "page",
+      "source": "https://github.com/uniswap-python/uniswap-python",
+      "quote": "A basic CLI to get prices and token metadata",
+      "sourceId": "src-2",
+      "quoteSha256": "73acd415bdbd9b1c7d045f06b718f5286f57f9c91ffb095ecae03b1d20219ed1"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The page says Uniswap v4 support began as of v0.8.0 in beta form.",
+      "check": "page",
+      "source": "https://github.com/uniswap-python/uniswap-python",
+      "quote": "Supports Uniswap v4 (as of v0.8.0, beta)",
+      "sourceId": "src-2",
+      "quoteSha256": "ddbe675273adfbdb0457ac68e99280b6c4639263b330bf8cdc4d20242bc2f3af"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The page lists fork support as untested.",
+      "check": "page",
+      "source": "https://github.com/uniswap-python/uniswap-python",
+      "quote": "Various forks (untested, but should work)",
+      "sourceId": "src-2",
+      "quoteSha256": "709fee72f31967775cac384130bbd9ecca04d1239b653e7583dd8f52f717ec50"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "The page says The Uniswap Grants Program awarded a $15k grant in 2021 that funded development of Uniswap v3 support.",
+      "check": "page",
+      "source": "https://github.com/uniswap-python/uniswap-python",
+      "quote": "The Uniswap Grants Program , which awarded a $15k grant (2021) that funded the development of Uniswap v3 support.",
+      "sourceId": "src-2",
+      "quoteSha256": "11575a99e6519fb6b24cf7c0d854c77780425894b69cdde6cbac84ade71b9d58"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-24T19:43:58.574Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c8",
+      "label": "DERIVED",
+      "text": "Uniswap v4 support in uniswap-python should be treated as beta rather than final, based on the page wording.",
+      "check": "page",
+      "inputs": [
+        "c4"
+      ],
+      "math": "c4 states v4 support as of v0.8.0, beta; therefore the derived status is beta, not final."
+    },
+    {
+      "id": "c9",
+      "label": "DERIVED",
+      "text": "The tool provides both programmatic and command-line access, based on the wrapper and CLI facts.",
+      "check": "page",
+      "inputs": [
+        "c2",
+        "c3"
+      ],
+      "math": "c2 gives a Python wrapper and c3 gives a CLI; together they imply both programmatic and command-line access."
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether tools/uniswap-v4-upgrade-watch self_test.py passes, its exit code, and its raw output are unknown from the pages read.",
+      "check": "page",
+      "missing": "A captured run of python3 self_test.py alone in tools/uniswap-v4-upgrade-watch with its real exit code and raw output pasted into ARTIFACTS.md."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Any token price, volume, liquidity lock, or unlock date for this subject is unknown from the pages read.",
+      "check": "page",
+      "missing": "A named token address with a dated liquidity-lock record showing the unlock date, or a sourced market data page naming the token.",
+      "context": true
+    }
+  ],
+  "counts": {
+    "fact": 8,
+    "derived": 2,
+    "unknown": 3
+  },
+  "risks": [
+    "Uniswap v4 support is described as beta on the page, so behaviour may be incomplete or change.",
+    "Fork support is listed as untested on the page, which follows from the wording Various forks (untested, but should work).",
+    "Testing is described as under development and run on a fork of mainnet using Anvil, so full coverage is not shown.",
+    "No security audit, locked-liquidity unlock date, or independent verification is stated on the page read.",
+    "The captured self-test run for tools/uniswap-v4-upgrade-watch was not shown in the pages read, so its pass or failure cannot be confirmed here."
+  ],
+  "unknowns": [
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether tools/uniswap-v4-upgrade-watch self_test.py passes, its exit code, and its raw output are unknown from the pages read.: A captured run of python3 self_test.py alone in tools/uniswap-v4-upgrade-watch with its real exit code and raw output pasted into ARTIFACTS.md.",
+    "Any token price, volume, liquidity lock, or unlock date for this subject is unknown from the pages read.: A named token address with a dated liquidity-lock record showing the unlock date, or a sourced market data page naming the token."
+  ],
+  "wouldChangeMind": [
+    "A captured self_test.py run for tools/uniswap-v4-upgrade-watch in ARTIFACTS.md showing a real exit code and raw output.",
+    "A current official release page for uniswap-python or the upgrade-watch tool showing a non-beta v4 release after the changelog shown.",
+    "Independent usage or security evidence, such as an audit, dated release, or measured activity from a named source."
+  ],
+  "sources": [
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "GitHub - uniswap-python/uniswap-python: 🦄 The unofficial Python client for the Uniswap exchange. · GitHub",
+      "url": "https://github.com/uniswap-python/uniswap-python",
+      "finalUrl": "https://github.com/uniswap-python/uniswap-python",
+      "status": 200,
+      "fetchedAt": "2026-11-23T19:43:58.278Z",
+      "extractor": "page-text-v1",
+      "sha256": "90b998cbe773e86a48bc1c94174515839a47d5f06afa20bdbe6296294cccce85",
+      "bytes": 288595,
+      "quote": "The unofficial Python client for Uniswap .",
+      "quoteSha256": "5052b24a849c598567653c75766c7ef9e03ca37bb587408c5a794295d16ff46d"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-24T19:43:58.574Z",
+      "fetchedAt": "2026-11-23T19:43:55.199Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "d5ad2c0c32ebcf1c0634ac72cc269e2b79d92fa7629b677b63cdbd5c69dd75ae"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-23-uniswap-python.md",
+  "decidedBy": "bee"
+}
