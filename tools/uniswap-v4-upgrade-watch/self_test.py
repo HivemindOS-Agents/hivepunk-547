@@ -1,49 +1,48 @@
 #!/usr/bin/env python3
-"""Standalone self-test. No args, no network, run alone from this folder.
-Checks report/README/ARTIFACTS content. Exit 0 only when all pass.
-"""
-import os, sys
+"""Standalone self-test. No args, no network, run alone from this folder."""
+import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
-REPORT = os.path.join(HERE, "2026-11-22-uniswap-v4-upgrade-watch.md")
-README = os.path.join(HERE, "README.md")
-ART = os.path.join(HERE, "ARTIFACTS.md")
-ASK = "https://github.com/for-toolathlon/uniswap-v4-watch/issues/1"
-SOURCES = [
- "https://www.datawallet.com/crypto/uniswap-v4-explained",
- "https://blog.uniswap.org/uniswap-v4",
- "https://www.spark.money/research/ethereum-uniswap-v4-hooks-defi-payments",
- "https://dev.to/frb_research/uniswap-v4-hooks-mev-2026-searcher-opportunities-and-risks-1ff7",
- "https://ryder.id/blogs/post/uniswap-v4-hooks-in-2026-what-they-mean-for-signers",
- "https://hacken.io/discover/auditing-uniswap-v4-hooks/",
-]
-def read(p):
+def read(name):
+    p = os.path.join(HERE, name)
     if not os.path.exists(p):
-        sys.stderr.write("FAIL: missing %s\n" % os.path.basename(p)); sys.exit(1)
+        sys.stderr.write("FAIL: missing %s\n" % name); sys.exit(1)
     return open(p, encoding="utf-8").read()
 def main():
-    report, readme, art = read(REPORT), read(README), read(ART)
-    checks = []
-    def need(cond, msg):
-        if not cond:
-            sys.stderr.write("FAIL: %s\n" % msg); sys.exit(1)
-    need("2026-11-22" in report and "Uniswap v4" in report, "report date/title")
-    need(ASK in report and ASK in readme, "ask link in report and README")
-    for label in ("FACT", "DERIVED", "UNKNOWN"):
-        need(label in report, "report missing label %s" % label)
-    need(report.count("| FACT |") == 9, "FACT table rows %d != 9" % report.count("| FACT |"))
-    need(report.count("| DERIVED |") == 1, "DERIVED table rows != 1")
-    need(report.count("| UNKNOWN |") == 2, "UNKNOWN table rows != 2")
-    for url in SOURCES:
-        need(url in report, "report missing source %s" % url)
-    need("PoolManager" in report and "31 January 2025" in report and "$484 billion" in report, "key report claims")
-    need("Could not confirm" in report, "report could-not-confirm")
-    checks.append("report has date, ask link, FACT 9/DERIVED 1/UNKNOWN 2 and all six sources")
-    need("Caveats first" in readme and "UNTESTED" in readme and "FACT" in readme and "UNKNOWN" in readme, "README caveats/untested")
-    need("python3 self_test.py" in readme, "README command")
-    checks.append("README has caveats first, untested marks and command")
-    need("2026-11-22-uniswap-v4-upgrade-watch.md" in art and "python3 self_test.py" in art and "NOT confirmed" in art and "Left for owner" in art, "ARTIFACTS entry")
-    checks.append("ARTIFACTS.md records artifacts, command, NOT confirmed and left-for-owner")
-    for line in checks: print(line)
+    seed_text, readme, art = read("seed_row.json"), read("README.md"), read("ARTIFACTS.md")
+    def need(c, m):
+        if not c:
+            sys.stderr.write("FAIL: %s\n" % m); sys.exit(1)
+    try:
+        seed = json.loads(seed_text)
+    except Exception as e:
+        sys.stderr.write("FAIL: seed_row.json invalid JSON: %s\n" % e); sys.exit(1)
+    need(seed.get("repository") == "Uniswap/v4-core", "seed repository")
+    need(seed.get("latest_release_tag") == "UNKNOWN", "latest_release_tag UNKNOWN")
+    need(seed.get("latest_release_date") == "UNKNOWN", "latest_release_date UNKNOWN")
+    need(seed.get("verified_latest_release_tag") == "UNKNOWN", "verified tag UNKNOWN")
+    need(seed.get("verified_latest_release_date") == "UNKNOWN", "verified date UNKNOWN")
+    need("UNKNOWN" in str(seed.get("verification_status", "")), "verification_status UNKNOWN")
+    need(seed.get("releases_url") == "https://github.com/Uniswap/v4-core/releases", "releases_url")
+    need(seed.get("repository_url") == "https://github.com/Uniswap/v4-core", "repository_url")
+    claims = seed.get("unverified_claims", [])
+    need(len(claims) == 1, "exactly one unverified claim")
+    claim = claims[0]
+    need(claim.get("release_tag") == "v4.0.0" and claim.get("release_date") == "2025-01-23", "unverified v4.0.0/2025-01-23")
+    need("unverified" in str(claim.get("status", "")), "claim status unverified")
+    need(claim.get("release_tag") != seed.get("verified_latest_release_tag"), "claim separate from verified")
+    sources = seed.get("sources", [])
+    need("https://github.com/Uniswap/v4-core/releases" in sources, "source releases URL")
+    need("https://github.com/Uniswap/v4-core" in sources, "source repo URL")
+    print("seed_row.json: verified UNKNOWN, unverified v4.0.0/2025-01-23 separate, sources present")
+    need("Caveats first" in readme and "UNTESTED" in readme and "python3 self_test.py" in readme, "README caveats/untested/command")
+    need("UNKNOWN" in readme and "https://github.com/Uniswap/v4-core/releases" in readme, "README UNKNOWN and releases URL")
+    print("README has caveats first, untested marks, command, UNKNOWN honesty")
+    need("seed_row.json" in art and "README.md" in art and "self_test.py" in art and "ARTIFACTS.md" in art, "ARTIFACTS list")
+    need("python3 self_test.py" in art, "ARTIFACTS exact command")
+    need("tools/uniswap-v4-upgrade-watch/" in art, "ARTIFACTS folder path")
+    need("Raw stdout, stderr and exit code" in art, "ARTIFACTS verification output slot")
+    need("NOT confirmed" in art and "Commit note" in art and "Left for owner" in art, "ARTIFACTS not-confirmed/commit-note/owner")
+    print("ARTIFACTS.md records artifacts, command, verification slot, NOT confirmed, commit note, left-for-owner")
     print("self-test: all checks passed")
     return 0
 if __name__ == "__main__":
