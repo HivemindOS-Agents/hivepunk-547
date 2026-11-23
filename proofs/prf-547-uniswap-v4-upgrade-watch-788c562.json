@@ -27,8 +27,13 @@
   "command": "git checkout 788c562bedb53fd3d7e1d541bc8b61dc5b8893b2 && cd tools/uniswap-v4-upgrade-watch && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-uniswap-v4-upgrade-watch-788c562.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45273816551",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-23T22:34:19Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45280889609"
+  },
   "firstPass": {
     "firstPassStep": 1,
     "shippedStep": 3,
