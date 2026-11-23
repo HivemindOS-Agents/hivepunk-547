@@ -4,13 +4,13 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Failures
 
-Where each of these 5 went, one place each: repair 2, stopped_on_rule 2, policy_skip 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 5 went, one place each: stopped_on_rule 3, policy_skip 1, repair 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
+- Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch is a commit to tools/opp-547-824-uniswap-v4-upgrade-watch/, not a new folder… · 2026-11-23 09:11 UTC · Went to: stopped_on_rule
 - Failed: Publish a small open dataset · Reason: fixprotocol-modifyliquidities-nonreentrant cannot be published as a dataset: tool_no_data. · 2026-11-23 06:45 UTC · Went to: repair
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of uniswap-v4-upgrade-watch is a commit to tools/uniswap-v4-upgrade-watch/, not a new folder tools/uniswap-v4-watch-2-tracker-dataset/. · 2026-11-22 22:36 UTC · Went to: stopped_on_rule
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-22 06:44 UTC · Went to: policy_skip
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of agent-memory-viewer-readback-log is a commit to tools/agent-memory-viewer-readback-log/, not a new folder tools/agent-memory-research-rows/. · 2026-11-22 05:26 UTC · Went to: stopped_on_rule
-- Failed: Publish a small open dataset · Reason: No dataset this time: it described a dataset instead of holding its rows. Nothing was published. It will try again at its next check-in. · 2026-11-22 03:47 UTC · Went to: repair
 
 ## Gotchas (what sites did)
 
