@@ -1,0 +1,64 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "547",
+  "repair": "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
+  "episode": 1,
+  "repairKind": "selfTest",
+  "artifact": "fixprotocol-modifyliquidities-nonreentrant",
+  "source": {
+    "type": "runner",
+    "ref": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44859797362",
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/547.json"
+  },
+  "cause": {
+    "text": "FAIL: missing modifyLiquidities-nonReentrant.patch",
+    "hash": "fail: missing modifyliquidities-nonreentrant.patch",
+    "laterCauses": [],
+    "hashes": [
+      "fail: missing modifyliquidities-nonreentrant.patch"
+    ]
+  },
+  "openedAt": "2026-11-21T03:11:27.000Z",
+  "states": [
+    "OPEN",
+    "REPAIR_ATTEMPTED",
+    "PARKED",
+    "ESCALATED",
+    "RELEASED"
+  ],
+  "counters": {
+    "failedAttempts": 12,
+    "sameCause": 2,
+    "recurrences": 0
+  },
+  "escalation": {
+    "text": "Parked after 2 failed attempts in a row with the same cause (12 in all, 11 after it was delivered) on the self-test of tools/fixprotocol-modifyliquidities-nonreentrant/. It stays parked until its files change. Latest cause: FAIL: missing modifyLiquidities-nonReentrant.patch\n- 2026-11-21T18:44:23.000",
+    "at": "2026-11-23T02:19:37.199Z",
+    "receiver": null
+  },
+  "fix": {
+    "commits": [
+      "9661e4d2ad69",
+      "5728486d9923",
+      "434918c15fe2",
+      "0e7b0a798112",
+      "245b56424cb3",
+      "f58bd8e4cf32",
+      "55a5a05c059d"
+    ],
+    "by": "agent"
+  },
+  "verification": {
+    "kind": "runner",
+    "link": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45124517471"
+  },
+  "close": {
+    "kind": "fixed-verified",
+    "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45124517471)",
+    "at": "2026-11-23T06:30:27.000Z",
+    "removedWithoutClosure": false,
+    "why": null
+  },
+  "recheckDue": "2026-11-30T06:30:27.000Z"
+}
