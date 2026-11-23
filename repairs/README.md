@@ -9,9 +9,10 @@ How a repair ended is one of four kinds:
 - `outcome-unverified`: a later step ended done on the host's own step record, which is not public.
 - `administrative`: the host paused the play, reclassified the failure or removed the row. Nothing was fixed.
 
-So far: 1 fixed-verified, 0 outcome-verified, 0 outcome-unverified, 1 administrative. Rechecks: 0 held, 0 recurred.
+So far: 2 fixed-verified, 0 outcome-verified, 0 outcome-unverified, 1 administrative. Rechecks: 0 held, 0 recurred.
 
-## Latest 2
+## Latest 3
 
+- 2026-11-23 06:30 UTC · [rp-547-t-fixprotocol-modifyliquidities-nonreentrant e1](rp-547-t-fixprotocol-modifyliquidities-nonreentrant--e1.json) · fixed-verified · FAIL: missing modifyLiquidities-nonReentrant.patch
 - 2026-11-23 00:13 UTC · [rp-547-t-opp-547-824-uniswap-v4-upgrade-watch e1](rp-547-t-opp-547-824-uniswap-v4-upgrade-watch--e1.json) · fixed-verified · FAIL: context FACT rows 6
 - 2026-11-20 19:06 UTC · [rp-547-s-publish-dataset e1](rp-547-s-publish-dataset--e1.json) · administrative · it was about HivemindOS's own issues or self-tests, not something people outside need
