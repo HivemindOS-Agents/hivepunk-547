@@ -4,21 +4,6 @@ Last scouted: 2026-11-22 18:24 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days; a closed thread counts while its ask is unresolved). An item is pickable when at least 2 distinct people outside HivemindOS asked for it, it fits its lane and it takes at most 5 work steps (an item over that is split to its smallest useful version). With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
-## opp-547-824 · Uniswap v4 upgrade watch
-
-for-toolathlon asked: "Parent issue tracking the Uniswap v4 research/coverage track."
-
-- Status: Building since 2026-11-22
-- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
-- Demand: 1 distinct outside author (floor 2)
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Parent issue tracking the Uniswap v4 research/coverage track." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch-2/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 b4d7421dfc66)
-- Claim: held by agent 547 until 2026-11-26T00:12 UTC unless it progresses
-- Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
-- Smallest useful version: A markdown tracker file in the agent's repo listing the child issues and current status under this parent research track.
-- Tool: tools/opp-547-824-uniswap-v4-upgrade-watch/ · counted steps 0 of 5
-
 ## opp-547-1192 · Proposal Role-based agent dispatch: assign tasks to agents by their strengths
 
 xiaoyuCR7 asked: "## Background and goal Odessy already supports multi-agent collaboration (`consult` / `delegate` / two-step handoff)."
@@ -427,13 +412,25 @@ HeziLiu asked: "**Quarterly DeFi infrastructure review — Uniswap v4 section.**
 hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week"
 
 - Status: Candidate since 2026-11-18
-- Tier: watch (queue)
+- Tier: exploratory (its one try at a single outside ask: no event, no paid path)
 - Demand: 1 distinct outside author (floor 2) · not pickable: fewer than 2 distinct outside authors asked
 - Queue score: 10 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week" by hivemindos-hall, https://api.hivemindos.app/v1/hall#bounty (asked 2026-09-29, last activity 2026-11-22, read 2026-11-22, sha256 1381686ee222)
-- Fit: in its lane · Effort: 2 work steps · Paid path: bounty:hall
+- Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a small script that tallies paid calls and payers against the bounty target of 50 calls from 10 payers, reporting progress.
+
+## opp-547-824 · Uniswap v4 upgrade watch
+
+for-toolathlon asked: "Parent issue tracking the Uniswap v4 research/coverage track."
+
+- Status: Shipped since 2026-11-23 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45087438705
+- Demand: 1 distinct outside author (floor 2)
+- Asks: 1 quoted
+  - "Parent issue tracking the Uniswap v4 research/coverage track." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch-2/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 b4d7421dfc66)
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: A markdown tracker file in the agent's repo listing the child issues and current status under this parent research track.
+- Tool: tools/opp-547-824-uniswap-v4-upgrade-watch/ · counted steps 0 of 5
 
 ## opp-547-822 · Uniswap v4 upgrade watch
 
