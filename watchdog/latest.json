@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "547",
-  "at": "2026-11-22T00:01:03.695Z",
+  "at": "2026-11-23T00:12:00.022Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -52,6 +52,16 @@
       "firstSeen": "2026-11-17T14:35:31.642Z"
     },
     {
+      "id": "wd-547-D2-undelivered:publish-dataset",
+      "check": "D2",
+      "name": "failure_not_in_health",
+      "severity": "repair",
+      "subject": "publish-dataset",
+      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered.",
+      "evidence": [],
+      "firstSeen": "2026-11-23T00:12:00.022Z"
+    },
+    {
       "id": "wd-547-D15-reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources.json",
       "check": "D15",
       "name": "review_hollow",
@@ -76,18 +86,6 @@
       "firstSeen": "2026-11-21T00:14:36.774Z"
     },
     {
-      "id": "wd-547-D17---fixprotocol-modifyliquidities-nonreentrant-at-https://github.com/HivemindOS-A-",
-      "check": "D17",
-      "name": "publish_while_failing",
-      "severity": "repair",
-      "subject": "ARTIFACTS.md",
-      "detail": "\"- fixprotocol-modifyliquidities-nonreentrant at https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/fixprotocol-modifyliquidities-nonreentrant (2…\"",
-      "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/ARTIFACTS.md"
-      ],
-      "firstSeen": "2026-11-22T00:01:03.695Z"
-    },
-    {
       "id": "wd-547-D18-artifacts",
       "check": "D18",
       "name": "unknown_cost_as_zero",
@@ -100,23 +98,42 @@
       "firstSeen": "2026-11-17T14:35:31.642Z"
     },
     {
+      "id": "wd-547-D22-tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md",
+      "check": "D22",
+      "name": "claimed_file_not_committed",
+      "severity": "repair",
+      "subject": "tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md",
+      "detail": "A step said it built tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md; it is not in the commit.",
+      "evidence": [
+        "step 2026-11-22T13:08Z"
+      ],
+      "firstSeen": "2026-11-23T00:12:00.022Z"
+    },
+    {
       "id": "wd-547-D23-owner",
       "check": "D23",
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "21 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: let the runner run 'python3 self_test\".",
+      "detail": "20 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for the owner: publish these files under hivepunk-547-db38b7a4 with a new dataset name (do not touch agent-memory-lint-fixtures), then…\".",
       "evidence": [
-        "step 2026-11-21T22:23Z",
-        "step 2026-11-21T21:51Z",
-        "step 2026-11-21T18:44Z",
-        "step 2026-11-21T18:12Z"
+        "step 2026-11-22T22:36Z",
+        "step 2026-11-22T19:28Z",
+        "step 2026-11-22T16:16Z",
+        "step 2026-11-22T13:08Z"
       ],
       "firstSeen": "2026-11-17T14:35:31.642Z"
     }
   ],
-  "notSeenAgain": [],
-  "said": "6 found",
-  "requests": 23,
-  "elapsedMs": 4035
+  "notSeenAgain": [
+    {
+      "id": "wd-547-D17---fixprotocol-modifyliquidities-nonreentrant-at-https://github.com/HivemindOS-A-",
+      "check": "D17",
+      "subject": "ARTIFACTS.md",
+      "firstSeen": "2026-11-22T00:01:03.695Z"
+    }
+  ],
+  "said": "7 found",
+  "requests": 24,
+  "elapsedMs": 3422
 }
