@@ -1,0 +1,269 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-23T22:54:34.912Z",
+  "subject": "uniswap-v4-upgrade-watch",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The tracker is a useful follow-up structure, but its headline release, address and price figures are not verified on the pages read. The seed row should therefore stay labelled UNKNOWN until the releases page and a verified contract source are actually read.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "mcpmark-eval-liuhezi/uniswap-v4-watch has 0 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/mcpmark-eval-liuhezi/uniswap-v4-watch/commits?per_page=50&since=2026-10-24T22:54:38.773Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether mcpmark-eval-liuhezi/uniswap-v4-watch is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Issue #11 states a latest release tag of v4.0.0 released/published 2025-01-23.",
+      "check": "page",
+      "source": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/11",
+      "quote": "Latest release tag: v4.0.0 — \"Uniswap Protocol v4\", released/published 2025-01-23 (created 2025-01-21).",
+      "sourceId": "src-1",
+      "quoteSha256": "0ba699216d19e0519670a9548e05c2df2985d4c05fa669eb1ffb34f61f1daf1b"
+    },
+    {
+      "id": "c2",
+      "label": "UNKNOWN",
+      "text": "The actual latest Uniswap v4-core release tag and date.",
+      "check": "page",
+      "missing": "Reading the Uniswap v4-core releases page, which was not among the pages read."
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Issue #11 identifies PR #932 \"test updates\" as the headline PR behind the release commit.",
+      "check": "page",
+      "source": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/11",
+      "quote": "Headline PR behind the release commit: #932 — \"test updates\" (author snreynolds, merged 2025-01-21, merge commit e50237c... = the commit the v4.0.0 tag points to).",
+      "sourceId": "src-1",
+      "quoteSha256": "0827db110a6ed327bc13b7af7ee26410ea243cff67349f0e0f956dc854380ce2"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Issue #11 gives a UNI token contract address on Ethereum mainnet.",
+      "check": "page",
+      "source": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/11",
+      "quote": "UNI token contract address (Ethereum mainnet): 0x1f9840c85d25ce1befa9dee2eee5296c3b0b1dbf",
+      "sourceId": "src-1",
+      "quoteSha256": "34e3f2f92e4637ab9269018d7034450add15c7189be945fc660d16ffb4ded392"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Issue #1 in mcpmark-eval-liuhezi/uniswap-v4-watch gives a different UNI contract address string.",
+      "check": "page",
+      "source": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/1",
+      "quote": "UNI token contract address (Ethereum mainnet): 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "sourceId": "src-3",
+      "quoteSha256": "a7acbcb0cd6e2994e9548b9b19844f5e83e7ed9716be19ba0b88798ebc5e0a2b"
+    },
+    {
+      "id": "c6",
+      "label": "UNKNOWN",
+      "text": "The verified UNI contract address on Ethereum mainnet.",
+      "check": "page",
+      "missing": "A verified source such as an Etherscan token page actually read, resolving the differing addresses across tracker issues."
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "Issue #11 states a UNI price of $6.8851 as of 2026-10-31T04:34:05Z via Alchemy.",
+      "check": "page",
+      "source": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/11",
+      "context": true,
+      "quote": "Current UNI price (USD): $6.8851 (live, via Alchemy token price API by symbol UNI on eth-mainnet, as of 2026-10-31T04:34:05Z)",
+      "sourceId": "src-1",
+      "quoteSha256": "ed0ff32004855bc45eac827e5866c9819712b5288f68ef12b04b21650999802a"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Issue #1 in for-toolathlon/uniswap-v4-watch states a UNI price of $7.24.",
+      "check": "page",
+      "source": "https://github.com/for-toolathlon/uniswap-v4-watch/issues/1",
+      "context": true,
+      "quote": "Current UNI price (USD): $7.24 (live, as of today)",
+      "sourceId": "src-2",
+      "quoteSha256": "32b93d4eae71553cf47d494d4e4ebf44c1ebf2be090c095e8539fec7ea8dcb6a"
+    },
+    {
+      "id": "c9",
+      "label": "FACT",
+      "text": "Issue #11 states discussion watching is out for this quarter and sub-issue #15 was detached.",
+      "check": "page",
+      "source": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/11",
+      "quote": "Discussion watching is out for this quarter . The \"Watch v4 discussions\" sub-issue ( #10 ) remains open but has been detached as a sub-issue of this parent.",
+      "sourceId": "src-1",
+      "quoteSha256": "dfbb9ab513482090ebc04a0d967036f233affeb23c03eef65105db50de61a724"
+    },
+    {
+      "id": "c10",
+      "label": "FACT",
+      "text": "The service check reports 0 raw commits in the last 30 days for mcpmark-eval-liuhezi/uniswap-v4-watch, 0 of them real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/mcpmark-eval-liuhezi/uniswap-v4-watch/commits?per_page=50&since=2026-10-24T22:54:38.773Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Whether mcpmark-eval-liuhezi/uniswap-v4-watch is still shipping.",
+      "check": "page",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c12",
+      "label": "DERIVED",
+      "text": "The tracker issues do not provide one consistent confirmed address or price figure.",
+      "check": "page",
+      "inputs": [
+        "c4",
+        "c5",
+        "c7",
+        "c8"
+      ],
+      "math": "c4 and c5 give different address strings; c7 and c8 give different prices ($6.8851 vs $7.24), so no single figure is confirmed by convergence.",
+      "context": true
+    }
+  ],
+  "counts": {
+    "fact": 9,
+    "derived": 1,
+    "unknown": 4
+  },
+  "risks": [
+    "The v4.0.0 / 2025-01-23 release claim is unverified because the releases page was not read.",
+    "UNI contract addresses differ across tracker issues, so no address in the pages read can be treated as confirmed.",
+    "UNI prices differ across tracker issues and dates, so price is context only and not proof of building activity.",
+    "The service check found 0 raw commits in the last 30 days for mcpmark-eval-liuhezi/uniswap-v4-watch.",
+    "Discussion watching was detached or removed from scope, leaving that follow-up unfinished in the issues read."
+  ],
+  "unknowns": [
+    "Whether mcpmark-eval-liuhezi/uniswap-v4-watch is still shipping: None of its commits in the last 30 days is real work.",
+    "The actual latest Uniswap v4-core release tag and date.: Reading the Uniswap v4-core releases page, which was not among the pages read.",
+    "The verified UNI contract address on Ethereum mainnet.: A verified source such as an Etherscan token page actually read, resolving the differing addresses across tracker issues.",
+    "Whether mcpmark-eval-liuhezi/uniswap-v4-watch is still shipping.: None of its commits in the last 30 days is real work."
+  ],
+  "wouldChangeMind": [
+    "Reading the Uniswap v4-core releases page confirming a different latest tag or date than v4.0.0 / 2025-01-23.",
+    "Reading a verified Etherscan or equivalent source confirming one UNI contract address.",
+    "Finding real shipping commits in mcpmark-eval-liuhezi/uniswap-v4-watch after the service check period."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "Uniswap v4 upgrade watch · Issue #11 · mcpmark-eval-liuhezi/uniswap-v4-watch · GitHub",
+      "url": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/11",
+      "finalUrl": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/11",
+      "status": 200,
+      "fetchedAt": "2026-11-23T22:54:38.135Z",
+      "extractor": "page-text-v1",
+      "sha256": "4da5ec2d3e8d03bcc2e8c5523e80ba44ab8170b7e046670e21a133be84fa52fa",
+      "bytes": 215119,
+      "quote": "Latest release tag: v4.0.0 — \"Uniswap Protocol v4\", released/published 2025-01-23 (created 2025-01-21).",
+      "quoteSha256": "0ba699216d19e0519670a9548e05c2df2985d4c05fa669eb1ffb34f61f1daf1b"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Uniswap v4 upgrade watch · Issue #1 · for-toolathlon/uniswap-v4-watch · GitHub",
+      "url": "https://github.com/for-toolathlon/uniswap-v4-watch/issues/1",
+      "finalUrl": "https://github.com/for-toolathlon/uniswap-v4-watch/issues/1",
+      "status": 200,
+      "fetchedAt": "2026-11-23T22:54:38.267Z",
+      "extractor": "page-text-v1",
+      "sha256": "9dd47558d9468542e8d728ddb354ddd2a069922b0f839f1901ed3a25dcf60843",
+      "bytes": 202527,
+      "quote": "Current UNI price (USD): $7.24 (live, as of today)",
+      "quoteSha256": "32b93d4eae71553cf47d494d4e4ebf44c1ebf2be090c095e8539fec7ea8dcb6a"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Uniswap v4 upgrade watch · Issue #1 · mcpmark-eval-liuhezi/uniswap-v4-watch · GitHub",
+      "url": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/1",
+      "finalUrl": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/1",
+      "status": 200,
+      "fetchedAt": "2026-11-23T22:54:38.149Z",
+      "extractor": "page-text-v1",
+      "sha256": "3f05bd6d9f96d035765f17890c92437d25c862ce0110001dbcb72c7842d54519",
+      "bytes": 209431,
+      "quote": "UNI token contract address (Ethereum mainnet): 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "quoteSha256": "a7acbcb0cd6e2994e9548b9b19844f5e83e7ed9716be19ba0b88798ebc5e0a2b"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "Uniswap v4 upgrade watch · Issue #6 · for-toolathlon/uniswap-v4-watch-2 · GitHub",
+      "url": "https://github.com/for-toolathlon/uniswap-v4-watch-2/issues/6",
+      "finalUrl": "https://github.com/for-toolathlon/uniswap-v4-watch-2/issues/6",
+      "status": 200,
+      "fetchedAt": "2026-11-23T22:54:38.066Z",
+      "extractor": "page-text-v1",
+      "sha256": "b02da9eb7d321908c27efbdac5eafefeeced0fabac5dc271288f7928d0c702c9",
+      "bytes": 203473,
+      "quote": "Sign in to comment Metadata Metadata Assignees No one assigned Labels No labels No labels Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+      "quoteSha256": "7d11083de784800ba1f01b630f9d987465bca9887c0cb89dcd6cc815a071e159"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Uniswap v4 upgrade watch · Issue #6 · for-toolathlon/uniswap-v4-watch · GitHub",
+      "url": "https://github.com/for-toolathlon/uniswap-v4-watch/issues/6",
+      "finalUrl": "https://github.com/for-toolathlon/uniswap-v4-watch/issues/6",
+      "status": 200,
+      "fetchedAt": "2026-11-23T22:54:38.103Z",
+      "extractor": "page-text-v1",
+      "sha256": "77b0ea25da4c34ab1b33aa283837ba91cd5314bc1ca63ff5b2cbde8e9063935f",
+      "bytes": 202823,
+      "quote": "Sign in to comment Metadata Metadata Assignees No one assigned Labels No labels No labels Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+      "quoteSha256": "7d11083de784800ba1f01b630f9d987465bca9887c0cb89dcd6cc815a071e159"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Uniswap v4 upgrade watch · Issue #1084 · Uniswap/v4-core · GitHub",
+      "url": "https://github.com/Uniswap/v4-core/issues/1084",
+      "finalUrl": "https://github.com/Uniswap/v4-core/issues/1084",
+      "status": 200,
+      "fetchedAt": "2026-11-23T22:54:38.043Z",
+      "extractor": "page-text-v1",
+      "sha256": "ae0c99277b4bac00d5cc66a972224de501a57a57eda31653996f1bb0f9161935",
+      "bytes": 193393,
+      "quote": "Sign in to comment Metadata Metadata Assignees No one assigned Labels No labels No labels Type No type Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+      "quoteSha256": "19ad73456f75ab746b543cb98abe1abb77dbb27ea179393f7f3aa8a1beb5783d"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of mcpmark-eval-liuhezi/uniswap-v4-watch",
+      "url": "https://api.github.com/repos/mcpmark-eval-liuhezi/uniswap-v4-watch/commits?per_page=50&since=2026-10-24T22:54:38.773Z",
+      "fetchedAt": "2026-11-23T22:54:34.912Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "fae9ef6c2662708dc1dfa7dc28f8f405dfa754f40dff2b4d2fa6c09913c6bcf9"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-23-uniswap-v4-upgrade-watch.md",
+  "decidedBy": "bee"
+}
