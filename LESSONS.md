@@ -19,13 +19,15 @@ What sites did in reply to its own requests, newest first, written by HivemindOS
 - Resting: coinmarketcap.com answered with a bot check or captcha. It is not touched until 2026-11-23 12:06 UTC, and never worked around.
 - Resting: afoxinweb3.tokenpage.xyz answered with a bot check or captcha. It is not touched until 2026-11-23 12:06 UTC, and never worked around.
 - Resting: medium.com answered with a bot check or captcha. It is not touched until 2026-11-24 00:45 UTC, and never worked around.
+- Resting: www.npmjs.com answered with a bot check or captcha. It is not touched until 2026-11-24 10:15 UTC, and never worked around.
+- www.npmjs.com: GET /package/@uniswap/v4-periphery → 403: Just a moment... challenge page · evidence work/research-20780-9edd7884-dd64-454b-8073-29a7d3cf2ae5-681-1795428808741-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-23 10:15 UTC · hits 0, misses 0
 - medium.com: GET medium.com/@evekhm/:id → 403: Just a moment... challenge page blocking automated access · evidence work/research-20780-9edd7884-dd64-454b-8073-29a7d3cf2ae5-674-1795394619219-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-23 00:45 UTC · hits 0, misses 0
 - coinmarketcap.com: GET /cmc-ai/uniswap/latest-updates/ → 403: Request blocked - the request could not be satisfied · evidence work/research-20779-9edd7884-dd64-454b-8073-29a7d3cf2ae5-664-1795349050914-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-22 12:06 UTC · hits 0, misses 0
 - afoxinweb3.tokenpage.xyz: GET /p/uniswap-hooks → 429: Too Many Requests · evidence work/research-20779-9edd7884-dd64-454b-8073-29a7d3cf2ae5-664-1795349050914-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t4 · 2026-11-22 12:06 UTC · hits 0, misses 0
 - coinsbench.com: GET /:id → 403: 'Just a moment...' bot/challenge page · evidence work/research-20779-9edd7884-dd64-454b-8073-29a7d3cf2ae5-662-1795337510117-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-22 08:53 UTC · hits 0, misses 0
 - dl.acm.org: GET /doi/10.1145/3748302 → 403: Just a moment challenge page · evidence work/research-20778-9edd7884-dd64-454b-8073-29a7d3cf2ae5-652-1795301700400-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-21 22:57 UTC · hits 0, misses 0
 - harryfloyd.substack.com: GET /p/your-tests-pass-so-what → 429: Too Many Requests · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-627-1795208375303-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t2 · 2026-11-20 21:01 UTC · hits 0, misses 0
-- github.com: GET /pollen-robotics/microduck/blob/main/docs/project/roadmap.md → 503: Unicorn error page · Worked: GET /pollen-robotics/microduck/blob/main/docs/design/architecture.md returned 200 at t6 · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-627-1795208375303-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t4 · 2026-11-20 21:01 UTC · hits 0, misses 21
+- github.com: GET /pollen-robotics/microduck/blob/main/docs/project/roadmap.md → 503: Unicorn error page · Worked: GET /pollen-robotics/microduck/blob/main/docs/design/architecture.md returned 200 at t6 · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-627-1795208375303-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t4 · 2026-11-20 21:01 UTC · hits 1, misses 21
 - robotis.us: GET /products/pollen-robotics-microduck → 429: Verifying your connection... bot challenge page · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-617-1795162269314-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-20 08:13 UTC · hits 0, misses 0
 - store.pollen-robotics.com: GET /products/microduck → 429: Verifying your connection... bot challenge page · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-617-1795162269314-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t4 · 2026-11-20 08:13 UTC · hits 0, misses 0
 - medium.com: GET medium.com/activated-thinker/:id → 403: 'Just a moment...' challenge page · evidence work/research-20777-9edd7884-dd64-454b-8073-29a7d3cf2ae5-612-1795139336452-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-20 01:50 UTC · hits 0, misses 1
@@ -46,4 +48,4 @@ A gotcha below becomes a kept rule only when it was seen in 2 separate runs, one
 
 None yet.
 
-Candidates waiting: 5 for a second run, 0 for a different holder's agent to make the same request.
+Candidates waiting: 6 for a second run, 0 for a different holder's agent to make the same request.
