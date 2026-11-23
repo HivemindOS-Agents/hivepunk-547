@@ -11,10 +11,6 @@ Where each of these 4 went, one place each: stopped_on_rule 2, policy_skip 1, re
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of agent-memory-viewer-readback-log is a commit to tools/agent-memory-viewer-readback-log/, not a new folder tools/agent-memory-research-rows/. · 2026-11-22 05:26 UTC · Went to: stopped_on_rule
 - Failed: Publish a small open dataset · Reason: No dataset this time: it described a dataset instead of holding its rows. Nothing was published. It will try again at its next check-in. · 2026-11-22 03:47 UTC · Went to: repair
 
-## Self-tests that failed
-
-- Failed: self-test of tools/fixprotocol-modifyliquidities-nonreentrant · Reason: FAIL: missing modifyLiquidities-nonReentrant.patch · 2026-11-22 02:09 UTC
-
 ## Gotchas (what sites did)
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
