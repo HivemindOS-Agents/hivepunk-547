@@ -1,0 +1,221 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-23T10:14:22.377Z",
+  "subject": "Uniswap v4-periphery",
+  "subjectKind": "protocol",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "Uniswap v4-periphery is a significant integration layer for Uniswap v4, evidenced by broad repository adoption and a formal audit, but the pages leave its current activity and production deployment unconfirmed and its own README still describes it as in development.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "Uniswap/v4-periphery has 1 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/Uniswap/v4-periphery/commits?per_page=50&since=2026-10-24T10:14:30.314Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether Uniswap/v4-periphery is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Uniswap v4 is a new automated market maker protocol that provides extensibility and customizability to pools.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-periphery",
+      "quote": "Uniswap v4 is a new automated market maker protocol that provides extensibility and customizability to pools.",
+      "sourceId": "src-1",
+      "quoteSha256": "af38a363b7fec30bfaf31b1592649468db2cdca3bd29d6c7484e13c15c97018f"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "v4-periphery hosts logic built on top of core pool logic like hook contracts, position managers, and possibly libraries needed for integrations.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-periphery",
+      "quote": "v4-periphery hosts the logic that builds on top of the core pool logic like hook contracts, position managers, and even possibly libraries needed for integrations.",
+      "sourceId": "src-1",
+      "quoteSha256": "0157daa78f2c17ba7aeca6b5f3fd2121a6d4dddb3c2419a637f9e87058da65b6"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "The v4-periphery contracts in this repository are still in development and further periphery contracts have not yet been built.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-periphery/blob/main/README.md",
+      "quote": "The v4-periphery contracts in this repository are still in development and further periphery contracts have not yet been built.",
+      "sourceId": "src-2",
+      "quoteSha256": "561ff3fd126c02eb947a45c0b07a4bb5ec4a6abf87e68b8176c6c9fbb32b6d11"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The license for Uniswap V4 Periphery is the GNU General Public License (GPL 2.0).",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-periphery/blob/main/README.md",
+      "quote": "The license for Uniswap V4 Periphery is the GNU General Public License (GPL 2.0), see LICENSE .",
+      "sourceId": "src-2",
+      "quoteSha256": "13fba956da046b7df4bf91ffbb69959e04b87f1d00de1cf220c1025c56aec38a"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "The repository shows 910 stars, 18 watching and 674 forks.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-periphery",
+      "quote": "Stars 910 stars Watchers 18 watching Forks 674 forks",
+      "sourceId": "src-1",
+      "quoteSha256": "978e9d1d8bf7c248f05da31eba94d89eec1f5d924792fccef7812dec62b0ce03"
+    },
+    {
+      "id": "c6",
+      "label": "FACT",
+      "text": "OpenZeppelin audited the Uniswap/v4-periphery repository at commit df47aa9.",
+      "check": "page",
+      "source": "https://www.openzeppelin.com/news/uniswap-v4-periphery-and-universal-router-audit",
+      "quote": "We audited the Uniswap/v4-periphery repository at commit df47aa9 .",
+      "sourceId": "src-3",
+      "quoteSha256": "7ae453f7e46c0e3c1f8715dbda6210d242b58d66570bdeb597d00895c88e423f"
+    },
+    {
+      "id": "c7",
+      "label": "FACT",
+      "text": "The audit reported total issues of 38, with 25 resolved and 1 partially resolved.",
+      "check": "page",
+      "source": "https://www.openzeppelin.com/news/uniswap-v4-periphery-and-universal-router-audit",
+      "quote": "Findings Total Issues: 38 (25 resolved, 1 partially resolved)",
+      "sourceId": "src-3",
+      "quoteSha256": "e31920c9559f2c5f288e1e5467fc4877b0a66feb71a428b0b55a387aa98074fe"
+    },
+    {
+      "id": "c8",
+      "label": "FACT",
+      "text": "Uniswap/v4-periphery had 1 raw commit in the last 30 days, 0 of them real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/Uniswap/v4-periphery/commits?per_page=50&since=2026-10-24T10:14:30.314Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c9",
+      "label": "DERIVED",
+      "text": "25 of the 38 audited issues were resolved, about two thirds.",
+      "check": "page",
+      "inputs": [
+        "c7"
+      ],
+      "math": "25 / 38 = 0.657, about 66%"
+    },
+    {
+      "id": "c10",
+      "label": "UNKNOWN",
+      "text": "Whether Uniswap/v4-periphery is still shipping",
+      "check": "page",
+      "missing": "None of its commits in the last 30 days is real work; a later real-work commit would verify it."
+    },
+    {
+      "id": "c11",
+      "label": "UNKNOWN",
+      "text": "Which periphery contracts are deployed on which chains and at which addresses",
+      "check": "page",
+      "missing": "Deployed contract addresses or an official deployments list, neither shown in the pages read."
+    },
+    {
+      "id": "c12",
+      "label": "UNKNOWN",
+      "text": "Current on-chain usage, volume and liquidity of v4-periphery contracts",
+      "check": "page",
+      "missing": "On-chain usage, volume or liquidity figures, none shown in the pages read.",
+      "context": true
+    }
+  ],
+  "counts": {
+    "fact": 9,
+    "derived": 1,
+    "unknown": 4
+  },
+  "risks": [
+    "Repository states contracts are still in development and further contracts have not yet been built",
+    "The pages show no recent real work in the last 30 days",
+    "An audit found a critical and a high severity issue at the audited commit, though both were listed as resolved",
+    "No deployed contract addresses or on-chain usage figures are shown in the pages read"
+  ],
+  "unknowns": [
+    "Whether Uniswap/v4-periphery is still shipping: None of its commits in the last 30 days is real work.",
+    "Whether Uniswap/v4-periphery is still shipping: None of its commits in the last 30 days is real work; a later real-work commit would verify it.",
+    "Which periphery contracts are deployed on which chains and at which addresses: Deployed contract addresses or an official deployments list, neither shown in the pages read.",
+    "Current on-chain usage, volume and liquidity of v4-periphery contracts: On-chain usage, volume or liquidity figures, none shown in the pages read."
+  ],
+  "wouldChangeMind": [
+    "A later commit classified as real work, not docs or trivial changes",
+    "An official list of deployed periphery contract addresses with on-chain activity",
+    "An updated audit report resolving the partially resolved issue"
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "GitHub - Uniswap/v4-periphery: 🦄 🦄 🦄 🦄 Peripheral smart contracts for interacting with Uniswap v4 · GitHub",
+      "url": "https://github.com/Uniswap/v4-periphery",
+      "finalUrl": "https://github.com/Uniswap/v4-periphery",
+      "status": 200,
+      "fetchedAt": "2026-11-23T10:14:29.881Z",
+      "extractor": "page-text-v1",
+      "sha256": "b39386858929a6a14ae1c3e981f46ec1f27634748376a9b1b40e5e5aa1e6845c",
+      "bytes": 251043,
+      "quote": "Uniswap v4 is a new automated market maker protocol that provides extensibility and customizability to pools.",
+      "quoteSha256": "af38a363b7fec30bfaf31b1592649468db2cdca3bd29d6c7484e13c15c97018f"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "v4-periphery/README.md at main · Uniswap/v4-periphery · GitHub",
+      "url": "https://github.com/Uniswap/v4-periphery/blob/main/README.md",
+      "finalUrl": "https://github.com/Uniswap/v4-periphery/blob/main/README.md",
+      "status": 200,
+      "fetchedAt": "2026-11-23T10:14:29.756Z",
+      "extractor": "page-text-v1",
+      "sha256": "99d76f6671d475a7e8eb0ecce3d89d54a8e73cdd3fe9ce61623561735a11ba01",
+      "bytes": 182712,
+      "quote": "The v4-periphery contracts in this repository are still in development and further periphery contracts have not yet been built.",
+      "quoteSha256": "561ff3fd126c02eb947a45c0b07a4bb5ec4a6abf87e68b8176c6c9fbb32b6d11"
+    },
+    {
+      "id": "src-3",
+      "type": "url",
+      "title": "Uniswap v4 Periphery and Universal Router Audit",
+      "url": "https://www.openzeppelin.com/news/uniswap-v4-periphery-and-universal-router-audit",
+      "finalUrl": "https://www.openzeppelin.com/news/uniswap-v4-periphery-and-universal-router-audit",
+      "status": 200,
+      "fetchedAt": "2026-11-23T10:14:29.779Z",
+      "extractor": "page-text-v1",
+      "sha256": "11f4d49a08168670b935f1096f53056650f49876db6a4405051c02f37c062681",
+      "bytes": 551613,
+      "quote": "We audited the Uniswap/v4-periphery repository at commit df47aa9 .",
+      "quoteSha256": "7ae453f7e46c0e3c1f8715dbda6210d242b58d66570bdeb597d00895c88e423f"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of Uniswap/v4-periphery",
+      "url": "https://api.github.com/repos/Uniswap/v4-periphery/commits?per_page=50&since=2026-10-24T10:14:30.314Z",
+      "fetchedAt": "2026-11-23T10:14:22.377Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "bb43e7994e9e67c3d06e54054557a33659e34926ad29d2680fd1db4b894a8a1c"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-23-uniswap-v4-periphery.md",
+  "decidedBy": "bee"
+}
