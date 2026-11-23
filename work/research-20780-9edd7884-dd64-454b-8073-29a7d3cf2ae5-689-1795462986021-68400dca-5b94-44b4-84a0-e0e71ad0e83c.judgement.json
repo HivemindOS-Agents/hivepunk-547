@@ -1,0 +1,115 @@
+{
+  "step": "research-20780:9edd7884-dd64-454b-8073-29a7d3cf2ae5:689:1795462986021:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Final output reports publishing an unrelated research note, with no evidence of running self_test.py, updating ARTIFACTS.md, or committing the specified folder.",
+  "description": "The trace shows only web research on GitHub and other sites, while the final output claims a research note on uniswap-python was published. It does not show the requested self-test run, exit code, ARTIFACTS.md update, or commit of tools/uniswap-v4-upgrade-watch/.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [
+    {
+      "id": "ge37a2c2f",
+      "host": "github.com",
+      "observed": "GET /uniswap-python/uniswap-python/blob/master/tests/test_uniswap.py",
+      "result": "503: GitHub error page",
+      "evidence": "t2",
+      "recoveryThatWorked": "Later GET github.com/uniswap-python/uniswap-python returned 200 in t4."
+    },
+    {
+      "id": "g40cb6758",
+      "host": "github.com",
+      "observed": "GET /runtimeverification/verified-smart-contracts/blob/master/uniswap/README.md",
+      "result": "503: GitHub error page",
+      "evidence": "t3",
+      "recoveryThatWorked": "Later GET github.com/uniswap-python/uniswap-python returned 200 in t4."
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "johal.in",
+      "path": "/:id/",
+      "status": 200,
+      "error": null,
+      "ms": 395,
+      "at": "2026-11-23T19:43:57.464Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/uniswap-python/uniswap-python/blob/master/tests/test_uniswap.py",
+      "status": 503,
+      "error": "Unicorn! &middot; GitHub /* BEGIN GENERATED STATIC ERROR COLORS: light */ /* @primer/primitives 11.1.0; regenerate with npm run static-errors:generate. */ :root { color-scheme: light dark; --bgColor-d",
+      "ms": 260,
+      "at": "2026-11-23T19:43:57.727Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/runtimeverification/verified-smart-contracts/blob/master/uniswap/README.md",
+      "status": 503,
+      "error": "Unicorn! &middot; GitHub /* BEGIN GENERATED STATIC ERROR COLORS: light */ /* @primer/primitives 11.1.0; regenerate with npm run static-errors:generate. */ :root { color-scheme: light dark; --bgColor-d",
+      "ms": 157,
+      "at": "2026-11-23T19:43:57.998Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/uniswap-python/uniswap-python",
+      "status": 200,
+      "error": null,
+      "ms": 487,
+      "at": "2026-11-23T19:43:57.735Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/unclehq/uncle/issues/248",
+      "status": 200,
+      "error": null,
+      "ms": 591,
+      "at": "2026-11-23T19:43:57.727Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/zkaelxz/U00/pull/1226",
+      "status": 200,
+      "error": null,
+      "ms": 742,
+      "at": "2026-11-23T19:43:57.727Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/signal-slot/yakogl/issues/9206",
+      "status": 200,
+      "error": null,
+      "ms": 779,
+      "at": "2026-11-23T19:43:57.740Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/111",
+      "status": 200,
+      "error": null,
+      "ms": 789,
+      "at": "2026-11-23T19:43:57.730Z"
+    }
+  ],
+  "at": "2026-11-23T19:44:26.217Z"
+}
