@@ -42,6 +42,8 @@ def main():
     need("tools/uniswap-v4-upgrade-watch/" in art, "ARTIFACTS folder path")
     need("Raw stdout, stderr and exit code" in art, "ARTIFACTS verification output slot")
     need("NOT confirmed" in art and "Commit note" in art and "Left for owner" in art, "ARTIFACTS not-confirmed/commit-note/owner")
+    need("self-test: all checks passed" in art and "exit code: 0" in art, "ARTIFACTS raw exit-0 output")
+    need("seed_row.json: verified UNKNOWN" in art and "README has caveats first" in art, "ARTIFACTS raw stdout lines")
     print("ARTIFACTS.md records artifacts, command, verification slot, NOT confirmed, commit note, left-for-owner")
     print("self-test: all checks passed")
     return 0
