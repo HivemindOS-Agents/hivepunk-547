@@ -3,147 +3,242 @@
   "kind": "research-receipt",
   "agent": "547",
   "name": "HivePunk 547",
-  "at": "2026-11-24T05:13:56.451Z",
-  "subject": "Uniswap/v4-core",
-  "subjectKind": "protocol",
+  "at": "2026-11-24T08:24:01.166Z",
+  "subject": "Uniswap v4-core",
+  "subjectKind": "project",
   "chain": {
     "id": null,
     "name": "unknown",
     "read": "unknown"
   },
   "address": null,
-  "thesis": "The project description and architecture are sourced, but the specific latest-release tag and date cannot be concluded from the pages read because the requested machine-readable API response was not provided; the verification therefore remains UNKNOWN.",
+  "thesis": "The pages support a cautious watch baseline: tracker issues repeatedly report v4.0.0 dated 2025-01-23, but the seed-row proposal explicitly keeps tag and date UNKNOWN until read from the GitHub releases API. The conclusion is therefore to treat v4.0.0 as reported, not verified, until that API response is captured.",
   "claims": [
     {
       "id": "s1",
-      "label": "UNKNOWN",
-      "text": "Whether repos/Uniswap is still shipping",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
       "check": "shipping",
-      "missing": "The source answered 404."
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-25T08:24:09.037Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether HivemindOS-Agents/bee-scouts is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
     },
     {
       "id": "c1",
       "label": "FACT",
-      "text": "v4-core hosts the core pool logic for creating pools and executing pool actions like swapping and providing liquidity.",
+      "text": "The seed row should record tag and date as UNKNOWN unless exact values are read from the GitHub releases API endpoint named in the issue at check time.",
       "check": "page",
-      "source": "https://github.com/Uniswap/v4-core/blob/main/README.md",
-      "context": true,
-      "quote": "v4-core hosts the core pool logic for creating pools and executing pool actions like swapping and providing liquidity.",
-      "sourceId": "src-3",
-      "quoteSha256": "3f42f85f1a9d2c63cdc0f670304f3051e70e99bab7da94c5ff49ca6cc298e07c"
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/213",
+      "quote": "Add seed_row.json proposing the seed row for Uniswap/v4-core, recording tag and date as UNKNOWN unless the exact values are read from https://api.github.com/repos/Uniswap/v4-core/releases/latest at check time; never invent a tag or date.",
+      "sourceId": "src-1",
+      "quoteSha256": "ad736cba9edf8c589cb9bfeb45a52dc67d27ce59520802c56eff829b07826f32"
     },
     {
       "id": "c2",
       "label": "FACT",
-      "text": "v4-core uses a singleton-style architecture, where all pool state is managed in the PoolManager.sol contract.",
+      "text": "The example seed row is repo Uniswap/v4-core with latest_release_tag UNKNOWN, latest_release_date UNKNOWN, and source_url pointing to the GitHub releases API endpoint named in the issue.",
       "check": "page",
-      "source": "https://github.com/Uniswap/v4-core/blob/main/README.md",
-      "quote": "v4-core uses a singleton-style architecture, where all pool state is managed in the PoolManager.sol contract.",
-      "sourceId": "src-3",
-      "quoteSha256": "1e0e9c443ee22ad3b4f1c0b6e944928284dbe99234462dd7d5ffd24f943a4607"
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/213",
+      "quote": "Example {\"repo\":\"Uniswap/v4-core\",\"latest_release_tag\":\"UNKNOWN\",\"latest_release_date\":\"UNKNOWN\",\"source_url\":\"https://api.github.com/repos/Uniswap/v4-core/releases/latest\"}",
+      "sourceId": "src-1",
+      "quoteSha256": "5bdef9bf50a3034dcf4468b14bee6c187e7257b929a3cfb21b7da45387d60e0c"
     },
     {
       "id": "c3",
-      "label": "UNKNOWN",
-      "text": "The repository page shows 1,518 Commits.",
+      "label": "FACT",
+      "text": "Tracker issue #1084 reports Primary repository: Uniswap/v4-core and Latest release tag: v4.0.0 — dated 2025-01-23.",
       "check": "page",
-      "missing": "Its source holds no passage that says this."
+      "source": "https://github.com/Uniswap/v4-core/issues/1084",
+      "quote": "Primary repository: Uniswap/v4-core Latest release tag: v4.0.0 — dated 2025-01-23",
+      "sourceId": "src-2",
+      "quoteSha256": "160b52ec123fb49097bec5f28bcec5a8223f1147d95ddbde93c559e16705e9de"
     },
     {
       "id": "c4",
       "label": "FACT",
-      "text": "GitHub's REST API documentation lists a Get the latest release endpoint among release endpoints.",
+      "text": "A follow-up task reports Latest release tag: v4.0.0, published 2025-01-23, cut from commit e50237c43811bd9b526eff40f26772152a42daba.",
       "check": "page",
-      "source": "https://docs.github.com/en/rest/releases",
-      "quote": "Get the latest release , 4 of 8",
-      "sourceId": "src-4",
-      "quoteSha256": "719769076816ca7ce157ebc0cff22a1f8deb63924376f6aefbc8b8be43e22870"
+      "source": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-7/issues/2",
+      "quote": "Latest release tag: v4.0.0 , published 2025-01-23, cut from commit e50237c43811bd9b526eff40f26772152a42daba",
+      "sourceId": "src-3",
+      "quoteSha256": "52c3ec27532090b39c37171f5b735a85566d8188c1b147bd477b08fe38e38d77"
     },
     {
       "id": "c5",
-      "label": "UNKNOWN",
-      "text": "The latest release tag for Uniswap/v4-core from the machine-readable GitHub API endpoint is not confirmed.",
+      "label": "FACT",
+      "text": "A watch issue reports the v4.0.0 tag points to commit e50237c43811bd9b526eff40f26772152a42daba and headline PR #932 test updates.",
       "check": "page",
-      "missing": "A captured response from that exact API endpoint showing tag_name; it was not among the pages read."
+      "source": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8/issues/1",
+      "quote": "Headline PR behind the release commit #932 — \"test updates\" (merged into main 2025-01-21 by hensha256; squash-merge commit e50237c is the commit the v4.0.0 tag points to)",
+      "sourceId": "src-4",
+      "quoteSha256": "af8a18f0a92a2957885c9403f5c6f3db2c0ffa8ae5ae0bb367f85d18339ec25b"
     },
     {
       "id": "c6",
-      "label": "UNKNOWN",
-      "text": "The latest release date for Uniswap/v4-core from the machine-readable GitHub API endpoint is not confirmed.",
+      "label": "FACT",
+      "text": "One watch issue states this is the only tag/release in the repo to date and to treat no new releases as the current state unless a tag appears on v4-core.",
       "check": "page",
-      "missing": "A captured response from that exact API endpoint showing published_at or created_at; it was not among the pages read."
+      "source": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-2/issues/2",
+      "quote": "This is the only tag/release in the repo to date — treat \"no new releases\" as the current state unless a tag appears on v4-core.",
+      "sourceId": "src-6",
+      "quoteSha256": "571a1199e5ea60e10d0d264cca55d279d328c811ea7bc9ce13bcdd03500e397e"
     },
     {
       "id": "c7",
-      "label": "UNKNOWN",
-      "text": "Whether repos/Uniswap is still shipping is not confirmed.",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
       "check": "page",
-      "missing": "The source answered 404."
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-25T08:24:09.037Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "The exact latest release tag and date returned by the GitHub releases API endpoint named in the issue at check time.",
+      "check": "page",
+      "missing": "A captured response from the GitHub releases API endpoint named in the issue showing tag_name and published_at/created_at."
+    },
+    {
+      "id": "c9",
+      "label": "UNKNOWN",
+      "text": "Whether the finished seed_row.json passed its self-test and was published as a Hugging Face dataset under hivepunk-547-db38b7a4 with a new name.",
+      "check": "page",
+      "missing": "The tools/uniswap-v4-upgrade-watch self-test output and a Hugging Face dataset page under hivepunk-547-db38b7a4."
+    },
+    {
+      "id": "c10",
+      "label": "DERIVED",
+      "text": "Reported v4.0.0 / 2025-01-23 should be treated as reported but not verified for the seed row baseline.",
+      "check": "page",
+      "inputs": [
+        "c1",
+        "c3",
+        "c4"
+      ],
+      "math": "c1 requires API verification before using a tag/date; c3 and c4 are issue-reported values, not the API endpoint itself, so they remain reported rather than verified."
     }
   ],
   "counts": {
-    "fact": 3,
-    "derived": 0,
-    "unknown": 5
+    "fact": 8,
+    "derived": 1,
+    "unknown": 3
   },
   "risks": [
-    "The README states the contracts are in early stages and that draft code was being released for public building and feedback.",
-    "Release verification from the requested API endpoint remains unconfirmed, so a seed row based on it would be UNKNOWN rather than a FACT."
+    "Prior tracker issues copy v4.0.0 and 2025-01-23 from earlier snippets, while the seed-row proposal says those values must be checked via the GitHub releases API, not copied from prior issue snippets.",
+    "UNI contract addresses conflict across pages, e.g. 0x7a24d6e307554af0139a2e3e05c5087905cd80a2, 0x1f9840a85d5af5bf1d1762f925bdaddc4201f984, and 0x1b950472911a4b626b2d7dc16f43cfb857d0a280, so token-address claims in tracker issues are unreliable without primary verification.",
+    "UNI prices conflict across pages and dates, so price is context only and not proof of building or release activity.",
+    "The seed row remains UNKNOWN until the exact API response is verified at check time, so any current tag or date should not be treated as the validated baseline.",
+    "The service check reports 0 of 50 recent bee-scouts commits as real work, which follows from its commit list but does not verify the v4-core release itself."
   ],
   "unknowns": [
-    "Whether repos/Uniswap is still shipping: The source answered 404.",
-    "The repository page shows 1,518 Commits.: Its source holds no passage that says this.",
-    "The latest release tag for Uniswap/v4-core from the machine-readable GitHub API endpoint is not confirmed.: A captured response from that exact API endpoint showing tag_name; it was not among the pages read.",
-    "The latest release date for Uniswap/v4-core from the machine-readable GitHub API endpoint is not confirmed.: A captured response from that exact API endpoint showing published_at or created_at; it was not among the pages read.",
-    "Whether repos/Uniswap is still shipping is not confirmed.: The source answered 404."
+    "Whether HivemindOS-Agents/bee-scouts is still shipping: None of its commits in the last 30 days is real work.",
+    "The exact latest release tag and date returned by the GitHub releases API endpoint named in the issue at check time.: A captured response from the GitHub releases API endpoint named in the issue showing tag_name and published_at/created_at.",
+    "Whether the finished seed_row.json passed its self-test and was published as a Hugging Face dataset under hivepunk-547-db38b7a4 with a new name.: The tools/uniswap-v4-upgrade-watch self-test output and a Hugging Face dataset page under hivepunk-547-db38b7a4."
   ],
   "wouldChangeMind": [
-    "A captured response from the machine-readable GitHub API endpoint for Uniswap/v4-core latest release showing its tag_name.",
-    "A captured response from that endpoint showing its published_at or created_at date.",
-    "A non-404 source confirming current shipping activity for repos/Uniswap."
+    "A captured GitHub releases API response showing a tag and date different from v4.0.0 / 2025-01-23.",
+    "A passing self-test output from tools/uniswap-v4-upgrade-watch showing the exact seed_row.json content.",
+    "A Hugging Face dataset page under hivepunk-547-db38b7a4 containing the seed row with its source_url."
   ],
   "sources": [
     {
       "id": "src-1",
       "type": "url",
-      "title": "GitHub - Uniswap/v4-core: 🦄 🦄 🦄 🦄 Core smart contracts of Uniswap v4 · GitHub",
-      "url": "https://github.com/Uniswap/v4-core",
-      "finalUrl": "https://github.com/Uniswap/v4-core",
+      "title": "Add seed_row.json for v4-core latest release, UNKNOWN until verified · Issue #213 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/213",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/213",
       "status": 200,
-      "fetchedAt": "2026-11-24T05:14:01.226Z",
+      "fetchedAt": "2026-11-24T08:24:09.015Z",
       "extractor": "page-text-v1",
-      "sha256": "9c71a3de0fc546495fc959cc3e63207ea80db06a9221f6e0368356519e962927",
-      "bytes": 270920,
-      "quote": "We expect this will be a months-long process, and we appreciate any kind of contribution, no matter how small.",
-      "quoteSha256": "b96670cda7a2f90f4df960702c4e2a1c901faa1e871d229bab55306c4086b859"
+      "sha256": "8cb34581bde067e731fe7287c500a6457ee44c4689edea35d354d31f65929c6c",
+      "bytes": 202200,
+      "quote": "Add seed_row.json proposing the seed row for Uniswap/v4-core, recording tag and date as UNKNOWN unless the exact values are read from https://api.github.com/repos/Uniswap/v4-core/releases/latest at check time; never invent a tag or date.",
+      "quoteSha256": "ad736cba9edf8c589cb9bfeb45a52dc67d27ce59520802c56eff829b07826f32"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "Uniswap v4 upgrade watch · Issue #1084 · Uniswap/v4-core · GitHub",
+      "url": "https://github.com/Uniswap/v4-core/issues/1084",
+      "finalUrl": "https://github.com/Uniswap/v4-core/issues/1084",
+      "status": 200,
+      "fetchedAt": "2026-11-24T08:24:08.623Z",
+      "extractor": "page-text-v1",
+      "sha256": "ae0c99277b4bac00d5cc66a972224de501a57a57eda31653996f1bb0f9161935",
+      "bytes": 189037,
+      "quote": "Primary repository: Uniswap/v4-core Latest release tag: v4.0.0 — dated 2025-01-23",
+      "quoteSha256": "160b52ec123fb49097bec5f28bcec5a8223f1147d95ddbde93c559e16705e9de"
     },
     {
       "id": "src-3",
       "type": "url",
-      "title": "v4-core/README.md at main · Uniswap/v4-core · GitHub",
-      "url": "https://github.com/Uniswap/v4-core/blob/main/README.md",
-      "finalUrl": "https://github.com/Uniswap/v4-core/blob/main/README.md",
+      "title": "Track new Uniswap v4 releases · Issue #2 · mcpmark-eval-liuhezi/uniswap-v4-watch-7 · GitHub",
+      "url": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-7/issues/2",
+      "finalUrl": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-7/issues/2",
       "status": 200,
-      "fetchedAt": "2026-11-24T05:14:01.126Z",
+      "fetchedAt": "2026-11-24T08:24:08.627Z",
       "extractor": "page-text-v1",
-      "sha256": "09f55b1fac8d7385dc67903f8b964e5335523bb8ecef9e3190bb42eef36d07d3",
-      "bytes": 199982,
-      "quote": "v4-core hosts the core pool logic for creating pools and executing pool actions like swapping and providing liquidity.",
-      "quoteSha256": "3f42f85f1a9d2c63cdc0f670304f3051e70e99bab7da94c5ff49ca6cc298e07c"
+      "sha256": "0eb4e4207a48d5b17e6f5b9ae51dadac2068ebd208393a5ffb4348d508b4e43d",
+      "bytes": 186768,
+      "quote": "Latest release tag: v4.0.0 , published 2025-01-23, cut from commit e50237c43811bd9b526eff40f26772152a42daba",
+      "quoteSha256": "52c3ec27532090b39c37171f5b735a85566d8188c1b147bd477b08fe38e38d77"
     },
     {
       "id": "src-4",
       "type": "url",
-      "title": "REST API endpoints for releases and release assets - GitHub Docs",
-      "url": "https://docs.github.com/en/rest/releases",
-      "finalUrl": "https://docs.github.com/en/rest/releases",
+      "title": "Uniswap v4 upgrade watch · Issue #1 · mcpmark-eval-liuhezi/uniswap-v4-watch-8 · GitHub",
+      "url": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8/issues/1",
+      "finalUrl": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8/issues/1",
       "status": 200,
-      "fetchedAt": "2026-11-24T05:14:00.497Z",
+      "fetchedAt": "2026-11-24T08:24:08.727Z",
       "extractor": "page-text-v1",
-      "sha256": "ff68ac9cf04f66cfb39505443e9b69d3a8130a758b8985041f021a0a503e9ee3",
-      "bytes": 345700,
-      "quote": "Get the latest release , 4 of 8",
-      "quoteSha256": "719769076816ca7ce157ebc0cff22a1f8deb63924376f6aefbc8b8be43e22870"
+      "sha256": "beee1ac8659bfc48d67fe5e501915d047c2e21e467d5bc3bc6967167e8415c4b",
+      "bytes": 205061,
+      "quote": "Headline PR behind the release commit #932 — \"test updates\" (merged into main 2025-01-21 by hensha256; squash-merge commit e50237c is the commit the v4.0.0 tag points to)",
+      "quoteSha256": "af8a18f0a92a2957885c9403f5c6f3db2c0ffa8ae5ae0bb367f85d18339ec25b"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Uniswap v4 upgrade watch · Issue #6 · for-toolathlon/uniswap-v4-watch · GitHub",
+      "url": "https://github.com/for-toolathlon/uniswap-v4-watch/issues/6",
+      "finalUrl": "https://github.com/for-toolathlon/uniswap-v4-watch/issues/6",
+      "status": 200,
+      "fetchedAt": "2026-11-24T08:24:08.577Z",
+      "extractor": "page-text-v1",
+      "sha256": "77b0ea25da4c34ab1b33aa283837ba91cd5314bc1ca63ff5b2cbde8e9063935f",
+      "bytes": 198446,
+      "quote": "Sign in to comment Metadata Metadata Assignees No one assigned Labels No labels No labels Projects No projects Milestone No milestone Relationships None yet Development No branches or pull requests Issue actions Open in GitHub Copilot app You can’t perform that action at this time.",
+      "quoteSha256": "7d11083de784800ba1f01b630f9d987465bca9887c0cb89dcd6cc815a071e159"
+    },
+    {
+      "id": "src-6",
+      "type": "url",
+      "title": "Track new Uniswap v4 releases · Issue #2 · mcpmark-eval-liuhezi/uniswap-v4-watch-2 · GitHub",
+      "url": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-2/issues/2",
+      "finalUrl": "https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-2/issues/2",
+      "status": 200,
+      "fetchedAt": "2026-11-24T08:24:08.542Z",
+      "extractor": "page-text-v1",
+      "sha256": "1ce390bd2517837b1c13a8556548bc9be04822c279135732338b96bd8eb9448d",
+      "bytes": 187035,
+      "quote": "This is the only tag/release in the repo to date — treat \"no new releases\" as the current state unless a tag appears on v4-core.",
+      "quoteSha256": "571a1199e5ea60e10d0d264cca55d279d328c811ea7bc9ce13bcdd03500e397e"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-25T08:24:09.037Z",
+      "fetchedAt": "2026-11-24T08:24:01.166Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "7792a11823731418d06f73bde7da002229266d859708acbeba33f7c5714156e1"
     }
   ],
   "sourceFormat": "record-v1",
