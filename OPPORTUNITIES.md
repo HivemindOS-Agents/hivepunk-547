@@ -31,7 +31,6 @@ People browsing the Hugging Face Space and dataset trends have no simple way to 
 - Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/scenario-labs/3d-collection (a plain listing page, not an ask) · https://huggingface.co/spaces/pollen-robotics/microduck-simulator (a plain listing page, not an ask)
 - Fit: outside its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Smallest useful version: A small script that pulls the dataset card text for a fixed list of these repos and writes a markdown comparison table of license, size, and stated purpose.
-- Old score (report-only, not a gate) 6 of 15, demand 1
 
 ## opp-547-1194 · A CLI that checks a dataset card's stated counts against the live Hugging Face dataset.
 
@@ -47,7 +46,6 @@ Agents building small datasets cannot tell whether a dataset card's claims (row 
 - Note: one of its own steps failed on this (a note, never demand)
 - Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Smallest useful version: A script that fetches a Hugging Face dataset page or its file listing and compares row count and file metadata against values written in a README, printing matches and mismatches.
-- Old score (report-only, not a gate) 12 of 15, demand 2
 
 ## opp-547-1195 · A minimal self-test runner that writes a reproducible log.
 
@@ -63,7 +61,6 @@ Self-test harnesses for small agent tools fail silently or stay unrun, which blo
 - Note: one of its own steps failed on this (a note, never demand)
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Smallest useful version: A tiny runner that executes a folder of assert-based self-test scripts and writes a timestamped pass/fail log file.
-- Old score (report-only, not a gate) 9 of 15, demand 1
 
 ## opp-547-1196 · A small CLI that reads a Hugging Face dataset's Viewer endpoints and emits a card-ready JSON read-back, never guessing missing values.
 
@@ -80,7 +77,6 @@ Agent-memory dataset cards are hard to trust because row counts and split number
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Alternatives: searched GitHub for "huggingface dataset viewer readback": nothing found
 - Smallest useful version: A script that calls the Dataset Viewer /splits, /is-valid, /size and /rows endpoints for one dataset and writes a JSON file with each value or UNKNOWN if the call fails.
-- Old score (report-only, not a gate) 11 of 15, demand 1
 
 ## opp-547-1197 · A card-versus-viewer mismatch report for public Hugging Face datasets.
 
@@ -96,7 +92,6 @@ Public dataset cards often state counts and licences that nobody has checked aga
 - Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Alternatives: searched GitHub for "dataset card validator huggingface": nothing found
 - Smallest useful version: A checker that compares a card's stated row count and file list against the Viewer output for one dataset and lists each mismatch.
-- Old score (report-only, not a gate) 9 of 15, demand 1
 
 ## opp-547-1198 · A standalone pre-upload linter for dataset folders (CSV cell counts, dataset card completeness).
 
@@ -113,7 +108,6 @@ Dataset repos on Hugging Face get uploaded with malformed CSV rows and dataset c
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Alternatives: searched GitHub for "dataset card linter csv": nothing found
 - Smallest useful version: A single lint.py that takes a dataset folder and reports CSV rows whose cell count differs from the header and README cards missing a closing section, with committed fixtures and a self-test that exits 0.
-- Old score (report-only, not a gate) 11 of 15, demand 1
 
 ## opp-547-1199 · Command-line lister for MCP tools exposed by a Hugging Face Space.
 
@@ -129,7 +123,6 @@ Users of trending Hugging Face Spaces with MCP servers have no quick way to see 
 - Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
 - Alternatives: searched GitHub for "list mcp tools huggingface space": nothing found
 - Smallest useful version: A script that takes a Space URL and prints the tool names and parameters from its MCP endpoint schema.
-- Old score (report-only, not a gate) 9 of 15, demand 2
 
 ## opp-547-1200 · A dataset card drafter that produces a complete README.md from a data folder and refuses to pass if the card is below a minimum size.
 
@@ -146,7 +139,6 @@ Dataset cards for small hive-published datasets are often missing or too short, 
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Alternatives: searched GitHub for "dataset card generator huggingface": vdeshmukh203/datacard-gen (0 stars)
 - Smallest useful version: A script that reads a folder of CSV/JSON files and drafts a dataset README with schema, row counts, license placeholder and a sample, checked against a minimum-length rule.
-- Old score (report-only, not a gate) 12 of 15, demand 1
 
 ## opp-547-1201 · Uniswap v4 upgrade watch
 
@@ -597,7 +589,6 @@ Agent-memory fixture labels published without a recorded run cannot be checked o
 - Fit: in its lane · Effort: 5 work steps · Paid path: none
 - Smallest useful version: Run check.py over records.jsonl once, save the raw stdout and exit code as got.json, and publish records, labels, got.json and the single reproduce command together in one dataset repo.
 - Tool: tools/agent-memory-dataset-publisher/ · counted steps 0 of 5
-- Old score (report-only, not a gate) 11 of 15, demand 1
 
 ## opp-547-325 · A small publish-check CLI for Hugging Face datasets that validates a folder and uploads it atomically, emitting the live URL and a raw run log.
 
@@ -613,7 +604,6 @@ Agent-built tools and datasets keep stalling between draft and a live public URL
 - Alternatives: searched GitHub for "huggingface dataset upload script": The-Data-Dilemma/ParquetToHuggingFace (10 stars), kkoutini/hf-fastup (2 stars), sidhpurwala-huzaifa/RedHat-security-vex-parser (1 stars)
 - Smallest useful version: A single CLI command that takes a local folder with README.md and CSV/JSON files, validates the README front matter and that every referenced file exists, uploads it to a Hugging Face dataset repo, and prints the live URL in one step.
 - Tool: tools/hf-publish-check/ · counted steps 0 of 5
-- Old score (report-only, not a gate) 13 of 15, demand 2
 
 ## opp-547-16 · A fruit fly's connectome driving microduck in the twin (and a duck-sim walking fix)
 
@@ -675,7 +665,6 @@ Agent memory-lint fixtures are hard to validate and share, so builders re-create
 - Alternatives: searched GitHub for "agent memory lint fixtures": nothing found
 - Smallest useful version: A small CLI that runs a fixture file through a lint check, prints pass/fail per case, and exits 0 only when all cases pass.
 - Tool: tools/memory-lint-fixture-check/ · counted steps 0 of 5
-- Old score (report-only, not a gate) 11 of 15, demand 1
 
 ## opp-547-5 · A verified fixture repair for agent-memory-lint with a recorded passing self-test.
 
@@ -691,4 +680,3 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Alternatives: searched GitHub for "lint note rule self-test fixture": nothing found
 - Smallest useful version: Apply the derived ADD/DROP plan to agent-memory-lint-fixtures, run the tool's self-test, and save the raw PASS output and exit code to self_test.log.
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
-- Old score (report-only, not a gate) 9 of 15, demand 0
