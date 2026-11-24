@@ -2,34 +2,59 @@
 
 ## Caveats first
 
-- Could not confirm: latest release tag/date for Uniswap/v4-core from https://api.github.com/repos/Uniswap/v4-core/releases/latest in this step. They are UNKNOWN in seed_row.json; no tag or date was invented.
-- The v4.0.0 / 2025-01-23 claim is unverified and kept separate; it is not the verified latest release.
-- UNTESTED: live GitHub API verification. Self-test exit 0 in ARTIFACTS.md is from the latest HivemindOS runner run 45375829031 (2026-11-24 10:33 UTC); a re-run after this update is UNTESTED from this writing step and the runner's new SELFTEST_OUTPUT.md is authoritative.
-- Do not touch tools/agent-memory-lint-fixtures/ for this work. Nothing here was published externally. A person decides; an agent never merges or publishes.
+- The latest release tag/date for Uniswap/v4-core was fetched from
+  https://api.github.com/repos/Uniswap/v4-core/releases/latest and confirmed
+  as v4.0.0 / 2025-01-23T19:00:03Z (release id 196495150, prerelease=false,
+  draft=false). The verified values are in data/seed_row.json.
+- UNTESTED: Whether v4.0.0 is still the latest release at the time the
+  Hugging Face dataset page is viewed. Re-check from the API endpoint above.
+- UNTESTED: The Hugging Face dataset viewer may show no table for a single
+  JSON object (seed_row.json is one object, not an array or JSON Lines).
+  The file is downloadable regardless.
+- Do not touch tools/agent-memory-lint-fixtures/ for this work. Nothing here
+  was published externally. A person decides; an agent never merges or publishes.
 
 ## What this is
 
-Seed row for a Uniswap v4 upgrade watch. seed_row.json records Uniswap/v4-core with latest_release_tag and latest_release_date as UNKNOWN unless verified from https://api.github.com/repos/Uniswap/v4-core/releases/latest, with source URLs and the unverified v4.0.0/2025-01-23 claim kept separate.
+Seed row for a Uniswap v4 upgrade watch, now a verified FACT row.
+data/seed_row.json records Uniswap/v4-core with the verified latest release
+v4.0.0 published 2025-01-23T19:00:03Z, fetched from the GitHub releases API.
 
-## How to use
+Published as a Hugging Face dataset under hivepunk-547-db38b7a4/ by uploading
+only README.md (this file) and data/ (the folder containing seed_row.json).
+Root files in the tools folder (published-self.py resource script, this
+README.md, ARTIFACTS.md, self_test.py, reports) are not uploaded.
+
+## How to use (offline self-test)
 
 ~~~bash
 python3 self_test.py
 ~~~
 
-Run with no arguments, no network, alone from inside this folder. It checks seed_row.json is valid JSON, verified fields are UNKNOWN, the API source_url is present, the unverified claim is separate, and README/ARTIFACTS carry caveats and untested marks. Exits 0 only when every check passes.
+Run with no arguments, no network, alone from inside this folder. It checks
+seed_row.json is valid JSON, the verified fields hold v4.0.0/2025-01-23T19:00:03Z,
+the source_url and release_id are present, and README and ARTIFACTS carry
+caveats and untested marks. Exits 0 only when every check passes.
 
-To verify: fetch https://api.github.com/repos/Uniswap/v4-core/releases/latest, read tag_name and published_at verbatim, then update only the verified fields in seed_row.json.
+## How to verify the current latest release
+
+Fetch:
+   https://api.github.com/repos/Uniswap/v4-core/releases/latest
+Read the tag_name and published_at verbatim, then update only the
+verified fields in data/seed_row.json if they differ from v4.0.0.
 
 ## Untested parts (marked untested)
 
-- UNTESTED: latest release tag/date not verified from the live GitHub API; seed_row.json keeps UNKNOWN.
-- UNTESTED: v4.0.0 / 2025-01-23 claim not verified against the API.
-- UNTESTED: re-run of self_test.py after this update not confirmed from this writing step; runner exit 0 for run 45375829031 is pasted in ARTIFACTS.md and the new runner result is authoritative.
-- UNTESTED: no live network fetch was made in this writing step.
+- UNTESTED: Whether v4.0.0 is still the latest release today.
+- UNTESTED: Hugging Face dataset viewer rendering of a single JSON object.
+- UNTESTED: The publish script (publish-self.py) has not been run in this
+  commit; its requirements (huggingface-hub, HF_TOKEN) are not available
+  from the writing step. The owner must run it.
 
 ## ARTIFACTS.md log
 
-See ARTIFACTS.md in this folder for artifact list, exact command, raw exit-0 output, and commit note.
+See ARTIFACTS.md in this folder for artifact list, exact command, raw exit-0
+output, and commit note.
 
-Made by HivePunk #547, an AI agent on HivemindOS. A person decides; an agent never merges or publishes.
+Made by HivePunk #547, an AI agent on HivemindOS. A person decides; an agent
+never merges or publishes.
