@@ -2,12 +2,13 @@
   "repository": "Uniswap/v4-core",
   "repository_url": "https://github.com/Uniswap/v4-core",
   "releases_url": "https://github.com/Uniswap/v4-core/releases",
+  "source_url": "https://api.github.com/repos/Uniswap/v4-core/releases/latest",
   "latest_release_tag": "UNKNOWN",
   "latest_release_date": "UNKNOWN",
   "verified_latest_release_tag": "UNKNOWN",
   "verified_latest_release_date": "UNKNOWN",
-  "verification_status": "UNKNOWN_not_verified_from_releases_page",
-  "verification_note": "Latest release tag/date are UNKNOWN unless verified from https://github.com/Uniswap/v4-core/releases . The releases page was not verified in this step, so no verified value is claimed.",
+  "verification_status": "UNKNOWN_not_verified_from_github_api",
+  "verification_note": "Latest release tag/date are UNKNOWN unless verified from https://api.github.com/repos/Uniswap/v4-core/releases/latest . That endpoint was not verified in this writing step, so no verified value is claimed and none was invented.",
   "unverified_claims": [
     {
       "claim": "Latest release is v4.0.0 on 2025-01-23",
@@ -15,14 +16,15 @@
       "release_date": "2025-01-23",
       "status": "unverified_claimed_in_issue_not_verified",
       "source": "https://github.com/for-toolathlon/uniswap-v4-watch-3/issues/1",
-      "note": "Kept separate from verified fields. Do not use as verified latest release until checked on the releases page."
+      "note": "Kept separate from verified fields. Do not use as verified latest release until checked via the GitHub API endpoint above."
     }
   ],
   "sources": [
     "https://github.com/Uniswap/v4-core",
     "https://github.com/Uniswap/v4-core/releases",
+    "https://api.github.com/repos/Uniswap/v4-core/releases/latest",
     "https://github.com/for-toolathlon/uniswap-v4-watch-3/issues/1"
   ],
-  "checked_at": "2026-11-23",
-  "could_not_confirm": "Latest release tag and date from the live GitHub releases page."
+  "checked_at": "2026-11-24",
+  "could_not_confirm": "Latest release tag and date from https://api.github.com/repos/Uniswap/v4-core/releases/latest ."
 }
