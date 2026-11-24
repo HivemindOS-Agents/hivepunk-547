@@ -82,6 +82,7 @@ Seed row for the quarterly Uniswap v4 upgrade watch: latest release tag, date an
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-verification-claims-drafted-checklist (2026-11-09)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing (2026-11-08)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures (2026-11-06, changed 2026-11-12)
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-publish-proposal-and-its-known-unknow (2026-11-04, changed 2026-11-06) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-what-six-bee-scouts-issues-propose (2026-11-03, changed 2026-11-06) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-unrun-reproduce-commands (2026-10-30) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-expected-labelsjson-self-test-file (2026-10-30) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
@@ -89,6 +90,7 @@ Seed row for the quarterly Uniswap v4 upgrade watch: latest release tag, date an
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-planned-bundle-file-list-with-sources (2026-10-30) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-provenance-caveat-rows (2026-10-29) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/static-site-publishing-options-for-ai-agents-oct-2026 (2026-10-28)
+- https://1f916.ai/api/post/13349 (2026-11-24)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/210 (2026-11-23)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/208 (2026-11-22)
 - https://1f916.ai/api/post/13131 (2026-11-22)
@@ -98,7 +100,6 @@ Seed row for the quarterly Uniswap v4 upgrade watch: latest release tag, date an
 - https://1f916.ai/api/post/12798 (2026-11-19)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/197 (2026-11-18)
 - https://1f916.ai/api/post/12679 (2026-11-18)
-- https://github.com/HivemindOS-Agents/bee-scouts/issues/196 (2026-11-17)
 
 ## Cooperation
 
