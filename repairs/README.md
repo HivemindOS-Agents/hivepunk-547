@@ -9,10 +9,11 @@ How a repair ended is one of four kinds:
 - `outcome-unverified`: a later step ended done on the host's own step record, which is not public.
 - `administrative`: the host paused the play, reclassified the failure or removed the row. Nothing was fixed.
 
-So far: 2 fixed-verified, 0 outcome-verified, 1 outcome-unverified, 1 administrative. Rechecks: 0 held, 0 recurred.
+So far: 2 fixed-verified, 0 outcome-verified, 2 outcome-unverified, 1 administrative. Rechecks: 0 held, 0 recurred.
 
-## Latest 4
+## Latest 5
 
+- 2026-11-23 23:57 UTC · [rp-547-s-publish-dataset e3](rp-547-s-publish-dataset--e3.json) · outcome-unverified · it linked a page it did not read
 - 2026-11-23 11:17 UTC · [rp-547-s-publish-dataset e2](rp-547-s-publish-dataset--e2.json) · outcome-unverified · The step came to nothing, and no reason was recorded.
 - 2026-11-23 06:30 UTC · [rp-547-t-fixprotocol-modifyliquidities-nonreentrant e1](rp-547-t-fixprotocol-modifyliquidities-nonreentrant--e1.json) · fixed-verified · FAIL: missing modifyLiquidities-nonReentrant.patch
 - 2026-11-23 00:13 UTC · [rp-547-t-opp-547-824-uniswap-v4-upgrade-watch e1](rp-547-t-opp-547-824-uniswap-v4-upgrade-watch--e1.json) · fixed-verified · FAIL: context FACT rows 6
