@@ -17,7 +17,7 @@ Run alone from inside this folder: tools/uniswap-v4-upgrade-watch/
 
 ## Raw stdout, stderr and exit code
 
-Raw output from the prior HivemindOS runner run of the exact command above, pasted unedited. State: passed, ranAt: 2026-11-23 21:51 UTC, run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45273816551. This writing step made no new run; a re-run after the API-URL update in this commit is UNTESTED here and its new SELFTEST_OUTPUT.md is authoritative.
+Raw output from the latest HivemindOS runner run of the exact command above, pasted unedited. State: passed, ranAt: 2026-11-24 07:21 UTC, run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45347241694. This writing step made no new run; a re-run after this update is UNTESTED here and its new SELFTEST_OUTPUT.md is authoritative.
 
 ~~~text
 seed_row.json: verified UNKNOWN, unverified v4.0.0/2025-01-23 separate, sources present
@@ -31,18 +31,18 @@ stderr was empty in that run (no FAIL line). Verification output slot: paste ver
 
 ## What was confirmed, and what was not
 
-- Confirmed by the prior runner run above: python3 self_test.py exited 0 with the stdout shown.
+- Confirmed by the latest runner run above: python3 self_test.py exited 0 with the stdout shown.
 - NOT confirmed: latest release tag/date from https://api.github.com/repos/Uniswap/v4-core/releases/latest. Seed row keeps UNKNOWN; v4.0.0 / 2025-01-23 is an unverified claim kept separate.
-- NOT confirmed: re-run exit code after this commit's update (API source_url added, checks updated, no print lines changed). The runner's new SELFTEST_OUTPUT.md is the only evidence for that run.
+- NOT confirmed: re-run exit code after this commit's update (ARTIFACTS.md raw-output refresh and README run reference updated, no check logic changed). The runner's new SELFTEST_OUTPUT.md is the only evidence for that run.
 - NOT confirmed: prior contents of this folder beyond the files written here.
 - Confirmed by writing this folder only: seed_row.json, README.md, self_test.py and this file contain the exact command, raw exit-0 output, caveats and untested marks.
 
 ## Commit note (for agents-service commit to this repo only)
 
-Title: Point uniswap-v4-upgrade-watch seed row at GitHub API latest-release endpoint, keep UNKNOWN
-What: Updated only tools/uniswap-v4-upgrade-watch/: seed_row.json now uses source_url https://api.github.com/repos/Uniswap/v4-core/releases/latest with verified tag/date UNKNOWN and unverified v4.0.0/2025-01-23 separate, README.md marks live-API parts UNTESTED, self_test.py passes alone via python3 self_test.py with no network and checks the API URL, ARTIFACTS.md contains the raw exit-0 output from run 45273816551.
+Title: Refresh uniswap-v4-upgrade-watch ARTIFACTS with latest exit-0 runner output (45347241694), keep UNKNOWN
+What: Updated only tools/uniswap-v4-upgrade-watch/: ARTIFACTS.md now pastes the raw exit-0 output from run 45347241694, README.md references that run and marks live-API parts UNTESTED, seed_row.json keeps verified tag/date UNKNOWN pointing at https://api.github.com/repos/Uniswap/v4-core/releases/latest, self_test.py unchanged.
 Spent: writing step only; no shell run, no network calls, no external publish.
-Links: https://github.com/Uniswap/v4-core and https://api.github.com/repos/Uniswap/v4-core/releases/latest listed in seed_row.json; unverified claim source https://github.com/for-toolathlon/uniswap-v4-watch-3/issues/1; prior run https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45273816551.
+Links: https://github.com/Uniswap/v4-core and https://api.github.com/repos/Uniswap/v4-core/releases/latest listed in seed_row.json; unverified claim source https://github.com/for-toolathlon/uniswap-v4-watch-3/issues/1; latest run https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45347241694.
 Unchecked: live API verification, re-run exit code after this commit.
 
 ## Left for owner
