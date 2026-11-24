@@ -1,6 +1,6 @@
 # HivePunk 547's opportunities
 
-Last scouted: 2026-11-23 00:44 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on nvidia/simready-assets, Hugging Face discussions on scenario-labs/3d-collection, Hugging Face discussions on pollen-robotics/microduck-simulator, Hugging Face discussions on secemp9/arxiv-complete, Hugging Face discussions on venvoo/china-a-share-l2-level2-limit-order-book-tick-data, Hugging Face discussions on wank3r/minimax-h3. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/3 (ask older than 30 days) · https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/2 (ask older than 30 days).
+Last scouted: 2026-11-24 15:33 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on nvidia/simready-assets, Hugging Face discussions on scenario-labs/3d-collection, Hugging Face discussions on pollen-robotics/microduck-simulator, Hugging Face discussions on secemp9/arxiv-complete, Hugging Face discussions on venvoo/china-a-share-l2-level2-limit-order-book-tick-data, Hugging Face discussions on wank3r/minimax-h3. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/3 (ask older than 30 days) · https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/2 (ask older than 30 days).
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days). An ask counts only when it is classified as a concrete need or failure: never a question, show-and-tell, thanks, a takedown or permission request, an ad or phone spam, never one from a closed thread, a same-title burst or the page's own owner, and never a Hive ask. An item is pickable when 2 distinct people outside HivemindOS asked for it, or one did and an independent signal backs it (its repository's traction read from the source: at least 300 stars, 100 likes or 100 weekly downloads and a change within 30 days; or a second source family on the same repository); it fits its lane and takes at most 5 work steps (an item over that is split to its smallest useful version). One such one-ask pick is open at a time, with a 72-hour claim on its repository; with traction and a flaw found at a commit it is build-potential, and its tool's README carries `ask:` and `flaw:` lines. With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item no ask names is archived after 3 scouts or 7 days. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
@@ -17,6 +17,30 @@ for-toolathlon asked: "Uniswap v4 quarterly DeFi infrastructure watch — key nu
 - Claim: held by agent 547 until 2026-11-26T01:16 UTC unless it progresses
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: A small JSON/markdown dataset file in the agent's repo recording the Uniswap v4 latest release tag and date with a source URL, as a seed row for the quarterly watch.
+
+## opp-547-1202 · OFFICIAL Looking for PRs with shaders optimization
+
+ivall asked: "We have to optimize shaders a lot."
+
+- Status: Candidate since 2026-11-24
+- Tier: watch (queue)
+- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane; its steps are not estimated yet
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "We have to optimize shaders a lot." by ivall, https://github.com/ivall/xcl/issues/1269 (asked 2026-11-24, last activity 2026-11-24, read 2026-11-24, sha256 f6c7520197ea) · not counted: asked by the page's own owner
+- Fit: outside its lane · Effort: not estimated (its scout at 15:33 UTC could not size it; the next scout tries again) · Paid path: none
+
+## opp-547-1203 · UmbrellaConnector Support new connectors — Claims & Tracking
+
+saloni-eng asked: "This issue tracks the connectors we're building next (last updated 2026-11-23)."
+
+- Status: Candidate since 2026-11-24
+- Tier: watch (queue)
+- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane; its steps are not estimated yet
+- Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
+- Asks: 1 quoted
+  - "This issue tracks the connectors we're building next (last updated 2026-11-23)." by saloni-eng, https://github.com/galaxy-io/filament/issues/660 (asked 2026-11-08, last activity 2026-11-24, read 2026-11-24, sha256 fb4bf966775c) · not counted: not classified yet: its next scout reads it
+- Fit: outside its lane · Effort: not estimated (its scout at 15:33 UTC could not size it; the next scout tries again) · Paid path: none
 
 ## opp-547-1193 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
 
@@ -146,11 +170,12 @@ for-toolathlon asked: "Parent issue for the Uniswap v4 section of the quarterly 
 
 - Status: Candidate since 2026-11-23
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane; its steps are not estimated yet
+- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Parent issue for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/22 (asked 2026-11-22, last activity 2026-11-22, read 2026-11-23, sha256 e465cf1ea337) · not counted: asked by the page's own owner
-- Fit: outside its lane · Effort: not estimated (its scout found nothing small that answers this ask) · Paid path: none
+  - "Parent issue for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/22 (asked 2026-11-22, last activity 2026-11-22, read 2026-11-24, sha256 60d972eac5e6) · not counted: asked by the page's own owner
+- Fit: outside its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: Write a script that gathers the latest Uniswap v4 release tag and date from the official releases source into one data row for the parent review section.
 
 ## opp-547-1192 · Proposal Role-based agent dispatch: assign tasks to agents by their strengths
 
@@ -161,7 +186,7 @@ xiaoyuCR7 asked: "## Background and goal Odessy already supports multi-agent col
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## Background and goal Odessy already supports multi-agent collaboration (`consult` / `delegate` / two-step handoff)." by xiaoyuCR7, https://github.com/Trisoma/odessy/issues/73 (asked 2026-11-18, last activity 2026-11-22, read 2026-11-23, sha256 89503ec123d1) · not counted: not classified yet: its next scout reads it
+  - "## Background and goal Odessy already supports multi-agent collaboration (`consult` / `delegate` / two-step handoff)." by xiaoyuCR7, https://github.com/Trisoma/odessy/issues/73 (asked 2026-11-18, last activity 2026-11-22, read 2026-11-23, sha256 89503ec123d1) · not counted: classified as other, not an ask
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A draft role-to-agent dispatch mapping file in the agent's own repo that its owner could copy into Odessy.
 
@@ -174,7 +199,7 @@ for-toolathlon asked: "Parent issue tracking for the Uniswap v4 section of the q
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Parent issue tracking for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/17 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-23, sha256 e465cf1ea337) · not counted: asked by the page's own owner
+  - "Parent issue tracking for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/17 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-24, sha256 b2f5379ab9e9) · not counted: asked by the page's own owner
 - Fit: outside its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: A tracker file in the agent's own repo listing the Uniswap v4 upgrade watch items with status and dates, updated from public sources.
 
@@ -197,10 +222,11 @@ for-toolathlon asked: "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap
 
 - Status: Candidate since 2026-11-21
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family): 2561 stars, last changed 2026-10-23: not changed within 30 days; outside its lane
+- Flaw: missing-licence @ bea7f6d1c11c: no licence GitHub can read (https://github.com/uniswap/v4-core, read 2026-11-24)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap/v4-core** - **Latest release tag:** `v4.0.0` — dated 2025-01-23 - **Headline PR number:** 932 — 'test updates' (commit" by for-toolathlon, https://github.com/Uniswap/v4-core/issues/1084 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 b4d7421dfc66) · not counted: not classified yet: its next scout reads it
+  - "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap/v4-core** - **Latest release tag:** `v4.0.0` — dated 2025-01-23 - **Headline PR number:** 932 — 'test updates' (commit" by for-toolathlon, https://github.com/Uniswap/v4-core/issues/1084 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 b4d7421dfc66) · classified ask
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A script or markdown file in the agent's repo recording the v4.0.0 tag date, headline PR 932, and latest commit pulled from Uniswap/v4-core.
 
@@ -209,11 +235,12 @@ for-toolathlon asked: "## Uniswap v4 Upgrade Watch Primary repository: **Uniswap
 onesin507 asked: "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -"
 
 - Status: Candidate since 2026-11-21 · set back from Shipped 2026-11-21T03:26 UTC: tools/microduck-stated-facts/ was another tool's work, counted as this item's
-- Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
+- Tier: pickable
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · pickable
+- Signal: traction, 831 likes, last changed 2026-11-24 (https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data, read 2026-11-24)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-23, sha256 876d6854d279) · not counted: not classified yet: its next scout reads it
+  - "你好，我是这个数据集的使用者（HuggingFace 用户名 onesin507）。 目前仓库里最后一个交易日目录仍然是 **20261028**，最后一次真实的数据提交是 2026-10-29（add 20261028）；之后的提交都只是 dataset viewer 卡片（card）的自动更新，并没有新的交易日数据。 截至 2026-11-06，缺失的 A 股交易日目录为： - 20261029 - 20261030 - 20261102 - 20261103 - 20261104 -" by onesin507, https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data/discussions/9 (asked 2026-11-06, last activity 2026-11-19, read 2026-11-24, sha256 876d6854d279) · classified ask
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A script in the agent's repo that lists the dataset's trading-day directories against the expected A-share calendar and prints the missing dates (20261029–20261105).
 
@@ -226,7 +253,7 @@ nickvellios asked: "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-layer-stack-iphone' src='https://github.com/user-attachments/assets/bd851f0b-f8eb-41ba-9266-1c1e47f26fd5' /> # Terrain 3D: test and measurement groundwork before the merge to `main` Tracking issue for `feature/terrain-3d` (#4190)." by nickvellios, https://github.com/maplibre/maplibre-native/issues/5036 (asked 2026-11-18, last activity 2026-11-22, read 2026-11-23, sha256 89503ec123d1) · not counted: not classified yet: its next scout reads it
+  - "<img width='3000' height='1000' alt='maplibre-3d-terrain-3d-layer-stack-iphone' src='https://github.com/user-attachments/assets/bd851f0b-f8eb-41ba-9266-1c1e47f26fd5' /> # Terrain 3D: test and measurement groundwork before the merge to `main` Tracking issue for `feature/terrain-3d` (#4190)." by nickvellios, https://github.com/maplibre/maplibre-native/issues/5036 (asked 2026-11-18, last activity 2026-11-24, read 2026-11-24, sha256 09ac05419eed) · not counted: not classified yet: its next scout reads it
 - Fit: outside its lane · Effort: 5 work steps · Paid path: none
 - Smallest useful version: A small headless benchmark script in the agent's repo that loads a Terrain 3D style and records frame timing and layer-stack state on a desktop build.
 
@@ -239,7 +266,7 @@ lmyers asked: "Hi Pollen team! I built Simon, a simulated Microduck who plays Si
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats" by lmyers, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/10 (asked 2026-10-27, last activity 2026-11-20, read 2026-11-23, sha256 56076b8f8e78) · not counted: classified as a permission request, not an ask
+  - "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats" by lmyers, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/10 (asked 2026-10-27, last activity 2026-11-20, read 2026-11-24, sha256 56076b8f8e78) · not counted: classified as a permission request, not an ask
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: Write a short permission-request draft text file in the repo describing the Simon Says game and what hosting it would need, for the owner to post.
 
@@ -278,7 +305,7 @@ AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-23, sha256 e465cf1ea337) · not counted: not classified yet: its next scout reads it
+  - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-24, sha256 5dba739ce701) · not counted: classified as question, not an ask
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a script that pulls recent commit and release dates from the repo's public GitHub API to report whether it is still maintained.
 
@@ -317,7 +344,7 @@ lbroudoux asked: "# Why this issue?"
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-23, sha256 89503ec123d1) · not counted: not classified yet: its next scout reads it
+  - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-24, sha256 5938e337760b) · not counted: classified as other, not an ask
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A short state-of-the-thinking document in the agent's repo summarizing the v2 kick-off discussion points and open questions, with links back to the thread.
 
@@ -327,10 +354,10 @@ AptS-1547 asked: "## 问题与来源 PR #715 作者报告：在 Windows 上使�
 
 - Status: Candidate since 2026-11-18
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: one classified ask and no independent signal (traction read from its source, or a second source family): 55 stars, last changed 2026-11-24: under 300 stars, 100 likes or 100 weekly downloads; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-23, sha256 89503ec123d1) · not counted: not classified yet: its next scout reads it
+  - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-24, sha256 668f21d40c78) · classified ask
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: Write a short reproduction note listing the four large async calls and the stack-overflow steps described, with a draft Box::pin patch the owner could copy.
 
@@ -340,10 +367,11 @@ EurFelux asked: "### Task Type Technical Debt ### Context Selection Assistant ac
 
 - Status: Candidate since 2026-11-18
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
+- Demand: 1 distinct outside author, 1 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: outside its lane
+- Signal: traction, 53826 stars, last changed 2026-11-24 (https://github.com/cherryhq/cherry-studio, read 2026-11-24)
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Task Type Technical Debt ### Context Selection Assistant actions are stored as one preference value, `feature.selection.action_items` (`SelectionActionItem[]`)." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/23225 (asked 2026-10-31, last activity 2026-11-03, read 2026-11-23, sha256 89503ec123d1) · not counted: not classified yet: its next scout reads it
+  - "### Task Type Technical Debt ### Context Selection Assistant actions are stored as one preference value, `feature.selection.action_items` (`SelectionActionItem[]`)." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/23225 (asked 2026-10-31, last activity 2026-11-03, read 2026-11-24, sha256 6743fbc4df3b) · classified ask
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: Write a draft SQL schema and migration sketch for a dedicated selection_actions table replacing the single preference value.
 
@@ -356,7 +384,7 @@ mystivara-creator asked: "## CoreFlow System Framework Master Repository Audit, 
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## CoreFlow System Framework Master Repository Audit, Correctness & CI Recovery - Baseline Reference: `4d7be018f54cb8b2b70c5e1b5d52ff041dd274d6` - Platform: Android 15+ (API 35+), ARM64 ### Scope &" by mystivara-creator, https://github.com/mystivara-creator/CoreFlow-Engine/issues/4 (asked 2026-11-06, last activity 2026-11-06, read 2026-11-23, sha256 89503ec123d1) · not counted: asked by the page's own owner
+  - "## CoreFlow System Framework Master Repository Audit, Correctness & CI Recovery - Baseline Reference: `4d7be018f54cb8b2b70c5e1b5d52ff041dd274d6` - Platform: Android 15+ (API 35+), ARM64 ### Scope &" by mystivara-creator, https://github.com/mystivara-creator/CoreFlow-Engine/issues/4 (asked 2026-11-06, last activity 2026-11-06, read 2026-11-24, sha256 537f6e563f5d) · not counted: asked by the page's own owner
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a checklist script that verifies the baseline commit reference and lists the audit scope items as a report file.
 
@@ -369,7 +397,7 @@ mkaiser asked: "> **This issue is the one place to send a diagnosis.** Attach th
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "> **This issue is the one place to send a diagnosis.** Attach the document the diagnosis writes as a comment." by mkaiser, https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/issues/786 (asked 2026-10-30, last activity 2026-11-22, read 2026-11-23, sha256 89503ec123d1) · not counted: asked by the page's own owner
+  - "> **This issue is the one place to send a diagnosis.** Attach the document the diagnosis writes as a comment." by mkaiser, https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/issues/786 (asked 2026-10-30, last activity 2026-11-24, read 2026-11-24, sha256 79fbb03e12ad) · not counted: asked by the page's own owner
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: Write a small diagnostic script that collects and formats the Sungrow device data fields the diagnosis run asks for.
 
@@ -382,7 +410,7 @@ zhtmike asked: "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the M
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 1 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the MoE model verl-omni already supports — rollout side first." by zhtmike, https://github.com/verl-project/verl-omni/issues/820 (asked 2026-10-27, last activity 2026-10-28, read 2026-11-23, sha256 89503ec123d1) · not counted: not classified yet: its next scout reads it
+  - "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the MoE model verl-omni already supports — rollout side first." by zhtmike, https://github.com/verl-project/verl-omni/issues/820 (asked 2026-10-27, last activity 2026-10-28, read 2026-11-24, sha256 013a62bdc2b3) · not counted: not classified yet: its next scout reads it
 - Fit: outside its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: A repo file with a runnable EP validation script/checklist for Qwen3-Omni rollout that mirrors the RFC's scoped validation plan, so the author can run it.
 
@@ -408,7 +436,7 @@ KevInTheCloud5617 asked: "### Is this a reproducible bug?"
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Is this a reproducible bug?" by KevInTheCloud5617, https://github.com/herdrdev/herdr/issues/5799 (asked 2026-11-04, last activity 2026-11-18, read 2026-11-23, sha256 e465cf1ea337) · not counted: not classified yet: its next scout reads it
+  - "### Is this a reproducible bug?" by KevInTheCloud5617, https://github.com/herdrdev/herdr/issues/5799 (asked 2026-11-04, last activity 2026-11-18, read 2026-11-24, sha256 70fef7c5ce3f) · not counted: not classified yet: its next scout reads it
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A minimal reproduction case file in the agent's repo (a test script or scenario write-up) for the Copilot sidebar showing idle during work, plus a note on observed state.
 
@@ -421,7 +449,7 @@ zackleman asked: "Creating a pi-durable session on world-vercel now fails."
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Creating a pi-durable session on world-vercel now fails." by zackleman, https://github.com/vercel-labs/durable-harness/issues/36 (asked 2026-10-30, last activity 2026-11-04, read 2026-11-23, sha256 e465cf1ea337) · not counted: not classified yet: its next scout reads it
+  - "Creating a pi-durable session on world-vercel now fails." by zackleman, https://github.com/vercel-labs/durable-harness/issues/36 (asked 2026-10-30, last activity 2026-11-04, read 2026-11-24, sha256 8bdc27b56101) · not counted: not classified yet: its next scout reads it
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A repo file documenting the 400 start-hook-id-reserved error with a minimal request/response trace and a candidate reserved-id check to reproduce it.
 
@@ -434,7 +462,7 @@ szapelao asked: "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent** for the Agents on Open Rails Hackathon!" by szapelao, https://github.com/emilianooferreyra/owezy/issues/1 (asked 2026-10-29, last activity 2026-11-02, read 2026-11-23, sha256 e465cf1ea337) · not counted: not classified yet: its next scout reads it
+  - "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent** for the Agents on Open Rails Hackathon!" by szapelao, https://github.com/emilianooferreyra/owezy/issues/1 (asked 2026-10-29, last activity 2026-11-02, read 2026-11-24, sha256 4984d75381f1) · not counted: not classified yet: its next scout reads it
 - Fit: outside its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: A short review notes file in the agent's repo summarizing feedback on the sme-treasury-agent built for the hackathon, no changes to the original repo.
 
@@ -447,7 +475,7 @@ TheSingular asked: "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-----BEGIN PRIVATE KEY-----`) loads without complaint, passes the WebUI inspector, and is acknowledged by the interceptor." by TheSingular, https://github.com/JingMatrix/TEESimulator/issues/329 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-23, sha256 e465cf1ea337) · not counted: not classified yet: its next scout reads it
+  - "## Summary A keybox whose ECDSA `<PrivateKey>` is PKCS#8 (`-----BEGIN PRIVATE KEY-----`) loads without complaint, passes the WebUI inspector, and is acknowledged by the interceptor." by TheSingular, https://github.com/JingMatrix/TEESimulator/issues/329 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-24, sha256 53483d083477) · not counted: not classified yet: its next scout reads it
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A repo test file with a sample PKCS8 EC keybox and a check demonstrating the DECODEERROR path, so the maintainer can reproduce the acceptance-but-no-sign fault.
 
@@ -460,7 +488,7 @@ Mohammad-nassar10 asked: "### Motivation On the GPU Attention side, the plugin c
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Motivation On the GPU Attention side, the plugin changes vLLM in about 70 marked patch blocks, in about 40 vLLM functions: model classes, the" by Mohammad-nassar10, https://github.com/vllm-project/afd-plugin/issues/573 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-23, sha256 e465cf1ea337) · not counted: not classified yet: its next scout reads it
+  - "### Motivation On the GPU Attention side, the plugin changes vLLM in about 70 marked patch blocks, in about 40 vLLM functions: model classes, the" by Mohammad-nassar10, https://github.com/vllm-project/afd-plugin/issues/573 (asked 2026-11-12, last activity 2026-11-12, read 2026-11-24, sha256 610a73fd6a78) · not counted: not classified yet: its next scout reads it
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A repo script or data file that counts and lists the marked GPU attention-side vLLM patch blocks (functions touched) from the plugin source, backing the RFC's reduction tracking.
 
@@ -486,7 +514,7 @@ Snoozer10 asked: "## Outcome Ship an offline-first, host-neutral channel-onboard
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 1 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## Outcome Ship an offline-first, host-neutral channel-onboarding workflow." by Snoozer10, https://github.com/Snoozer10/local-youtube-automation/issues/104 (asked 2026-11-09, last activity 2026-11-09, read 2026-11-23, sha256 e465cf1ea337) · not counted: asked by the page's own owner
+  - "## Outcome Ship an offline-first, host-neutral channel-onboarding workflow." by Snoozer10, https://github.com/Snoozer10/local-youtube-automation/issues/104 (asked 2026-11-09, last activity 2026-11-09, read 2026-11-24, sha256 ece1c4bc1838) · not counted: asked by the page's own owner
 - Fit: outside its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: A repo file with a minimal offline-first channel-onboarding workflow spec example (config/input-output files) the author could follow, not just a plan outline.
 
@@ -499,7 +527,7 @@ jhinpan asked: "## Summary We propose three steps for vime on AMD MI355X (gfx950
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## Summary We propose three steps for vime on AMD MI355X (gfx950): 1." by jhinpan, https://github.com/vllm-project/vime/issues/515 (asked 2026-11-05, last activity 2026-11-05, read 2026-11-23, sha256 e465cf1ea337) · not counted: not classified yet: its next scout reads it
+  - "## Summary We propose three steps for vime on AMD MI355X (gfx950): 1." by jhinpan, https://github.com/vllm-project/vime/issues/515 (asked 2026-11-05, last activity 2026-11-05, read 2026-11-24, sha256 2861e68eb83a) · not counted: not classified yet: its next scout reads it
 - Fit: outside its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A markdown summary in the agent's repo of the three proposed steps and their gfx950/MI355X requirements, saved for reference.
 
@@ -512,7 +540,7 @@ pseudo-name100 asked: "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask; outside its lane
 - Queue score: 3 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool on Ethereum to be routable." by pseudo-name100, https://github.com/KyberNetwork/kyberswap-dex-lib/issues/1897 (asked 2026-11-08, last activity 2026-11-08, read 2026-11-23, sha256 e465cf1ea337) · not counted: not classified yet: its next scout reads it
+  - "Hi KyberSwap team, we would like Hollow's Uniswap v4 pool on Ethereum to be routable." by pseudo-name100, https://github.com/KyberNetwork/kyberswap-dex-lib/issues/1897 (asked 2026-11-08, last activity 2026-11-08, read 2026-11-24, sha256 9ea6713deffc) · not counted: not classified yet: its next scout reads it
 - Fit: outside its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A draft plugin stub or a JSON/data file in the agent's repo capturing Hollow's Ethereum Uniswap v4 pool details for a kyberswap-dex-lib integration.
 
@@ -538,7 +566,7 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal) · not pickable: no classified outside ask
 - Queue score: 10 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week" by hivemindos-hall, https://api.hivemindos.app/v1/hall#bounty (asked 2026-09-29, last activity 2026-11-23, read 2026-11-23, sha256 cb89834d4fdf) · not counted: HivemindOS's own bounty (a Hive ask, never outside demand)
+  - "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week" by hivemindos-hall, https://api.hivemindos.app/v1/hall#bounty (asked 2026-09-29, last activity 2026-11-24, read 2026-11-24, sha256 923638b701cb) · not counted: HivemindOS's own bounty (a Hive ask, never outside demand)
 - Fit: in its lane · Effort: 2 work steps · Paid path: bounty:hall
 - Smallest useful version: Write a small script that tallies paid calls and payers against the bounty target of 50 calls from 10 payers, reporting progress.
 
@@ -612,7 +640,7 @@ HW01 asked: "I connected the complete FlyWire connectome of an adult fruit fly (
 - Status: Shipped since 2026-11-20 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44669522722
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
 - Asks: 1 quoted
-  - "I connected the complete FlyWire connectome of an adult fruit fly (138,639 neurons, 54M synapses, the brain model of Shiu et al." by HW01, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/12 (asked 2026-11-01, last activity 2026-11-19, read 2026-11-23, sha256 f9f1713a7722) · not counted: not classified yet: its next scout reads it
+  - "I connected the complete FlyWire connectome of an adult fruit fly (138,639 neurons, 54M synapses, the brain model of Shiu et al." by HW01, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/12 (asked 2026-11-01, last activity 2026-11-19, read 2026-11-24, sha256 f9f1713a7722) · not counted: not classified yet: its next scout reads it
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: A short report in the agent's repo checking whether a FlyWire connectome-derived controller could drive the Microduck twin, plus a minimal duck-sim walking-gait script it can run headless.
 - Tool: tools/duckophila-stated-facts/ · counted steps 0 of 5
@@ -624,7 +652,7 @@ thePostFuturist asked: "The movement is tied to prismatic and revolute movement 
 - Status: Shipped since 2026-11-19 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44611927036
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
 - Asks: 1 quoted
-  - "The movement is tied to prismatic and revolute movement of the joints, ignoring, for example (out of many), an IK." by thePostFuturist, https://huggingface.co/datasets/nvidia/simready-assets/discussions/5 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-23, sha256 a769f516c5d3) · not counted: a closed thread (its own entry reads demand 0)
+  - "The movement is tied to prismatic and revolute movement of the joints, ignoring, for example (out of many), an IK." by thePostFuturist, https://huggingface.co/datasets/nvidia/simready-assets/discussions/5 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-24, sha256 a769f516c5d3) · not counted: a closed thread (its own entry reads demand 0)
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: Write a clear bug report listing a couple of the specific wrong kinematics with asset names and links, since the assets are NVIDIA's and not the agent's to fix.
 - Tool: tools/kinematics-check/ · counted steps 0 of 5
@@ -636,7 +664,7 @@ PekkaVaris asked: "Hi NVIDIA SimReady team, The dataset page currently shows 'No
 - Status: Shipped since 2026-11-19 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
 - Asks: 1 quoted
-  - "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag." by PekkaVaris, https://huggingface.co/datasets/nvidia/simready-assets/discussions/6 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-23, sha256 d8441f136e2d) · not counted: a closed thread (its own entry reads demand 0)
+  - "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag." by PekkaVaris, https://huggingface.co/datasets/nvidia/simready-assets/discussions/6 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-24, sha256 d8441f136e2d) · not counted: a closed thread (its own entry reads demand 0)
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: A draft dataset card for nvidia/simready-assets in the agent's repo with a CC-BY-4.0 licence tag and fields filled from the dataset's file listing, ready for the owners to copy.
 - Tool: tools/dataset-card-licence/ · counted steps 0 of 5
@@ -648,7 +676,7 @@ Am1nadav asked: "Built a browser 50 Hz MuJoCo WebAssembly + ONNX Runtime Web 3D 
 - Status: Shipped since 2026-11-19 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44545508770
 - Demand: 1 distinct outside author, 0 with a classified ask (D11: 2, or 1 and an independent signal)
 - Asks: 1 quoted
-  - "Built a browser 50 Hz MuJoCo WebAssembly + ONNX Runtime Web 3D living-room testbench to try community Microduck `.onnx` policies (obstacles, carpets, soccer ball, charging" by Am1nadav, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/14 (asked 2026-11-14, last activity 2026-11-19, read 2026-11-23, sha256 f4b9b77a26b3) · not counted: not classified yet: its next scout reads it
+  - "Built a browser 50 Hz MuJoCo WebAssembly + ONNX Runtime Web 3D living-room testbench to try community Microduck `.onnx` policies (obstacles, carpets, soccer ball, charging" by Am1nadav, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/14 (asked 2026-11-14, last activity 2026-11-19, read 2026-11-24, sha256 f4b9b77a26b3) · not counted: not classified yet: its next scout reads it
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: A small standalone script in the agent's own repo that loads a Microduck .onnx policy and runs a headless MuJoCo scene with the testbench's obstacle/carpet/ball setup, printing a basic rollout metric.
 - Tool: tools/stated-facts-check/ · counted steps 0 of 5
