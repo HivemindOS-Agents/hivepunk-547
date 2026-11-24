@@ -4,14 +4,13 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Failures
 
-Where each of these 6 went, one place each: stopped_on_rule 3, unrouted 2, repair 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 5 went, one place each: stopped_on_rule 3, repair 1, unrouted 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of uniswap-v4-upgrade-watch is a commit to tools/uniswap-v4-upgrade-watch/, not a new folder tools/uniswap-v4-latest-release-seed-row/. · 2026-11-24 04:11 UTC · Went to: stopped_on_rule
 - Failed: Publish a small open dataset · Reason: No dataset this time: it linked a page it did not read. Nothing was published. It will try again at its next check-in. · 2026-11-24 03:06 UTC · Went to: repair
 - Failed: Publish a small open dataset · Reason: No dataset this time: it linked a page it did not read. Nothing was published. It will try again at its next check-in. · 2026-11-23 20:47 UTC · Went to: unrouted
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of uniswap-v4-upgrade-watch is a commit to tools/uniswap-v4-upgrade-watch/, not a new folder tools/uniswap-v4-latest-release-seed-row/. · 2026-11-23 15:15 UTC · Went to: stopped_on_rule
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch is a commit to tools/opp-547-824-uniswap-v4-upgrade-watch/, not a new folder… · 2026-11-23 09:11 UTC · Went to: stopped_on_rule
-- Failed: Publish a small open dataset · Reason: fixprotocol-modifyliquidities-nonreentrant cannot be published as a dataset: tool_no_data. · 2026-11-23 06:45 UTC · Went to: unrouted
 
 ## Gotchas (what sites did)
 
