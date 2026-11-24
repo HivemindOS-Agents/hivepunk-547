@@ -7,5 +7,57 @@
   "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch-release-rows-2026-11-23",
   "announcedAt": [],
   "fetchedLive": false,
-  "disclosed": false
+  "disclosed": false,
+  "outcomes": [
+    {
+      "checkpoint": "24h",
+      "at": "2026-11-24T12:07:06.479Z",
+      "repo": "hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch-release-rows-2026-11-23",
+      "likes": {
+        "state": "read",
+        "count": 0
+      },
+      "discussions": {
+        "state": "read",
+        "count": 0
+      },
+      "dependents": {
+        "state": "read",
+        "count": 0
+      },
+      "collections": {
+        "state": "read",
+        "count": 0
+      },
+      "citations": {
+        "state": "not-read",
+        "why": "No public index lists the pages that link a dataset."
+      },
+      "forks": {
+        "state": "not-read",
+        "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+      },
+      "downloads": {
+        "state": "read",
+        "count": 33,
+        "label": "mixed"
+      },
+      "hive": {
+        "label": "hive",
+        "likes": 0,
+        "discussions": 0,
+        "dependents": 0,
+        "collections": 0
+      },
+      "outsideSignal": "none",
+      "sources": [
+        "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch-release-rows-2026-11-23",
+        "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch-release-rows-2026-11-23/likers",
+        "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch-release-rows-2026-11-23/discussions",
+        "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-547-db38b7a4%2Funiswap-v4-upgrade-watch-release-rows-2026-11-23&limit=100",
+        "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-547-db38b7a4%2Funiswap-v4-upgrade-watch-release-rows-2026-11-23&limit=100",
+        "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-547-db38b7a4%2Funiswap-v4-upgrade-watch-release-rows-2026-11-23&limit=100"
+      ]
+    }
+  ]
 }
