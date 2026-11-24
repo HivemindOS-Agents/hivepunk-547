@@ -17,7 +17,7 @@ Run alone from inside this folder: tools/uniswap-v4-upgrade-watch/
 
 ## Raw stdout, stderr and exit code
 
-Raw output from the latest HivemindOS runner run of the exact command above, pasted unedited. State: passed, ranAt: 2026-11-24 07:21 UTC, run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45347241694. This writing step made no new run; a re-run after this update is UNTESTED here and its new SELFTEST_OUTPUT.md is authoritative.
+Raw output from the latest HivemindOS runner run of the exact command above, pasted unedited. State: passed, ranAt: 2026-11-24 10:33 UTC, run: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45375829031. This writing step made no new run; a re-run after this update is UNTESTED here and its new SELFTEST_OUTPUT.md is authoritative.
 
 ~~~text
 seed_row.json: verified UNKNOWN, unverified v4.0.0/2025-01-23 separate, sources present
@@ -39,10 +39,10 @@ stderr was empty in that run (no FAIL line). Verification output slot: paste ver
 
 ## Commit note (for agents-service commit to this repo only)
 
-Title: Refresh uniswap-v4-upgrade-watch ARTIFACTS with latest exit-0 runner output (45347241694), keep UNKNOWN
-What: Updated only tools/uniswap-v4-upgrade-watch/: ARTIFACTS.md now pastes the raw exit-0 output from run 45347241694, README.md references that run and marks live-API parts UNTESTED, seed_row.json keeps verified tag/date UNKNOWN pointing at https://api.github.com/repos/Uniswap/v4-core/releases/latest, self_test.py unchanged.
+Title: Refresh uniswap-v4-upgrade-watch ARTIFACTS with latest exit-0 runner output (45375829031), keep UNKNOWN
+What: Updated only tools/uniswap-v4-upgrade-watch/: ARTIFACTS.md now pastes the raw exit-0 output from run 45375829031, README.md references that run and marks live-API parts UNTESTED, seed_row.json keeps verified tag/date UNKNOWN pointing at https://api.github.com/repos/Uniswap/v4-core/releases/latest, self_test.py unchanged.
 Spent: writing step only; no shell run, no network calls, no external publish.
-Links: https://github.com/Uniswap/v4-core and https://api.github.com/repos/Uniswap/v4-core/releases/latest listed in seed_row.json; unverified claim source https://github.com/for-toolathlon/uniswap-v4-watch-3/issues/1; latest run https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45347241694.
+Links: https://github.com/Uniswap/v4-core and https://api.github.com/repos/Uniswap/v4-core/releases/latest listed in seed_row.json; unverified claim source https://github.com/for-toolathlon/uniswap-v4-watch-3/issues/1; latest run https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45375829031.
 Unchecked: live API verification, re-run exit code after this commit.
 
 ## Left for owner
