@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "547",
-  "at": "2026-11-23T00:12:00.022Z",
+  "at": "2026-11-24T00:12:47.365Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -52,38 +52,28 @@
       "firstSeen": "2026-11-17T14:35:31.642Z"
     },
     {
-      "id": "wd-547-D2-undelivered:publish-dataset",
-      "check": "D2",
-      "name": "failure_not_in_health",
-      "severity": "repair",
-      "subject": "publish-dataset",
-      "detail": "Its repair of publish-dataset has 2 failed attempts, 0 of them after it was delivered.",
-      "evidence": [],
-      "firstSeen": "2026-11-23T00:12:00.022Z"
-    },
-    {
-      "id": "wd-547-D15-reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources.json",
+      "id": "wd-547-D15-reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json",
       "check": "D15",
       "name": "review_hollow",
       "severity": "report",
-      "subject": "reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources.json",
+      "subject": "reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json",
       "detail": "A value review with no self-test, no evidence and no claim proof.",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources.json"
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json"
       ],
-      "firstSeen": "2026-11-20T00:14:32.067Z"
+      "firstSeen": "2026-11-24T00:12:47.365Z"
     },
     {
-      "id": "wd-547-D15-reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources-visibility.json",
+      "id": "wd-547-D15-reviews/2026-11-23-uniswap-v4-core-seed-row-unknown-release-check.json",
       "check": "D15",
       "name": "review_hollow",
       "severity": "report",
-      "subject": "reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources-visibility.json",
-      "detail": "A visibility receipt from 2026-11-19T11:07:50.835Z still says it was announced nowhere and it was not disclosed.",
+      "subject": "reviews/2026-11-23-uniswap-v4-core-seed-row-unknown-release-check.json",
+      "detail": "A value review with no self-test, no evidence and no claim proof.",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources-visibility.json"
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-23-uniswap-v4-core-seed-row-unknown-release-check.json"
       ],
-      "firstSeen": "2026-11-21T00:14:36.774Z"
+      "firstSeen": "2026-11-24T00:12:47.365Z"
     },
     {
       "id": "wd-547-D18-artifacts",
@@ -110,30 +100,54 @@
       "firstSeen": "2026-11-23T00:12:00.022Z"
     },
     {
+      "id": "wd-547-D22-tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json",
+      "check": "D22",
+      "name": "claimed_file_not_committed",
+      "severity": "repair",
+      "subject": "tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json",
+      "detail": "A step said it built tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json; it is not in the commit.",
+      "evidence": [
+        "step 2026-11-23T09:11Z"
+      ],
+      "firstSeen": "2026-11-24T00:12:47.365Z"
+    },
+    {
       "id": "wd-547-D23-owner",
       "check": "D23",
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "20 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for the owner: publish these files under hivepunk-547-db38b7a4 with a new dataset name (do not touch agent-memory-lint-fixtures), then…\".",
+      "detail": "15 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: runner to re-run python3 self_test\".",
       "evidence": [
-        "step 2026-11-22T22:36Z",
-        "step 2026-11-22T19:28Z",
-        "step 2026-11-22T16:16Z",
-        "step 2026-11-22T13:08Z"
+        "step 2026-11-23T21:50Z",
+        "step 2026-11-23T18:41Z",
+        "step 2026-11-23T15:15Z",
+        "step 2026-11-23T09:11Z"
       ],
       "firstSeen": "2026-11-17T14:35:31.642Z"
     }
   ],
   "notSeenAgain": [
     {
-      "id": "wd-547-D17---fixprotocol-modifyliquidities-nonreentrant-at-https://github.com/HivemindOS-A-",
-      "check": "D17",
-      "subject": "ARTIFACTS.md",
-      "firstSeen": "2026-11-22T00:01:03.695Z"
+      "id": "wd-547-D2-undelivered:publish-dataset",
+      "check": "D2",
+      "subject": "publish-dataset",
+      "firstSeen": "2026-11-23T00:12:00.022Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources.json",
+      "check": "D15",
+      "subject": "reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources.json",
+      "firstSeen": "2026-11-20T00:14:32.067Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources-visibility.json",
+      "check": "D15",
+      "subject": "reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources-visibility.json",
+      "firstSeen": "2026-11-21T00:14:36.774Z"
     }
   ],
   "said": "7 found",
-  "requests": 24,
-  "elapsedMs": 3422
+  "requests": 22,
+  "elapsedMs": 2539
 }
