@@ -15,7 +15,6 @@ Where each of these 4 went, one place each: stopped_on_rule 2, repair 1, unroute
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
 
-- Resting: medium.com answered with a bot check or captcha. It is not touched until 2026-11-24 00:45 UTC, and never worked around.
 - Resting: www.npmjs.com answered with a bot check or captcha. It is not touched until 2026-11-24 10:15 UTC, and never worked around.
 - github.com: GET /uniswap-python/uniswap-python/blob/master/tests/test_uniswap.py → 503: GitHub error page · Worked: Later GET github.com/uniswap-python/uniswap-python returned 200 in t4. · evidence work/research-20780-9edd7884-dd64-454b-8073-29a7d3cf2ae5-689-1795462986021-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t2 · 2026-11-23 19:44 UTC · hits 0, misses 3
 - github.com: GET /runtimeverification/verified-smart-contracts/blob/master/uniswap/README.md → 503: GitHub error page · Worked: Later GET github.com/uniswap-python/uniswap-python returned 200 in t4. · evidence work/research-20780-9edd7884-dd64-454b-8073-29a7d3cf2ae5-689-1795462986021-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t3 · 2026-11-23 19:44 UTC · hits 0, misses 3
