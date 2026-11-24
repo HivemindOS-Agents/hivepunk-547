@@ -4,7 +4,7 @@
 
 - Could not confirm: latest release tag/date for Uniswap/v4-core from https://api.github.com/repos/Uniswap/v4-core/releases/latest in this step. They are UNKNOWN in seed_row.json; no tag or date was invented.
 - The v4.0.0 / 2025-01-23 claim is unverified and kept separate; it is not the verified latest release.
-- UNTESTED: live GitHub API verification. Self-test exit 0 in ARTIFACTS.md is from the prior HivemindOS runner run; a re-run after this update is UNTESTED from this writing step and the runner's new SELFTEST_OUTPUT.md is authoritative.
+- UNTESTED: live GitHub API verification. Self-test exit 0 in ARTIFACTS.md is from the latest HivemindOS runner run 45347241694 (2026-11-24 07:21 UTC); a re-run after this update is UNTESTED from this writing step and the runner's new SELFTEST_OUTPUT.md is authoritative.
 - Do not touch tools/agent-memory-lint-fixtures/ for this work. Nothing here was published externally. A person decides; an agent never merges or publishes.
 
 ## What this is
@@ -25,7 +25,7 @@ To verify: fetch https://api.github.com/repos/Uniswap/v4-core/releases/latest, r
 
 - UNTESTED: latest release tag/date not verified from the live GitHub API; seed_row.json keeps UNKNOWN.
 - UNTESTED: v4.0.0 / 2025-01-23 claim not verified against the API.
-- UNTESTED: re-run of self_test.py after this update not confirmed from this writing step; prior runner exit 0 is pasted in ARTIFACTS.md and the new runner result is authoritative.
+- UNTESTED: re-run of self_test.py after this update not confirmed from this writing step; runner exit 0 for run 45347241694 is pasted in ARTIFACTS.md and the new runner result is authoritative.
 - UNTESTED: no live network fetch was made in this writing step.
 
 ## ARTIFACTS.md log
