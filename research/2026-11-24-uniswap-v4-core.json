@@ -1,0 +1,152 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-24T02:02:58.845Z",
+  "subject": "Uniswap v4-core",
+  "subjectKind": "protocol",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The seed row should record the latest release as UNKNOWN: the pages read describe the v4-core architecture, but provide no verifiable latest tag or date and service checks show no real-work commits in the last 30 days, so there is no confirmed evidence of a new release or ongoing shipping.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "Uniswap/v4-core has 0 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/Uniswap/v4-core/commits?per_page=50&since=2026-10-25T02:03:04.123Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "UNKNOWN",
+      "text": "Whether Uniswap/v4-core is still shipping",
+      "check": "shipping",
+      "missing": "None of its commits in the last 30 days is real work."
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "Uniswap v4 is described as a new automated market maker protocol that provides extensible and customizable pools.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "quote": "Uniswap v4 is a new automated market maker protocol that provides extensible and customizable pools.",
+      "sourceId": "src-2",
+      "quoteSha256": "46cfb27c2155ecc7a41aa4c03fc1d6fe80944f2cd2affe76f633ffd1f5ca165a"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "v4-core hosts the core pool logic for creating pools and executing pool actions like swapping and providing liquidity.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "context": true,
+      "quote": "v4-core hosts the core pool logic for creating pools and executing pool actions like swapping and providing liquidity.",
+      "sourceId": "src-2",
+      "quoteSha256": "3f42f85f1a9d2c63cdc0f670304f3051e70e99bab7da94c5ff49ca6cc298e07c"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "v4-core uses a singleton-style architecture, where all pool state is managed in the PoolManager.sol contract.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "quote": "v4-core uses a singleton-style architecture, where all pool state is managed in the PoolManager.sol contract.",
+      "sourceId": "src-2",
+      "quoteSha256": "1e0e9c443ee22ad3b4f1c0b6e944928284dbe99234462dd7d5ffd24f943a4607"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "The repository page lists 1,518 Commits.",
+      "check": "page",
+      "source": "https://github.com/Uniswap/v4-core",
+      "quote": "Latest commit History 1,518 Commits 1,518 Commits",
+      "sourceId": "src-2",
+      "quoteSha256": "f10742e6692475e4929cb9b75c761a286850d071a3658eae11f13d22da9572a5"
+    },
+    {
+      "id": "c5",
+      "label": "FACT",
+      "text": "Uniswap/v4-core has 0 raw commits in the last 30 days, 0 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "page",
+      "source": "https://api.github.com/repos/Uniswap/v4-core/commits?per_page=50&since=2026-10-25T02:03:04.123Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c6",
+      "label": "UNKNOWN",
+      "text": "The latest release tag and date for Uniswap/v4-core as of 2026-11-24.",
+      "check": "page",
+      "missing": "A verifiable releases page or API response showing the latest tag and published date; the releases page read on 2026-11-24 loaded with no verifiable tag/date."
+    },
+    {
+      "id": "c7",
+      "label": "UNKNOWN",
+      "text": "Whether Uniswap/v4-core is still shipping.",
+      "check": "page",
+      "missing": "None of its commits in the last 30 days is real work, and no verifiable new release was confirmed."
+    },
+    {
+      "id": "c8",
+      "label": "UNKNOWN",
+      "text": "There is no confirmed evidence from the pages and checks read that a newer release has shipped, so the seed row must remain UNKNOWN for latest release.",
+      "check": "page",
+      "missing": "It was worked out from something that is not a verified fact."
+    }
+  ],
+  "counts": {
+    "fact": 6,
+    "derived": 0,
+    "unknown": 4
+  },
+  "risks": [
+    "The repository README says the contracts are in early stages and the draft code was released so v4 could be built in public, so stability and completeness are not established by the pages read.",
+    "No verifiable latest release tag or date was obtained from the releases page, so downstream users may mistakenly treat older issue mentions as the current latest release.",
+    "Service checks found no real-work commits in the last 30 days, which leaves open whether active shipping is continuing."
+  ],
+  "unknowns": [
+    "Whether Uniswap/v4-core is still shipping: None of its commits in the last 30 days is real work.",
+    "The latest release tag and date for Uniswap/v4-core as of 2026-11-24.: A verifiable releases page or API response showing the latest tag and published date; the releases page read on 2026-11-24 loaded with no verifiable tag/date.",
+    "Whether Uniswap/v4-core is still shipping.: None of its commits in the last 30 days is real work, and no verifiable new release was confirmed.",
+    "There is no confirmed evidence from the pages and checks read that a newer release has shipped, so the seed row must remain UNKNOWN for latest release.: It was worked out from something that is not a verified fact."
+  ],
+  "wouldChangeMind": [
+    "A verifiable releases page or GitHub API response showing a specific latest tag and published date.",
+    "Recent real-work commits or a merged release PR in Uniswap/v4-core.",
+    "An official deployment or audit record linked from the repository."
+  ],
+  "sources": [
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "GitHub - Uniswap/v4-core: 🦄 🦄 🦄 🦄 Core smart contracts of Uniswap v4 · GitHub",
+      "url": "https://github.com/Uniswap/v4-core",
+      "finalUrl": "https://github.com/Uniswap/v4-core",
+      "status": 200,
+      "fetchedAt": "2026-11-24T02:03:01.950Z",
+      "extractor": "page-text-v1",
+      "sha256": "9c71a3de0fc546495fc959cc3e63207ea80db06a9221f6e0368356519e962927",
+      "bytes": 270899,
+      "quote": "Uniswap v4 is a new automated market maker protocol that provides extensible and customizable pools.",
+      "quoteSha256": "46cfb27c2155ecc7a41aa4c03fc1d6fe80944f2cd2affe76f633ffd1f5ca165a"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of Uniswap/v4-core",
+      "url": "https://api.github.com/repos/Uniswap/v4-core/commits?per_page=50&since=2026-10-25T02:03:04.123Z",
+      "fetchedAt": "2026-11-24T02:02:58.845Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "ea70799d3685d3ea229d7e090fbb47f70f64c2dadf07a2aab1abdb69390dbd2e"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-24-uniswap-v4-core.md",
+  "decidedBy": "bee"
+}
