@@ -1,0 +1,50 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "547",
+  "repair": "rp-547-s-publish-dataset",
+  "episode": 5,
+  "repairKind": "step:publish-dataset",
+  "artifact": "publish-dataset",
+  "source": {
+    "type": "host-step",
+    "ref": "step:dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:709:1795556384207:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/547.json"
+  },
+  "cause": {
+    "text": "it restated one vendor's documentation, which people can already read at the source",
+    "hash": "it restated one vendors documentation, which people can already read at the source",
+    "laterCauses": [],
+    "hashes": [
+      "it restated one vendors documentation, which people can already read at the source"
+    ]
+  },
+  "openedAt": "2026-11-24T21:41:58.520Z",
+  "states": [
+    "RECURRENCE_DETECTED",
+    "REPAIR_ATTEMPTED",
+    "RELEASED"
+  ],
+  "counters": {
+    "failedAttempts": 1,
+    "sameCause": 1,
+    "recurrences": 5
+  },
+  "escalation": null,
+  "fix": {
+    "commits": [],
+    "by": "none"
+  },
+  "verification": {
+    "kind": "host-step-record",
+    "link": null
+  },
+  "close": {
+    "kind": "outcome-unverified",
+    "closedBy": "step: a publish-dataset step ended done (dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:714:1795578754413:68400dca-5b94-44b4-84a0-e0e71ad0e83c)",
+    "at": "2026-11-25T03:55:15.330Z",
+    "removedWithoutClosure": false,
+    "why": null
+  },
+  "recheckDue": "2026-12-02T03:55:15.330Z"
+}
