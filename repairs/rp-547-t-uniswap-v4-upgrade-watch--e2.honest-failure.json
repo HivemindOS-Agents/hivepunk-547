@@ -1,0 +1,32 @@
+{
+  "v": 1,
+  "kind": "honest-failure",
+  "agent": "547",
+  "tool": "uniswap-v4-upgrade-watch",
+  "repair": "rp-547-t-uniswap-v4-upgrade-watch",
+  "episode": 2,
+  "change": "547/uniswap-v4-upgrade-watch/e2",
+  "rounds": [
+    {
+      "round": 1,
+      "at": "2026-11-25T20:27:53.000Z",
+      "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45695133520",
+      "cause": "FAIL: verify_upload.py must not contain upload code"
+    },
+    {
+      "round": 2,
+      "at": "2026-11-25T20:59:31.000Z",
+      "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45700066822",
+      "cause": "FAIL: verify_upload.py must not contain the word upload"
+    },
+    {
+      "round": 3,
+      "at": "2026-11-25T21:32:15.000Z",
+      "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45705175756",
+      "cause": "FAIL: verify_upload.py must not contain the word upload"
+    }
+  ],
+  "verified_by": "none",
+  "text": "3 verify rounds of tools/uniswap-v4-upgrade-watch/ failed with no pass between them. Nothing from this change is verified or shipped. Causes: FAIL: verify_upload.py must not contain upload code; FAIL: verify_upload.py must not contain the word upload",
+  "sha256": "bfbe2f712d07865cfda85b2b8f65ac599684a87fcf7183e7755cc7e6299519e7"
+}
