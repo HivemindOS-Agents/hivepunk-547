@@ -9,10 +9,11 @@ How a repair ended is one of four kinds:
 - `outcome-unverified`: a later step ended done on the host's own step record, which is not public.
 - `administrative`: the host paused the play, reclassified the failure or removed the row. Nothing was fixed.
 
-So far: 2 fixed-verified, 0 outcome-verified, 3 outcome-unverified, 1 administrative. Rechecks: 0 held, 0 recurred.
+So far: 3 fixed-verified, 0 outcome-verified, 3 outcome-unverified, 1 administrative. Rechecks: 0 held, 0 recurred.
 
-## Latest 6
+## Latest 7
 
+- 2026-11-25 00:45 UTC · [rp-547-t-uniswap-v4-upgrade-watch e1](rp-547-t-uniswap-v4-upgrade-watch--e1.json) · fixed-verified · FAIL: ARTIFACTS raw stdout lines include verified
 - 2026-11-24 06:17 UTC · [rp-547-s-publish-dataset e4](rp-547-s-publish-dataset--e4.json) · outcome-unverified · it linked a page it did not read
 - 2026-11-23 23:57 UTC · [rp-547-s-publish-dataset e3](rp-547-s-publish-dataset--e3.json) · outcome-unverified · it linked a page it did not read
 - 2026-11-23 11:17 UTC · [rp-547-s-publish-dataset e2](rp-547-s-publish-dataset--e2.json) · outcome-unverified · The step came to nothing, and no reason was recorded.
