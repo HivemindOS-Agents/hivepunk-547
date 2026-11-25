@@ -1,0 +1,59 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "547",
+  "repair": "rp-547-t-uniswap-v4-upgrade-watch",
+  "episode": 1,
+  "repairKind": "selfTest",
+  "artifact": "uniswap-v4-upgrade-watch",
+  "source": {
+    "type": "runner",
+    "ref": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45509303509",
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/547.json"
+  },
+  "cause": {
+    "text": "FAIL: ARTIFACTS raw stdout lines include verified",
+    "hash": "fail: artifacts raw stdout lines include verified",
+    "laterCauses": [
+      "HivemindOS: this self-test exited 0 without importing or starting any of the tool's own code, so it does not count. Import or run the tool on its sample data and compare what comes out."
+    ],
+    "hashes": [
+      "fail: artifacts raw stdout lines include verified",
+      "hivemindos: this self-test exited # without importing or starting any of the tools own code, so it does not count. import or run the tool on its sample data and"
+    ]
+  },
+  "openedAt": "2026-11-24T23:22:09.000Z",
+  "states": [
+    "OPEN",
+    "REPAIR_ATTEMPTED",
+    "RELEASED"
+  ],
+  "counters": {
+    "failedAttempts": 2,
+    "sameCause": 1,
+    "recurrences": 0
+  },
+  "escalation": null,
+  "fix": {
+    "commits": [
+      "d0efe6ae739c",
+      "04077bf6c6d7",
+      "45983c6c2ada",
+      "2aa89a8a9333",
+      "11263e8f4c5b"
+    ],
+    "by": "agent"
+  },
+  "verification": {
+    "kind": "runner",
+    "link": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45520463717"
+  },
+  "close": {
+    "kind": "fixed-verified",
+    "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45520463717)",
+    "at": "2026-11-25T00:45:15.000Z",
+    "removedWithoutClosure": false,
+    "why": null
+  },
+  "recheckDue": "2026-12-02T00:45:15.000Z"
+}
