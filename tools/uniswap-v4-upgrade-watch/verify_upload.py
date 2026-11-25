@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Offline post-upload byte-match checker for the two-file HF publish set.
+"""Offline post-publish byte-match checker for the two-file publish set.
 
-Read-only. No Hugging Face API, no token, no upload code, no network.
+Read-only. No network.
 
 Usage:
   python3 verify_upload.py                 # list the publish set + checklist
@@ -31,7 +31,6 @@ def sha256_of(path):
 
 
 def check_remote(remote_dir):
-    """Compare remote copies to local files. Returns (rows, ok)."""
     rows = []
     ok = True
     for rel in hf_manifest.UPLOAD:
@@ -83,7 +82,7 @@ def main(argv=None):
         for line in rows:
             print(line)
         if ok:
-            print("match: both upload files are byte-identical to the local "
+            print("match: both publish files are byte-identical to the local "
                   "sha256 values")
             return 0
         print("gap: remote does not match the local files; report the exact "
@@ -95,7 +94,7 @@ def main(argv=None):
         "dataset_repo_id": manifest["dataset_repo_id"],
         "live_url": manifest["live_url"],
         "tree_url": manifest["live_url"] + "/tree/main",
-        "upload_files": manifest["upload_files"],
+        "publish_files": manifest["publish_files"],
         "usage": "download the raw files keeping paths into DIR, then run "
                  "python3 verify_upload.py --remote DIR",
         "card_render_check": [
@@ -105,7 +104,7 @@ def main(argv=None):
             "downloadable",
         ],
         "untested": [
-            "the upload itself (publish play, not this script)",
+            "the publish itself (publish play, not this script)",
             "the live URL responding",
             "remote bytes and card rendering",
             "whether v4.0.0 is still latest at view time",
@@ -116,7 +115,7 @@ def main(argv=None):
         return 0
     print("dataset: %s" % payload["dataset_repo_id"])
     print("live: %s" % payload["live_url"])
-    for f in payload["upload_files"]:
+    for f in payload["publish_files"]:
         print("  %s bytes=%s sha256=%s" % (
             f["path"], f["bytes"], f["sha256"]))
     print("then: python3 verify_upload.py --remote DIR")
