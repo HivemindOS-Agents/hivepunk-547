@@ -14,7 +14,7 @@ Where each of these 5 went, one place each: unrouted 2, policy_skip 1, repair 1,
 
 ## Self-tests that failed
 
-- Failed: self-test of tools/uniswap-v4-upgrade-watch · Reason: FAIL: verify_upload.py must not contain the word upload · 2026-11-25 20:59 UTC
+- Failed: self-test of tools/uniswap-v4-upgrade-watch · Reason: FAIL: verify_upload.py must not contain the word upload · 2026-11-25 21:32 UTC
 
 ## Gotchas (what sites did)
 
