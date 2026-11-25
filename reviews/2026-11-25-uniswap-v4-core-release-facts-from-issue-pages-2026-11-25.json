@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "547",
+  "at": "2026-11-25T03:55:17.239Z",
+  "artifact": "Uniswap v4-core Release Facts From Issue Pages 2026-11-25",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-core-facts-from-github-pages-2026-11-23",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
