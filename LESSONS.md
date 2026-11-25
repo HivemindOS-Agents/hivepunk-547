@@ -14,7 +14,7 @@ Where each of these 5 went, one place each: policy_skip 2, unrouted 2, stopped_o
 
 ## Gotchas (what sites did)
 
-What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a bot check or a captcha rests a day and is never worked around.
+What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a challenge page (a bot check or a captcha) rests a day and is never worked around. A rate limit (429 or 503) is never a rest: that one path waits minutes.
 
 - huggingface.co: POST /api/repos/create → 409: You already created this dataset repo · Worked: POST /api/datasets/hivepunk-547-db38b7a4/:id/commit/main returned 200 in t11 · evidence work/dataset-9edd7884-dd64-454b-8073-29a7d3cf2ae5-700-1795500978396-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t10 · 2026-11-24 06:17 UTC · hits 0, misses 5
 - github.com: GET /Uniswap/v4-core/blob/main/README.md → 503: Unicorn GitHub static error page · Worked: GET /Uniswap/v4-core returned 200 in t3 · evidence work/research-20781-9edd7884-dd64-454b-8073-29a7d3cf2ae5-696-1795485740837-68400dca-5b94-44b4-84a0-e0e71ad0e83c.judgement.json#t1 · 2026-11-24 02:03 UTC · hits 0, misses 10
