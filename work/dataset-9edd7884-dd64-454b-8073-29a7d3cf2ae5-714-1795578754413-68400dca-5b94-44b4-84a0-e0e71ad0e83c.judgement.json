@@ -1,0 +1,140 @@
+{
+  "step": "dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:714:1795578754413:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Published dataset has wrong name and no verification fetch is shown in trace",
+  "description": "Task required dataset hivepunk-547-db38b7a4/uniswap-v4-core-seed-row-unknown-release-check with only README.md and data/seed_row.json verified by fetching the page. Final output instead reports a different dataset uniswap-v4-core-facts-from-github-pages-[redacted], and the trace shows no fetch of the required dataset page to confirm matching bytes.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "dropped": {
+    "page-instruction": 1
+  },
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/hub/en/datasets-upload-guide-llm",
+      "status": 200,
+      "error": null,
+      "ms": 95,
+      "at": "2026-11-25T03:54:29.357Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/Uniswap/v4-core",
+      "status": 200,
+      "error": null,
+      "ms": 414,
+      "at": "2026-11-25T03:54:29.731Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/huggingface/hub-docs/blob/main/docs/hub/datasets-upload-guide-llm.md",
+      "status": 200,
+      "error": null,
+      "ms": 483,
+      "at": "2026-11-25T03:54:29.730Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/214",
+      "status": 200,
+      "error": null,
+      "ms": 593,
+      "at": "2026-11-25T03:54:29.724Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/213",
+      "status": 200,
+      "error": null,
+      "ms": 604,
+      "at": "2026-11-25T03:54:29.724Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/Uniswap/v4-core/issues/1084",
+      "status": 200,
+      "error": null,
+      "ms": 633,
+      "at": "2026-11-25T03:54:29.723Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/11",
+      "status": 200,
+      "error": null,
+      "ms": 746,
+      "at": "2026-11-25T03:54:29.725Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/mcpmark-eval-liuhezi/uniswap-v4-watch-2/issues/1",
+      "status": 200,
+      "error": null,
+      "ms": 800,
+      "at": "2026-11-25T03:54:29.926Z"
+    },
+    {
+      "id": "t9",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/api/datasets",
+      "status": 200,
+      "error": null,
+      "ms": 89,
+      "at": "2026-11-25T03:55:15.330Z"
+    },
+    {
+      "id": "t10",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/repos/create",
+      "status": 409,
+      "error": "{\"error\":\"You already created this dataset repo: hivepunk-547-db38b7a4/uniswap-v4-core-facts-from-github-pages-[redacted]\",\"url\":\"https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-core-",
+      "ms": 46,
+      "at": "2026-11-25T03:55:15.419Z"
+    },
+    {
+      "id": "t11",
+      "method": "POST",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/:id/commit/main",
+      "status": 200,
+      "error": null,
+      "ms": 267,
+      "at": "2026-11-25T03:55:15.465Z"
+    },
+    {
+      "id": "t12",
+      "method": "PUT",
+      "host": "huggingface.co",
+      "path": "/api/datasets/hivepunk-547-db38b7a4/:id/settings",
+      "status": 200,
+      "error": null,
+      "ms": 117,
+      "at": "2026-11-25T03:55:15.732Z"
+    }
+  ],
+  "at": "2026-11-25T03:55:33.314Z"
+}
