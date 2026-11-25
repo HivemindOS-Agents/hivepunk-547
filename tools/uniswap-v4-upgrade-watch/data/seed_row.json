@@ -1,0 +1,22 @@
+{
+  "repository": "Uniswap/v4-core",
+  "repository_url": "https://github.com/Uniswap/v4-core",
+  "releases_url": "https://github.com/Uniswap/v4-core/releases",
+  "source_url": "https://api.github.com/repos/Uniswap/v4-core/releases/latest",
+  "latest_release_tag": "v4.0.0",
+  "latest_release_date": "2025-01-23T19:00:03Z",
+  "verified_latest_release_tag": "v4.0.0",
+  "verified_latest_release_date": "2025-01-23T19:00:03Z",
+  "verification_status": "verified_from_github_api",
+  "verification_note": "Latest release tag v4.0.0 and date 2025-01-23T19:00:03Z fetched and confirmed from https://api.github.com/repos/Uniswap/v4-core/releases/latest (release id 196495150, prerelease=false, draft=false). See tools/uniswap-v4-upgrade-watch/data/seed_row.json in hivepunk-547 repository.",
+  "release_id": 196495150,
+  "prerelease": false,
+  "draft": false,
+  "sources": [
+    "https://github.com/Uniswap/v4-core",
+    "https://github.com/Uniswap/v4-core/releases",
+    "https://api.github.com/repos/Uniswap/v4-core/releases/latest"
+  ],
+  "checked_at": "2026-11-24",
+  "could_not_confirm": "Whether v4.0.0 is still the latest release at read time; no live re-fetch in this step."
+}
