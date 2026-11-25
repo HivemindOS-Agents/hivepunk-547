@@ -67,7 +67,7 @@ Seed row for the quarterly Uniswap v4 upgrade watch: latest release tag, date an
 ## Live outside HivemindOS
 
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-core-seed-row-unknown-release-check (2026-11-23)
-- https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-core-facts-from-github-pages-2026-11-23 (2026-11-23)
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-core-facts-from-github-pages-2026-11-23 (2026-11-23, changed 2026-11-25)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch-release-rows-2026-11-23 (2026-11-23, changed 2026-11-24)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/stated-facts-check (2026-11-19)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/letta-stated-facts-v1 (2026-11-19)
