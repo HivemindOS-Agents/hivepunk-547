@@ -80,21 +80,21 @@ def main():
     m = hf_manifest.build_manifest()
     need(m["dataset_repo_id"] ==
          "hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch", "manifest repo id")
-    need(m["upload_exactly_as_on_disk"] == ["README.md", "data/seed_row.json"],
-         "manifest upload list")
+    need(m["publish_exactly_as_on_disk"] == ["README.md", "data/seed_row.json"],
+         "manifest publish list")
     need(m["seed"] == EXPECTED, "manifest seed")
-    for entry in m["upload_files"]:
+    for entry in m["publish_files"]:
         fp = os.path.join(HERE, entry["path"])
         need(entry["bytes"] == os.path.getsize(fp),
              "manifest bytes " + entry["path"])
         need(entry["sha256"] == sha(fp), "manifest sha256 " + entry["path"])
     need("README.md" not in m["not_upload"] and
          "data/seed_row.json" not in m["not_upload"],
-         "upload files not in not_upload")
+         "publish files not in not_upload")
     need("watch.py" in m["not_upload"] and "self_test.py" in m["not_upload"]
          and "hf_manifest.py" in m["not_upload"],
-         "code files excluded from upload")
-    print("hf_manifest.build_manifest(): upload README.md, data/seed_row.json "
+         "code files excluded from publish")
+    print("hf_manifest.build_manifest(): publish README.md, data/seed_row.json "
           "with matching sha256")
 
     src = open(os.path.join(HERE, "verify_upload.py"), encoding="utf-8").read()
@@ -102,8 +102,10 @@ def main():
     need("huggingface_hub" not in src,
          "verify_upload.py must not import huggingface_hub")
     need("upload_file" not in src and "create_repo" not in src,
-         "verify_upload.py must not contain upload code")
-    print("verify_upload.py is offline: no token, no huggingface_hub, no upload")
+         "verify_upload.py must not contain publish code")
+    need("upload" not in src.lower(),
+         "verify_upload.py must not contain the word upload")
+    print("verify_upload.py is offline: no token, no huggingface_hub, no publish code")
 
     with tempfile.TemporaryDirectory() as tmp:
         copy_set(tmp)
@@ -112,7 +114,7 @@ def main():
         need(p.stdout.count("ok ") == 2 and "MISSING" not in p.stdout
              and "MISMATCH" not in p.stdout,
              "matching dir output %r" % (p.stdout,))
-        need("match: both upload files are byte-identical" in p.stdout,
+        need("match: both publish files are byte-identical" in p.stdout,
              "matching dir summary line")
         print("verify_upload.py --remote on byte-identical copies: exit 0, both ok")
 
@@ -124,7 +126,7 @@ def main():
         need("MISMATCH README.md" in p.stdout, "mismatch line %r" % (p.stdout,))
         print(p.stdout.strip().splitlines()[0])
 
-        copy_set(tmp)  # restore README, then drop the seed row
+        copy_set(tmp)
         os.remove(os.path.join(tmp, "data", "seed_row.json"))
         p = run([os.path.join(HERE, "verify_upload.py"), "--remote", tmp])
         need(p.returncode == 2, "missing exit %r" % (p.returncode,))
@@ -135,8 +137,8 @@ def main():
     p = run([os.path.join(HERE, "verify_upload.py"), "--json"])
     need(p.returncode == 0, "listing exit %r" % (p.returncode,))
     listed = json.loads(p.stdout)
-    need(listed["upload_files"] == m["upload_files"],
-         "listing upload files match manifest")
+    need(listed["publish_files"] == m["publish_files"],
+         "listing publish files match manifest")
     need(listed["dataset_repo_id"] == m["dataset_repo_id"], "listing repo id")
     print("verify_upload.py listing: two-file publish set with sha256")
 
