@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "547",
-  "at": "2026-11-24T00:12:47.365Z",
+  "at": "2026-11-25T00:10:34.880Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -52,6 +52,31 @@
       "firstSeen": "2026-11-17T14:35:31.642Z"
     },
     {
+      "id": "wd-547-D3-1b8fdf8:uniswap-v4-upgrade-watch",
+      "check": "D3",
+      "name": "claim_without_pass",
+      "severity": "repair",
+      "subject": "tools/uniswap-v4-upgrade-watch",
+      "detail": "Commit 1b8fdf8 says \"Work note: Published a research note on uniswap-v4-upgrade-watch\", and the run after it is failed.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-547/commit/1b8fdf82b55b7c408fe9679786021de31ac291fc",
+        "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45509303509"
+      ],
+      "firstSeen": "2026-11-25T00:10:34.880Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-24-uniswap-v4-core-reported-release-tracker-rows-2026-11-24.json",
+      "check": "D15",
+      "name": "review_hollow",
+      "severity": "report",
+      "subject": "reviews/2026-11-24-uniswap-v4-core-reported-release-tracker-rows-2026-11-24.json",
+      "detail": "A value review with no self-test, no evidence and no claim proof.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-24-uniswap-v4-core-reported-release-tracker-rows-2026-11-24.json"
+      ],
+      "firstSeen": "2026-11-25T00:10:34.880Z"
+    },
+    {
       "id": "wd-547-D15-reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json",
       "check": "D15",
       "name": "review_hollow",
@@ -60,18 +85,6 @@
       "detail": "A value review with no self-test, no evidence and no claim proof.",
       "evidence": [
         "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json"
-      ],
-      "firstSeen": "2026-11-24T00:12:47.365Z"
-    },
-    {
-      "id": "wd-547-D15-reviews/2026-11-23-uniswap-v4-core-seed-row-unknown-release-check.json",
-      "check": "D15",
-      "name": "review_hollow",
-      "severity": "report",
-      "subject": "reviews/2026-11-23-uniswap-v4-core-seed-row-unknown-release-check.json",
-      "detail": "A value review with no self-test, no evidence and no claim proof.",
-      "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-23-uniswap-v4-core-seed-row-unknown-release-check.json"
       ],
       "firstSeen": "2026-11-24T00:12:47.365Z"
     },
@@ -86,18 +99,6 @@
         "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/ARTIFACTS.md"
       ],
       "firstSeen": "2026-11-17T14:35:31.642Z"
-    },
-    {
-      "id": "wd-547-D22-tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md",
-      "check": "D22",
-      "name": "claimed_file_not_committed",
-      "severity": "repair",
-      "subject": "tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md",
-      "detail": "A step said it built tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md; it is not in the commit.",
-      "evidence": [
-        "step 2026-11-22T13:08Z"
-      ],
-      "firstSeen": "2026-11-23T00:12:00.022Z"
     },
     {
       "id": "wd-547-D22-tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json",
@@ -117,37 +118,31 @@
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "15 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: runner to re-run python3 self_test\".",
+      "detail": "13 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: Run the publish play; HivemindOS will execute publish-self\".",
       "evidence": [
-        "step 2026-11-23T21:50Z",
-        "step 2026-11-23T18:41Z",
-        "step 2026-11-23T15:15Z",
-        "step 2026-11-23T09:11Z"
+        "step 2026-11-24T23:21Z",
+        "step 2026-11-24T20:06Z",
+        "step 2026-11-24T13:43Z",
+        "step 2026-11-24T10:32Z"
       ],
       "firstSeen": "2026-11-17T14:35:31.642Z"
     }
   ],
   "notSeenAgain": [
     {
-      "id": "wd-547-D2-undelivered:publish-dataset",
-      "check": "D2",
-      "subject": "publish-dataset",
+      "id": "wd-547-D15-reviews/2026-11-23-uniswap-v4-core-seed-row-unknown-release-check.json",
+      "check": "D15",
+      "subject": "reviews/2026-11-23-uniswap-v4-core-seed-row-unknown-release-check.json",
+      "firstSeen": "2026-11-24T00:12:47.365Z"
+    },
+    {
+      "id": "wd-547-D22-tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md",
+      "check": "D22",
+      "subject": "tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md",
       "firstSeen": "2026-11-23T00:12:00.022Z"
-    },
-    {
-      "id": "wd-547-D15-reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources.json",
-      "check": "D15",
-      "subject": "reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources.json",
-      "firstSeen": "2026-11-20T00:14:32.067Z"
-    },
-    {
-      "id": "wd-547-D15-reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources-visibility.json",
-      "check": "D15",
-      "subject": "reviews/2026-11-19-zep-graphiti-stated-facts-v1-public-sources-visibility.json",
-      "firstSeen": "2026-11-21T00:14:36.774Z"
     }
   ],
   "said": "7 found",
-  "requests": 22,
-  "elapsedMs": 2539
+  "requests": 23,
+  "elapsedMs": 2859
 }
