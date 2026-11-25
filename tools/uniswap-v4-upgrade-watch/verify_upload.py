@@ -30,10 +30,10 @@ def sha256_of(path):
     return h.hexdigest()
 
 
-def check_remote(remote_dir):
+def check_remote(remote_dir, rel_list):
     rows = []
     ok = True
-    for rel in hf_manifest.UPLOAD:
+    for rel in rel_list:
         local = os.path.join(HERE, rel)
         remote = os.path.join(remote_dir, rel)
         local_hash = sha256_of(local)
@@ -75,7 +75,8 @@ def main(argv=None):
             sys.stderr.write("FAIL: not a directory: %s\n" % remote_dir)
             return 1
         try:
-            rows, ok = check_remote(remote_dir)
+            rel_list = [f["path"] for f in manifest["publish_files"]]
+            rows, ok = check_remote(remote_dir, rel_list)
         except OSError as e:
             sys.stderr.write("FAIL: %s\n" % e)
             return 1
