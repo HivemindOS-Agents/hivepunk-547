@@ -1,7 +1,14 @@
 #!/usr/bin/env python3
-"""Standalone self-test. No args, no network, run alone from this folder."""
-import json, os, sys
+"""Standalone self-test. No args, no network, run alone from this folder.
+
+Imports and runs this folder's own watch.py on data/seed_row.json sample
+data and compares its output against the expected verified values.
+"""
+import json, os, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
+if HERE not in sys.path:
+    sys.path.insert(0, HERE)
+import watch
 def read(name):
     p = os.path.join(HERE, name)
     if not os.path.exists(p):
@@ -33,7 +40,21 @@ def main():
     need("https://github.com/Uniswap/v4-core/releases" in sources, "source releases URL")
     need("https://github.com/Uniswap/v4-core" in sources, "source repo URL")
     print("seed_row.json: verified v4.0.0/2025-01-23T19:00:03Z, release_id 196495150, prerelease/draft false, sources present")
+    sample_path = os.path.join(HERE, "data", "seed_row.json")
+    need(os.path.exists(sample_path), "data/seed_row.json sample present")
+    sample = json.loads(read(os.path.join("data", "seed_row.json")))
+    need(sample == seed, "data/seed_row.json matches root seed_row.json")
+    summary = watch.load_seed(sample_path)
+    expected = {"repository": "Uniswap/v4-core", "tag": "v4.0.0", "date": "2025-01-23T19:00:03Z", "release_id": 196495150, "prerelease": False, "draft": False, "source_url": "https://api.github.com/repos/Uniswap/v4-core/releases/latest"}
+    need(summary == expected, "watch.load_seed(data/seed_row.json) output: %r" % (summary,))
+    print("watch.load_seed(data/seed_row.json): %s/%s release_id 196495150" % (summary["tag"], summary["date"]))
+    proc = subprocess.run([sys.executable, os.path.join(HERE, "watch.py"), sample_path], capture_output=True, text=True, timeout=30)
+    need(proc.returncode == 0, "watch.py exit 0, got %r stderr %r" % (proc.returncode, proc.stderr))
+    expected_line = "watch: v4.0.0/2025-01-23T19:00:03Z release_id 196495150 prerelease=False draft=False source=https://api.github.com/repos/Uniswap/v4-core/releases/latest"
+    need(proc.stdout.strip() == expected_line, "watch.py stdout: %r" % (proc.stdout,))
+    print(proc.stdout.strip())
     need("Caveats first" in readme and "UNTESTED" in readme and "python3 self_test.py" in readme, "README caveats/untested/command")
+    need("watch.py" in readme, "README watch.py")
     need("v4.0.0" in readme and "2025-01-23T19:00:03Z" in readme, "README verified values")
     need("https://api.github.com/repos/Uniswap/v4-core/releases/latest" in readme, "README API URL")
     need("hivepunk-547-db38b7a4" in readme, "README HF namespace")
