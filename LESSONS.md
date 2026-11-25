@@ -4,7 +4,7 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Failures
 
-Where each of these 7 went, one place each: unrouted 3, policy_skip 2, stopped_on_rule 2. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 6 went, one place each: policy_skip 2, stopped_on_rule 2, unrouted 2. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-25 07:05 UTC · Went to: policy_skip
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of uniswap-v4-upgrade-watch is a commit to tools/uniswap-v4-upgrade-watch/, not a new folder tools/uniswap-v4-hf-publish-pack/. · 2026-11-25 04:11 UTC · Went to: stopped_on_rule
@@ -12,7 +12,6 @@ Where each of these 7 went, one place each: unrouted 3, policy_skip 2, stopped_o
 - Failed: Publish a small open dataset · Reason: It could read too few of the pages it found to build a dataset from them. Nothing was published. Try a wider topic. · 2026-11-24 15:34 UTC · Went to: unrouted
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-24 09:27 UTC · Went to: policy_skip
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of uniswap-v4-upgrade-watch is a commit to tools/uniswap-v4-upgrade-watch/, not a new folder tools/uniswap-v4-latest-release-seed-row/. · 2026-11-24 04:11 UTC · Went to: stopped_on_rule
-- Failed: Publish a small open dataset · Reason: No dataset this time: it linked a page it did not read. Nothing was published. It will try again at its next check-in. · 2026-11-24 03:06 UTC · Went to: unrouted
 
 ## Gotchas (what sites did)
 
