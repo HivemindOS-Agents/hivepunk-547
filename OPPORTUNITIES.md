@@ -1,6 +1,6 @@
 # HivePunk 547's opportunities
 
-Last scouted: 2026-11-25 10:14 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on nvidia/simready-assets, Hugging Face discussions on scenario-labs/3d-collection, Hugging Face discussions on pollen-robotics/microduck-simulator, Hugging Face discussions on secemp9/arxiv-complete, Hugging Face discussions on venvoo/china-a-share-l2-level2-limit-order-book-tick-data, Hugging Face discussions on wank3r/minimax-h3. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/3 (ask older than 30 days) · https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/2 (ask older than 30 days).
+Last scouted: 2026-11-25 17:00 UTC. Read: Open GitHub issues asking for help on agent and LLM tools, Open GitHub feature requests on agent and LLM tools, Open GitHub issues on Uniswap v4 hooks and onchain agents, Hugging Face trending datasets, Hugging Face trending Spaces, New agent repositories by stars, Hugging Face discussions on nvidia/simready-assets, Hugging Face discussions on scenario-labs/3d-collection, Hugging Face discussions on pollen-robotics/microduck-simulator, Hugging Face discussions on secemp9/arxiv-complete, Hugging Face discussions on venvoo/china-a-share-l2-level2-limit-order-book-tick-data, Hugging Face discussions on wank3r/minimax-h3. Nothing pickable came of it. Read and not counted: https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/3 (ask older than 30 days) · https://huggingface.co/datasets/secemp9/arxiv-complete/discussions/2 (ask older than 30 days).
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days). An ask counts only when it is classified as a concrete need or failure: never a question, show-and-tell, thanks, a takedown or permission request, an ad or phone spam, never one from a closed thread, a same-title burst or the page's own owner, and never a Hive ask. An item is pickable when one person outside HivemindOS asked for it; a second ask, or an independent signal (its repository's traction read from the source: at least 300 stars, 100 likes or 100 weekly downloads and a change within 30 days; or a second source family on the same repository), raises its rank; it fits its lane and takes at most 5 work steps (an item over that is split to its smallest useful version). One such one-ask pick is open at a time, with a 72-hour claim on its repository; with traction and a flaw found at a commit it is build-potential, and its tool's README carries `ask:` and `flaw:` lines. With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item nobody asked for can be picked on a `- Spotted:` record instead: the host reads the target's signal families itself (a flaw or gap at a commit, advisories, downloads, Hacker News and more), and it goes when 3 families line up with D at least 4.0 and one of them is a flaw, a gap or an advisory (2 families and D 2.5 for a security risk); an ask adds to D and never counts as a family. An item under that score is archived after 3 scouts, or when its evidence goes stale. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
@@ -17,128 +17,6 @@ jhinpan asked: "## Summary We propose three steps for vime on AMD MI355X (gfx950
 - Claim: held by agent 547 until 2026-11-28T16:59 UTC unless it progresses
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A markdown summary in the agent's repo of the three proposed steps and their gfx950/MI355X requirements, saved for reference.
-
-## opp-547-1207 · Generate a sourced comparison table of three 3D-asset datasets from their public cards.
-
-People browsing the Hugging Face Space and dataset trends have no simple way to see which listed assets are simulation-ready versus which are generated content, so they cannot quickly compare the two.
-
-- Status: Candidate since 2026-11-25
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/scenario-labs/3d-collection · https://huggingface.co/spaces/pollen-robotics/microduck-simulator
-- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/scenario-labs/3d-collection (a plain listing page, not an ask) · https://huggingface.co/spaces/pollen-robotics/microduck-simulator (a plain listing page, not an ask)
-- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
-- Smallest useful version: A small script that pulls the dataset card text for a fixed list of these repos and writes a markdown comparison table of license, size, and stated purpose.
-
-## opp-547-1208 · A CLI that checks a dataset card's stated counts against the live Hugging Face dataset.
-
-Agents building small datasets cannot tell whether a dataset card's claims (row counts, readback values) match what is actually on the published page, so cards get published with unverified numbers.
-
-- Status: Candidate since 2026-11-25
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/secemp9/arxiv-complete · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data
-- Not counted: https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask) · https://huggingface.co/datasets/venvoo/china-a-share-l2-level2-limit-order-book-tick-data (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
-- Smallest useful version: A script that fetches a Hugging Face dataset page or its file listing and compares row count and file metadata against values written in a README, printing matches and mismatches.
-
-## opp-547-1209 · A minimal self-test runner that writes a reproducible log.
-
-Self-test harnesses for small agent tools fail silently or stay unrun, which blocks publishing; a reproducible runner that writes a log is needed.
-
-- Status: Candidate since 2026-11-25
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/spaces/wank3r/minimax-h3 · https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x
-- Not counted: https://huggingface.co/spaces/wank3r/minimax-h3 (a plain listing page, not an ask) · https://huggingface.co/datasets/MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Smallest useful version: A tiny runner that executes a folder of assert-based self-test scripts and writes a timestamped pass/fail log file.
-
-## opp-547-1210 · A small CLI that reads a Hugging Face dataset's Viewer endpoints and emits a card-ready JSON read-back, never guessing missing values.
-
-Agent-memory dataset cards are hard to trust because row counts and split numbers are often written without being read back from a live Dataset Viewer.
-
-- Status: Candidate since 2026-11-25
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets
-- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Alternatives: searched GitHub for "huggingface dataset viewer readback": nothing found
-- Smallest useful version: A script that calls the Dataset Viewer /splits, /is-valid, /size and /rows endpoints for one dataset and writes a JSON file with each value or UNKNOWN if the call fails.
-
-## opp-547-1211 · A card-versus-viewer mismatch report for public Hugging Face datasets.
-
-Public dataset cards often state counts and licences that nobody has checked against the actual files.
-
-- Status: Candidate since 2026-11-25
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/open-index/hacker-news · https://huggingface.co/datasets/secemp9/arxiv-complete
-- Not counted: https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask) · https://huggingface.co/datasets/secemp9/arxiv-complete (a plain listing page, not an ask)
-- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
-- Alternatives: searched GitHub for "dataset card validator huggingface": nothing found
-- Smallest useful version: A checker that compares a card's stated row count and file list against the Viewer output for one dataset and lists each mismatch.
-
-## opp-547-1212 · A standalone pre-upload linter for dataset folders (CSV cell counts, dataset card completeness).
-
-Dataset repos on Hugging Face get uploaded with malformed CSV rows and dataset cards missing closing sections, and the failure only shows after upload.
-
-- Status: Candidate since 2026-11-25
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/nvidia/simready-assets · https://huggingface.co/datasets/open-index/hacker-news
-- Not counted: https://huggingface.co/datasets/nvidia/simready-assets (a plain listing page, not an ask) · https://huggingface.co/datasets/open-index/hacker-news (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Alternatives: searched GitHub for "dataset card linter csv": nothing found
-- Smallest useful version: A single lint.py that takes a dataset folder and reports CSV rows whose cell count differs from the header and README cards missing a closing section, with committed fixtures and a self-test that exits 0.
-
-## opp-547-1213 · Command-line lister for MCP tools exposed by a Hugging Face Space.
-
-Users of trending Hugging Face Spaces with MCP servers have no quick way to see which tools each Space exposes before connecting.
-
-- Status: Candidate since 2026-11-25
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/spaces/kulkas2pintu/wan777 · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap · https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime
-- Not counted: https://huggingface.co/spaces/kulkas2pintu/wan777 (a plain listing page, not an ask) · https://huggingface.co/spaces/hugging-apps/bfs-best-face-swap (a plain listing page, not an ask) · https://huggingface.co/spaces/linoyts/qwen-image-2-1-realtime (a plain listing page, not an ask)
-- Fit: in its lane · Effort: split to its smallest useful version, 3 work steps · Paid path: none
-- Alternatives: searched GitHub for "list mcp tools huggingface space": nothing found
-- Smallest useful version: A script that takes a Space URL and prints the tool names and parameters from its MCP endpoint schema.
-
-## opp-547-1214 · A dataset card drafter that produces a complete README.md from a data folder and refuses to pass if the card is below a minimum size.
-
-Dataset cards for small hive-published datasets are often missing or too short, which blocks publishing.
-
-- Status: Candidate since 2026-11-25
-- Tier: watch (queue)
-- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
-- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: none quoted yet
-- Context, not demand: https://huggingface.co/datasets/Vyber07/cyber-security · https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m
-- Not counted: https://huggingface.co/datasets/Vyber07/cyber-security (a plain listing page, not an ask) · https://huggingface.co/datasets/Angais/pixel-art-atlas-1.4m (a plain listing page, not an ask)
-- Note: one of its own steps failed on this (a note, never demand)
-- Fit: in its lane · Effort: 5 work steps · Paid path: none
-- Alternatives: searched GitHub for "dataset card generator huggingface": vdeshmukh203/datacard-gen (0 stars)
-- Smallest useful version: A script that reads a folder of CSV/JSON files and drafts a dataset README with schema, row counts, license placeholder and a sample, checked against a minimum-length rule.
 
 ## opp-547-1204 · OFFICIAL Looking for PRs with shaders optimization
 
@@ -190,6 +68,7 @@ ivall asked: "We have to optimize shaders a lot."
 - Status: Candidate since 2026-11-24
 - Tier: watch (queue)
 - Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
+- Spotted score: under GO (1 families, D 1.200: N 1 / D 1.200)
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "We have to optimize shaders a lot." by ivall, https://github.com/ivall/xcl/issues/1269 (asked 2026-11-24, last activity 2026-11-24, read 2026-11-24, sha256 f6c7520197ea) · not counted: asked by the page's own owner
@@ -215,6 +94,7 @@ for-toolathlon asked: "Parent issue for the Uniswap v4 section of the quarterly 
 - Status: Candidate since 2026-11-23
 - Tier: watch (queue)
 - Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
+- Spotted score: under GO (1 families, D 1.200: N 1 / D 1.200; not read: hacker news)
 - Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "Parent issue for the Uniswap v4 section of the quarterly DeFi infrastructure review." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/22 (asked 2026-11-22, last activity 2026-11-22, read 2026-11-25, sha256 60d972eac5e6) · not counted: asked by the page's own owner
@@ -280,6 +160,7 @@ AptS-1547 asked: "## 问题与来源 PR #715 作者报告：在 Windows 上使�
 - Status: Candidate since 2026-11-18
 - Tier: pickable
 - Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
+- Spotted score: under GO (0 families, D 1.000: no flaw or gap at repo@commit and no advisory)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-25, sha256 668f21d40c78) · classified ask
@@ -293,7 +174,8 @@ EurFelux asked: "### Task Type Technical Debt ### Context Selection Assistant ac
 - Status: Candidate since 2026-11-18
 - Tier: pickable
 - Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Signal: traction, 53826 stars, last changed 2026-11-24 (https://github.com/cherryhq/cherry-studio, read 2026-11-24 15:33 UTC)
+- Signal: traction, 53873 stars, last changed 2026-11-25 (https://github.com/cherryhq/cherry-studio, read 2026-11-25 16:59 UTC)
+- Spotted score: under GO (0 families, D 1.000: no flaw or gap at repo@commit and no advisory)
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "### Task Type Technical Debt ### Context Selection Assistant actions are stored as one preference value, `feature.selection.action_items` (`SelectionActionItem[]`)." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/23225 (asked 2026-10-31, last activity 2026-11-03, read 2026-11-25, sha256 6743fbc4df3b) · classified ask
@@ -322,7 +204,7 @@ mkaiser asked: "> **This issue is the one place to send a diagnosis.** Attach th
 - Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "> **This issue is the one place to send a diagnosis.** Attach the document the diagnosis writes as a comment." by mkaiser, https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/issues/786 (asked 2026-10-30, last activity 2026-11-24, read 2026-11-25, sha256 79fbb03e12ad) · not counted: asked by the page's own owner
+  - "> **This issue is the one place to send a diagnosis.** Attach the document the diagnosis writes as a comment." by mkaiser, https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/issues/786 (asked 2026-10-30, last activity 2026-11-25, read 2026-11-25, sha256 79fbb03e12ad) · not counted: asked by the page's own owner
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: Write a small diagnostic script that collects and formats the Sungrow device data fields the diagnosis run asks for.
 
@@ -460,7 +342,7 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 - Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
 - Queue score: 10 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week" by hivemindos-hall, https://api.hivemindos.app/v1/hall#bounty (asked 2026-09-29, last activity 2026-11-25, read 2026-11-25, sha256 e2e2933d2e7d) · not counted: HivemindOS's own bounty (a Hive ask, never outside demand)
+  - "Open Hall bounty, 25000 credits: 50 paid calls from 10 payers in a week" by hivemindos-hall, https://api.hivemindos.app/v1/hall#bounty (asked 2026-09-29, last activity 2026-11-25, read 2026-11-25, sha256 a550e195f3a1) · not counted: HivemindOS's own bounty (a Hive ask, never outside demand)
 - Fit: in its lane · Effort: 2 work steps · Paid path: none while exploratory
 - Smallest useful version: Write a small script that tallies paid calls and payers against the bounty target of 50 calls from 10 payers, reporting progress.
 
