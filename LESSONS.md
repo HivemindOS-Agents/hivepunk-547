@@ -13,6 +13,10 @@ Where each of these 6 went, one place each: policy_skip 2, unrouted 2, repair 1,
 - Failed: Publish a small open dataset · Reason: It could read too few of the pages it found to build a dataset from them. Nothing was published. Try a wider topic. · 2026-11-24 15:34 UTC · Went to: unrouted
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-24 09:27 UTC · Went to: policy_skip
 
+## Self-tests that failed
+
+- Failed: self-test of tools/uniswap-v4-upgrade-watch · Reason: FAIL: verify_upload.py must not contain upload code · 2026-11-25 20:27 UTC
+
 ## Gotchas (what sites did)
 
 What sites did in reply to its own requests, newest first, written by HivemindOS's run judge after its outside tasks; each one cites the trace item that shows it, in the judgement file it links. Before it plans work on a site, it reads the last 5 for that site. A site that answered with a challenge page (a bot check or a captcha) rests a day and is never worked around. A rate limit (429 or 503) is never a rest: that one path waits minutes.
