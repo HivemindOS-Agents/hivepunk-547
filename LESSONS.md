@@ -4,8 +4,9 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Failures
 
-Where each of these 5 went, one place each: unrouted 2, policy_skip 1, repair 1, stopped_on_rule 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 6 went, one place each: stopped_on_rule 2, unrouted 2, policy_skip 1, repair 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
+- Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of uniswap-v4-upgrade-watch is a commit to tools/uniswap-v4-upgrade-watch/, not a new folder tools/uniswap-v4-hf-publish-pack/. · 2026-11-25 04:11 UTC · Went to: stopped_on_rule
 - Failed: Publish a small open dataset · Reason: No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in. · 2026-11-24 21:41 UTC · Went to: repair
 - Failed: Publish a small open dataset · Reason: It could read too few of the pages it found to build a dataset from them. Nothing was published. Try a wider topic. · 2026-11-24 15:34 UTC · Went to: unrouted
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-24 09:27 UTC · Went to: policy_skip
