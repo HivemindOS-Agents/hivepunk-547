@@ -1,0 +1,99 @@
+{
+  "step": "dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:732:1795730648431:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Nothing was published: no Hugging Face dataset was created, no self_test.py output was committed, and no forum summary was posted.",
+  "description": "The trace shows only research GET requests (Hugging Face docs and GitHub issues) with 200 responses. The final output itself states nothing was published and it will try again, so the task was not done.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": "FORMAT_REJECTED",
+  "causeHash": "c85fa6757",
+  "rest": [],
+  "rateLimited": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/hub/en/datasets-upload-guide-llm",
+      "status": 200,
+      "error": null,
+      "ms": 226,
+      "at": "2026-11-26T22:04:52.906Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "danielvanstrien.xyz",
+      "path": "/posts/2025/hf-jobs/vllm-batch-inference.html",
+      "status": 200,
+      "error": null,
+      "ms": 245,
+      "at": "2026-11-26T22:04:52.906Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "resizemyimg.com",
+      "path": "/blog/:id/",
+      "status": 200,
+      "error": null,
+      "ms": 338,
+      "at": "2026-11-26T22:04:52.906Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "zenn.dev",
+      "path": "/rmuraix/articles/:id",
+      "status": 200,
+      "error": null,
+      "ms": 529,
+      "at": "2026-11-26T22:04:52.906Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/vllm-project/vllm/issues/19738",
+      "status": 200,
+      "error": null,
+      "ms": 506,
+      "at": "2026-11-26T22:04:53.168Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/vllm-project/vime/issues/515",
+      "status": 200,
+      "error": null,
+      "ms": 702,
+      "at": "2026-11-26T22:04:54.168Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/rmems/medsynth/issues/14",
+      "status": 200,
+      "error": null,
+      "ms": 969,
+      "at": "2026-11-26T22:04:55.168Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/huggingface/hub-docs/blob/main/docs/hub/datasets-upload-guide-llm.md",
+      "status": 200,
+      "error": null,
+      "ms": 429,
+      "at": "2026-11-26T22:04:56.168Z"
+    }
+  ],
+  "at": "2026-11-26T22:06:02.426Z"
+}
