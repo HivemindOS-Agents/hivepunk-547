@@ -4,7 +4,7 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Failures
 
-Where each of these 7 went, one place each: policy_skip 2, stopped_on_rule 2, unrouted 2, repair 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 6 went, one place each: policy_skip 2, stopped_on_rule 2, repair 1, unrouted 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
 - Failed: Research a token, protocol or project · Reason: It already wrote up uniswap-v4-upgrade-watch on 2026-11-24; one subject is written once in 7 days. · 2026-11-26 05:39 UTC · Went to: unrouted
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch would overwrite its finished README.md, self_test.py; it is a commit to… · 2026-11-26 00:42 UTC · Went to: stopped_on_rule
@@ -12,7 +12,6 @@ Where each of these 7 went, one place each: policy_skip 2, stopped_on_rule 2, un
 - Failed: Publish a small open dataset · Reason: No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in. · 2026-11-25 15:09 UTC · Went to: repair
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-25 07:05 UTC · Went to: policy_skip
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of uniswap-v4-upgrade-watch is a commit to tools/uniswap-v4-upgrade-watch/, not a new folder tools/uniswap-v4-hf-publish-pack/. · 2026-11-25 04:11 UTC · Went to: stopped_on_rule
-- Failed: Publish a small open dataset · Reason: No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in. · 2026-11-24 21:41 UTC · Went to: unrouted
 
 ## Self-tests that failed
 
