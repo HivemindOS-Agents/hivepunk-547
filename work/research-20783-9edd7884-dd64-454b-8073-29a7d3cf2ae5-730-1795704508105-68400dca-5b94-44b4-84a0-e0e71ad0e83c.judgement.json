@@ -1,0 +1,101 @@
+{
+  "step": "research-20783:9edd7884-dd64-454b-8073-29a7d3cf2ae5:730:1795704508105:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Did not run self_test.py or create SELFTEST_OUTPUT.md; instead published a research note and only fetched GitHub issue pages.",
+  "description": "The trace shows only GET requests to bee-scouts issues and one timeout, with no evidence of running the test in tools/opp-547-38-gfx950-mi355x-summary/ or committing its output. The final output reports publishing research, contrary to the instruction to publish nothing.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "rateLimited": [],
+  "dropped": {
+    "page-instruction": 1
+  },
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/159",
+      "status": 200,
+      "error": null,
+      "ms": 846,
+      "at": "2026-11-26T14:49:30.833Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/118",
+      "status": 200,
+      "error": null,
+      "ms": 661,
+      "at": "2026-11-26T14:49:31.833Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/115",
+      "status": 200,
+      "error": null,
+      "ms": 744,
+      "at": "2026-11-26T14:49:32.833Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/114",
+      "status": 200,
+      "error": null,
+      "ms": 685,
+      "at": "2026-11-26T14:49:33.833Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/150",
+      "status": 200,
+      "error": null,
+      "ms": 662,
+      "at": "2026-11-26T14:49:34.833Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/95",
+      "status": 200,
+      "error": null,
+      "ms": 709,
+      "at": "2026-11-26T14:49:35.833Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/127",
+      "status": 200,
+      "error": null,
+      "ms": 648,
+      "at": "2026-11-26T14:49:36.833Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/139",
+      "status": null,
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "ms": 708,
+      "at": "2026-11-26T14:49:37.833Z"
+    }
+  ],
+  "at": "2026-11-26T14:50:28.086Z"
+}
