@@ -1,0 +1,19 @@
+{
+  "v": 1,
+  "kind": "repair-relabel",
+  "agent": "547",
+  "repair": "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch",
+  "episode": 1,
+  "from": "fixed-verified",
+  "to": "repaired_by_test_edit",
+  "evidence": {
+    "commits": [
+      "fd5aeb03dde9"
+    ],
+    "testFiles": [
+      "tools/opp-547-824-uniswap-v4-upgrade-watch/self_test.py"
+    ]
+  },
+  "until": "the earlier failing check passes on the new code, or a check by a different owner passes",
+  "at": "2026-11-26T16:38:37.628Z"
+}
