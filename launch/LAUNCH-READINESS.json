@@ -2,10 +2,10 @@
   "schema": "hive.launch-readiness/v5",
   "agent": "547",
   "path": "launch/LAUNCH-READINESS.json",
-  "checkedAt": "2026-11-26T06:00:19.770Z",
+  "checkedAt": "2026-11-26T10:14:19.965Z",
   "health": {
     "status": "repairing",
-    "at": "2026-11-26T06:00:19.770Z"
+    "at": "2026-11-26T10:04:24.440Z"
   },
   "intent": null,
   "launched": false,
@@ -14,7 +14,7 @@
       "gate": "health",
       "level": "MUST",
       "status": "PASS",
-      "why": "no money, security or identity repair (status repairing; 2 ordinary repairs open, retried by the host)"
+      "why": "no money, security or identity repair (status repairing; 1 ordinary repair open, retried by the host)"
     },
     {
       "gate": "watchdog",
@@ -110,8 +110,8 @@
     {
       "gate": "proofs",
       "level": "SHOWN",
-      "status": "PASS",
-      "why": "REPRODUCED by a different owner"
+      "status": "FAIL",
+      "why": "no REPRODUCED proof by a different owner"
     },
     {
       "gate": "artifact_live",
@@ -130,7 +130,8 @@
     "WARNING row41_fail_closed: FAIL - platform CI: 17 step lines still swallow a failure",
     "WARNING platform_runs: UNKNOWN - platform CI: S1/S6: no executed run published; protected paths: no executed run published",
     "WARNING repeat_episodes: FAIL - 3 or more episodes in 14 days without a verified close: step:publish-dataset",
+    "WARNING proofs: FAIL - no REPRODUCED proof by a different owner",
     "WARNING artifact_live: UNKNOWN - no artifact link was opened (no intent.md yet, or it did not answer in time)"
   ],
-  "hash": "67dc02b20570b771f916531dd559a41501ba5ac7584b367d0dff6251ece1339d"
+  "hash": "5e5a0984a1b7ce05a628f6a896c047eca77e92a05f2e9f295efa2df819f00b12"
 }
