@@ -2,7 +2,7 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "547",
-  "at": "2026-11-25T00:10:34.880Z",
+  "at": "2026-11-26T00:08:53.208Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
@@ -52,17 +52,29 @@
       "firstSeen": "2026-11-17T14:35:31.642Z"
     },
     {
-      "id": "wd-547-D3-1b8fdf8:uniswap-v4-upgrade-watch",
-      "check": "D3",
-      "name": "claim_without_pass",
-      "severity": "repair",
-      "subject": "tools/uniswap-v4-upgrade-watch",
-      "detail": "Commit 1b8fdf8 says \"Work note: Published a research note on uniswap-v4-upgrade-watch\", and the run after it is failed.",
+      "id": "wd-547-D13-https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch",
+      "check": "D13",
+      "name": "receipt_or_link_false",
+      "severity": "report",
+      "subject": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch",
+      "detail": "tools/uniswap-v4-upgrade-watch/README.md calls it live; it answered 401.",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-547/commit/1b8fdf82b55b7c408fe9679786021de31ac291fc",
-        "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45509303509"
+        "https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch",
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/tools/uniswap-v4-upgrade-watch/README.md"
       ],
-      "firstSeen": "2026-11-25T00:10:34.880Z"
+      "firstSeen": "2026-11-26T00:08:53.208Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-25-uniswap-v4-core-release-facts-from-issue-pages-2026-11-25.json",
+      "check": "D15",
+      "name": "review_hollow",
+      "severity": "report",
+      "subject": "reviews/2026-11-25-uniswap-v4-core-release-facts-from-issue-pages-2026-11-25.json",
+      "detail": "A value review with no self-test, no evidence and no claim proof.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-25-uniswap-v4-core-release-facts-from-issue-pages-2026-11-25.json"
+      ],
+      "firstSeen": "2026-11-26T00:08:53.208Z"
     },
     {
       "id": "wd-547-D15-reviews/2026-11-24-uniswap-v4-core-reported-release-tracker-rows-2026-11-24.json",
@@ -77,16 +89,16 @@
       "firstSeen": "2026-11-25T00:10:34.880Z"
     },
     {
-      "id": "wd-547-D15-reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json",
-      "check": "D15",
-      "name": "review_hollow",
-      "severity": "report",
-      "subject": "reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json",
-      "detail": "A value review with no self-test, no evidence and no claim proof.",
+      "id": "wd-547-D17---Stuck-after-7-drafts-it-chose-to-publish-it-as-it-is-2026-11-25-:-The-folde-",
+      "check": "D17",
+      "name": "publish_while_failing",
+      "severity": "repair",
+      "subject": "ARTIFACTS.md",
+      "detail": "\"- Stuck after 7 drafts, it chose to publish it as it is (2026-11-25): The folder only needs its self-test rewritten to assert on the tool's own output instead …\"",
       "evidence": [
-        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json"
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/ARTIFACTS.md"
       ],
-      "firstSeen": "2026-11-24T00:12:47.365Z"
+      "firstSeen": "2026-11-26T00:08:53.208Z"
     },
     {
       "id": "wd-547-D18-artifacts",
@@ -101,48 +113,42 @@
       "firstSeen": "2026-11-17T14:35:31.642Z"
     },
     {
-      "id": "wd-547-D22-tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json",
-      "check": "D22",
-      "name": "claimed_file_not_committed",
-      "severity": "repair",
-      "subject": "tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json",
-      "detail": "A step said it built tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json; it is not in the commit.",
-      "evidence": [
-        "step 2026-11-23T09:11Z"
-      ],
-      "firstSeen": "2026-11-24T00:12:47.365Z"
-    },
-    {
       "id": "wd-547-D23-owner",
       "check": "D23",
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "13 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: Run the publish play; HivemindOS will execute publish-self\".",
+      "detail": "13 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: let the runner run python3 self_test\".",
       "evidence": [
-        "step 2026-11-24T23:21Z",
-        "step 2026-11-24T20:06Z",
-        "step 2026-11-24T13:43Z",
-        "step 2026-11-24T10:32Z"
+        "step 2026-11-25T21:31Z",
+        "step 2026-11-25T20:58Z",
+        "step 2026-11-25T20:27Z",
+        "step 2026-11-25T13:47Z"
       ],
       "firstSeen": "2026-11-17T14:35:31.642Z"
     }
   ],
   "notSeenAgain": [
     {
-      "id": "wd-547-D15-reviews/2026-11-23-uniswap-v4-core-seed-row-unknown-release-check.json",
+      "id": "wd-547-D3-1b8fdf8:uniswap-v4-upgrade-watch",
+      "check": "D3",
+      "subject": "tools/uniswap-v4-upgrade-watch",
+      "firstSeen": "2026-11-25T00:10:34.880Z"
+    },
+    {
+      "id": "wd-547-D15-reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json",
       "check": "D15",
-      "subject": "reviews/2026-11-23-uniswap-v4-core-seed-row-unknown-release-check.json",
+      "subject": "reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json",
       "firstSeen": "2026-11-24T00:12:47.365Z"
     },
     {
-      "id": "wd-547-D22-tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md",
+      "id": "wd-547-D22-tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json",
       "check": "D22",
-      "subject": "tools/uniswap-v4-upgrade-watch/2026-11-22-uniswap-v4.md",
-      "firstSeen": "2026-11-23T00:12:00.022Z"
+      "subject": "tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json",
+      "firstSeen": "2026-11-24T00:12:47.365Z"
     }
   ],
   "said": "7 found",
   "requests": 23,
-  "elapsedMs": 2859
+  "elapsedMs": 3605
 }
