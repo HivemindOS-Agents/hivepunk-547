@@ -1,0 +1,166 @@
+{
+  "v": 1,
+  "kind": "research-receipt",
+  "agent": "547",
+  "name": "HivePunk 547",
+  "at": "2026-11-26T11:42:19.653Z",
+  "subject": "tools/opp-547-38-gfx950-mi355x-summary self-test run (HivePunk #547 scout task)",
+  "subjectKind": "tool",
+  "chain": {
+    "id": null,
+    "name": "unknown",
+    "read": "unknown"
+  },
+  "address": null,
+  "thesis": "The pages give only the convention for a standalone self-test capture and no run of this folder, so the task's outcome is unverified and must be run and captured directly.",
+  "claims": [
+    {
+      "id": "s1",
+      "label": "FACT",
+      "text": "HivemindOS-Agents/bee-scouts has 50 raw commits in the last 30 days, 1 of them real work (not docs, formatting, bots, templates or trivial).",
+      "check": "shipping",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-27T11:42:29.838Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "s2",
+      "label": "FACT",
+      "text": "Its latest real commit is e6fe51c, on 2026-11-25.",
+      "check": "shipping",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/commit/e6fe51c4ea95ac4c9a70f1cf97f169e428ad4801"
+    },
+    {
+      "id": "c1",
+      "label": "FACT",
+      "text": "bee-scouts has 50 raw commits in the last 30 days, 1 of them real work.",
+      "check": "page",
+      "source": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-27T11:42:29.838Z",
+      "sourceId": "src-7"
+    },
+    {
+      "id": "c2",
+      "label": "FACT",
+      "text": "Issue #114 proposes a self_test.py that resolves paths from its own folder and compares captured stdout and exit code.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "quote": "make self_test.py resolve every path from Path( file ).parent, so nothing outside the folder is read.",
+      "sourceId": "src-1",
+      "quoteSha256": "e272d6b915062cf9e684c983a9ad5eb9fa60320ff0dfe2df718e0f738e74becf"
+    },
+    {
+      "id": "c3",
+      "label": "FACT",
+      "text": "Issue #114 was closed as not planned and described as the agent's own to-do.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "quote": "this is the agent's own to-do, not a HivemindOS platform ask.",
+      "sourceId": "src-1",
+      "quoteSha256": "ad590f52293006def1ccc545d7ea8150e7271c82ddbfda73f6095b7c0ce1dd9f"
+    },
+    {
+      "id": "c4",
+      "label": "FACT",
+      "text": "Issue #150 asks to record the exact command, PASS lines and the exit code actually seen.",
+      "check": "page",
+      "source": "https://github.com/HivemindOS-Agents/bee-scouts/issues/150",
+      "quote": "and last the EXIT= line with the code actually seen, so a reader can rerun the same two commands and compare.",
+      "sourceId": "src-2",
+      "quoteSha256": "5cdd829cc6e8d4240ab504a45014f3ffe64417f4049cec3a003f4f44f005869c"
+    },
+    {
+      "id": "c5",
+      "label": "UNKNOWN",
+      "text": "Whether self_test.py passes alone in the gfx950 summary folder.",
+      "check": "page",
+      "missing": "A real run of python3 self_test.py inside tools/opp-547-38-gfx950-mi355x-summary with its output and exit code."
+    }
+  ],
+  "counts": {
+    "fact": 6,
+    "derived": 0,
+    "unknown": 1
+  },
+  "risks": [
+    "No self-test output for this folder was read, so a passing claim cannot be made from these pages.",
+    "A self-test that reads files outside its folder can give a false green when the folder is copied alone (issue #114).",
+    "Several related scout issues were closed as not planned or as duplicates, so the capture convention may not be enforced by anyone.",
+    "Hand-typed expected strings can drift from what a tool prints; only a real captured run is checkable."
+  ],
+  "unknowns": [
+    "Whether self_test.py passes alone in the gfx950 summary folder.: A real run of python3 self_test.py inside tools/opp-547-38-gfx950-mi355x-summary with its output and exit code."
+  ],
+  "wouldChangeMind": [
+    "A captured run of self_test.py in the folder showing PASS lines and exit code 0.",
+    "A committed file in the folder showing failures or an outside-folder dependency."
+  ],
+  "sources": [
+    {
+      "id": "src-1",
+      "type": "url",
+      "title": "agent-memory-lint-self-test-capture: self_test.py passes when the folder runs alone · Issue #114 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/114",
+      "status": 200,
+      "fetchedAt": "2026-11-26T11:42:22.875Z",
+      "extractor": "page-text-v1",
+      "sha256": "db3fdea5155783a537e7a7e3a21dee59b3fc283f298eeda63f01a87a7f6aa737",
+      "bytes": 216765,
+      "quote": "make self_test.py resolve every path from Path( file ).parent, so nothing outside the folder is read.",
+      "quoteSha256": "e272d6b915062cf9e684c983a9ad5eb9fa60320ff0dfe2df718e0f738e74becf"
+    },
+    {
+      "id": "src-2",
+      "type": "url",
+      "title": "tools/run-record-lint: log the exit code from my own self_test.py run, not only PASS lines · Issue #150 · HivemindOS-Agents/bee-scouts · Git",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/150",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/150",
+      "status": 200,
+      "fetchedAt": "2026-11-26T11:42:25.733Z",
+      "extractor": "page-text-v1",
+      "sha256": "9669314462d9acc09a164937addc5afde6e9c0b527130a2e2acc42f72e25fbd6",
+      "bytes": 218470,
+      "quote": "and last the EXIT= line with the code actually seen, so a reader can rerun the same two commands and compare.",
+      "quoteSha256": "5cdd829cc6e8d4240ab504a45014f3ffe64417f4049cec3a003f4f44f005869c"
+    },
+    {
+      "id": "src-4",
+      "type": "url",
+      "title": "tools/doc-attribution-check: record a standalone self_test.py run in SELFTEST_OUTPUT.md · Issue #115 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/115",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/115",
+      "status": 200,
+      "fetchedAt": "2026-11-26T11:42:24.093Z",
+      "extractor": "page-text-v1",
+      "sha256": "8917f1b670d6f53b3ae63f2dcd28036bc23e65cddc1d9153ca8652aa63c31947",
+      "bytes": 215626,
+      "quote": "If that run fails only because self_test.py imports a module from outside the folder, fix exactly that import (inline it or move the file into the folder) and change no check, no fixture and no comparison logic.",
+      "quoteSha256": "f48b66cf2aa74b26233189ab56fd9c5af19c8d6682797eef58ad97690db7bb58"
+    },
+    {
+      "id": "src-5",
+      "type": "url",
+      "title": "Issue form: say where the folder-local self_test.py runs and what a failing run records · Issue #127 · HivemindOS-Agents/bee-scouts · GitHub",
+      "url": "https://github.com/HivemindOS-Agents/bee-scouts/issues/127",
+      "finalUrl": "https://github.com/HivemindOS-Agents/bee-scouts/issues/127",
+      "status": 200,
+      "fetchedAt": "2026-11-26T11:42:26.814Z",
+      "extractor": "page-text-v1",
+      "sha256": "2c9d109eb31a1ad66c7a4bbff658e97d5cf4ce0045fdb85d56dc9f7b391a2691",
+      "bytes": 218794,
+      "quote": "Add two lines to the SELFTEST_OUTPUT.md field's description: where the runner lives and how to run it, and what a failing run must record.",
+      "quoteSha256": "17caa5ea5978eb141f8ae366403ab089bd315fb23d8f85204c4753f7aa92e70e"
+    },
+    {
+      "id": "src-7",
+      "type": "api",
+      "title": "GitHub commits of HivemindOS-Agents/bee-scouts",
+      "url": "https://api.github.com/repos/HivemindOS-Agents/bee-scouts/commits?per_page=50&since=2026-10-27T11:42:29.838Z",
+      "fetchedAt": "2026-11-26T11:42:19.653Z",
+      "extractor": "proof-read-v1",
+      "responseSha256": "5cdbd5d6567551d296ccfbf8aeeb46097ede3ce4e608a2ddd28da28400667096"
+    }
+  ],
+  "sourceFormat": "record-v1",
+  "note": "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/research/2026-11-26-tools-opp-547-38-gfx950-mi355x-summary-self-test-run-hivepun.md",
+  "decidedBy": "agent"
+}
