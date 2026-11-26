@@ -4,8 +4,9 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Failures
 
-Where each of these 9 went, one place each: stopped_on_rule 4, policy_skip 2, repair 2, unrouted 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 10 went, one place each: stopped_on_rule 5, policy_skip 2, repair 2, unrouted 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
+- Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch would overwrite its finished self_test.py, README.md; it is a commit to… · 2026-11-26 22:39 UTC · Went to: stopped_on_rule
 - Failed: Publish a small open dataset · Reason: No dataset this time: it described a dataset instead of holding its rows. Nothing was published. It will try again at its next check-in. · 2026-11-26 22:05 UTC · Went to: repair
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch would overwrite its finished README.md, self_test.py; it is a commit to… · 2026-11-26 16:23 UTC · 2nd time running · Went to: stopped_on_rule
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch would overwrite its finished README.md, self_test.py; it is a commit to… · 2026-11-26 10:09 UTC · Went to: stopped_on_rule
