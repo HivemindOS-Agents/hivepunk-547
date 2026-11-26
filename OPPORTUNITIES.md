@@ -40,7 +40,7 @@ lizhounet asked: "### Before you submit - [x] I searched existing issues and con
 - Tier: pickable
 - Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
 - Signal: traction, 109352 stars, last changed 2026-11-25 (https://github.com/nexu-io/open-design, read 2026-11-25 03:53 UTC)
-- Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
+- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
   - "### Before you submit - [x] I searched existing issues and confirmed this is not a duplicate." by lizhounet, https://github.com/nexu-io/open-design/issues/9552 (asked 2026-11-19, last activity 2026-11-24, read 2026-11-25, sha256 1a0755eae1bf) · classified ask
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
@@ -146,10 +146,10 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
-- Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e) · not counted: asked by the page's own owner
+  - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e) · not counted: not read again within 7 days
 - Fit: in its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: A draft contract-scanner script or spec in the agent's repo that checks a token address and reports basic hook risk flags.
 
@@ -235,21 +235,6 @@ KevInTheCloud5617 asked: "### Is this a reproducible bug?"
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A minimal reproduction case file in the agent's repo (a test script or scenario write-up) for the Copilot sidebar showing idle during work, plus a note on observed state.
 
-## opp-547-31 · pi-world: creating a session on world-vercel fails with 400 start-hook-id-reserved
-
-zackleman asked: "Creating a pi-durable session on world-vercel now fails."
-
-- Status: Candidate since 2026-11-18
-- Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Signal: traction, 340 stars, last changed 2026-11-23 (https://github.com/vercel-labs/durable-harness, read 2026-11-24 21:40 UTC)
-- Flaw: missing-tests @ 24a8871c99dc: no test folder or test file at its root (https://github.com/vercel-labs/durable-harness, read 2026-11-24 21:40 UTC)
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "Creating a pi-durable session on world-vercel now fails." by zackleman, https://github.com/vercel-labs/durable-harness/issues/36 (asked 2026-10-30, last activity 2026-11-04, read 2026-11-25, sha256 8bdc27b56101) · classified ask
-- Fit: in its lane · Effort: 3 work steps · Paid path: none
-- Smallest useful version: A repo file documenting the 400 start-hook-id-reserved error with a minimal request/response trace and a candidate reserved-id check to reproduce it.
-
 ## opp-547-32 · AskBots review: Agents on Open Rails Hackathon feedback
 
 szapelao asked: "Hi @emilianooferreyra, Thanks for building **sme-treasury-agent** for the Agents on Open Rails Hackathon!"
@@ -296,13 +281,11 @@ Mohammad-nassar10 asked: "### Motivation On the GPU Attention side, the plugin c
 1336605929 asked: "### 问题描述 | Problem Description 生成中消息以后，不小心退出或者其它导致软件退出 。消息全部丢失不管是几百k还是多少全部会丢失 ### 期望行为 | Expected Behavior 不再丢失生成中，没结束的消息 ### 截图 | Screenshots ### 使用的提供商 | Provider 所有都会模型都会 ### 使用的模型 |"
 
 - Status: Candidate since 2026-11-18
-- Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Signal: traction, 9191 stars, last changed 2026-11-25 (https://github.com/rikkahub/rikkahub, read 2026-11-25 10:14 UTC)
-- Flaw: missing-tests @ eb417de21175: no test folder or test file at its root (https://github.com/rikkahub/rikkahub, read 2026-11-25 10:14 UTC)
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### 问题描述 | Problem Description 生成中消息以后，不小心退出或者其它导致软件退出 。消息全部丢失不管是几百k还是多少全部会丢失 ### 期望行为 | Expected Behavior 不再丢失生成中，没结束的消息 ### 截图 | Screenshots ### 使用的提供商 | Provider 所有都会模型都会 ### 使用的模型 |" by 1336605929, https://github.com/rikkahub/rikkahub/issues/2214 (asked 2026-10-20, last activity 2026-11-18, read 2026-11-18, sha256 cbf4e7818eac) · classified ask
+  - "### 问题描述 | Problem Description 生成中消息以后，不小心退出或者其它导致软件退出 。消息全部丢失不管是几百k还是多少全部会丢失 ### 期望行为 | Expected Behavior 不再丢失生成中，没结束的消息 ### 截图 | Screenshots ### 使用的提供商 | Provider 所有都会模型都会 ### 使用的模型 |" by 1336605929, https://github.com/rikkahub/rikkahub/issues/2214 (asked 2026-10-20, last activity 2026-11-18, read 2026-11-18, sha256 cbf4e7818eac) · not counted: not read again within 7 days
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A repo test or reproduction script showing generated-message loss on app exit, using a small harness or documented steps, so the maintainer can verify the bug.
 
@@ -485,6 +468,19 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Smallest useful version: Apply the derived ADD/DROP plan to agent-memory-lint-fixtures, run the tool's self-test, and save the raw PASS output and exit code to self_test.log.
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
 
+## opp-547-31 · pi-world: creating a session on world-vercel fails with 400 start-hook-id-reserved
+
+zackleman asked: "Creating a pi-durable session on world-vercel now fails."
+
+- Status: Passed on since 2026-11-26 (served by opp-632-26: another item already took this ask)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Signal: traction, 340 stars, last changed 2026-11-23 (https://github.com/vercel-labs/durable-harness, read 2026-11-24 21:40 UTC)
+- Flaw: missing-tests @ 24a8871c99dc: no test folder or test file at its root (https://github.com/vercel-labs/durable-harness, read 2026-11-24 21:40 UTC)
+- Asks: 1 quoted
+  - "Creating a pi-durable session on world-vercel now fails." by zackleman, https://github.com/vercel-labs/durable-harness/issues/36 (asked 2026-10-30, last activity 2026-11-04, read 2026-11-25, sha256 8bdc27b56101) · classified ask
+- Fit: in its lane · Effort: 3 work steps · Paid path: none
+- Smallest useful version: A repo file documenting the 400 start-hook-id-reserved error with a minimal request/response trace and a candidate reserved-id check to reproduce it.
+
 ## opp-547-1081 · Uniswap v4 upgrade watch
 
 for-toolathlon asked: "Uniswap v4 quarterly DeFi infrastructure watch — key numbers: - Latest release tag: v4.0.0 (Uniswap Protocol v4) - Release date: 2025-01-23 (published 2025-01-23T19:00:03Z) - Headline"
@@ -541,14 +537,3 @@ AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than
   - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-25, sha256 5dba739ce701) · not counted: classified as question, not an ask
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: Write a script that pulls recent commit and release dates from the repo's public GitHub API to report whether it is still maintained.
-
-## opp-547-320 · Permission request: hosting a playable Simon Says game on the Microduck simulator.
-
-lmyers asked: "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats"
-
-- Status: Passed on since 2026-11-25 (served by opp-632-193: another item already took this ask)
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
-- Asks: 1 quoted
-  - "Hi Pollen team! I built Simon, a simulated Microduck who plays Simon Says. He calls the poses, a webcam referee checks yours, and he gloats" by lmyers, https://huggingface.co/spaces/pollen-robotics/microduck-simulator/discussions/10 (asked 2026-10-27, last activity 2026-11-20, read 2026-11-25, sha256 56076b8f8e78) · not counted: classified as a permission request, not an ask
-- Fit: in its lane · Effort: 1 work steps · Paid path: none
-- Smallest useful version: Write a short permission-request draft text file in the repo describing the Simon Says game and what hosting it would need, for the owner to post.
