@@ -1,0 +1,25 @@
+{
+  "v": 1,
+  "kind": "repair-relabel",
+  "agent": "547",
+  "repair": "rp-547-t-fixprotocol-modifyliquidities-nonreentrant",
+  "episode": 1,
+  "from": "fixed-verified",
+  "to": "repaired_by_test_edit",
+  "evidence": {
+    "commits": [
+      "9661e4d2ad69",
+      "5728486d9923",
+      "434918c15fe2",
+      "0e7b0a798112",
+      "245b56424cb3",
+      "f58bd8e4cf32",
+      "55a5a05c059d"
+    ],
+    "testFiles": [
+      "tools/fixprotocol-modifyliquidities-nonreentrant/self_test.py"
+    ]
+  },
+  "until": "the earlier failing check passes on the new code, or a check by a different owner passes",
+  "at": "2026-11-26T16:38:37.628Z"
+}
