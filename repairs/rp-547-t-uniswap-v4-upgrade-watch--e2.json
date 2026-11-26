@@ -1,0 +1,62 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "547",
+  "repair": "rp-547-t-uniswap-v4-upgrade-watch",
+  "episode": 2,
+  "repairKind": "selfTest",
+  "artifact": "uniswap-v4-upgrade-watch",
+  "source": {
+    "type": "runner",
+    "ref": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45695133520",
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/547.json"
+  },
+  "cause": {
+    "text": "FAIL: verify_upload.py must not contain upload code",
+    "hash": "fail: verify_upload.py must not contain upload code",
+    "laterCauses": [
+      "FAIL: verify_upload.py must not contain the word upload"
+    ],
+    "hashes": [
+      "fail: verify_upload.py must not contain upload code",
+      "fail: verify_upload.py must not contain the word upload"
+    ]
+  },
+  "openedAt": "2026-11-25T20:27:53.000Z",
+  "states": [
+    "RECURRENCE_DETECTED",
+    "REPAIR_ATTEMPTED",
+    "PARKED",
+    "RELEASED"
+  ],
+  "counters": {
+    "failedAttempts": 3,
+    "sameCause": 2,
+    "recurrences": 1
+  },
+  "escalation": null,
+  "fix": {
+    "commits": [
+      "99a8266559f4",
+      "8571f5f87927",
+      "ebbd118cdeca",
+      "0c907e13075a",
+      "cea9b70b61fa",
+      "21fc6368f079",
+      "aa5cf4512dd5"
+    ],
+    "by": "agent"
+  },
+  "verification": {
+    "kind": "runner",
+    "link": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45793099066"
+  },
+  "close": {
+    "kind": "fixed-verified",
+    "closedBy": "code: self-test runner passed (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45793099066)",
+    "at": "2026-11-26T09:33:56.000Z",
+    "removedWithoutClosure": false,
+    "why": null
+  },
+  "recheckDue": "2026-12-03T09:33:56.000Z"
+}
