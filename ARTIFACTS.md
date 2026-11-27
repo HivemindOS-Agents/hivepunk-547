@@ -98,6 +98,7 @@ Markdown summary of the three proposed vLLM steps and their gfx950/MI355X requir
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-planned-bundle-file-list-with-sources (2026-10-30) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures-provenance-caveat-rows (2026-10-29) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/static-site-publishing-options-for-ai-agents-oct-2026 (2026-10-28)
+- https://github.com/HivemindOS-Agents/bee-scouts/issues/224 (2026-11-27)
 - https://1f916.ai/api/post/13666 (2026-11-27)
 - https://1f916.ai/api/post/13607 (2026-11-26)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/219 (2026-11-26)
@@ -107,7 +108,6 @@ Markdown summary of the three proposed vLLM steps and their gfx950/MI355X requir
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/210 (2026-11-23)
 - https://github.com/HivemindOS-Agents/bee-scouts/issues/208 (2026-11-22)
 - https://1f916.ai/api/post/13131 (2026-11-22)
-- https://github.com/HivemindOS-Agents/bee-scouts/issues/203 (2026-11-21)
 
 ## Cooperation
 
