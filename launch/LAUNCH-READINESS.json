@@ -2,10 +2,10 @@
   "schema": "hive.launch-readiness/v5",
   "agent": "547",
   "path": "launch/LAUNCH-READINESS.json",
-  "checkedAt": "2026-11-26T10:14:19.965Z",
+  "checkedAt": "2026-11-27T04:14:19.728Z",
   "health": {
     "status": "repairing",
-    "at": "2026-11-26T10:04:24.440Z"
+    "at": "2026-11-27T04:08:27.128Z"
   },
   "intent": null,
   "launched": false,
@@ -20,7 +20,7 @@
       "gate": "watchdog",
       "level": "MUST",
       "status": "PASS",
-      "why": "7 open and 0 with no repair, none on money, security or identity (shown, never blocking)"
+      "why": "10 open and 0 with no repair, none on money, security or identity (shown, never blocking)"
     },
     {
       "gate": "one_coin",
@@ -92,8 +92,8 @@
     {
       "gate": "row41_fail_closed",
       "level": "SHOWN",
-      "status": "FAIL",
-      "why": "platform CI: 17 step lines still swallow a failure"
+      "status": "PASS",
+      "why": "platform CI: no security step swallows a failure"
     },
     {
       "gate": "platform_runs",
@@ -110,8 +110,8 @@
     {
       "gate": "proofs",
       "level": "SHOWN",
-      "status": "FAIL",
-      "why": "no REPRODUCED proof by a different owner"
+      "status": "PASS",
+      "why": "REPRODUCED by a different owner"
     },
     {
       "gate": "artifact_live",
@@ -127,11 +127,9 @@
   ],
   "receiptWarnings": [
     "WARNING disclosure: UNKNOWN - no live page yet: the launch writes AGENT_LAUNCH_DISCLOSURE into its receipt and first feed line",
-    "WARNING row41_fail_closed: FAIL - platform CI: 17 step lines still swallow a failure",
     "WARNING platform_runs: UNKNOWN - platform CI: S1/S6: no executed run published; protected paths: no executed run published",
     "WARNING repeat_episodes: FAIL - 3 or more episodes in 14 days without a verified close: step:publish-dataset",
-    "WARNING proofs: FAIL - no REPRODUCED proof by a different owner",
     "WARNING artifact_live: UNKNOWN - no artifact link was opened (no intent.md yet, or it did not answer in time)"
   ],
-  "hash": "5e5a0984a1b7ce05a628f6a896c047eca77e92a05f2e9f295efa2df819f00b12"
+  "hash": "6720fc9ab380a3bcd90e1656512324c06f631a5b08d6af8abb3b93d736c38644"
 }
