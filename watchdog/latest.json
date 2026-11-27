@@ -2,11 +2,12 @@
   "v": 1,
   "kind": "watchdog",
   "agent": "547",
-  "at": "2026-11-26T00:08:53.208Z",
+  "at": "2026-11-27T00:12:48.100Z",
   "version": "watchdog-v1",
   "mode": "report",
   "checked": [
     "D0",
+    "D4",
     "D1",
     "D2",
     "D3",
@@ -19,11 +20,11 @@
     "D22",
     "D23",
     "D24",
+    "D26",
     "D28"
   ],
   "notChecked": [],
   "notBuilt": [
-    "D4",
     "D5",
     "D6",
     "D7",
@@ -35,8 +36,7 @@
     "D19",
     "D20",
     "D21",
-    "D25",
-    "D26"
+    "D25"
   ],
   "findings": [
     {
@@ -77,6 +77,18 @@
       "firstSeen": "2026-11-26T00:08:53.208Z"
     },
     {
+      "id": "wd-547-D15-reviews/2026-11-25-uniswap-v4-core-release-facts-from-issue-pages-2026-11-25-visibility.json",
+      "check": "D15",
+      "name": "review_hollow",
+      "severity": "report",
+      "subject": "reviews/2026-11-25-uniswap-v4-core-release-facts-from-issue-pages-2026-11-25-visibility.json",
+      "detail": "A visibility receipt from 2026-11-25T03:55:15.849Z still says it was announced nowhere and it was not disclosed.",
+      "evidence": [
+        "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/reviews/2026-11-25-uniswap-v4-core-release-facts-from-issue-pages-2026-11-25-visibility.json"
+      ],
+      "firstSeen": "2026-11-27T00:12:48.100Z"
+    },
+    {
       "id": "wd-547-D15-reviews/2026-11-24-uniswap-v4-core-reported-release-tracker-rows-2026-11-24.json",
       "check": "D15",
       "name": "review_hollow",
@@ -89,16 +101,16 @@
       "firstSeen": "2026-11-25T00:10:34.880Z"
     },
     {
-      "id": "wd-547-D17---Stuck-after-7-drafts-it-chose-to-publish-it-as-it-is-2026-11-25-:-The-folde-",
+      "id": "wd-547-D17---uniswap-v4-upgrade-watch-2026-11-26-:-It-chose-to-publish-it-as-it-is-on-202-",
       "check": "D17",
       "name": "publish_while_failing",
       "severity": "repair",
       "subject": "ARTIFACTS.md",
-      "detail": "\"- Stuck after 7 drafts, it chose to publish it as it is (2026-11-25): The folder only needs its self-test rewritten to assert on the tool's own output instead …\"",
+      "detail": "\"- uniswap-v4-upgrade-watch (2026-11-26): It chose to publish it as it is on 2026-11-25 (The folder only needs its self-test rewritten to assert on the tool's o…\"",
       "evidence": [
         "https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/ARTIFACTS.md"
       ],
-      "firstSeen": "2026-11-26T00:08:53.208Z"
+      "firstSeen": "2026-11-27T00:12:48.100Z"
     },
     {
       "id": "wd-547-D18-artifacts",
@@ -113,42 +125,54 @@
       "firstSeen": "2026-11-17T14:35:31.642Z"
     },
     {
+      "id": "wd-547-D22-tools/opp-547-38-gfx950-mi355x-summary/summary_lint.py",
+      "check": "D22",
+      "name": "claimed_file_not_committed",
+      "severity": "repair",
+      "subject": "tools/opp-547-38-gfx950-mi355x-summary/summary_lint.py",
+      "detail": "A step said it built tools/opp-547-38-gfx950-mi355x-summary/summary_lint.py; it is not in the commit.",
+      "evidence": [
+        "step 2026-11-26T16:23Z"
+      ],
+      "firstSeen": "2026-11-27T00:12:48.100Z"
+    },
+    {
+      "id": "wd-547-D22-tools/opp-547-38-gfx950-mi355x-summary/SUMMARY.md",
+      "check": "D22",
+      "name": "claimed_file_not_committed",
+      "severity": "repair",
+      "subject": "tools/opp-547-38-gfx950-mi355x-summary/SUMMARY.md",
+      "detail": "A step said it built tools/opp-547-38-gfx950-mi355x-summary/SUMMARY.md; it is not in the commit.",
+      "evidence": [
+        "step 2026-11-26T22:39Z"
+      ],
+      "firstSeen": "2026-11-27T00:12:48.100Z"
+    },
+    {
       "id": "wd-547-D23-owner",
       "check": "D23",
       "name": "owner_handoff",
       "severity": "report",
       "subject": "its steps",
-      "detail": "13 steps in the last 48 hours handed the rest of the work to the owner. The newest: \"Left for owner: let the runner run python3 self_test\".",
+      "detail": "9 steps in the last 48 hours handed the rest of the work to the owner, 0 with no host play in the hour after. The newest: \"Left for owner: let HivemindOS run python3 self_test\".",
       "evidence": [
-        "step 2026-11-25T21:31Z",
-        "step 2026-11-25T20:58Z",
-        "step 2026-11-25T20:27Z",
-        "step 2026-11-25T13:47Z"
+        "step 2026-11-26T22:39Z",
+        "step 2026-11-26T16:23Z",
+        "step 2026-11-26T00:42Z",
+        "step 2026-11-25T21:31Z"
       ],
       "firstSeen": "2026-11-17T14:35:31.642Z"
     }
   ],
   "notSeenAgain": [
     {
-      "id": "wd-547-D3-1b8fdf8:uniswap-v4-upgrade-watch",
-      "check": "D3",
-      "subject": "tools/uniswap-v4-upgrade-watch",
-      "firstSeen": "2026-11-25T00:10:34.880Z"
-    },
-    {
-      "id": "wd-547-D15-reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json",
-      "check": "D15",
-      "subject": "reviews/2026-11-23-uniswap-v4-upgrade-watch-release-rows-2026-11-23.json",
-      "firstSeen": "2026-11-24T00:12:47.365Z"
-    },
-    {
-      "id": "wd-547-D22-tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json",
-      "check": "D22",
-      "subject": "tools/opp-547-1081-uniswap-v4-upgrade-watch/tracker.json",
-      "firstSeen": "2026-11-24T00:12:47.365Z"
+      "id": "wd-547-D17---Stuck-after-7-drafts-it-chose-to-publish-it-as-it-is-2026-11-25-:-The-folde-",
+      "check": "D17",
+      "subject": "ARTIFACTS.md",
+      "firstSeen": "2026-11-26T00:08:53.208Z"
     }
   ],
-  "said": "7 found",
-  "requests": 23,
-  "elapsedMs": 3605
+  "said": "10 found",
+  "requests": 22,
+  "elapsedMs": 2978
 }
