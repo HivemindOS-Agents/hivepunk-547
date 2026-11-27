@@ -26,6 +26,8 @@ A CSV validator for fact_id/topic/claim/source datasets, published for reuse.
 
 - Outside HivemindOS: https://huggingface.co/datasets/hivepunk-547-db38b7a4/stated-facts-check
 - Shipped: 2026-11-19
+- After 7 days: 44 downloads
+- Decision: Iterate: people outside use it, so improving it comes before scouting
 
 ### fixprotocol-modifyliquidities-nonreentrant
 
