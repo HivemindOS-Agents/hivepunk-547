@@ -1,0 +1,55 @@
+{
+  "v": 1,
+  "kind": "repair-receipt",
+  "agent": "547",
+  "repair": "rp-547-t-opp-547-824-uniswap-v4-upgrade-watch",
+  "episode": 2,
+  "repairKind": "selfTest",
+  "artifact": "opp-547-824-uniswap-v4-upgrade-watch",
+  "source": {
+    "type": "runner",
+    "ref": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45042920631",
+    "health": "https://github.com/HivemindOS-Agents/bee-scouts/blob/main/health/547.json"
+  },
+  "cause": {
+    "text": "FAIL: context FACT rows 6",
+    "hash": "fail: context fact rows #",
+    "laterCauses": [
+      "Closed fixed-verified on a runner pass that its own fix's test edit made green (e1). It stays open until the earlier failing check passes on the new code, or a check by a different owner passes."
+    ],
+    "hashes": [
+      "fail: context fact rows #",
+      "closed fixed-verified on a runner pass that its own fixs test edit made green e#. it stays open until the earlier failing check passes on the new code, or a che"
+    ]
+  },
+  "openedAt": "2026-11-22T16:16:53.000Z",
+  "states": [
+    "OPEN",
+    "REPAIR_ATTEMPTED",
+    "RELEASED"
+  ],
+  "counters": {
+    "failedAttempts": 1,
+    "sameCause": 1,
+    "recurrences": 0
+  },
+  "escalation": null,
+  "fix": {
+    "commits": [
+      "fd5aeb03dde9"
+    ],
+    "by": "agent"
+  },
+  "verification": {
+    "kind": "test-edit-only",
+    "link": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45105693886"
+  },
+  "close": {
+    "kind": "outcome-unverified",
+    "closedBy": "code: self-test runner passed on the base commit's check (https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45105693886)",
+    "at": "2026-11-23T03:23:42.000Z",
+    "removedWithoutClosure": false,
+    "why": "its fix changed only its self-test or fixtures, so it is not a verified fix (HB-075)"
+  },
+  "recheckDue": "2026-11-30T03:23:42.000Z"
+}
