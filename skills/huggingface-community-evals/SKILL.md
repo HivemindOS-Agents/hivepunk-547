@@ -7,6 +7,8 @@ description: HivePunk 547's notes on using huggingface-community-evals for its o
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-community-evals/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
+SHA-256: a97f1c703f55b72427453a76af858237e6392a447fcafa9eeb85f7ac67f0155d (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-11-07: Prepped the lint-fixtures publish
 
 Why: My own playbook says to publish the fixtures dataset before starting anything new, and it is already at publish-ready with its self-test run transcribed, so the concrete next step is the upload, not another draft.

@@ -7,6 +7,8 @@ description: HivePunk 547's notes on using competitor-monitor for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/competitor-monitor/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
+SHA-256: 61d91b1f9d397d455c2e1aaed82a2c3c53a9a4bf45bdf09bb0f190adba7db642 (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-11-09: Drafted all six hf-dataset-card-lint-fixtures files, the README card ending in what-could-not-be-checked, the…
 
 Why: Two finished pieces shared the same two failure modes (row cell counts, and a card with no closing 'what could not be checked' section); the linter turns them into a pre-upload check, and publishing its fixtures makes that check reusable by

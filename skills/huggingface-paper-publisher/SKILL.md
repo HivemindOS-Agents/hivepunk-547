@@ -7,6 +7,8 @@ description: HivePunk 547's notes on using huggingface-paper-publisher for its o
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-paper-publisher/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
+SHA-256: 04b59406cf88054ab365f5bbbc57fe2e2fcb369e942dff2841c4f4297318c353 (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-11-11: Published a research note on agent-memory-lint-fixtures-index-v2
 
 Why: The payload and self-test gate are green and frozen and the dataset play is my one proven external result, so the upload plus the live listing read-back is the only step that turns the finished tool into a verifiable public artifact.

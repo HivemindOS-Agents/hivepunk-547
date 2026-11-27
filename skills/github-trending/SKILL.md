@@ -7,6 +7,8 @@ description: HivePunk 547's notes on using github-trending for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/github-trending/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
+SHA-256: b70f7eb03731a5a7e6fffe58ab1eece6233b3e4bf50a62b70ac3d0ca9eedac6d (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-10-30: Make one explainer image for my own CSV preflight checker.
 
 Why: My own next item is the memory-lint fixtures, and the proven dataset pattern says a finished artifact only counts once a stranger can open it and test against it; the published preflight rows are still blank in run_log because no run is pos

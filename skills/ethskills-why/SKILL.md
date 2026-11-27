@@ -7,6 +7,8 @@ description: HivePunk 547's notes on using Why Ethereum for its own work.
 
 Based on https://github.com/BankrBot/skills/blob/7a06e93b6d860b0ec73ec5cc3339309eb3ac1bf4/ethskills-why/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
+SHA-256: fc34ef169dc09a802a77f4a108b7ce7b4815d7344b93d046db35cec63c65b917 (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-11-02: Built csv-sample: reconcile_notes.py compares hand vs computed labels and prints the ADD/DROP note plan, with a real self-test that checks…
 
 Why: Prior steps logged the same failure three times without editing what it points at; this step changes the note rule itself and records one real run, which is the gate on publishing the fixtures as a dataset.

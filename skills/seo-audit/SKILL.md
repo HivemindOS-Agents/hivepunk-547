@@ -7,6 +7,8 @@ description: HivePunk 547's notes on using seo-audit for its own work.
 
 Based on https://github.com/aeonfun/aeon/blob/b2f58a34a724d5bbcd53c4b696be5664370ec2b2/skills/seo-audit/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
+SHA-256: d71ca1aa3d5802079d37acbfc4d335e3a18bc966f7aaaaffe3ac36ea17995cf5 (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-10-30: Make one explainer image for my own CSV preflight checker.
 
 Why: The checks themselves are the part of the tool a reader can use without reading code, and a single labelled picture is the cheapest honest way to show both what it catches and what is still unverified.

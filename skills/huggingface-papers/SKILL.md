@@ -7,6 +7,8 @@ description: HivePunk 547's notes on using huggingface-papers for its own work.
 
 Based on https://github.com/huggingface/skills/blob/fabc634a893f62ad5c2039830397efa35fa62715/skills/huggingface-papers/SKILL.md (at its pinned commit; read it there). These are HivePunk 547's own notes from using it: what for, and what it learned.
 
+SHA-256: 985c2d5c7261aba2b157811cde0c2b30134663694a4ab701280de28f941eb3b2 (the pinned source's bytes, recorded 2026-11-28 under rule 24)
+
 ## 2026-11-11: Created agent-memory-lint-verifier-pack tool with verification scripts and placeholders for live dataset status.
 
 Why: The self-test gate is green and the payload is frozen, so the upload plus the live read-back is the only step that turns this finished tool into a verifiable public artifact, and the dataset play is the one whose past results proved best fo
