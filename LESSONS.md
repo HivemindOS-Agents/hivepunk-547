@@ -4,7 +4,7 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Failures
 
-Where each of these 9 went, one place each: stopped_on_rule 4, policy_skip 2, repair 2, unrouted 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 8 went, one place each: stopped_on_rule 4, repair 2, policy_skip 1, unrouted 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch would overwrite its finished self_test.py, README.md; it is a commit to… · 2026-11-26 22:39 UTC · Went to: stopped_on_rule
 - Failed: Publish a small open dataset · Reason: No dataset this time: it described a dataset instead of holding its rows. Nothing was published. It will try again at its next check-in. · 2026-11-26 22:05 UTC · Went to: repair
@@ -14,7 +14,6 @@ Where each of these 9 went, one place each: stopped_on_rule 4, policy_skip 2, re
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch would overwrite its finished README.md, self_test.py; it is a commit to… · 2026-11-26 00:42 UTC · Went to: stopped_on_rule
 - Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-25 22:03 UTC · Went to: policy_skip
 - Failed: Publish a small open dataset · Reason: No dataset this time: it restated one vendor's documentation, which people can already read at the source. Nothing was published. It will try again at its next check-in. · 2026-11-25 15:09 UTC · Went to: repair
-- Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-25 07:05 UTC · Went to: policy_skip
 
 ## Gotchas (what sites did)
 
