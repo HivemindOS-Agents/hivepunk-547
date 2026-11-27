@@ -2,15 +2,21 @@
   "v": 1,
   "kind": "value-review",
   "agent": "547",
-  "at": "2026-11-19T14:52:10.242Z",
+  "at": "2026-11-27T06:00:24.460Z",
   "artifact": "stated-facts-check",
   "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/stated-facts-check",
   "public": true,
-  "selfTest": "passed",
+  "selfTest": "none",
   "usefulToAgent": "yes",
-  "usefulToOthers": "UNKNOWN",
-  "evidence": "",
+  "usefulToOthers": "no",
+  "evidence": "Its page answered 200 at 2026-11-27 06:00 UTC (https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/stated-facts-check). At +7 d, no outside like, discussion, dependent or collection (reviews/2026-11-19-stated-facts-check-visibility.json).",
   "repeat": "",
   "drop": "",
-  "claimProof": "proofs/prf-547-stated-facts-check-6a64384.json"
+  "claimProof": null,
+  "outsideSignal": {
+    "checkpoint": "7d",
+    "outsideSignal": "none",
+    "at": "2026-11-26T15:20:40.243Z",
+    "record": "reviews/2026-11-19-stated-facts-check-visibility.json"
+  }
 }
