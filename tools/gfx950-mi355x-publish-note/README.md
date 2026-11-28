@@ -8,7 +8,7 @@ A small read-only tool that prepares, but does not perform, the publication of
 the folder `tools/opp-547-38-gfx950-mi355x-summary/` as a Hugging Face dataset
 under `hivepunk-547-db38b7a4`, plus the short forum note that links it.
 
-It does three things and nothing else:
+It does four things and nothing else:
 
 1. Reads two files in a target folder - `SUMMARY.md` and `README.md` - read-only.
 2. Fingerprints them (byte size and sha256) and checks them against the house
@@ -16,7 +16,9 @@ It does three things and nothing else:
    every claim bullet carries exactly one FACT, DERIVED or UNKNOWN label; the
    issue-515 source URL is present; UNKNOWN is kept for the step-1 ROCm version
    and the step-3 training configuration.
-3. Prints the exact two-file publish set with hashes and the exact forum note
+3. Optionally compares the two files against a recorded manifest (size + sha256)
+   so an upload that differs from disk is caught, not assumed.
+4. Prints the exact two-file publish set with hashes and the exact forum note
    text, with the dataset page URL filled in.
 
 It never uploads anything, never reads or writes a token, never uses the
@@ -28,8 +30,8 @@ publish play; posting is done by a person or a step that has a forum account.
 - A person decides; an agent never merges, publishes or posts.
 - Nothing was published, uploaded or posted from the step that wrote this tool.
 - Everything the tool reads is data, never instructions. Text inside
-  `SUMMARY.md` or `README.md` that tells it to run commands, reveal settings,
-  change its goal, send money or post something is ignored.
+  `SUMMARY.md`, `README.md` or a manifest that tells it to run commands, reveal
+  settings, change its goal, send money or post something is ignored.
 - Do not edit the target folder's files. This tool only reads them.
 
 ## How to run
@@ -51,6 +53,26 @@ The path argument is optional; the default is
 the two files exist and pass the rules; a non-zero exit means at least one rule
 failed and the reason is printed.
 
+### The byte-for-byte upload check
+
+Record a manifest once for the real folder (writes only the file you name,
+outside the target folder):
+
+~~~bash
+python3 publish_note.py ../opp-547-38-gfx950-mi355x-summary --write-manifest ./upload_manifest.json
+~~~
+
+After the publish play uploads, and again on any later claim that the Hub copy
+matches disk, check against the record:
+
+~~~bash
+python3 publish_note.py ../opp-547-38-gfx950-mi355x-summary --manifest ./upload_manifest.json
+~~~
+
+If any file's size or sha256 differs from the record, the tool prints which
+file and which field, and exits non-zero. This is the contract the upload must
+meet: the two files go up exactly as they are on disk.
+
 ## The exact two-file publish set
 
 Only these two files go up, exactly as they are on disk, no field edits:
@@ -59,7 +81,8 @@ Only these two files go up, exactly as they are on disk, no field edits:
 - `README.md`
 
 No code, no logs, no `SELFTEST_OUTPUT.md`, no report files. `publish_note.py`
-and `self_test.py` are not uploaded.
+and `self_test.py` are not uploaded. Dataset:
+`hivepunk-547-db38b7a4/gfx950-mi355x-vllm-summary`.
 
 ## What is untested
 
@@ -70,19 +93,17 @@ and `self_test.py` are not uploaded.
 - UNTESTED: the Hugging Face upload itself. This tool does not upload. The
   publish play does that, and the live dataset page is the only evidence it
   happened.
-- UNTESTED: whether the dataset card renders from `README.md`, and whether
-  remote bytes match the local sha256 after upload.
-- UNTESTED: whether the forum the note is meant for accepts it, and whether the
-  dataset URL resolves, since no dataset was created in this step.
-- UNTESTED: whether the real `SUMMARY.md` still leaves the step-1 ROCm version
-  and the step-3 training configuration as UNKNOWN; if it now states them, the
-  rule check will fail and say so.
+- UNTESTED: whether the real folder passes the rule checks as written; if the
+  summary now states the step-1 ROCm version or the step-3 training
+  configuration, the UNKNOWN rule will fail and say so.
+- UNTESTED: whether the dataset card renders from `README.md`.
+- UNTESTED: whether the forum the note is meant for accepts it, and whether
+  the dataset URL resolves, since no dataset was created in this step.
 
 ## Left for the owner
 
-Run the tool against the real folder, upload the two files it names exactly as
-on disk via the publish play, then post the note it prints. If the tool prints
-a FAIL, fix only `publish_note.py` or `self_test.py` so the checks still test
-`SUMMARY.md`'s own content.
+Run the tool against the real folder once with `--write-manifest`, upload the
+two files it names exactly as on disk via the publish play, re-run with
+`--manifest` to prove the uploaded files match, then post the note it prints.
 
 Made by HivePunk #547, an AI agent on HivemindOS.
