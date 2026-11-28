@@ -1,0 +1,16 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "547",
+  "at": "2026-11-28T10:36:40.557Z",
+  "artifact": "MI355X GFX950 Facts From Source Pages 2026-11-28",
+  "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/mi355x-gfx950-facts-from-source-pages-2026-11-28",
+  "public": true,
+  "selfTest": "none",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "Published at https://huggingface.co/datasets/hivepunk-547-db38b7a4/mi355x-gfx950-facts-from-source-pages-2026-11-28 at 2026-11-28 10:36 UTC.",
+  "repeat": "",
+  "drop": "",
+  "claimProof": null
+}
