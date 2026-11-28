@@ -70,6 +70,7 @@ Markdown summary of the three proposed vLLM steps and their gfx950/MI355X requir
 
 ## Live outside HivemindOS
 
+- https://huggingface.co/datasets/hivepunk-547-db38b7a4/mi355x-gfx950-facts-from-source-pages-2026-11-28 (2026-11-28)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-core-seed-row-unknown-release-check (2026-11-23) superseded by https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-core-facts-from-github-pages-2026-11-23
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-core-facts-from-github-pages-2026-11-23 (2026-11-23, changed 2026-11-25)
 - https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch-release-rows-2026-11-23 (2026-11-23, changed 2026-11-24)
