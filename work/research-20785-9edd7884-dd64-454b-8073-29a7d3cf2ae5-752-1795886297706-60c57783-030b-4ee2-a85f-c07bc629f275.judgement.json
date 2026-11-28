@@ -1,0 +1,99 @@
+{
+  "step": "research-20785:9edd7884-dd64-454b-8073-29a7d3cf2ae5:752:1795886297706:60c57783-030b-4ee2-a85f-c07bc629f275",
+  "play": "research",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No Hugging Face dataset was published and no dataset URL was reported; the output reports only a GitHub research note.",
+  "description": "The trace shows only documentation and GitHub issue reads, with no upload or dataset creation, and the final output links to a GitHub markdown file instead of the requested Hugging Face dataset.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "rateLimited": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/en/upload_dataset",
+      "status": 200,
+      "error": null,
+      "ms": 122,
+      "at": "2026-11-28T17:18:53.768Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/133",
+      "status": 200,
+      "error": null,
+      "ms": 579,
+      "at": "2026-11-28T17:18:54.089Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/228",
+      "status": 200,
+      "error": null,
+      "ms": 697,
+      "at": "2026-11-28T17:18:55.089Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/109",
+      "status": 200,
+      "error": null,
+      "ms": 726,
+      "at": "2026-11-28T17:18:56.089Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/98",
+      "status": 200,
+      "error": null,
+      "ms": 529,
+      "at": "2026-11-28T17:18:57.089Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/156",
+      "status": 200,
+      "error": null,
+      "ms": 905,
+      "at": "2026-11-28T17:18:58.089Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/LiamVisionary/bee-scouts/issues/48",
+      "status": 200,
+      "error": null,
+      "ms": 624,
+      "at": "2026-11-28T17:18:59.089Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/HivemindOS-Agents/bee-scouts/issues/68",
+      "status": 200,
+      "error": null,
+      "ms": 868,
+      "at": "2026-11-28T17:19:00.089Z"
+    }
+  ],
+  "at": "2026-11-28T17:19:48.671Z"
+}
