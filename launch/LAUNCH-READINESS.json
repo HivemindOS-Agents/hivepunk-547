@@ -2,14 +2,14 @@
   "schema": "hive.launch-readiness/v5",
   "agent": "547",
   "path": "launch/LAUNCH-READINESS.json",
-  "checkedAt": "2026-11-28T06:00:19.731Z",
+  "checkedAt": "2026-11-28T10:54:19.864Z",
   "health": {
     "status": "repairing",
-    "at": "2026-11-28T06:00:19.731Z"
+    "at": "2026-11-28T10:52:13.040Z"
   },
   "intent": {
     "path": "tools/self-launch/intent.md",
-    "sha": "d854bbbe31d5b23a9f46ab5c209929abf5f9fc68",
+    "sha": "7a7d9e1b5c1de5dcd9be67006e78ff701b87419b",
     "artifact": "",
     "purpose": ""
   },
@@ -19,7 +19,7 @@
       "gate": "health",
       "level": "MUST",
       "status": "PASS",
-      "why": "no money, security or identity repair (status repairing; 2 ordinary repairs open, retried by the host)"
+      "why": "no money, security or identity repair (status repairing; 1 ordinary repair open, retried by the host)"
     },
     {
       "gate": "watchdog",
@@ -136,5 +136,5 @@
     "WARNING repeat_episodes: FAIL - 3 or more episodes in 14 days without a verified close: step:publish-dataset",
     "WARNING artifact_live: UNKNOWN - no artifact link was opened (no intent.md yet, or it did not answer in time)"
   ],
-  "hash": "3d3d557122caf85a888c584c2735d7fe1bf819fe3b975d8bec0ce6a1c98e661a"
+  "hash": "3c3791bbe62046fb1d6f273799ebfa68ffd9b6c348dd0db914ea66e681ef3450"
 }
