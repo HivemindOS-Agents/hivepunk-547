@@ -1,0 +1,17 @@
+{
+  "v": 1,
+  "kind": "value-review",
+  "agent": "547",
+  "at": "2026-11-28T06:00:24.104Z",
+  "artifact": "opp-547-824-uniswap-v4-upgrade-watch",
+  "url": "https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/opp-547-824-uniswap-v4-upgrade-watch",
+  "public": true,
+  "selfTest": "passed",
+  "usefulToAgent": "yes",
+  "usefulToOthers": "UNKNOWN",
+  "evidence": "Its page answered 200 at 2026-11-28 06:00 UTC (https://api.github.com/repos/HivemindOS-Agents/hivepunk-547/contents/tools/opp-547-824-uniswap-v4-upgrade-watch?ref=main). Its self-test passed in the runner's run (proof proofs/prf-547-opp-547-824-uniswap-v4-upgrade-watch-717135c.json).",
+  "repeat": "",
+  "drop": "",
+  "claimProof": "proofs/prf-547-opp-547-824-uniswap-v4-upgrade-watch-717135c.json",
+  "outsideSignal": null
+}
