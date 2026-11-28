@@ -32,21 +32,6 @@ ivall asked: "We have to optimize shaders a lot."
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: Write a small script that profiles the repo's shader files and reports the most expensive shader patterns as a ranked list for an owner to act on.
 
-## opp-547-1206 · Feature Request Remove tracking parameters before opening X/Twitter links
-
-Visual-Studio-Coder asked: "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu."
-
-- Status: Candidate since 2026-11-24
-- Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Signal: traction, 2707 stars, last changed 2026-11-24 (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 03:53 UTC)
-- Flaw: missing-licence @ 60544f518761: no licence GitHub can read (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 03:53 UTC)
-- Queue score: 5 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu." by Visual-Studio-Coder, https://github.com/insin/control-panel-for-twitter/issues/986 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-25, sha256 b65022ca0679) · classified ask
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Write a small function that strips known tracking parameters (such as utm and s/t query keys) from X/Twitter URLs, with tests, as a draft the owner could copy.
-
 ## opp-547-1202 · OFFICIAL Looking for PRs with shaders optimization
 
 ivall asked: "We have to optimize shaders a lot."
@@ -454,6 +439,19 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Smallest useful version: Apply the derived ADD/DROP plan to agent-memory-lint-fixtures, run the tool's self-test, and save the raw PASS output and exit code to self_test.log.
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
 
+## opp-547-1206 · Feature Request Remove tracking parameters before opening X/Twitter links
+
+Visual-Studio-Coder asked: "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu."
+
+- Status: Passed on since 2026-11-28 (served by opp-1071-261: another item already took this ask)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Signal: traction, 2707 stars, last changed 2026-11-24 (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 03:53 UTC)
+- Flaw: missing-licence @ 60544f518761: no licence GitHub can read (https://github.com/insin/control-panel-for-twitter, read 2026-11-25 03:53 UTC)
+- Asks: 1 quoted
+  - "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu." by Visual-Studio-Coder, https://github.com/insin/control-panel-for-twitter/issues/986 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-25, sha256 b65022ca0679) · classified ask
+- Fit: in its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: Write a small function that strips known tracking parameters (such as utm and s/t query keys) from X/Twitter URLs, with tests, as a draft the owner could copy.
+
 ## opp-547-1205 · Bug: Windows Open Design 0.27.1 desktop window disappears when Claude Code connects via MCP
 
 lizhounet asked: "### Before you submit - [x] I searched existing issues and confirmed this is not a duplicate."
@@ -512,14 +510,3 @@ ovidiubuligan asked: "### Problem or use case #12265 made sandbox profiles provi
   - "### Problem or use case #12265 made sandbox profiles provider-owned." by ovidiubuligan, https://github.com/omnigent-ai/omnigent/issues/13095 (asked 2026-11-06, last activity 2026-11-12, read 2026-11-23, sha256 89503ec123d1) · classified ask
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A draft sandbox-profile specification document in the agent's repo, defining profile fields for the built-in kubernetes and agentsandbox providers, that the issue author could adapt.
-
-## opp-547-45 · Is this repo still maintained ?
-
-AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to"
-
-- Status: Passed on since 2026-11-25 (served by opp-632-44: another item already took this ask)
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
-- Asks: 1 quoted
-  - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-25, sha256 5dba739ce701) · not counted: classified as question, not an ask
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: Write a script that pulls recent commit and release dates from the repo's public GitHub API to report whether it is still maintained.
