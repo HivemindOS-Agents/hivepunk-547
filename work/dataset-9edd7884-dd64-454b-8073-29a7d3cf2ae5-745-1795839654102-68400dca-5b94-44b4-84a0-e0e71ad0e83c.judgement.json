@@ -1,0 +1,125 @@
+{
+  "step": "dataset:9edd7884-dd64-454b-8073-29a7d3cf2ae5:745:1795839654102:68400dca-5b94-44b4-84a0-e0e71ad0e83c",
+  "play": "dataset",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "Step was skipped; no dataset was uploaded or forum post made.",
+  "description": "The agent only fetched documentation pages and then reported the step as skipped. It did not upload SUMMARY.md and README.md to the Hugging Face dataset or post a forum note linking to it.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [
+    {
+      "id": "g208f9c53",
+      "host": "github.com",
+      "observed": "GET github.com/huggingface/datasets/blob/main/docs/source/share.mdx",
+      "result": "503: Unicorn static error page",
+      "evidence": "t3"
+    },
+    {
+      "id": "g65011f10",
+      "host": "github.com",
+      "observed": "GET github.com/huggingface/huggingface_hub/blob/main/docs/source/en/guides/upload.md",
+      "result": "503: Unicorn static error page",
+      "evidence": "t5"
+    }
+  ],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "rateLimited": [
+    {
+      "host": "github.com",
+      "path": "/huggingface/datasets/blob/main/docs/source/share.mdx",
+      "retryAfter": null
+    },
+    {
+      "host": "github.com",
+      "path": "/huggingface/huggingface_hub/blob/main/docs/source/en/guides/upload.md",
+      "retryAfter": null
+    }
+  ],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/huggingface_hub/guides/upload",
+      "status": 200,
+      "error": null,
+      "ms": 209,
+      "at": "2026-11-28T04:21:58.495Z"
+    },
+    {
+      "id": "t2",
+      "method": "GET",
+      "host": "zenn.dev",
+      "path": "/rmuraix/articles/:id",
+      "status": 200,
+      "error": null,
+      "ms": 418,
+      "at": "2026-11-28T04:21:58.495Z"
+    },
+    {
+      "id": "t3",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/huggingface/datasets/blob/main/docs/source/share.mdx",
+      "status": 503,
+      "error": "Unicorn! &middot; GitHub /* BEGIN GENERATED STATIC ERROR COLORS: light */ /* @primer/primitives 11.1.0; regenerate with npm run static-errors:generate. */ :root { color-scheme: light dark; --bgColor-d",
+      "ms": 176,
+      "at": "2026-11-28T04:21:58.853Z"
+    },
+    {
+      "id": "t4",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/en/share",
+      "status": 200,
+      "error": null,
+      "ms": 213,
+      "at": "2026-11-28T04:21:59.495Z"
+    },
+    {
+      "id": "t5",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/huggingface/huggingface_hub/blob/main/docs/source/en/guides/upload.md",
+      "status": 503,
+      "error": "Unicorn! &middot; GitHub /* BEGIN GENERATED STATIC ERROR COLORS: light */ /* @primer/primitives 11.1.0; regenerate with npm run static-errors:generate. */ :root { color-scheme: light dark; --bgColor-d",
+      "ms": 109,
+      "at": "2026-11-28T04:21:59.853Z"
+    },
+    {
+      "id": "t6",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/hub/datasets-adding",
+      "status": 200,
+      "error": null,
+      "ms": 189,
+      "at": "2026-11-28T04:22:00.495Z"
+    },
+    {
+      "id": "t7",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/datasets/upload_dataset",
+      "status": 200,
+      "error": null,
+      "ms": 185,
+      "at": "2026-11-28T04:22:01.495Z"
+    },
+    {
+      "id": "t8",
+      "method": "GET",
+      "host": "huggingface.co",
+      "path": "/docs/hub/en/datasets-upload-guide-llm",
+      "status": 200,
+      "error": null,
+      "ms": 108,
+      "at": "2026-11-28T04:22:02.495Z"
+    }
+  ],
+  "at": "2026-11-28T04:22:47.070Z"
+}
