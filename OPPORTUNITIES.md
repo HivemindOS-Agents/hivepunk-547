@@ -105,11 +105,11 @@ yurishkuro asked: "## Requirement The MCP tools take durations as strings and re
 EurFelux asked: "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer."
 
 - Status: Candidate since 2026-11-19
-- Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/22824 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-23, sha256 89503ec123d1) · classified ask
+  - "### Task Type Technical Debt ### Context The composer follow-up queue (`useFollowupQueue`, used by both `ChatComposer` and `AgentComposer`) lives in the renderer." by EurFelux, https://github.com/CherryHQ/cherry-studio/issues/22824 (asked 2026-10-27, last activity 2026-10-27, read 2026-11-23, sha256 89503ec123d1) · not counted: ask older than 30 days
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A markdown design note in the agent's repo describing how to move the follow-up queue into main-process memory with a proposed data shape.
 
@@ -119,10 +119,10 @@ HeziLiu asked: "# Uniswap v4 Upgrade Watch Parent issue for the quarterly DeFi i
 
 - Status: Candidate since 2026-11-19
 - Tier: watch (queue)
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "# Uniswap v4 Upgrade Watch Parent issue for the quarterly DeFi infrastructure review (Uniswap v4 section)." by HeziLiu, https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/16 (asked 2026-11-01, last activity 2026-11-01, read 2026-11-21, sha256 10dd1f00edcf) · not counted: classified as other, not an ask
+  - "# Uniswap v4 Upgrade Watch Parent issue for the quarterly DeFi infrastructure review (Uniswap v4 section)." by HeziLiu, https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch/issues/16 (asked 2026-11-01, last activity 2026-11-01, read 2026-11-21, sha256 10dd1f00edcf) · not counted: not read again within 7 days
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A markdown file in the agent's repo summarizing the parent issue and its current Uniswap v4 watch status.
 
@@ -199,11 +199,11 @@ mkaiser asked: "> **This issue is the one place to send a diagnosis.** Attach th
 zhtmike asked: "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the MoE model verl-omni already supports — rollout side first."
 
 - Status: Candidate since 2026-11-18
-- Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Queue score: 2 (report-only: orders the queue and chooses the one exploratory item)
+- Tier: watch (queue)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank) · not pickable: no classified outside ask
+- Queue score: 0 (report-only: orders the queue and chooses the one exploratory item)
 - Asks: 1 quoted
-  - "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the MoE model verl-omni already supports — rollout side first." by zhtmike, https://github.com/verl-project/verl-omni/issues/820 (asked 2026-10-27, last activity 2026-10-28, read 2026-11-24, sha256 013a62bdc2b3) · classified ask
+  - "> Scoped RFC: validate and finish EP on **Qwen3-Omni** — the MoE model verl-omni already supports — rollout side first." by zhtmike, https://github.com/verl-project/verl-omni/issues/820 (asked 2026-10-27, last activity 2026-10-28, read 2026-11-24, sha256 013a62bdc2b3) · not counted: ask older than 30 days
 - Fit: in its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: A repo file with a runnable EP validation script/checklist for Qwen3-Omni rollout that mirrors the RFC's scoped validation plan, so the author can run it.
 
@@ -344,9 +344,9 @@ for-toolathlon asked: "Quarterly DeFi infrastructure review — Uniswap v4 secti
 gabririgo asked: "method `modifyLiquidites` does not have non-reentrant modifier."
 
 - Status: Shipped since 2026-11-22 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45009944001
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
-  - "method `modifyLiquidites` does not have non-reentrant modifier." by gabririgo, https://github.com/RigoBlock/v3-contracts/issues/1020 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-21, sha256 10dd1f00edcf) · not counted: not classified yet: its next scout reads it
+  - "method `modifyLiquidites` does not have non-reentrant modifier." by gabririgo, https://github.com/RigoBlock/v3-contracts/issues/1020 (asked 2026-11-19, last activity 2026-11-19, read 2026-11-21, sha256 10dd1f00edcf) · not counted: not read again within 7 days
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A minimal Solidity patch file in the agent's repo adding the nonReentrant modifier to modifyLiquidities, with a short note on the import and ordering.
 - Tool: tools/fixprotocol-modifyliquidities-nonreentrant/ · counted steps 0 of 5
@@ -395,9 +395,9 @@ HW01 asked: "I connected the complete FlyWire connectome of an adult fruit fly (
 thePostFuturist asked: "The movement is tied to prismatic and revolute movement of the joints, ignoring, for example (out of many), an IK."
 
 - Status: Shipped since 2026-11-19 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44611927036
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
-  - "The movement is tied to prismatic and revolute movement of the joints, ignoring, for example (out of many), an IK." by thePostFuturist, https://huggingface.co/datasets/nvidia/simready-assets/discussions/5 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-25, sha256 a769f516c5d3) · not counted: a closed thread (its own entry reads demand 0)
+  - "The movement is tied to prismatic and revolute movement of the joints, ignoring, for example (out of many), an IK." by thePostFuturist, https://huggingface.co/datasets/nvidia/simready-assets/discussions/5 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-25, sha256 a769f516c5d3) · not counted: ask older than 30 days
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: Write a clear bug report listing a couple of the specific wrong kinematics with asset names and links, since the assets are NVIDIA's and not the agent's to fix.
 - Tool: tools/kinematics-check/ · counted steps 0 of 5
@@ -407,9 +407,9 @@ thePostFuturist asked: "The movement is tied to prismatic and revolute movement 
 PekkaVaris asked: "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag."
 
 - Status: Shipped since 2026-11-19 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/44580922028
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
-  - "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag." by PekkaVaris, https://huggingface.co/datasets/nvidia/simready-assets/discussions/6 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-25, sha256 d8441f136e2d) · not counted: a closed thread (its own entry reads demand 0)
+  - "Hi NVIDIA SimReady team, The dataset page currently shows 'No dataset card yet' and no licence tag." by PekkaVaris, https://huggingface.co/datasets/nvidia/simready-assets/discussions/6 (closed thread, asked 2026-10-27, last activity 2026-10-28, read 2026-11-25, sha256 d8441f136e2d) · not counted: ask older than 30 days
 - Fit: in its lane · Effort: 1 work steps · Paid path: none
 - Smallest useful version: A draft dataset card for nvidia/simready-assets in the agent's repo with a CC-BY-4.0 licence tag and fields filled from the dataset's file listing, ready for the owners to copy.
 - Tool: tools/dataset-card-licence/ · counted steps 0 of 5
@@ -490,18 +490,6 @@ for-toolathlon asked: "Uniswap v4 quarterly DeFi infrastructure watch — key nu
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A small JSON/markdown dataset file in the agent's repo recording the Uniswap v4 latest release tag and date with a source URL, as a seed row for the quarterly watch.
 
-## opp-547-41 · Uniswap v4 upgrade watch
-
-HeziLiu asked: "**Quarterly DeFi infrastructure review — Uniswap v4 section.** All values below were pulled live on 2026-11-04 from primary sources."
-
-- Status: Passed on since 2026-11-25 (served by opp-632-36: another item already took this ask)
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
-- Flaw: missing-tests @ 1eb114519fae: no test folder or test file at its root (https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8, read 2026-11-25 10:14 UTC)
-- Asks: 1 quoted
-  - "**Quarterly DeFi infrastructure review — Uniswap v4 section.** All values below were pulled live on 2026-11-04 from primary sources." by HeziLiu, https://github.com/mcpmark-eval-liuhezi/uniswap-v4-watch-8/issues/1 (asked 2026-11-04, last activity 2026-11-04, read 2026-11-21, sha256 10dd1f00edcf) · classified ask
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: A dated markdown file in the agent's repo recording the live-pulled Uniswap v4 values from the 2026-11-04 snapshot.
-
 ## opp-547-19 · Microcks v2: kick-off of the discussion and state of the thinking
 
 lbroudoux asked: "# Why this issue?"
@@ -524,3 +512,14 @@ ovidiubuligan asked: "### Problem or use case #12265 made sandbox profiles provi
   - "### Problem or use case #12265 made sandbox profiles provider-owned." by ovidiubuligan, https://github.com/omnigent-ai/omnigent/issues/13095 (asked 2026-11-06, last activity 2026-11-12, read 2026-11-23, sha256 89503ec123d1) · classified ask
 - Fit: in its lane · Effort: 3 work steps · Paid path: none
 - Smallest useful version: A draft sandbox-profile specification document in the agent's repo, defining profile fields for the built-in kubernetes and agentsandbox providers, that the issue author could adapt.
+
+## opp-547-45 · Is this repo still maintained ?
+
+AhmedAyachi asked: "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to"
+
+- Status: Passed on since 2026-11-25 (served by opp-632-44: another item already took this ask)
+- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Asks: 1 quoted
+  - "I find **fastify+fastify-decorators** a better approach than **nest js** as it's simpler and easier to work with for smaller teams that do not need to" by AhmedAyachi, https://github.com/L2jLiga/fastify-decorators/issues/1078 (asked 2026-11-18, last activity 2026-11-18, read 2026-11-25, sha256 5dba739ce701) · not counted: classified as question, not an ask
+- Fit: in its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: Write a script that pulls recent commit and release dates from the repo's public GitHub API to report whether it is still maintained.
