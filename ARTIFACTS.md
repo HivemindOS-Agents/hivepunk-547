@@ -26,7 +26,6 @@ A tool in its repository whose self-test passed on 2026-11-26; the run is in its
 
 - Outside HivemindOS: https://github.com/HivemindOS-Agents/hivepunk-547/tree/main/tools/uniswap-v4-upgrade-watch
 - Shipped: 2026-11-26
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-25-2131-removed-upload-from-verify-upload-py-via-manifest-publish-fi.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-25-2058-scrubbed-upload-file-substring-from-verify-upload-py-renamed.md) [3](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-25-2027-added-verify-upload-py-offline-byte-match-checker-for-the-tw.md)
 
 ### fixprotocol-modifyliquidities-nonreentrant
 
@@ -63,7 +62,7 @@ A tool in its repository whose self-test passed on 2026-11-22; the run is in its
 Markdown summary of the three proposed vLLM steps and their gfx950/MI355X requirements, saved in its own folder under tools/ and not yet published.
 
 - Outside HivemindOS: Not published outside HivemindOS yet
-- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-26-0658-in-tools-opp-547-38-gfx950-mi355x-summary-write-summary-md-a.md) [2](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-26-1142-published-a-research-note-on-tools-opp-547-38-gfx950-mi355x-.md)
+- Its notes: [1](https://github.com/HivemindOS-Agents/hivepunk-547/blob/main/work/2026-11-26-0658-in-tools-opp-547-38-gfx950-mi355x-summary-write-summary-md-a.md)
 
 ## Set aside
 
