@@ -6,7 +6,8 @@ fingerprints them, checks the house rules for this dataset (three proposed
 vLLM step headings, a FACT/DERIVED/UNKNOWN label on every claim bullet, the
 issue-515 source URL, UNKNOWN kept for the step-1 ROCm version and the step-3
 training configuration), optionally compares them to a recorded manifest, and
-prints the exact two-file publish set plus the forum note text.
+prints the exact two-file publish set plus the announcement text (whose first
+sentence names the dataset title).
 
 It never uploads, never reads a token, never uses the network, and never
 writes to the target folder. Everything it reads is data, never
@@ -34,6 +35,7 @@ DEFAULT_TARGET = os.path.join(HERE, "..", "opp-547-38-gfx950-mi355x-summary")
 DEFAULT_TARGET = os.path.normpath(DEFAULT_TARGET)
 
 DATASET_REPO_ID = "hivepunk-547-db38b7a4/gfx950-mi355x-vllm-summary"
+DATASET_TITLE = "gfx950 / MI355X vLLM steps - summary dataset"
 DATASET_URL = "https://huggingface.co/datasets/" + DATASET_REPO_ID
 PUBLISH_SET = ["SUMMARY.md", "README.md"]
 LABELS = ("FACT", "DERIVED", "UNKNOWN")
@@ -62,10 +64,7 @@ def label_count(text, label):
 
 
 def claim_bullets(summary_text):
-    """Lines that look like a claim: a bullet starting with '-' or '*'.
-
-    Headings and blank lines are not claims. A claim must carry a label.
-    """
+    """Lines that look like a claim: a bullet starting with '- ' or '* '."""
     out = []
     for raw in summary_text.splitlines():
         line = raw.strip()
@@ -107,7 +106,7 @@ def check_summary(summary_text):
         )
 
     # 3. the issue-515 source URL is present
-    if not any("515" in token for token in re.findall(r"https?://\S+", summary_text)):
+    if not any(ISSUE_URL_FRAGMENT in token for token in re.findall(r"https?://\S+", summary_text)):
         errors.append("SUMMARY.md has no source URL containing '%s'" % ISSUE_URL_FRAGMENT)
 
     # 4. UNKNOWN kept for the step-1 ROCm version and step-3 training configuration
@@ -146,11 +145,7 @@ def manifest(target):
 
 
 def compare_manifest(rows, recorded):
-    """Compare current rows to a recorded manifest. Returns list of errors.
-
-    recorded: list of dicts with path/bytes/sha256. Missing or extra files,
-    or any size/sha256 drift, is an error.
-    """
+    """Compare current rows to a recorded manifest. Returns list of errors."""
     errors = []
     by_path = {}
     for r in recorded:
@@ -177,21 +172,25 @@ def compare_manifest(rows, recorded):
     return errors
 
 
-def forum_note(rows):
-    """The short forum note text. Not posted by this tool."""
+def announcement(rows):
+    """The announcement text. Not posted by this tool.
+
+    Its first sentence names the dataset title, so anyone reading only the
+    top line knows what is being shared.
+    """
     return "\n".join([
-        "gfx950 / MI355X vLLM steps - summary dataset",
+        "%s - read it at %s." % (DATASET_TITLE, DATASET_URL),
         "",
         "I summarised three proposed vLLM steps for the gfx950 / MI355X path and",
-        "the requirements each one places on the hardware and runtime. Dataset:",
-        DATASET_URL,
+        "the requirements each one places on the hardware and runtime. The",
+        "dataset holds two files, SUMMARY.md and README.md, exactly as they are",
+        "on disk.",
         "",
-        "It holds two files, SUMMARY.md and README.md, exactly as they are on",
-        "disk. Every claim in SUMMARY.md carries a FACT, DERIVED or UNKNOWN",
-        "label: FACT lines restate what a cited source states, DERIVED lines are",
-        "inference and say so, and UNKNOWN lines name what could not be read",
-        "(the step-1 ROCm version and the step-3 training configuration) rather",
-        "than guessing a value.",
+        "Every claim in SUMMARY.md carries a FACT, DERIVED or UNKNOWN label:",
+        "FACT lines restate what a cited source states, DERIVED lines are",
+        "inference and say so, and UNKNOWN lines name what could not be read (the",
+        "step-1 ROCm version and the step-3 training configuration) rather than",
+        "guessing a value.",
         "",
         "SUMMARY.md sha256 %s, README.md sha256 %s." % (rows[0]["sha256"], rows[1]["sha256"]),
         "Read-only preparation; nothing was uploaded or posted by the tool that",
@@ -244,8 +243,10 @@ def main(argv=None):
         print("FAIL: %s" % e)
         return 2
 
-    summary_text = open(os.path.join(target, "SUMMARY.md"), encoding="utf-8").read()
-    readme_text = open(os.path.join(target, "README.md"), encoding="utf-8").read()
+    with open(os.path.join(target, "SUMMARY.md"), encoding="utf-8") as f:
+        summary_text = f.read()
+    with open(os.path.join(target, "README.md"), encoding="utf-8") as f:
+        readme_text = f.read()
 
     errors, info = check_summary(summary_text)
     errors += check_readme(readme_text)
@@ -298,9 +299,9 @@ def main(argv=None):
         print("manifest written: %s" % write_manifest)
 
     print("ready: upload only SUMMARY.md and README.md exactly as on disk")
-    print("--- forum note (not posted by this tool) ---")
-    print(forum_note(rows))
-    print("--- end forum note ---")
+    print("--- announcement (not posted by this tool) ---")
+    print(announcement(rows))
+    print("--- end announcement ---")
     return 0
 
 
