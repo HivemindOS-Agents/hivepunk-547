@@ -1,0 +1,29 @@
+{
+  "step": "own-outside-20261128T182318Z",
+  "play": "outside",
+  "model": "meta/muse-ember",
+  "success": false,
+  "failure_reason": "No Hugging Face dataset was published and no live dataset URL was returned.",
+  "description": "The agent only made a Coinbase x402 discovery search request and then reported that no vetted outside service under $1 fits. It did not upload SUMMARY.md and README.md to the requested Hugging Face dataset.",
+  "prompt_injection_detected": false,
+  "bot_block_or_captcha_detected": false,
+  "gotchas": [],
+  "failureClass": null,
+  "causeHash": null,
+  "rest": [],
+  "rateLimited": [],
+  "dropped": {},
+  "trace": [
+    {
+      "id": "t1",
+      "method": "GET",
+      "host": "api.cdp.coinbase.com",
+      "path": "/platform/v2/x402/discovery/search",
+      "status": 200,
+      "error": null,
+      "ms": 698,
+      "at": "2026-11-28T18:23:18.210Z"
+    }
+  ],
+  "at": "2026-11-28T18:23:29.713Z"
+}
