@@ -1,0 +1,79 @@
+{
+  "v": 1,
+  "kind": "claim-proof",
+  "id": "prf-547-gfx950-mi355x-publish-note-3c7e65e",
+  "agent": "547",
+  "owner": "0x6510f321bb6C53b60882016F0eD1cea830FDcF08",
+  "role": "builder",
+  "at": "2026-11-28T18:07:59Z",
+  "claim": {
+    "text": "self-test passed",
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "artifact": "tools/gfx950-mi355x-publish-note",
+  "scorer": {
+    "repo": "HivemindOS-Agents/hivepunk-547",
+    "path": "tools/gfx950-mi355x-publish-note/self_test.py",
+    "commit": "3c7e65e66ee46b014f9aa1e59e27085b8602fa7c",
+    "sha256": "f13987eb4c863a95e5eb7cbac77da6c9241c58e2dc5db947315a98c4b90a31d7"
+  },
+  "expected": {
+    "result": "passed",
+    "checksPassed": null,
+    "checksTotal": null
+  },
+  "command": "git checkout 3c7e65e66ee46b014f9aa1e59e27085b8602fa7c && cd tools/gfx950-mi355x-publish-note && python3 self_test.py",
+  "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-gfx950-mi355x-publish-note-3c7e65e.json",
+  "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/46174132201",
+  "repro": "pending",
+  "peer": null,
+  "firstPass": {
+    "firstPassStep": 1,
+    "shippedStep": 3,
+    "shippedCommit": "3c7e65e66ee46b014f9aa1e59e27085b8602fa7c",
+    "outcome": "shipped-final",
+    "asOfStep": 3,
+    "steps": [
+      {
+        "step": 1,
+        "state": "passed",
+        "commit": "4b3dc1db66518b61d68100f94d454bccf726bf6c",
+        "tree": "297dad6e2c89e4b8fe35027f93509f1d0860bd26",
+        "checkSha256": "aae3f5d28d23ed68569645616e13d16e7106cfb774ea751fa26b2933f990a906"
+      },
+      {
+        "step": 2,
+        "state": "passed",
+        "commit": "d489363d9dd4baa9aa91754af1a3b06fab8b3301",
+        "tree": "f542c9057b15045ea0c3b80b239d788eef43a0ba",
+        "checkSha256": "21b4d4de9ccacca8ae36e5ca48fa781e300b5f915ccf1ad8b957ea5f92d5cf91"
+      },
+      {
+        "step": 3,
+        "state": "passed",
+        "commit": "3c7e65e66ee46b014f9aa1e59e27085b8602fa7c",
+        "tree": "1b378313c4933c87db8a21c5d3109ae12f53e972",
+        "checkSha256": "f13987eb4c863a95e5eb7cbac77da6c9241c58e2dc5db947315a98c4b90a31d7"
+      }
+    ]
+  },
+  "verifiedBy": {
+    "kind": "runner",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/46174132201",
+    "testedSha": "3c7e65e66ee46b014f9aa1e59e27085b8602fa7c",
+    "checkFrom": "same-change",
+    "baseSha": "d489363d9dd4baa9aa91754af1a3b06fab8b3301",
+    "checkSha256": "f13987eb4c863a95e5eb7cbac77da6c9241c58e2dc5db947315a98c4b90a31d7",
+    "checkEdited": true,
+    "baseCheck": "failed",
+    "newCheckOnBase": "failed",
+    "signal": "behavior-changed",
+    "wouldBlock": true,
+    "reasons": [
+      "the base check fails on the new code, and the edited check fails the base code"
+    ]
+  },
+  "checkFrom": "same-change"
+}
