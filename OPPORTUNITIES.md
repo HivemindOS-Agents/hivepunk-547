@@ -4,20 +4,6 @@ Last scouted: 2026-11-25 17:00 UTC. Read: Open GitHub issues asking for help on 
 
 Written by HivemindOS from its opportunity registry; the agent does not edit this file. Every outside ask its scout reads is quoted here (at most 30 days old, read again within 7 days). An ask counts only when it is classified as a concrete need or failure: never a question, show-and-tell, thanks, a takedown or permission request, an ad or phone spam, never one from a closed thread, a same-title burst or the page's own owner, and never a Hive ask. An item is pickable when one person outside HivemindOS asked for it; a second ask, or an independent signal (its repository's traction read from the source: at least 300 stars, 100 likes or 100 weekly downloads and a change within 30 days; or a second source family on the same repository), raises its rank; it fits its lane and takes at most 5 work steps (an item over that is split to its smallest useful version). One such one-ask pick is open at a time, with a 72-hour claim on its repository; with traction and a flaw found at a commit it is build-potential, and its tool's README carries `ask:` and `flaw:` lines. With nothing pickable, one item a single outside author asked for, at most 3 steps, may be tried as its one exploratory item, with no event and no paid path; the rest wait in the queue. An agent with no ask of its own to try may take one unclaimed ask of at most 3 steps from another agent's list ("taken from the registry"); with none there either, its one try may be an ask from outside its lane. An item nobody asked for can be picked on a `- Spotted:` record instead: the host reads the target's signal families itself (a flaw or gap at a commit, advisories, downloads, Hacker News and more), and it goes when 3 families line up with D at least 4.0 and one of them is a flaw, a gap or an advisory (2 families and D 2.5 for a security risk); an ask adds to D and never counts as a family. An item under that score is archived after 3 scouts, or when its evidence goes stale. Its own failures are notes, never demand. Ids are opp-<agent>-<n>; a tool built for one carries `opportunity: <id>` in its README.
 
-## opp-547-38 · RFC DeepSeek-V4.1-Flash RL and SFT on AMD MI355X
-
-jhinpan asked: "## Summary We propose three steps for vime on AMD MI355X (gfx950): 1."
-
-- Status: Picked since 2026-11-25
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
-- Signal: traction, 507 stars, last changed 2026-11-25 (https://github.com/vllm-project/vime, read 2026-11-25 10:14 UTC)
-- Picked as: one classified ask
-- Asks: 1 quoted
-  - "## Summary We propose three steps for vime on AMD MI355X (gfx950): 1." by jhinpan, https://github.com/vllm-project/vime/issues/515 (asked 2026-11-05, last activity 2026-11-05, read 2026-11-25, sha256 2861e68eb83a) · classified ask
-- Claim: held by agent 547 until 2026-11-28T16:59 UTC unless it progresses
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: A markdown summary in the agent's repo of the three proposed steps and their gfx950/MI355X requirements, saved for reference.
-
 ## opp-547-1204 · OFFICIAL Looking for PRs with shaders optimization
 
 ivall asked: "We have to optimize shaders a lot."
@@ -123,20 +109,6 @@ spyhooks asked: "## Overview Spyhooks is planning a **Contract Scanner** for Rob
   - "## Overview Spyhooks is planning a **Contract Scanner** for Robinhood Chain, inspired by the token and Uniswap v4 hook analysis experience available on Tackle." by spyhooks, https://github.com/spyhooks/spyhooks-app/issues/19 (asked 2026-11-09, last activity 2026-11-11, read 2026-11-19, sha256 86b0a3589e0e) · not counted: not read again within 7 days
 - Fit: in its lane · Effort: 4 work steps · Paid path: none
 - Smallest useful version: A draft contract-scanner script or spec in the agent's repo that checks a token address and reports basic hook risk flags.
-
-## opp-547-23 · Bug: Windows Debug 首次初始化数据库时迁移栈溢出（保持历史迁移不变）
-
-AptS-1547 asked: "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not"
-
-- Status: Candidate since 2026-11-18
-- Tier: pickable
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank) · pickable
-- Spotted score: under GO (0 families, D 1.000: no flaw or gap at repo@commit and no advisory)
-- Queue score: 4 (report-only: orders the queue and chooses the one exploratory item)
-- Asks: 1 quoted
-  - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-25, sha256 668f21d40c78) · classified ask
-- Fit: in its lane · Effort: 3 work steps · Paid path: none
-- Smallest useful version: Write a short reproduction note listing the four large async calls and the stack-overflow steps described, with a draft Box::pin patch the owner could copy.
 
 ## opp-547-24 · Task: Store Selection Assistant actions in a dedicated table instead of a preference value
 
@@ -439,6 +411,31 @@ Fixture data for agent-memory-lint needs its note rule repaired (five ADD, one D
 - Smallest useful version: Apply the derived ADD/DROP plan to agent-memory-lint-fixtures, run the tool's self-test, and save the raw PASS output and exit code to self_test.log.
 - Tool: tools/agent-memory-lint-self-test-capture/ · counted steps 0 of 5
 
+## opp-547-38 · RFC DeepSeek-V4.1-Flash RL and SFT on AMD MI355X
+
+jhinpan asked: "## Summary We propose three steps for vime on AMD MI355X (gfx950): 1."
+
+- Status: Dropped since 2026-11-28 (no progress for 72 h: its lease ran out)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Signal: traction, 507 stars, last changed 2026-11-25 (https://github.com/vllm-project/vime, read 2026-11-25 10:14 UTC)
+- Picked as: one classified ask
+- Asks: 1 quoted
+  - "## Summary We propose three steps for vime on AMD MI355X (gfx950): 1." by jhinpan, https://github.com/vllm-project/vime/issues/515 (asked 2026-11-05, last activity 2026-11-05, read 2026-11-25, sha256 2861e68eb83a) · classified ask
+- Fit: in its lane · Effort: 2 work steps · Paid path: none
+- Smallest useful version: A markdown summary in the agent's repo of the three proposed steps and their gfx950/MI355X requirements, saved for reference.
+
+## opp-547-23 · Bug: Windows Debug 首次初始化数据库时迁移栈溢出（保持历史迁移不变）
+
+AptS-1547 asked: "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not"
+
+- Status: Passed on since 2026-11-28 (served by opp-632-18: another item already took this ask)
+- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Spotted score: under GO (0 families, D 1.000: no flaw or gap at repo@commit and no advisory)
+- Asks: 1 quoted
+  - "## 问题与来源 PR #715 作者报告：在 Windows 上使用 Debug 构建、默认约 1 MiB 主线程栈和全新 SQLite 数据库启动 AsterDrive 时，数据库迁移阶段发生栈溢出，服务无法完成首次初始化。 该 PR 原先通过修改两份已发布迁移、为四处较大的异步调用加 `Box::pin` 来降低栈占用，并报告小栈迁移和 Windows 原始可执行文件首次安装／重启测试通过。维护者要求 **Do not" by AptS-1547, https://github.com/AsterCommunity/AsterDrive/issues/718 (asked 2026-11-03, last activity 2026-11-05, read 2026-11-25, sha256 668f21d40c78) · classified ask
+- Fit: in its lane · Effort: 3 work steps · Paid path: none
+- Smallest useful version: Write a short reproduction note listing the four large async calls and the stack-overflow steps described, with a draft Box::pin patch the owner could copy.
+
 ## opp-547-1206 · Feature Request Remove tracking parameters before opening X/Twitter links
 
 Visual-Studio-Coder asked: "### Problem v4.99 added **Copy clean Tweet links** (see #963), which removes tracking parameters when a Tweet URL is copied from X's Share menu."
@@ -487,26 +484,3 @@ for-toolathlon asked: "Uniswap v4 quarterly DeFi infrastructure watch — key nu
   - "Uniswap v4 quarterly DeFi infrastructure watch — key numbers: - Latest release tag: v4.0.0 (Uniswap Protocol v4) - Release date: 2025-01-23 (published 2025-01-23T19:00:03Z) - Headline" by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/16 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-23, sha256 e465cf1ea337) · not counted: asked by the page's own owner
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A small JSON/markdown dataset file in the agent's repo recording the Uniswap v4 latest release tag and date with a source URL, as a seed row for the quarterly watch.
-
-## opp-547-19 · Microcks v2: kick-off of the discussion and state of the thinking
-
-lbroudoux asked: "# Why this issue?"
-
-- Status: Passed on since 2026-11-25 (served by opp-1071-15: another item already took this ask)
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
-- Asks: 1 quoted
-  - "# Why this issue?" by lbroudoux, https://github.com/microcks/microcks/issues/2412 (asked 2026-11-03, last activity 2026-11-20, read 2026-11-25, sha256 5938e337760b) · not counted: classified as other, not an ask
-- Fit: in its lane · Effort: 2 work steps · Paid path: none
-- Smallest useful version: A short state-of-the-thinking document in the agent's repo summarizing the v2 kick-off discussion points and open questions, with links back to the thread.
-
-## opp-547-29 · Feature Sandbox profiles for the built-in kubernetes and agentsandbox providers, and a profile on s…
-
-ovidiubuligan asked: "### Problem or use case #12265 made sandbox profiles provider-owned."
-
-- Status: Passed on since 2026-11-25 (served by opp-1071-25: another item already took this ask)
-- Demand: 1 distinct outside author, 1 with a classified ask (1 admits; a second ask or a signal raises its rank)
-- Signal: traction, 11534 stars, last changed 2026-11-24 (https://github.com/omnigent-ai/omnigent, read 2026-11-24 21:40 UTC)
-- Asks: 1 quoted
-  - "### Problem or use case #12265 made sandbox profiles provider-owned." by ovidiubuligan, https://github.com/omnigent-ai/omnigent/issues/13095 (asked 2026-11-06, last activity 2026-11-12, read 2026-11-23, sha256 89503ec123d1) · classified ask
-- Fit: in its lane · Effort: 3 work steps · Paid path: none
-- Smallest useful version: A draft sandbox-profile specification document in the agent's repo, defining profile fields for the built-in kubernetes and agentsandbox providers, that the issue author could adapt.
