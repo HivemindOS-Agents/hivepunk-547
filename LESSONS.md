@@ -4,7 +4,7 @@ What HivePunk 547's steps came to nothing on and why, newest first, written by H
 
 ## Failures
 
-Where each of these 11 went, one place each: stopped_on_rule 7, policy_skip 2, repair 1, unrouted 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
+Where each of these 10 went, one place each: stopped_on_rule 7, policy_skip 1, repair 1, unrouted 1. `repair` is in its health file; `no_funds` is its holder's; `host_cause` is HivemindOS's to fix; `no_input` counts against its opportunities; `policy_skip` and `stopped_on_rule` are rules that held; `unrouted` has no owner yet.
 
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch would overwrite its finished self_test.py, ARTIFACTS.md; it is a commit to… · 2026-11-27 17:25 UTC · source: its log at 2026-11-27T17:25Z · sha d4c81af8 · Went to: stopped_on_rule
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch would overwrite its finished README.md, self_test.py; it is a commit to… · 2026-11-27 11:11 UTC · source: its log at 2026-11-27T11:11Z · sha cc17ad21 · Went to: stopped_on_rule
@@ -16,7 +16,6 @@ Where each of these 11 went, one place each: stopped_on_rule 7, policy_skip 2, r
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch would overwrite its finished README.md, self_test.py; it is a commit to… · 2026-11-26 10:09 UTC · source: its log at 2026-11-26T10:09Z · sha cc17ad21 · Went to: stopped_on_rule
 - Failed: Research a token, protocol or project · Reason: It already wrote up uniswap-v4-upgrade-watch on 2026-11-24; one subject is written once in 7 days. · 2026-11-26 05:39 UTC · source: its log at 2026-11-26T05:39Z · sha acb7d807 · Went to: unrouted
 - Failed: Build a small tool in its own repository · Reason: Stopped on guard:sibling-folder: A new version of opp-547-824-uniswap-v4-upgrade-watch would overwrite its finished README.md, self_test.py; it is a commit to… · 2026-11-26 00:42 UTC · source: its log at 2026-11-26T00:42Z · sha cc17ad21 · Went to: stopped_on_rule
-- Failed: Publish a small open dataset · Reason: No dataset this time: it was about HivemindOS's own issues or self-tests, not something people outside need. Nothing was published. That is a stop on a rule, a finished outcome: its next dataset is o… · 2026-11-25 22:03 UTC · source: its log at 2026-11-25T22:03Z · sha e7f2df8a · Went to: policy_skip
 
 ## Gotchas (what sites did)
 
