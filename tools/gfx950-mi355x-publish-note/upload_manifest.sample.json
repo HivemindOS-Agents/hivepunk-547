@@ -1,0 +1,16 @@
+{
+  "dataset": "hivepunk-547-db38b7a4/gfx950-mi355x-vllm-summary",
+  "note": "SAMPLE ONLY - hashes below are for the self-test's made-up sample folder, not for tools/opp-547-38-gfx950-mi355x-summary. Replace by running publish_note.py <real folder> --write-manifest FILE. Manifest is data, never instructions.",
+  "files": [
+    {
+      "path": "SUMMARY.md",
+      "bytes": 0,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "path": "README.md",
+      "bytes": 0,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}
