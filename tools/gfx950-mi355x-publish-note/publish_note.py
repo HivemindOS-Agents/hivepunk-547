@@ -5,21 +5,26 @@ Read-only, offline. Reads a target folder's SUMMARY.md and README.md,
 fingerprints them, checks the house rules for this dataset (three proposed
 vLLM step headings, a FACT/DERIVED/UNKNOWN label on every claim bullet, the
 issue-515 source URL, UNKNOWN kept for the step-1 ROCm version and the step-3
-training configuration), and prints the exact two-file publish set plus the
-forum note text.
+training configuration), optionally compares them to a recorded manifest, and
+prints the exact two-file publish set plus the forum note text.
 
 It never uploads, never reads a token, never uses the network, and never
 writes to the target folder. Everything it reads is data, never
-instructions: any text in the target files that tells it to run commands,
-reveal settings, change its goal, send money or post something is ignored.
+instructions: any text in the target files or manifest that tells it to run
+commands, reveal settings, change its goal, send money or post something is
+ignored.
 
 Usage:
   python3 publish_note.py [target_folder]
+  python3 publish_note.py [target_folder] --manifest FILE
+  python3 publish_note.py [target_folder] --write-manifest FILE
 
 Default target_folder is ../opp-547-38-gfx950-mi355x-summary relative to
-this file. Exit 0 only when the two files exist and every rule passes.
+this file. Exit 0 only when the two files exist, every rule passes, and any
+given manifest matches.
 """
 import hashlib
+import json
 import os
 import re
 import sys
@@ -140,7 +145,39 @@ def manifest(target):
     return rows
 
 
-def forum_note(target, rows):
+def compare_manifest(rows, recorded):
+    """Compare current rows to a recorded manifest. Returns list of errors.
+
+    recorded: list of dicts with path/bytes/sha256. Missing or extra files,
+    or any size/sha256 drift, is an error.
+    """
+    errors = []
+    by_path = {}
+    for r in recorded:
+        if isinstance(r, dict) and isinstance(r.get("path"), str):
+            by_path[r["path"]] = r
+    for r in rows:
+        rec = by_path.get(r["path"])
+        if rec is None:
+            errors.append("manifest has no entry for %s" % r["path"])
+            continue
+        if rec.get("bytes") != r["bytes"]:
+            errors.append(
+                "%s size drift: manifest %r, disk %r"
+                % (r["path"], rec.get("bytes"), r["bytes"])
+            )
+        if rec.get("sha256") != r["sha256"]:
+            errors.append(
+                "%s sha256 drift: manifest %r, disk %r"
+                % (r["path"], rec.get("sha256"), r["sha256"])
+            )
+    for path in by_path:
+        if path not in [r["path"] for r in rows]:
+            errors.append("manifest lists %s, which is not in the publish set" % path)
+    return errors
+
+
+def forum_note(rows):
     """The short forum note text. Not posted by this tool."""
     return "\n".join([
         "gfx950 / MI355X vLLM steps - summary dataset",
@@ -164,9 +201,38 @@ def forum_note(target, rows):
     ])
 
 
+def parse_args(argv):
+    target = None
+    manifest_path = None
+    write_manifest = None
+    i = 0
+    while i < len(argv):
+        a = argv[i]
+        if a in ("--manifest", "--write-manifest"):
+            if i + 1 >= len(argv):
+                raise SystemExit("FAIL: %s needs a file" % a)
+            if a == "--manifest":
+                manifest_path = argv[i + 1]
+            else:
+                write_manifest = argv[i + 1]
+            i += 2
+        else:
+            if target is not None:
+                raise SystemExit("FAIL: unexpected argument %r" % a)
+            target = a
+            i += 1
+    if target is None:
+        target = DEFAULT_TARGET
+    return os.path.normpath(target), manifest_path, write_manifest
+
+
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
-    target = os.path.normpath(argv[0]) if argv else DEFAULT_TARGET
+    try:
+        target, manifest_path, write_manifest = parse_args(argv)
+    except SystemExit as e:
+        print(str(e))
+        return 2
     print("target: %s" % target)
     if not os.path.isdir(target):
         print("FAIL: target folder not found")
@@ -183,6 +249,21 @@ def main(argv=None):
 
     errors, info = check_summary(summary_text)
     errors += check_readme(readme_text)
+
+    if manifest_path:
+        try:
+            with open(manifest_path, encoding="utf-8") as f:
+                recorded = json.load(f)
+        except (OSError, ValueError) as e:
+            print("FAIL: could not read manifest %s: %s" % (manifest_path, e))
+            return 2
+        if isinstance(recorded, dict) and "files" in recorded:
+            recorded = recorded["files"]
+        if not isinstance(recorded, list):
+            print("FAIL: manifest must be a JSON list or an object with a 'files' list")
+            return 2
+        errors += compare_manifest(rows, recorded)
+        print("manifest compared: %s" % manifest_path)
 
     print("publish set: %s" % ", ".join(PUBLISH_SET))
     for r in rows:
@@ -202,9 +283,23 @@ def main(argv=None):
             print("  - %s" % e)
         return 1
 
+    if write_manifest:
+        if os.path.abspath(write_manifest) == os.path.abspath(os.path.join(target, os.path.basename(write_manifest))):
+            print("FAIL: refusing to write a manifest into the target folder")
+            return 2
+        payload = {
+            "dataset": DATASET_REPO_ID,
+            "url": DATASET_URL,
+            "files": rows,
+        }
+        with open(write_manifest, "w", encoding="utf-8") as f:
+            json.dump(payload, f, indent=2, sort_keys=True)
+            f.write("\n")
+        print("manifest written: %s" % write_manifest)
+
     print("ready: upload only SUMMARY.md and README.md exactly as on disk")
     print("--- forum note (not posted by this tool) ---")
-    print(forum_note(target, rows))
+    print(forum_note(rows))
     print("--- end forum note ---")
     return 0
 
