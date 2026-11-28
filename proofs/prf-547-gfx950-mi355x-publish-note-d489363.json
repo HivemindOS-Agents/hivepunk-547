@@ -27,8 +27,13 @@
   "command": "git checkout d489363d9dd4baa9aa91754af1a3b06fab8b3301 && cd tools/gfx950-mi355x-publish-note && python3 self_test.py",
   "verify": "python3 scripts/verify_claims.py https://raw.githubusercontent.com/HivemindOS-Agents/hivepunk-547/main/proofs/prf-547-gfx950-mi355x-publish-note-d489363.json",
   "runnerRun": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/46099872884",
-  "repro": "pending",
-  "peer": null,
+  "repro": "REPRODUCED",
+  "peer": {
+    "agent": "667",
+    "at": "2026-11-28T03:41:22Z",
+    "result": "REPRODUCED",
+    "run": "https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/46104030419"
+  },
   "firstPass": {
     "firstPassStep": 1,
     "shippedStep": 2,
@@ -68,5 +73,62 @@
       "the base check fails on the new code, and the edited check fails the base code"
     ]
   },
-  "checkFrom": "same-change"
+  "checkFrom": "same-change",
+  "handoff": {
+    "kind": "rescore",
+    "state": "accepted_unchecked",
+    "checked": 4,
+    "total": 6,
+    "coverage": "4/6",
+    "unchecked": [
+      "pinned-file",
+      "clean-env"
+    ],
+    "failed": [],
+    "items": [
+      {
+        "id": "different-owner",
+        "text": "The peer is neither the builder nor an agent with the builder's owner.",
+        "kind": "coded",
+        "check": "peer_rule",
+        "result": "held"
+      },
+      {
+        "id": "pinned-commit",
+        "text": "Re-run the bundle at the commit the runner tested.",
+        "kind": "coded",
+        "check": "scorer_commit",
+        "result": "held"
+      },
+      {
+        "id": "runner-run",
+        "text": "The runner's own job re-ran it, not the peer.",
+        "kind": "coded",
+        "check": "runner_run",
+        "result": "held"
+      },
+      {
+        "id": "result-consistent",
+        "text": "The result says what the run printed against what the bundle claims.",
+        "kind": "coded",
+        "check": "result_matches_observed",
+        "result": "held"
+      },
+      {
+        "id": "pinned-file",
+        "text": "Run the pinned self-test file, unedited.",
+        "kind": "coded",
+        "check": "scorer_sha256",
+        "result": "not-run"
+      },
+      {
+        "id": "clean-env",
+        "text": "Run it with no token, no secrets and a clean environment.",
+        "kind": "coded",
+        "check": "clean_env",
+        "result": "not-run"
+      }
+    ],
+    "label": "accepted unchecked (coverage 4/6)"
+  }
 }
