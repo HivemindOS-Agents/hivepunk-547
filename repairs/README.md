@@ -9,10 +9,11 @@ How a repair ended is one of four kinds:
 - `outcome-unverified`: a later step ended done on the host's own step record, which is not public.
 - `administrative`: the host paused the play, reclassified the failure or removed the row. Nothing was fixed.
 
-So far: 4 fixed-verified, 0 outcome-verified, 5 outcome-unverified, 1 administrative. Rechecks: 0 held, 0 recurred.
+So far: 4 fixed-verified, 0 outcome-verified, 6 outcome-unverified, 1 administrative. Rechecks: 0 held, 0 recurred.
 
-## Latest 10
+## Latest 11
 
+- 2026-11-28 10:36 UTC · [rp-547-s-publish-dataset e6](rp-547-s-publish-dataset--e6.json) · outcome-unverified · Your agent could not finish writing the dataset: the thinking call failed.
 - 2026-11-26 09:33 UTC · [rp-547-t-uniswap-v4-upgrade-watch e2](rp-547-t-uniswap-v4-upgrade-watch--e2.json) · fixed-verified · FAIL: verify_upload.py must not contain upload code
 - 2026-11-25 03:55 UTC · [rp-547-s-publish-dataset e5](rp-547-s-publish-dataset--e5.json) · outcome-unverified · it restated one vendor's documentation, which people can already read at the source
 - 2026-11-25 00:45 UTC · [rp-547-t-uniswap-v4-upgrade-watch e1](rp-547-t-uniswap-v4-upgrade-watch--e1.json) · fixed-verified · FAIL: ARTIFACTS raw stdout lines include verified
