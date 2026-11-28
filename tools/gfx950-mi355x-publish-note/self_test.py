@@ -4,15 +4,14 @@
 Run alone from inside this folder. Blocks sockets first, builds its own
 sample target folder in a temporary directory, runs this folder's own
 publish_note.py on it, and compares what comes out with what should come
-out. Also covers the byte-for-byte manifest check: a recorded manifest
-must pass, a single flipped byte must fail, and a missing file must fail.
-Then runs a deliberately broken sample (unlabelled claim bullet) and a
-missing folder, both of which must exit non-zero, so the tool cannot pass
-by doing nothing.
+out. Covers the byte-for-byte manifest check (a matching record passes, a
+single changed file fails, a missing file fails) and the announcement text
+(its first sentence names the dataset title and carries the repo id). Then
+runs a deliberately broken sample (unlabelled claim bullet) and a missing
+folder, both of which must exit non-zero, so the tool cannot pass by doing
+nothing.
 
-Starts by replacing socket.socket.connect with a function that raises,
-so any attempt to reach the network fails loudly. Exits 0 only when every
-check passes.
+Exits 0 only when every check passes.
 """
 import importlib.util
 import json
@@ -140,9 +139,15 @@ def main():
         need(info["unlabelled"] == 0, "no unlabelled claim bullet in good sample")
         need(set(info["labels"]) == set(pn.LABELS), "all three label kinds are counted")
         need(pn.check_readme(GOOD_README) == [], "good README passes")
-        note = pn.forum_note(rows)
-        need(pn.DATASET_URL in note, "forum note links the dataset URL")
-        need(rows[0]["sha256"] in note and rows[1]["sha256"] in note, "forum note carries both hashes")
+
+        # --- announcement: first sentence names the dataset title ------
+        note = pn.announcement(rows)
+        first_line = note.splitlines()[0]
+        need(first_line.startswith(pn.DATASET_TITLE), "first line opens with the dataset title: %r" % first_line)
+        need(pn.DATASET_REPO_ID in first_line, "first line carries the repo id: %r" % first_line)
+        need(first_line.endswith("."), "first sentence ends at the first line: %r" % first_line)
+        need(pn.DATASET_URL in note, "announcement links the dataset URL")
+        need(rows[0]["sha256"] in note and rows[1]["sha256"] in note, "announcement carries both hashes")
 
         # --- manifest compare: matching record passes --------------
         need(pn.compare_manifest(rows, rows) == [], "a matching manifest has no drift")
@@ -162,6 +167,9 @@ def main():
         extra = [dict(r) for r in rows] + [{"path": "extra.md", "bytes": 1, "sha256": "0" * 64}]
         need(any("not in the publish set" in e for e in pn.compare_manifest(rows, extra)),
              "an extra manifest file is reported")
+        missing = [dict(rows[0])]
+        need(any("no entry for README.md" in e for e in pn.compare_manifest(rows, missing)),
+             "a manifest missing a file is reported")
 
         # --- broken sample must be rejected -------------------------
         bad_errors, bad_info = pn.check_summary(BAD_SUMMARY)
@@ -174,7 +182,10 @@ def main():
         need("ready: upload only SUMMARY.md and README.md exactly as on disk" in p.stdout,
              "CLI prints the ready line: %r" % p.stdout)
         need(pn.DATASET_REPO_ID in p.stdout, "CLI prints the dataset repo id")
-        need("--- forum note" in p.stdout, "CLI prints the forum note")
+        need("--- announcement" in p.stdout, "CLI prints the announcement")
+        printed_lines = p.stdout.splitlines()
+        need(any(l.strip().startswith(pn.DATASET_TITLE) for l in printed_lines),
+             "CLI announcement line opens with the title")
         for r in rows:
             need(r["sha256"] in p.stdout, "CLI prints sha256 for %s" % r["path"])
         need("FAIL" not in p.stdout, "good sample CLI prints no FAIL")
@@ -201,7 +212,6 @@ def main():
         pd = run_tool(good, "--manifest", mpath)
         need(pd.returncode != 0, "CLI exits non-zero when a file changed after the record")
         need("drift" in (pd.stdout + pd.stderr), "drift is named on change")
-        # remove the stray byte so later checks use the clean sample again
         with open(os.path.join(good, "SUMMARY.md"), "w", encoding="utf-8") as f:
             f.write(GOOD_SUMMARY)
         pr = run_tool(good, "--manifest", mpath)
