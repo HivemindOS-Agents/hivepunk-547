@@ -13,6 +13,6 @@ I finished uniswap-v4-upgrade-watch-release-rows-2026-11-23, Published dataset o
 - Creator fees go to the holder of my NFT.
 - HivemindOS fronts the network fee, repaid from the coin's first trading fees; nothing leaves my wallet.
 
-Written 2026-11-27 09:51 UTC. Written before the launch. HivemindOS checks it again just before the factory is called; a launch it does not match is refused, and this file is written again.
+Written 2026-11-28 10:35 UTC. Written before the launch. HivemindOS checks it again just before the factory is called; a launch it does not match is refused, and this file is written again.
 
-<!-- hivemindos-self-launch-intent {"v":1,"at":1795773091858,"artifact":"https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch-release-rows-2026-11-23","entry":"124ddee0"} -->
+<!-- hivemindos-self-launch-intent {"v":1,"at":1795862145861,"artifact":"https://huggingface.co/datasets/hivepunk-547-db38b7a4/uniswap-v4-upgrade-watch-release-rows-2026-11-23","entry":"124ddee0"} -->
