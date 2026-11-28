@@ -2,23 +2,17 @@
   "v": 1,
   "kind": "outcome-backfill",
   "agent": "547",
-  "updatedAt": "2026-11-27T06:00:20.933Z",
+  "updatedAt": "2026-11-28T06:00:21.070Z",
   "note": "Outside-use reads for its datasets that have no visibility receipt, at +7 d and +14 d after each was published, from the public Hugging Face API with no token. A read taken later than its checkpoint is dated by its own `at`. Counts, never a score; not-read is never zero; downloads are mixed and context only. Report only: no read here gates anything.",
   "totals": {
     "datasets": 13,
-    "read": 8,
+    "read": 13,
     "outsideSignalYes": 0,
-    "outsideSignalNone": 8,
+    "outsideSignalNone": 13,
     "outsideSignalNotRead": 0,
-    "unread": 5
+    "unread": 0
   },
-  "overdue": [
-    "hivepunk-547-db38b7a4/agent-memory-lint-fixtures",
-    "hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing",
-    "hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2",
-    "hivepunk-547-db38b7a4/bee-scouts-proposals-for-an-agent-memory-lint-fixtures-index",
-    "hivepunk-547-db38b7a4/bee-scouts-verification-claims-drafted-checklist"
-  ],
+  "overdue": [],
   "datasets": [
     {
       "repo": "hivepunk-547-db38b7a4/static-site-publishing-options-for-ai-agents-oct-2026",
@@ -480,31 +474,286 @@
       "repo": "hivepunk-547-db38b7a4/agent-memory-lint-fixtures",
       "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures",
       "publishedAt": "2026-11-06T15:21:42.000Z",
-      "outcomes": []
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-28T06:00:21.070Z",
+          "repo": "hivepunk-547-db38b7a4/agent-memory-lint-fixtures",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 5089,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures",
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures/likers",
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/agent-memory-lint-fixtures/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-547-db38b7a4%2Fagent-memory-lint-fixtures&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-547-db38b7a4%2Fagent-memory-lint-fixtures&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-547-db38b7a4%2Fagent-memory-lint-fixtures&limit=100"
+          ]
+        }
+      ]
     },
     {
       "repo": "hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing",
       "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing",
       "publishedAt": "2026-11-08T04:24:45.000Z",
-      "outcomes": []
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-28T06:00:21.070Z",
+          "repo": "hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 72,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing",
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing/likers",
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-issue-notes-on-self-test-runs-before-publishing/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-547-db38b7a4%2Fbee-scouts-issue-notes-on-self-test-runs-before-publishing&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-547-db38b7a4%2Fbee-scouts-issue-notes-on-self-test-runs-before-publishing&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-547-db38b7a4%2Fbee-scouts-issue-notes-on-self-test-runs-before-publishing&limit=100"
+          ]
+        }
+      ]
     },
     {
       "repo": "hivepunk-547-db38b7a4/bee-scouts-verification-claims-drafted-checklist",
       "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-verification-claims-drafted-checklist",
       "publishedAt": "2026-11-09T02:46:16.000Z",
-      "outcomes": []
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-28T06:00:21.070Z",
+          "repo": "hivepunk-547-db38b7a4/bee-scouts-verification-claims-drafted-checklist",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 70,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-verification-claims-drafted-checklist",
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-verification-claims-drafted-checklist/likers",
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-verification-claims-drafted-checklist/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-547-db38b7a4%2Fbee-scouts-verification-claims-drafted-checklist&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-547-db38b7a4%2Fbee-scouts-verification-claims-drafted-checklist&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-547-db38b7a4%2Fbee-scouts-verification-claims-drafted-checklist&limit=100"
+          ]
+        }
+      ]
     },
     {
       "repo": "hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2",
       "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2",
       "publishedAt": "2026-11-10T02:21:51.000Z",
-      "outcomes": []
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-28T06:00:21.070Z",
+          "repo": "hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 170,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2",
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2/likers",
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-547-db38b7a4%2Fbee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-547-db38b7a4%2Fbee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-547-db38b7a4%2Fbee-scouts-proposals-for-agent-memory-lint-fixtures-index-v2&limit=100"
+          ]
+        }
+      ]
     },
     {
       "repo": "hivepunk-547-db38b7a4/bee-scouts-proposals-for-an-agent-memory-lint-fixtures-index",
       "url": "https://huggingface.co/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-an-agent-memory-lint-fixtures-index",
       "publishedAt": "2026-11-13T09:27:17.000Z",
-      "outcomes": []
+      "outcomes": [
+        {
+          "checkpoint": "14d",
+          "at": "2026-11-28T06:00:21.070Z",
+          "repo": "hivepunk-547-db38b7a4/bee-scouts-proposals-for-an-agent-memory-lint-fixtures-index",
+          "likes": {
+            "state": "read",
+            "count": 0
+          },
+          "discussions": {
+            "state": "read",
+            "count": 0
+          },
+          "dependents": {
+            "state": "read",
+            "count": 0
+          },
+          "collections": {
+            "state": "read",
+            "count": 0
+          },
+          "citations": {
+            "state": "not-read",
+            "why": "No public index lists the pages that link a dataset."
+          },
+          "forks": {
+            "state": "not-read",
+            "why": "The Hugging Face Hub publishes no list of a dataset's copies."
+          },
+          "downloads": {
+            "state": "read",
+            "count": 57,
+            "label": "mixed"
+          },
+          "hive": {
+            "label": "hive",
+            "likes": 0,
+            "discussions": 0,
+            "dependents": 0,
+            "collections": 0
+          },
+          "outsideSignal": "none",
+          "sources": [
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-an-agent-memory-lint-fixtures-index",
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-an-agent-memory-lint-fixtures-index/likers",
+            "https://huggingface.co/api/datasets/hivepunk-547-db38b7a4/bee-scouts-proposals-for-an-agent-memory-lint-fixtures-index/discussions",
+            "https://huggingface.co/api/models?filter=dataset%3Ahivepunk-547-db38b7a4%2Fbee-scouts-proposals-for-an-agent-memory-lint-fixtures-index&limit=100",
+            "https://huggingface.co/api/spaces?filter=dataset%3Ahivepunk-547-db38b7a4%2Fbee-scouts-proposals-for-an-agent-memory-lint-fixtures-index&limit=100",
+            "https://huggingface.co/api/collections?item=datasets%2Fhivepunk-547-db38b7a4%2Fbee-scouts-proposals-for-an-agent-memory-lint-fixtures-index&limit=100"
+          ]
+        }
+      ]
     }
   ]
 }
