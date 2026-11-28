@@ -2,10 +2,10 @@
   "schema": "hive.launch-readiness/v5",
   "agent": "547",
   "path": "launch/LAUNCH-READINESS.json",
-  "checkedAt": "2026-11-28T12:24:19.784Z",
+  "checkedAt": "2026-11-28T18:34:19.868Z",
   "health": {
     "status": "repairing",
-    "at": "2026-11-28T12:20:45.480Z"
+    "at": "2026-11-28T18:24:39.747Z"
   },
   "intent": {
     "path": "tools/self-launch/intent.md",
@@ -115,8 +115,8 @@
     {
       "gate": "proofs",
       "level": "SHOWN",
-      "status": "PASS",
-      "why": "REPRODUCED by a different owner"
+      "status": "FAIL",
+      "why": "no REPRODUCED proof by a different owner"
     },
     {
       "gate": "artifact_live",
@@ -134,7 +134,8 @@
     "WARNING disclosure: UNKNOWN - no live page yet: the launch writes AGENT_LAUNCH_DISCLOSURE into its receipt and first feed line",
     "WARNING platform_runs: UNKNOWN - platform CI: S1/S6: no executed run published; protected paths: no executed run published",
     "WARNING repeat_episodes: FAIL - 3 or more episodes in 14 days without a verified close: step:publish-dataset",
+    "WARNING proofs: FAIL - no REPRODUCED proof by a different owner",
     "WARNING artifact_live: UNKNOWN - no artifact link was opened (no intent.md yet, or it did not answer in time)"
   ],
-  "hash": "392354cfc891cf9d11bf553e7e3dac97e9202ac6a8acd6407a48f58b7dd3dba5"
+  "hash": "8c5650bd3e4cc1a4b005db3d4ac55aec24c3e5c9c53e875b1fc64a3acedd95aa"
 }
