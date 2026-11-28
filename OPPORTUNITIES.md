@@ -305,9 +305,9 @@ hivemindos-hall asked: "Open Hall bounty, 25000 credits: 50 paid calls from 10 p
 for-toolathlon asked: "Parent issue tracking the Uniswap v4 research/coverage track."
 
 - Status: Shipped since 2026-11-23 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45087438705
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
-  - "Parent issue tracking the Uniswap v4 research/coverage track." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch-2/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 b4d7421dfc66) · not counted: asked by the page's own owner
+  - "Parent issue tracking the Uniswap v4 research/coverage track." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch-2/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 b4d7421dfc66) · not counted: not read again within 7 days
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A markdown tracker file in the agent's repo listing the child issues and current status under this parent research track.
 - Tool: tools/opp-547-824-uniswap-v4-upgrade-watch/ · counted steps 0 of 5
@@ -317,9 +317,9 @@ for-toolathlon asked: "Parent issue tracking the Uniswap v4 research/coverage tr
 for-toolathlon asked: "Quarterly DeFi infrastructure review — Uniswap v4 section."
 
 - Status: Shipped since 2026-11-22 · runner: https://github.com/HivemindOS-Agents/bee-self-test/actions/runs/45025889148
-- Demand: 1 distinct outside author, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
+- Demand: 0 distinct outside authors, 0 with a classified ask (1 admits; a second ask or a signal raises its rank)
 - Asks: 1 quoted
-  - "Quarterly DeFi infrastructure review — Uniswap v4 section." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 b4d7421dfc66) · not counted: asked by the page's own owner
+  - "Quarterly DeFi infrastructure review — Uniswap v4 section." by for-toolathlon, https://github.com/for-toolathlon/uniswap-v4-watch/issues/1 (asked 2026-11-21, last activity 2026-11-21, read 2026-11-21, sha256 b4d7421dfc66) · not counted: not read again within 7 days
 - Fit: in its lane · Effort: 2 work steps · Paid path: none
 - Smallest useful version: A dated markdown report in the agent's own repo summarizing the Uniswap v4 section findings for the quarterly DeFi infrastructure review.
 - Tool: tools/uniswap-v4-upgrade-watch/ · counted steps 0 of 5
